@@ -1,0 +1,69 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area5#page18" name="Calendar">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv1#area5#page18#inu1" name="Visite di Controllo" entity="ent32" displayAttributes="ent32#att70 ent32#att71 ent32#att72 ent32#att73 ent32#att74 rel21#role42.rel11#role16.rel14#role28.userOID rel21#role42.rel11#role16.rel14#role28.User#att27 rel21#role42.rel11#role16.rel14#role28.User#att28">
+      <Selector id="sv1#area5#page18#inu1#su45" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area5#page18#inu1#su45#acond18" name="doctor?" predicate="eq" booleanOperator="or" implied="false" attributes="rel21#role42.rel3#role3.rel36#role72.userOID"/>
+      </Selector>
+    </IndexUnit>
+    <GetUnit gr:x="315" gr:y="5" id="sv1#area5#page18#gtu5" name="Get5" contextParameters="UserCtxParam">
+      <Link id="sv1#area5#page18#gtu5#ln57" name="Flow57" to="sv1#area5#page18#inu1" type="transport" validate="true">
+        <LinkParameter id="sv1#area5#page18#gtu5#ln57#par92" name="UserCtxParam.cf_doctor?" source="sv1#area5#page18#gtu5.UserCtxParam" target="sv1#area5#page18#inu1#su45#acond18"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area5#page18#inu1">
+          <layout:Attribute attribute="ent32#att70"/>
+          <layout:Attribute attribute="ent32#att71"/>
+          <layout:Attribute attribute="ent32#att72"/>
+          <layout:Attribute attribute="ent32#att73"/>
+          <layout:Attribute attribute="ent32#att74"/>
+          <layout:Attribute attribute="rel21#role42.rel11#role16.rel14#role28.userOID"/>
+          <layout:Attribute attribute="rel21#role42.rel11#role16.rel14#role28.User#att27"/>
+          <layout:Attribute attribute="rel21#role42.rel11#role16.rel14#role28.User#att28"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

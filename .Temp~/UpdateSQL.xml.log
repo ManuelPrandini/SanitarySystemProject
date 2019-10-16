@@ -1,0 +1,26 @@
+[16 ott 2019 17:58:35] DEBUG Executing SQL script
+[16 ott 2019 17:58:35] INFO ================================================================================
+[16 ott 2019 17:58:35] INFO onError= 'stop'
+[16 ott 2019 17:58:35] INFO autoCommit= 'false'
+[16 ott 2019 17:58:35] INFO username= 'root'
+[16 ott 2019 17:58:35] INFO outputPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\SanitarySystemProject\.Temp~\UpdateSQL.xml'
+[16 ott 2019 17:58:35] INFO outputLogPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\SanitarySystemProject\.Temp~\UpdateSQL.xml.log'
+[16 ott 2019 17:58:35] INFO encoding= ''
+[16 ott 2019 17:58:35] INFO driverClass= 'com.mysql.jdbc.Driver'
+[16 ott 2019 17:58:35] INFO sqlScript= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\SanitarySystemProject\.Temp~\UpdateSQL.sql'
+[16 ott 2019 17:58:35] INFO eventSocketPort= '50157'
+[16 ott 2019 17:58:35] INFO statementSeparator= ';'
+[16 ott 2019 17:58:35] INFO derby.system.home= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[16 ott 2019 17:58:35] INFO password= 'root'
+[16 ott 2019 17:58:35] INFO url= 'jdbc:mysql://localhost:3306/hospital'
+[16 ott 2019 17:58:35] INFO ================================================================================
+[16 ott 2019 17:58:35] INFO Connecting to the Database...
+[16 ott 2019 17:58:36] INFO Database connection estabilished
+[16 ott 2019 17:58:36] INFO transaction isolation: 4
+[16 ott 2019 17:58:36] DEBUG ================================================================================
+[16 ott 2019 17:58:36] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\SanitarySystemProject\.Temp~\UpdateSQL.sql
+[16 ott 2019 17:58:36] DEBUG Executing statement:  alter table `visit_calendar`  add column  `approvedvisit`  integer
+[16 ott 2019 17:58:36] DEBUG ================================================================================
+[16 ott 2019 17:58:36] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[16 ott 2019 17:58:36] INFO Database connection closed
+[16 ott 2019 17:58:36] DEBUG Total time: 491 milliseconds
