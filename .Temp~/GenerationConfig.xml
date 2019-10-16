@@ -5,28 +5,16 @@
     <Property name="ajaxActivated">true</Property>
     <Property name="applicationServer">Tomcat</Property>
     <Property name="cloudDeploy">false</Property>
-<<<<<<< HEAD
     <Property name="commonsLibDir">/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/plugins/com.webratio.commons.libs_7.2.18.201903231300/lib</Property>
-    <Property name="dbConfigPath">/tmp/WRDBConfig1952774899148515670.xml</Property>
-=======
-    <Property name="commonsLibDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\plugins\com.webratio.commons.libs_7.2.18.201903231300\lib</Property>
-    <Property name="dbConfigPath">C:\Users\FRANCE~1\AppData\Local\Temp\WRDBConfig5964116478922962486.xml</Property>
->>>>>>> TestFra
+    <Property name="dbConfigPath">/tmp/WRDBConfig42302273474728986.xml</Property>
     <Property name="defaultEncoding"></Property>
     <Property name="deployCorePluginDir">/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/configuration/org.eclipse.osgi/bundles/49/1/.cp</Property>
     <Property name="derbySystemHome">/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/.metadata/.plugins/com.webratio.commons.db/derby</Property>
     <Property name="enterpriseProjectDir"></Property>
-<<<<<<< HEAD
-    <Property name="eventSocketPort">36843</Property>
+    <Property name="eventSocketPort">45495</Property>
     <Property name="excludedProjects" type="list"></Property>
-    <Property name="generationTime">201910161633</Property>
+    <Property name="generationTime">201910161947</Property>
     <Property name="helpersPluginDir">/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/plugins/com.webratio.generator.helpers_7.2.18.201903231300</Property>
-=======
-    <Property name="eventSocketPort">50338</Property>
-    <Property name="excludedProjects" type="list"></Property>
-    <Property name="generationTime">201910161837</Property>
-    <Property name="helpersPluginDir">C:\WebRatio\WebRatio Platform 7.2.18.x64bit\WebRatio\plugins\com.webratio.generator.helpers_7.2.18.201903231300</Property>
->>>>>>> TestFra
     <Property name="hostAlwaysAllowed">false</Property>
     <Property name="i18nBundleKeysFile" type="file"></Property>
     <Property name="i18nExtraBundleFile" type="file"></Property>
@@ -37,18 +25,14 @@
     <Property name="phases">All</Property>
     <Property name="projectDir">/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/SanitarySystemProject</Property>
     <Property name="projectName">SanitarySystemProject</Property>
-<<<<<<< HEAD
-    <Property name="projectPath">/tmp/Project7854119572046827394.wr</Property>
-=======
-    <Property name="projectPath">C:\Users\FRANCE~1\AppData\Local\Temp\Project6496352054146194773.wr</Property>
->>>>>>> TestFra
+    <Property name="projectPath">/tmp/Project804910072622915824.wr</Property>
     <Property name="projectType">WEBPROJECT</Property>
     <Property name="rootModuleName"></Property>
     <Property name="uiPluginDir">/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/plugins/com.webratio.ide.ui_7.2.18.201903231300</Property>
     <Property name="webappPluginDir">/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/plugins/com.webratio.generator.webapp_7.2.18.201903231300</Property>
     <Property name="wrBuildId">201903231300</Property>
     <Property name="wrGenerateOldValidationRules">false</Property>
-    <Property name="wrModelStatistics">pages=39|units=206</Property>
+    <Property name="wrModelStatistics">pages=39|units=197</Property>
     <Property name="wrVersion">7.2.18</Property>
   </Properties>
   <Plugins>

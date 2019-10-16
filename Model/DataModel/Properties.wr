@@ -332,12 +332,12 @@
     </Generalization>
     <Attribute id="ent33#att36" name="approvedVisit" type="integer" db:column="approvedvisit"/>
   </Entity>
-  <Entity gr:x="935" gr:y="540" id="ent34" name="Surgery_Calendar" duration="persistent" db:database="db2" db:table="surgery_calendar">
+  <Entity gr:x="990" gr:y="555" id="ent34" name="Surgery_Calendar" duration="persistent" db:database="db2" db:table="surgery_calendar">
     <Generalization superEntity="ent32">
       <db:JoinColumn attribute="ent32#att70" name="calendar_oid"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="1135" gr:y="520" id="ent35" name="Recovery_Calendar" duration="persistent" db:database="db2" db:table="recovery_calendar">
+  <Entity gr:x="1190" gr:y="495" id="ent35" name="Recovery_Calendar" duration="persistent" db:database="db2" db:table="recovery_calendar">
     <Generalization superEntity="ent32">
       <db:JoinColumn attribute="ent32#att70" name="calendar_oid"/>
     </Generalization>

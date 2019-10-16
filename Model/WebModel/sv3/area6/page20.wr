@@ -51,26 +51,21 @@
         <LinkParameter id="sv3#area6#page20#pwu10#ln75#par324" name="DoctorToUser.cf_Doctor CF" source="data[].rel36#role72_userOID" target="sv3#area6#page20#enu16#fld22_slot"/>
         <LinkParameter id="sv3#area6#page20#pwu10#ln75#par325" name="name_PASSING_Hospital Name" sourceLinkParameter="sv3#area6#page20#pwu9#ln74#par323" target="sv3#area6#page20#enu16#fld21_slot"/>
       </Link>
-      <Link id="sv3#area6#page20#pwu10#ln79" name="Flow79" to="sv3#area6#miu8" type="transport" validate="true">
-        <LinkParameter id="sv3#area6#page20#pwu10#ln79#par351" name="doctor_code_codiceDottore" source="data[].ent9#att33" target="sv3#area6#miu8.mov2#mpkg2#opm11#icu11#icp87"/>
+      <Link id="sv3#area6#page20#pwu10#ln36" name="Flow36" to="sv3#area6#cru9" type="transport" validate="true">
+        <LinkParameter id="sv3#area6#page20#pwu10#ln36#par326" name="doctor_code_Doctor.doctor_code(VisitToDoctor)" source="data[].ent9#att33" target="sv3#area6#cru9.rel3#role3.ent9#att33"/>
       </Link>
     </PowerIndexUnit>
-    <EntryUnit gr:x="435" gr:y="140" id="sv3#area6#page20#enu16" name="Richiesta di Prenotazione" fieldOrder="sv3#area6#page20#enu16#fld21 sv3#area6#page20#enu16#fld22 sv3#area6#page20#enu16#fld36 sv3#area6#page20#enu16#fld37" linkOrder="sv3#area6#page20#enu16#ln77">
+    <EntryUnit gr:x="435" gr:y="140" id="sv3#area6#page20#enu16" name="Richiesta di Prenotazione" fieldOrder="sv3#area6#page20#enu16#fld21 sv3#area6#page20#enu16#fld22" linkOrder="sv3#area6#page20#enu16#ln2">
       <Field id="sv3#area6#page20#enu16#fld21" name="Hospital Name" type="string" preloaded="true"/>
       <Field id="sv3#area6#page20#enu16#fld22" name="Doctor CF" type="string" preloaded="true"/>
-      <Field id="sv3#area6#page20#enu16#fld36" name="data visita" type="date" modifiable="true"/>
-      <Field id="sv3#area6#page20#enu16#fld37" name="orario visita" type="time" modifiable="true"/>
-      <Link id="sv3#area6#page20#enu16#ln77" name="Richiedi visita" to="sv3#area6#miu8" type="normal" validate="true">
-        <LinkParameter id="sv3#area6#page20#enu16#ln77#par334" name="data visita_startDate" source="sv3#area6#page20#enu16#fld36" target="sv3#area6#miu8.mov2#mpkg2#opm11#icu11#icp83"/>
-        <LinkParameter id="sv3#area6#page20#enu16#ln77#par335" name="orario visita_startTime" source="sv3#area6#page20#enu16#fld37" target="sv3#area6#miu8.mov2#mpkg2#opm11#icu11#icp84"/>
-      </Link>
+      <Link id="sv3#area6#page20#enu16#ln2" name="Flow2" to="sv3#area6#cru9" type="normal" validate="true"/>
     </EntryUnit>
     <SelectorUnit gr:x="440" gr:y="0" id="sv3#area6#page20#seu24" name="SelectorPatient" entity="ent6">
       <Selector id="sv3#area6#page20#seu24#su50" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv3#area6#page20#seu24#su50#acond38" name="CF_Cond" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.userOID"/>
       </Selector>
-      <Link id="sv3#area6#page20#seu24#ln81" name="Flow81" to="sv3#area6#miu8" type="transport" validate="true">
-        <LinkParameter id="sv3#area6#page20#seu24#ln81#par360" name="patient_code_codicePaziente" source="ent6#att11Array" target="sv3#area6#miu8.mov2#mpkg2#opm11#icu11#icp88"/>
+      <Link id="sv3#area6#page20#seu24#ln1" name="Flow1" to="sv3#area6#cru9" type="transport" validate="true">
+        <LinkParameter id="sv3#area6#page20#seu24#ln1#par302" name="patient_code_Patient.patient_code(VisitToPatient)" source="ent6#att11Array" target="sv3#area6#cru9.rel11#role16.ent6#att11"/>
       </Link>
     </SelectorUnit>
     <GetUnit gr:x="305" gr:y="0" id="sv3#area6#page20#gtu6" name="GetUser" contextParameters="UserCtxParam">
@@ -167,11 +162,9 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#area6#page20#enu16">
-          <layout:Link link="sv3#area6#page20#enu16#ln77"/>
           <layout:Field field="sv3#area6#page20#enu16#fld21"/>
           <layout:Field field="sv3#area6#page20#enu16#fld22"/>
-          <layout:Field field="sv3#area6#page20#enu16#fld36"/>
-          <layout:Field field="sv3#area6#page20#enu16#fld37"/>
+          <layout:Link link="sv3#area6#page20#enu16#ln2"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

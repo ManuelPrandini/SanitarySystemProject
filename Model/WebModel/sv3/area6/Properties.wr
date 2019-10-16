@@ -1,8 +1,8 @@
 <Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-40" gr:y="285" id="sv3#area6" name="Prenotazione visita" landmark="true" defaultPage="sv3#area6#page20">
   <OperationUnits>
-    <ModuleInstanceUnit id="sv3#area6#miu8" gr:x="760" gr:y="170" action="true" moduleId="mov2#mpkg2#opm11">
-      <OKLink id="sv3#area6#miu8#oln83" name="OKFlow83" to="sv3#area6#page21" automaticCoupling="true"/>
-      <KOLink id="sv3#area6#miu8#kln42" name="KOFlow42" to="sv3#area6#page22" automaticCoupling="true"/>
-    </ModuleInstanceUnit>
+    <CreateUnit gr:x="780" gr:y="165" id="sv3#area6#cru9" name="CreatePendingAction" entity="ent5">
+      <OKLink id="sv3#area6#cru9#oln83" name="OKFlow83" to="sv3#area6#page21#mssu11" automaticCoupling="true"/>
+      <KOLink id="sv3#area6#cru9#kln12" name="KOFlow12" to="sv3#area6#page22" automaticCoupling="true"/>
+    </CreateUnit>
   </OperationUnits>
 </Area>

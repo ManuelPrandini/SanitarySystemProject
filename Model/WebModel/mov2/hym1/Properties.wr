@@ -1,4 +1,4 @@
-<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="715" gr:y="165" id="mov2#hym1" name="RegisterUser">
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="765" gr:y="235" id="mov2#hym1" name="RegisterUser">
   <OperationUnits>
     <SelectorUnit gr:x="305" gr:y="90" id="mov2#hym1#seu5" name="UserExists?" entity="User" distinctAttributes="userOID userName password email User#att27 User#att28 User#att29 User#att40 User#att41 User#att12 rel7#role10.ent12#att16 rel9#role14.ent12#att16 rel7#role10.ent12#att39 rel9#role14.ent12#att39" linkOrder="mov2#hym1#seu5#ln65 mov2#hym1#seu5#ln66">
       <Selector id="mov2#hym1#seu5#su20" defaultPolicy="fill" booleanOperator="and">

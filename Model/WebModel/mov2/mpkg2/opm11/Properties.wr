@@ -1,21 +1,7 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="390" gr:y="0" id="mov2#mpkg2#opm11" name="Save Pending Visit">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg2#opm11" name="RegisterVisit" gr:x="405" gr:y="0">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg2#opm11#icu11" gr:x="65" gr:y="160">
-      <InputCollectorParameter id="mov2#mpkg2#opm11#icu11#icp83" name="startDate"/>
-      <InputCollectorParameter id="mov2#mpkg2#opm11#icu11#icp84" name="startTime"/>
-      <OKLink id="mov2#mpkg2#opm11#icu11#oln12" name="OKFlow12" to="mov2#mpkg2#opm11#opg5#cru11">
-        <LinkParameter id="mov2#mpkg2#opm11#icu11#oln12#par329" name="startDate_endDate" source="mov2#mpkg2#opm11#icu11#icp83" target="mov2#mpkg2#opm11#opg5#cru11.ent32#att72"/>
-        <LinkParameter id="mov2#mpkg2#opm11#icu11#oln12#par330" name="startDate_startDate" source="mov2#mpkg2#opm11#icu11#icp83" target="mov2#mpkg2#opm11#opg5#cru11.ent32#att71"/>
-        <LinkParameter id="mov2#mpkg2#opm11#icu11#oln12#par331" name="startTime_startTime" source="mov2#mpkg2#opm11#icu11#icp84" target="mov2#mpkg2#opm11#opg5#cru11.ent32#att73"/>
-      </OKLink>
-      <InputCollectorParameter id="mov2#mpkg2#opm11#icu11#icp87" name="codiceDottore"/>
-      <InputCollectorParameter id="mov2#mpkg2#opm11#icu11#icp88" name="codicePaziente"/>
-      <Link id="mov2#mpkg2#opm11#icu11#ln78" name="Flow78" to="mov2#mpkg2#opm11#opg5#cru13" type="transport" validate="true" gr:bendpoints="92,81,-473,81;342,80,-223,80;569,80,4,80">
-        <LinkParameter id="mov2#mpkg2#opm11#icu11#ln78#par345" name="codiceDottore_Doctor.doctor_code(VisitToDoctor)" source="mov2#mpkg2#opm11#icu11#icp87" target="mov2#mpkg2#opm11#opg5#cru13.rel3#role3.ent9#att33"/>
-        <LinkParameter id="mov2#mpkg2#opm11#icu11#ln78#par346" name="codicePaziente_Patient.patient_code(VisitToPatient)" source="mov2#mpkg2#opm11#icu11#icp88" target="mov2#mpkg2#opm11#opg5#cru13.rel11#role16.ent6#att11"/>
-      </Link>
-    </InputCollectorUnit>
-    <OKCollectorUnit gr:x="1085" gr:y="125" id="mov2#mpkg2#opm11#okcu17" name="Success"/>
-    <KOCollectorUnit gr:x="1085" gr:y="210" id="mov2#mpkg2#opm11#kocu19" name="Error"/>
+    <InputCollectorUnit id="mov2#mpkg2#opm11#icu11" gr:x="30" gr:y="60"/>
+    <OKCollectorUnit gr:x="720" gr:y="50" id="mov2#mpkg2#opm11#okcu18" name="OK Port18"/>
+    <KOCollectorUnit gr:x="720" gr:y="215" id="mov2#mpkg2#opm11#kocu8" name="KO Port8"/>
   </OperationUnits>
 </OperationModule>
