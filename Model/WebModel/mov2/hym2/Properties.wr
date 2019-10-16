@@ -1,0 +1,104 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="895" gr:y="165" id="mov2#hym2" name="LoginModule">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="90" gr:y="155" id="mov2#hym2#icu13">
+      <InputCollectorParameter id="mov2#hym2#icu13#icp76" name="CF"/>
+      <InputCollectorParameter id="mov2#hym2#icu13#icp77" name="Password"/>
+      <OKLink id="mov2#hym2#icu13#oln65" name="OKFlow65" to="mov2#hym2#seu6">
+        <LinkParameter id="mov2#hym2#icu13#oln65#par271" name="CF_cf_condition [cf]" source="mov2#hym2#icu13#icp76" target="mov2#hym2#seu6#su26#kcond19.userOID"/>
+        <LinkParameter id="mov2#hym2#icu13#oln65#par272" name="Password_password_condition" source="mov2#hym2#icu13#icp77" target="mov2#hym2#seu6#su26#acond13"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="2010" gr:y="340" id="mov2#hym2#okcu13" name="OK Login"/>
+    <KOCollectorUnit gr:x="2010" gr:y="705" id="mov2#hym2#kocu15" name="KO Login"/>
+    <SelectorUnit gr:x="410" gr:y="10" id="mov2#hym2#seu6" name="User Exists?" entity="User" distinctAttributes="User2Group.groupOID userOID User#att27 User#att28 userName rel14#role27.ent6#att19 rel22#role43.ent1#att20 rel36#role71.ent9#att17">
+      <Selector id="mov2#hym2#seu6#su26" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#hym2#seu6#su26#kcond19" name="cf_condition" predicate="in" implied="false"/>
+        <AttributesCondition id="mov2#hym2#seu6#su26#acond13" name="password_condition" predicate="eq" booleanOperator="and" implied="false" attributes="password"/>
+      </Selector>
+      <OKLink id="mov2#hym2#seu6#oln66" name="OKFlow66" to="mov2#hym2#inn3">
+        <LinkParameter id="mov2#hym2#seu6#oln66#par273" name="cf_Input" source="userOIDArray" target="mov2#hym2#inn3.isnotnull"/>
+      </OKLink>
+      <Link id="mov2#hym2#seu6#ln72" name="Flow72" to="mov2#hym2#scu1" type="transport" validate="true">
+        <LinkParameter id="mov2#hym2#seu6#ln72#par301" name="groups.oid_groupOid" source="User2Group$groupOIDArray" target="mov2#hym2#scu1.groupOid"/>
+        <LinkParameter id="mov2#hym2#seu6#ln72#par366" name="UserToDoctor.approved_PASSING" source="rel36#role71$ent9#att17Array" passing="true"/>
+        <LinkParameter id="mov2#hym2#seu6#ln72#par367" name="UserToPatient.approved_PASSING" source="rel14#role27$ent6#att19Array" passing="true"/>
+        <LinkParameter id="mov2#hym2#seu6#ln72#par368" name="UserToPharmacist.approved_PASSING" source="rel22#role43$ent1#att20Array" passing="true"/>
+        <LinkParameter id="mov2#hym2#seu6#ln72#par401" name="cf_PASSING" source="userOIDArray" passing="true"/>
+      </Link>
+      <Link id="mov2#hym2#seu6#ln98" name="Flow90" to="mov2#hym2#lgu2" type="transport" validate="true" gr:bendpoints="538,69,-518,-181;1052,101,-4,-149">
+        <LinkParameter id="mov2#hym2#seu6#ln98#par328" name="password_Password" source="passwordArray" target="mov2#hym2#lgu2.password"/>
+        <LinkParameter id="mov2#hym2#seu6#ln98#par352" name="username_Username" source="userNameArray" target="mov2#hym2#lgu2.username"/>
+      </Link>
+      <Link id="mov2#hym2#seu6#ln106" name="Flow106" to="mov2#hym2#page25#mssu18" type="transport" validate="true">
+        <LinkParameter id="mov2#hym2#seu6#ln106#par342" name="cf_PASSING" source="userOIDArray" passing="true"/>
+        <LinkParameter id="mov2#hym2#seu6#ln106#par362" name="UserToDoctor.approved_PASSING" source="rel36#role71$ent9#att17Array" passing="true"/>
+        <LinkParameter id="mov2#hym2#seu6#ln106#par363" name="UserToPatient.approved_PASSING" source="rel14#role27$ent6#att19Array" passing="true"/>
+      </Link>
+      <Link id="mov2#hym2#seu6#ln107" name="Flow107" to="mov2#hym2#page26#mssu25" type="transport" validate="true">
+        <LinkParameter id="mov2#hym2#seu6#ln107#par343" name="cf_PASSING" source="userOIDArray" passing="true"/>
+        <LinkParameter id="mov2#hym2#seu6#ln107#par364" name="UserToPatient.approved_PASSING" source="rel14#role27$ent6#att19Array" passing="true"/>
+        <LinkParameter id="mov2#hym2#seu6#ln107#par365" name="UserToPharmacist.approved_PASSING" source="rel22#role43$ent1#att20Array" passing="true"/>
+      </Link>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="535" gr:y="715" id="mov2#hym2#inn3" name="ifNotNull">
+      <KOLink id="mov2#hym2#inn3#kln27" name="KOFlow27" to="mov2#hym2#kocu15" automaticCoupling="true"/>
+      <OKLink id="mov2#hym2#inn3#oln76" name="OKFlow76" to="mov2#hym2#scu1" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <ScriptUnit gr:x="560" gr:y="310" id="mov2#hym2#scu1" name="SelectCorrectLogin">
+      <ScriptUnitText xml:space="preserve">#input int[] groupOid
+#output int returnCode
+
+def boolean trovatoDottore = false;
+def boolean trovatoFarmacista = false;
+def boolean trovatoPaziente = false;
+def boolean trovatoAdmin = false;
+
+if(groupOid!= null)
+{
+	def int i = 0;  
+	for (i=0;i&lt;groupOid.size() ;i++)
+	{
+		if (groupOid[i] == 1) 
+		{
+			trovatoDottore=true;
+		}
+		else if (groupOid[i] == 2)
+		{
+			trovatoFarmacista=true;
+		}
+		else if (groupOid[i] == 3) 
+		{
+			trovatoPaziente=true;
+		}
+		else if (groupOid[i] == 4)
+		{
+			trovatoAdmin=true;
+		}
+	}	
+}
+
+if (trovatoDottore &amp;&amp; trovatoPaziente &amp;&amp; !trovatoFarmacista &amp;&amp; !trovatoAdmin) 
+{
+	return ["returnCode" : 1];
+}
+else if (!trovatoDottore &amp;&amp; trovatoPaziente &amp;&amp; trovatoFarmacista &amp;&amp; !trovatoAdmin)
+{
+	return ["returnCode" : 2];
+}
+else if (trovatoDottore &amp;&amp; !trovatoPaziente &amp;&amp; !trovatoFarmacista &amp;&amp; !trovatoAdmin)
+{
+	return ["returnCode" : 3];
+}
+else if (!trovatoDottore &amp;&amp; trovatoPaziente &amp;&amp; !trovatoFarmacista &amp;&amp; !trovatoAdmin)
+{
+	return ["returnCode" : 4];
+}
+else if (!trovatoDottore &amp;&amp; !trovatoPaziente &amp;&amp; trovatoFarmacista &amp;&amp; !trovatoAdmin)
+{
+	return ["returnCode" : 5];
+}
+else if (!trovatoDottore &amp;&amp; !trovatoPaziente &amp;&amp; !trovatoFarmacista &amp;&amp; trovatoAdmin)
+{
+	return ["returnCode" : 6];
+}
+</ScriptUnitText>      <OKLink id="mov2#hym2#scu1#oln82" name="OKFlow82" to="mov2#hym2#switch8">        <LinkParameter id="mov2#hym2#scu1#oln82#par303" name="returnCode_Switch" source="result(returnCode)" target="mov2#hym2#switch8.switch"/>        <LinkParameter id="mov2#hym2#scu1#oln82#par402" name="cf_PASSING" sourceLinkParameter="mov2#hym2#seu6#ln72#par401" passing="true"/>      </OKLink>    </ScriptUnit>    <SwitchUnit gr:x="750" gr:y="305" id="mov2#hym2#switch8" name="SceltaLogin">      <OKLink id="mov2#hym2#switch8#oln77" name="OKFlow77" to="mov2#hym2#page25" automaticCoupling="true" gr:bendpoints="41,-239,-234,26" code="1"/>      <OKLink id="mov2#hym2#switch8#oln78" name="OKFlow78" to="mov2#hym2#page26" automaticCoupling="true" gr:bendpoints="94,-128,-181,2" code="2"/>      <Case value="1"/>      <Case value="2"/>      <Case value="3"/>      <Case value="4"/>      <Case value="5"/>      <Case value="6"/>      <OKLink id="mov2#hym2#switch8#oln87" name="OKFlow87" to="mov2#hym2#lgu2" automaticCoupling="true" gr:bendpoints="-8,312,-738,332;352,372,-378,392" code="6"/>      <OKLink id="mov2#hym2#switch8#oln89" name="OKFlow89" to="mov2#hym2#seu13" code="3" gr:bendpoints="397,-65,-453,220">        <LinkParameter id="mov2#hym2#switch8#oln89#par403" name="cf_PASSING_CFcondition" sourceLinkParameter="mov2#hym2#scu1#oln82#par402" target="mov2#hym2#seu13#su33#acond25"/>      </OKLink>      <OKLink id="mov2#hym2#switch8#oln90" name="OKFlow90" to="mov2#hym2#seu11" gr:bendpoints="390,250,-340,270" code="4">        <LinkParameter id="mov2#hym2#switch8#oln90#par404" name="cf_PASSING_CFcondition" sourceLinkParameter="mov2#hym2#scu1#oln82#par402" target="mov2#hym2#seu11#su32#acond24"/>      </OKLink>      <OKLink id="mov2#hym2#switch8#oln91" name="OKFlow91" to="mov2#hym2#seu14" code="5" gr:bendpoints="363,126,-367,146">        <LinkParameter id="mov2#hym2#switch8#oln91#par405" name="cf_PASSING_CFcondition" sourceLinkParameter="mov2#hym2#scu1#oln82#par402" target="mov2#hym2#seu14#su34#acond26"/>      </OKLink>    </SwitchUnit>    <LoginUnit gr:x="1485" gr:y="330" id="mov2#hym2#lgu2" name="Login">      <OKLink id="mov2#hym2#lgu2#oln85" name="OKFlow85" to="mov2#hym2#okcu13" automaticCoupling="true"/>      <KOLink id="mov2#hym2#lgu2#kln37" name="KOFlow37" to="mov2#hym2#kocu15" automaticCoupling="true"/>    </LoginUnit>    <ModifyUnit gr:x="1250" gr:y="260" id="mov2#hym2#mfu4" name="UpdateDefaultRole" entity="User">      <Selector id="mov2#hym2#mfu4#su28" defaultPolicy="fill" booleanOperator="and">        <KeyCondition id="mov2#hym2#mfu4#su28#kcond21" name="KeyCondition21" predicate="in" implied="false"/>      </Selector>      <OKLink id="mov2#hym2#mfu4#oln94" name="OKFlow94" to="mov2#hym2#seu7">        <LinkParameter id="mov2#hym2#mfu4#oln94#par353" name="cf_cf [cf]" source="userOIDArray" target="mov2#hym2#seu7#su30#kcond23.userOID"/>      </OKLink>    </ModifyUnit>    <SelectorUnit gr:x="1245" gr:y="640" id="mov2#hym2#seu7" name="SelectorCorrectUser" entity="User" distinctAttributes="userName password">      <Selector id="mov2#hym2#seu7#su30" defaultPolicy="fill" booleanOperator="and">        <KeyCondition id="mov2#hym2#seu7#su30#kcond23" name="cf" predicate="in" implied="false"/>      </Selector>      <OKLink id="mov2#hym2#seu7#oln95" name="OKFlow95" to="mov2#hym2#inn8">        <LinkParameter id="mov2#hym2#seu7#oln95#par354" name="cf_Input" source="userOIDArray" target="mov2#hym2#inn8.isnotnull"/>        <LinkParameter id="mov2#hym2#seu7#oln95#par355" name="password_PASSING" source="passwordArray" passing="true"/>        <LinkParameter id="mov2#hym2#seu7#oln95#par358" name="username_PASSING" source="userNameArray" passing="true"/>      </OKLink>    </SelectorUnit>    <IsNotNullUnit gr:x="1475" gr:y="630" id="mov2#hym2#inn8" name="NotUserNull">      <OKLink id="mov2#hym2#inn8#oln96" name="OKFlow96" to="mov2#hym2#lgu2">        <LinkParameter id="mov2#hym2#inn8#oln96#par356" name="Input Value_Username" target="mov2#hym2#lgu2.username" sourceLinkParameter="mov2#hym2#seu7#oln95#par358"/>        <LinkParameter id="mov2#hym2#inn8#oln96#par357" name="password_PASSING_Password" sourceLinkParameter="mov2#hym2#seu7#oln95#par355" target="mov2#hym2#lgu2.password"/>      </OKLink>      <KOLink id="mov2#hym2#inn8#kln39" name="KOFlow39" to="mov2#hym2#kocu15" automaticCoupling="true"/>    </IsNotNullUnit>    <SelectorUnit gr:x="1340" gr:y="-200" id="mov2#hym2#seu11" name="PatientApproved" entity="ent6">      <Selector id="mov2#hym2#seu11#su32" defaultPolicy="fill" booleanOperator="and">        <AttributesCondition id="mov2#hym2#seu11#su32#acond21" name="Approved" predicate="eq" booleanOperator="or" implied="false" attributes="ent6#att19" value="1"/>        <AttributesCondition id="mov2#hym2#seu11#su32#acond24" name="CFcondition" predicate="eq" booleanOperator="and" implied="false" attributes="rel14#role28.userOID"/>      </Selector>      <OKLink id="mov2#hym2#seu11#oln101" name="OKFlow101" to="mov2#hym2#inn9">        <LinkParameter id="mov2#hym2#seu11#oln101#par389" name="PatientToUser.cf_Input" source="rel14#role28_userOIDArray" target="mov2#hym2#inn9.isnotnull"/>      </OKLink>    </SelectorUnit>    <SelectorUnit gr:x="1570" gr:y="-5" id="mov2#hym2#seu13" name="DoctorApproved" entity="ent9">      <Selector id="mov2#hym2#seu13#su33" defaultPolicy="fill" booleanOperator="and">        <AttributesCondition id="mov2#hym2#seu13#su33#acond22" name="Approved" predicate="eq" booleanOperator="or" implied="false" attributes="ent9#att17" value="1"/>        <AttributesCondition id="mov2#hym2#seu13#su33#acond25" name="CFcondition" predicate="eq" booleanOperator="and" implied="false" attributes="rel36#role72.userOID"/>      </Selector>      <OKLink id="mov2#hym2#seu13#oln103" name="KOFlow44" to="mov2#hym2#inn10">        <LinkParameter id="mov2#hym2#seu13#oln103#par393" name="DoctorToUser.cf_Input" source="rel36#role72_userOIDArray" target="mov2#hym2#inn10.isnotnull"/>      </OKLink>    </SelectorUnit>    <SelectorUnit gr:x="1640" gr:y="160" id="mov2#hym2#seu14" name="PharmacistApproved" entity="ent1">      <Selector id="mov2#hym2#seu14#su34" defaultPolicy="fill" booleanOperator="and">        <AttributesCondition id="mov2#hym2#seu14#su34#acond23" name="Approved" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att20" value="1"/>        <AttributesCondition id="mov2#hym2#seu14#su34#acond26" name="CFcondition" predicate="eq" booleanOperator="or" implied="false" attributes="rel22#role44.userOID"/>      </Selector>      <OKLink id="mov2#hym2#seu14#oln105" name="OKFlow105" to="mov2#hym2#inn11">        <LinkParameter id="mov2#hym2#seu14#oln105#par398" name="PharmacistToUser.cf_Input" source="rel22#role44_userOIDArray" target="mov2#hym2#inn11.isnotnull"/>      </OKLink>    </SelectorUnit>    <IsNotNullUnit gr:x="1370" gr:y="-10" id="mov2#hym2#inn9" name="notNullPatient">      <OKLink id="mov2#hym2#inn9#oln102" name="OKFlow102" to="mov2#hym2#mfu4">        <LinkParameter id="mov2#hym2#inn9#oln102#par390" name="Input Value_KeyCondition21 [cf]" source="inputValue" target="mov2#hym2#mfu4#su28#kcond21.userOID"/>        <LinkParameter id="mov2#hym2#inn9#oln102#par391" name="3_Group.oid(defaultGroup)" sourceValue="3" target="mov2#hym2#mfu4.User2DefaultGroup.groupOID"/>      </OKLink>      <KOLink id="mov2#hym2#inn9#kln43" name="KOFlow43" to="mov2#hym2#page51" automaticCoupling="true"/>    </IsNotNullUnit>    <IsNotNullUnit gr:x="1805" gr:y="10" id="mov2#hym2#inn10" name="notNullDoctor">      <OKLink id="mov2#hym2#inn10#oln104" name="OKFlow104" to="mov2#hym2#mfu4">        <LinkParameter id="mov2#hym2#inn10#oln104#par394" name="1_Group.oid(defaultGroup)" sourceValue="1" target="mov2#hym2#mfu4.User2DefaultGroup.groupOID"/>        <LinkParameter id="mov2#hym2#inn10#oln104#par395" name="Input Value_KeyCondition21 [cf]" source="inputValue" target="mov2#hym2#mfu4#su28#kcond21.userOID"/>      </OKLink>      <KOLink id="mov2#hym2#inn10#kln45" name="KOFlow45" to="mov2#hym2#page52" automaticCoupling="true"/>    </IsNotNullUnit>    <IsNotNullUnit gr:x="1880" gr:y="245" id="mov2#hym2#inn11" name="notNullPharmacist">      <KOLink id="mov2#hym2#inn11#kln46" name="KOFlow46" to="mov2#hym2#page53" automaticCoupling="true"/>      <OKLink id="mov2#hym2#inn11#oln106" name="OKFlow106" to="mov2#hym2#mfu4">        <LinkParameter id="mov2#hym2#inn11#oln106#par399" name="2_Group.oid(defaultGroup)" sourceValue="2" target="mov2#hym2#mfu4.User2DefaultGroup.groupOID"/>        <LinkParameter id="mov2#hym2#inn11#oln106#par400" name="Input Value_KeyCondition21 [cf]" source="inputValue" target="mov2#hym2#mfu4#su28#kcond21.userOID"/>      </OKLink>    </IsNotNullUnit>  </OperationUnits></HybridModule>

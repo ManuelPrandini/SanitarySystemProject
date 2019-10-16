@@ -1,0 +1,34 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="740" gr:y="35" id="sv4#area8#area11" name="Password recovery" landmark="true">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="250" gr:y="5" id="sv4#area8#area11#miu16" action="true" moduleId="mov2#mpkg2#opm13">
+      <OKLink id="sv4#area8#area11#miu16#oln130" name="OKFlow130" to="sv4#area8#area11#page56#mssu32">
+        <LinkParameter id="sv4#area8#area11#miu16#oln130#par473" name="Check your e-mail for instructions._Shown Messages" sourceValue="Check your e-mail for instructions." target="sv4#area8#area11#page56#mssu32.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv4#area8#area11#miu16#kln55" name="KOFlow55" to="sv4#area8#area11#page56#mssu32" gr:bendpoints="127,33,-83,3">
+        <LinkParameter id="sv4#area8#area11#miu16#kln55#par474" name="Check your e-mail for instructions._Shown Messages" sourceValue="Check your e-mail for instructions." target="sv4#area8#area11#page56#mssu32.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ParameterCollectorUnit gr:x="280" gr:y="295" id="sv4#area8#area11#pcu2" name="reset url entry point" customURLName="reset" customDescriptor="false" secure="false" urlFragment="sv4#area8#area11#pcu2#pcp3">
+      <CollectorParameter id="sv4#area8#area11#pcu2#pcp3" name="code"/>
+      <OKLink id="sv4#area8#area11#pcu2#oln18" name="OKFlow18" to="sv4#area8#area11#miu17">
+        <LinkParameter id="sv4#area8#area11#pcu2#oln18#par33" name="code_code" source="sv4#area8#area11#pcu2#pcp3" target="sv4#area8#area11#miu17.mov2#mpkg2#opm16#icu18#icp25"/>
+      </OKLink>
+    </ParameterCollectorUnit>
+    <ModuleInstanceUnit gr:x="610" gr:y="425" id="sv4#area8#area11#miu17" action="true" moduleId="mov2#mpkg2#opm16">
+      <OKLink id="sv4#area8#area11#miu17#oln13" name="OKFlow13" to="sv4#area8#area11#page57#enu8">
+        <LinkParameter id="sv4#area8#area11#miu17#oln13#par314" name="primary key_primary key" source="mov2#mpkg2#opm16#okcu15#ocp22" target="sv4#area8#area11#page57#enu8#fld89_slot"/>
+      </OKLink>
+      <KOLink id="sv4#area8#area11#miu17#kln10" name="KOFlow10" to="sv4#area8#area11#page56#mssu33" gr:bendpoints="-166,-89,4,215">
+        <LinkParameter id="sv4#area8#area11#miu17#kln10#par317" name="message_Shown Messages" source="mov2#mpkg2#opm16#kocu17#ocp5" target="sv4#area8#area11#page56#mssu33.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="900" gr:y="195" id="sv4#area8#area11#miu18" action="true" moduleId="mov2#mpkg2#opm17">
+      <KOLink id="sv4#area8#area11#miu18#kln58" name="KOFlow58" to="sv4#area8#area11#page56#mssu33" gr:bendpoints="-170,-73,280,1">
+        <LinkParameter id="sv4#area8#area11#miu18#kln58#par480" name="The data provided does not match on our database, please check and _Shown Messages" sourceValue="The data provided does not match on our database, please check and " target="sv4#area8#area11#page56#mssu33.shownMessages"/>
+      </KOLink>
+      <OKLink id="sv4#area8#area11#miu18#oln135" name="OKFlow135" to="sv4#area8#area11#page56#mssu32" gr:bendpoints="-128,-160,322,0">
+        <LinkParameter id="sv4#area8#area11#miu18#oln135#par479" name="Password reset done!_Shown Messages" sourceValue="Password reset done!" target="sv4#area8#area11#page56#mssu32.shownMessages"/>
+      </OKLink>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</Area>

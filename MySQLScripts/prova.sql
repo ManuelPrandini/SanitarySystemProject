@@ -1,0 +1,1 @@
+INSERT INTO user (CF) VALUES ("cf1");

@@ -1,0 +1,7 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="30" gr:y="-420" id="sv4#area8" name="Login Area" landmark="true" landmarks="sv4#area8#area10 sv4#area8#area11">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="220" gr:y="65" id="sv4#area8#miu13" action="false" moduleId="mov2#hym2">
+      <KOLink id="sv4#area8#miu13#kln26" name="KOFlow26" to="sv4#area8#page12#mssu10" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</Area>

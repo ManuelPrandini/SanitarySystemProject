@@ -1,0 +1,40 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="10" gr:y="195" id="mov2#mpkg2#opm9" name="VerifyCF">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg2#opm9#icu9" gr:x="25" gr:y="140" linkOrder="mov2#mpkg2#opm9#icu9#ln30">
+      <InputCollectorParameter id="mov2#mpkg2#opm9#icu9#icp39" name="CF"/>
+      <Link id="mov2#mpkg2#opm9#icu9#ln30" name="Flow30" to="mov2#mpkg2#opm9#qu1" type="transport" validate="true">
+        <LinkParameter id="mov2#mpkg2#opm9#icu9#ln30#par75" name="CF_CF" source="mov2#mpkg2#opm9#icu9#icp39" target="mov2#mpkg2#opm9#qu1.mov2#mpkg2#opm9#qu1#qi1"/>
+      </Link>
+    </InputCollectorUnit>
+    <KOCollectorUnit gr:x="580" gr:y="340" id="mov2#mpkg2#opm9#kocu11" name="KO Port11">
+      <OutputCollectorParameter id="mov2#mpkg2#opm9#kocu11#ocp6" name="NULL"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit gr:x="580" gr:y="140" id="mov2#mpkg2#opm9#okcu8" name="OK Port8">
+      <OutputCollectorParameter id="mov2#mpkg2#opm9#okcu8#ocp7" name="CF"/>
+      <OutputCollectorParameter id="mov2#mpkg2#opm9#okcu8#ocp8" name="address"/>
+      <OutputCollectorParameter id="mov2#mpkg2#opm9#okcu8#ocp12" name="birthday"/>
+      <OutputCollectorParameter id="mov2#mpkg2#opm9#okcu8#ocp11" name="password"/>
+      <OutputCollectorParameter id="mov2#mpkg2#opm9#okcu8#ocp10" name="surname"/>
+      <OutputCollectorParameter id="mov2#mpkg2#opm9#okcu8#ocp9" name="name"/>
+    </OKCollectorUnit>
+    <QueryUnit gr:x="350" gr:y="220" id="mov2#mpkg2#opm9#qu1" name="VerifyUser" mode="select" language="SQL">
+      <QueryText xml:space="preserve">SELECT cf, username, password, email, user.name, surname, birthday, address, telephone, city.name as city_of_born, city.name as lives FROM user, city WHERE user.cf=(:CF) and city.oid=user.city_oid and city.oid = user.city_oid_2</QueryText>
+      <OKLink id="mov2#mpkg2#opm9#qu1#oln26" name="OKFlow26" to="mov2#mpkg2#opm9#okcu8">
+        <LinkParameter id="mov2#mpkg2#opm9#qu1#oln26#par83" name="address_address" source="data[].address" target="mov2#mpkg2#opm9#okcu8#ocp8"/>
+        <LinkParameter id="mov2#mpkg2#opm9#qu1#oln26#par84" name="birthday_birthday" source="data[].birthday" target="mov2#mpkg2#opm9#okcu8#ocp12"/>
+        <LinkParameter id="mov2#mpkg2#opm9#qu1#oln26#par85" name="cf_CF" source="data[].cf" target="mov2#mpkg2#opm9#okcu8#ocp7"/>
+        <LinkParameter id="mov2#mpkg2#opm9#qu1#oln26#par86" name="name_name" source="data[].name" target="mov2#mpkg2#opm9#okcu8#ocp9"/>
+        <LinkParameter id="mov2#mpkg2#opm9#qu1#oln26#par87" name="password_password" source="data[].password" target="mov2#mpkg2#opm9#okcu8#ocp11"/>
+        <LinkParameter id="mov2#mpkg2#opm9#qu1#oln26#par88" name="surname_surname" source="data[].surname" target="mov2#mpkg2#opm9#okcu8#ocp10"/>
+      </OKLink>
+      <KOLink id="mov2#mpkg2#opm9#qu1#kln21" name="KOFlow21" to="mov2#mpkg2#opm9#kocu11" automaticCoupling="true"/>
+      <QueryInput id="mov2#mpkg2#opm9#qu1#qi1" name="CF" required="true" type="string"/>
+      <QueryOutput id="mov2#mpkg2#opm9#qu1#qo1" name="cf" type="string"/>
+      <QueryOutput id="mov2#mpkg2#opm9#qu1#qo2" name="password" type="password"/>
+      <QueryOutput id="mov2#mpkg2#opm9#qu1#qo3" name="name" type="string"/>
+      <QueryOutput id="mov2#mpkg2#opm9#qu1#qo4" name="surname" type="string"/>
+      <QueryOutput id="mov2#mpkg2#opm9#qu1#qo5" name="address" type="string"/>
+      <QueryOutput id="mov2#mpkg2#opm9#qu1#qo6" name="birthday" type="date"/>
+    </QueryUnit>
+  </OperationUnits>
+</OperationModule>

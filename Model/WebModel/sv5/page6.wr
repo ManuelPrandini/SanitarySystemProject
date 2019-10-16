@@ -1,0 +1,51 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#page6" name="Admin Info" landmark="true" gr:x="80" gr:y="10">
+  <ContentUnits>
+    <DataUnit id="sv5#page6#dau5" name="Profile" gr:x="160" gr:y="0" entity="User" displayAttributes="User#att27 User#att28 User#att29">
+      <Selector id="sv5#page6#dau5#su8" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv5#page6#dau5#su8#kcond7" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv5#page6#dau5#ln3" name="Flow21" to="sv5#lou5" type="transport" automaticCoupling="true" validate="true"/>
+    </DataUnit>
+    <GetUnit id="sv5#page6#gtu4" name="Admin info" gr:x="0" gr:y="10" contextParameters="UserCtxParam">
+      <Link id="sv5#page6#gtu4#ln11" name="Flow20" to="sv5#page6#dau5" type="transport" validate="true">
+        <LinkParameter id="sv5#page6#gtu4#ln11#par26" name="UserCtxParam.cf_KeyCondition1 [cf]" source="sv5#page6#gtu4.UserCtxParam" target="sv5#page6#dau5#su8#kcond7.userOID"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#page6#dau5">
+          <layout:Attribute attribute="User#att27"/>
+          <layout:Attribute attribute="User#att28"/>
+          <layout:Attribute attribute="User#att29"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

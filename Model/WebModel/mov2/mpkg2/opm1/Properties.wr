@@ -1,0 +1,77 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="10" gr:y="0" id="mov2#mpkg2#opm1" name="RegisterDoctor">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg2#opm1#icu1" gr:x="30" gr:y="60" linkOrder="mov2#mpkg2#opm1#icu1#ln64">
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp1" name="email"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp2" name="name"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp3" name="surname"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp4" name="doctorCode"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp5" name="birthday"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp6" name="password"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp7" name="cf"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp51" name="username"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp54" name="group_oid"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp22" name="approved"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp32" name="telephone"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp31" name="cityBorn"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp30" name="address"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp40" name="cityLives"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp41" name="medicalSpecialization"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp67" name="gender"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp68" name="exists?"/>
+      <OKLink id="mov2#mpkg2#opm1#icu1#oln53" name="OKFlow53" to="mov2#mpkg2#opm1#switch5">
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#oln53#par206" name="exists?_Switch" source="mov2#mpkg2#opm1#icu1#icp68" target="mov2#mpkg2#opm1#switch5.switch"/>
+      </OKLink>
+      <Link id="mov2#mpkg2#opm1#icu1#ln58" name="Flow58" to="mov2#mpkg2#opm1#cru4" type="transport" validate="true" gr:bendpoints="280,-49,-220,81">
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln58#par153" name="0_approved" sourceValue="0" target="mov2#mpkg2#opm1#cru4.ent9#att17"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln58#par154" name="doctorCode_doctor_code" source="mov2#mpkg2#opm1#icu1#icp4" target="mov2#mpkg2#opm1#cru4.ent9#att33"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln58#par155" name="medicalSpecialization_Medical_specialization.nameSpecialization(DoctorToMedical_specialization)" source="mov2#mpkg2#opm1#icu1#icp41" target="mov2#mpkg2#opm1#cru4.rel4#role5.ent8#att21"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln58#par156" name="cf_User.cf(DoctorToUser)" source="mov2#mpkg2#opm1#icu1#icp7" target="mov2#mpkg2#opm1#cru4.rel36#role72.userOID"/>
+      </Link>
+      <Link id="mov2#mpkg2#opm1#icu1#ln59" name="Flow59" to="mov2#mpkg2#opm1#cru5" type="transport" validate="true" gr:bendpoints="263,86,-237,31">
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par157" name="address_address" source="mov2#mpkg2#opm1#icu1#icp30" target="mov2#mpkg2#opm1#cru5.User#att40"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par158" name="birthday_birthday" source="mov2#mpkg2#opm1#icu1#icp5" target="mov2#mpkg2#opm1#cru5.User#att29"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par159" name="cf_cf" source="mov2#mpkg2#opm1#icu1#icp7" target="mov2#mpkg2#opm1#cru5.userOID"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par160" name="cityBorn_City.oid(Borns)" source="mov2#mpkg2#opm1#icu1#icp31" target="mov2#mpkg2#opm1#cru5.rel7#role10.ent12#att16"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par161" name="cityLives_City.oid(Lives)" source="mov2#mpkg2#opm1#icu1#icp40" target="mov2#mpkg2#opm1#cru5.rel9#role14.ent12#att16"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par162" name="_Doctor.doctor_code(UserToDoctor)" blank="true" target="mov2#mpkg2#opm1#cru5.rel36#role71.ent9#att33"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par163" name="email_email" source="mov2#mpkg2#opm1#icu1#icp1" target="mov2#mpkg2#opm1#cru5.email"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par164" name="gender_gender" source="mov2#mpkg2#opm1#icu1#icp67" target="mov2#mpkg2#opm1#cru5.User#att12"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par165" name="group_oid_Group.oid(groups)" source="mov2#mpkg2#opm1#icu1#icp54" target="mov2#mpkg2#opm1#cru5.User2Group.groupOID"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par166" name="name_name" source="mov2#mpkg2#opm1#icu1#icp2" target="mov2#mpkg2#opm1#cru5.User#att27"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par167" name="password_password" source="mov2#mpkg2#opm1#icu1#icp6" target="mov2#mpkg2#opm1#cru5.password"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par168" name="surname_surname" source="mov2#mpkg2#opm1#icu1#icp3" target="mov2#mpkg2#opm1#cru5.User#att28"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par169" name="telephone_telephone" source="mov2#mpkg2#opm1#icu1#icp32" target="mov2#mpkg2#opm1#cru5.User#att41"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par170" name="username_username" source="mov2#mpkg2#opm1#icu1#icp51" target="mov2#mpkg2#opm1#cru5.userName"/>
+      </Link>
+      <Link id="mov2#mpkg2#opm1#icu1#ln64" name="Flow64" to="mov2#mpkg2#opm1#cnu1" type="transport" validate="true">
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln64#par214" name="cf_KeyCondition15 [cf] [User] [Source]" source="mov2#mpkg2#opm1#icu1#icp7" target="mov2#mpkg2#opm1#cnu1#su22#kcond15.userOID"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln64#par215" name="group_oid_KeyCondition16 [oid] [Group] [Target]" source="mov2#mpkg2#opm1#icu1#icp54" target="mov2#mpkg2#opm1#cnu1#su23#kcond16.groupOID"/>
+      </Link>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="910" gr:y="30" id="mov2#mpkg2#opm1#okcu1" name="OK Port1"/>
+    <KOCollectorUnit gr:x="910" gr:y="275" id="mov2#mpkg2#opm1#kocu1" name="KO Port1"/>
+    <SwitchUnit gr:x="470" gr:y="215" id="mov2#mpkg2#opm1#switch5" name="ifExists?">
+      <Case value="1"/>
+      <Case value="0"/>
+      <OKLink id="mov2#mpkg2#opm1#switch5#oln54" name="OKFlow54" to="mov2#mpkg2#opm1#cnu1" automaticCoupling="true" code="1"/>
+      <OKLink id="mov2#mpkg2#opm1#switch5#oln55" name="OKFlow55" to="mov2#mpkg2#opm1#cru5" automaticCoupling="true" code="0"/>
+    </SwitchUnit>
+    <CreateUnit gr:x="605" gr:y="70" id="mov2#mpkg2#opm1#cru4" name="CreateDoctor" entity="ent9">
+      <OKLink id="mov2#mpkg2#opm1#cru4#oln57" name="OKFlow57" to="mov2#mpkg2#opm1#okcu1" automaticCoupling="true"/>
+      <KOLink id="mov2#mpkg2#opm1#cru4#kln33" name="KOFlow33" to="mov2#mpkg2#opm1#kocu1" automaticCoupling="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="615" gr:y="255" id="mov2#mpkg2#opm1#cru5" name="createUser" entity="User">
+      <OKLink id="mov2#mpkg2#opm1#cru5#oln56" name="OKFlow56" to="mov2#mpkg2#opm1#cru4" automaticCoupling="true"/>
+      <KOLink id="mov2#mpkg2#opm1#cru5#kln34" name="KOFlow34" to="mov2#mpkg2#opm1#kocu1" automaticCoupling="true"/>
+    </CreateUnit>
+    <ConnectUnit gr:x="395" gr:y="15" id="mov2#mpkg2#opm1#cnu1" name="InsertNewGroup" relationship="User2Group">
+      <SourceSelector id="mov2#mpkg2#opm1#cnu1#su22" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm1#cnu1#su22#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="mov2#mpkg2#opm1#cnu1#su23" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm1#cnu1#su23#kcond16" name="KeyCondition16" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="mov2#mpkg2#opm1#cnu1#oln63" name="OKFlow60" to="mov2#mpkg2#opm1#cru4" automaticCoupling="true"/>
+    </ConnectUnit>
+  </OperationUnits>
+</OperationModule>

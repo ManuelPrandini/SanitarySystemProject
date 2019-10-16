@@ -1,0 +1,28 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area9#page23" name="Esiste pharm" gr:x="800" gr:y="0">
+  <ContentUnits>
+    <MultiMessageUnit id="sv4#area9#page23#mssu4" name="existMessage" linkOrder="sv4#area9#page23#mssu4#ln45" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">The CF and password inserted correspond to a pharmacist yet!</Message>
+      <Link id="sv4#area9#page23#mssu4#ln45" name="Return to Preregistration" to="sv4#area9#page8#mssu2" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="17,-117,832,-227;-952,-325,83,-100"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area9#page23#mssu4">
+          <layout:Link link="sv4#area9#page23#mssu4#ln45"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

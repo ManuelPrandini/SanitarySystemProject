@@ -1,0 +1,16 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="270" gr:y="395" id="mov2#mpkg2#opm17" name="Reset Password">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg2#opm17#icu19" gr:x="70" gr:y="115" linkOrder="mov2#mpkg2#opm17#icu19#ln22">
+      <InputCollectorParameter id="mov2#mpkg2#opm17#icu19#icp78" name="password"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm17#icu19#icp82" name="primary key"/>
+      <OKLink id="mov2#mpkg2#opm17#icu19#oln70" name="OKFlow70" to="mov2#mpkg2#opm17#opg2#seu9">
+        <LinkParameter id="mov2#mpkg2#opm17#icu19#oln70#par80" name="primary key_KeyCondition6 [cf]" source="mov2#mpkg2#opm17#icu19#icp82" target="mov2#mpkg2#opm17#opg2#seu9#su11#kcond9.userOID"/>
+      </OKLink>
+      <Link id="mov2#mpkg2#opm17#icu19#ln22" name="Flow22" to="mov2#mpkg2#opm17#opg2#mfu2" type="transport" validate="true">
+        <LinkParameter id="mov2#mpkg2#opm17#icu19#ln22#par81" name="password_password" source="mov2#mpkg2#opm17#icu19#icp78" target="mov2#mpkg2#opm17#opg2#mfu2.password"/>
+      </Link>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="815" gr:y="270" id="mov2#mpkg2#opm17#okcu16" name="Success"/>
+    <KOCollectorUnit gr:x="815" gr:y="115" id="mov2#mpkg2#opm17#kocu18" name="Failure"/>
+  </OperationUnits>
+</OperationModule>

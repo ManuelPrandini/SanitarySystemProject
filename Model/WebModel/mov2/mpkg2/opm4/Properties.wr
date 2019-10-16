@@ -1,0 +1,23 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="200" gr:y="65" id="mov2#mpkg2#opm4" name="Delete Drug">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg2#opm4#icu4" gr:x="25" gr:y="85">
+      <InputCollectorParameter id="mov2#mpkg2#opm4#icu4#icp8" name="Drug id"/>
+      <OKLink id="mov2#mpkg2#opm4#icu4#oln7" name="OKFlow7" to="mov2#mpkg2#opm4#dlu1">
+        <LinkParameter id="mov2#mpkg2#opm4#icu4#oln7#par3" name="Drug id_KeyCondition5 [id]" source="mov2#mpkg2#opm4#icu4#icp8" target="mov2#mpkg2#opm4#dlu1#su6#kcond5.ent2#att6"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="450" gr:y="40" id="mov2#mpkg2#opm4#okcu3" name="OK">
+      <OutputCollectorParameter id="mov2#mpkg2#opm4#okcu3#ocp2" name="Successfull message" value="Operazione andata a buon fine"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="450" gr:y="130" id="mov2#mpkg2#opm4#kocu2" name="KO">
+      <OutputCollectorParameter id="mov2#mpkg2#opm4#kocu2#ocp3" name="Error message" value="L'operazione non &#232; andata a buon fine"/>
+    </KOCollectorUnit>
+    <DeleteUnit gr:x="295" gr:y="75" id="mov2#mpkg2#opm4#dlu1" name="Delete Drug" entity="ent2">
+      <Selector id="mov2#mpkg2#opm4#dlu1#su6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm4#dlu1#su6#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm4#dlu1#oln8" name="OKFlow8" to="mov2#mpkg2#opm4#okcu3" automaticCoupling="true"/>
+      <KOLink id="mov2#mpkg2#opm4#dlu1#kln5" name="KOFlow5" to="mov2#mpkg2#opm4#kocu2" automaticCoupling="true"/>
+    </DeleteUnit>
+  </OperationUnits>
+</OperationModule>

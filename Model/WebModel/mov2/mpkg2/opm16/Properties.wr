@@ -1,0 +1,16 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg2#opm16" name="CheckReset Code" gr:x="260" gr:y="335">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg2#opm16#icu18" gr:x="-40" gr:y="115">
+      <InputCollectorParameter id="mov2#mpkg2#opm16#icu18#icp25" name="code"/>
+      <OKLink id="mov2#mpkg2#opm16#icu18#oln79" name="OKFlow79" to="mov2#mpkg2#opm16#opg3#seu10">
+        <LinkParameter id="mov2#mpkg2#opm16#icu18#oln79#par306" name="code_code" source="mov2#mpkg2#opm16#icu18#icp25" target="mov2#mpkg2#opm16#opg3#seu10#su13#acond3"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <KOCollectorUnit gr:x="1220" gr:y="115" id="mov2#mpkg2#opm16#kocu17" name="Failure">
+      <OutputCollectorParameter id="mov2#mpkg2#opm16#kocu17#ocp5" name="message"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit gr:x="1220" gr:y="280" id="mov2#mpkg2#opm16#okcu15" name="Success">
+      <OutputCollectorParameter id="mov2#mpkg2#opm16#okcu15#ocp22" name="primary key"/>
+    </OKCollectorUnit>
+  </OperationUnits>
+</OperationModule>

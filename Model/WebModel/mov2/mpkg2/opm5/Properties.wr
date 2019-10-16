@@ -1,0 +1,52 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="230" gr:y="135" id="mov2#mpkg2#opm5" name="ApproveUser">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg2#opm5#icu5" gr:x="15" gr:y="180">
+      <InputCollectorParameter id="mov2#mpkg2#opm5#icu5#icp23" name="UserPrimaryKey"/>
+      <OKLink id="mov2#mpkg2#opm5#icu5#oln15" name="OKFlow15" to="mov2#mpkg2#opm5#switch10">
+        <LinkParameter id="mov2#mpkg2#opm5#icu5#oln15#par409" name="groupID_Switch" source="mov2#mpkg2#opm5#icu5#icp79" target="mov2#mpkg2#opm5#switch10.switch"/>
+        <LinkParameter id="mov2#mpkg2#opm5#icu5#oln15#par410" name="UserPrimaryKey_PASSING" source="mov2#mpkg2#opm5#icu5#icp23" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov2#mpkg2#opm5#icu5#icp79" name="groupID"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="825" gr:y="30" id="mov2#mpkg2#opm5#okcu5" name="utente registrato"/>
+    <KOCollectorUnit gr:x="825" gr:y="345" id="mov2#mpkg2#opm5#kocu5" name="errore"/>
+    <SwitchUnit gr:x="325" gr:y="190" id="mov2#mpkg2#opm5#switch10" name="Switch">
+      <Case value="1"/>
+      <Case value="2"/>
+      <Case value="3"/>
+      <OKLink id="mov2#mpkg2#opm5#switch10#oln107" name="OKFlow107" to="mov2#mpkg2#opm5#mfu8" code="1">
+        <LinkParameter id="mov2#mpkg2#opm5#switch10#oln107#par411" name="1_approved" sourceValue="1" target="mov2#mpkg2#opm5#mfu8.ent9#att17"/>
+        <LinkParameter id="mov2#mpkg2#opm5#switch10#oln107#par416" name="UserPrimaryKey_PASSING_CFcondition" sourceLinkParameter="mov2#mpkg2#opm5#icu5#oln15#par410" target="mov2#mpkg2#opm5#mfu8#su37#acond27"/>
+      </OKLink>
+      <OKLink id="mov2#mpkg2#opm5#switch10#oln108" name="OKFlow108" to="mov2#mpkg2#opm5#mfu7" code="2">
+        <LinkParameter id="mov2#mpkg2#opm5#switch10#oln108#par412" name="1_approved" sourceValue="1" target="mov2#mpkg2#opm5#mfu7.ent1#att20"/>
+        <LinkParameter id="mov2#mpkg2#opm5#switch10#oln108#par415" name="UserPrimaryKey_PASSING_CFcondition" sourceLinkParameter="mov2#mpkg2#opm5#icu5#oln15#par410" target="mov2#mpkg2#opm5#mfu7#su36#acond28"/>
+      </OKLink>
+      <OKLink id="mov2#mpkg2#opm5#switch10#oln109" name="OKFlow109" to="mov2#mpkg2#opm5#mfu6" code="3">
+        <LinkParameter id="mov2#mpkg2#opm5#switch10#oln109#par413" name="1_approved" sourceValue="1" target="mov2#mpkg2#opm5#mfu6.ent6#att19"/>
+        <LinkParameter id="mov2#mpkg2#opm5#switch10#oln109#par414" name="UserPrimaryKey_PASSING_CFcondition" sourceLinkParameter="mov2#mpkg2#opm5#icu5#oln15#par410" target="mov2#mpkg2#opm5#mfu6#su35#acond29"/>
+      </OKLink>
+    </SwitchUnit>
+    <ModifyUnit gr:x="495" gr:y="335" id="mov2#mpkg2#opm5#mfu6" name="UpdatePatientApproved" entity="ent6">
+      <Selector id="mov2#mpkg2#opm5#mfu6#su35" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg2#opm5#mfu6#su35#acond29" name="CFcondition" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.userOID"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm5#mfu6#oln112" name="OKFlow112" to="mov2#mpkg2#opm5#okcu5" automaticCoupling="true"/>
+      <KOLink id="mov2#mpkg2#opm5#mfu6#kln49" name="KOFlow49" to="mov2#mpkg2#opm5#kocu5" automaticCoupling="true"/>
+    </ModifyUnit>
+    <ModifyUnit gr:x="480" gr:y="170" id="mov2#mpkg2#opm5#mfu7" name="UpdatePharmacistApproved" entity="ent1">
+      <Selector id="mov2#mpkg2#opm5#mfu7#su36" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg2#opm5#mfu7#su36#acond28" name="CFcondition" predicate="eq" booleanOperator="or" implied="false" attributes="rel22#role44.userOID"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm5#mfu7#oln111" name="OKFlow111" to="mov2#mpkg2#opm5#okcu5" automaticCoupling="true"/>
+      <KOLink id="mov2#mpkg2#opm5#mfu7#kln48" name="KOFlow48" to="mov2#mpkg2#opm5#kocu5" automaticCoupling="true"/>
+    </ModifyUnit>
+    <ModifyUnit gr:x="490" gr:y="20" id="mov2#mpkg2#opm5#mfu8" name="UpdateDoctorApproved" entity="ent9">
+      <Selector id="mov2#mpkg2#opm5#mfu8#su37" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg2#opm5#mfu8#su37#acond27" name="CFcondition" predicate="eq" booleanOperator="or" implied="false" attributes="rel36#role72.userOID"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm5#mfu8#oln110" name="OKFlow110" to="mov2#mpkg2#opm5#okcu5" automaticCoupling="true"/>
+      <KOLink id="mov2#mpkg2#opm5#mfu8#kln47" name="KOFlow47" to="mov2#mpkg2#opm5#kocu5" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationModule>

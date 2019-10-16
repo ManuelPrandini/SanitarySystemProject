@@ -1,0 +1,48 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="935" gr:y="140" id="mov2#hym2#page26" name="Farmacista-Paziente">
+  <ContentUnits>
+    <MultiMessageUnit id="mov2#hym2#page26#mssu25" name="Con quale ruolo ti vuoi loggare?" gr:x="0" gr:y="0" linkOrder="mov2#hym2#page26#mssu25#ln84 mov2#hym2#page26#mssu25#ln85">
+      <Link id="mov2#hym2#page26#mssu25#ln84" name="Login come Farmacista" to="mov2#hym2#seu14" type="normal" validate="true" gr:bendpoints="157,30,-119,-80">
+        <LinkParameter id="mov2#hym2#page26#mssu25#ln84#par397" name="cf_PASSING_CFcondition" sourceLinkParameter="mov2#hym2#seu6#ln107#par343" target="mov2#hym2#seu14#su34#acond26"/>
+      </Link>
+      <Link id="mov2#hym2#page26#mssu25#ln85" name="Login come Paziente" to="mov2#hym2#seu11" type="normal" validate="true">
+        <LinkParameter id="mov2#hym2#page26#mssu25#ln85#par396" name="cf_PASSING_CFcondition" sourceLinkParameter="mov2#hym2#seu6#ln107#par343" target="mov2#hym2#seu11#su32#acond24"/>
+      </Link>
+      <Message xml:space="preserve">Scelta ruolo:</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym2#page26#mssu25">
+          <layout:Link link="mov2#hym2#page26#mssu25#ln84"/>
+          <layout:Link link="mov2#hym2#page26#mssu25#ln85"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,12 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="230" gr:y="270" id="mov2#mpkg2#opm13" name="Check Email">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg2#opm13#icu16" gr:x="185" gr:y="250">
+      <InputCollectorParameter id="mov2#mpkg2#opm13#icu16#icp81" name="email"/>
+      <OKLink id="mov2#mpkg2#opm13#icu16#oln123" name="OKFlow123" to="mov2#mpkg2#opm13#opg1#seu21">
+        <LinkParameter id="mov2#mpkg2#opm13#icu16#oln123#par467" name="email_email" source="mov2#mpkg2#opm13#icu16#icp81" target="mov2#mpkg2#opm13#opg1#seu21#su43#acond34"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="1345" gr:y="300" id="mov2#mpkg2#opm13#okcu14" name="Success"/>
+    <KOCollectorUnit gr:x="1345" gr:y="175" id="mov2#mpkg2#opm13#kocu16" name="Failure"/>
+  </OperationUnits>
+</OperationModule>

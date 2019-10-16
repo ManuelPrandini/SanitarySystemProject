@@ -1,0 +1,81 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="785" gr:y="-145" id="mov2#hym1#page30" name="Doctor Info(Exists)">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="mov2#hym1#page30#enu9" name="registration form" fieldOrder="mov2#hym1#page30#enu9#fld10 mov2#hym1#page30#enu9#fld11 mov2#hym1#page30#enu9#fld12 mov2#hym1#page30#enu9#fld13 mov2#hym1#page30#enu9#fld14 mov2#hym1#page30#enu9#sfld3 mov2#hym1#page30#enu9#fld15 mov2#hym1#page30#enu9#fld16 mov2#hym1#page30#enu9#fld17 mov2#hym1#page30#enu9#fld18 mov2#hym1#page30#enu9#sfld1 mov2#hym1#page30#enu9#sfld2 mov2#hym1#page30#enu9#fld21 mov2#hym1#page30#enu9#fld32" linkOrder="mov2#hym1#page30#enu9#ln62">
+      <Field id="mov2#hym1#page30#enu9#fld21" name="medical specialization" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page30#enu9#fld21#mnd13" name="Mandatory13"/>
+        </VRules>
+      </Field>
+      <SelectionField id="mov2#hym1#page30#enu9#sfld2" name="live in" type="integer" modifiable="true"/>
+      <SelectionField id="mov2#hym1#page30#enu9#sfld1" name="born in" type="integer" modifiable="true"/>
+      <Field id="mov2#hym1#page30#enu9#fld18" name="address" type="string" preloaded="true"/>
+      <Field id="mov2#hym1#page30#enu9#fld17" name="telephone" type="string" preloaded="true"/>
+      <Field id="mov2#hym1#page30#enu9#fld16" name="birthday" type="date" preloaded="true"/>
+      <Field id="mov2#hym1#page30#enu9#fld15" name="email" type="string" preloaded="true"/>
+      <SelectionField id="mov2#hym1#page30#enu9#sfld3" name="gender" type="string" modifiable="true"/>
+      <Field id="mov2#hym1#page30#enu9#fld14" name="surname" type="string" preloaded="true"/>
+      <Field id="mov2#hym1#page30#enu9#fld13" name="name" type="string" preloaded="true"/>
+      <Field id="mov2#hym1#page30#enu9#fld12" name="username" type="string" preloaded="true"/>
+      <Field id="mov2#hym1#page30#enu9#fld11" name="password" type="password" preloaded="true"/>
+      <Field id="mov2#hym1#page30#enu9#fld10" name="cf" type="string" preloaded="true"/>
+      <Field id="mov2#hym1#page30#enu9#fld32" name="doctor code" type="string" modifiable="true">
+        <VRules>
+          <TypeValidationRule id="mov2#hym1#page30#enu9#fld32#tvr1" name="Type Validation1"/>
+        </VRules>
+      </Field>
+      <Link id="mov2#hym1#page30#enu9#ln62" name="Ok" to="mov2#hym1#miu14" type="normal" validate="true">
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par172" name="address_address" source="mov2#hym1#page30#enu9#fld18" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp30"/>
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par173" name="0_approved" sourceValue="0" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp22"/>
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par174" name="birthday_birthday" source="mov2#hym1#page30#enu9#fld16" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp5"/>
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par175" name="cf_cf" source="mov2#hym1#page30#enu9#fld10" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp7"/>
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par176" name="born in_cityBorn" source="mov2#hym1#page30#enu9#sfld1" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp31"/>
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par177" name="live in_cityLives" source="mov2#hym1#page30#enu9#sfld2" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp40"/>
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par178" name="doctor code_doctorCode" source="mov2#hym1#page30#enu9#fld32" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp4"/>
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par179" name="email_email" source="mov2#hym1#page30#enu9#fld15" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp1"/>
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par180" name="1_exists?" sourceValue="1" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp68"/>
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par181" name="gender_gender" source="mov2#hym1#page30#enu9#sfld3" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp67"/>
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par182" name="1_group_oid" sourceValue="1" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp54"/>
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par183" name="medical specialization_medicalSpecialization" source="mov2#hym1#page30#enu9#fld21" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp41"/>
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par184" name="name_name" source="mov2#hym1#page30#enu9#fld13" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp2"/>
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par185" name="password_password" source="mov2#hym1#page30#enu9#fld11" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp6"/>
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par186" name="surname_surname" source="mov2#hym1#page30#enu9#fld14" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp3"/>
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par187" name="telephone_telephone" source="mov2#hym1#page30#enu9#fld17" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp32"/>
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par188" name="username_username" source="mov2#hym1#page30#enu9#fld12" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp51"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym1#page30#enu9">
+          <layout:Field field="mov2#hym1#page30#enu9#fld10"/>
+          <layout:Field field="mov2#hym1#page30#enu9#fld11"/>
+          <layout:Field field="mov2#hym1#page30#enu9#fld12"/>
+          <layout:Field field="mov2#hym1#page30#enu9#fld13"/>
+          <layout:Field field="mov2#hym1#page30#enu9#fld14"/>
+          <layout:Field field="mov2#hym1#page30#enu9#sfld3"/>
+          <layout:Field field="mov2#hym1#page30#enu9#fld15"/>
+          <layout:Field field="mov2#hym1#page30#enu9#fld16"/>
+          <layout:Field field="mov2#hym1#page30#enu9#fld17"/>
+          <layout:Field field="mov2#hym1#page30#enu9#fld18"/>
+          <layout:Field field="mov2#hym1#page30#enu9#sfld1"/>
+          <layout:Field field="mov2#hym1#page30#enu9#sfld2"/>
+          <layout:Field field="mov2#hym1#page30#enu9#fld21"/>
+          <layout:Field field="mov2#hym1#page30#enu9#fld32"/>
+          <layout:Link link="mov2#hym1#page30#enu9#ln62"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

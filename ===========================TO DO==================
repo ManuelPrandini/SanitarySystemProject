@@ -1,0 +1,29 @@
+===========================TO DO==================================
+
+1) controlli sulle regsitrazioni
+
+2) terminale password recovery
+
+3) use case pazienti
+	3.1) un paziente deve potersi registrare al sistema
+	3.2) un paziente deve poter accedere al sistema
+	3.3) un paziente deve poter prendere visione della propria cartella clinica (prescrizioni include, storico di interventi ecc.)
+	3.4) un paziente deve poter domandare e ottenere un farmaco da banco (purche il paziente non ne sia allergico) dal farmacista 
+	3.5) un paziente deve poter domandare e ottinere un farmaco non da banco purchè abbia la prescrizione
+	3.6) un paziente deve potersi sottoporre a un intervento se il medico gli prescrive un intervento durante una visita
+	3.7) un paziente deve poter prenotare  una visita presso un medico
+
+4) use case farmacista
+	4.1) il farmacista deve potersi registrare al sistema
+	4.2) il farmacista deve poter accedere al sistema
+	4.3) il farmacista deve poter prendere visione delle cartelle cliniche dei pazienti (prescrizioni incluse, per verificare anche la presenza di eventuali allergie etc.)
+	4.4.) un farmacista deve poter dare un farmaco da banco ad un paziente (purchè quest'ultimo non ne sia allergico o purche npon faccia interferenza con altri farmaci)
+	4.5) un farmacista deve poter dare un farmaco da banco ad un paziente (purche il paziente abbia una ricetta valida e non scaduta per il farmaco e purche quest'ultimo non faccia interferenza con altri farmaci non da banco che il paziente potrebbe assumere spontaneamente in contemporanea alla terapia prescritta dal medico)
+
+
+5) use case dottori
+	5.1) un dottore deve potersi registrare al sistema
+	5.2) un dottore deve poter accedere al sistema
+	5.3) un dottore deve poter prendere visione della cartella clinica dei suoi pazienti (prescrizioni  precedenti include, storico di interventi ecc.)
+	5.4) un dottore deve poter modificare la cartella clinica dei suoi pazienti (effettuando prescrizione nuove per farmaci, prescrizioni per ulteriori accertamenti presso altri medici con altre specializzazioni, prescrizioni per interventi ecc. e tutto ciò deve poter essere effettuato anche più di una volta dato che ad esempio una carta terapia farmacologica potrebbe dare forti effetti collaterali al paziente e quest'ultimo potrebbe voler richeidere al medico una modifica del farmaco con un altro principio attivo che gli possa arrecar meno disturbi ecc.)
+

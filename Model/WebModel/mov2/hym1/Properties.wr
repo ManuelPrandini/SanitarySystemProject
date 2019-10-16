@@ -1,0 +1,107 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="715" gr:y="165" id="mov2#hym1" name="RegisterUser">
+  <OperationUnits>
+    <SelectorUnit gr:x="305" gr:y="90" id="mov2#hym1#seu5" name="UserExists?" entity="User" distinctAttributes="userOID userName password email User#att27 User#att28 User#att29 User#att40 User#att41 User#att12 rel7#role10.ent12#att16 rel9#role14.ent12#att16 rel7#role10.ent12#att39 rel9#role14.ent12#att39" linkOrder="mov2#hym1#seu5#ln65 mov2#hym1#seu5#ln66">
+      <Selector id="mov2#hym1#seu5#su20" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym1#seu5#su20#acond14" name="password" predicate="eq" booleanOperator="and" implied="false" attributes="password"/>
+        <KeyCondition id="mov2#hym1#seu5#su20#kcond13" name="cf" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#hym1#seu5#oln44" name="OKFlow44" to="mov2#hym1#inn7">
+        <LinkParameter id="mov2#hym1#seu5#oln44#par72" name="cf_Input" source="userOIDArray" target="mov2#hym1#inn7.isnotnull"/>
+      </OKLink>
+      <Link id="mov2#hym1#seu5#ln56" name="Flow56" to="mov2#hym1#page30#enu9" type="transport" validate="true" gr:bendpoints="18,-182,-491,2">
+        <LinkParameter id="mov2#hym1#seu5#ln56#par139" name="address_address" source="User#att40Array" target="mov2#hym1#page30#enu9#fld18_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln56#par140" name="cf_cf" source="userOIDArray" target="mov2#hym1#page30#enu9#fld10_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln56#par141" name="email_email" source="emailArray" target="mov2#hym1#page30#enu9#fld15_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln56#par142" name="gender_gender [label]" source="User#att12Array" target="mov2#hym1#page30#enu9#sfld3_label"/>
+        <LinkParameter id="mov2#hym1#seu5#ln56#par143" name="gender_gender [output]" source="User#att12Array" target="mov2#hym1#page30#enu9#sfld3_output"/>
+        <LinkParameter id="mov2#hym1#seu5#ln56#par144" name="name_name" source="User#att27Array" target="mov2#hym1#page30#enu9#fld13_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln56#par145" name="password_password" source="passwordArray" target="mov2#hym1#page30#enu9#fld11_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln56#par146" name="surname_surname" source="User#att28Array" target="mov2#hym1#page30#enu9#fld14_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln56#par147" name="telephone_telephone" source="User#att41Array" target="mov2#hym1#page30#enu9#fld17_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln56#par148" name="username_username" source="userNameArray" target="mov2#hym1#page30#enu9#fld12_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln56#par149" name="birthday_birthday" source="User#att29Array" target="mov2#hym1#page30#enu9#fld16_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln56#par150" name="Lives.name_live in [label]" source="rel9#role14$ent12#att39Array" target="mov2#hym1#page30#enu9#sfld2_label"/>
+        <LinkParameter id="mov2#hym1#seu5#ln56#par152" name="Lives.oid_live in [output]" source="rel9#role14$ent12#att16Array" target="mov2#hym1#page30#enu9#sfld2_output"/>
+      </Link>
+      <Link id="mov2#hym1#seu5#ln65" name="Flow65" to="mov2#hym1#page35#enu11" type="transport" validate="true">
+        <LinkParameter id="mov2#hym1#seu5#ln65#par274" name="address_address" source="User#att40Array" target="mov2#hym1#page35#enu11#fld7_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln65#par275" name="birthday_birthday" source="User#att29Array" target="mov2#hym1#page35#enu11#fld8_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln65#par276" name="cf_cf" source="userOIDArray" target="mov2#hym1#page35#enu11#fld20_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln65#par277" name="email_email" source="emailArray" target="mov2#hym1#page35#enu11#fld35_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln65#par278" name="gender_gender [label]" source="User#att12Array" target="mov2#hym1#page35#enu11#sfld9_label"/>
+        <LinkParameter id="mov2#hym1#seu5#ln65#par279" name="gender_gender [output]" source="User#att12Array" target="mov2#hym1#page35#enu11#sfld9_output"/>
+        <LinkParameter id="mov2#hym1#seu5#ln65#par280" name="name_name" source="User#att27Array" target="mov2#hym1#page35#enu11#fld40_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln65#par281" name="password_password" source="passwordArray" target="mov2#hym1#page35#enu11#fld42_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln65#par282" name="surname_surname" source="User#att28Array" target="mov2#hym1#page35#enu11#fld41_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln65#par283" name="telephone_telephone" source="User#att41Array" target="mov2#hym1#page35#enu11#fld43_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln65#par284" name="username_username" source="userNameArray" target="mov2#hym1#page35#enu11#fld44_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln65#par296" name="Lives.name_live in [label]" source="rel9#role14$ent12#att39Array" target="mov2#hym1#page35#enu11#sfld11_label"/>
+        <LinkParameter id="mov2#hym1#seu5#ln65#par297" name="Lives.oid_live in [output]" source="rel9#role14$ent12#att16Array" target="mov2#hym1#page35#enu11#sfld11_output"/>
+      </Link>
+      <Link id="mov2#hym1#seu5#ln66" name="Flow66" to="mov2#hym1#page32#enu13" type="transport" validate="true" gr:bendpoints="-1,380,-476,-10">
+        <LinkParameter id="mov2#hym1#seu5#ln66#par285" name="address_address" source="User#att40Array" target="mov2#hym1#page32#enu13#fld56_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln66#par286" name="birthday_birthday" source="User#att29Array" target="mov2#hym1#page32#enu13#fld57_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln66#par287" name="cf_cf" source="userOIDArray" target="mov2#hym1#page32#enu13#fld59_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln66#par288" name="email_email" source="emailArray" target="mov2#hym1#page32#enu13#fld60_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln66#par289" name="gender_gender [label]" source="User#att12Array" target="mov2#hym1#page32#enu13#sfld18_label"/>
+        <LinkParameter id="mov2#hym1#seu5#ln66#par290" name="gender_gender [output]" source="User#att12Array" target="mov2#hym1#page32#enu13#sfld18_output"/>
+        <LinkParameter id="mov2#hym1#seu5#ln66#par291" name="name_name" source="User#att27Array" target="mov2#hym1#page32#enu13#fld61_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln66#par292" name="password_password" source="passwordArray" target="mov2#hym1#page32#enu13#fld62_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln66#par293" name="surname_surname" source="User#att28Array" target="mov2#hym1#page32#enu13#fld66_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln66#par294" name="telephone_telephone" source="User#att41Array" target="mov2#hym1#page32#enu13#fld67_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln66#par295" name="username_username" source="userNameArray" target="mov2#hym1#page32#enu13#fld68_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln66#par298" name="Lives.name_live in [label]" source="rel9#role14$ent12#att39Array" target="mov2#hym1#page32#enu13#sfld19_label"/>
+        <LinkParameter id="mov2#hym1#seu5#ln66#par299" name="Lives.oid_live in [output]" source="rel9#role14$ent12#att16Array" target="mov2#hym1#page32#enu13#sfld19_output"/>
+      </Link>
+    </SelectorUnit>
+    <InputCollectorUnit gr:x="5" gr:y="80" id="mov2#hym1#icu17" linkOrder="mov2#hym1#icu17#ln48 mov2#hym1#icu17#ln49">
+      <InputCollectorParameter id="mov2#hym1#icu17#icp64" name="cf"/>
+      <InputCollectorParameter id="mov2#hym1#icu17#icp65" name="password"/>
+      <OKLink id="mov2#hym1#icu17#oln43" name="OKFlow43" to="mov2#hym1#seu5">
+        <LinkParameter id="mov2#hym1#icu17#oln43#par70" name="cf_cf [cf]" source="mov2#hym1#icu17#icp64" target="mov2#hym1#seu5#su20#kcond13.userOID"/>
+        <LinkParameter id="mov2#hym1#icu17#oln43#par71" name="password_password" source="mov2#hym1#icu17#icp65" target="mov2#hym1#seu5#su20#acond14"/>
+      </OKLink>
+      <InputCollectorParameter id="mov2#hym1#icu17#icp66" name="group"/>
+      <Link id="mov2#hym1#icu17#ln48" name="Flow48" to="mov2#hym1#switch3" type="transport" validate="true">
+        <LinkParameter id="mov2#hym1#icu17#ln48#par73" name="group_Switch" source="mov2#hym1#icu17#icp66" target="mov2#hym1#switch3.switch"/>
+      </Link>
+      <Link id="mov2#hym1#icu17#ln49" name="Flow49" to="mov2#hym1#switch4" type="transport" validate="true">
+        <LinkParameter id="mov2#hym1#icu17#ln49#par74" name="group_Switch" source="mov2#hym1#icu17#icp66" target="mov2#hym1#switch4.switch"/>
+      </Link>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="1445" gr:y="120" id="mov2#hym1#okcu12" name="OK Port12"/>
+    <KOCollectorUnit gr:x="1445" gr:y="415" id="mov2#hym1#kocu14" name="KO Port14"/>
+    <IsNotNullUnit gr:x="500" gr:y="80" id="mov2#hym1#inn7" name="if exists">
+      <OKLink id="mov2#hym1#inn7#oln49" name="OKFlow49" to="mov2#hym1#switch3" automaticCoupling="true"/>
+      <KOLink id="mov2#hym1#inn7#kln32" name="KOFlow32" to="mov2#hym1#switch4" automaticCoupling="true" gr:bendpoints="-131,273,-185,-7"/>
+    </IsNotNullUnit>
+    <SwitchUnit gr:x="525" gr:y="245" id="mov2#hym1#switch3" name="ExistsSelectGroup">
+      <Case value="1"/>
+      <Case value="2"/>
+      <Case value="3"/>
+      <OKLink id="mov2#hym1#switch3#oln45" name="OKFlow45" to="mov2#hym1#page30" automaticCoupling="true" code="1" gr:bendpoints="156,-232,-118,13"/>
+      <OKLink id="mov2#hym1#switch3#oln47" name="OKFlow47" to="mov2#hym1#page35" automaticCoupling="true" code="2"/>
+      <OKLink id="mov2#hym1#switch3#oln48" name="OKFlow48" to="mov2#hym1#page32" automaticCoupling="true" code="3"/>
+    </SwitchUnit>
+    <SwitchUnit gr:x="515" gr:y="360" id="mov2#hym1#switch4" name="noExistsSelectGroup">
+      <Case value="1"/>
+      <Case value="2"/>
+      <Case value="3"/>
+      <OKLink id="mov2#hym1#switch4#oln50" name="OKFlow50" to="mov2#hym1#page34" automaticCoupling="true" code="3"/>
+      <OKLink id="mov2#hym1#switch4#oln51" name="OKFlow51" to="mov2#hym1#page36" automaticCoupling="true" code="2"/>
+      <OKLink id="mov2#hym1#switch4#oln52" name="OKFlow52" to="mov2#hym1#page31" automaticCoupling="true" code="1"/>
+    </SwitchUnit>
+    <ModuleInstanceUnit gr:x="1055" gr:y="-70" id="mov2#hym1#miu14" action="true" moduleId="mov2#mpkg2#opm1">
+      <OKLink id="mov2#hym1#miu14#oln58" name="OKFlow58" to="mov2#hym1#okcu12" automaticCoupling="true"/>
+      <KOLink id="mov2#hym1#miu14#kln35" name="KOFlow35" to="mov2#hym1#kocu14" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="1090" gr:y="295" id="mov2#hym1#miu6" action="true" moduleId="mov2#mpkg2#opm7">
+      <OKLink id="mov2#hym1#miu6#oln62" name="OKFlow62" to="mov2#hym1#okcu12" automaticCoupling="true"/>
+      <KOLink id="mov2#hym1#miu6#kln22" name="KOFlow22" to="mov2#hym1#kocu14" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="1110" gr:y="570" id="mov2#hym1#miu11" action="true" moduleId="mov2#mpkg2#opm3">
+      <OKLink id="mov2#hym1#miu11#oln64" name="OKFlow64" to="mov2#hym1#okcu12" automaticCoupling="true"/>
+      <KOLink id="mov2#hym1#miu11#kln23" name="KOFlow23" to="mov2#hym1#kocu14" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</HybridModule>

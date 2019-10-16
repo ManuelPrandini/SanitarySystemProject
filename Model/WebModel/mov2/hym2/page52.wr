@@ -1,0 +1,5 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1750" gr:y="-150" id="mov2#hym2#page52" name="In Attesa Dottore">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym2#page52#mssu28" name="Attesa">
+      <Message xml:space="preserve">Il tuo account come Dottore &#232; in attesa di approvazione
+</Message>    </MultiMessageUnit>  </ContentUnits>  <layout:Grid containerType="grid">    <layout:Row>      <layout:Cell colspan="12">        <layout:Unit unitId="mov2#hym2#page52#mssu28"/>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>  </layout:Grid></Page>

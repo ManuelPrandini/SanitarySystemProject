@@ -1,0 +1,62 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="935" gr:y="10" id="mov2#hym2#page25" name="Dottore-Paziente">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym2#page25#mssu18" name="Con quale ruolo ti vuoi loggare?" linkOrder="mov2#hym2#page25#mssu18#ln82 mov2#hym2#page25#mssu18#ln111">
+      <Link id="mov2#hym2#page25#mssu18#ln82" name="Login come Dottore" to="mov2#hym2#seu13" type="normal" validate="true">
+        <LinkParameter id="mov2#hym2#page25#mssu18#ln82#par392" name="cf_PASSING_CFcondition" sourceLinkParameter="mov2#hym2#seu6#ln106#par342" target="mov2#hym2#seu13#su33#acond25"/>
+      </Link>
+      <Message xml:space="preserve">Scelta ruolo:</Message>
+      <Link id="mov2#hym2#page25#mssu18#ln111" name="Login come Paziente" to="mov2#hym2#seu11" type="normal" validate="true">
+        <LinkParameter id="mov2#hym2#page25#mssu18#ln111#par388" name="cf_PASSING_CFcondition" sourceLinkParameter="mov2#hym2#seu6#ln106#par342" target="mov2#hym2#seu11#su32#acond24"/>
+      </Link>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym2#page25#mssu18">
+          <layout:Link link="mov2#hym2#page25#mssu18#ln82"/>
+          <layout:Link link="mov2#hym2#page25#mssu18#ln111"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

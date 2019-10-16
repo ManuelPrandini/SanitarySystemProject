@@ -1,0 +1,43 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="205" gr:y="0" id="mov2#mpkg2#opm2" name="Save Drug">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg2#opm2#icu2" gr:x="35" gr:y="130">
+      <InputCollectorParameter id="mov2#mpkg2#opm2#icu2#icp12" name="action"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm2#icu2#icp18" name="DrugPrimaryKey"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm2#icu2#icp19" name="DrugObject"/>
+      <OKLink id="mov2#mpkg2#opm2#icu2#oln14" name="OKFlow14" to="mov2#mpkg2#opm2#inn1">
+        <LinkParameter id="mov2#mpkg2#opm2#icu2#oln14#par8" name="action_Input" source="mov2#mpkg2#opm2#icu2#icp12" target="mov2#mpkg2#opm2#inn1.isnotnull"/>
+      </OKLink>
+      <Link id="mov2#mpkg2#opm2#icu2#ln7" name="Flow7" to="mov2#mpkg2#opm2#mfu1" type="transport" validate="true">
+        <LinkParameter id="mov2#mpkg2#opm2#icu2#ln7#par16" name="DrugObject_Drug Object" source="mov2#mpkg2#opm2#icu2#icp19" target="mov2#mpkg2#opm2#mfu1.entityBeans"/>
+        <LinkParameter id="mov2#mpkg2#opm2#icu2#ln7#par17" name="DrugPrimaryKey_KeyCondition6 [id]" source="mov2#mpkg2#opm2#icu2#icp18" target="mov2#mpkg2#opm2#mfu1#su7#kcond6.ent2#att6"/>
+      </Link>
+      <Link id="mov2#mpkg2#opm2#icu2#ln8" name="Flow8" to="mov2#mpkg2#opm2#cru3" type="transport" validate="true">
+        <LinkParameter id="mov2#mpkg2#opm2#icu2#ln8#par18" name="DrugObject_Drug Object" source="mov2#mpkg2#opm2#icu2#icp19" target="mov2#mpkg2#opm2#cru3.entityBeans"/>
+        <LinkParameter id="mov2#mpkg2#opm2#icu2#ln8#par19" name="DrugPrimaryKey_id" source="mov2#mpkg2#opm2#icu2#icp18" target="mov2#mpkg2#opm2#cru3.ent2#att6"/>
+        <LinkParameter id="mov2#mpkg2#opm2#icu2#ln8#par20" name="isStandard_isStandard" source="mov2#mpkg2#opm2#icu2#icp21" target="mov2#mpkg2#opm2#cru3.ent2#att7"/>
+        <LinkParameter id="mov2#mpkg2#opm2#icu2#ln8#par21" name="name_name" source="mov2#mpkg2#opm2#icu2#icp20" target="mov2#mpkg2#opm2#cru3.ent2#att8"/>
+      </Link>
+      <InputCollectorParameter id="mov2#mpkg2#opm2#icu2#icp21" name="isStandard"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm2#icu2#icp20" name="name"/>
+    </InputCollectorUnit>
+    <IsNotNullUnit gr:x="320" gr:y="155" id="mov2#mpkg2#opm2#inn1" name="New Drug?">
+      <KOLink id="mov2#mpkg2#opm2#inn1#kln6" name="KOFlow6" to="mov2#mpkg2#opm2#cru3" automaticCoupling="true"/>
+      <OKLink id="mov2#mpkg2#opm2#inn1#oln9" name="OKFlow9" to="mov2#mpkg2#opm2#mfu1" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <CreateUnit gr:x="365" gr:y="30" id="mov2#mpkg2#opm2#cru3" name="Create Drug" entity="ent2">
+      <OKLink id="mov2#mpkg2#opm2#cru3#oln11" name="OKFlow11" to="mov2#mpkg2#opm2#okcu4" automaticCoupling="true"/>
+      <KOLink id="mov2#mpkg2#opm2#cru3#kln9" name="KOFlow9" to="mov2#mpkg2#opm2#kocu4" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="365" gr:y="275" id="mov2#mpkg2#opm2#mfu1" name="Update Drug" entity="ent2">
+      <Selector id="mov2#mpkg2#opm2#mfu1#su7" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm2#mfu1#su7#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm2#mfu1#oln10" name="OKFlow10" to="mov2#mpkg2#opm2#okcu4" automaticCoupling="true"/>
+      <KOLink id="mov2#mpkg2#opm2#mfu1#kln8" name="KOFlow8" to="mov2#mpkg2#opm2#kocu4" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="650" gr:y="70" id="mov2#mpkg2#opm2#okcu4" name="Exit"/>
+    <KOCollectorUnit gr:x="650" gr:y="240" id="mov2#mpkg2#opm2#kocu4" name="Failure">
+      <OutputCollectorParameter id="mov2#mpkg2#opm2#kocu4#ocp4" name="Failure message" value="Errore"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>

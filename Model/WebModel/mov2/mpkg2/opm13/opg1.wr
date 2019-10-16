@@ -1,0 +1,51 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="455" gr:y="130" id="mov2#mpkg2#opm13#opg1" name="Operation Check" transaction="true">
+  <OperationUnits>
+    <SelectorUnit gr:x="0" gr:y="0" id="mov2#mpkg2#opm13#opg1#seu21" name="SelectorUser" entity="User" linkOrder="mov2#mpkg2#opm13#opg1#seu21#ln120 mov2#mpkg2#opm13#opg1#seu21#ln122">
+      <Selector id="mov2#mpkg2#opm13#opg1#seu21#su43" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg2#opm13#opg1#seu21#su43#acond34" name="email" predicate="eq" booleanOperator="or" implied="false" attributes="email"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm13#opg1#seu21#oln124" name="OKFlow124" to="mov2#mpkg2#opm13#opg1#inn13">
+        <LinkParameter id="mov2#mpkg2#opm13#opg1#seu21#oln124#par468" name="cf_Input" source="userOIDArray" target="mov2#mpkg2#opm13#opg1#inn13.isnotnull"/>
+      </OKLink>
+      <Link id="mov2#mpkg2#opm13#opg1#seu21#ln120" name="Flow120" to="mov2#mpkg2#opm13#opg1#mfu9" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="38,175,-417,50;346,173,-109,48"/>
+      <Link id="mov2#mpkg2#opm13#opg1#seu21#ln122" name="Flow122" to="mov2#mpkg2#opm13#opg1#mlu2" type="transport" validate="true" gr:bendpoints="-1,135,-631,10;14,183,-616,58;483,181,-147,56">
+        <LinkParameter id="mov2#mpkg2#opm13#opg1#seu21#ln122#par470" name="email_Mail - To" source="emailArray" target="mov2#mpkg2#opm13#opg1#mlu2.to"/>
+      </Link>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="140" gr:y="20" id="mov2#mpkg2#opm13#opg1#inn13" name="exists?">
+      <KOLink id="mov2#mpkg2#opm13#opg1#inn13#kln54" name="KOFlow54" to="mov2#mpkg2#opm13#kocu16" automaticCoupling="true"/>
+      <OKLink id="mov2#mpkg2#opm13#opg1#inn13#oln125" name="OKFlow125" to="mov2#mpkg2#opm13#opg1#pwu8" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <PasswordUnit gr:x="125" gr:y="145" id="mov2#mpkg2#opm13#opg1#pwu8" name="GenerateCode" passwordSize="8" linkOrder="mov2#mpkg2#opm13#opg1#pwu8#ln121 mov2#mpkg2#opm13#opg1#pwu8#ln123">
+      <Comment xml:space="preserve">Password Utility Component that generates a random code to associate to user for the reset procedure</Comment>
+      <OKLink id="mov2#mpkg2#opm13#opg1#pwu8#oln126" name="OKFlow126" to="mov2#mpkg2#opm13#opg1#tmu1" automaticCoupling="true"/>
+      <Link id="mov2#mpkg2#opm13#opg1#pwu8#ln121" name="Flow121" to="mov2#mpkg2#opm13#opg1#mfu9" type="transport" validate="true" gr:bendpoints="150,-68,-145,-68">
+        <LinkParameter id="mov2#mpkg2#opm13#opg1#pwu8#ln121#par53" name="Generated Password_code" source="password" target="mov2#mpkg2#opm13#opg1#mfu9.User#att13"/>
+      </Link>
+      <Link id="mov2#mpkg2#opm13#opg1#pwu8#ln123" name="Flow123" to="mov2#mpkg2#opm13#opg1#mlu2" type="transport" validate="true" gr:bendpoints="142,-106,-328,-106;283,-107,-187,-107">
+        <LinkParameter id="mov2#mpkg2#opm13#opg1#pwu8#ln123#par77" name="Generated Password_code" source="password" target="mov2#mpkg2#opm13#opg1#mlu2.code"/>
+      </Link>
+    </PasswordUnit>
+    <TimeUnit gr:x="245" gr:y="145" id="mov2#mpkg2#opm13#opg1#tmu1" name="Now">
+      <OKLink id="mov2#mpkg2#opm13#opg1#tmu1#oln20" name="OKFlow20" to="mov2#mpkg2#opm13#opg1#dfu2">
+        <LinkParameter id="mov2#mpkg2#opm13#opg1#tmu1#oln20#par54" name="Current/Input Date_Date(s)" source="currentDate" target="mov2#mpkg2#opm13#opg1#dfu2.dateArray"/>
+        <LinkParameter id="mov2#mpkg2#opm13#opg1#tmu1#oln20#par64" name="1_Number(s) Of Days" sourceValue="1" target="mov2#mpkg2#opm13#opg1#dfu2.numberOfDaysArray"/>
+      </OKLink>
+    </TimeUnit>
+    <ModifyUnit gr:x="555" gr:y="125" id="mov2#mpkg2#opm13#opg1#mfu9" name="UpdatePassw" entity="User">
+      <Selector id="mov2#mpkg2#opm13#opg1#mfu9#su44" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm13#opg1#mfu9#su44#kcond34" name="KeyCondition34" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm13#opg1#mfu9#oln128" name="OKFlow128" to="mov2#mpkg2#opm13#opg1#mlu2" automaticCoupling="true"/>
+    </ModifyUnit>
+    <MailUnit gr:x="705" gr:y="145" id="mov2#mpkg2#opm13#opg1#mlu2" name="Mail for reset" format="html" template="WEB-INF/descr/reset.mt" smtpServer="smtp1">
+      <OKLink id="mov2#mpkg2#opm13#opg1#mlu2#oln129" name="OKFlow129" to="mov2#mpkg2#opm13#okcu14" automaticCoupling="true"/>
+      <SubjectTemplate xml:space="preserve">New Password</SubjectTemplate>
+    </MailUnit>
+    <DatesFunctionUnit gr:x="360" gr:y="135" id="mov2#mpkg2#opm13#opg1#dfu2" name="expiration date" mode="addDaysToDate(s)">
+      <OKLink id="mov2#mpkg2#opm13#opg1#dfu2#oln24" name="OKFlow24" to="mov2#mpkg2#opm13#opg1#mfu9">
+        <LinkParameter id="mov2#mpkg2#opm13#opg1#dfu2#oln24#par76" name="Result Date(s)_expiration date" source="resultDates" target="mov2#mpkg2#opm13#opg1#mfu9.User#att34"/>
+      </OKLink>
+    </DatesFunctionUnit>
+  </OperationUnits>
+</OperationGroup>

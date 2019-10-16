@@ -1,0 +1,69 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area3#page3" name="Gestione dei farmaci">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area3#page3#pwu3" name="Farmaci" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att6 ent2#att8 ent2#att7" linkOrder="sv2#area3#page3#pwu3#ln5 sv2#area3#page3#pwu3#ln9">
+      <Link id="sv2#area3#page3#pwu3#ln5" name="Delete" to="sv2#area3#miu2" type="normal" validate="true" gr:bendpoints="27,124,-278,-6">
+        <LinkParameter id="sv2#area3#page3#pwu3#ln5#par4" name="id_Drug id" source="data[].ent2#att6" target="sv2#area3#miu2.mov2#mpkg2#opm4#icu4#icp8"/>
+      </Link>
+      <Link id="sv2#area3#page3#pwu3#ln9" name="Flow9" to="sv2#area3#page3#enu1" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="115" gr:y="0" id="sv2#area3#page3#enu1" name="Creazione del farmaco" entity="ent2" linkOrder="sv2#area3#page3#enu1#ln4 sv2#area3#page3#enu1#ln6">
+      <Link id="sv2#area3#page3#enu1#ln4" name="Cancel" to="sv2#area3#page3" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="91,46,146,51"/>
+      <Link id="sv2#area3#page3#enu1#ln6" name="Save" to="sv2#area3#miu1" type="normal" validate="true" gr:bendpoints="119,7,-106,47">
+        <LinkParameter id="sv2#area3#page3#enu1#ln6#par5" name="Key [id]_action" source="key.ent2#att6" target="sv2#area3#miu1.mov2#mpkg2#opm2#icu2#icp12"/>
+        <LinkParameter id="sv2#area3#page3#enu1#ln6#par6" name="Drug Object_DrugObject" source="entityBean" target="sv2#area3#miu1.mov2#mpkg2#opm2#icu2#icp19"/>
+        <LinkParameter id="sv2#area3#page3#enu1#ln6#par7" name="id_farmaco_DrugPrimaryKey" source="sv2#area3#page3#enu1#fld2" target="sv2#area3#miu1.mov2#mpkg2#opm2#icu2#icp18"/>
+        <LinkParameter id="sv2#area3#page3#enu1#ln6#par22" name="Serve Prescrizione?_isStandard" source="sv2#area3#page3#enu1#fld4" target="sv2#area3#miu1.mov2#mpkg2#opm2#icu2#icp21"/>
+        <LinkParameter id="sv2#area3#page3#enu1#ln6#par23" name="nome_farmaco_name" source="sv2#area3#page3#enu1#fld3" target="sv2#area3#miu1.mov2#mpkg2#opm2#icu2#icp20"/>
+      </Link>
+      <Field id="sv2#area3#page3#enu1#fld2" name="id_farmaco" type="integer" modifiable="true"/>
+      <Field id="sv2#area3#page3#enu1#fld3" name="nome_farmaco" type="string" modifiable="true"/>
+      <Field id="sv2#area3#page3#enu1#fld4" name="Serve Prescrizione?" type="boolean" modifiable="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area3#page3#pwu3">
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Link link="sv2#area3#page3#pwu3#ln5"/>
+          <layout:Link link="sv2#area3#page3#pwu3#ln9"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area3#page3#enu1">
+          <layout:Link link="sv2#area3#page3#enu1#ln4"/>
+          <layout:Link link="sv2#area3#page3#enu1#ln6"/>
+          <layout:Field field="sv2#area3#page3#enu1#fld2"/>
+          <layout:Field field="sv2#area3#page3#enu1#fld3"/>
+          <layout:Field field="sv2#area3#page3#enu1#fld4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

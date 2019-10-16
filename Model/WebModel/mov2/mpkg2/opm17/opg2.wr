@@ -1,0 +1,28 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg2#opm17#opg2" name="Store New User Password" transaction="true" gr:x="405" gr:y="70">
+  <OperationUnits>
+    <ModifyUnit id="mov2#mpkg2#opm17#opg2#mfu2" name="store new password" gr:x="160" gr:y="155" entity="User">
+      <Selector id="mov2#mpkg2#opm17#opg2#mfu2#su10" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm17#opg2#mfu2#su10#kcond8" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <Comment xml:space="preserve">Update Operation that saves the new password entered by the user</Comment>
+      <OKLink id="mov2#mpkg2#opm17#opg2#mfu2#oln69" name="OKFlow69" to="mov2#mpkg2#opm17#okcu16" automaticCoupling="true"/>
+    </ModifyUnit>
+    <SelectorUnit id="mov2#mpkg2#opm17#opg2#seu9" name="retrieve current user" gr:x="0" gr:y="0" entity="User">
+      <Selector id="mov2#mpkg2#opm17#opg2#seu9#su11" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm17#opg2#seu9#su11#kcond9" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm17#opg2#seu9#oln67" name="OKFlow1" to="mov2#mpkg2#opm17#opg2#inn12">
+        <LinkParameter id="mov2#mpkg2#opm17#opg2#seu9#oln67#par78" name="oid_Input" source="userOIDArray" target="mov2#mpkg2#opm17#opg2#inn12.isnotnull"/>
+      </OKLink>
+      <Comment xml:space="preserve">Selector Utility Component that search for user who has as "oid" the parameter passed</Comment>
+    </SelectorUnit>
+    <IsNotNullUnit id="mov2#mpkg2#opm17#opg2#inn12" name="user exists?" gr:x="185" gr:y="20" emptyStringAsNull="true">
+      <OKLink id="mov2#mpkg2#opm17#opg2#inn12#oln68" name="OKFlow18" to="mov2#mpkg2#opm17#opg2#mfu2">
+        <LinkParameter id="mov2#mpkg2#opm17#opg2#inn12#oln68#par79" name="Input Value_KeyCondition1 [oid]" source="inputValue" target="mov2#mpkg2#opm17#opg2#mfu2#su10#kcond8.userOID"/>
+      </OKLink>
+      <Comment xml:space="preserve">Is Not Null Control Flow Operation checks whether a user was found with that "oid" associated</Comment>
+      <KOLink id="mov2#mpkg2#opm17#opg2#inn12#kln18" name="KOFlow18" to="mov2#mpkg2#opm17#kocu18" automaticCoupling="true"/>
+    </IsNotNullUnit>
+  </OperationUnits>
+  <KOLink id="mov2#mpkg2#opm17#opg2#kln24" name="KOFlow24" to="mov2#mpkg2#opm17#kocu18" automaticCoupling="true"/>
+</OperationGroup>

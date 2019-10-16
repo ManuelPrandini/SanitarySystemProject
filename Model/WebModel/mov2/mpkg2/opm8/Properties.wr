@@ -1,0 +1,36 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="5" gr:y="255" id="mov2#mpkg2#opm8" name="CheckExistingDoctor">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg2#opm8#icu8" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov2#mpkg2#opm8#icu8#icp57" name="password"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm8#icu8#icp49" name="cf"/>
+      <OKLink id="mov2#mpkg2#opm8#icu8#oln21" name="OKFlow36" to="mov2#mpkg2#opm8#seu8">
+        <LinkParameter id="mov2#mpkg2#opm8#icu8#oln21#par29" name="cf_cf" source="mov2#mpkg2#opm8#icu8#icp49" target="mov2#mpkg2#opm8#seu8#su12#acond4"/>
+        <LinkParameter id="mov2#mpkg2#opm8#icu8#oln21#par38" name="password_password" source="mov2#mpkg2#opm8#icu8#icp57" target="mov2#mpkg2#opm8#seu8#su12#acond6"/>
+      </OKLink>
+      <Link id="mov2#mpkg2#opm8#icu8#ln53" name="Flow50" to="mov2#mpkg2#opm8#kocu10" type="transport" validate="true" gr:bendpoints="172,127,-263,-3">
+        <LinkParameter id="mov2#mpkg2#opm8#icu8#ln53#par130" name="DoctorToUser.cf_cf" source="mov2#mpkg2#opm8#icu8#icp49" target="mov2#mpkg2#opm8#kocu10#ocp13"/>
+        <LinkParameter id="mov2#mpkg2#opm8#icu8#ln53#par131" name="1_group" target="mov2#mpkg2#opm8#kocu10#ocp14" sourceValue="1"/>
+        <LinkParameter id="mov2#mpkg2#opm8#icu8#ln53#par132" name="DoctorToUser.password_password" source="mov2#mpkg2#opm8#icu8#icp57" target="mov2#mpkg2#opm8#kocu10#ocp15"/>
+      </Link>
+    </InputCollectorUnit>
+    <SelectorUnit gr:x="315" gr:y="50" id="mov2#mpkg2#opm8#seu8" name="DoctorExists?" entity="ent9" distinctAttributes="rel36#role72.userOID rel36#role72.password">
+      <Selector id="mov2#mpkg2#opm8#seu8#su12" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg2#opm8#seu8#su12#acond4" name="cf" predicate="eq" booleanOperator="and" implied="false" attributes="rel36#role72.userOID"/>
+        <AttributesCondition id="mov2#mpkg2#opm8#seu8#su12#acond6" name="password" predicate="eq" booleanOperator="or" implied="false" attributes="rel36#role72.password"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm8#seu8#oln27" name="OKFlow22" to="mov2#mpkg2#opm8#inn4">
+        <LinkParameter id="mov2#mpkg2#opm8#seu8#oln27#par28" name="cf_Input" source="rel36#role72_userOIDArray" target="mov2#mpkg2#opm8#inn4.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <OKCollectorUnit gr:x="725" gr:y="45" id="mov2#mpkg2#opm8#okcu9" name="OK Port9"/>
+    <KOCollectorUnit gr:x="725" gr:y="175" id="mov2#mpkg2#opm8#kocu10" name="KO Port10">
+      <OutputCollectorParameter id="mov2#mpkg2#opm8#kocu10#ocp15" name="password"/>
+      <OutputCollectorParameter id="mov2#mpkg2#opm8#kocu10#ocp14" name="group"/>
+      <OutputCollectorParameter id="mov2#mpkg2#opm8#kocu10#ocp13" name="cf"/>
+    </KOCollectorUnit>
+    <IsNotNullUnit gr:x="535" gr:y="65" id="mov2#mpkg2#opm8#inn4" name="if exists">
+      <OKLink id="mov2#mpkg2#opm8#inn4#oln23" name="OKFlow23" to="mov2#mpkg2#opm8#okcu9" automaticCoupling="true"/>
+      <KOLink id="mov2#mpkg2#opm8#inn4#kln14" name="KOFlow14" to="mov2#mpkg2#opm8#kocu10" automaticCoupling="true"/>
+    </IsNotNullUnit>
+  </OperationUnits>
+</OperationModule>
