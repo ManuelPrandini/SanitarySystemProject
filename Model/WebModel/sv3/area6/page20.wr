@@ -1,0 +1,204 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area6#page20" name="Form di prenotazione">
+  <ContentUnits>
+    <EntryUnit gr:x="55" gr:y="20" id="sv3#area6#page20#enu6" name="Search City" linkOrder="sv3#area6#page20#enu6#ln67">
+      <SelectionField id="sv3#area6#page20#enu6#sfld13" type="string" name="City"/>
+      <Link id="sv3#area6#page20#enu6#ln67" name="Cerca ospedali" to="sv3#area6#page20#pwu9" type="normal" validate="true">
+        <LinkParameter id="sv3#area6#page20#enu6#ln67#par304" name="City_city" source="sv3#area6#page20#enu6#sfld13" target="sv3#area6#page20#pwu9#su47#acond20"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="195" gr:y="10" id="sv3#area6#page20#seu22" name="SelectorCity" entity="ent12">
+      <Link id="sv3#area6#page20#seu22#ln61" name="Flow61" to="sv3#area6#page20#enu6" type="transport" validate="true">
+        <LinkParameter id="sv3#area6#page20#seu22#ln61#par93" name="name_City [label]" source="ent12#att39Array" target="sv3#area6#page20#enu6#sfld13_label"/>
+        <LinkParameter id="sv3#area6#page20#seu22#ln61#par193" name="oid_City [output]" source="ent12#att16Array" target="sv3#area6#page20#enu6#sfld13_output"/>
+      </Link>
+      <SortAttribute attribute="ent12#att39" order="ascending"/>
+    </SelectorUnit>
+    <PowerIndexUnit gr:x="25" gr:y="125" id="sv3#area6#page20#pwu9" name="Hospital List" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att14 ent4#att4 ent4#att47 ent4#att48" linkOrder="sv3#area6#page20#pwu9#ln70">
+      <Selector id="sv3#area6#page20#pwu9#su47" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area6#page20#pwu9#su47#acond20" name="city" predicate="eq" booleanOperator="and" implied="false" attributes="rel2#role2.ent12#att16"/>
+      </Selector>
+      <Link id="sv3#area6#page20#pwu9#ln70" name="Seleziona ospedale" to="sv3#area6#page20#enu10" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv3#area6#page20#pwu9#ln71" name="Flow71" to="sv3#area6#page20#seu23" type="transport" validate="true">
+        <LinkParameter id="sv3#area6#page20#pwu9#ln71#par319" name="id_hospital_hospital_ID" source="data[].ent4#att1" target="sv3#area6#page20#seu23#su48#acond30"/>
+      </Link>
+      <Link id="sv3#area6#page20#pwu9#ln74" name="Flow74" to="sv3#area6#page20#pwu10" type="transport" validate="true" gr:bendpoints="-101,81,-411,-99;-102,234,-412,54;66,235,-244,55">
+        <LinkParameter id="sv3#area6#page20#pwu9#ln74#par322" name="id_hospital_hospital_ID" source="data[].ent4#att1" target="sv3#area6#page20#pwu10#su49#acond37"/>
+        <LinkParameter id="sv3#area6#page20#pwu9#ln74#par323" name="name_PASSING" source="data[].ent4#att14" passing="true"/>
+      </Link>
+    </PowerIndexUnit>
+    <SelectorUnit gr:x="0" gr:y="290" id="sv3#area6#page20#seu23" name="SelectorTypeVisit" entity="ent9">
+      <Link id="sv3#area6#page20#seu23#ln68" name="Flow68" to="sv3#area6#page20#enu10" type="transport" validate="true">
+        <LinkParameter id="sv3#area6#page20#seu23#ln68#par318" name="nameSpecialization_Che tipo di visita vuoi effettuare? [label]" source="rel4#role5_ent8#att21Array" target="sv3#area6#page20#enu10#sfld17_label"/>
+        <LinkParameter id="sv3#area6#page20#seu23#ln68#par321" name="DoctorToMedical_specialization.nameSpecialization_Che tipo di visita vuoi effettuare? [output]" source="rel4#role5_ent8#att21Array" target="sv3#area6#page20#enu10#sfld17_output"/>
+      </Link>
+      <Selector id="sv3#area6#page20#seu23#su48" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area6#page20#seu23#su48#acond30" name="hospital_ID" predicate="eq" booleanOperator="or" implied="false" attributes="rel12#role23.ent4#att1"/>
+      </Selector>
+    </SelectorUnit>
+    <EntryUnit gr:x="225" gr:y="145" id="sv3#area6#page20#enu10" name="Search type Visit" linkOrder="sv3#area6#page20#enu10#ln73">
+      <SelectionField id="sv3#area6#page20#enu10#sfld17" name="Che tipo di visita vuoi effettuare?" type="string"/>
+      <Link id="sv3#area6#page20#enu10#ln73" name="Cerca medici" to="sv3#area6#page20#pwu10" type="normal" validate="true">
+        <LinkParameter id="sv3#area6#page20#enu10#ln73#par320" name="Che tipo di visita vuoi effettuare?_Specialization" source="sv3#area6#page20#enu10#sfld17" target="sv3#area6#page20#pwu10#su49#acond35"/>
+      </Link>
+    </EntryUnit>
+    <PowerIndexUnit gr:x="265" gr:y="290" id="sv3#area6#page20#pwu10" name="Doctor List for that specialization" sortable="true" checkable="false" useCountQuery="false" entity="ent9" displayAttributes="rel36#role72.userOID rel36#role72.User#att12 rel36#role72.User#att27 rel36#role72.User#att28 rel36#role72.email rel36#role72.User#att41" linkOrder="sv3#area6#page20#pwu10#ln75">
+      <Selector id="sv3#area6#page20#pwu10#su49" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area6#page20#pwu10#su49#acond35" name="Specialization" predicate="eq" booleanOperator="or" implied="false" attributes="rel4#role5.ent8#att21"/>
+        <AttributesCondition id="sv3#area6#page20#pwu10#su49#acond36" name="approvedValue" predicate="eq" booleanOperator="and" implied="false" attributes="ent9#att17" value="1"/>
+        <AttributesCondition id="sv3#area6#page20#pwu10#su49#acond37" name="hospital_ID" predicate="eq" booleanOperator="and" implied="false" attributes="rel12#role23.ent4#att1"/>
+      </Selector>
+      <Link id="sv3#area6#page20#pwu10#ln75" name="Procedi" to="sv3#area6#page20#enu16" type="normal" validate="true">
+        <LinkParameter id="sv3#area6#page20#pwu10#ln75#par324" name="DoctorToUser.cf_Doctor CF" source="data[].rel36#role72_userOID" target="sv3#area6#page20#enu16#fld22_slot"/>
+        <LinkParameter id="sv3#area6#page20#pwu10#ln75#par325" name="name_PASSING_Hospital Name" sourceLinkParameter="sv3#area6#page20#pwu9#ln74#par323" target="sv3#area6#page20#enu16#fld21_slot"/>
+      </Link>
+      <Link id="sv3#area6#page20#pwu10#ln79" name="Flow79" to="sv3#area6#miu8" type="transport" validate="true">
+        <LinkParameter id="sv3#area6#page20#pwu10#ln79#par351" name="doctor_code_codiceDottore" source="data[].ent9#att33" target="sv3#area6#miu8.mov2#mpkg2#opm11#icu11#icp87"/>
+      </Link>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="435" gr:y="140" id="sv3#area6#page20#enu16" name="Richiesta di Prenotazione" fieldOrder="sv3#area6#page20#enu16#fld21 sv3#area6#page20#enu16#fld22 sv3#area6#page20#enu16#fld36 sv3#area6#page20#enu16#fld37" linkOrder="sv3#area6#page20#enu16#ln77">
+      <Field id="sv3#area6#page20#enu16#fld21" name="Hospital Name" type="string" preloaded="true"/>
+      <Field id="sv3#area6#page20#enu16#fld22" name="Doctor CF" type="string" preloaded="true"/>
+      <Field id="sv3#area6#page20#enu16#fld36" name="data visita" type="date" modifiable="true"/>
+      <Field id="sv3#area6#page20#enu16#fld37" name="orario visita" type="time" modifiable="true"/>
+      <Link id="sv3#area6#page20#enu16#ln77" name="Richiedi visita" to="sv3#area6#miu8" type="normal" validate="true">
+        <LinkParameter id="sv3#area6#page20#enu16#ln77#par334" name="data visita_startDate" source="sv3#area6#page20#enu16#fld36" target="sv3#area6#miu8.mov2#mpkg2#opm11#icu11#icp83"/>
+        <LinkParameter id="sv3#area6#page20#enu16#ln77#par335" name="orario visita_startTime" source="sv3#area6#page20#enu16#fld37" target="sv3#area6#miu8.mov2#mpkg2#opm11#icu11#icp84"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="440" gr:y="0" id="sv3#area6#page20#seu24" name="SelectorPatient" entity="ent6">
+      <Selector id="sv3#area6#page20#seu24#su50" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area6#page20#seu24#su50#acond38" name="CF_Cond" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.userOID"/>
+      </Selector>
+      <Link id="sv3#area6#page20#seu24#ln81" name="Flow81" to="sv3#area6#miu8" type="transport" validate="true">
+        <LinkParameter id="sv3#area6#page20#seu24#ln81#par360" name="patient_code_codicePaziente" source="ent6#att11Array" target="sv3#area6#miu8.mov2#mpkg2#opm11#icu11#icp88"/>
+      </Link>
+    </SelectorUnit>
+    <GetUnit gr:x="305" gr:y="0" id="sv3#area6#page20#gtu6" name="GetUser" contextParameters="UserCtxParam">
+      <Link id="sv3#area6#page20#gtu6#ln80" name="Flow80" to="sv3#area6#page20#seu24" type="transport" validate="true">
+        <LinkParameter id="sv3#area6#page20#gtu6#ln80#par359" name="UserCtxParam.cf_CF_Cond" source="sv3#area6#page20#gtu6.UserCtxParam" target="sv3#area6#page20#seu24#su50#acond38"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area6#page20#enu6">
+          <layout:Field field="sv3#area6#page20#enu6#sfld13"/>
+          <layout:Link link="sv3#area6#page20#enu6#ln67"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area6#page20#pwu9">
+          <layout:Attribute attribute="ent4#att14"/>
+          <layout:Attribute attribute="ent4#att4"/>
+          <layout:Attribute attribute="ent4#att47"/>
+          <layout:Attribute attribute="ent4#att48"/>
+          <layout:Link link="sv3#area6#page20#pwu9#ln70"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area6#page20#enu10">
+          <layout:Field field="sv3#area6#page20#enu10#sfld17"/>
+          <layout:Link link="sv3#area6#page20#enu10#ln73"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area6#page20#pwu10">
+          <layout:Attribute attribute="rel36#role72.userOID"/>
+          <layout:Attribute attribute="rel36#role72.User#att12"/>
+          <layout:Attribute attribute="rel36#role72.User#att27"/>
+          <layout:Attribute attribute="rel36#role72.User#att28"/>
+          <layout:Attribute attribute="rel36#role72.email"/>
+          <layout:Attribute attribute="rel36#role72.User#att41"/>
+          <layout:Link link="sv3#area6#page20#pwu10#ln75"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area6#page20#enu16">
+          <layout:Link link="sv3#area6#page20#enu16#ln77"/>
+          <layout:Field field="sv3#area6#page20#enu16#fld21"/>
+          <layout:Field field="sv3#area6#page20#enu16#fld22"/>
+          <layout:Field field="sv3#area6#page20#enu16#fld36"/>
+          <layout:Field field="sv3#area6#page20#enu16#fld37"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
