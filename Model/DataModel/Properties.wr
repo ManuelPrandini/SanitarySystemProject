@@ -474,8 +474,7 @@
       <db:JoinColumn attribute="ent16#att35" name="emergency_room_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="hospital" type="MySQL" url="jdbc:mysql://localhost:3306/hospital" username="root" cryptedPassword="true" password="cm9vdA==">
-  </db:Database>
+  <db:Database id="db2" name="hospital" type="MySQL" url="jdbc:mysql://localhost:3306/hospital" username="root" cryptedPassword="true" password="cm9vdA=="/>
   <Relationship id="rel14" name="User_Patient" sourceEntity="User" targetEntity="ent6" db:database="db2" db:table="patient">
     <RelationshipRole1 id="rel14#role27" name="UserToPatient" maxCard="1">
       <db:JoinColumn attribute="userOID" name="user_cf"/>
