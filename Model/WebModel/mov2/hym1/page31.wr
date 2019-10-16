@@ -94,7 +94,7 @@
         </VRules>
       </SelectionField>
     </EntryUnit>
-    <SelectorUnit gr:x="200" gr:y="105" id="mov2#hym1#page31#seu18" name="SelectorCity" entity="ent12">
+    <SelectorUnit gr:x="250" gr:y="115" id="mov2#hym1#page31#seu18" name="SelectorCity" entity="ent12">
       <Link id="mov2#hym1#page31#seu18#ln115" name="Flow115" to="mov2#hym1#page31#enu15" type="transport" validate="true">
         <LinkParameter id="mov2#hym1#page31#seu18#ln115#par455" name="name_born in [label]" source="ent12#att39Array" target="mov2#hym1#page31#enu15#sfld5_label"/>
         <LinkParameter id="mov2#hym1#page31#seu18#ln115#par456" name="oid_born in [output]" source="ent12#att16Array" target="mov2#hym1#page31#enu15#sfld5_output"/>
