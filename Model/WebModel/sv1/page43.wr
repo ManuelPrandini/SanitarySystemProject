@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="740" gr:y="285" id="sv3#area6#page22" name="Errore nel completamento della procedura">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="695" gr:y="355" id="sv1#page43" name="Registrazione effettuata!">
   <ContentUnits/>
   <layout:Grid containerType="grid">
     <layout:Row>

@@ -1,7 +1,0 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg2#opm11" name="RegisterVisit" gr:x="405" gr:y="0">
-  <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg2#opm11#icu11" gr:x="30" gr:y="60"/>
-    <OKCollectorUnit gr:x="720" gr:y="50" id="mov2#mpkg2#opm11#okcu18" name="OK Port18"/>
-    <KOCollectorUnit gr:x="720" gr:y="215" id="mov2#mpkg2#opm11#kocu8" name="KO Port8"/>
-  </OperationUnits>
-</OperationModule>

@@ -1,0 +1,27 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="765" gr:y="320" id="mov2#hym3" name="RegisterVisit">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="145" gr:y="120" id="mov2#hym3#icu10">
+      <InputCollectorParameter id="mov2#hym3#icu10#icp83" name="patient"/>
+      <InputCollectorParameter id="mov2#hym3#icu10#icp50" name="doctor"/>
+      <Link id="mov2#hym3#icu10#ln100" name="Flow100" to="mov2#hym3#page42#enu19" type="transport" validate="true">
+        <LinkParameter id="mov2#hym3#icu10#ln100#par370" name="doctor_doctor" source="mov2#hym3#icu10#icp50" target="mov2#hym3#page42#enu19#fld38_slot"/>
+        <LinkParameter id="mov2#hym3#icu10#ln100#par371" name="patient_patient" source="mov2#hym3#icu10#icp83" target="mov2#hym3#page42#enu19#fld39_slot"/>
+        <LinkParameter id="mov2#hym3#icu10#ln100#par382" name="id_visit_PASSING" source="mov2#hym3#icu10#icp86" passing="true"/>
+      </Link>
+      <InputCollectorParameter id="mov2#hym3#icu10#icp85" name="spec"/>
+      <Link id="mov2#hym3#icu10#ln105" name="Flow105" to="mov2#hym3#page42#seu33" type="transport" validate="true">
+        <LinkParameter id="mov2#hym3#icu10#ln105#par379" name="spec_medical_spec" source="mov2#hym3#icu10#icp85" target="mov2#hym3#page42#seu33#su64#acond45"/>
+      </Link>
+      <InputCollectorParameter id="mov2#hym3#icu10#icp86" name="id_visit"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="1055" gr:y="70" id="mov2#hym3#okcu17" name="OK Port17"/>
+    <KOCollectorUnit gr:x="1055" gr:y="190" id="mov2#hym3#kocu19" name="KO Port19"/>
+    <ModifyUnit gr:x="865" gr:y="140" id="mov2#hym3#mfu5" name="Update5" entity="ent29">
+      <Selector id="mov2#hym3#mfu5#su65" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#hym3#mfu5#su65#kcond29" name="KeyCondition29" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#hym3#mfu5#oln84" name="OKFlow84" to="mov2#hym3#okcu17" automaticCoupling="true"/>
+      <KOLink id="mov2#hym3#mfu5#kln42" name="KOFlow42" to="mov2#hym3#kocu19" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</HybridModule>

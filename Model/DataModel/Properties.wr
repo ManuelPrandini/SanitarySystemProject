@@ -107,45 +107,13 @@
     <Attribute id="ent4#att48" name="telephone" type="string" db:column="telephone"/>
     <Attribute id="ent4#att47" name="website" type="url" db:column="website"/>
   </Entity>
-  <Entity gr:x="1550" gr:y="750" id="ent10" name="Room" duration="persistent" attributeOrder="ent10#att5 ent10#att50 ent10#att26" db:database="db2" db:table="room">
+  <Entity gr:x="1760" gr:y="495" id="ent10" name="Room" duration="persistent" attributeOrder="ent10#att5 ent10#att50 ent10#att26" db:database="db2" db:table="room">
     <Attribute id="ent10#att5" key="true" name="id_room" type="integer" db:column="id_room"/>
     <Attribute id="ent10#att26" name="floor" type="string" key="false" db:column="floor"/>
     <Attribute id="ent10#att50" name="name" type="string" db:column="name"/>
   </Entity>
-  <Entity gr:x="1665" gr:y="290" id="ent13" name="Hospital_department" duration="persistent" attributeOrder="ent13#att22 ent13#att23" db:database="db2" db:table="hospital_department">
-    <Attribute id="ent13#att22" key="true" name="id_department" type="integer" db:column="id_department"/>
-    <Attribute id="ent13#att23" name="name" type="string" db:column="name"/>
-  </Entity>
-  <Relationship id="rel1" name="Hospital_Hospital_pavilion" sourceEntity="ent4" targetEntity="ent13" db:database="db2" db:table="hospital_department">
-    <RelationshipRole1 id="rel1#role17" name="HospitalToHospital_pavilion" maxCard="N">
-      <db:JoinColumn attribute="ent4#att1" name="hospital_id_hospital"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel1#role18" name="Hospital_pavilionToHospital" maxCard="1">
-      <db:JoinColumn attribute="ent13#att22" name="id_department"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Entity gr:x="1815" gr:y="750" id="ent14" duration="persistent" name="Building" attributeOrder="ent14#att24 ent14#att25" db:database="db2" db:table="building">
-    <Attribute id="ent14#att24" key="true" name="id_building" type="integer" db:column="id_building"/>
-    <Attribute id="ent14#att25" name="name" type="string" db:column="name"/>
-  </Entity>
-  <Relationship id="rel5" name="Hospital_department_building" sourceEntity="ent13" targetEntity="ent14" db:database="db2" db:table="building">
-    <RelationshipRole1 id="rel5#role19" name="Hospital_departmentTobuilding" maxCard="N">
-      <db:JoinColumn attribute="ent13#att22" name="hospital_department_id_departm"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel5#role20" name="buildingToHospital_department" maxCard="1">
-      <db:JoinColumn attribute="ent14#att24" name="id_building"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel10" name="Rooms_building" sourceEntity="ent10" targetEntity="ent14" db:database="db2" db:table="room">
-    <RelationshipRole1 id="rel10#role21" name="RoomsTobuilding" maxCard="1">
-      <db:JoinColumn attribute="ent10#att5" name="id_room"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel10#role22" name="buildingToRooms" maxCard="N">
-      <db:JoinColumn attribute="ent14#att24" name="building_id_building"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel12" name="Doctor_Hospital" sourceEntity="ent9" targetEntity="ent4" db:database="db2" db:table="doctor_hospital">
-    <RelationshipRole1 id="rel12#role23" name="DoctorToHospital" maxCard="N">
+  <Relationship id="rel12" name="Doctor_Hospital" sourceEntity="ent9" targetEntity="ent4" db:database="db2" db:table="doctor">
+    <RelationshipRole1 id="rel12#role23" name="DoctorToHospital" maxCard="1">
       <db:JoinColumn attribute="ent9#att33" name="doctor_doctor_code"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel12#role24" name="HospitalToDoctor" maxCard="N">
@@ -238,7 +206,7 @@
       <db:JoinColumn attribute="ent22#att51" name="name"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel2" name="City_Hospital" sourceEntity="ent12" targetEntity="ent4" db:database="db2" db:table="hospital">
+  <Relationship id="rel2" name="City_Hospital" sourceEntity="ent12" targetEntity="ent4" db:database="db2" db:table="hospital" gr:bendpoints="632,102,-758,-98">
     <RelationshipRole1 id="rel2#role1" name="CityToHospital" maxCard="N">
       <db:JoinColumn attribute="ent12#att16" name="city_oid"/>
     </RelationshipRole1>
@@ -246,17 +214,17 @@
       <db:JoinColumn attribute="ent4#att1" name="id_hospital"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="1335" gr:y="875" id="ent20" name="Recovery_Room" duration="persistent" db:database="db2" db:table="recovery_room">
+  <Entity gr:x="1345" gr:y="890" id="ent20" name="Recovery_Room" duration="persistent" db:database="db2" db:table="recovery_room">
     <Generalization superEntity="ent10">
       <db:JoinColumn attribute="ent10#att5" name="room_id_room"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="1525" gr:y="905" id="ent23" name="Visit_Room" duration="persistent" db:database="db2" db:table="visit_room">
+  <Entity gr:x="1555" gr:y="905" id="ent23" name="Visit_Room" duration="persistent" db:database="db2" db:table="visit_room">
     <Generalization superEntity="ent10">
       <db:JoinColumn attribute="ent10#att5" name="room_id_room"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="1685" gr:y="900" id="ent24" name="Surgery_Room" duration="persistent" db:database="db2" db:table="surgery_room">
+  <Entity gr:x="1740" gr:y="930" id="ent24" name="Surgery_Room" duration="persistent" db:database="db2" db:table="surgery_room">
     <Generalization superEntity="ent10">
       <db:JoinColumn attribute="ent10#att5" name="room_id_room"/>
     </Generalization>
@@ -272,17 +240,17 @@
       <db:JoinColumn attribute="ent10#att5" name="recovery_room_id_room"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="540" gr:y="820" id="ent29" name="Visit" duration="persistent" db:database="db2" db:table="visit">
+  <Entity gr:x="590" gr:y="760" id="ent29" name="Visit" duration="persistent" db:database="db2" db:table="visit">
     <Generalization superEntity="ent5">
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="665" gr:y="820" id="ent30" name="Clinical_Surgery" duration="persistent" db:database="db2" db:table="clinical_surgery">
+  <Entity gr:x="715" gr:y="760" id="ent30" name="Clinical_Surgery" duration="persistent" db:database="db2" db:table="clinical_surgery">
     <Generalization superEntity="ent5">
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="885" gr:y="825" id="ent31" name="Recovery" duration="persistent" db:database="db2" db:table="recovery">
+  <Entity gr:x="920" gr:y="750" id="ent31" name="Recovery" duration="persistent" db:database="db2" db:table="recovery">
     <Generalization superEntity="ent5">
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </Generalization>
@@ -308,61 +276,6 @@
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel20#role40" name="Bed_placeToRecovery" maxCard="N">
-      <db:JoinColumn attribute="ent25#att55" name="bed_place_oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Entity gr:x="1000" gr:y="345" id="ent32" name="Calendar" duration="persistent" attributeOrder="ent32#att70 ent32#att71 ent32#att72 ent32#att73 ent32#att74" db:database="db2" db:table="calendar">
-    <Attribute id="ent32#att70" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent32#att74" name="endTime" type="time" db:column="endtime"/>
-    <Attribute id="ent32#att73" name="startTime" type="time" db:column="starttime"/>
-    <Attribute id="ent32#att72" name="endDate" type="date" db:column="enddate"/>
-    <Attribute id="ent32#att71" name="startDate" type="date" db:column="startdate"/>
-  </Entity>
-  <Relationship id="rel21" name="Action_Calendar" sourceEntity="ent5" targetEntity="ent32" db:database="db2" db:table="action">
-    <RelationshipRole1 id="rel21#role41" name="ActionToCalendar" maxCard="1">
-      <db:JoinColumn attribute="ent5#att2" name="oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel21#role42" name="CalendarToAction" maxCard="N">
-      <db:JoinColumn attribute="ent32#att70" name="calendar_oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Entity gr:x="750" gr:y="520" id="ent33" name="Visit_Calendar" duration="persistent" db:database="db2" db:table="visit_calendar" attributeOrder="ent33#att36">
-    <Generalization superEntity="ent32">
-      <db:JoinColumn attribute="ent32#att70" name="calendar_oid"/>
-    </Generalization>
-    <Attribute id="ent33#att36" name="approvedVisit" type="integer" db:column="approvedvisit"/>
-  </Entity>
-  <Entity gr:x="990" gr:y="555" id="ent34" name="Surgery_Calendar" duration="persistent" db:database="db2" db:table="surgery_calendar">
-    <Generalization superEntity="ent32">
-      <db:JoinColumn attribute="ent32#att70" name="calendar_oid"/>
-    </Generalization>
-  </Entity>
-  <Entity gr:x="1190" gr:y="495" id="ent35" name="Recovery_Calendar" duration="persistent" db:database="db2" db:table="recovery_calendar">
-    <Generalization superEntity="ent32">
-      <db:JoinColumn attribute="ent32#att70" name="calendar_oid"/>
-    </Generalization>
-  </Entity>
-  <Relationship id="rel27" name="Visit_Calendar_Visit_Room" sourceEntity="ent33" targetEntity="ent23" gr:bendpoints="8,109,-537,-126;181,279,-364,44;330,339,-215,104" db:database="db2" db:table="visit_calendar">
-    <RelationshipRole1 id="rel27#role53" name="Visit_CalendarToVisit_Room" maxCard="1">
-      <db:JoinColumn attribute="ent32#att70" name="calendar_oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel27#role54" name="Visit_RoomToVisit_Calendar" maxCard="N">
-      <db:JoinColumn attribute="ent10#att5" name="visit_room_id_room"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel28" name="Surgery_Calendar_Surgery_Room" sourceEntity="ent34" targetEntity="ent24" gr:bendpoints="34,347,-506,121;633,342,93,116" db:database="db2" db:table="surgery_calendar">
-    <RelationshipRole1 id="rel28#role55" name="Surgery_CalendarToSurgery_Room" maxCard="1">
-      <db:JoinColumn attribute="ent32#att70" name="calendar_oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel28#role56" name="Surgery_RoomToSurgery_Calendar" maxCard="N">
-      <db:JoinColumn attribute="ent10#att5" name="surgery_room_id_room"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel29" name="Recovery_Calendar_Bed_place" sourceEntity="ent35" targetEntity="ent25" db:database="db2" db:table="recovery_calendar">
-    <RelationshipRole1 id="rel29#role57" name="Recovery_CalendarToBed_place" maxCard="1">
-      <db:JoinColumn attribute="ent32#att70" name="calendar_oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel29#role58" name="Bed_placeToRecovery_Calendar" maxCard="N">
       <db:JoinColumn attribute="ent25#att55" name="bed_place_oid"/>
     </RelationshipRole2>
   </Relationship>
@@ -409,10 +322,14 @@
       <db:JoinColumn attribute="ent36#att78" name="drug_prescription_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="555" gr:y="455" id="ent5" name="Action" duration="persistent" attributeOrder="ent5#att2 ent5#att3 ent5#att10" db:database="db2" db:table="action">
+  <Entity gr:x="890" gr:y="410" id="ent5" name="Action" duration="persistent" attributeOrder="ent5#att2 ent5#att3 ent5#att10 ent5#att22 ent5#att23 ent5#att24 ent5#att25" db:database="db2" db:table="action">
     <Attribute id="ent5#att2" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent5#att3" name="title" type="string" db:column="title"/>
-    <Attribute id="ent5#att10" name="description" type="text" db:column="description"/>
+    <Attribute id="ent5#att3" name="title" type="string" db:column="title" key="false"/>
+    <Attribute id="ent5#att10" name="description" type="text" db:column="description" key="false"/>
+    <Attribute id="ent5#att22" name="startDate" type="date" key="false" db:column="startdate"/>
+    <Attribute id="ent5#att25" name="endTime" type="time" db:column="endtime"/>
+    <Attribute id="ent5#att24" name="startTime" type="time" db:column="starttime"/>
+    <Attribute id="ent5#att23" name="endDate" type="date" db:column="enddate"/>
   </Entity>
   <Entity gr:x="195" gr:y="480" id="ent7" name="With_Prescription" duration="persistent" db:database="db2" db:table="with_prescription">
     <Generalization superEntity="ent37">
@@ -440,7 +357,7 @@
       <db:JoinColumn attribute="ent37#att82" name="assignement_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="1465" gr:y="550" id="ent16" name="Emergency_Room" duration="persistent" db:database="db2" db:table="emergency_room">
+  <Entity gr:x="1395" gr:y="575" id="ent16" name="Emergency_Room" duration="persistent" db:database="db2" db:table="emergency_room">
     <Attribute id="ent16#att35" key="true" name="oid" type="integer" db:column="oid"/>
   </Entity>
   <Relationship id="rel26" name="Hospital_Emergency_Room" sourceEntity="ent4" targetEntity="ent16" db:database="db2" db:table="emergency_room">
@@ -475,8 +392,6 @@
       <db:JoinColumn attribute="ent16#att35" name="emergency_room_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="hospital" type="MySQL" url="jdbc:mysql://localhost:3306/hospital" username="root" cryptedPassword="true" password="cm9vdA==">
-  </db:Database>
   <Relationship id="rel14" name="User_Patient" sourceEntity="User" targetEntity="ent6" db:database="db2" db:table="patient">
     <RelationshipRole1 id="rel14#role27" name="UserToPatient" maxCard="1">
       <db:JoinColumn attribute="userOID" name="user_cf"/>
@@ -501,4 +416,22 @@
       <db:JoinColumn attribute="ent9#att33" name="doctor_code"/>
     </RelationshipRole2>
   </Relationship>
+  <Relationship id="rel37" name="Hospital_Room" sourceEntity="ent4" targetEntity="ent10" db:database="db2" db:table="room">
+    <RelationshipRole1 id="rel37#role73" name="HospitalToRoom" maxCard="N">
+      <db:JoinColumn attribute="ent4#att1" name="hospital_id_hospital"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel37#role74" name="RoomToHospital" maxCard="1">
+      <db:JoinColumn attribute="ent10#att5" name="id_room"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel1" name="Medical_specialization_Visit_Room" sourceEntity="ent8" targetEntity="ent23" gr:bendpoints="109,346,69,-410" db:database="db2" db:table="visit_room">
+    <RelationshipRole1 id="rel1#role17" name="Medical_specializationToVisit_Room" maxCard="N">
+      <db:JoinColumn attribute="ent8#att21" name="medical_specialization_namespe"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel1#role18" name="Visit_RoomToMedical_specialization" maxCard="1">
+      <db:JoinColumn attribute="ent10#att5" name="room_id_room"/>
+    </RelationshipRole2>
+  </Relationship>
+  <db:Database id="db2" name="hospital" type="MySQL" url="jdbc:mysql://localhost:3306/hospital" username="root" cryptedPassword="true" password="cm9vdA==">
+  </db:Database>
 </DataModel>

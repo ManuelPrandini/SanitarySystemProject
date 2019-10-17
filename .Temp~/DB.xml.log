@@ -1,433 +1,288 @@
-[16 ott 2019 19:32:54] Building database metadata model
-[16 ott 2019 19:32:54] Properties: {partialRefresh=false, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@45eefc33, includeTables=true, username=root, outputLogPath=/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/SanitarySystemProject/.Temp~/DB.xml.log, readIndexes=null, driverClass=com.mysql.jdbc.Driver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.MySQLMetaDataProvider, outputPath=/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/SanitarySystemProject/.Temp~/DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/.metadata/.plugins/com.webratio.commons.db/derby, url=jdbc:mysql://localhost:3306/hospital, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=true, retrieveAllNames=false, tablesToRefresh=, eventSocketPort=39277}
-[16 ott 2019 19:32:54] URL: jdbc:mysql://localhost:3306/hospital
-[16 ott 2019 19:32:54] Product name: MySQL
-[16 ott 2019 19:32:54] Product version: 5.7.26-0ubuntu0.18.10.1
-[16 ott 2019 19:32:54] Driver name: MySQL Connector Java
-[16 ott 2019 19:32:54] Driver version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
-[16 ott 2019 19:32:54] Driver major version: 5
-[16 ott 2019 19:32:54] Driver minor version: 1
-[16 ott 2019 19:32:54] Identifier quote string: 1
-[16 ott 2019 19:32:54] Retrieving schemas
-[16 ott 2019 19:32:54] Retrieving [TABLE, VIEW, SYNONYM] for schema ''
-[16 ott 2019 19:32:54]   Found 'action' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'assignement' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'bed_place' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'building' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'calendar' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'city' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'clinical_surgery' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'country' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'doctor' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'doctor_hospital' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'drug' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'drug_description' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'drug_prescription' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'emergency_code' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'emergency_operation' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'emergency_room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'group' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'group_module' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'hospital' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'hospital_department' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'medical_specialization' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'module' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'patient' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'pharmacist' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'pharmacy' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'quantity_drug' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'recovery' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'recovery_calendar' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'recovery_room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'surgery_calendar' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'surgery_room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'user' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'user_group' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'visit' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'visit_calendar' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'visit_room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'with_prescription' [type = TABLE]
-[16 ott 2019 19:32:54]   Found 'without_prescription' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving columns for 'action' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: title [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: description [type = LONGTEXT][SQL/XOPEN type = -1][size = 2147483647][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: patient_patient_code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: calendar_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: doctor_doctor_code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'action' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: oid
-[16 ott 2019 19:32:54] Retrieving columns for 'assignement' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: quantity [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: date [type = DATETIME][SQL/XOPEN type = 93][size = 19][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: pharmacist_pharmacist_code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'assignement' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: oid
-[16 ott 2019 19:32:54] Retrieving columns for 'bed_place' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: recovery_room_id_room [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'bed_place' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: oid
-[16 ott 2019 19:32:54] Retrieving columns for 'building' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: id_building [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: hospital_department_id_departm [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'building' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: id_building
-[16 ott 2019 19:32:54] Retrieving columns for 'calendar' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: endtime [type = TIME][SQL/XOPEN type = 92][size = 8][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: starttime [type = TIME][SQL/XOPEN type = 92][size = 8][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: enddate [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: startdate [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'calendar' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: oid
-[16 ott 2019 19:32:54] Retrieving columns for 'city' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: country_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'city' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: oid
-[16 ott 2019 19:32:54] Retrieving columns for 'clinical_surgery' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: action_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: surgery_room_id_room [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'clinical_surgery' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: action_oid
-[16 ott 2019 19:32:54] Retrieving columns for 'country' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'country' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: oid
-[16 ott 2019 19:32:54] Retrieving columns for 'doctor' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: doctor_code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: approved [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: user_cf [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: medical_specialization_namespe [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'doctor' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: doctor_code
-[16 ott 2019 19:32:54] Retrieving columns for 'doctor_hospital' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: doctor_doctor_code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: hospital_id_hospital [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'doctor_hospital' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: doctor_doctor_code
-[16 ott 2019 19:32:54]   Found primary key column: hospital_id_hospital
-[16 ott 2019 19:32:54] Retrieving columns for 'drug' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: id [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: isstandard [type = BIT][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'drug' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: id
-[16 ott 2019 19:32:54] Retrieving columns for 'drug_description' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: drug_id [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'drug_description' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: name
-[16 ott 2019 19:32:54] Retrieving columns for 'drug_prescription' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: quantity [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: description [type = LONGTEXT][SQL/XOPEN type = -1][size = 2147483647][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: assigned [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: visit_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: drug_id [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'drug_prescription' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: oid
-[16 ott 2019 19:32:54] Retrieving columns for 'emergency_code' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'emergency_code' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: code
-[16 ott 2019 19:32:54] Retrieving columns for 'emergency_operation' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: action_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: emergency_code_code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: emergency_room_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'emergency_operation' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: action_oid
-[16 ott 2019 19:32:54] Retrieving columns for 'emergency_room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: hospital_id_hospital [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'emergency_room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: oid
-[16 ott 2019 19:32:54] Retrieving columns for 'group' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: groupname [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'group' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: oid
-[16 ott 2019 19:32:54] Retrieving columns for 'group_module' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'group_module' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: group_oid
-[16 ott 2019 19:32:54]   Found primary key column: module_oid
-[16 ott 2019 19:32:54] Retrieving columns for 'hospital' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: id_hospital [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: address [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: telephone [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: website [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: city_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'hospital' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: id_hospital
-[16 ott 2019 19:32:54] Retrieving columns for 'hospital_department' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: id_department [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: hospital_id_hospital [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'hospital_department' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: id_department
-[16 ott 2019 19:32:54] Retrieving columns for 'medical_specialization' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: namespecialization [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'medical_specialization' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: namespecialization
-[16 ott 2019 19:32:54] Retrieving columns for 'module' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: moduleid [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: modulename [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'module' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: oid
-[16 ott 2019 19:32:54] Retrieving columns for 'patient' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: weight [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: height [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: approved [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: patient_code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: user_cf [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'patient' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: patient_code
-[16 ott 2019 19:32:54] Retrieving columns for 'pharmacist' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: pharmacist_code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: approved [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: pharmacy_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: user_cf [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'pharmacist' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: pharmacist_code
-[16 ott 2019 19:32:54] Retrieving columns for 'pharmacy' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: address [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: telephone [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: website [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: city_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'pharmacy' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: oid
-[16 ott 2019 19:32:54] Retrieving columns for 'quantity_drug' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: quantity [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: pharmacy_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: drug_id [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'quantity_drug' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: oid
-[16 ott 2019 19:32:54] Retrieving columns for 'recovery' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: action_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: bed_place_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'recovery' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: action_oid
-[16 ott 2019 19:32:54] Retrieving columns for 'recovery_calendar' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: calendar_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: bed_place_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'recovery_calendar' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: calendar_oid
-[16 ott 2019 19:32:54] Retrieving columns for 'recovery_room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: room_id_room [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'recovery_room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: room_id_room
-[16 ott 2019 19:32:54] Retrieving columns for 'room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: id_room [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: floor [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: building_id_building [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: id_room
-[16 ott 2019 19:32:54] Retrieving columns for 'surgery_calendar' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: calendar_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: surgery_room_id_room [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'surgery_calendar' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: calendar_oid
-[16 ott 2019 19:32:54] Retrieving columns for 'surgery_room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: room_id_room [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'surgery_room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: room_id_room
-[16 ott 2019 19:32:54] Retrieving columns for 'user' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: cf [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: username [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: password [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: email [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: surname [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: birthday [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: address [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: telephone [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: gender [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: city_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: city_oid_2 [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: expiration_date [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'user' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: cf
-[16 ott 2019 19:32:54] Retrieving columns for 'user_group' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: user_cf [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'user_group' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: user_cf
-[16 ott 2019 19:32:54]   Found primary key column: group_oid
-[16 ott 2019 19:32:54] Retrieving columns for 'visit' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: action_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: visit_room_id_room [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'visit' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: action_oid
-[16 ott 2019 19:32:54] Retrieving columns for 'visit_calendar' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: calendar_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: visit_room_id_room [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: approvedvisit [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'visit_calendar' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: calendar_oid
-[16 ott 2019 19:32:54] Retrieving columns for 'visit_room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: room_id_room [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'visit_room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: room_id_room
-[16 ott 2019 19:32:54] Retrieving columns for 'with_prescription' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: assignement_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: drug_prescription_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'with_prescription' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: assignement_oid
-[16 ott 2019 19:32:54] Retrieving columns for 'without_prescription' [type = TABLE]
-[16 ott 2019 19:32:54]   Found column: assignement_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: patient_patient_code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[16 ott 2019 19:32:54]   Found column: drug_id [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[16 ott 2019 19:32:54] Retrieving primary keys for 'without_prescription' [type = TABLE]
-[16 ott 2019 19:32:54]   Found primary key column: assignement_oid
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'action' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column calendar_oid references calendar(oid)
-[16 ott 2019 19:32:54]   Found foreign key: column doctor_doctor_code references doctor(doctor_code)
-[16 ott 2019 19:32:54]   Found foreign key: column patient_patient_code references patient(patient_code)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'assignement' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column pharmacist_pharmacist_code references pharmacist(pharmacist_code)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'bed_place' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column recovery_room_id_room references recovery_room(room_id_room)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'building' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column hospital_department_id_departm references hospital_department(id_department)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'calendar' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'city' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column country_oid references country(oid)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'clinical_surgery' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column action_oid references action(oid)
-[16 ott 2019 19:32:54]   Found foreign key: column surgery_room_id_room references surgery_room(room_id_room)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'country' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'doctor' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column medical_specialization_namespe references medical_specialization(namespecialization)
-[16 ott 2019 19:32:54]   Found foreign key: column user_cf references user(cf)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'doctor_hospital' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column doctor_doctor_code references doctor(doctor_code)
-[16 ott 2019 19:32:54]   Found foreign key: column hospital_id_hospital references hospital(id_hospital)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'drug' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'drug_description' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column drug_id references drug(id)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'drug_prescription' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column drug_id references drug(id)
-[16 ott 2019 19:32:54]   Found foreign key: column visit_oid references visit(action_oid)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'emergency_code' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'emergency_operation' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column action_oid references action(oid)
-[16 ott 2019 19:32:54]   Found foreign key: column emergency_room_oid references emergency_room(oid)
-[16 ott 2019 19:32:54]   Found foreign key: column emergency_code_code references emergency_code(code)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'emergency_room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column hospital_id_hospital references hospital(id_hospital)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'group' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column module_oid references module(oid)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'group_module' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column group_oid references group(oid)
-[16 ott 2019 19:32:54]   Found foreign key: column module_oid references module(oid)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'hospital' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column city_oid references city(oid)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'hospital_department' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column hospital_id_hospital references hospital(id_hospital)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'medical_specialization' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'module' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'patient' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column user_cf references user(cf)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'pharmacist' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column pharmacy_oid references pharmacy(oid)
-[16 ott 2019 19:32:54]   Found foreign key: column user_cf references user(cf)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'pharmacy' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column city_oid references city(oid)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'quantity_drug' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column drug_id references drug(id)
-[16 ott 2019 19:32:54]   Found foreign key: column pharmacy_oid references pharmacy(oid)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'recovery' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column action_oid references action(oid)
-[16 ott 2019 19:32:54]   Found foreign key: column bed_place_oid references bed_place(oid)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'recovery_calendar' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column bed_place_oid references bed_place(oid)
-[16 ott 2019 19:32:54]   Found foreign key: column calendar_oid references calendar(oid)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'recovery_room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column room_id_room references room(id_room)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column building_id_building references building(id_building)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'surgery_calendar' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column calendar_oid references calendar(oid)
-[16 ott 2019 19:32:54]   Found foreign key: column surgery_room_id_room references surgery_room(room_id_room)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'surgery_room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column room_id_room references room(id_room)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'user' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column city_oid references city(oid)
-[16 ott 2019 19:32:54]   Found foreign key: column city_oid_2 references city(oid)
-[16 ott 2019 19:32:54]   Found foreign key: column group_oid references group(oid)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'user_group' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column group_oid references group(oid)
-[16 ott 2019 19:32:54]   Found foreign key: column user_cf references user(cf)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'visit' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column action_oid references action(oid)
-[16 ott 2019 19:32:54]   Found foreign key: column visit_room_id_room references visit_room(room_id_room)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'visit_calendar' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column calendar_oid references calendar(oid)
-[16 ott 2019 19:32:54]   Found foreign key: column visit_room_id_room references visit_room(room_id_room)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'visit_room' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column room_id_room references room(id_room)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'with_prescription' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column assignement_oid references assignement(oid)
-[16 ott 2019 19:32:54]   Found foreign key: column drug_prescription_oid references drug_prescription(oid)
-[16 ott 2019 19:32:54] Retrieving foreign keys for 'without_prescription' [type = TABLE]
-[16 ott 2019 19:32:54]   Found foreign key: column assignement_oid references assignement(oid)
-[16 ott 2019 19:32:54]   Found foreign key: column drug_id references drug(id)
-[16 ott 2019 19:32:54]   Found foreign key: column patient_patient_code references patient(patient_code)
-[16 ott 2019 19:32:54] Database metadata retrieved (319 ms)
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'action' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'assignement' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'bed_place' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'building' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'calendar' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'city' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'clinical_surgery' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'country' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'doctor' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'doctor_hospital' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'drug' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'drug_description' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'drug_prescription' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'emergency_code' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'emergency_operation' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'emergency_room' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'group' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'group_module' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'hospital' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'hospital_department' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'medical_specialization' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'module' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'patient' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'pharmacist' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'pharmacy' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'quantity_drug' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'recovery' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'recovery_calendar' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'recovery_room' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'room' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'surgery_calendar' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'surgery_room' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'user' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'user_group' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'visit' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'visit_calendar' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'visit_room' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'with_prescription' [type = TABLE]
-[16 ott 2019 19:32:54] Retrieving auto-increment columns for 'without_prescription' [type = TABLE]
-[16 ott 2019 19:32:54] Database connection closed
+[17 ott 2019 21:02:32] Building database metadata model
+[17 ott 2019 21:02:32] Properties: {partialRefresh=false, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@6f3e54b, includeTables=true, username=root, outputLogPath=/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/SanitarySystemProject/.Temp~/DB.xml.log, readIndexes=null, driverClass=com.mysql.jdbc.Driver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.MySQLMetaDataProvider, outputPath=/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/SanitarySystemProject/.Temp~/DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/.metadata/.plugins/com.webratio.commons.db/derby, url=jdbc:mysql://localhost:3306/hospital, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=false, retrieveAllNames=false, tablesToRefresh=, eventSocketPort=36457}
+[17 ott 2019 21:02:32] URL: jdbc:mysql://localhost:3306/hospital
+[17 ott 2019 21:02:32] Product name: MySQL
+[17 ott 2019 21:02:32] Product version: 5.7.26-0ubuntu0.18.10.1
+[17 ott 2019 21:02:32] Driver name: MySQL Connector Java
+[17 ott 2019 21:02:32] Driver version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[17 ott 2019 21:02:32] Driver major version: 5
+[17 ott 2019 21:02:32] Driver minor version: 1
+[17 ott 2019 21:02:32] Identifier quote string: 1
+[17 ott 2019 21:02:32] Retrieving schemas
+[17 ott 2019 21:02:32] Retrieving [TABLE, VIEW, SYNONYM] for schema ''
+[17 ott 2019 21:02:32]   Found 'action' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'assignement' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'bed_place' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'city' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'clinical_surgery' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'country' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'doctor' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'drug' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'drug_description' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'drug_prescription' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'emergency_code' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'emergency_operation' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'emergency_room' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'group' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'group_module' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'hospital' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'medical_specialization' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'module' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'patient' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'pharmacist' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'pharmacy' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'quantity_drug' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'recovery' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'recovery_room' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'room' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'surgery_room' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'user' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'user_group' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'visit' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'visit_room' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'with_prescription' [type = TABLE]
+[17 ott 2019 21:02:32]   Found 'without_prescription' [type = TABLE]
+[17 ott 2019 21:02:32] Retrieving columns for 'action' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: title [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: description [type = LONGTEXT][SQL/XOPEN type = -1][size = 2147483647][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: startdate [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: endtime [type = TIME][SQL/XOPEN type = 92][size = 8][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: starttime [type = TIME][SQL/XOPEN type = 92][size = 8][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: enddate [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: patient_patient_code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: doctor_doctor_code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'action' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: oid
+[17 ott 2019 21:02:33] Retrieving columns for 'assignement' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: quantity [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: date [type = DATETIME][SQL/XOPEN type = 93][size = 19][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: pharmacist_pharmacist_code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'assignement' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: oid
+[17 ott 2019 21:02:33] Retrieving columns for 'bed_place' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: recovery_room_id_room [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'bed_place' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: oid
+[17 ott 2019 21:02:33] Retrieving columns for 'city' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: country_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'city' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: oid
+[17 ott 2019 21:02:33] Retrieving columns for 'clinical_surgery' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: action_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: surgery_room_id_room [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'clinical_surgery' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: action_oid
+[17 ott 2019 21:02:33] Retrieving columns for 'country' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'country' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: oid
+[17 ott 2019 21:02:33] Retrieving columns for 'doctor' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: doctor_code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: approved [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: hospital_id_hospital [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: user_cf [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: medical_specialization_namespe [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'doctor' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: doctor_code
+[17 ott 2019 21:02:33] Retrieving columns for 'drug' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: id [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: isstandard [type = BIT][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'drug' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: id
+[17 ott 2019 21:02:33] Retrieving columns for 'drug_description' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: drug_id [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'drug_description' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: name
+[17 ott 2019 21:02:33] Retrieving columns for 'drug_prescription' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: quantity [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: description [type = LONGTEXT][SQL/XOPEN type = -1][size = 2147483647][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: assigned [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: visit_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: drug_id [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'drug_prescription' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: oid
+[17 ott 2019 21:02:33] Retrieving columns for 'emergency_code' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'emergency_code' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: code
+[17 ott 2019 21:02:33] Retrieving columns for 'emergency_operation' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: action_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: emergency_code_code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: emergency_room_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'emergency_operation' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: action_oid
+[17 ott 2019 21:02:33] Retrieving columns for 'emergency_room' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: hospital_id_hospital [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'emergency_room' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: oid
+[17 ott 2019 21:02:33] Retrieving columns for 'group' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: groupname [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'group' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: oid
+[17 ott 2019 21:02:33] Retrieving columns for 'group_module' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'group_module' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: group_oid
+[17 ott 2019 21:02:33]   Found primary key column: module_oid
+[17 ott 2019 21:02:33] Retrieving columns for 'hospital' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: id_hospital [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: address [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: telephone [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: website [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: city_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'hospital' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: id_hospital
+[17 ott 2019 21:02:33] Retrieving columns for 'medical_specialization' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: namespecialization [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'medical_specialization' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: namespecialization
+[17 ott 2019 21:02:33] Retrieving columns for 'module' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: moduleid [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: modulename [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'module' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: oid
+[17 ott 2019 21:02:33] Retrieving columns for 'patient' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: weight [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: height [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: approved [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: patient_code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: user_cf [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'patient' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: patient_code
+[17 ott 2019 21:02:33] Retrieving columns for 'pharmacist' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: pharmacist_code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: approved [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: pharmacy_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: user_cf [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'pharmacist' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: pharmacist_code
+[17 ott 2019 21:02:33] Retrieving columns for 'pharmacy' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: address [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: telephone [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: website [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: city_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'pharmacy' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: oid
+[17 ott 2019 21:02:33] Retrieving columns for 'quantity_drug' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: quantity [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: pharmacy_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: drug_id [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'quantity_drug' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: oid
+[17 ott 2019 21:02:33] Retrieving columns for 'recovery' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: action_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: bed_place_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'recovery' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: action_oid
+[17 ott 2019 21:02:33] Retrieving columns for 'recovery_room' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: room_id_room [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'recovery_room' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: room_id_room
+[17 ott 2019 21:02:33] Retrieving columns for 'room' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: id_room [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: floor [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: hospital_id_hospital [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'room' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: id_room
+[17 ott 2019 21:02:33] Retrieving columns for 'surgery_room' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: room_id_room [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'surgery_room' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: room_id_room
+[17 ott 2019 21:02:33] Retrieving columns for 'user' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: cf [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: username [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: password [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: email [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: surname [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: birthday [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: address [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: telephone [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: gender [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: expiration_date [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: city_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: city_oid_2 [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'user' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: cf
+[17 ott 2019 21:02:33] Retrieving columns for 'user_group' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: user_cf [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'user_group' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: user_cf
+[17 ott 2019 21:02:33]   Found primary key column: group_oid
+[17 ott 2019 21:02:33] Retrieving columns for 'visit' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: action_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: visit_room_id_room [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'visit' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: action_oid
+[17 ott 2019 21:02:33] Retrieving columns for 'visit_room' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: room_id_room [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: medical_specialization_namespe [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'visit_room' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: room_id_room
+[17 ott 2019 21:02:33] Retrieving columns for 'with_prescription' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: assignement_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: drug_prescription_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'with_prescription' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: assignement_oid
+[17 ott 2019 21:02:33] Retrieving columns for 'without_prescription' [type = TABLE]
+[17 ott 2019 21:02:33]   Found column: assignement_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: patient_patient_code [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[17 ott 2019 21:02:33]   Found column: drug_id [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[17 ott 2019 21:02:33] Retrieving primary keys for 'without_prescription' [type = TABLE]
+[17 ott 2019 21:02:33]   Found primary key column: assignement_oid
+[17 ott 2019 21:02:33] Database metadata retrieved (948 ms)
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'action' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'assignement' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'bed_place' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'city' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'clinical_surgery' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'country' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'doctor' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'drug' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'drug_description' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'drug_prescription' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'emergency_code' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'emergency_operation' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'emergency_room' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'group' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'group_module' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'hospital' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'medical_specialization' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'module' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'patient' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'pharmacist' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'pharmacy' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'quantity_drug' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'recovery' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'recovery_room' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'room' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'surgery_room' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'user' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'user_group' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'visit' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'visit_room' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'with_prescription' [type = TABLE]
+[17 ott 2019 21:02:33] Retrieving auto-increment columns for 'without_prescription' [type = TABLE]
+[17 ott 2019 21:02:34] Database connection closed

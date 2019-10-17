@@ -79,7 +79,7 @@
       <Case value="1"/>
       <Case value="2"/>
       <Case value="3"/>
-      <OKLink id="mov2#hym1#switch3#oln45" name="OKFlow45" to="mov2#hym1#page30" automaticCoupling="true" code="1" gr:bendpoints="156,-232,-118,13"/>
+      <OKLink id="mov2#hym1#switch3#oln45" name="OKFlow45" to="mov2#hym1#page30" automaticCoupling="true" code="1" gr:bendpoints="14,-375,-381,155;156,-232,-118,13"/>
       <OKLink id="mov2#hym1#switch3#oln47" name="OKFlow47" to="mov2#hym1#page35" automaticCoupling="true" code="2"/>
       <OKLink id="mov2#hym1#switch3#oln48" name="OKFlow48" to="mov2#hym1#page32" automaticCoupling="true" code="3"/>
     </SwitchUnit>
@@ -91,7 +91,7 @@
       <OKLink id="mov2#hym1#switch4#oln51" name="OKFlow51" to="mov2#hym1#page36" automaticCoupling="true" code="2"/>
       <OKLink id="mov2#hym1#switch4#oln52" name="OKFlow52" to="mov2#hym1#page31" automaticCoupling="true" code="1"/>
     </SwitchUnit>
-    <ModuleInstanceUnit gr:x="1055" gr:y="-70" id="mov2#hym1#miu14" action="true" moduleId="mov2#mpkg2#opm1">
+    <ModuleInstanceUnit gr:x="1145" gr:y="-60" id="mov2#hym1#miu14" action="true" moduleId="mov2#mpkg2#opm1">
       <OKLink id="mov2#hym1#miu14#oln58" name="OKFlow58" to="mov2#hym1#okcu12" automaticCoupling="true"/>
       <KOLink id="mov2#hym1#miu14#kln35" name="KOFlow35" to="mov2#hym1#kocu14" automaticCoupling="true"/>
     </ModuleInstanceUnit>

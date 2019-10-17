@@ -46,6 +46,7 @@ create table `room` (
    `id_room`  integer  not null,
    `floor`  varchar(255),
    `name`  varchar(255),
+   `department`  varchar(255),
   primary key (`id_room`)
 );
 
@@ -283,19 +284,19 @@ alter table `user_group`   add index fk_user_group_user (`user_cf`), add constra
 alter table `user_group`   add index fk_user_group_group (`group_oid`), add constraint fk_user_group_group foreign key (`group_oid`) references `group` (`oid`);
 
 
--- Medical_specialization_Visit_Room [rel1]
-alter table `visit_room`  add column  `medical_specialization_namespe`  varchar(255);
-alter table `visit_room`   add index fk_visit_room_medical_speciali (`medical_specialization_namespe`), add constraint fk_visit_room_medical_speciali foreign key (`medical_specialization_namespe`) references `medical_specialization` (`namespecialization`);
-
-
 -- Patient_Visit [rel11]
 alter table `action`  add column  `patient_patient_code`  varchar(255);
 alter table `action`   add index fk_action_patient (`patient_patient_code`), add constraint fk_action_patient foreign key (`patient_patient_code`) references `patient` (`patient_code`);
 
 
 -- Doctor_Hospital [rel12]
-alter table `doctor`  add column  `hospital_id_hospital`  integer;
-alter table `doctor`   add index fk_doctor_hospital (`hospital_id_hospital`), add constraint fk_doctor_hospital foreign key (`hospital_id_hospital`) references `hospital` (`id_hospital`);
+create table `doctor_hospital` (
+   `doctor_doctor_code`  varchar(255) not null,
+   `hospital_id_hospital`  integer not null,
+  primary key (`doctor_doctor_code`, `hospital_id_hospital`)
+);
+alter table `doctor_hospital`   add index fk_doctor_hospital_doctor (`doctor_doctor_code`), add constraint fk_doctor_hospital_doctor foreign key (`doctor_doctor_code`) references `doctor` (`doctor_code`);
+alter table `doctor_hospital`   add index fk_doctor_hospital_hospital (`hospital_id_hospital`), add constraint fk_doctor_hospital_hospital foreign key (`hospital_id_hospital`) references `hospital` (`id_hospital`);
 
 
 -- Pharmacy_City [rel13]
@@ -395,12 +396,12 @@ alter table `with_prescription`   add index fk_with_prescription_drug_pres (`dru
 
 -- Emergency_operation_Emergency_code [rel34]
 alter table `emergency_operation`  add column  `emergency_code_code`  varchar(255);
-alter table `emergency_operation`   add index fk_emergency_operation_emerg_2 (`emergency_code_code`), add constraint fk_emergency_operation_emerg_2 foreign key (`emergency_code_code`) references `emergency_code` (`code`);
+alter table `emergency_operation`   add index fk_emergency_operation_emergen (`emergency_code_code`), add constraint fk_emergency_operation_emergen foreign key (`emergency_code_code`) references `emergency_code` (`code`);
 
 
 -- Emergency_operation_Emergency_Room [rel35]
 alter table `emergency_operation`  add column  `emergency_room_oid`  integer;
-alter table `emergency_operation`   add index fk_emergency_operation_emergen (`emergency_room_oid`), add constraint fk_emergency_operation_emergen foreign key (`emergency_room_oid`) references `emergency_room` (`oid`);
+alter table `emergency_operation`   add index fk_emergency_operation_emerg_2 (`emergency_room_oid`), add constraint fk_emergency_operation_emerg_2 foreign key (`emergency_room_oid`) references `emergency_room` (`oid`);
 
 
 -- User_Doctor [rel36]

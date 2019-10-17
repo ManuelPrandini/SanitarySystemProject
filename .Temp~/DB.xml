@@ -5,49 +5,31 @@
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="title" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="-1" indexed="unknown" autoIncrement="false" type="LONGTEXT" size="2147483647" decimalDigits="0" name="description" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="DATE" size="10" decimalDigits="0" name="startdate" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="92" indexed="unknown" autoIncrement="false" type="TIME" size="8" decimalDigits="0" name="endtime" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="92" indexed="unknown" autoIncrement="false" type="TIME" size="8" decimalDigits="0" name="starttime" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="DATE" size="10" decimalDigits="0" name="enddate" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="patient_patient_code" primaryKey="false" notNull="false"/>
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="calendar_oid" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="doctor_doctor_code" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="calendar_oid" foreignColumnName="oid" name="fk_action_calendar" foreignTableName="calendar" foreignSchemaName=""/>
-    <ForeignKey localColumnName="doctor_doctor_code" foreignColumnName="doctor_code" name="fk_action_doctor" foreignTableName="doctor" foreignSchemaName=""/>
-    <ForeignKey localColumnName="patient_patient_code" foreignColumnName="patient_code" name="fk_action_patient" foreignTableName="patient" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="assignement" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="quantity" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="DATETIME" size="19" decimalDigits="0" name="date" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="pharmacist_pharmacist_code" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="pharmacist_pharmacist_code" foreignColumnName="pharmacist_code" name="fk_assignement_pharmacist" foreignTableName="pharmacist" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="bed_place" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="recovery_room_id_room" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="recovery_room_id_room" foreignColumnName="room_id_room" name="fk_bed_place_recovery_room" foreignTableName="recovery_room" foreignSchemaName=""/>
-  </Table>
-  <Table schema="" ignoreIndexes="false" name="building" type="TABLE" refreshed="true">
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_building" primaryKey="true" notNull="true"/>
-    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="name" primaryKey="false" notNull="false"/>
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="hospital_department_id_departm" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="hospital_department_id_departm" foreignColumnName="id_department" name="fk_building_hospital_departmen" foreignTableName="hospital_department" foreignSchemaName=""/>
-  </Table>
-  <Table schema="" ignoreIndexes="false" name="calendar" type="TABLE" refreshed="true">
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
-    <Column sqlTypeId="92" indexed="unknown" autoIncrement="false" type="TIME" size="8" decimalDigits="0" name="endtime" primaryKey="false" notNull="false"/>
-    <Column sqlTypeId="92" indexed="unknown" autoIncrement="false" type="TIME" size="8" decimalDigits="0" name="starttime" primaryKey="false" notNull="false"/>
-    <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="DATE" size="10" decimalDigits="0" name="enddate" primaryKey="false" notNull="false"/>
-    <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="DATE" size="10" decimalDigits="0" name="startdate" primaryKey="false" notNull="false"/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="city" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="name" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="country_oid" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="country_oid" foreignColumnName="oid" name="fk_city_country" foreignTableName="country" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="clinical_surgery" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="action_oid" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="surgery_room_id_room" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="action_oid" foreignColumnName="oid" name="fk_clinical_surgery_action" foreignTableName="action" foreignSchemaName=""/>
-    <ForeignKey localColumnName="surgery_room_id_room" foreignColumnName="room_id_room" name="fk_clinical_surgery_surgery_ro" foreignTableName="surgery_room" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="country" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
@@ -56,16 +38,9 @@
   <Table schema="" ignoreIndexes="false" name="doctor" type="TABLE" refreshed="true">
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="doctor_code" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="approved" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="hospital_id_hospital" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="user_cf" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="medical_specialization_namespe" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="medical_specialization_namespe" foreignColumnName="namespecialization" name="fk_doctor_medical_specializati" foreignTableName="medical_specialization" foreignSchemaName=""/>
-    <ForeignKey localColumnName="user_cf" foreignColumnName="cf" name="fk_doctor_user" foreignTableName="user" foreignSchemaName=""/>
-  </Table>
-  <Table schema="" ignoreIndexes="false" name="doctor_hospital" type="TABLE" refreshed="true">
-    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="doctor_doctor_code" primaryKey="true" notNull="true"/>
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="hospital_id_hospital" primaryKey="true" notNull="true"/>
-    <ForeignKey localColumnName="doctor_doctor_code" foreignColumnName="doctor_code" name="fk_doctor_hospital_doctor" foreignTableName="doctor" foreignSchemaName=""/>
-    <ForeignKey localColumnName="hospital_id_hospital" foreignColumnName="id_hospital" name="fk_doctor_hospital_hospital" foreignTableName="hospital" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="drug" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id" primaryKey="true" notNull="true"/>
@@ -75,7 +50,6 @@
   <Table schema="" ignoreIndexes="false" name="drug_description" type="TABLE" refreshed="true">
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="name" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="drug_id" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="drug_id" foreignColumnName="id" name="fk_drug_description_drug" foreignTableName="drug" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="drug_prescription" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
@@ -84,8 +58,6 @@
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="assigned" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="visit_oid" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="drug_id" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="drug_id" foreignColumnName="id" name="fk_drug_prescription_drug" foreignTableName="drug" foreignSchemaName=""/>
-    <ForeignKey localColumnName="visit_oid" foreignColumnName="action_oid" name="fk_drug_prescription_visit" foreignTableName="visit" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="emergency_code" type="TABLE" refreshed="true">
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="code" primaryKey="true" notNull="true"/>
@@ -94,26 +66,19 @@
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="action_oid" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="emergency_code_code" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="emergency_room_oid" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="action_oid" foreignColumnName="oid" name="fk_emergency_operation_action" foreignTableName="action" foreignSchemaName=""/>
-    <ForeignKey localColumnName="emergency_room_oid" foreignColumnName="oid" name="fk_emergency_operation_emerg_2" foreignTableName="emergency_room" foreignSchemaName=""/>
-    <ForeignKey localColumnName="emergency_code_code" foreignColumnName="code" name="fk_emergency_operation_emergen" foreignTableName="emergency_code" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="emergency_room" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="hospital_id_hospital" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="hospital_id_hospital" foreignColumnName="id_hospital" name="fk_emergency_room_hospital" foreignTableName="hospital" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="group" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="groupname" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="module_oid" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="module_oid" foreignColumnName="oid" name="fk_group_module" foreignTableName="module" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="group_module" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="group_oid" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="module_oid" primaryKey="true" notNull="true"/>
-    <ForeignKey localColumnName="group_oid" foreignColumnName="oid" name="fk_group_module_group" foreignTableName="group" foreignSchemaName=""/>
-    <ForeignKey localColumnName="module_oid" foreignColumnName="oid" name="fk_group_module_module" foreignTableName="module" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="hospital" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_hospital" primaryKey="true" notNull="true"/>
@@ -122,13 +87,6 @@
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="telephone" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="website" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="city_oid" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="city_oid" foreignColumnName="oid" name="fk_hospital_city" foreignTableName="city" foreignSchemaName=""/>
-  </Table>
-  <Table schema="" ignoreIndexes="false" name="hospital_department" type="TABLE" refreshed="true">
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_department" primaryKey="true" notNull="true"/>
-    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="name" primaryKey="false" notNull="false"/>
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="hospital_id_hospital" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="hospital_id_hospital" foreignColumnName="id_hospital" name="fk_hospital_department_hospita" foreignTableName="hospital" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="medical_specialization" type="TABLE" refreshed="true">
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="namespecialization" primaryKey="true" notNull="true"/>
@@ -144,15 +102,12 @@
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="approved" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="patient_code" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="user_cf" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="user_cf" foreignColumnName="cf" name="fk_patient_user" foreignTableName="user" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="pharmacist" type="TABLE" refreshed="true">
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="pharmacist_code" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="approved" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="pharmacy_oid" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="user_cf" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="pharmacy_oid" foreignColumnName="oid" name="fk_pharmacist_pharmacy" foreignTableName="pharmacy" foreignSchemaName=""/>
-    <ForeignKey localColumnName="user_cf" foreignColumnName="cf" name="fk_pharmacist_user" foreignTableName="user" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="pharmacy" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
@@ -161,48 +116,28 @@
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="telephone" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="website" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="city_oid" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="city_oid" foreignColumnName="oid" name="fk_pharmacy_city" foreignTableName="city" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="quantity_drug" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="quantity" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="pharmacy_oid" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="drug_id" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="drug_id" foreignColumnName="id" name="fk_quantity_drug_drug" foreignTableName="drug" foreignSchemaName=""/>
-    <ForeignKey localColumnName="pharmacy_oid" foreignColumnName="oid" name="fk_quantity_drug_pharmacy" foreignTableName="pharmacy" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="recovery" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="action_oid" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="bed_place_oid" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="action_oid" foreignColumnName="oid" name="fk_recovery_action" foreignTableName="action" foreignSchemaName=""/>
-    <ForeignKey localColumnName="bed_place_oid" foreignColumnName="oid" name="fk_recovery_bed_place" foreignTableName="bed_place" foreignSchemaName=""/>
-  </Table>
-  <Table schema="" ignoreIndexes="false" name="recovery_calendar" type="TABLE" refreshed="true">
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="calendar_oid" primaryKey="true" notNull="true"/>
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="bed_place_oid" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="bed_place_oid" foreignColumnName="oid" name="fk_recovery_calendar_bed_place" foreignTableName="bed_place" foreignSchemaName=""/>
-    <ForeignKey localColumnName="calendar_oid" foreignColumnName="oid" name="fk_recovery_calendar_calendar" foreignTableName="calendar" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="recovery_room" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="room_id_room" primaryKey="true" notNull="true"/>
-    <ForeignKey localColumnName="room_id_room" foreignColumnName="id_room" name="fk_recovery_room_room" foreignTableName="room" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="room" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_room" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="floor" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="name" primaryKey="false" notNull="false"/>
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="building_id_building" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="building_id_building" foreignColumnName="id_building" name="fk_room_building" foreignTableName="building" foreignSchemaName=""/>
-  </Table>
-  <Table schema="" ignoreIndexes="false" name="surgery_calendar" type="TABLE" refreshed="true">
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="calendar_oid" primaryKey="true" notNull="true"/>
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="surgery_room_id_room" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="calendar_oid" foreignColumnName="oid" name="fk_surgery_calendar_calendar" foreignTableName="calendar" foreignSchemaName=""/>
-    <ForeignKey localColumnName="surgery_room_id_room" foreignColumnName="room_id_room" name="fk_surgery_calendar_surgery_ro" foreignTableName="surgery_room" foreignSchemaName=""/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="hospital_id_hospital" primaryKey="false" notNull="false"/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="surgery_room" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="room_id_room" primaryKey="true" notNull="true"/>
-    <ForeignKey localColumnName="room_id_room" foreignColumnName="id_room" name="fk_surgery_room_room" foreignTableName="room" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="user" type="TABLE" refreshed="true">
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="cf" primaryKey="true" notNull="true"/>
@@ -215,50 +150,31 @@
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="address" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="telephone" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="gender" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="code" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="DATE" size="10" decimalDigits="0" name="expiration_date" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="group_oid" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="city_oid" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="city_oid_2" primaryKey="false" notNull="false"/>
-    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="code" primaryKey="false" notNull="false"/>
-    <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="DATE" size="10" decimalDigits="0" name="expiration_date" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="city_oid" foreignColumnName="oid" name="fk_user_city" foreignTableName="city" foreignSchemaName=""/>
-    <ForeignKey localColumnName="city_oid_2" foreignColumnName="oid" name="fk_user_city_2" foreignTableName="city" foreignSchemaName=""/>
-    <ForeignKey localColumnName="group_oid" foreignColumnName="oid" name="fk_user_group" foreignTableName="group" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="user_group" type="TABLE" refreshed="true">
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="user_cf" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="group_oid" primaryKey="true" notNull="true"/>
-    <ForeignKey localColumnName="group_oid" foreignColumnName="oid" name="fk_user_group_group" foreignTableName="group" foreignSchemaName=""/>
-    <ForeignKey localColumnName="user_cf" foreignColumnName="cf" name="fk_user_group_user" foreignTableName="user" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="visit" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="action_oid" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="visit_room_id_room" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="action_oid" foreignColumnName="oid" name="fk_visit_action" foreignTableName="action" foreignSchemaName=""/>
-    <ForeignKey localColumnName="visit_room_id_room" foreignColumnName="room_id_room" name="fk_visit_visit_room" foreignTableName="visit_room" foreignSchemaName=""/>
-  </Table>
-  <Table schema="" ignoreIndexes="false" name="visit_calendar" type="TABLE" refreshed="true">
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="calendar_oid" primaryKey="true" notNull="true"/>
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="visit_room_id_room" primaryKey="false" notNull="false"/>
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="approvedvisit" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="calendar_oid" foreignColumnName="oid" name="fk_visit_calendar_calendar" foreignTableName="calendar" foreignSchemaName=""/>
-    <ForeignKey localColumnName="visit_room_id_room" foreignColumnName="room_id_room" name="fk_visit_calendar_visit_room" foreignTableName="visit_room" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="visit_room" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="room_id_room" primaryKey="true" notNull="true"/>
-    <ForeignKey localColumnName="room_id_room" foreignColumnName="id_room" name="fk_visit_room_room" foreignTableName="room" foreignSchemaName=""/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="medical_specialization_namespe" primaryKey="false" notNull="false"/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="with_prescription" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="assignement_oid" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="drug_prescription_oid" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="assignement_oid" foreignColumnName="oid" name="fk_with_prescription_assigneme" foreignTableName="assignement" foreignSchemaName=""/>
-    <ForeignKey localColumnName="drug_prescription_oid" foreignColumnName="oid" name="fk_with_prescription_drug_pres" foreignTableName="drug_prescription" foreignSchemaName=""/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="without_prescription" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="assignement_oid" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="patient_patient_code" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="drug_id" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="assignement_oid" foreignColumnName="oid" name="fk_without_prescription_assign" foreignTableName="assignement" foreignSchemaName=""/>
-    <ForeignKey localColumnName="drug_id" foreignColumnName="id" name="fk_without_prescription_drug" foreignTableName="drug" foreignSchemaName=""/>
-    <ForeignKey localColumnName="patient_patient_code" foreignColumnName="patient_code" name="fk_without_prescription_patien" foreignTableName="patient" foreignSchemaName=""/>
   </Table>
 </DBMetaData>

@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="10" gr:y="0" id="mov2#mpkg2#opm1" name="RegisterDoctor">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg2#opm1#icu1" gr:x="30" gr:y="60" linkOrder="mov2#mpkg2#opm1#icu1#ln64">
+    <InputCollectorUnit id="mov2#mpkg2#opm1#icu1" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp1" name="email"/>
       <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp2" name="name"/>
       <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp3" name="surname"/>
@@ -26,6 +26,7 @@
         <LinkParameter id="mov2#mpkg2#opm1#icu1#ln58#par154" name="doctorCode_doctor_code" source="mov2#mpkg2#opm1#icu1#icp4" target="mov2#mpkg2#opm1#cru4.ent9#att33"/>
         <LinkParameter id="mov2#mpkg2#opm1#icu1#ln58#par155" name="medicalSpecialization_Medical_specialization.nameSpecialization(DoctorToMedical_specialization)" source="mov2#mpkg2#opm1#icu1#icp41" target="mov2#mpkg2#opm1#cru4.rel4#role5.ent8#att21"/>
         <LinkParameter id="mov2#mpkg2#opm1#icu1#ln58#par156" name="cf_User.cf(DoctorToUser)" source="mov2#mpkg2#opm1#icu1#icp7" target="mov2#mpkg2#opm1#cru4.rel36#role72.userOID"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln58#par376" name="hospital_Hospital.id_hospital(DoctorToHospital)" source="mov2#mpkg2#opm1#icu1#icp84" target="mov2#mpkg2#opm1#cru4.rel12#role23.ent4#att1"/>
       </Link>
       <Link id="mov2#mpkg2#opm1#icu1#ln59" name="Flow59" to="mov2#mpkg2#opm1#cru5" type="transport" validate="true" gr:bendpoints="263,86,-237,31">
         <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par157" name="address_address" source="mov2#mpkg2#opm1#icu1#icp30" target="mov2#mpkg2#opm1#cru5.User#att40"/>
@@ -47,6 +48,7 @@
         <LinkParameter id="mov2#mpkg2#opm1#icu1#ln64#par214" name="cf_KeyCondition15 [cf] [User] [Source]" source="mov2#mpkg2#opm1#icu1#icp7" target="mov2#mpkg2#opm1#cnu1#su22#kcond15.userOID"/>
         <LinkParameter id="mov2#mpkg2#opm1#icu1#ln64#par215" name="group_oid_KeyCondition16 [oid] [Group] [Target]" source="mov2#mpkg2#opm1#icu1#icp54" target="mov2#mpkg2#opm1#cnu1#su23#kcond16.groupOID"/>
       </Link>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp84" name="hospital"/>
     </InputCollectorUnit>
     <OKCollectorUnit gr:x="910" gr:y="30" id="mov2#mpkg2#opm1#okcu1" name="OK Port1"/>
     <KOCollectorUnit gr:x="910" gr:y="275" id="mov2#mpkg2#opm1#kocu1" name="KO Port1"/>
