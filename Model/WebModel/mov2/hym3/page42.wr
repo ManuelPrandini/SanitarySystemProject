@@ -1,19 +1,36 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="485" gr:y="90" id="mov2#hym3#page42" name="Visit Registration">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="460" gr:y="70" id="mov2#hym3#page42" name="Visit Registration">
   <ContentUnits>
-    <EntryUnit gr:x="25" gr:y="0" id="mov2#hym3#page42#enu19" name="Info" fieldOrder="mov2#hym3#page42#enu19#fld38 mov2#hym3#page42#enu19#fld39 mov2#hym3#page42#enu19#fld49 mov2#hym3#page42#enu19#fld58 mov2#hym3#page42#enu19#fld71 mov2#hym3#page42#enu19#sfld27" linkOrder="mov2#hym3#page42#enu19#ln110">
+    <EntryUnit gr:x="25" gr:y="0" id="mov2#hym3#page42#enu19" name="Info" fieldOrder="mov2#hym3#page42#enu19#fld38 mov2#hym3#page42#enu19#fld39 mov2#hym3#page42#enu19#fld49 mov2#hym3#page42#enu19#fld58 mov2#hym3#page42#enu19#fld1 mov2#hym3#page42#enu19#sfld27" linkOrder="mov2#hym3#page42#enu19#ln69">
       <SelectionField id="mov2#hym3#page42#enu19#sfld27" name="room" type="string" modifiable="true"/>
-      <Field id="mov2#hym3#page42#enu19#fld58" name="start_time" type="time" modifiable="true"/>
-      <Field id="mov2#hym3#page42#enu19#fld49" name="date" type="date" modifiable="true"/>
+      <Field id="mov2#hym3#page42#enu19#fld58" name="start_time" type="time" modifiable="true" validationOrder="mov2#hym3#page42#enu19#fld58#cmp4 mov2#hym3#page42#enu19#fld58#cmp3">
+        <VRules>
+          <CompareValidationRule id="mov2#hym3#page42#enu19#fld58#cmp3" name="&gt;=8 AM" predicate="gteq" value="08:00:00"/>
+          <CompareValidationRule id="mov2#hym3#page42#enu19#fld58#cmp4" name="&lt;=6 PM" predicate="lteq" value="18:00:00"/>
+        </VRules>
+      </Field>
+      <Field id="mov2#hym3#page42#enu19#fld49" name="date" type="date" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="mov2#hym3#page42#enu19#fld49#cmp2" name="onlyDatagtToday" predicate="gt" value="today()"/>
+        </VRules>
+      </Field>
       <Field id="mov2#hym3#page42#enu19#fld39" name="patient" type="string" preloaded="true"/>
       <Field id="mov2#hym3#page42#enu19#fld38" name="doctor" type="string" preloaded="true"/>
-      <Field id="mov2#hym3#page42#enu19#fld71" name="end_time" type="time" modifiable="true"/>
-      <Link id="mov2#hym3#page42#enu19#ln110" name="Flow110" to="mov2#hym3#mfu5" type="normal" validate="true">
-        <LinkParameter id="mov2#hym3#page42#enu19#ln110#par383" name="id_visit_PASSING_KeyCondition29 [oid]" sourceLinkParameter="mov2#hym3#icu10#ln100#par382" target="mov2#hym3#mfu5#su65#kcond29.ent5#att2"/>
-        <LinkParameter id="mov2#hym3#page42#enu19#ln110#par384" name="date_endDate" source="mov2#hym3#page42#enu19#fld49" target="mov2#hym3#mfu5.ent5#att23"/>
-        <LinkParameter id="mov2#hym3#page42#enu19#ln110#par385" name="end_time_endTime" source="mov2#hym3#page42#enu19#fld71" target="mov2#hym3#mfu5.ent5#att25"/>
-        <LinkParameter id="mov2#hym3#page42#enu19#ln110#par386" name="date_startDate" source="mov2#hym3#page42#enu19#fld49" target="mov2#hym3#mfu5.ent5#att22"/>
-        <LinkParameter id="mov2#hym3#page42#enu19#ln110#par387" name="start_time_startTime" source="mov2#hym3#page42#enu19#fld58" target="mov2#hym3#mfu5.ent5#att24"/>
+      <Link id="mov2#hym3#page42#enu19#ln69" name="Prenota" to="mov2#hym3#seu2" type="normal" validate="true">
+        <LinkParameter id="mov2#hym3#page42#enu19#ln69#par453" name="room_room" source="mov2#hym3#page42#enu19#sfld27" target="mov2#hym3#seu2#su5#acond18"/>
+        <LinkParameter id="mov2#hym3#page42#enu19#ln69#par469" name="date_PASSING" source="mov2#hym3#page42#enu19#fld49" passing="true"/>
+        <LinkParameter id="mov2#hym3#page42#enu19#ln69#par471" name="doctor_PASSING" source="mov2#hym3#page42#enu19#fld38" passing="true"/>
+        <LinkParameter id="mov2#hym3#page42#enu19#ln69#par476" name="id_visit_PASSING" sourceLinkParameter="mov2#hym3#icu10#oln81#par449" passing="true"/>
+        <LinkParameter id="mov2#hym3#page42#enu19#ln69#par477" name="patient_PASSING" source="mov2#hym3#page42#enu19#fld39" passing="true"/>
+        <LinkParameter id="mov2#hym3#page42#enu19#ln69#par478" name="start_time_PASSING" source="mov2#hym3#page42#enu19#fld58" passing="true"/>
+        <LinkParameter id="mov2#hym3#page42#enu19#ln69#par494" name="room_PASSING" source="mov2#hym3#page42#enu19#sfld27" passing="true"/>
+        <LinkParameter id="mov2#hym3#page42#enu19#ln69#par500" name="end_time_PASSING" source="mov2#hym3#page42#enu19#fld1" passing="true"/>
       </Link>
+      <Field id="mov2#hym3#page42#enu19#fld1" name="end_time" type="time" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="mov2#hym3#page42#enu19#fld1#cmp7" name="&gt;startTime" predicate="gt" valueField="mov2#hym3#page42#enu19#fld58"/>
+          <CompareValidationRule id="mov2#hym3#page42#enu19#fld1#cmp8" name="&lt;=6 PM" predicate="lteq" value="18:00:00"/>
+        </VRules>
+      </Field>
     </EntryUnit>
     <SelectorUnit gr:x="0" gr:y="150" id="mov2#hym3#page42#seu33" name="SelectorVisitRoom" entity="ent23">
       <Selector id="mov2#hym3#page42#seu33#su64" defaultPolicy="fill" booleanOperator="and">
@@ -29,13 +46,13 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov2#hym3#page42#enu19">
+          <layout:Link link="mov2#hym3#page42#enu19#ln69"/>
           <layout:Field field="mov2#hym3#page42#enu19#fld38"/>
           <layout:Field field="mov2#hym3#page42#enu19#fld39"/>
           <layout:Field field="mov2#hym3#page42#enu19#fld49"/>
           <layout:Field field="mov2#hym3#page42#enu19#fld58"/>
-          <layout:Field field="mov2#hym3#page42#enu19#fld71"/>
+          <layout:Field field="mov2#hym3#page42#enu19#fld1"/>
           <layout:Field field="mov2#hym3#page42#enu19#sfld27"/>
-          <layout:Link link="mov2#hym3#page42#enu19#ln110"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

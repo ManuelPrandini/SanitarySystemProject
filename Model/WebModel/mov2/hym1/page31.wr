@@ -1,10 +1,10 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page31" name="Doctor Info(no Exists)" gr:x="720" gr:y="-115">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page31" name="Doctor Info(no Exists)" gr:x="720" gr:y="-130">
   <ContentUnits>
-    <EntryUnit id="mov2#hym1#page31#enu15" name="registration form" gr:x="30" gr:y="100" fieldOrder="mov2#hym1#page31#enu15#fld31 mov2#hym1#page31#enu15#fld30 mov2#hym1#page31#enu15#fld29 mov2#hym1#page31#enu15#fld28 mov2#hym1#page31#enu15#fld27 mov2#hym1#page31#enu15#sfld6 mov2#hym1#page31#enu15#fld26 mov2#hym1#page31#enu15#fld25 mov2#hym1#page31#enu15#fld24 mov2#hym1#page31#enu15#fld23 mov2#hym1#page31#enu15#sfld5 mov2#hym1#page31#enu15#sfld4 mov2#hym1#page31#enu15#sfld8 mov2#hym1#page31#enu15#fld33 mov2#hym1#page31#enu15#sfld29" linkOrder="mov2#hym1#page31#enu15#ln63">
+    <EntryUnit id="mov2#hym1#page31#enu15" name="registration form" gr:x="30" gr:y="115" fieldOrder="mov2#hym1#page31#enu15#fld31 mov2#hym1#page31#enu15#fld30 mov2#hym1#page31#enu15#fld29 mov2#hym1#page31#enu15#fld28 mov2#hym1#page31#enu15#fld27 mov2#hym1#page31#enu15#sfld6 mov2#hym1#page31#enu15#fld26 mov2#hym1#page31#enu15#fld25 mov2#hym1#page31#enu15#fld24 mov2#hym1#page31#enu15#fld23 mov2#hym1#page31#enu15#sfld5 mov2#hym1#page31#enu15#sfld4 mov2#hym1#page31#enu15#sfld8 mov2#hym1#page31#enu15#fld33 mov2#hym1#page31#enu15#sfld29" linkOrder="mov2#hym1#page31#enu15#ln63">
       <SelectionField id="mov2#hym1#page31#enu15#sfld4" name="live in" type="string" modifiable="true">
         <VRules/>
       </SelectionField>
-      <SelectionField id="mov2#hym1#page31#enu15#sfld5" name="born in" type="string" modifiable="true" splitOutput="true">
+      <SelectionField id="mov2#hym1#page31#enu15#sfld5" name="born in" type="string" modifiable="true">
         <VRules/>
       </SelectionField>
       <Field id="mov2#hym1#page31#enu15#fld23" name="address" type="string" modifiable="true">
@@ -75,13 +75,14 @@
         <LinkParameter id="mov2#hym1#page31#enu15#ln63#par204" name="telephone_telephone" source="mov2#hym1#page31#enu15#fld24" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp32"/>
         <LinkParameter id="mov2#hym1#page31#enu15#ln63#par205" name="username_username" source="mov2#hym1#page31#enu15#fld29" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp51"/>
         <LinkParameter id="mov2#hym1#page31#enu15#ln63#par378" name="hospital_hospital" source="mov2#hym1#page31#enu15#sfld29" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp84"/>
+        <LinkParameter id="mov2#hym1#page31#enu15#ln63#par333" name="born in_cityBorn" source="mov2#hym1#page31#enu15#sfld5" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp31"/>
       </Link>
       <SelectionField id="mov2#hym1#page31#enu15#sfld8" type="string" name="medical specialization">
         <VRules/>
       </SelectionField>
       <SelectionField id="mov2#hym1#page31#enu15#sfld29" name="hospital" type="string" modifiable="true"/>
     </EntryUnit>
-    <SelectorUnit gr:x="250" gr:y="200" id="mov2#hym1#page31#seu18" name="SelectorCity" entity="ent12">
+    <SelectorUnit gr:x="250" gr:y="215" id="mov2#hym1#page31#seu18" name="SelectorCity" entity="ent12">
       <Link id="mov2#hym1#page31#seu18#ln115" name="Flow115" to="mov2#hym1#page31#enu15" type="transport" validate="true">
         <LinkParameter id="mov2#hym1#page31#seu18#ln115#par455" name="name_born in [label]" source="ent12#att39Array" target="mov2#hym1#page31#enu15#sfld5_label"/>
         <LinkParameter id="mov2#hym1#page31#seu18#ln115#par456" name="oid_born in [output]" source="ent12#att16Array" target="mov2#hym1#page31#enu15#sfld5_output"/>
@@ -90,13 +91,14 @@
       </Link>
       <SortAttribute attribute="ent12#att39" order="ascending"/>
     </SelectorUnit>
-    <SelectorUnit gr:x="0" gr:y="200" id="mov2#hym1#page31#seu16" name="SelectorMedicalSpecialization" entity="ent8">
+    <SelectorUnit gr:x="0" gr:y="215" id="mov2#hym1#page31#seu16" name="SelectorMedicalSpecialization" entity="ent8">
       <SortAttribute attribute="ent8#att21" order="ascending"/>
       <Link id="mov2#hym1#page31#seu16#ln37" name="Flow37" to="mov2#hym1#page31#enu15" type="transport" validate="true">
         <LinkParameter id="mov2#hym1#page31#seu16#ln37#par31" name="nameSpecialization_medical specialization [label]" source="ent8#att21Array" target="mov2#hym1#page31#enu15#sfld8_label"/>
+        <LinkParameter id="mov2#hym1#page31#seu16#ln37#par332" name="nameSpecialization_medical specialization [output]" source="ent8#att21Array" target="mov2#hym1#page31#enu15#sfld8_output"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit id="mov2#hym1#page31#seu32" name="SelectorHospital" gr:x="45" gr:y="0" entity="ent4">
+    <SelectorUnit id="mov2#hym1#page31#seu32" name="SelectorHospital" gr:x="40" gr:y="0" entity="ent4">
       <Link id="mov2#hym1#page31#seu32#ln102" name="Flow102" to="mov2#hym1#page31#enu15" type="transport" validate="true">
         <LinkParameter id="mov2#hym1#page31#seu32#ln102#par374" name="name_hospital [label]" source="ent4#att14Array" target="mov2#hym1#page31#enu15#sfld29_label"/>
         <LinkParameter id="mov2#hym1#page31#seu32#ln102#par375" name="id_hospital_hospital [output]" source="ent4#att1Array" target="mov2#hym1#page31#enu15#sfld29_output"/>

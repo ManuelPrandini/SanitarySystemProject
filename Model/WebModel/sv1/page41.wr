@@ -1,40 +1,41 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="30" gr:y="315" id="sv1#page41" name="Richieste di visita">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="30" gr:y="330" id="sv1#page41" name="Richieste di visita" landmark="true">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#page41#pwu12" name="Richieste dei pazienti" sortable="true" checkable="false" useCountQuery="false" entity="ent29" displayAttributes="rel11#role16.ent6#att11 rel11#role16.rel14#role28.userOID" linkOrder="sv1#page41#pwu12#ln112">
-      <Selector id="sv1#page41#pwu12#su62" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv1#page41#pwu12#su62#acond42" name="doctor" predicate="eq" booleanOperator="and" implied="false" attributes="rel3#role3.ent9#att33"/>
-        <AttributesCondition id="sv1#page41#pwu12#su62#acond44" name="startDate" predicate="empty" booleanOperator="and" implied="false" value="NULL" attributes="ent5#att22"/>
-      </Selector>
-      <Link id="sv1#page41#pwu12#ln112" name="Flow112" to="sv1#miu8" type="normal" validate="true">
-        <LinkParameter id="sv1#page41#pwu12#ln112#par426" name="VisitToDoctor.doctor_code_doctor" source="data[].rel3#role3_ent9#att33" target="sv1#miu8.mov2#hym3#icu10#icp50"/>
-        <LinkParameter id="sv1#page41#pwu12#ln112#par428" name="oid_id_visit" source="data[].ent5#att2" target="sv1#miu8.mov2#hym3#icu10#icp86"/>
-        <LinkParameter id="sv1#page41#pwu12#ln112#par430" name="VisitToPatient.patient_code_patient" source="data[].rel11#role16_ent6#att11" target="sv1#miu8.mov2#hym3#icu10#icp83"/>
-      </Link>
-    </PowerIndexUnit>
-    <GetUnit id="sv1#page41#gtu9" name="Doctor Info" gr:x="30" gr:y="265" contextParameters="UserCtxParam">
+    <GetUnit id="sv1#page41#gtu9" name="Doctor Info" gr:x="30" gr:y="250" contextParameters="UserCtxParam">
       <Link id="sv1#page41#gtu9#ln97" name="Flow78" to="sv1#page41#seu30" type="transport" validate="true">
         <LinkParameter id="sv1#page41#gtu9#ln97#par361" name="UserCtxParam.cf_cf" source="sv1#page41#gtu9.UserCtxParam" target="sv1#page41#seu30#su63#acond43"/>
       </Link>
     </GetUnit>
-    <SelectorUnit id="sv1#page41#seu30" name="doctor code" gr:x="10" gr:y="140" entity="ent9" distinctAttributes="ent9#att33 rel4#role5.ent8#att21">
+    <SelectorUnit id="sv1#page41#seu30" name="doctor code" gr:x="10" gr:y="125" entity="ent9" distinctAttributes="ent9#att33 rel4#role5.ent8#att21">
       <Selector id="sv1#page41#seu30#su63" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#page41#seu30#su63#acond43" name="cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel36#role72.userOID"/>
       </Selector>
-      <Link id="sv1#page41#seu30#ln99" name="Flow99" to="sv1#page41#pwu12" type="normal" validate="true">
-        <LinkParameter id="sv1#page41#seu30#ln99#par369" name="doctor_code_doctor" source="ent9#att33Array" target="sv1#page41#pwu12#su62#acond42"/>
-      </Link>
       <Link id="sv1#page41#seu30#ln113" name="Flow113" to="sv1#miu8" type="transport" validate="true">
         <LinkParameter id="sv1#page41#seu30#ln113#par441" name="DoctorToMedical_specialization.nameSpecialization_spec" source="rel4#role5_ent8#att21Array" target="sv1#miu8.mov2#hym3#icu10#icp85"/>
       </Link>
+      <Link id="sv1#page41#seu30#ln52" name="Flow52" to="sv1#page41#pwu1" type="transport" validate="true">
+        <LinkParameter id="sv1#page41#seu30#ln52#par444" name="doctor_code_doctor_code" source="ent9#att33Array" target="sv1#page41#pwu1#su4#acond9"/>
+      </Link>
     </SelectorUnit>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#page41#pwu1" name="Richieste visite" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att2 rel11#role16.ent6#att11 rel3#role3.ent9#att33" linkOrder="sv1#page41#pwu1#ln57">
+      <Selector id="sv1#page41#pwu1#su4" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#page41#pwu1#su4#acond9" name="doctor_code" predicate="eq" booleanOperator="or" implied="false" attributes="rel3#role3.ent9#att33"/>
+        <AttributesCondition id="sv1#page41#pwu1#su4#acond16" name="startDate" predicate="null" booleanOperator="and" implied="false" attributes="ent5#att22"/>
+      </Selector>
+      <Link id="sv1#page41#pwu1#ln57" name="Prenota visita" to="sv1#miu8" type="normal" validate="true">
+        <LinkParameter id="sv1#page41#pwu1#ln57#par445" name="VisitToDoctor.doctor_code_doctor" source="data[].rel3#role3_ent9#att33" target="sv1#miu8.mov2#hym3#icu10#icp50"/>
+        <LinkParameter id="sv1#page41#pwu1#ln57#par446" name="oid_id_visit" source="data[].ent5#att2" target="sv1#miu8.mov2#hym3#icu10#icp86"/>
+        <LinkParameter id="sv1#page41#pwu1#ln57#par447" name="VisitToPatient.patient_code_patient" source="data[].rel11#role16_ent6#att11" target="sv1#miu8.mov2#hym3#icu10#icp83"/>
+      </Link>
+    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#page41#pwu12">
+        <layout:Unit unitId="sv1#page41#pwu1">
+          <layout:Attribute attribute="ent5#att2"/>
           <layout:Attribute attribute="rel11#role16.ent6#att11"/>
-          <layout:Attribute attribute="rel11#role16.rel14#role28.userOID"/>
-          <layout:Link link="sv1#page41#pwu12#ln112"/>
+          <layout:Attribute attribute="rel3#role3.ent9#att33"/>
+          <layout:Link link="sv1#page41#pwu1#ln57"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

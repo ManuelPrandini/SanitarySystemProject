@@ -46,6 +46,7 @@
         <AttributesCondition id="sv3#area6#page20#pwu10#su49#acond35" name="Specialization" predicate="eq" booleanOperator="or" implied="false" attributes="rel4#role5.ent8#att21"/>
         <AttributesCondition id="sv3#area6#page20#pwu10#su49#acond36" name="approvedValue" predicate="eq" booleanOperator="and" implied="false" attributes="ent9#att17" value="1"/>
         <AttributesCondition id="sv3#area6#page20#pwu10#su49#acond37" name="hospital_ID" predicate="eq" booleanOperator="and" implied="false" attributes="rel12#role23.ent4#att1"/>
+        <AttributesCondition id="sv3#area6#page20#pwu10#su49#acond17" name="cf" predicate="neq" booleanOperator="and" implied="false" attributes="rel36#role72.userOID"/>
       </Selector>
       <Link id="sv3#area6#page20#pwu10#ln75" name="Procedi" to="sv3#area6#page20#enu16" type="normal" validate="true">
         <LinkParameter id="sv3#area6#page20#pwu10#ln75#par324" name="DoctorToUser.cf_Doctor CF" source="data[].rel36#role72_userOID" target="sv3#area6#page20#enu16#fld22_slot"/>
@@ -71,6 +72,9 @@
     <GetUnit gr:x="305" gr:y="5" id="sv3#area6#page20#gtu6" name="GetUser" contextParameters="UserCtxParam">
       <Link id="sv3#area6#page20#gtu6#ln80" name="Flow80" to="sv3#area6#page20#seu24" type="transport" validate="true">
         <LinkParameter id="sv3#area6#page20#gtu6#ln80#par359" name="UserCtxParam.cf_CF_Cond" source="sv3#area6#page20#gtu6.UserCtxParam" target="sv3#area6#page20#seu24#su50#acond38"/>
+      </Link>
+      <Link id="sv3#area6#page20#gtu6#ln58" name="Flow58" to="sv3#area6#page20#pwu10" type="transport" validate="true">
+        <LinkParameter id="sv3#area6#page20#gtu6#ln58#par451" name="UserCtxParam.cf_cf" source="sv3#area6#page20#gtu6.UserCtxParam" target="sv3#area6#page20#pwu10#su49#acond17"/>
       </Link>
     </GetUnit>
   </ContentUnits>

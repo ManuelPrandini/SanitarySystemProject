@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="DoctorSiteView" protected="true" homePage="sv1#page45" landmarks="sv1#lou1 sv1#page16">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="DoctorSiteView" protected="true" homePage="sv1#page45" landmarks="sv1#lou1 sv1#page16 sv1#page41">
   <OperationUnits>
     <LogoutUnit gr:x="340" gr:y="55" id="sv1#lou1" name="Logout" siteView="sv4" landmark="true"/>
     <ModuleInstanceUnit gr:x="390" gr:y="430" id="sv1#miu8" action="false" name="RegisterVisit" moduleId="mov2#hym3">

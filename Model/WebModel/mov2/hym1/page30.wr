@@ -36,7 +36,7 @@
         <LinkParameter id="mov2#hym1#page30#enu9#ln62#par186" name="surname_surname" source="mov2#hym1#page30#enu9#fld14" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp3"/>
         <LinkParameter id="mov2#hym1#page30#enu9#ln62#par187" name="telephone_telephone" source="mov2#hym1#page30#enu9#fld17" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp32"/>
         <LinkParameter id="mov2#hym1#page30#enu9#ln62#par188" name="username_username" source="mov2#hym1#page30#enu9#fld12" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp51"/>
-        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par377" name="hospital_hospital" source="mov2#hym1#page30#enu9#sfld28" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp84"/>
+        <LinkParameter id="mov2#hym1#page30#enu9#ln62#par377" name="hospital_hospital" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp84" source="mov2#hym1#page30#enu9#sfld28"/>
       </Link>
       <SelectionField id="mov2#hym1#page30#enu9#sfld7" type="string" name="medical specialization">
         <VRules>
@@ -49,12 +49,13 @@
       <SortAttribute attribute="ent8#att21" order="ascending"/>
       <Link id="mov2#hym1#page30#seu15#ln25" name="Flow25" to="mov2#hym1#page30#enu9" type="transport" validate="true">
         <LinkParameter id="mov2#hym1#page30#seu15#ln25#par27" name="nameSpecialization_medical specialization [label]" source="ent8#att21Array" target="mov2#hym1#page30#enu9#sfld7_label"/>
+        <LinkParameter id="mov2#hym1#page30#seu15#ln25#par331" name="nameSpecialization_medical specialization [output]" source="ent8#att21Array" target="mov2#hym1#page30#enu9#sfld7_output"/>
       </Link>
     </SelectorUnit>
     <SelectorUnit gr:x="10" gr:y="0" id="mov2#hym1#page30#seu31" name="SelectorHospital" entity="ent4">
       <Link id="mov2#hym1#page30#seu31#ln101" name="Flow101" to="mov2#hym1#page30#enu9" type="transport" validate="true">
-        <LinkParameter id="mov2#hym1#page30#seu31#ln101#par372" name="name_hospital [label]" source="ent4#att14Array" target="mov2#hym1#page30#enu9#sfld28_label"/>
-        <LinkParameter id="mov2#hym1#page30#seu31#ln101#par373" name="name_hospital [output]" source="ent4#att1Array" target="mov2#hym1#page30#enu9#sfld28_output"/>
+        <LinkParameter id="mov2#hym1#page30#seu31#ln101#par442" name="name_hospital [label]" source="ent4#att14Array" target="mov2#hym1#page30#enu9#sfld28_label"/>
+        <LinkParameter id="mov2#hym1#page30#seu31#ln101#par443" name="id_hospital_hospital [output]" source="ent4#att1Array" target="mov2#hym1#page30#enu9#sfld28_output"/>
       </Link>
     </SelectorUnit>
   </ContentUnits>
