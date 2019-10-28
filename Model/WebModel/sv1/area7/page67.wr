@@ -1,0 +1,40 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area7#page67" name="Men&#249; Paziente" landmark="false" gr:x="0" gr:y="180">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#area7#page67#mssu9" name="Scegli operazione" linkOrder="sv1#area7#page67#mssu9#ln131 sv1#area7#page67#mssu9#ln132 sv1#area7#page67#mssu9#ln133 sv1#area7#page67#mssu9#ln134">
+      <Link id="sv1#area7#page67#mssu9#ln131" name="Accedi cartella clinica" to="sv1#area7#page63" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv1#area7#page67#mssu9#ln132" name="Registra ricovero" to="sv1#area7#page66" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv1#area7#page67#mssu9#ln133" name="Registra intervento chirurgico" to="sv1#area7#page64" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv1#area7#page67#mssu9#ln134" name="registra visita" to="sv1#area7#page65#pwu1" type="normal" validate="true" gr:bendpoints="18,211,-212,-9">
+        <LinkParameter id="sv1#area7#page67#mssu9#ln134#par327" name="UserCtxParam.cf_PASSING_cfDottore" sourceLinkParameter="sv1#page62#dau12#ln130#par156" target="sv1#area7#page65#pwu1#su2#acond16"/>
+        <LinkParameter id="sv1#area7#page67#mssu9#ln134#par329" name="PatientToUser.cf_PASSING_cfPaziente" sourceLinkParameter="sv1#page62#dau12#ln130#par155" target="sv1#area7#page65#pwu1#su2#acond9"/>
+        <LinkParameter id="sv1#area7#page67#mssu9#ln134#par487" name="PatientToUser.cf_PASSING" sourceLinkParameter="sv1#page62#dau12#ln130#par155" passing="true"/>
+        <LinkParameter id="sv1#area7#page67#mssu9#ln134#par488" name="UserCtxParam.cf_PASSING" sourceLinkParameter="sv1#page62#dau12#ln130#par156" passing="true"/>
+        <LinkParameter id="sv1#area7#page67#mssu9#ln134#par503" name="DoctorToHospital.name_PASSING" sourceLinkParameter="sv1#page62#dau12#ln130#par493" passing="true"/>
+      </Link>
+      <Message xml:space="preserve">Scegli l'operazione da fare sul paziente</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area7#page67#mssu9">
+          <layout:Link link="sv1#area7#page67#mssu9#ln131"/>
+          <layout:Link link="sv1#area7#page67#mssu9#ln132"/>
+          <layout:Link link="sv1#area7#page67#mssu9#ln133"/>
+          <layout:Link link="sv1#area7#page67#mssu9#ln134"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

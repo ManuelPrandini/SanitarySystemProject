@@ -1,0 +1,102 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page62" name="Accedi dati paziente" landmark="true" gr:x="60" gr:y="920">
+  <ContentUnits>
+    <EntryUnit id="sv1#page62#enu18" name="Inserisci CF" linkOrder="sv1#page62#enu18#ln113" gr:x="0" gr:y="0" fieldOrder="sv1#page62#enu18#fld83">
+      <Field id="sv1#page62#enu18#fld83" name="CF" type="string" modifiable="true"/>
+      <Link id="sv1#page62#enu18#ln113" name="Cerca" to="sv1#page62#dau12" type="normal" validate="true">
+        <LinkParameter id="sv1#page62#enu18#ln113#par441" name="CF_cf" source="sv1#page62#enu18#fld83" target="sv1#page62#dau12#su61#acond52"/>
+      </Link>
+    </EntryUnit>
+    <DataUnit id="sv1#page62#dau12" name="Scheda Paziente" gr:x="140" gr:y="15" entity="ent6" displayAttributes="rel14#role28.userOID ent6#att11 rel14#role28.User#att27 rel14#role28.User#att28 rel14#role28.email rel14#role28.User#att29 rel14#role28.User#att40 rel14#role28.User#att12 ent6#att30 ent6#att31 rel14#role28.User#att41" linkOrder="sv1#page62#dau12#ln130">
+      <Selector id="sv1#page62#dau12#su61" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#page62#dau12#su61#acond52" name="cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.userOID"/>
+        <AttributesCondition id="sv1#page62#dau12#su61#acond1" name="cf!=sestesso" predicate="neq" booleanOperator="and" implied="false" attributes="rel14#role28.userOID"/>
+      </Selector>
+      <Link id="sv1#page62#dau12#ln130" name="Flow130" to="sv1#area7#page67#mssu9" type="normal" validate="true">
+        <LinkParameter id="sv1#page62#dau12#ln130#par155" name="PatientToUser.cf_PASSING" source="data.rel14#role28_userOID" passing="true"/>
+        <LinkParameter id="sv1#page62#dau12#ln130#par156" name="UserCtxParam.cf_PASSING" sourceLinkParameter="sv1#page62#gtu2#ln17#par25" passing="true"/>
+        <LinkParameter id="sv1#page62#dau12#ln130#par493" name="DoctorToHospital.name_PASSING" sourceLinkParameter="sv1#page62#seu26#ln90#par492" passing="true"/>
+      </Link>
+    </DataUnit>
+    <GetUnit gr:x="0" gr:y="125" id="sv1#page62#gtu2" name="CF" contextParameters="UserCtxParam">
+      <Link id="sv1#page62#gtu2#ln17" name="Flow17" to="sv1#page62#dau12" type="transport" validate="true">
+        <LinkParameter id="sv1#page62#gtu2#ln17#par2" name="UserCtxParam.cf_cf!=sestesso" source="sv1#page62#gtu2.UserCtxParam" target="sv1#page62#dau12#su61#acond1"/>
+        <LinkParameter id="sv1#page62#gtu2#ln17#par25" name="UserCtxParam.cf_PASSING" source="sv1#page62#gtu2.UserCtxParam" passing="true"/>
+      </Link>
+      <Link id="sv1#page62#gtu2#ln88" name="Flow88" to="sv1#page62#seu26" type="transport" validate="true">
+        <LinkParameter id="sv1#page62#gtu2#ln88#par491" name="UserCtxParam.cf_cfDoctor" source="sv1#page62#gtu2.UserCtxParam" target="sv1#page62#seu26#su31#acond41"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit gr:x="170" gr:y="175" id="sv1#page62#seu26" name="HospitalInfo" entity="ent9" distinctAttributes="rel12#role23.ent4#att14">
+      <Selector id="sv1#page62#seu26#su31" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#page62#seu26#su31#acond41" name="cfDoctor" predicate="eq" booleanOperator="or" implied="false" attributes="rel36#role72.userOID"/>
+      </Selector>
+      <Link id="sv1#page62#seu26#ln90" name="Flow90" to="sv1#page62#dau12" type="transport" validate="true">
+        <LinkParameter id="sv1#page62#seu26#ln90#par492" name="DoctorToHospital.name_PASSING" source="rel12#role23$ent4#att14Array" passing="true"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page62#enu18">
+          <layout:Field field="sv1#page62#enu18#fld83"/>
+          <layout:Link link="sv1#page62#enu18#ln113"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page62#dau12">
+          <layout:Attribute attribute="rel14#role28.userOID"/>
+          <layout:Attribute attribute="ent6#att11"/>
+          <layout:Attribute attribute="rel14#role28.User#att27"/>
+          <layout:Attribute attribute="rel14#role28.User#att28"/>
+          <layout:Attribute attribute="rel14#role28.email"/>
+          <layout:Attribute attribute="rel14#role28.User#att29"/>
+          <layout:Attribute attribute="rel14#role28.User#att40"/>
+          <layout:Attribute attribute="rel14#role28.User#att12"/>
+          <layout:Attribute attribute="ent6#att30"/>
+          <layout:Attribute attribute="ent6#att31"/>
+          <layout:Attribute attribute="rel14#role28.User#att41"/>
+          <layout:Link link="sv1#page62#dau12#ln130"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

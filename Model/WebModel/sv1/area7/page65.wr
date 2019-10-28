@@ -1,0 +1,44 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area7#page65" name="Registra Visita" landmark="true" gr:x="290" gr:y="400">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area7#page65#pwu1" name="Lista visite" sortable="true" checkable="false" useCountQuery="false" entity="ent29" displayAttributes="ent5#att22 ent5#att24 ent5#att25 rel16#role31.ent10#att50" linkOrder="sv1#area7#page65#pwu1#ln78">
+      <Selector id="sv1#area7#page65#pwu1#su2" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond9" name="cfPaziente" predicate="eq" booleanOperator="or" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
+        <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond16" name="cfDottore" predicate="eq" booleanOperator="or" implied="false" attributes="rel3#role3.rel36#role72.userOID"/>
+      </Selector>
+      <Link id="sv1#area7#page65#pwu1#ln78" name="Registra" to="sv1#area7#miu19" type="normal" validate="true">
+        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par446" name="startDate_date" source="data[].ent5#att22" target="sv1#area7#miu19.mov2#hym4#icu11#icp90"/>
+        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par447" name="endTime_end_time" source="data[].ent5#att25" target="sv1#area7#miu19.mov2#hym4#icu11#icp92"/>
+        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par452" name="startTime_start_time" source="data[].ent5#att24" target="sv1#area7#miu19.mov2#hym4#icu11#icp91"/>
+        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par475" name="oid_id_visita" source="data[].ent5#att2" target="sv1#area7#miu19.mov2#hym4#icu11#icp87"/>
+        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par483" name="VisitToVisit_Room.name_room" source="data[].rel16#role31$ent10#att50" target="sv1#area7#miu19.mov2#hym4#icu11#icp93"/>
+        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par489" name="UserCtxParam.cf_PASSING_doctor_cf" sourceLinkParameter="sv1#area7#page67#mssu9#ln134#par488" target="sv1#area7#miu19.mov2#hym4#icu11#icp88"/>
+        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par490" name="PatientToUser.cf_PASSING_patient_cf" sourceLinkParameter="sv1#area7#page67#mssu9#ln134#par487" target="sv1#area7#miu19.mov2#hym4#icu11#icp89"/>
+        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par504" name="DoctorToHospital.name_PASSING_hospital" sourceLinkParameter="sv1#area7#page67#mssu9#ln134#par503" target="sv1#area7#miu19.mov2#hym4#icu11#icp94"/>
+      </Link>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area7#page65#pwu1">
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="rel16#role31.ent10#att50"/>
+          <layout:Link link="sv1#area7#page65#pwu1#ln78"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

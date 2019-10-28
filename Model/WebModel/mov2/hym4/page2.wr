@@ -1,0 +1,77 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="385" gr:y="100" id="mov2#hym4#page2" name="Visit Info">
+  <ContentUnits>
+    <EntryUnit gr:x="5" gr:y="0" id="mov2#hym4#page2#enu2" name="Registrazione visita" fieldOrder="mov2#hym4#page2#enu2#fld99 mov2#hym4#page2#enu2#fld36 mov2#hym4#page2#enu2#fld37 mov2#hym4#page2#enu2#fld71 mov2#hym4#page2#enu2#fld90 mov2#hym4#page2#enu2#fld91 mov2#hym4#page2#enu2#fld92 mov2#hym4#page2#enu2#fld93 mov2#hym4#page2#enu2#fld100 mov2#hym4#page2#enu2#fld101" linkOrder="mov2#hym4#page2#enu2#ln92">
+      <Field id="mov2#hym4#page2#enu2#fld37" name="doctor_cf" type="string" preloaded="true"/>
+      <Field id="mov2#hym4#page2#enu2#fld36" name="patient_cf" type="string" preloaded="true"/>
+      <Field id="mov2#hym4#page2#enu2#fld93" name="description" type="string" modifiable="true"/>
+      <Field id="mov2#hym4#page2#enu2#fld92" name="title" type="string" modifiable="true"/>
+      <Field id="mov2#hym4#page2#enu2#fld91" name="end_time" type="time" preloaded="true" modifiable="true"/>
+      <Field id="mov2#hym4#page2#enu2#fld90" name="start_time" type="time" preloaded="true"/>
+      <Field id="mov2#hym4#page2#enu2#fld71" name="date" type="date" preloaded="true"/>
+      <Field id="mov2#hym4#page2#enu2#fld99" name="id_visit" type="string" preloaded="true"/>
+      <Field id="mov2#hym4#page2#enu2#fld101" name="hospital" type="string" preloaded="true"/>
+      <Field id="mov2#hym4#page2#enu2#fld100" name="room" type="string" preloaded="true"/>
+      <Link id="mov2#hym4#page2#enu2#ln92" name="aggiungi prescrizione" to="mov2#hym4#page16#enu17" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page2#enu2#ln92#par507" name="id_visit_id_visit" source="mov2#hym4#page2#enu2#fld99" target="mov2#hym4#page16#enu17#fld104_slot"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym4#page2#enu2">
+          <layout:Field field="mov2#hym4#page2#enu2#fld99"/>
+          <layout:Field field="mov2#hym4#page2#enu2#fld36"/>
+          <layout:Field field="mov2#hym4#page2#enu2#fld37"/>
+          <layout:Field field="mov2#hym4#page2#enu2#fld71"/>
+          <layout:Field field="mov2#hym4#page2#enu2#fld90"/>
+          <layout:Field field="mov2#hym4#page2#enu2#fld91"/>
+          <layout:Field field="mov2#hym4#page2#enu2#fld92"/>
+          <layout:Field field="mov2#hym4#page2#enu2#fld93"/>
+          <layout:Field field="mov2#hym4#page2#enu2#fld100"/>
+          <layout:Field field="mov2#hym4#page2#enu2#fld101"/>
+          <layout:Link link="mov2#hym4#page2#enu2#ln92"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

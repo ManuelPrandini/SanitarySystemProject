@@ -1,0 +1,5 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1#area7" name="Info Paziente" defaultPage="sv1#area7#page67" landmarks="sv1#area7#page63 sv1#area7#page66 sv1#area7#page64 sv1#area7#page65" landmark="false" gr:x="515" gr:y="850">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="650" gr:y="455" id="sv1#area7#miu19" action="false" moduleId="mov2#hym4"/>
+  </OperationUnits>
+</Area>

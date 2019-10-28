@@ -1,0 +1,41 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="955" gr:y="320" id="mov2#hym4" name="VisitConclusion">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="70" gr:y="70" id="mov2#hym4#icu11" linkOrder="mov2#hym4#icu11#ln97">
+      <InputCollectorParameter id="mov2#hym4#icu11#icp89" name="patient_cf"/>
+      <InputCollectorParameter id="mov2#hym4#icu11#icp88" name="doctor_cf"/>
+      <InputCollectorParameter id="mov2#hym4#icu11#icp87" name="id_visita"/>
+      <OKLink id="mov2#hym4#icu11#oln12" name="OKFlow12" to="mov2#hym4#page2#enu2">
+        <LinkParameter id="mov2#hym4#icu11#oln12#par334" name="doctor_cf_doctor_cf" source="mov2#hym4#icu11#icp88" target="mov2#hym4#page2#enu2#fld37_slot"/>
+        <LinkParameter id="mov2#hym4#icu11#oln12#par361" name="patient_cf_patient_cf" source="mov2#hym4#icu11#icp89" target="mov2#hym4#page2#enu2#fld36_slot"/>
+        <LinkParameter id="mov2#hym4#icu11#oln12#par369" name="date_date" source="mov2#hym4#icu11#icp90" target="mov2#hym4#page2#enu2#fld71_slot"/>
+        <LinkParameter id="mov2#hym4#icu11#oln12#par370" name="end_time_end_time" source="mov2#hym4#icu11#icp92" target="mov2#hym4#page2#enu2#fld91_slot"/>
+        <LinkParameter id="mov2#hym4#icu11#oln12#par371" name="start_time_start_time" source="mov2#hym4#icu11#icp91" target="mov2#hym4#page2#enu2#fld90_slot"/>
+        <LinkParameter id="mov2#hym4#icu11#oln12#par372" name="id_visita_id_visit" source="mov2#hym4#icu11#icp87" target="mov2#hym4#page2#enu2#fld99_slot"/>
+        <LinkParameter id="mov2#hym4#icu11#oln12#par444" name="hospital_hospital" source="mov2#hym4#icu11#icp94" target="mov2#hym4#page2#enu2#fld101_slot"/>
+        <LinkParameter id="mov2#hym4#icu11#oln12#par445" name="room_room" source="mov2#hym4#icu11#icp93" target="mov2#hym4#page2#enu2#fld100_slot"/>
+      </OKLink>
+      <InputCollectorParameter id="mov2#hym4#icu11#icp92" name="end_time"/>
+      <InputCollectorParameter id="mov2#hym4#icu11#icp91" name="start_time"/>
+      <InputCollectorParameter id="mov2#hym4#icu11#icp90" name="date"/>
+      <InputCollectorParameter id="mov2#hym4#icu11#icp94" name="hospital"/>
+      <InputCollectorParameter id="mov2#hym4#icu11#icp93" name="room"/>
+      <Link id="mov2#hym4#icu11#ln97" name="Flow97" to="mov2#hym4#page28#mssu13" type="transport" validate="true" gr:bendpoints="13,295,-517,70;70,509,-460,284;723,494,193,269;713,229,183,4">
+        <LinkParameter id="mov2#hym4#icu11#ln97#par543" name="date_PASSING" source="mov2#hym4#icu11#icp90" passing="true"/>
+        <LinkParameter id="mov2#hym4#icu11#ln97#par544" name="doctor_cf_PASSING" source="mov2#hym4#icu11#icp88" passing="true"/>
+        <LinkParameter id="mov2#hym4#icu11#ln97#par545" name="end_time_PASSING" source="mov2#hym4#icu11#icp92" passing="true"/>
+        <LinkParameter id="mov2#hym4#icu11#ln97#par546" name="hospital_PASSING" source="mov2#hym4#icu11#icp94" passing="true"/>
+        <LinkParameter id="mov2#hym4#icu11#ln97#par547" name="id_visita_PASSING" source="mov2#hym4#icu11#icp87" passing="true"/>
+        <LinkParameter id="mov2#hym4#icu11#ln97#par548" name="patient_cf_PASSING" source="mov2#hym4#icu11#icp89" passing="true"/>
+        <LinkParameter id="mov2#hym4#icu11#ln97#par549" name="room_PASSING" source="mov2#hym4#icu11#icp93" passing="true"/>
+        <LinkParameter id="mov2#hym4#icu11#ln97#par550" name="start_time_PASSING" source="mov2#hym4#icu11#icp91" passing="true"/>
+      </Link>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="965" gr:y="95" id="mov2#hym4#okcu18" name="OK Port18"/>
+    <KOCollectorUnit gr:x="965" gr:y="245" id="mov2#hym4#kocu8" name="KO Port8"/>
+    <ModuleInstanceUnit gr:x="600" gr:y="480" id="mov2#hym4#miu21" action="true" moduleId="mov2#mpkg2#opm10">
+      <OKLink id="mov2#hym4#miu21#oln99" name="OKFlow99" to="mov2#hym4#page28#mssu13">
+        <LinkParameter id="mov2#hym4#miu21#oln99#par540" name="id_visit_PASSING" source="mov2#mpkg2#opm10#okcu19#ocp1" passing="true"/>
+      </OKLink>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</HybridModule>

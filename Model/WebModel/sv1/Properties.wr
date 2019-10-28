@@ -1,9 +1,9 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="DoctorSiteView" protected="true" homePage="sv1#page45" landmarks="sv1#lou1 sv1#page16 sv1#page41">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="DoctorSiteView" protected="true" landmarks="sv1#lou8 sv1#page58 sv1#page62 sv1#page60" linkVisibilityPolicy="hide" homePage="sv1#page54">
   <OperationUnits>
-    <LogoutUnit gr:x="340" gr:y="55" id="sv1#lou1" name="Logout" siteView="sv4" landmark="true"/>
-    <ModuleInstanceUnit gr:x="390" gr:y="430" id="sv1#miu8" action="false" name="RegisterVisit" moduleId="mov2#hym3">
-      <OKLink id="sv1#miu8#oln86" name="OKFlow86" to="sv1#page43" automaticCoupling="true"/>
-      <KOLink id="sv1#miu8#kln44" name="KOFlow44" to="sv1#page44" automaticCoupling="true"/>
+    <LogoutUnit id="sv1#lou8" name="Logout" landmark="true" gr:x="358" gr:y="286" siteView="sv4"/>
+    <ModuleInstanceUnit id="sv1#miu15" name="RegisterVisit" gr:x="440" gr:y="560" action="false" moduleId="mov2#hym3">
+      <OKLink id="sv1#miu15#oln86" name="OKFlow86" to="sv1#page61" automaticCoupling="true"/>
+      <KOLink id="sv1#miu15#kln44" name="KOFlow44" to="sv1#page59" automaticCoupling="true"/>
     </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>

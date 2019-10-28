@@ -1,0 +1,41 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym4#page28" name="Torna a visita/ Aggiungi prescrizione" gr:x="625" gr:y="325">
+  <ContentUnits>
+    <MultiMessageUnit id="mov2#hym4#page28#mssu13" name="Scegli operazione" gr:x="0" gr:y="0" linkOrder="mov2#hym4#page28#mssu13#ln95 mov2#hym4#page28#mssu13#ln96">
+      <Message xml:space="preserve">.</Message>
+      <Link id="mov2#hym4#page28#mssu13#ln95" name="Nuova prescrizione" to="mov2#hym4#page16#enu17" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page28#mssu13#ln95#par541" name="id_visit_PASSING_id_visit" sourceLinkParameter="mov2#hym4#miu21#oln99#par540" target="mov2#hym4#page16#enu17#fld104_slot"/>
+      </Link>
+      <Link id="mov2#hym4#page28#mssu13#ln96" name="Torna a visita" to="mov2#hym4#page2#enu2" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page28#mssu13#ln96#par542" name="id_visit_PASSING_id_visit" sourceLinkParameter="mov2#hym4#miu21#oln99#par540" target="mov2#hym4#page2#enu2#fld99_slot"/>
+        <LinkParameter id="mov2#hym4#page28#mssu13#ln96#par551" name="date_PASSING_date" sourceLinkParameter="mov2#hym4#icu11#ln97#par543" target="mov2#hym4#page2#enu2#fld71_slot"/>
+        <LinkParameter id="mov2#hym4#page28#mssu13#ln96#par552" name="doctor_cf_PASSING_doctor_cf" sourceLinkParameter="mov2#hym4#icu11#ln97#par544" target="mov2#hym4#page2#enu2#fld37_slot"/>
+        <LinkParameter id="mov2#hym4#page28#mssu13#ln96#par553" name="end_time_PASSING_end_time" sourceLinkParameter="mov2#hym4#icu11#ln97#par545" target="mov2#hym4#page2#enu2#fld91_slot"/>
+        <LinkParameter id="mov2#hym4#page28#mssu13#ln96#par554" name="hospital_PASSING_hospital" sourceLinkParameter="mov2#hym4#icu11#ln97#par546" target="mov2#hym4#page2#enu2#fld101_slot"/>
+        <LinkParameter id="mov2#hym4#page28#mssu13#ln96#par555" name="patient_cf_PASSING_patient_cf" sourceLinkParameter="mov2#hym4#icu11#ln97#par548" target="mov2#hym4#page2#enu2#fld36_slot"/>
+        <LinkParameter id="mov2#hym4#page28#mssu13#ln96#par556" name="room_PASSING_room" sourceLinkParameter="mov2#hym4#icu11#ln97#par549" target="mov2#hym4#page2#enu2#fld100_slot"/>
+        <LinkParameter id="mov2#hym4#page28#mssu13#ln96#par557" name="start_time_PASSING_start_time" sourceLinkParameter="mov2#hym4#icu11#ln97#par550" target="mov2#hym4#page2#enu2#fld90_slot"/>
+      </Link>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym4#page28#mssu13">
+          <layout:Link link="mov2#hym4#page28#mssu13#ln95"/>
+          <layout:Link link="mov2#hym4#page28#mssu13#ln96"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
