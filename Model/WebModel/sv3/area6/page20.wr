@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area6#page20" name="Form di prenotazione">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area6#page20" name="Prenota visita" landmark="true">
   <ContentUnits>
     <EntryUnit gr:x="55" gr:y="25" id="sv3#area6#page20#enu6" name="Search City" linkOrder="sv3#area6#page20#enu6#ln67">
       <SelectionField id="sv3#area6#page20#enu6#sfld13" type="string" name="City"/>

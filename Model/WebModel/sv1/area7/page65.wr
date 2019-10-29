@@ -2,8 +2,9 @@
   <ContentUnits>
     <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area7#page65#pwu1" name="Lista visite" sortable="true" checkable="false" useCountQuery="false" entity="ent29" displayAttributes="ent5#att22 ent5#att24 ent5#att25 rel16#role31.ent10#att50" linkOrder="sv1#area7#page65#pwu1#ln78">
       <Selector id="sv1#area7#page65#pwu1#su2" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond9" name="cfPaziente" predicate="eq" booleanOperator="or" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
-        <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond16" name="cfDottore" predicate="eq" booleanOperator="or" implied="false" attributes="rel3#role3.rel36#role72.userOID"/>
+        <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond9" name="cfPaziente" predicate="eq" booleanOperator="and" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
+        <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond16" name="cfDottore" predicate="eq" booleanOperator="and" implied="false" attributes="rel3#role3.rel36#role72.userOID"/>
+        <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond46" name="startDateIsNull" predicate="notNull" booleanOperator="and" implied="false" attributes="ent5#att22"/>
       </Selector>
       <Link id="sv1#area7#page65#pwu1#ln78" name="Registra" to="sv1#area7#miu19" type="normal" validate="true">
         <LinkParameter id="sv1#area7#page65#pwu1#ln78#par446" name="startDate_date" source="data[].ent5#att22" target="sv1#area7#miu19.mov2#hym4#icu11#icp90"/>

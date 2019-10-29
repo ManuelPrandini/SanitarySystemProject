@@ -5,12 +5,13 @@
         <LinkParameter id="sv1#page60#gtu11#ln103#par385" name="UserCtxParam.cf_cf" source="sv1#page60#gtu11.UserCtxParam" target="sv1#page60#seu25#su59#acond49"/>
       </Link>
     </GetUnit>
-    <SelectorUnit id="sv1#page60#seu25" name="doctor code" gr:x="10" gr:y="125" entity="ent9" distinctAttributes="ent9#att33 rel4#role5.ent8#att21">
+    <SelectorUnit id="sv1#page60#seu25" name="doctor code" gr:x="10" gr:y="125" entity="ent9" distinctAttributes="ent9#att33 rel4#role5.ent8#att21 rel12#role23.ent4#att1">
       <Selector id="sv1#page60#seu25#su59" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#page60#seu25#su59#acond49" name="cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel36#role72.userOID"/>
       </Selector>
       <Link id="sv1#page60#seu25#ln104" name="Flow113" to="sv1#miu15" type="transport" validate="true">
         <LinkParameter id="sv1#page60#seu25#ln104#par386" name="DoctorToMedical_specialization.nameSpecialization_spec" source="rel4#role5_ent8#att21Array" target="sv1#miu15.mov2#hym3#icu10#icp85"/>
+        <LinkParameter id="sv1#page60#seu25#ln104#par570" name="DoctorToHospital.id_hospital_hospital" source="rel12#role23_ent4#att1Array" target="sv1#miu15.mov2#hym3#icu10#icp99"/>
       </Link>
       <Link id="sv1#page60#seu25#ln110" name="Flow52" to="sv1#page60#pwu11" type="transport" validate="true">
         <LinkParameter id="sv1#page60#seu25#ln110#par387" name="doctor_code_doctor_code" source="ent9#att33Array" target="sv1#page60#pwu11#su60#acond50"/>
@@ -18,7 +19,7 @@
     </SelectorUnit>
     <PowerIndexUnit id="sv1#page60#pwu11" name="Richieste visite" linkOrder="sv1#page60#pwu11#ln112" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att2 rel11#role16.ent6#att11 rel3#role3.ent9#att33">
       <Selector id="sv1#page60#pwu11#su60" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv1#page60#pwu11#su60#acond50" name="doctor_code" predicate="eq" booleanOperator="or" implied="false" attributes="rel3#role3.ent9#att33"/>
+        <AttributesCondition id="sv1#page60#pwu11#su60#acond50" name="doctor_code" predicate="eq" booleanOperator="and" implied="false" attributes="rel3#role3.ent9#att33"/>
         <AttributesCondition id="sv1#page60#pwu11#su60#acond51" name="startDate" predicate="null" booleanOperator="and" implied="false" attributes="ent5#att22"/>
       </Selector>
       <Link id="sv1#page60#pwu11#ln112" name="Prenota visita" to="sv1#miu15" type="normal" validate="true">

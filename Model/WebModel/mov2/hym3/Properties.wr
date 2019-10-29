@@ -6,6 +6,7 @@
       <InputCollectorParameter id="mov2#hym3#icu10#icp85" name="spec"/>
       <Link id="mov2#hym3#icu10#ln105" name="Flow105" to="mov2#hym3#page42#seu33" type="transport" validate="true">
         <LinkParameter id="mov2#hym3#icu10#ln105#par379" name="spec_medical_spec" source="mov2#hym3#icu10#icp85" target="mov2#hym3#page42#seu33#su64#acond45"/>
+        <LinkParameter id="mov2#hym3#icu10#ln105#par569" name="hospital_hospital" source="mov2#hym3#icu10#icp99" target="mov2#hym3#page42#seu33#su64#acond44"/>
       </Link>
       <InputCollectorParameter id="mov2#hym3#icu10#icp86" name="id_visit"/>
       <OKLink id="mov2#hym3#icu10#oln81" name="Flow100" to="mov2#hym3#page42#enu19">
@@ -13,6 +14,7 @@
         <LinkParameter id="mov2#hym3#icu10#oln81#par449" name="id_visit_PASSING" source="mov2#hym3#icu10#icp86" passing="true"/>
         <LinkParameter id="mov2#hym3#icu10#oln81#par450" name="patient_patient" source="mov2#hym3#icu10#icp83" target="mov2#hym3#page42#enu19#fld39_slot"/>
       </OKLink>
+      <InputCollectorParameter id="mov2#hym3#icu10#icp99" name="hospital"/>
     </InputCollectorUnit>
     <OKCollectorUnit gr:x="1465" gr:y="80" id="mov2#hym3#okcu17" name="OK Port17"/>
     <KOCollectorUnit gr:x="1465" gr:y="230" id="mov2#hym3#kocu19" name="KO Port19"/>
@@ -20,7 +22,7 @@
       <Selector id="mov2#hym3#seu2#su5" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#hym3#seu2#su5#acond18" name="room" predicate="eq" booleanOperator="and" implied="false" attributes="rel16#role31.ent10#att5"/>
         <AttributesCondition id="mov2#hym3#seu2#su5#acond19" name="startDate" predicate="eq" booleanOperator="and" implied="false" attributes="ent5#att22"/>
-        <AttributesCondition id="mov2#hym3#seu2#su5#acond39" name="startTime" predicate="lt" booleanOperator="and" implied="false" attributes="ent5#att24"/>
+        <AttributesCondition id="mov2#hym3#seu2#su5#acond39" name="startTime" predicate="lteq" booleanOperator="and" implied="false" attributes="ent5#att24"/>
         <AttributesCondition id="mov2#hym3#seu2#su5#acond40" name="endTime" predicate="gt" booleanOperator="and" implied="false" attributes="ent5#att25"/>
       </Selector>
       <OKLink id="mov2#hym3#seu2#oln83" name="OKFlow83" to="mov2#hym3#inn2">
@@ -47,7 +49,15 @@
         <LinkParameter id="mov2#hym3#inn2#kln41#par516" name="date_PASSING_startDate" sourceLinkParameter="mov2#hym3#seu2#oln83#par481" target="mov2#hym3#mfu10.ent5#att22"/>
         <LinkParameter id="mov2#hym3#inn2#kln41#par517" name="start_time_PASSING_startTime" sourceLinkParameter="mov2#hym3#seu2#oln83#par486" target="mov2#hym3#mfu10.ent5#att24"/>
       </KOLink>
-      <OKLink id="mov2#hym3#inn2#oln88" name="OKFlow88" to="mov2#hym3#page1#mssu8" automaticCoupling="true"/>
+      <OKLink id="mov2#hym3#inn2#oln88" name="OKFlow88" to="mov2#hym3#page1#mssu8">
+        <LinkParameter id="mov2#hym3#inn2#oln88#par551" name="date_PASSING" sourceLinkParameter="mov2#hym3#seu2#oln83#par481" passing="true"/>
+        <LinkParameter id="mov2#hym3#inn2#oln88#par552" name="doctor_PASSING" sourceLinkParameter="mov2#hym3#seu2#oln83#par482" passing="true"/>
+        <LinkParameter id="mov2#hym3#inn2#oln88#par553" name="end_time_PASSING" sourceLinkParameter="mov2#hym3#seu2#oln83#par501" passing="true"/>
+        <LinkParameter id="mov2#hym3#inn2#oln88#par554" name="id_visit_PASSING" sourceLinkParameter="mov2#hym3#seu2#oln83#par484" passing="true"/>
+        <LinkParameter id="mov2#hym3#inn2#oln88#par555" name="patient_PASSING" sourceLinkParameter="mov2#hym3#seu2#oln83#par485" passing="true"/>
+        <LinkParameter id="mov2#hym3#inn2#oln88#par556" name="room_PASSING" sourceLinkParameter="mov2#hym3#seu2#oln83#par495" passing="true"/>
+        <LinkParameter id="mov2#hym3#inn2#oln88#par557" name="start_time_PASSING" sourceLinkParameter="mov2#hym3#seu2#oln83#par486" passing="true"/>
+      </OKLink>
     </IsNotNullUnit>
     <ModifyUnit id="mov2#hym3#mfu10" entity="ent29" gr:x="1195" gr:y="275" name="UpdateVisit">
       <Selector id="mov2#hym3#mfu10#su16" defaultPolicy="fill" booleanOperator="and">

@@ -1,0 +1,34 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="530" id="sv3#area6#page33" name="Calendario visite" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#area6#page33#pwu2" name="VisiteInProgramma" sortable="true" checkable="false" useCountQuery="false" entity="ent29" displayAttributes="ent5#att22 ent5#att24 rel16#role31.ent10#att50 rel16#role31.rel37#role74.ent4#att14 rel3#role3.rel36#role72.userOID">
+      <Selector id="sv3#area6#page33#pwu2#su46" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area6#page33#pwu2#su46#acond47" name="titleIsNull" predicate="null" booleanOperator="and" implied="false" attributes="ent5#att3"/>
+        <AttributesCondition id="sv3#area6#page33#pwu2#su46#acond48" name="startDateNotNull" predicate="notNull" booleanOperator="and" implied="false" attributes="ent5#att22"/>
+      </Selector>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area6#page33#pwu2">
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="rel16#role31.ent10#att50"/>
+          <layout:Attribute attribute="rel16#role31.rel37#role74.ent4#att14"/>
+          <layout:Attribute attribute="rel3#role3.rel36#role72.userOID"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

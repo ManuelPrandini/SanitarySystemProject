@@ -1,7 +1,15 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="835" gr:y="75" id="mov2#hym3#page1" name="Errore">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym3#page1#mssu8" name="Sala gi&#224; occupata" linkOrder="mov2#hym3#page1#mssu8#ln76">
-      <Link id="mov2#hym3#page1#mssu8#ln76" name="Riprova" to="mov2#hym3#page42#enu19" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="mov2#hym3#page1#mssu8#ln76" name="Riprova" to="mov2#hym3#page42#enu19" type="normal" validate="true">
+        <LinkParameter id="mov2#hym3#page1#mssu8#ln76#par559" name="date_PASSING" sourceLinkParameter="mov2#hym3#inn2#oln88#par551" passing="true"/>
+        <LinkParameter id="mov2#hym3#page1#mssu8#ln76#par560" name="doctor_PASSING" sourceLinkParameter="mov2#hym3#inn2#oln88#par552" passing="true"/>
+        <LinkParameter id="mov2#hym3#page1#mssu8#ln76#par561" name="end_time_PASSING" sourceLinkParameter="mov2#hym3#inn2#oln88#par553" passing="true"/>
+        <LinkParameter id="mov2#hym3#page1#mssu8#ln76#par562" name="id_visit_PASSING" sourceLinkParameter="mov2#hym3#inn2#oln88#par554" passing="true"/>
+        <LinkParameter id="mov2#hym3#page1#mssu8#ln76#par563" name="patient_PASSING" sourceLinkParameter="mov2#hym3#inn2#oln88#par555" passing="true"/>
+        <LinkParameter id="mov2#hym3#page1#mssu8#ln76#par564" name="room_PASSING" sourceLinkParameter="mov2#hym3#inn2#oln88#par556" passing="true"/>
+        <LinkParameter id="mov2#hym3#page1#mssu8#ln76#par565" name="start_time_PASSING" sourceLinkParameter="mov2#hym3#inn2#oln88#par557" passing="true"/>
+      </Link>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

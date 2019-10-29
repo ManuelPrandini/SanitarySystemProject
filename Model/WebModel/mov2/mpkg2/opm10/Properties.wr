@@ -14,8 +14,10 @@
         <LinkParameter id="mov2#mpkg2#opm10#icu20#oln84#par525" name="quantity_PASSING" source="mov2#mpkg2#opm10#icu20#icp96" passing="true"/>
       </OKLink>
     </InputCollectorUnit>
-    <KOCollectorUnit gr:x="795" gr:y="205" id="mov2#mpkg2#opm10#kocu20" name="KO Port20"/>
-    <OKCollectorUnit gr:x="795" gr:y="35" id="mov2#mpkg2#opm10#okcu19" name="OK Port19">
+    <KOCollectorUnit gr:x="1005" gr:y="215" id="mov2#mpkg2#opm10#kocu20" name="KO Port20">
+      <OutputCollectorParameter id="mov2#mpkg2#opm10#kocu20#ocp23" name="id_visit"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit gr:x="1005" gr:y="40" id="mov2#mpkg2#opm10#okcu19" name="OK Port19">
       <OutputCollectorParameter id="mov2#mpkg2#opm10#okcu19#ocp1" name="id_visit"/>
     </OKCollectorUnit>
     <CreateUnit gr:x="385" gr:y="85" id="mov2#mpkg2#opm10#cru8" name="AddDrugPrescription" entity="ent36">
@@ -39,7 +41,10 @@
       </OKLink>
     </SelectorUnit>
     <IsNotNullUnit gr:x="605" gr:y="260" id="mov2#mpkg2#opm10#inn16" name="IfExists">
-      <OKLink id="mov2#mpkg2#opm10#inn16#oln98" name="OKFlow98" to="mov2#mpkg2#opm10#kocu20" automaticCoupling="true"/>
+      <OKLink id="mov2#mpkg2#opm10#inn16#oln98" name="OKFlow98" to="mov2#mpkg2#opm10#kocu20">
+        <LinkParameter id="mov2#mpkg2#opm10#inn16#oln98#par568" name="id_visit_PASSING" sourceLinkParameter="mov2#mpkg2#opm10#seu28#oln93#par528" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm10#inn16#oln98#par571" name="id_visit_PASSING_id_visit" sourceLinkParameter="mov2#mpkg2#opm10#seu28#oln93#par528" target="mov2#mpkg2#opm10#kocu20#ocp23"/>
+      </OKLink>
       <KOLink id="mov2#mpkg2#opm10#inn16#kln40" name="KOFlow40" to="mov2#mpkg2#opm10#cru8">
         <LinkParameter id="mov2#mpkg2#opm10#inn16#kln40#par530" name="description_PASSING_description" sourceLinkParameter="mov2#mpkg2#opm10#seu28#oln93#par526" target="mov2#mpkg2#opm10#cru8.ent36#att80"/>
         <LinkParameter id="mov2#mpkg2#opm10#inn16#kln40#par531" name="id_drug_PASSING_Drug.id(Drug_PrescriptionToDrug)" sourceLinkParameter="mov2#mpkg2#opm10#seu28#oln93#par527" target="mov2#mpkg2#opm10#cru8.rel31#role62.ent2#att6"/>

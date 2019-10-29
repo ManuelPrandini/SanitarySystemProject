@@ -1,0 +1,30 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="660" gr:y="430" id="mov2#hym4#page29" name="Errore!">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page29#mssu15" name="Medicina gi&#224; prescritta" linkOrder="mov2#hym4#page29#mssu15#ln89">
+      <Message xml:space="preserve">Attenzione! hai gi&#224; prescritto per questa visita questo tipo di medicina</Message>
+      <Link id="mov2#hym4#page29#mssu15#ln89" name="Torna a prescrizione" to="mov2#hym4#page16#enu17" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page29#mssu15#ln89#par573" name="id_visit_PASSING_id_visit" sourceLinkParameter="mov2#hym4#miu21#kln52#par572" target="mov2#hym4#page16#enu17#fld104_slot"/>
+      </Link>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym4#page29#mssu15">
+          <layout:Link link="mov2#hym4#page29#mssu15#ln89"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
