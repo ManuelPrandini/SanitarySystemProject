@@ -1,0 +1,24 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="760" gr:y="400" id="mov2#hym5" name="Cartella Clinica" landmarks="mov2#hym5#page40">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="30" gr:y="250" id="mov2#hym5#icu24">
+      <InputCollectorParameter id="mov2#hym5#icu24#icp102" name="PatientCF"/>
+      <OKLink id="mov2#hym5#icu24#oln122" name="OKFlow122" to="mov2#hym5#page40#enu21">
+        <LinkParameter id="mov2#hym5#icu24#oln122#par581" name="PatientCF_Patient" source="mov2#hym5#icu24#icp102" target="mov2#hym5#page40#enu21#fld111_slot"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <SwitchUnit gr:x="520" gr:y="795" id="mov2#hym5#switch9" name="Which choice">
+      <Case value="Visite"/>
+      <Case value="Ricoveri"/>
+      <Case value="ProntoSoccorso"/>
+      <Case value="Interventi"/>
+      <OKLink id="mov2#hym5#switch9#oln127" name="OKFlow127" to="mov2#hym5#page40#pwu15" gr:bendpoints="0,-373,-145,137;0,-511,-145,-1" code="Visite">
+        <LinkParameter id="mov2#hym5#switch9#oln127#par588" name="Patient_PASSING_cfPaziente" sourceLinkParameter="mov2#hym5#page40#enu21#ln128#par585" target="mov2#hym5#page40#pwu15#su56#acond69"/>
+        <LinkParameter id="mov2#hym5#switch9#oln127#par589" name="EndDate_PASSING_EndDate" sourceLinkParameter="mov2#hym5#page40#enu21#ln128#par584" target="mov2#hym5#page40#pwu15#su56#acond72"/>
+        <LinkParameter id="mov2#hym5#switch9#oln127#par590" name="StartDate_PASSING_StartDate" sourceLinkParameter="mov2#hym5#page40#enu21#ln128#par586" target="mov2#hym5#page40#pwu15#su56#acond71"/>
+      </OKLink>
+      <OKLink id="mov2#hym5#switch9#oln131" name="OKFlow131" to="mov2#hym5#page40#pwu16" automaticCoupling="true" gr:bendpoints="40,-348,-105,12" code="Ricoveri"/>
+      <OKLink id="mov2#hym5#switch9#oln132" name="OKFlow132" to="mov2#hym5#page40#pwu17" automaticCoupling="true" gr:bendpoints="57,-221,-88,9" code="ProntoSoccorso"/>
+      <OKLink id="mov2#hym5#switch9#oln133" name="OKFlow133" to="mov2#hym5#page40#pwu18" automaticCoupling="true" code="Interventi"/>
+    </SwitchUnit>
+  </OperationUnits>
+</HybridModule>

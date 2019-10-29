@@ -432,5 +432,6 @@
       <db:JoinColumn attribute="ent10#att5" name="room_id_room"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="hospital" type="MySQL" url="jdbc:mysql://localhost:3306/hospital" username="root" cryptedPassword="true" password="cm9vdA=="/>
+  <db:Database id="db1" name="hospital" type="MySQL" url="jdbc:mysql://localhost:3306/hospital" username="root" cryptedPassword="true" password="cm9vdA==">
+  </db:Database>
 </DataModel>

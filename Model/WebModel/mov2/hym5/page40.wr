@@ -1,0 +1,221 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym5#page40" name="Cartella Clinica" landmark="true" gr:x="380" gr:y="-70">
+  <ContentUnits>
+    <EntryUnit id="mov2#hym5#page40#enu21" name="Periodo di interesse" gr:x="0" gr:y="290" fieldOrder="mov2#hym5#page40#enu21#fld108 mov2#hym5#page40#enu21#fld109 mov2#hym5#page40#enu21#fld111 mov2#hym5#page40#enu21#sfld26" linkOrder="mov2#hym5#page40#enu21#ln128">
+      <Field id="mov2#hym5#page40#enu21#fld108" name="StartDate" type="date" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="mov2#hym5#page40#enu21#fld108#cmp13" name="Today" predicate="lteq" value="today()"/>
+        </VRules>
+      </Field>
+      <Field id="mov2#hym5#page40#enu21#fld109" name="EndDate" type="date" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="mov2#hym5#page40#enu21#fld109#cmp14" name="Today" predicate="lteq" value="today()"/>
+          <CompareValidationRule id="mov2#hym5#page40#enu21#fld109#cmp15" name="CompareWithStart" predicate="gteq" valueField="mov2#hym5#page40#enu21#fld108"/>
+        </VRules>
+      </Field>
+      <Field id="mov2#hym5#page40#enu21#fld111" name="Patient" type="string" preloaded="true"/>
+      <SelectionField id="mov2#hym5#page40#enu21#sfld26" name="Cosa vuoi vedere?" type="string">
+        <Slot id="mov2#hym5#page40#enu21#sfld26#slot6" name="Scelte" label="true" output="true" value="Visite|Ricoveri|ProntoSoccorso|Interventi"/>
+      </SelectionField>
+      <Link id="mov2#hym5#page40#enu21#ln128" name="Procedi" to="mov2#hym5#switch9" type="normal" validate="true" gr:bendpoints="-28,172,-128,-98">
+        <LinkParameter id="mov2#hym5#page40#enu21#ln128#par582" name="Cosa vuoi vedere?_Switch" source="mov2#hym5#page40#enu21#sfld26" target="mov2#hym5#switch9.switch"/>
+        <LinkParameter id="mov2#hym5#page40#enu21#ln128#par583" name="Doctor_PASSING" source="mov2#hym5#page40#enu21#fld110" passing="true"/>
+        <LinkParameter id="mov2#hym5#page40#enu21#ln128#par584" name="EndDate_PASSING" source="mov2#hym5#page40#enu21#fld109" passing="true"/>
+        <LinkParameter id="mov2#hym5#page40#enu21#ln128#par585" name="Patient_PASSING" source="mov2#hym5#page40#enu21#fld111" passing="true"/>
+        <LinkParameter id="mov2#hym5#page40#enu21#ln128#par586" name="StartDate_PASSING" source="mov2#hym5#page40#enu21#fld108" passing="true"/>
+      </Link>
+    </EntryUnit>
+    <PowerIndexUnit id="mov2#hym5#page40#pwu15" name="Lista visite" linkOrder="mov2#hym5#page40#pwu15#ln97" gr:x="215" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent29" displayAttributes="ent5#att22 ent5#att24 ent5#att25 ent5#att3 ent5#att10 ent5#att23 rel11#role16.rel14#role28.userOID">
+      <Selector id="mov2#hym5#page40#pwu15#su56" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym5#page40#pwu15#su56#acond69" name="cfPaziente" predicate="eq" booleanOperator="and" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
+        <AttributesCondition id="mov2#hym5#page40#pwu15#su56#acond71" name="StartDate" predicate="gteq" booleanOperator="or" implied="true" attributes="ent5#att22"/>
+        <AttributesCondition id="mov2#hym5#page40#pwu15#su56#acond72" name="EndDate" predicate="lteq" booleanOperator="or" implied="true" attributes="ent5#att23"/>
+        <AttributesCondition id="mov2#hym5#page40#pwu15#su56#acond73" name="NotFutureVisit" predicate="notNull" booleanOperator="and" implied="false" attributes="ent5#att3"/>
+      </Selector>
+      <Link id="mov2#hym5#page40#pwu15#ln97" name="Guarda prescrizioni" to="mov2#hym5#page40#mdu3" type="normal" validate="true">
+        <LinkParameter id="mov2#hym5#page40#pwu15#ln97#par575" name="oid_OidVisit" source="data[].ent5#att2" target="mov2#hym5#page40#mdu3#su57#acond74"/>
+      </Link>
+      <Link id="mov2#hym5#page40#pwu15#ln138" name="Flow138" to="mov2#hym5#page40#enu21" type="transport" validate="true" gr:bendpoints="-179,23,66,-222">
+        <LinkParameter id="mov2#hym5#page40#pwu15#ln138#par592" name="VisitToPatient.PatientToUser.cf_Patient" source="data[].rel11#role16$rel14#role28$userOID" target="mov2#hym5#page40#enu21#fld111_slot"/>
+      </Link>
+    </PowerIndexUnit>
+    <MultiDataUnit id="mov2#hym5#page40#mdu3" name="Prescrizioni della Visita" gr:x="475" gr:y="25" entity="ent36" displayAttributes="ent36#att79 ent36#att80 rel31#role62.ent2#att8">
+      <Selector id="mov2#hym5#page40#mdu3#su57" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym5#page40#mdu3#su57#acond74" name="OidVisit" predicate="eq" booleanOperator="and" implied="false" attributes="rel30#role60.ent5#att2"/>
+      </Selector>
+    </MultiDataUnit>
+    <PowerIndexUnit gr:x="240" gr:y="185" id="mov2#hym5#page40#pwu16" name="Lista ricoveri" sortable="true" checkable="false" useCountQuery="false" entity="ent31" displayAttributes="ent5#att3 ent5#att10 ent5#att22 ent5#att23 ent5#att24 ent5#att25 rel11#role16.rel14#role28.userOID">
+      <Selector id="mov2#hym5#page40#pwu16#su62" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym5#page40#pwu16#su62#acond76" name="StartDate" predicate="gteq" booleanOperator="or" implied="true" attributes="ent5#att22"/>
+        <AttributesCondition id="mov2#hym5#page40#pwu16#su62#acond77" name="NotFutureRecovery" predicate="notNull" booleanOperator="and" implied="false" attributes="ent5#att3"/>
+        <AttributesCondition id="mov2#hym5#page40#pwu16#su62#acond79" name="cfPaziente" predicate="eq" booleanOperator="and" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
+        <AttributesCondition id="mov2#hym5#page40#pwu16#su62#acond80" name="EndDate" predicate="lteq" booleanOperator="or" implied="true" attributes="ent5#att23"/>
+      </Selector>
+      <Link id="mov2#hym5#page40#pwu16#ln139" name="Flow139" to="mov2#hym5#page40#enu21" type="transport" validate="true">
+        <LinkParameter id="mov2#hym5#page40#pwu16#ln139#par593" name="VisitToPatient.PatientToUser.cf_Patient" source="data[].rel11#role16$rel14#role28$userOID" target="mov2#hym5#page40#enu21#fld111_slot"/>
+      </Link>
+    </PowerIndexUnit>
+    <PowerIndexUnit gr:x="245" gr:y="375" id="mov2#hym5#page40#pwu17" name="Pronto Soccorso" sortable="true" checkable="false" useCountQuery="false" entity="ent17" displayAttributes="ent5#att3 ent5#att10 ent5#att22 ent5#att23 ent5#att24 ent5#att25 rel11#role16.rel14#role28.userOID">
+      <Selector id="mov2#hym5#page40#pwu17#su63" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym5#page40#pwu17#su63#acond82" name="NotFuture" predicate="notNull" booleanOperator="and" implied="false" attributes="ent5#att3"/>
+        <AttributesCondition id="mov2#hym5#page40#pwu17#su63#acond83" name="StartDate" predicate="gteq" booleanOperator="or" implied="true" attributes="ent5#att22"/>
+        <AttributesCondition id="mov2#hym5#page40#pwu17#su63#acond84" name="EndDate" predicate="lteq" booleanOperator="or" implied="true" attributes="ent5#att23"/>
+        <AttributesCondition id="mov2#hym5#page40#pwu17#su63#acond85" name="cfPaziente" predicate="eq" booleanOperator="and" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
+      </Selector>
+      <Link id="mov2#hym5#page40#pwu17#ln140" name="Flow140" to="mov2#hym5#page40#enu21" type="transport" validate="true">
+        <LinkParameter id="mov2#hym5#page40#pwu17#ln140#par594" name="VisitToPatient.PatientToUser.cf_Patient" source="data[].rel11#role16$rel14#role28$userOID" target="mov2#hym5#page40#enu21#fld111_slot"/>
+      </Link>
+    </PowerIndexUnit>
+    <PowerIndexUnit gr:x="245" gr:y="580" id="mov2#hym5#page40#pwu18" name="Interventi" sortable="true" checkable="false" useCountQuery="false" entity="ent30" displayAttributes="ent5#att3 ent5#att10 ent5#att22 ent5#att23 ent5#att24 ent5#att25 rel11#role16.rel14#role28.userOID">
+      <Selector id="mov2#hym5#page40#pwu18#su65" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym5#page40#pwu18#su65#acond87" name="NotFutureSurgery" predicate="notNull" booleanOperator="and" implied="false" attributes="ent5#att3"/>
+        <AttributesCondition id="mov2#hym5#page40#pwu18#su65#acond88" name="StartDate" predicate="gteq" booleanOperator="or" implied="true" attributes="ent5#att22"/>
+        <AttributesCondition id="mov2#hym5#page40#pwu18#su65#acond89" name="EndDate" predicate="lteq" booleanOperator="or" implied="true" attributes="ent5#att23"/>
+        <AttributesCondition id="mov2#hym5#page40#pwu18#su65#acond90" name="cfPaziente" predicate="eq" booleanOperator="and" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
+      </Selector>
+      <Link id="mov2#hym5#page40#pwu18#ln141" name="Flow141" to="mov2#hym5#page40#enu21" type="transport" validate="true">
+        <LinkParameter id="mov2#hym5#page40#pwu18#ln141#par595" name="VisitToPatient.PatientToUser.cf_Patient" source="data[].rel11#role16$rel14#role28$userOID" target="mov2#hym5#page40#enu21#fld111_slot"/>
+      </Link>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym5#page40#enu21">
+          <layout:Link link="mov2#hym5#page40#enu21#ln128"/>
+          <layout:Field field="mov2#hym5#page40#enu21#fld108"/>
+          <layout:Field field="mov2#hym5#page40#enu21#fld109"/>
+          <layout:Field field="mov2#hym5#page40#enu21#fld111"/>
+          <layout:Field field="mov2#hym5#page40#enu21#sfld26"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym5#page40#pwu15">
+          <layout:Link link="mov2#hym5#page40#pwu15#ln97"/>
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="ent5#att3"/>
+          <layout:Attribute attribute="ent5#att10"/>
+          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="rel11#role16.rel14#role28.userOID"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym5#page40#mdu3">
+          <layout:Attribute attribute="ent36#att79"/>
+          <layout:Attribute attribute="ent36#att80"/>
+          <layout:Attribute attribute="rel31#role62.ent2#att8"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym5#page40#pwu16">
+          <layout:Attribute attribute="ent5#att3"/>
+          <layout:Attribute attribute="ent5#att10"/>
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="rel11#role16.rel14#role28.userOID"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym5#page40#pwu17">
+          <layout:Attribute attribute="ent5#att3"/>
+          <layout:Attribute attribute="ent5#att10"/>
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="rel11#role16.rel14#role28.userOID"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym5#page40#pwu18">
+          <layout:Attribute attribute="ent5#att3"/>
+          <layout:Attribute attribute="ent5#att10"/>
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="rel11#role16.rel14#role28.userOID"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area7#page64" name="Registra Intervento Chirurgico" landmark="true" gr:x="290" gr:y="255">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area7#page64" name="Registra Intervento Chirurgico" landmark="true" gr:x="290" gr:y="210">
   <ContentUnits/>
   <layout:Grid containerType="grid">
     <layout:Row>

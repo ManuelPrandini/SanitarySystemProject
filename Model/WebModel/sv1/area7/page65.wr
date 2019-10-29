@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area7#page65" name="Registra Visita" landmark="true" gr:x="290" gr:y="400">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area7#page65" name="Registra Visita" landmark="true" gr:x="290" gr:y="355">
   <ContentUnits>
     <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area7#page65#pwu1" name="Lista visite" sortable="true" checkable="false" useCountQuery="false" entity="ent29" displayAttributes="ent5#att22 ent5#att24 ent5#att25 rel16#role31.ent10#att50" linkOrder="sv1#area7#page65#pwu1#ln78">
       <Selector id="sv1#area7#page65#pwu1#su2" defaultPolicy="fill" booleanOperator="and">
