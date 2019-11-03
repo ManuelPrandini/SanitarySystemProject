@@ -1,7 +1,11 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="460" gr:y="70" id="mov2#hym3#page42" name="Visit Registration">
   <ContentUnits>
     <EntryUnit gr:x="25" gr:y="0" id="mov2#hym3#page42#enu19" name="Info" fieldOrder="mov2#hym3#page42#enu19#fld38 mov2#hym3#page42#enu19#fld39 mov2#hym3#page42#enu19#fld49 mov2#hym3#page42#enu19#fld58 mov2#hym3#page42#enu19#fld1 mov2#hym3#page42#enu19#sfld27" linkOrder="mov2#hym3#page42#enu19#ln69">
-      <SelectionField id="mov2#hym3#page42#enu19#sfld27" name="room" type="string" modifiable="true"/>
+      <SelectionField id="mov2#hym3#page42#enu19#sfld27" name="room" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym3#page42#enu19#sfld27#mnd2" name="Mandatory2"/>
+        </VRules>
+      </SelectionField>
       <Field id="mov2#hym3#page42#enu19#fld58" name="start_time" type="time" modifiable="true" validationOrder="mov2#hym3#page42#enu19#fld58#cmp4 mov2#hym3#page42#enu19#fld58#cmp3">
         <VRules>
           <CompareValidationRule id="mov2#hym3#page42#enu19#fld58#cmp3" name="&gt;=8 AM" predicate="gteq" value="08:00:00"/>
@@ -27,6 +31,8 @@
         <LinkParameter id="mov2#hym3#page42#enu19#ln69#par518" name="end_time_endTime" source="mov2#hym3#page42#enu19#fld58" target="mov2#hym3#seu2#su5#acond40"/>
         <LinkParameter id="mov2#hym3#page42#enu19#ln69#par541" name="date_startDate" source="mov2#hym3#page42#enu19#fld49" target="mov2#hym3#seu2#su5#acond19"/>
         <LinkParameter id="mov2#hym3#page42#enu19#ln69#par542" name="start_time_startTime" source="mov2#hym3#page42#enu19#fld58" target="mov2#hym3#seu2#su5#acond39"/>
+        <LinkParameter id="mov2#hym3#page42#enu19#ln69#par622" name="hospital_PASSING" sourceLinkParameter="mov2#hym3#icu10#oln81#par620" passing="true"/>
+        <LinkParameter id="mov2#hym3#page42#enu19#ln69#par623" name="spec_PASSING" sourceLinkParameter="mov2#hym3#icu10#oln81#par621" passing="true"/>
       </Link>
       <Field id="mov2#hym3#page42#enu19#fld1" name="end_time" type="time" modifiable="true">
         <VRules>

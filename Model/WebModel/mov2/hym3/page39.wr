@@ -1,13 +1,13 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="835" gr:y="75" id="mov2#hym3#page1" name="Errore">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1070" gr:y="70" id="mov2#hym3#page39" name="Errore">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym3#page1#mssu8" name="Sala gi&#224; occupata">
-      <Message xml:space="preserve">Sala gi&#224; occupata</Message>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym3#page39#mssu16" name="Hai un impegno in quel giorno a quell'ora">
+      <Message xml:space="preserve">Sei impegnato in questa data e orario</Message>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="mov2#hym3#page1#mssu8"/>
+        <layout:Unit unitId="mov2#hym3#page39#mssu16"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

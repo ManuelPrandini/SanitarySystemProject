@@ -5,6 +5,7 @@
         <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond9" name="cfPaziente" predicate="eq" booleanOperator="and" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
         <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond16" name="cfDottore" predicate="eq" booleanOperator="and" implied="false" attributes="rel3#role3.rel36#role72.userOID"/>
         <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond46" name="startDateIsNull" predicate="notNull" booleanOperator="and" implied="false" attributes="ent5#att22"/>
+        <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond61" name="titleIsNull" predicate="null" booleanOperator="and" implied="false" attributes="ent5#att3"/>
       </Selector>
       <Link id="sv1#area7#page65#pwu1#ln78" name="Registra" to="sv1#area7#miu19" type="normal" validate="true">
         <LinkParameter id="sv1#area7#page65#pwu1#ln78#par446" name="startDate_date" source="data[].ent5#att22" target="sv1#area7#miu19.mov2#hym4#icu11#icp90"/>
