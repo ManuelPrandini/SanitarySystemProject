@@ -66,7 +66,7 @@
         <LinkParameter id="mov2#hym3#inn2#oln88#par627" name="spec_PASSING" sourceLinkParameter="mov2#hym3#seu2#oln83#par625" passing="true"/>
       </OKLink>
     </IsNotNullUnit>
-    <ModifyUnit id="mov2#hym3#mfu10" entity="ent29" gr:x="1540" gr:y="270" name="UpdateVisit">
+    <ModifyUnit id="mov2#hym3#mfu10" entity="ent29" gr:x="1595" gr:y="295" name="UpdateVisit">
       <Selector id="mov2#hym3#mfu10#su16" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#hym3#mfu10#su16#kcond22" name="KeyCondition22" predicate="in" implied="false"/>
       </Selector>
@@ -92,15 +92,16 @@
       </OKLink>
     </SelectorUnit>
     <IsNotNullUnit gr:x="1460" gr:y="105" id="mov2#hym3#inn17" name="ifExist">
-      <KOLink id="mov2#hym3#inn17#kln56" name="KOFlow56" to="mov2#hym3#mfu10">
-        <LinkParameter id="mov2#hym3#inn17#kln56#par608" name="doctor_PASSING_Doctor.doctor_code(VisitToDoctor)" sourceLinkParameter="mov2#hym3#seu3#oln136#par546" target="mov2#hym3#mfu10.rel3#role3.ent9#att33"/>
-        <LinkParameter id="mov2#hym3#inn17#kln56#par609" name="date_PASSING_endDate" sourceLinkParameter="mov2#hym3#seu3#oln136#par515" target="mov2#hym3#mfu10.ent5#att23"/>
-        <LinkParameter id="mov2#hym3#inn17#kln56#par610" name="end_time_PASSING_endTime" sourceLinkParameter="mov2#hym3#seu3#oln136#par516" target="mov2#hym3#mfu10.ent5#att25"/>
-        <LinkParameter id="mov2#hym3#inn17#kln56#par611" name="patient_PASSING_Patient.patient_code(VisitToPatient)" sourceLinkParameter="mov2#hym3#seu3#oln136#par550" target="mov2#hym3#mfu10.rel11#role16.ent6#att11"/>
-        <LinkParameter id="mov2#hym3#inn17#kln56#par612" name="date_PASSING_startDate" sourceLinkParameter="mov2#hym3#seu3#oln136#par515" target="mov2#hym3#mfu10.ent5#att22"/>
-        <LinkParameter id="mov2#hym3#inn17#kln56#par613" name="start_time_PASSING_startTime" sourceLinkParameter="mov2#hym3#seu3#oln136#par540" target="mov2#hym3#mfu10.ent5#att24"/>
-        <LinkParameter id="mov2#hym3#inn17#kln56#par614" name="room_PASSING_Visit_Room.id_room(VisitToVisit_Room)" sourceLinkParameter="mov2#hym3#seu3#oln136#par566" target="mov2#hym3#mfu10.rel16#role31.ent10#att5"/>
-        <LinkParameter id="mov2#hym3#inn17#kln56#par615" name="id_visit_PASSING_KeyCondition22 [oid]" sourceLinkParameter="mov2#hym3#seu3#oln136#par517" target="mov2#hym3#mfu10#su16#kcond22.ent5#att2"/>
+      <KOLink id="mov2#hym3#inn17#kln56" name="KOFlow56" to="mov2#hym3#scu2">
+        <LinkParameter id="mov2#hym3#inn17#kln56#par561" name="date_PASSING" sourceLinkParameter="mov2#hym3#seu3#oln136#par515" passing="true"/>
+        <LinkParameter id="mov2#hym3#inn17#kln56#par562" name="doctor_PASSING" sourceLinkParameter="mov2#hym3#seu3#oln136#par546" passing="true"/>
+        <LinkParameter id="mov2#hym3#inn17#kln56#par563" name="end_time_PASSING" sourceLinkParameter="mov2#hym3#seu3#oln136#par516" passing="true"/>
+        <LinkParameter id="mov2#hym3#inn17#kln56#par564" name="id_visit_PASSING" sourceLinkParameter="mov2#hym3#seu3#oln136#par517" passing="true"/>
+        <LinkParameter id="mov2#hym3#inn17#kln56#par565" name="Input Value_PASSING" source="inputValue" passing="true"/>
+        <LinkParameter id="mov2#hym3#inn17#kln56#par598" name="patient_PASSING" sourceLinkParameter="mov2#hym3#seu3#oln136#par550" passing="true"/>
+        <LinkParameter id="mov2#hym3#inn17#kln56#par599" name="room_PASSING" sourceLinkParameter="mov2#hym3#seu3#oln136#par566" passing="true"/>
+        <LinkParameter id="mov2#hym3#inn17#kln56#par600" name="start_time_PASSING" sourceLinkParameter="mov2#hym3#seu3#oln136#par540" passing="true"/>
+        <LinkParameter id="mov2#hym3#inn17#kln56#par617" name="start_time_PASSING_startTime" sourceLinkParameter="mov2#hym3#seu3#oln136#par540" target="mov2#hym3#scu2.startTime"/>
       </KOLink>
       <OKLink id="mov2#hym3#inn17#oln137" name="OKFlow137" to="mov2#hym3#page39#mssu16">
         <LinkParameter id="mov2#hym3#inn17#oln137#par574" name="date_PASSING" sourceLinkParameter="mov2#hym3#seu3#oln136#par515" passing="true"/>
@@ -113,5 +114,32 @@
         <LinkParameter id="mov2#hym3#inn17#oln137#par596" name="start_time_PASSING" sourceLinkParameter="mov2#hym3#seu3#oln136#par540" passing="true"/>
       </OKLink>
     </IsNotNullUnit>
+    <ScriptUnit gr:x="1595" gr:y="175" id="mov2#hym3#scu2" name="Script2">
+      <ScriptInput id="mov2#hym3#scu2#sci1" name="startTIme"/>
+      <ScriptUnitText xml:space="preserve">#input Time startTime
+#output Time endTime
+import java.text.SimpleDateFormat
+
+
+SimpleDateFormat df = new SimpleDateFormat("hh:mm:ss");
+Calendar cal = Calendar.getInstance();
+cal.setTime(startTime);
+cal.add(Calendar.MINUTE, 30);
+endTime = cal.getTime();
+
+return ["resultCode" : "success" , "endTime" : endTime]</ScriptUnitText>
+      <ScriptOutput id="mov2#hym3#scu2#sco1" name="endTime"/>
+      <KOLink id="mov2#hym3#scu2#kln57" name="KOFlow57" to="mov2#hym3#page41" automaticCoupling="true"/>
+      <OKLink id="mov2#hym3#scu2#oln138" name="OKFlow138" to="mov2#hym3#mfu10">
+        <LinkParameter id="mov2#hym3#scu2#oln138#par609" name="doctor_PASSING_Doctor.doctor_code(VisitToDoctor)" sourceLinkParameter="mov2#hym3#inn17#kln56#par562" target="mov2#hym3#mfu10.rel3#role3.ent9#att33"/>
+        <LinkParameter id="mov2#hym3#scu2#oln138#par610" name="date_PASSING_endDate" sourceLinkParameter="mov2#hym3#inn17#kln56#par561" target="mov2#hym3#mfu10.ent5#att23"/>
+        <LinkParameter id="mov2#hym3#scu2#oln138#par611" name="endTime_endTime" source="result(endTime)" target="mov2#hym3#mfu10.ent5#att25"/>
+        <LinkParameter id="mov2#hym3#scu2#oln138#par612" name="id_visit_PASSING_KeyCondition22 [oid]" sourceLinkParameter="mov2#hym3#inn17#kln56#par564" target="mov2#hym3#mfu10#su16#kcond22.ent5#att2"/>
+        <LinkParameter id="mov2#hym3#scu2#oln138#par613" name="patient_PASSING_Patient.patient_code(VisitToPatient)" sourceLinkParameter="mov2#hym3#inn17#kln56#par598" target="mov2#hym3#mfu10.rel11#role16.ent6#att11"/>
+        <LinkParameter id="mov2#hym3#scu2#oln138#par614" name="date_PASSING_startDate" sourceLinkParameter="mov2#hym3#inn17#kln56#par561" target="mov2#hym3#mfu10.ent5#att22"/>
+        <LinkParameter id="mov2#hym3#scu2#oln138#par615" name="start_time_PASSING_startTime" sourceLinkParameter="mov2#hym3#inn17#kln56#par600" target="mov2#hym3#mfu10.ent5#att24"/>
+        <LinkParameter id="mov2#hym3#scu2#oln138#par616" name="room_PASSING_Visit_Room.id_room(VisitToVisit_Room)" sourceLinkParameter="mov2#hym3#inn17#kln56#par599" target="mov2#hym3#mfu10.rel16#role31.ent10#att5"/>
+      </OKLink>
+    </ScriptUnit>
   </OperationUnits>
 </HybridModule>

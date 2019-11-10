@@ -1,19 +1,19 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="830" gr:y="115" id="mov2#hym4#page13" name="Scelta prescrizioni">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page13#mssu12" name="scelta prescrizioni" linkOrder="mov2#hym4#page13#mssu12#ln57 mov2#hym4#page13#mssu12#ln77">
+    <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page13#mssu12" name="scelta prescrizioni" linkOrder="mov2#hym4#page13#mssu12#ln77 mov2#hym4#page13#mssu12#ln52">
       <Message xml:space="preserve">Vuoi aggiungere una prescrizione?</Message>
-      <Link id="mov2#hym4#page13#mssu12#ln57" name="No" to="mov2#hym4#okcu18" automaticCoupling="true" type="normal" validate="true"/>
       <Link id="mov2#hym4#page13#mssu12#ln77" name="Si" to="mov2#hym4#page16#enu17" type="normal" validate="true">
         <LinkParameter id="mov2#hym4#page13#mssu12#ln77#par548" name="oid_PASSING_id_visit" sourceLinkParameter="mov2#hym4#mfu5#oln100#par547" target="mov2#hym4#page16#enu17#fld104_slot"/>
       </Link>
+      <Link id="mov2#hym4#page13#mssu12#ln52" name="No" to="mov2#hym4#okcu18" automaticCoupling="true" type="normal" validate="true"/>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov2#hym4#page13#mssu12">
-          <layout:Link link="mov2#hym4#page13#mssu12#ln57"/>
           <layout:Link link="mov2#hym4#page13#mssu12#ln77"/>
+          <layout:Link link="mov2#hym4#page13#mssu12#ln52"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

@@ -34,7 +34,7 @@
         <LinkParameter id="mov2#hym3#page42#enu19#ln69#par622" name="hospital_PASSING" sourceLinkParameter="mov2#hym3#icu10#oln81#par620" passing="true"/>
         <LinkParameter id="mov2#hym3#page42#enu19#ln69#par623" name="spec_PASSING" sourceLinkParameter="mov2#hym3#icu10#oln81#par621" passing="true"/>
       </Link>
-      <Field id="mov2#hym3#page42#enu19#fld1" name="end_time" type="time" modifiable="true">
+      <Field id="mov2#hym3#page42#enu19#fld1" name="end_time" type="time" modifiable="true" preloaded="true">
         <VRules>
           <CompareValidationRule id="mov2#hym3#page42#enu19#fld1#cmp7" name="&gt;startTime" predicate="gt" valueField="mov2#hym3#page42#enu19#fld58"/>
           <CompareValidationRule id="mov2#hym3#page42#enu19#fld1#cmp8" name="&lt;=6 PM" predicate="lteq" value="18:00:00"/>

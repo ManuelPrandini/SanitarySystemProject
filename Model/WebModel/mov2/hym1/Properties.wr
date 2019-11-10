@@ -22,6 +22,8 @@
         <LinkParameter id="mov2#hym1#seu5#ln56#par149" name="birthday_birthday" source="User#att29Array" target="mov2#hym1#page30#enu9#fld16_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln56#par150" name="Lives.name_live in [label]" source="rel9#role14$ent12#att39Array" target="mov2#hym1#page30#enu9#sfld2_label"/>
         <LinkParameter id="mov2#hym1#seu5#ln56#par152" name="Lives.oid_live in [output]" source="rel9#role14$ent12#att16Array" target="mov2#hym1#page30#enu9#sfld2_output"/>
+        <LinkParameter id="mov2#hym1#seu5#ln56#par753" name="Borns.name_born in [label]" source="rel7#role10$ent12#att39Array" target="mov2#hym1#page30#enu9#sfld1_label"/>
+        <LinkParameter id="mov2#hym1#seu5#ln56#par754" name="Borns.oid_born in [output]" source="rel7#role10$ent12#att16Array" target="mov2#hym1#page30#enu9#sfld1_output"/>
       </Link>
       <Link id="mov2#hym1#seu5#ln65" name="Flow65" to="mov2#hym1#page35#enu11" type="transport" validate="true">
         <LinkParameter id="mov2#hym1#seu5#ln65#par274" name="address_address" source="User#att40Array" target="mov2#hym1#page35#enu11#fld7_slot"/>
@@ -69,8 +71,8 @@
         <LinkParameter id="mov2#hym1#icu17#ln49#par74" name="group_Switch" source="mov2#hym1#icu17#icp66" target="mov2#hym1#switch4.switch"/>
       </Link>
     </InputCollectorUnit>
-    <OKCollectorUnit gr:x="1445" gr:y="120" id="mov2#hym1#okcu12" name="OK Port12"/>
-    <KOCollectorUnit gr:x="1445" gr:y="415" id="mov2#hym1#kocu14" name="KO Port14"/>
+    <OKCollectorUnit gr:x="1765" gr:y="95" id="mov2#hym1#okcu12" name="OK Port12"/>
+    <KOCollectorUnit gr:x="1765" gr:y="415" id="mov2#hym1#kocu14" name="KO Port14"/>
     <IsNotNullUnit gr:x="500" gr:y="80" id="mov2#hym1#inn7" name="if exists">
       <OKLink id="mov2#hym1#inn7#oln49" name="OKFlow49" to="mov2#hym1#switch3" automaticCoupling="true"/>
       <KOLink id="mov2#hym1#inn7#kln32" name="KOFlow32" to="mov2#hym1#switch4" automaticCoupling="true" gr:bendpoints="-131,273,-185,-7"/>
@@ -91,7 +93,7 @@
       <OKLink id="mov2#hym1#switch4#oln51" name="OKFlow51" to="mov2#hym1#page36" automaticCoupling="true" code="2"/>
       <OKLink id="mov2#hym1#switch4#oln52" name="OKFlow52" to="mov2#hym1#page31" automaticCoupling="true" code="1"/>
     </SwitchUnit>
-    <ModuleInstanceUnit gr:x="1145" gr:y="-60" id="mov2#hym1#miu14" action="true" moduleId="mov2#mpkg2#opm1">
+    <ModuleInstanceUnit gr:x="1640" gr:y="-105" id="mov2#hym1#miu14" action="true" moduleId="mov2#mpkg2#opm1">
       <OKLink id="mov2#hym1#miu14#oln58" name="OKFlow58" to="mov2#hym1#okcu12" automaticCoupling="true"/>
       <KOLink id="mov2#hym1#miu14#kln35" name="KOFlow35" to="mov2#hym1#kocu14" automaticCoupling="true"/>
     </ModuleInstanceUnit>

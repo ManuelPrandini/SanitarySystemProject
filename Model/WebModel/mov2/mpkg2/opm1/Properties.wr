@@ -36,20 +36,20 @@
         <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par168" name="surname_surname" source="mov2#mpkg2#opm1#icu1#icp3" target="mov2#mpkg2#opm1#cru5.User#att28"/>
         <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par169" name="telephone_telephone" source="mov2#mpkg2#opm1#icu1#icp32" target="mov2#mpkg2#opm1#cru5.User#att41"/>
         <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par170" name="username_username" source="mov2#mpkg2#opm1#icu1#icp51" target="mov2#mpkg2#opm1#cru5.userName"/>
-        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par338" name="hospital_PASSING" source="mov2#mpkg2#opm1#icu1#icp84" passing="true"/>
         <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par346" name="doctorCode_PASSING" source="mov2#mpkg2#opm1#icu1#icp4" passing="true"/>
         <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par347" name="medicalSpecialization_PASSING" source="mov2#mpkg2#opm1#icu1#icp41" passing="true"/>
         <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par360" name="approved_PASSING" source="mov2#mpkg2#opm1#icu1#icp22" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln59#par676" name="visit_room_PASSING" source="mov2#mpkg2#opm1#icu1#icp100" passing="true"/>
       </Link>
       <Link id="mov2#mpkg2#opm1#icu1#ln64" name="Flow64" to="mov2#mpkg2#opm1#cnu1" type="transport" validate="true">
         <LinkParameter id="mov2#mpkg2#opm1#icu1#ln64#par214" name="cf_KeyCondition15 [cf] [User] [Source]" source="mov2#mpkg2#opm1#icu1#icp7" target="mov2#mpkg2#opm1#cnu1#su22#kcond15.userOID"/>
         <LinkParameter id="mov2#mpkg2#opm1#icu1#ln64#par215" name="group_oid_KeyCondition16 [oid] [Group] [Target]" source="mov2#mpkg2#opm1#icu1#icp54" target="mov2#mpkg2#opm1#cnu1#su23#kcond16.groupOID"/>
-        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln64#par335" name="hospital_PASSING" source="mov2#mpkg2#opm1#icu1#icp84" passing="true"/>
         <LinkParameter id="mov2#mpkg2#opm1#icu1#ln64#par340" name="doctorCode_PASSING" source="mov2#mpkg2#opm1#icu1#icp4" passing="true"/>
         <LinkParameter id="mov2#mpkg2#opm1#icu1#ln64#par341" name="medicalSpecialization_PASSING" source="mov2#mpkg2#opm1#icu1#icp41" passing="true"/>
         <LinkParameter id="mov2#mpkg2#opm1#icu1#ln64#par350" name="approved_PASSING" source="mov2#mpkg2#opm1#icu1#icp22" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm1#icu1#ln64#par674" name="visit_room_PASSING" source="mov2#mpkg2#opm1#icu1#icp100" passing="true"/>
       </Link>
-      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp84" name="hospital"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm1#icu1#icp100" name="visit_room"/>
     </InputCollectorUnit>
     <OKCollectorUnit gr:x="910" gr:y="30" id="mov2#mpkg2#opm1#okcu1" name="OK Port1"/>
     <KOCollectorUnit gr:x="910" gr:y="275" id="mov2#mpkg2#opm1#kocu1" name="KO Port1"/>
@@ -66,10 +66,10 @@
     <CreateUnit gr:x="615" gr:y="255" id="mov2#mpkg2#opm1#cru5" name="createUser" entity="User">
       <OKLink id="mov2#mpkg2#opm1#cru5#oln56" name="OKFlow56" to="mov2#mpkg2#opm1#cru4">
         <LinkParameter id="mov2#mpkg2#opm1#cru5#oln56#par300" name="cf_User.cf(DoctorToUser)" source="userOIDArray" target="mov2#mpkg2#opm1#cru4.rel36#role72.userOID"/>
-        <LinkParameter id="mov2#mpkg2#opm1#cru5#oln56#par339" name="hospital_PASSING_Hospital.id_hospital(DoctorToHospital)" sourceLinkParameter="mov2#mpkg2#opm1#icu1#ln59#par338" target="mov2#mpkg2#opm1#cru4.rel12#role23.ent4#att1"/>
         <LinkParameter id="mov2#mpkg2#opm1#cru5#oln56#par348" name="doctorCode_PASSING_doctor_code" sourceLinkParameter="mov2#mpkg2#opm1#icu1#ln59#par346" target="mov2#mpkg2#opm1#cru4.ent9#att33"/>
         <LinkParameter id="mov2#mpkg2#opm1#cru5#oln56#par349" name="medicalSpecialization_PASSING_Medical_specialization.nameSpecialization(DoctorToMedical_specialization)" sourceLinkParameter="mov2#mpkg2#opm1#icu1#ln59#par347" target="mov2#mpkg2#opm1#cru4.rel4#role5.ent8#att21"/>
         <LinkParameter id="mov2#mpkg2#opm1#cru5#oln56#par376" name="approved_PASSING_approved" sourceLinkParameter="mov2#mpkg2#opm1#icu1#ln59#par360" target="mov2#mpkg2#opm1#cru4.ent9#att17"/>
+        <LinkParameter id="mov2#mpkg2#opm1#cru5#oln56#par677" name="visit_room_PASSING_Room.id_room(DoctorToRoom)" sourceLinkParameter="mov2#mpkg2#opm1#icu1#ln59#par676" target="mov2#mpkg2#opm1#cru4.rel5#role19.ent10#att5"/>
       </OKLink>
       <KOLink id="mov2#mpkg2#opm1#cru5#kln34" name="KOFlow34" to="mov2#mpkg2#opm1#kocu1" automaticCoupling="true"/>
     </CreateUnit>
@@ -82,10 +82,10 @@
       </TargetSelector>
       <OKLink id="mov2#mpkg2#opm1#cnu1#oln63" name="OKFlow60" to="mov2#mpkg2#opm1#cru4">
         <LinkParameter id="mov2#mpkg2#opm1#cnu1#oln63#par330" name="Source cf [User]_User.cf(DoctorToUser)" source="sourceuserOID" target="mov2#mpkg2#opm1#cru4.rel36#role72.userOID"/>
-        <LinkParameter id="mov2#mpkg2#opm1#cnu1#oln63#par337" name="hospital_PASSING_Hospital.id_hospital(DoctorToHospital)" sourceLinkParameter="mov2#mpkg2#opm1#icu1#ln64#par335" target="mov2#mpkg2#opm1#cru4.rel12#role23.ent4#att1"/>
         <LinkParameter id="mov2#mpkg2#opm1#cnu1#oln63#par344" name="doctorCode_PASSING_doctor_code" sourceLinkParameter="mov2#mpkg2#opm1#icu1#ln64#par340" target="mov2#mpkg2#opm1#cru4.ent9#att33"/>
         <LinkParameter id="mov2#mpkg2#opm1#cnu1#oln63#par345" name="medicalSpecialization_PASSING_Medical_specialization.nameSpecialization(DoctorToMedical_specialization)" sourceLinkParameter="mov2#mpkg2#opm1#icu1#ln64#par341" target="mov2#mpkg2#opm1#cru4.rel4#role5.ent8#att21"/>
         <LinkParameter id="mov2#mpkg2#opm1#cnu1#oln63#par351" name="approved_PASSING_approved" sourceLinkParameter="mov2#mpkg2#opm1#icu1#ln64#par350" target="mov2#mpkg2#opm1#cru4.ent9#att17"/>
+        <LinkParameter id="mov2#mpkg2#opm1#cnu1#oln63#par675" name="visit_room_PASSING_Room.id_room(DoctorToRoom)" sourceLinkParameter="mov2#mpkg2#opm1#icu1#ln64#par674" target="mov2#mpkg2#opm1#cru4.rel5#role19.ent10#att5"/>
       </OKLink>
     </ConnectUnit>
   </OperationUnits>

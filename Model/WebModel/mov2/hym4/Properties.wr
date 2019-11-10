@@ -21,8 +21,8 @@
       <InputCollectorParameter id="mov2#hym4#icu11#icp94" name="hospital"/>
       <InputCollectorParameter id="mov2#hym4#icu11#icp93" name="room"/>
     </InputCollectorUnit>
-    <OKCollectorUnit gr:x="1210" gr:y="110" id="mov2#hym4#okcu18" name="OK Port18"/>
-    <KOCollectorUnit gr:x="1210" gr:y="245" id="mov2#hym4#kocu8" name="KO Port8"/>
+    <OKCollectorUnit gr:x="1480" gr:y="110" id="mov2#hym4#okcu18" name="OK Port18"/>
+    <KOCollectorUnit gr:x="1480" gr:y="245" id="mov2#hym4#kocu8" name="KO Port8"/>
     <ModuleInstanceUnit gr:x="720" gr:y="610" id="mov2#hym4#miu21" action="true" moduleId="mov2#mpkg2#opm10">
       <OKLink id="mov2#hym4#miu21#oln99" name="OKFlow99" to="mov2#hym4#page28#mssu14">
         <LinkParameter id="mov2#hym4#miu21#oln99#par549" name="id_visit_PASSING" source="mov2#mpkg2#opm10#okcu19#ocp1" passing="true"/>

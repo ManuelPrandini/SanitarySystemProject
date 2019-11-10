@@ -27,7 +27,7 @@
         <LinkParameter id="sv1#page62#gtu2#ln88#par491" name="UserCtxParam.cf_cfDoctor" source="sv1#page62#gtu2.UserCtxParam" target="sv1#page62#seu26#su31#acond41"/>
       </Link>
     </GetUnit>
-    <SelectorUnit gr:x="170" gr:y="175" id="sv1#page62#seu26" name="HospitalInfo" entity="ent9" distinctAttributes="rel12#role23.ent4#att14">
+    <SelectorUnit gr:x="170" gr:y="175" id="sv1#page62#seu26" name="HospitalInfo" entity="ent9">
       <Selector id="sv1#page62#seu26#su31" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#page62#seu26#su31#acond41" name="cfDoctor" predicate="eq" booleanOperator="or" implied="false" attributes="rel36#role72.userOID"/>
       </Selector>
