@@ -1,21 +1,19 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="15" gr:y="10" id="sv3#page15" name="Patient Info" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area1#page43" name="Patient Info" landmark="true" gr:x="635" gr:y="0">
   <ContentUnits>
-    <DataUnit gr:x="160" gr:y="0" id="sv3#page15#dau1" name="Profile" entity="User" displayAttributes="userOID userName email User#att27 User#att28 User#att29 User#att40 User#att41 rel14#role27.ent6#att30 rel14#role27.ent6#att31 rel14#role27.ent6#att11">
-      <Selector id="sv3#page15#dau1#su1" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv3#page15#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+    <DataUnit id="sv3#area1#page43#dau2" name="Profile" gr:x="155" gr:y="0" entity="User" displayAttributes="userOID userName email User#att27 User#att28 User#att29 User#att40 User#att41 rel14#role27.ent6#att30 rel14#role27.ent6#att31 rel14#role27.ent6#att11">
+      <Selector id="sv3#area1#page43#dau2#su77" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area1#page43#dau2#su77#kcond35" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv3#page15#dau1#ln21" name="Flow21" to="sv3#lou3" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#area1#page43#dau2#ln79" name="Flow21" to="sv3#lou3" type="transport" automaticCoupling="true" validate="true"/>
     </DataUnit>
-    <GetUnit gr:x="0" gr:y="10" id="sv3#page15#gtu1" name="User info" contextParameters="UserCtxParam">
-      <Link id="sv3#page15#gtu1#ln20" name="Flow20" to="sv3#page15#dau1" type="transport" validate="true">
-        <LinkParameter id="sv3#page15#gtu1#ln20#par110" name="UserCtxParam.cf_KeyCondition1 [cf]" source="sv3#page15#gtu1.UserCtxParam" target="sv3#page15#dau1#su1#kcond1.userOID"/>
-      </Link>
+    <GetUnit gr:x="0" gr:y="10" id="sv3#area1#page43#gtu14" name="Get14" contextParameters="UserCtxParam">
+      <Link id="sv3#area1#page43#gtu14#ln164" name="Flow164" to="sv3#area1#page43#dau2" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page15#dau1">
+        <layout:Unit unitId="sv3#area1#page43#dau2">
           <layout:Attribute attribute="userOID"/>
           <layout:Attribute attribute="userName"/>
           <layout:Attribute attribute="email"/>

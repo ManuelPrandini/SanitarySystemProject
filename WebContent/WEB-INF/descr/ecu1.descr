@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.db.EventCalendarUnitService" name="Calendario visite in programma">
+  <ShortMonths>false</ShortMonths>
+  <ShortWeekdays>false</ShortWeekdays>
+  <EntityBased>true</EntityBased>
+  <YearsBlockSize>5</YearsBlockSize>
+  <DateAttribute>att22</DateAttribute>
+  <Query entity="ent5">
+    <Input id="p0" param="kcond4.att2" type="integer" implied="false" expandStyle="in"/>
+    <Input id="p1" param="ecu1.lteq" type="date" implied="false" expandStyle="aggregate" function="max" attribute="att22"/>
+    <Input id="p2" param="ecu1.gteq" type="date" implied="false" expandStyle="aggregate" function="min" attribute="att22"/>
+    <Output id="att2" name="oid" index="0"/>
+    <Output id="att24" name="startTime" index="1"/>
+    <Output id="att22" name="startDate" index="2"/>
+    <Output id="role3$role72$att28" name="visitToDoctor_doctorToUser_surname" index="3" useId="true"/>
+    <HQL>select a_action.oid, a_action.startTime, a_action.startDate, a_user_role3_role72.surname from Action a_action left join a_action.visitToDoctor a_doctor_role3 left join a_doctor_role3.doctorToUser a_user_role3_role72
+      <Where defaultPolicy="fill" allImplied="false">(({[p0]a_action.oid in(?)})) and (({[p1]a_action.startDate &lt;= ?})) and (({[p2]a_action.startDate &gt;= ?}))</Where>
+    </HQL>
+  </Query>
+</Descriptor>

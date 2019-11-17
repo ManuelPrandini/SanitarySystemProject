@@ -1,11 +1,11 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page60" name="Richieste di visita" landmark="true" gr:x="55" gr:y="450">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page60" name="Richieste di visita" landmark="true" gr:x="45" gr:y="420">
   <ContentUnits>
-    <GetUnit id="sv1#page60#gtu11" name="Doctor Info" gr:x="30" gr:y="250" contextParameters="UserCtxParam">
+    <GetUnit id="sv1#page60#gtu11" name="Doctor Info" gr:x="40" gr:y="295" contextParameters="UserCtxParam">
       <Link id="sv1#page60#gtu11#ln103" name="Flow78" to="sv1#page60#seu25" type="transport" validate="true">
         <LinkParameter id="sv1#page60#gtu11#ln103#par385" name="UserCtxParam.cf_cf" source="sv1#page60#gtu11.UserCtxParam" target="sv1#page60#seu25#su59#acond49"/>
       </Link>
     </GetUnit>
-    <SelectorUnit id="sv1#page60#seu25" name="doctor code" gr:x="10" gr:y="125" entity="ent9" distinctAttributes="ent9#att33 rel4#role5.ent8#att21">
+    <SelectorUnit id="sv1#page60#seu25" name="doctor code" gr:x="20" gr:y="155" entity="ent9" distinctAttributes="ent9#att33 rel4#role5.ent8#att21">
       <Selector id="sv1#page60#seu25#su59" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#page60#seu25#su59#acond49" name="cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel36#role72.userOID"/>
       </Selector>

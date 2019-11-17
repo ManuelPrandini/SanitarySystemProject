@@ -1,8 +1,167 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-65" gr:y="290" id="sv3#area6" name="Visite" landmark="true" defaultPage="sv3#area6#page20" landmarks="sv3#area6#page20 sv3#area6#page33">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-125" gr:y="375" id="sv3#area6" name="Visite" landmark="true" landmarks="sv3#area6#page20 sv3#area6#page33" defaultPage="sv3#area6#page20">
   <OperationUnits>
-    <CreateUnit gr:x="1030" gr:y="185" id="sv3#area6#cru9" name="CreatePendingVisit" entity="ent29">
+    <CreateUnit gr:x="1225" gr:y="350" id="sv3#area6#cru9" name="CreatePendingVisit" entity="ent29">
       <KOLink id="sv3#area6#cru9#kln12" name="KOFlow12" to="sv3#area6#page22" automaticCoupling="true"/>
       <OKLink id="sv3#area6#cru9#oln16" name="OKFlow16" to="sv3#area6#page21#mssu11" automaticCoupling="true"/>
     </CreateUnit>
+    <SelectorUnit id="sv3#area6#seu34" name="Selector Hospital" gr:x="490" gr:y="70" entity="ent4">
+      <Selector id="sv3#area6#seu34#su67" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area6#seu34#su67#acond62" name="City" predicate="eq" booleanOperator="and" implied="false" attributes="rel2#role2.ent12#att16"/>
+      </Selector>
+      <OKLink id="sv3#area6#seu34#oln134" name="OKFlow134" to="sv3#area6#page20#enu15" gr:bendpoints="42,94,92,-56">
+        <LinkParameter id="sv3#area6#seu34#oln134#par175" name="name_Hospital [label]" source="ent4#att14Array" target="sv3#area6#page20#enu15#sfld5_label"/>
+        <LinkParameter id="sv3#area6#seu34#oln134#par176" name="id_hospital_Hospital [output]" source="ent4#att1Array" target="sv3#area6#page20#enu15#sfld5_output"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="sv3#area6#seu35" name="SelectorTypeVisit" gr:x="125" gr:y="60" entity="ent8">
+      <Selector id="sv3#area6#seu35#su68" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area6#seu35#su68#acond67" name="hospital_ID" predicate="eq" booleanOperator="and" implied="false" attributes="rel1#role17.rel37#role74.ent4#att1"/>
+      </Selector>
+      <OKLink id="sv3#area6#seu35#oln139" name="OKFlow139" to="sv3#area6#page20#enu15" gr:bendpoints="-7,88,-22,-67">
+        <LinkParameter id="sv3#area6#seu35#oln139#par178" name="nameSpecialization_TypeVisit [label]" source="ent8#att21Array" target="sv3#area6#page20#enu15#sfld6_label"/>
+        <LinkParameter id="sv3#area6#seu35#oln139#par179" name="nameSpecialization_TypeVisit [output]" source="ent8#att21Array" target="sv3#area6#page20#enu15#sfld6_output"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit gr:x="0" gr:y="260" id="sv3#area6#seu36" name="DoctorForThatSpecialization" entity="ent9" distinctAttributes="rel36#role72.User#att28 rel5#role19.ent10#att5">
+      <Selector id="sv3#area6#seu36#su69" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area6#seu36#su69#acond68" name="approvedValue" predicate="eq" booleanOperator="and" implied="false" value="1" attributes="ent9#att17"/>
+        <AttributesCondition id="sv3#area6#seu36#su69#acond70" name="cf" predicate="neq" booleanOperator="and" implied="false" attributes="rel36#role72.userOID"/>
+        <AttributesCondition id="sv3#area6#seu36#su69#acond75" name="hospital_ID" predicate="eq" booleanOperator="and" implied="false" attributes="rel5#role19.rel37#role74.ent4#att1"/>
+        <AttributesCondition id="sv3#area6#seu36#su69#acond78" name="Specialization" predicate="eq" booleanOperator="and" implied="false" attributes="rel4#role5.ent8#att21"/>
+      </Selector>
+      <OKLink id="sv3#area6#seu36#oln140" name="OKFlow140" to="sv3#area6#page20#enu15" gr:bendpoints="192,0,-88,55">
+        <LinkParameter id="sv3#area6#seu36#oln140#par183" name="DoctorToUser.surname_Doctor [label]" source="rel36#role72$User#att28Array" target="sv3#area6#page20#enu15#sfld7_label"/>
+        <LinkParameter id="sv3#area6#seu36#oln140#par184" name="doctor_code_Doctor [output]" source="ent9#att33Array" target="sv3#area6#page20#enu15#sfld7_output"/>
+        <LinkParameter id="sv3#area6#seu36#oln140#par756" name="DoctorToRoom.id_room_PASSING" source="rel5#role19$ent10#att5Array" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit gr:x="680" gr:y="70" id="sv3#area6#seu37" name="SelectVisitForThatDate" entity="ent5" distinctAttributes="ent5#att24">
+      <Selector id="sv3#area6#seu37#su70" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area6#seu37#su70#acond81" name="Doctor" predicate="eq" booleanOperator="and" implied="false" attributes="rel3#role3.ent9#att33"/>
+        <AttributesCondition id="sv3#area6#seu37#su70#acond86" name="Date" predicate="eq" booleanOperator="and" implied="false" attributes="ent5#att22"/>
+      </Selector>
+      <OKLink id="sv3#area6#seu37#oln146" name="OKFlow146" to="sv3#area6#inn19">
+        <LinkParameter id="sv3#area6#seu37#oln146#par203" name="startTime_Input" source="ent5#att24Array" target="sv3#area6#inn19.isnotnull"/>
+      </OKLink>
+      <SortAttribute attribute="ent5#att24" order="ascending"/>
+    </SelectorUnit>
+    <ScriptUnit gr:x="995" gr:y="120" id="sv3#area6#scu3" name="ScriptTime">
+      <ScriptUnitText xml:space="preserve">#input Time[] slotOccupati
+#output Time[] slotLiberi
+
+import java.util.Date
+import java.sql.Time
+import java.text.SimpleDateFormat
+
+String pattern = "hh:mm";
+SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+	
+ArrayList slotLiberiList = new ArrayList()
+ArrayList slotFinali = new ArrayList()
+	
+Date slot1 = simpleDateFormat.parse("08:00");
+Date slot2 = simpleDateFormat.parse("08:30");
+Date slot3 = simpleDateFormat.parse("09:00");
+Date slot4 = simpleDateFormat.parse("09:30");
+Date slot5 = simpleDateFormat.parse("10:00");
+Date slot6 = simpleDateFormat.parse("10:30");
+Date slot7 = simpleDateFormat.parse("11:00");
+Date slot8 = simpleDateFormat.parse("11:30");
+Date slot9 = simpleDateFormat.parse("12:00");
+Date slot10 = simpleDateFormat.parse("12:30");
+Date slot11 = simpleDateFormat.parse("13:00");
+Date slot12 = simpleDateFormat.parse("13:30");
+Date slot13 = simpleDateFormat.parse("14:00");
+Date slot14 = simpleDateFormat.parse("14:30");
+Date slot15 = simpleDateFormat.parse("15:00");
+Date slot16 = simpleDateFormat.parse("15:30");
+Date slot17 = simpleDateFormat.parse("16:00");
+Date slot18 = simpleDateFormat.parse("16:30");
+Date slot19 = simpleDateFormat.parse("17:00");
+Date slot20 = simpleDateFormat.parse("17:30");
+	
+slotLiberiList.add(new Time(slot1.getTime()));
+slotLiberiList.add(new Time(slot2.getTime()));
+slotLiberiList.add(new Time(slot3.getTime()));
+slotLiberiList.add(new Time(slot4.getTime()));
+slotLiberiList.add(new Time(slot5.getTime()));
+slotLiberiList.add(new Time(slot6.getTime()));
+slotLiberiList.add(new Time(slot7.getTime()));
+slotLiberiList.add(new Time(slot8.getTime()));
+slotLiberiList.add(new Time(slot9.getTime()));
+slotLiberiList.add(new Time(slot10.getTime()));
+slotLiberiList.add(new Time(slot11.getTime()));
+slotLiberiList.add(new Time(slot12.getTime()));
+slotLiberiList.add(new Time(slot13.getTime()));
+slotLiberiList.add(new Time(slot14.getTime()));
+slotLiberiList.add(new Time(slot15.getTime()));
+slotLiberiList.add(new Time(slot16.getTime()));
+slotLiberiList.add(new Time(slot17.getTime()));
+slotLiberiList.add(new Time(slot18.getTime()));
+slotLiberiList.add(new Time(slot19.getTime()));
+slotLiberiList.add(new Time(slot20.getTime()));
+	
+Time[] slotTotali = slotLiberiList.toArray()
+
+if (slotOccupati != null) {
+	
+	
+	
+	def boolean trovato = false
+	
+	for (int i=0; i&lt;slotTotali.size(); i++) {
+		for (int j=0; j&lt;slotOccupati.size(); j++) {
+			if ( slotTotali[i] == slotOccupati[j] ) {
+				trovato = true;
+			}
+		}
+		if (!trovato)
+			slotFinali.add(slotTotali[i])
+		trovato = false;
+	}
+		
+	
+	slotLiberi = slotFinali.toArray()
+	
+	return ["resultCode" : "success", "slotLiberi" : slotLiberi]
+}
+else {
+	// In questo caso gli slot sono tutti liberi
+	slotLiberi = slotTotali
+}</ScriptUnitText>
+      <ScriptInput id="sv3#area6#scu3#sci4" name="slotOccupati"/>
+      <ScriptOutput id="sv3#area6#scu3#sco4" name="slotLiberi"/>
+      <OKLink id="sv3#area6#scu3#oln149" name="OKFlow149" to="sv3#area6#page20#enu15" gr:bendpoints="-250,129,355,19">
+        <LinkParameter id="sv3#area6#scu3#oln149#par304" name="slotLiberi_Time [label]" source="result(slotLiberi)" target="sv3#area6#page20#enu15#sfld8_label"/>
+        <LinkParameter id="sv3#area6#scu3#oln149#par318" name="slotLiberi_Time [output]" source="result(slotLiberi)" target="sv3#area6#page20#enu15#sfld8_output"/>
+      </OKLink>
+    </ScriptUnit>
+    <IsNotNullUnit gr:x="935" gr:y="0" id="sv3#area6#inn19" name="not Null">
+      <OKLink id="sv3#area6#inn19#oln148" name="OKFlow148" to="sv3#area6#scu3">
+        <LinkParameter id="sv3#area6#inn19#oln148#par204" name="Input Value_slotOccupati" source="inputValue" target="sv3#area6#scu3.slotOccupati"/>
+      </OKLink>
+      <KOLink id="sv3#area6#inn19#kln59" name="KOFlow59" to="sv3#area6#scu3" gr:bendpoints="82,-7,17,-127">
+        <LinkParameter id="sv3#area6#inn19#kln59#par692" name="Input Value_slotOccupati" source="inputValue" target="sv3#area6#scu3.slotOccupati"/>
+      </KOLink>
+    </IsNotNullUnit>
+    <GetUnit gr:x="410" gr:y="865" id="sv3#area6#gtu5" name="GetUser" contextParameters="UserCtxParam">
+      <Link id="sv3#area6#gtu5#ln57" name="Flow57" to="sv3#area6#seu38" type="transport" validate="true">
+        <LinkParameter id="sv3#area6#gtu5#ln57#par191" name="UserCtxParam.cf_cfCurrentUser" source="sv3#area6#gtu5.UserCtxParam" target="sv3#area6#seu38#su49#acond93"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit id="sv3#area6#seu38" name="SelectorVisiteInProgramma" gr:x="360" gr:y="690" entity="ent5" linkOrder="sv3#area6#seu38#ln70">
+      <Selector id="sv3#area6#seu38#su49" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area6#seu38#su49#acond91" name="titleNull" predicate="null" booleanOperator="and" implied="false" attributes="ent5#att3"/>
+        <AttributesCondition id="sv3#area6#seu38#su49#acond92" name="startDateNotNull" predicate="notNull" booleanOperator="and" implied="false" attributes="ent5#att22"/>
+        <AttributesCondition id="sv3#area6#seu38#su49#acond93" name="cfCurrentUser" predicate="eq" booleanOperator="and" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
+      </Selector>
+      <Link id="sv3#area6#seu38#ln67" name="Flow67" to="sv3#area6#page33#pwu7" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#area6#seu38#ln70" name="Flow70" to="sv3#area6#page33#ecu2" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
+    <TimeUnit gr:x="290" gr:y="880" id="sv3#area6#tmu4" name="CurrentDate" linkOrder="sv3#area6#tmu4#ln71">
+      <Link id="sv3#area6#tmu4#ln71" name="Flow71" to="sv3#area6#page33#ecu2" type="transport" validate="true">
+        <LinkParameter id="sv3#area6#tmu4#ln71#par192" name="Current/Input Date_Current Date" source="currentDate" target="sv3#area6#page33#ecu2.inputDate"/>
+      </Link>
+    </TimeUnit>
   </OperationUnits>
 </Area>

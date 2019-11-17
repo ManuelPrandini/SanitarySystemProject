@@ -12,6 +12,7 @@
       <Field id="mov2#hym4#page2#enu2#fld101" name="hospital" type="string" preloaded="true"/>
       <Field id="mov2#hym4#page2#enu2#fld100" name="room" type="string" preloaded="true"/>
       <Link id="mov2#hym4#page2#enu2#ln16" name="Registra" to="mov2#hym4#mfu5" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page2#enu2#ln16#par507" name="id_visita_PASSING" sourceLinkParameter="mov2#hym4#icu11#oln12#par382" passing="true"/>
         <LinkParameter id="mov2#hym4#page2#enu2#ln16#par1" name="description_description" source="mov2#hym4#page2#enu2#fld93" target="mov2#hym4#mfu5.ent5#att10"/>
         <LinkParameter id="mov2#hym4#page2#enu2#ln16#par153" name="date_endDate" source="mov2#hym4#page2#enu2#fld71" target="mov2#hym4#mfu5.ent5#att23"/>
         <LinkParameter id="mov2#hym4#page2#enu2#ln16#par154" name="end_time_endTime" source="mov2#hym4#page2#enu2#fld91" target="mov2#hym4#mfu5.ent5#att25"/>
@@ -20,7 +21,6 @@
         <LinkParameter id="mov2#hym4#page2#enu2#ln16#par505" name="start_time_startTime" source="mov2#hym4#page2#enu2#fld90" target="mov2#hym4#mfu5.ent5#att24"/>
         <LinkParameter id="mov2#hym4#page2#enu2#ln16#par506" name="title_title" source="mov2#hym4#page2#enu2#fld92" target="mov2#hym4#mfu5.ent5#att3"/>
         <LinkParameter id="mov2#hym4#page2#enu2#ln16#par510" name="room_Visit_Room.id_room(VisitToVisit_Room)" source="mov2#hym4#page2#enu2#fld100" target="mov2#hym4#mfu5.rel16#role31.ent10#att5"/>
-        <LinkParameter id="mov2#hym4#page2#enu2#ln16#par507" name="id_visita_PASSING" sourceLinkParameter="mov2#hym4#icu11#oln12#par382" passing="true"/>
       </Link>
     </EntryUnit>
   </ContentUnits>

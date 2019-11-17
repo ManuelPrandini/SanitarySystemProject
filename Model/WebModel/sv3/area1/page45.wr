@@ -1,0 +1,54 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area1#page45" name="Home" gr:x="70" gr:y="315">
+  <ContentUnits>
+    <MultiMessageUnit id="sv3#area1#page45#mssu19" name="Welcome" gr:x="0" gr:y="20">
+      <Message xml:space="preserve">Benvenuto nel sistema SanitarySystemProject  $$name$$ $$surname$$ !
+Puoi iniziare subito a controllare il tuo profilo o ad interagire con i medici e i farmacisti della nostra piattaforma.</Message>
+      <Placeholder id="sv3#area1#page45#mssu19#ph4" name="surname"/>
+      <Placeholder id="sv3#area1#page45#mssu19#ph5" name="name"/>
+    </MultiMessageUnit>
+    <GetUnit gr:x="370" gr:y="10" id="sv3#area1#page45#gtu17" name="Get17" contextParameters="UserCtxParam">
+      <Link id="sv3#area1#page45#gtu17#ln166" name="Flow166" to="sv3#area1#page45#seu43" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <SelectorUnit gr:x="135" gr:y="0" id="sv3#area1#page45#seu43" name="SelectorUserNameSurname" entity="User">
+      <Selector id="sv3#area1#page45#seu43#su83" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area1#page45#seu43#su83#kcond41" name="KeyCondition41" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#area1#page45#seu43#ln167" name="Flow167" to="sv3#area1#page45#mssu19" type="transport" validate="true">
+        <LinkParameter id="sv3#area1#page45#seu43#ln167#par496" name="name_name" source="User#att27Array" target="sv3#area1#page45#mssu19.sv3#area1#page45#mssu19#ph5"/>
+        <LinkParameter id="sv3#area1#page45#seu43#ln167#par559" name="surname_surname" source="User#att28Array" target="sv3#area1#page45#mssu19.sv3#area1#page45#mssu19#ph4"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area1#page45#mssu19"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

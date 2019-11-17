@@ -1,21 +1,22 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="530" id="sv3#area6#page33" name="Calendario visite" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="75" gr:y="555" id="sv3#area6#page33" name="Calendario visite" landmark="true">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#area6#page33#pwu2" name="VisiteInProgramma" sortable="true" checkable="false" useCountQuery="false" entity="ent29" displayAttributes="ent5#att22 ent5#att24 rel16#role31.ent10#att50 rel16#role31.rel37#role74.ent4#att14 rel3#role3.rel36#role72.userOID">
-      <Selector id="sv3#area6#page33#pwu2#su46" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv3#area6#page33#pwu2#su46#acond47" name="titleIsNull" predicate="null" booleanOperator="and" implied="false" attributes="ent5#att3"/>
-        <AttributesCondition id="sv3#area6#page33#pwu2#su46#acond48" name="startDateNotNull" predicate="notNull" booleanOperator="and" implied="false" attributes="ent5#att22"/>
-      </Selector>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#area6#page33#pwu7" name="Lista visite in programma" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="rel3#role3.rel36#role72.User#att28 rel3#role3.rel4#role5.ent8#att21 ent5#att22 ent5#att24">
+      <Selector id="sv3#area6#page33#pwu7#su48" defaultPolicy="fill" booleanOperator="and"/>
     </PowerIndexUnit>
+    <EventCalendarUnit gr:x="40" gr:y="125" id="sv3#area6#page33#ecu2" name="Calendario" entityBased="true" entity="ent5" displayAttributes="rel3#role3.rel4#role5.ent8#att21 rel3#role3.rel36#role72.User#att28 ent5#att22" dateAttribute="ent5#att22">
+      <Selector id="sv3#area6#page33#ecu2#su53" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area6#page33#ecu2#su53#kcond24" name="KeyCondition24" predicate="in" implied="false"/>
+      </Selector>
+    </EventCalendarUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#area6#page33#pwu2">
+        <layout:Unit unitId="sv3#area6#page33#pwu7">
+          <layout:Attribute attribute="rel3#role3.rel36#role72.User#att28"/>
+          <layout:Attribute attribute="rel3#role3.rel4#role5.ent8#att21"/>
           <layout:Attribute attribute="ent5#att22"/>
           <layout:Attribute attribute="ent5#att24"/>
-          <layout:Attribute attribute="rel16#role31.ent10#att50"/>
-          <layout:Attribute attribute="rel16#role31.rel37#role74.ent4#att14"/>
-          <layout:Attribute attribute="rel3#role3.rel36#role72.userOID"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -30,5 +31,67 @@
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area6#page33#ecu2">
+          <layout:Link link="sv3#area6#page33#ecu2-month-0"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-1"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-2"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-3"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-4"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-5"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-6"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-7"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-8"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-9"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-10"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-11"/>
+          <layout:Link link="sv3#area6#page33#ecu2-year"/>
+          <layout:Attribute attribute="rel3#role3.rel4#role5.ent8#att21"/>
+          <layout:Attribute attribute="rel3#role3.rel36#role72.User#att28"/>
+          <layout:Attribute attribute="ent5#att22"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:UnitConfiguration unitType="EventsPlanningUnit" layout:style="StoreTemplates" layout:unitLayout="StoreTemplates/EventsPlanningUnit"/>
   </layout:Grid>
 </Page>
