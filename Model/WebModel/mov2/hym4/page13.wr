@@ -5,7 +5,7 @@
       <Link id="mov2#hym4#page13#mssu12#ln77" name="Si" to="mov2#hym4#page16#enu17" type="normal" validate="true">
         <LinkParameter id="mov2#hym4#page13#mssu12#ln77#par548" name="oid_PASSING_id_visit" sourceLinkParameter="mov2#hym4#mfu5#oln100#par547" target="mov2#hym4#page16#enu17#fld104_slot"/>
       </Link>
-      <Link id="mov2#hym4#page13#mssu12#ln52" name="No" to="mov2#hym4#okcu18" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="mov2#hym4#page13#mssu12#ln52" name="No" to="mov2#hym4#page48#mssu17" automaticCoupling="true" type="normal" validate="true"/>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

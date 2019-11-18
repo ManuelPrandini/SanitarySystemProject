@@ -15,7 +15,7 @@
         <LinkParameter id="sv3#area6#page20#seu24#ln1#par302" name="patient_code_Patient.patient_code(VisitToPatient)" source="ent6#att11Array" target="sv3#area6#cru9.rel11#role16.ent6#att11"/>
       </Link>
     </SelectorUnit>
-    <GetUnit gr:x="55" gr:y="175" id="sv3#area6#page20#gtu6" name="GetUser" contextParameters="UserCtxParam">
+    <GetUnit gr:x="5" gr:y="185" id="sv3#area6#page20#gtu6" name="GetUser" contextParameters="UserCtxParam">
       <Link id="sv3#area6#page20#gtu6#ln80" name="Flow80" to="sv3#area6#page20#seu24" type="transport" validate="true">
         <LinkParameter id="sv3#area6#page20#gtu6#ln80#par359" name="UserCtxParam.cf_CF_Cond" source="sv3#area6#page20#gtu6.UserCtxParam" target="sv3#area6#page20#seu24#su50#acond38"/>
       </Link>
@@ -25,7 +25,7 @@
     </GetUnit>
     <EntryUnit gr:x="0" gr:y="0" id="sv3#area6#page20#enu15" name="BookingVisit" fieldOrder="sv3#area6#page20#enu15#sfld4 sv3#area6#page20#enu15#sfld5 sv3#area6#page20#enu15#sfld6 sv3#area6#page20#enu15#sfld7 sv3#area6#page20#enu15#fld24 sv3#area6#page20#enu15#sfld8" ajaxEnableExpandedLinks="false" linkOrder="sv3#area6#page20#enu15#ln61 sv3#area6#page20#enu15#ln62 sv3#area6#page20#enu15#ln63 sv3#area6#page20#enu15#ln68 sv3#area6#page20#enu15#ln36">
       <SelectionField id="sv3#area6#page20#enu15#sfld4" name="City" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="sv3#area6#page20#enu15#ln61" ajaxEventIndicator="true"/>
-      <SelectionField id="sv3#area6#page20#enu15#sfld8" name="Time" type="time" modifiable="true" ajaxEventEnabled="true" ajaxEventIndicator="true" ajaxEventLink="sv3#area6#page20#enu15#ln36"/>
+      <SelectionField id="sv3#area6#page20#enu15#sfld8" name="Time" type="time" modifiable="true" ajaxEventEnabled="false" ajaxEventIndicator="true" ajaxEventLink="sv3#area6#page20#enu15#ln36"/>
       <Field id="sv3#area6#page20#enu15#fld24" name="Date" type="date" modifiable="true" ajaxEventEnabled="true" ajaxEventIndicator="true" ajaxEventLink="sv3#area6#page20#enu15#ln68"/>
       <SelectionField id="sv3#area6#page20#enu15#sfld7" name="Doctor" type="string" modifiable="true" ajaxEventEnabled="false" ajaxEventIndicator="true"/>
       <SelectionField id="sv3#area6#page20#enu15#sfld6" name="TypeVisit" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventIndicator="true" ajaxEventLink="sv3#area6#page20#enu15#ln63"/>
@@ -44,12 +44,12 @@
         <LinkParameter id="sv3#area6#page20#enu15#ln68#par188" name="Date_Date" source="sv3#area6#page20#enu15#fld24" target="sv3#area6#seu37#su70#acond86"/>
         <LinkParameter id="sv3#area6#page20#enu15#ln68#par189" name="Doctor_Doctor" source="sv3#area6#page20#enu15#sfld7" target="sv3#area6#seu37#su70#acond81"/>
       </Link>
-      <Link id="sv3#area6#page20#enu15#ln36" name="Salva visita" to="sv3#area6#cru9" type="normal" validate="true">
-        <LinkParameter id="sv3#area6#page20#enu15#ln36#par93" name="Doctor_Doctor.doctor_code(VisitToDoctor)" source="sv3#area6#page20#enu15#sfld7" target="sv3#area6#cru9.rel3#role3.ent9#att33"/>
-        <LinkParameter id="sv3#area6#page20#enu15#ln36#par172" name="Date_endDate" source="sv3#area6#page20#enu15#fld24" target="sv3#area6#cru9.ent5#att23"/>
-        <LinkParameter id="sv3#area6#page20#enu15#ln36#par173" name="Date_startDate" source="sv3#area6#page20#enu15#fld24" target="sv3#area6#cru9.ent5#att22"/>
-        <LinkParameter id="sv3#area6#page20#enu15#ln36#par185" name="Time_startTime" source="sv3#area6#page20#enu15#sfld8" target="sv3#area6#cru9.ent5#att24"/>
-        <LinkParameter id="sv3#area6#page20#enu15#ln36#par757" name="DoctorToRoom.id_room_PASSING_Visit_Room.id_room(VisitToVisit_Room)" sourceLinkParameter="sv3#area6#seu36#oln140#par756" target="sv3#area6#cru9.rel16#role31.ent10#att5"/>
+      <Link id="sv3#area6#page20#enu15#ln36" name="Salva visita" to="sv3#area6#scu4" type="normal" validate="true">
+        <LinkParameter id="sv3#area6#page20#enu15#ln36#par110" name="Time_startTime" source="sv3#area6#page20#enu15#sfld8" target="sv3#area6#scu4.startTime"/>
+        <LinkParameter id="sv3#area6#page20#enu15#ln36#par172" name="Date_PASSING" source="sv3#area6#page20#enu15#fld24" passing="true"/>
+        <LinkParameter id="sv3#area6#page20#enu15#ln36#par173" name="Doctor_PASSING" source="sv3#area6#page20#enu15#sfld7" passing="true"/>
+        <LinkParameter id="sv3#area6#page20#enu15#ln36#par185" name="DoctorToRoom.id_room_PASSING" sourceLinkParameter="sv3#area6#seu36#oln140#par756" passing="true"/>
+        <LinkParameter id="sv3#area6#page20#enu15#ln36#par186" name="Time_PASSING" source="sv3#area6#page20#enu15#sfld8" passing="true"/>
       </Link>
     </EntryUnit>
   </ContentUnits>

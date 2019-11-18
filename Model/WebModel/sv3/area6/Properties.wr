@@ -113,6 +113,7 @@ if (slotOccupati != null) {
 		for (int j=0; j&lt;slotOccupati.size(); j++) {
 			if ( slotTotali[i] == slotOccupati[j] ) {
 				trovato = true;
+				break;
 			}
 		}
 		if (!trovato)
@@ -144,24 +145,50 @@ else {
         <LinkParameter id="sv3#area6#inn19#kln59#par692" name="Input Value_slotOccupati" source="inputValue" target="sv3#area6#scu3.slotOccupati"/>
       </KOLink>
     </IsNotNullUnit>
-    <GetUnit gr:x="410" gr:y="865" id="sv3#area6#gtu5" name="GetUser" contextParameters="UserCtxParam">
-      <Link id="sv3#area6#gtu5#ln57" name="Flow57" to="sv3#area6#seu38" type="transport" validate="true">
-        <LinkParameter id="sv3#area6#gtu5#ln57#par191" name="UserCtxParam.cf_cfCurrentUser" source="sv3#area6#gtu5.UserCtxParam" target="sv3#area6#seu38#su49#acond93"/>
-      </Link>
-    </GetUnit>
-    <SelectorUnit id="sv3#area6#seu38" name="SelectorVisiteInProgramma" gr:x="360" gr:y="690" entity="ent5" linkOrder="sv3#area6#seu38#ln70">
-      <Selector id="sv3#area6#seu38#su49" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv3#area6#seu38#su49#acond91" name="titleNull" predicate="null" booleanOperator="and" implied="false" attributes="ent5#att3"/>
-        <AttributesCondition id="sv3#area6#seu38#su49#acond92" name="startDateNotNull" predicate="notNull" booleanOperator="and" implied="false" attributes="ent5#att22"/>
-        <AttributesCondition id="sv3#area6#seu38#su49#acond93" name="cfCurrentUser" predicate="eq" booleanOperator="and" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
+    <ScriptUnit id="sv3#area6#scu4" name="AddEndTime" gr:x="800" gr:y="305">
+      <ScriptInput id="sv3#area6#scu4#sci2" name="startTIme"/>
+      <ScriptUnitText xml:space="preserve">#input Time startTime
+#output Time endTime
+import java.text.SimpleDateFormat
+
+
+SimpleDateFormat df = new SimpleDateFormat("hh:mm:ss");
+Calendar cal = Calendar.getInstance();
+cal.setTime(startTime);
+cal.add(Calendar.MINUTE, 30);
+endTime = cal.getTime();
+
+return ["resultCode" : "success" , "endTime" : endTime]</ScriptUnitText>
+      <ScriptOutput id="sv3#area6#scu4#sco2" name="endTime"/>
+      <OKLink id="sv3#area6#scu4#oln141" name="OKFlow141" to="sv3#area6#cru9">
+        <LinkParameter id="sv3#area6#scu4#oln141#par187" name="Doctor_PASSING_Doctor.doctor_code(VisitToDoctor)" sourceLinkParameter="sv3#area6#page20#enu15#ln36#par173" target="sv3#area6#cru9.rel3#role3.ent9#att33"/>
+        <LinkParameter id="sv3#area6#scu4#oln141#par190" name="Date_PASSING_endDate" sourceLinkParameter="sv3#area6#page20#enu15#ln36#par172" target="sv3#area6#cru9.ent5#att23"/>
+        <LinkParameter id="sv3#area6#scu4#oln141#par193" name="endTime_endTime" source="result(endTime)" target="sv3#area6#cru9.ent5#att25"/>
+        <LinkParameter id="sv3#area6#scu4#oln141#par194" name="Date_PASSING_startDate" sourceLinkParameter="sv3#area6#page20#enu15#ln36#par172" target="sv3#area6#cru9.ent5#att22"/>
+        <LinkParameter id="sv3#area6#scu4#oln141#par195" name="Time_PASSING_startTime" sourceLinkParameter="sv3#area6#page20#enu15#ln36#par186" target="sv3#area6#cru9.ent5#att24"/>
+        <LinkParameter id="sv3#area6#scu4#oln141#par196" name="DoctorToRoom.id_room_PASSING_Visit_Room.id_room(VisitToVisit_Room)" sourceLinkParameter="sv3#area6#page20#enu15#ln36#par185" target="sv3#area6#cru9.rel16#role31.ent10#att5"/>
+      </OKLink>
+      <KOLink id="sv3#area6#scu4#kln60" name="KOFlow60" to="sv3#area6#page15" automaticCoupling="true" gr:bendpoints="218,-89,-192,141"/>
+    </ScriptUnit>
+    <DeleteUnit gr:x="540" gr:y="825" id="sv3#area6#dlu2" name="EliminaVisitaDaSvolgere" entity="ent29">
+      <Selector id="sv3#area6#dlu2#su46" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area6#dlu2#su46#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv3#area6#seu38#ln67" name="Flow67" to="sv3#area6#page33#pwu7" automaticCoupling="true" type="transport" validate="true"/>
-      <Link id="sv3#area6#seu38#ln70" name="Flow70" to="sv3#area6#page33#ecu2" automaticCoupling="true" type="transport" validate="true"/>
-    </SelectorUnit>
-    <TimeUnit gr:x="290" gr:y="880" id="sv3#area6#tmu4" name="CurrentDate" linkOrder="sv3#area6#tmu4#ln71">
-      <Link id="sv3#area6#tmu4#ln71" name="Flow71" to="sv3#area6#page33#ecu2" type="transport" validate="true">
-        <LinkParameter id="sv3#area6#tmu4#ln71#par192" name="Current/Input Date_Current Date" source="currentDate" target="sv3#area6#page33#ecu2.inputDate"/>
-      </Link>
-    </TimeUnit>
+      <OKLink id="sv3#area6#dlu2#oln144" name="OKFlow144" to="sv3#area6#dcnu2">
+        <LinkParameter id="sv3#area6#dlu2#oln144#par319" name="VisitToVisit_Room.id_room_PASSING_KeyCondition27 [id_room] [Visit_Room] [Target]" sourceLinkParameter="sv3#area6#page33#pwu7#ln67#par205" target="sv3#area6#dcnu2#su49#kcond27.ent10#att5"/>
+        <LinkParameter id="sv3#area6#dlu2#oln144#par321" name="oid_PASSING_KeyCondition26 [oid] [Visit] [Source]" sourceLinkParameter="sv3#area6#page33#pwu7#ln67#par320" target="sv3#area6#dcnu2#su47#kcond26.ent5#att2"/>
+      </OKLink>
+      <KOLink id="sv3#area6#dlu2#kln62" name="KOFlow62" to="sv3#area6#page47" automaticCoupling="true"/>
+    </DeleteUnit>
+    <DisconnectUnit gr:x="605" gr:y="640" id="sv3#area6#dcnu2" name="EliminaVisitaStanza" relationship="rel16#role31">
+      <SourceSelector id="sv3#area6#dcnu2#su47" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area6#dcnu2#su47#kcond26" name="KeyCondition26" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv3#area6#dcnu2#su49" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area6#dcnu2#su49#kcond27" name="KeyCondition27" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv3#area6#dcnu2#oln145" name="OKFlow145" to="sv3#area6#page24" automaticCoupling="true"/>
+      <KOLink id="sv3#area6#dcnu2#kln63" name="KOFlow63" to="sv3#area6#page47" automaticCoupling="true"/>
+    </DisconnectUnit>
   </OperationUnits>
 </Area>

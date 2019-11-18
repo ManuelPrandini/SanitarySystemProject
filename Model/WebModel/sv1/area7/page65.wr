@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area7#page65" name="Registra Visita" landmark="true" gr:x="290" gr:y="355">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area7#page65#pwu1" name="Lista visite" sortable="true" checkable="false" useCountQuery="false" entity="ent29" displayAttributes="ent5#att22 ent5#att24 ent5#att25 rel16#role31.ent10#att50" linkOrder="sv1#area7#page65#pwu1#ln78">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area7#page65#pwu1" name="Lista visite" sortable="true" checkable="false" useCountQuery="false" entity="ent29" displayAttributes="ent5#att22 ent5#att24 ent5#att25 rel16#role31.ent10#att50 rel16#role31.rel37#role74.ent4#att14" linkOrder="sv1#area7#page65#pwu1#ln78">
       <Selector id="sv1#area7#page65#pwu1#su2" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond9" name="cfPaziente" predicate="eq" booleanOperator="and" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
         <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond16" name="cfDottore" predicate="eq" booleanOperator="and" implied="false" attributes="rel3#role3.rel36#role72.userOID"/>
@@ -23,11 +23,12 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area7#page65#pwu1">
+          <layout:Link link="sv1#area7#page65#pwu1#ln78"/>
           <layout:Attribute attribute="ent5#att22"/>
           <layout:Attribute attribute="ent5#att24"/>
           <layout:Attribute attribute="ent5#att25"/>
           <layout:Attribute attribute="rel16#role31.ent10#att50"/>
-          <layout:Link link="sv1#area7#page65#pwu1#ln78"/>
+          <layout:Attribute attribute="rel16#role31.rel37#role74.ent4#att14"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

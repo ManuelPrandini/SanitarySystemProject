@@ -5,7 +5,7 @@
       <Field id="mov2#hym4#page2#enu2#fld36" name="patient_cf" type="string" preloaded="true"/>
       <Field id="mov2#hym4#page2#enu2#fld93" name="description" type="string" modifiable="true"/>
       <Field id="mov2#hym4#page2#enu2#fld92" name="title" type="string" modifiable="true"/>
-      <Field id="mov2#hym4#page2#enu2#fld91" name="end_time" type="time" preloaded="true" modifiable="true"/>
+      <Field id="mov2#hym4#page2#enu2#fld91" name="end_time" type="time" preloaded="true"/>
       <Field id="mov2#hym4#page2#enu2#fld90" name="start_time" type="time" preloaded="true"/>
       <Field id="mov2#hym4#page2#enu2#fld71" name="date" type="date" preloaded="true"/>
       <Field id="mov2#hym4#page2#enu2#fld99" name="id_visit" type="string" preloaded="true"/>

@@ -5,7 +5,7 @@
       <Field id="mov2#hym4#page16#enu17#fld103" name="quantity" type="integer" modifiable="true"/>
       <SelectionField id="mov2#hym4#page16#enu17#sfld23" name="drug" type="string" modifiable="true"/>
       <Field id="mov2#hym4#page16#enu17#fld104" name="id_visit" type="string" preloaded="true"/>
-      <Link id="mov2#hym4#page16#enu17#ln94" name="Aggiungi" to="mov2#hym4#miu21" type="normal" validate="true" gr:bendpoints="182,200,-193,-100">
+      <Link id="mov2#hym4#page16#enu17#ln94" name="Aggiungi" to="mov2#hym4#miu21" type="normal" validate="true" gr:bendpoints="158,218,-217,-82">
         <LinkParameter id="mov2#hym4#page16#enu17#ln94#par534" name="description_description" source="mov2#hym4#page16#enu17#fld102" target="mov2#hym4#miu21.mov2#mpkg2#opm10#icu20#icp98"/>
         <LinkParameter id="mov2#hym4#page16#enu17#ln94#par535" name="drug_id_drug" source="mov2#hym4#page16#enu17#sfld23" target="mov2#hym4#miu21.mov2#mpkg2#opm10#icu20#icp97"/>
         <LinkParameter id="mov2#hym4#page16#enu17#ln94#par536" name="id_visit_id_visit" source="mov2#hym4#page16#enu17#fld104" target="mov2#hym4#miu21.mov2#mpkg2#opm10#icu20#icp95"/>

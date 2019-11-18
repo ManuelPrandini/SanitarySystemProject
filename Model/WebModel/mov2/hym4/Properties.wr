@@ -38,7 +38,7 @@
       <OKLink id="mov2#hym4#mfu5#oln100" name="OKFlow100" to="mov2#hym4#page13#mssu12">
         <LinkParameter id="mov2#hym4#mfu5#oln100#par547" name="oid_PASSING" source="ent5#att2Array" passing="true"/>
       </OKLink>
-      <KOLink id="mov2#hym4#mfu5#kln50" name="KOFlow50" to="mov2#hym4#kocu8" automaticCoupling="true" gr:bendpoints="4,119,-621,-1"/>
+      <KOLink id="mov2#hym4#mfu5#kln50" name="KOFlow50" to="mov2#hym4#kocu8" automaticCoupling="true" gr:bendpoints="15,104,-825,-16;128,102,-712,-18;589,104,-251,-16"/>
     </ModifyUnit>
   </OperationUnits>
 </HybridModule>

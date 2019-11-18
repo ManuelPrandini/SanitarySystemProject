@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="660" gr:y="430" id="mov2#hym4#page29" name="Errore!">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="620" gr:y="410" id="mov2#hym4#page29" name="Errore!">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page29#mssu15" name="Medicina gi&#224; prescritta" linkOrder="mov2#hym4#page29#mssu15#ln89">
       <Message xml:space="preserve">Attenzione! hai gi&#224; prescritto per questa visita questo tipo di medicina</Message>
