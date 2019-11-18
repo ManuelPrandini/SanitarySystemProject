@@ -1,12 +1,46 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="10" gr:y="285" id="sv2#area3" name="Farmaci" landmark="true" defaultPage="sv2#area3#page3">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="5" gr:y="285" id="sv2#area3" name="Farmaci" landmark="true" defaultPage="sv2#area3#page60" landmarks="sv2#area3#page60 sv2#area3#page59">
   <OperationUnits>
-    <ModuleInstanceUnit gr:x="345" gr:y="0" id="sv2#area3#miu1" action="true" moduleId="mov2#mpkg2#opm2">
+    <ModuleInstanceUnit gr:x="350" gr:y="0" id="sv2#area3#miu1" action="true" moduleId="mov2#mpkg2#opm2">
       <KOLink id="sv2#area3#miu1#kln4" name="KOFlow4" to="sv2#area3#page4" automaticCoupling="true"/>
       <OKLink id="sv2#area3#miu1#oln6" name="OKFlow6" to="sv2#area3#page3" automaticCoupling="true" gr:bendpoints="-101,-21,179,-56"/>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="270" gr:y="175" id="sv2#area3#miu2" action="true" moduleId="mov2#mpkg2#opm4">
+    <ModuleInstanceUnit gr:x="275" gr:y="175" id="sv2#area3#miu2" action="true" moduleId="mov2#mpkg2#opm4">
       <OKLink id="sv2#area3#miu2#oln3" name="OKFlow3" to="sv2#area3#page3" automaticCoupling="true" gr:bendpoints="-54,-41,156,99"/>
       <KOLink id="sv2#area3#miu2#kln2" name="KOFlow2" to="sv2#area3#page4" automaticCoupling="true" gr:bendpoints="138,-26,-97,124"/>
     </ModuleInstanceUnit>
+    <CreateUnit gr:x="575" gr:y="695" id="sv2#area3#cru10" name="CreateDrugQuantity" entity="ent21">
+      <OKLink id="sv2#area3#cru10#oln150" name="OKFlow150" to="sv2#area3#page60" automaticCoupling="true" gr:bendpoints="-107,-10,248,195"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="780" gr:y="700" id="sv2#area3#mfu13" name="UpdateDrugQuantity" entity="ent21">
+      <Selector id="sv2#area3#mfu13#su74" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area3#mfu13#su74#kcond29" name="KeyCondition29" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#area3#mfu13#oln147" name="OKFlow147" to="sv2#area3#page60" automaticCoupling="true" gr:bendpoints="1,-219,561,1"/>
+    </ModifyUnit>
+    <ScriptUnit id="sv2#area3#scu5" name="ScriptAggiornaQuantit&#224;" gr:x="610" gr:y="580">
+      <ScriptInput id="sv2#area3#scu5#sci5" name="quantitaPresente"/>
+      <ScriptInput id="sv2#area3#scu5#sci6" name="nuovaQuantita"/>
+      <ScriptOutput id="sv2#area3#scu5#sco3" name="quantitaFinale"/>
+      <ScriptUnitText xml:space="preserve">#input int quantitaPresente, int nuovaQuantita
+#output int quantitaFinale
+
+// quantitaPresente pu&#242; essere null se non c'&#232; quel farmaco in farmacia
+
+if (quantitaPresente == null) {
+	quantitaFinale = nuovaQuantita;
+	return ["resultCode" : "error" , "quantitaFinale" : quantitaFinale]
+} else {
+	quantitaFinale = quantitaPresente + nuovaQuantita;
+	return ["resultCode" : "success" , "quantitaFinale" : quantitaFinale]	
+}</ScriptUnitText>
+      <KOLink id="sv2#area3#scu5#kln44" name="KOFlow44" to="sv2#area3#cru10">
+        <LinkParameter id="sv2#area3#scu5#kln44#par894" name="quantitaFinale_quantity" source="result(quantitaFinale)" target="sv2#area3#cru10.ent21#att49"/>
+        <LinkParameter id="sv2#area3#scu5#kln44#par899" name="Drug_PASSING_Drug.id(Quantity_DrugToDrug)" sourceLinkParameter="sv2#area3#page60#enu24#ln180#par897" target="sv2#area3#cru10.rel23#role45.ent2#att6"/>
+        <LinkParameter id="sv2#area3#scu5#kln44#par902" name="PharmacistToPharmacy.oid_PASSING_Pharmacy.oid(Quantity_DrugToPharmacy)" sourceLinkParameter="sv2#area3#page60#enu24#ln180#par901" target="sv2#area3#cru10.rel17#role34.ent19#att42"/>
+      </KOLink>
+      <OKLink id="sv2#area3#scu5#oln138" name="OKFlow138" to="sv2#area3#mfu13">
+        <LinkParameter id="sv2#area3#scu5#oln138#par893" name="quantitaFinale_quantity" source="result(quantitaFinale)" target="sv2#area3#mfu13.ent21#att49"/>
+      </OKLink>
+    </ScriptUnit>
   </OperationUnits>
 </Area>

@@ -10,21 +10,21 @@
       <InputCollectorParameter id="mov2#mpkg2#opm7#icu7#icp48" name="pharmacist_code"/>
       <InputCollectorParameter id="mov2#mpkg2#opm7#icu7#icp53" name="username"/>
       <InputCollectorParameter id="mov2#mpkg2#opm7#icu7#icp56" name="group_oid"/>
-      <InputCollectorParameter id="mov2#mpkg2#opm7#icu7#icp35" name="city"/>
       <InputCollectorParameter id="mov2#mpkg2#opm7#icu7#icp34" name="telephone"/>
       <InputCollectorParameter id="mov2#mpkg2#opm7#icu7#icp33" name="address"/>
       <InputCollectorParameter id="mov2#mpkg2#opm7#icu7#icp37" name="approved"/>
       <InputCollectorParameter id="mov2#mpkg2#opm7#icu7#icp72" name="cityBorn"/>
       <InputCollectorParameter id="mov2#mpkg2#opm7#icu7#icp73" name="cityLives"/>
       <InputCollectorParameter id="mov2#mpkg2#opm7#icu7#icp74" name="exists?"/>
-      <OKLink id="mov2#mpkg2#opm7#icu7#oln31" name="OKFlow31" to="mov2#mpkg2#opm7#switch6" automaticCoupling="true"/>
+      <OKLink id="mov2#mpkg2#opm7#icu7#oln31" name="OKFlow31" to="mov2#mpkg2#opm7#switch6">
+        <LinkParameter id="mov2#mpkg2#opm7#icu7#oln31#par864" name="exists?_Switch" source="mov2#mpkg2#opm7#icu7#icp74" target="mov2#mpkg2#opm7#switch6.switch"/>
+      </OKLink>
       <Link id="mov2#mpkg2#opm7#icu7#ln33" name="Flow33" to="mov2#mpkg2#opm7#cnu3" type="transport" validate="true">
         <LinkParameter id="mov2#mpkg2#opm7#icu7#ln33#par91" name="cf_KeyCondition17 [cf] [User] [Source]" source="mov2#mpkg2#opm7#icu7#icp42" target="mov2#mpkg2#opm7#cnu3#su24#kcond17.userOID"/>
         <LinkParameter id="mov2#mpkg2#opm7#icu7#ln33#par94" name="group_oid_KeyCondition18 [oid] [Group] [Target]" source="mov2#mpkg2#opm7#icu7#icp56" target="mov2#mpkg2#opm7#cnu3#su25#kcond18.groupOID"/>
-      </Link>
-      <Link id="mov2#mpkg2#opm7#icu7#ln34" name="Flow34" to="mov2#mpkg2#opm7#cru6" type="transport" validate="true">
-        <LinkParameter id="mov2#mpkg2#opm7#icu7#ln34#par95" name="0_approved" sourceValue="0" target="mov2#mpkg2#opm7#cru6.ent1#att20"/>
-        <LinkParameter id="mov2#mpkg2#opm7#icu7#ln34#par96" name="pharmacist_code_pharmacist_code" source="mov2#mpkg2#opm7#icu7#icp48" target="mov2#mpkg2#opm7#cru6.ent1#att32"/>
+        <LinkParameter id="mov2#mpkg2#opm7#icu7#ln33#par867" name="approved_PASSING" source="mov2#mpkg2#opm7#icu7#icp37" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm7#icu7#ln33#par868" name="pharmacist_code_PASSING" source="mov2#mpkg2#opm7#icu7#icp48" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm7#icu7#ln33#par882" name="pharmacy_PASSING" source="mov2#mpkg2#opm7#icu7#icp101" passing="true"/>
       </Link>
       <Link id="mov2#mpkg2#opm7#icu7#ln35" name="Flow35" to="mov2#mpkg2#opm7#cru7" type="transport" validate="true" gr:bendpoints="373,161,-287,51">
         <LinkParameter id="mov2#mpkg2#opm7#icu7#ln35#par97" name="address_address" source="mov2#mpkg2#opm7#icu7#icp33" target="mov2#mpkg2#opm7#cru7.User#att40"/>
@@ -40,15 +40,19 @@
         <LinkParameter id="mov2#mpkg2#opm7#icu7#ln35#par115" name="surname_surname" source="mov2#mpkg2#opm7#icu7#icp46" target="mov2#mpkg2#opm7#cru7.User#att28"/>
         <LinkParameter id="mov2#mpkg2#opm7#icu7#ln35#par116" name="telephone_telephone" source="mov2#mpkg2#opm7#icu7#icp34" target="mov2#mpkg2#opm7#cru7.User#att41"/>
         <LinkParameter id="mov2#mpkg2#opm7#icu7#ln35#par119" name="username_username" source="mov2#mpkg2#opm7#icu7#icp53" target="mov2#mpkg2#opm7#cru7.userName"/>
+        <LinkParameter id="mov2#mpkg2#opm7#icu7#ln35#par874" name="approved_PASSING" source="mov2#mpkg2#opm7#icu7#icp37" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm7#icu7#ln35#par875" name="pharmacist_code_PASSING" source="mov2#mpkg2#opm7#icu7#icp48" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm7#icu7#ln35#par881" name="pharmacy_PASSING" source="mov2#mpkg2#opm7#icu7#icp101" passing="true"/>
       </Link>
       <InputCollectorParameter id="mov2#mpkg2#opm7#icu7#icp75" name="gender"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm7#icu7#icp101" name="pharmacy"/>
     </InputCollectorUnit>
     <OKCollectorUnit gr:x="1050" gr:y="95" id="mov2#mpkg2#opm7#okcu6" name="OK Port6"/>
     <KOCollectorUnit gr:x="1050" gr:y="275" id="mov2#mpkg2#opm7#kocu7" name="KO Port7"/>
     <SwitchUnit gr:x="475" gr:y="265" id="mov2#mpkg2#opm7#switch6" name="ifExists?">
       <Case value="1"/>
       <Case value="0"/>
-      <OKLink id="mov2#mpkg2#opm7#switch6#oln32" name="OKFlow32" to="mov2#mpkg2#opm7#cru7" automaticCoupling="true" code="0"/>
+      <OKLink id="mov2#mpkg2#opm7#switch6#oln32" name="OKFlow32" to="mov2#mpkg2#opm7#cru7" code="0" automaticCoupling="true"/>
       <OKLink id="mov2#mpkg2#opm7#switch6#oln46" name="OKFlow46" to="mov2#mpkg2#opm7#cnu3" automaticCoupling="true" code="1"/>
     </SwitchUnit>
     <ConnectUnit gr:x="330" gr:y="50" id="mov2#mpkg2#opm7#cnu3" name="InsertNewGroup" relationship="User2Group">
@@ -58,13 +62,24 @@
       <TargetSelector id="mov2#mpkg2#opm7#cnu3#su25" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg2#opm7#cnu3#su25#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
       </TargetSelector>
+      <OKLink id="mov2#mpkg2#opm7#cnu3#oln86" name="OKFlow86" to="mov2#mpkg2#opm7#cru6">
+        <LinkParameter id="mov2#mpkg2#opm7#cnu3#oln86#par878" name="approved_PASSING_approved" sourceLinkParameter="mov2#mpkg2#opm7#icu7#ln33#par867" target="mov2#mpkg2#opm7#cru6.ent1#att20"/>
+        <LinkParameter id="mov2#mpkg2#opm7#cnu3#oln86#par879" name="pharmacist_code_PASSING_pharmacist_code" sourceLinkParameter="mov2#mpkg2#opm7#icu7#ln33#par868" target="mov2#mpkg2#opm7#cru6.ent1#att32"/>
+        <LinkParameter id="mov2#mpkg2#opm7#cnu3#oln86#par880" name="Source cf [User]_User.cf(PharmacistToUser)" source="sourceuserOID" target="mov2#mpkg2#opm7#cru6.rel22#role44.userOID"/>
+        <LinkParameter id="mov2#mpkg2#opm7#cnu3#oln86#par884" name="pharmacy_PASSING_Pharmacy.oid(PharmacistToPharmacy)" sourceLinkParameter="mov2#mpkg2#opm7#icu7#ln33#par882" target="mov2#mpkg2#opm7#cru6.rel15#role30.ent19#att42"/>
+      </OKLink>
     </ConnectUnit>
     <CreateUnit gr:x="740" gr:y="95" id="mov2#mpkg2#opm7#cru6" name="CreatePharmacist" entity="ent1">
       <OKLink id="mov2#mpkg2#opm7#cru6#oln61" name="OKFlow61" to="mov2#mpkg2#opm7#okcu6" automaticCoupling="true"/>
       <KOLink id="mov2#mpkg2#opm7#cru6#kln20" name="KOFlow20" to="mov2#mpkg2#opm7#kocu7" automaticCoupling="true"/>
     </CreateUnit>
     <CreateUnit gr:x="760" gr:y="275" id="mov2#mpkg2#opm7#cru7" name="CreateUser" entity="User">
-      <OKLink id="mov2#mpkg2#opm7#cru7#oln60" name="OKFlow60" to="mov2#mpkg2#opm7#cru6" automaticCoupling="true"/>
+      <OKLink id="mov2#mpkg2#opm7#cru7#oln60" name="OKFlow60" to="mov2#mpkg2#opm7#cru6">
+        <LinkParameter id="mov2#mpkg2#opm7#cru7#oln60#par873" name="cf_User.cf(PharmacistToUser)" source="userOIDArray" target="mov2#mpkg2#opm7#cru6.rel22#role44.userOID"/>
+        <LinkParameter id="mov2#mpkg2#opm7#cru7#oln60#par876" name="approved_PASSING_approved" sourceLinkParameter="mov2#mpkg2#opm7#icu7#ln35#par874" target="mov2#mpkg2#opm7#cru6.ent1#att20"/>
+        <LinkParameter id="mov2#mpkg2#opm7#cru7#oln60#par877" name="pharmacist_code_PASSING_pharmacist_code" sourceLinkParameter="mov2#mpkg2#opm7#icu7#ln35#par875" target="mov2#mpkg2#opm7#cru6.ent1#att32"/>
+        <LinkParameter id="mov2#mpkg2#opm7#cru7#oln60#par883" name="pharmacy_PASSING_Pharmacy.oid(PharmacistToPharmacy)" sourceLinkParameter="mov2#mpkg2#opm7#icu7#ln35#par881" target="mov2#mpkg2#opm7#cru6.rel15#role30.ent19#att42"/>
+      </OKLink>
       <KOLink id="mov2#mpkg2#opm7#cru7#kln7" name="KOFlow7" to="mov2#mpkg2#opm7#kocu7" automaticCoupling="true"/>
     </CreateUnit>
   </OperationUnits>

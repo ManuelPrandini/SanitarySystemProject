@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area3#page3" name="Gestione dei farmaci">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="5" gr:y="0" id="sv2#area3#page3" name="Gestione dei farmaci">
   <ContentUnits>
     <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area3#page3#pwu3" name="Farmaci" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att6 ent2#att8 ent2#att7" linkOrder="sv2#area3#page3#pwu3#ln5 sv2#area3#page3#pwu3#ln9">
       <Link id="sv2#area3#page3#pwu3#ln5" name="Delete" to="sv2#area3#miu2" type="normal" validate="true" gr:bendpoints="27,124,-278,-6">

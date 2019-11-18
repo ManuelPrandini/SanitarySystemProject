@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="540" gr:y="5" id="sv2#area3#page4" name="Errore">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="545" gr:y="5" id="sv2#area3#page4" name="Errore">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#area3#page4#mssu1" name="Errore">
       <Message xml:space="preserve">Errore! Da gestire in seguito</Message>
