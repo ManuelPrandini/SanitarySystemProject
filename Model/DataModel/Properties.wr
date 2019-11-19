@@ -314,7 +314,7 @@
       <db:JoinColumn attribute="ent36#att78" name="drug_prescription_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="890" gr:y="410" id="ent5" name="Action" duration="persistent" attributeOrder="ent5#att2 ent5#att3 ent5#att10 ent5#att22 ent5#att23 ent5#att24 ent5#att25" db:database="db2" db:table="action">
+  <Entity gr:x="860" gr:y="425" id="ent5" name="Action" duration="persistent" attributeOrder="ent5#att2 ent5#att3 ent5#att10 ent5#att22 ent5#att23 ent5#att24 ent5#att25" db:database="db2" db:table="action">
     <Attribute id="ent5#att2" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent5#att3" name="title" type="string" key="false" db:column="title"/>
     <Attribute id="ent5#att10" name="description" type="text" key="false" db:column="description"/>
@@ -365,7 +365,7 @@
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="360" gr:y="755" id="ent18" name="Emergency_code" duration="persistent" attributeOrder="ent18#att38" db:database="db2" db:table="emergency_code">
+  <Entity gr:x="350" gr:y="745" id="ent18" name="Emergency_code" duration="persistent" attributeOrder="ent18#att38" db:database="db2" db:table="emergency_code">
     <Attribute id="ent18#att38" name="code" key="true" type="string" db:column="code"/>
   </Entity>
   <Relationship id="rel34" name="Emergency_operation_Emergency_code" sourceEntity="ent17" targetEntity="ent18" db:database="db2" db:table="emergency_operation">

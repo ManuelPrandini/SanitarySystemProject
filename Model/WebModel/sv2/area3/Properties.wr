@@ -1,23 +1,15 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="5" gr:y="285" id="sv2#area3" name="Farmaci" landmark="true" defaultPage="sv2#area3#page60" landmarks="sv2#area3#page60 sv2#area3#page59">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="15" gr:y="280" id="sv2#area3" name="Farmaci" landmark="true" defaultPage="sv2#area3#page60" landmarks="sv2#area3#page60 sv2#area3#page59">
   <OperationUnits>
-    <ModuleInstanceUnit gr:x="350" gr:y="0" id="sv2#area3#miu1" action="true" moduleId="mov2#mpkg2#opm2">
-      <KOLink id="sv2#area3#miu1#kln4" name="KOFlow4" to="sv2#area3#page4" automaticCoupling="true"/>
-      <OKLink id="sv2#area3#miu1#oln6" name="OKFlow6" to="sv2#area3#page3" automaticCoupling="true" gr:bendpoints="-101,-21,179,-56"/>
-    </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="275" gr:y="175" id="sv2#area3#miu2" action="true" moduleId="mov2#mpkg2#opm4">
-      <OKLink id="sv2#area3#miu2#oln3" name="OKFlow3" to="sv2#area3#page3" automaticCoupling="true" gr:bendpoints="-54,-41,156,99"/>
-      <KOLink id="sv2#area3#miu2#kln2" name="KOFlow2" to="sv2#area3#page4" automaticCoupling="true" gr:bendpoints="138,-26,-97,124"/>
-    </ModuleInstanceUnit>
-    <CreateUnit gr:x="575" gr:y="695" id="sv2#area3#cru10" name="CreateDrugQuantity" entity="ent21">
+    <CreateUnit gr:x="575" gr:y="645" id="sv2#area3#cru10" name="CreateDrugQuantity" entity="ent21">
       <OKLink id="sv2#area3#cru10#oln150" name="OKFlow150" to="sv2#area3#page60" automaticCoupling="true" gr:bendpoints="-107,-10,248,195"/>
     </CreateUnit>
-    <ModifyUnit gr:x="780" gr:y="700" id="sv2#area3#mfu13" name="UpdateDrugQuantity" entity="ent21">
+    <ModifyUnit gr:x="780" gr:y="650" id="sv2#area3#mfu13" name="UpdateDrugQuantity" entity="ent21">
       <Selector id="sv2#area3#mfu13#su74" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area3#mfu13#su74#kcond29" name="KeyCondition29" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#area3#mfu13#oln147" name="OKFlow147" to="sv2#area3#page60" automaticCoupling="true" gr:bendpoints="1,-219,561,1"/>
     </ModifyUnit>
-    <ScriptUnit id="sv2#area3#scu5" name="ScriptAggiornaQuantit&#224;" gr:x="610" gr:y="580">
+    <ScriptUnit id="sv2#area3#scu5" name="ScriptAggiornaQuantit&#224;" gr:x="610" gr:y="530">
       <ScriptInput id="sv2#area3#scu5#sci5" name="quantitaPresente"/>
       <ScriptInput id="sv2#area3#scu5#sci6" name="nuovaQuantita"/>
       <ScriptOutput id="sv2#area3#scu5#sco3" name="quantitaFinale"/>

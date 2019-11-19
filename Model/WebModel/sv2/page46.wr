@@ -1,8 +1,29 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="10" gr:y="175" id="sv2#page46" name="Home">
-  <ContentUnits/>
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="15" gr:y="110" id="sv2#page46" name="Home">
+  <ContentUnits>
+    <GetUnit id="sv2#page46#gtu8" name="Get17" gr:x="370" gr:y="10" contextParameters="UserCtxParam">
+      <Link id="sv2#page46#gtu8#ln73" name="Flow166" to="sv2#page46#seu16" type="transport" automaticCoupling="true" validate="true"/>
+    </GetUnit>
+    <SelectorUnit id="sv2#page46#seu16" name="SelectorUserNameSurname" gr:x="135" gr:y="0" entity="User">
+      <Selector id="sv2#page46#seu16#su55" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page46#seu16#su55#kcond28" name="KeyCondition41" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page46#seu16#ln74" name="Flow167" to="sv2#page46#mssu20" type="transport" validate="true">
+        <LinkParameter id="sv2#page46#seu16#ln74#par139" name="name_name" source="User#att27Array" target="sv2#page46#mssu20.sv2#page46#mssu20#ph2"/>
+        <LinkParameter id="sv2#page46#seu16#ln74#par140" name="surname_surname" source="User#att28Array" target="sv2#page46#mssu20.sv2#page46#mssu20#ph1"/>
+      </Link>
+    </SelectorUnit>
+    <MultiMessageUnit id="sv2#page46#mssu20" name="Welcome" gr:x="0" gr:y="20">
+      <Message xml:space="preserve">Benvenuto nel tuo account da Farmacista  $$name$$ $$surname$$ !
+Da questo pannello puoi controllare tutte le informazioni della tua farmacia.</Message>
+      <Placeholder id="sv2#page46#mssu20#ph1" name="surname"/>
+      <Placeholder id="sv2#page46#mssu20#ph2" name="name"/>
+    </MultiMessageUnit>
+  </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page46#mssu20"/>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

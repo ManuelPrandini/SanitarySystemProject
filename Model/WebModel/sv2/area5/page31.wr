@@ -1,0 +1,90 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="45" id="sv2#area5#page31" name="Accedi ai dati del cliente">
+  <ContentUnits>
+    <EntryUnit id="sv2#area5#page31#enu16" name="Inserisci CF" linkOrder="sv2#area5#page31#enu16#ln76" gr:x="0" gr:y="0" fieldOrder="sv2#area5#page31#enu16#fld12">
+      <Field id="sv2#area5#page31#enu16#fld12" name="CF" type="string" modifiable="true"/>
+      <Link id="sv2#area5#page31#enu16#ln76" name="Cerca" to="sv2#area5#page31#dau4" type="normal" validate="true">
+        <LinkParameter id="sv2#area5#page31#enu16#ln76#par142" name="CF_cf" source="sv2#area5#page31#enu16#fld12" target="sv2#area5#page31#dau4#su71#acond63"/>
+      </Link>
+    </EntryUnit>
+    <DataUnit id="sv2#area5#page31#dau4" name="Scheda Paziente" gr:x="135" gr:y="15" entity="ent6" displayAttributes="rel14#role28.userOID ent6#att11 rel14#role28.User#att27 rel14#role28.User#att28 rel14#role28.email rel14#role28.User#att29 rel14#role28.User#att40 rel14#role28.User#att12 ent6#att30 ent6#att31 rel14#role28.User#att41" linkOrder="sv2#area5#page31#dau4#ln92">
+      <Selector id="sv2#area5#page31#dau4#su71" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#area5#page31#dau4#su71#acond63" name="cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.userOID"/>
+        <AttributesCondition id="sv2#area5#page31#dau4#su71#acond64" name="cf!=sestesso" predicate="neq" booleanOperator="and" implied="false" attributes="rel14#role28.userOID"/>
+        <AttributesCondition id="sv2#area5#page31#dau4#su71#acond65" name="Approved" predicate="eq" booleanOperator="and" implied="false" value="1" attributes="ent6#att19"/>
+      </Selector>
+      <Link id="sv2#area5#page31#dau4#ln92" name="Procedi" to="sv2#area5#page30#mssu21" type="normal" validate="true">
+        <LinkParameter id="sv2#area5#page31#dau4#ln92#par146" name="PatientToUser.cf_PASSING" source="data.rel14#role28$userOID" passing="true"/>
+      </Link>
+    </DataUnit>
+    <GetUnit id="sv2#area5#page31#gtu9" name="CF" gr:x="0" gr:y="125" contextParameters="UserCtxParam">
+      <Link id="sv2#area5#page31#gtu9#ln81" name="Flow17" to="sv2#area5#page31#dau4" type="transport" validate="true">
+        <LinkParameter id="sv2#area5#page31#gtu9#ln81#par143" name="UserCtxParam.cf_cf!=sestesso" source="sv2#area5#page31#gtu9.UserCtxParam" target="sv2#area5#page31#dau4#su71#acond64"/>
+        <LinkParameter id="sv2#area5#page31#gtu9#ln81#par144" name="UserCtxParam.cf_PASSING" source="sv2#area5#page31#gtu9.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area5#page31#enu16">
+          <layout:Field field="sv2#area5#page31#enu16#fld12"/>
+          <layout:Link link="sv2#area5#page31#enu16#ln76"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area5#page31#dau4">
+          <layout:Attribute attribute="rel14#role28.userOID"/>
+          <layout:Attribute attribute="ent6#att11"/>
+          <layout:Attribute attribute="rel14#role28.User#att27"/>
+          <layout:Attribute attribute="rel14#role28.User#att28"/>
+          <layout:Attribute attribute="rel14#role28.email"/>
+          <layout:Attribute attribute="rel14#role28.User#att29"/>
+          <layout:Attribute attribute="rel14#role28.User#att40"/>
+          <layout:Attribute attribute="rel14#role28.User#att12"/>
+          <layout:Attribute attribute="ent6#att30"/>
+          <layout:Attribute attribute="ent6#att31"/>
+          <layout:Attribute attribute="rel14#role28.User#att41"/>
+          <layout:Link link="sv2#area5#page31#dau4#ln92"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

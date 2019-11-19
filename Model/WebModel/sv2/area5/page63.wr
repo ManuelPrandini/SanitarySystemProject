@@ -1,0 +1,34 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="655" gr:y="0" id="sv2#area5#page63" name="Consulta prescrizioni attive">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area5#page63#pwu9" name="Prescrizioni attive" sortable="true" checkable="false" useCountQuery="false" entity="ent36" displayAttributes="rel30#role60.ent5#att2 rel30#role60.ent5#att3 rel31#role62.ent2#att8 ent36#att80 ent36#att79 ent36#att81">
+      <Selector id="sv2#area5#page63#pwu9#su78" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#area5#page63#pwu9#su78#acond94" name="cf_patient" predicate="eq" booleanOperator="or" implied="false" attributes="rel30#role60.rel11#role16.rel14#role28.userOID"/>
+      </Selector>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area5#page63#pwu9">
+          <layout:Attribute attribute="rel30#role60.ent5#att2"/>
+          <layout:Attribute attribute="rel30#role60.ent5#att3"/>
+          <layout:Attribute attribute="rel31#role62.ent2#att8"/>
+          <layout:Attribute attribute="ent36#att80"/>
+          <layout:Attribute attribute="ent36#att79"/>
+          <layout:Attribute attribute="ent36#att81"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

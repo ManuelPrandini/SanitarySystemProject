@@ -1,0 +1,60 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="640" gr:y="240" id="sv2#area5#page61" name="Vendita farmaci senza prescrizioni">
+  <ContentUnits>
+    <MultiChoiceIndexUnit gr:x="75" gr:y="0" id="sv2#area5#page61#mciu1" name="Lista dei farmaci" entity="ent21" displayAttributes="rel23#role45.ent2#att8 ent21#att49">
+      <SortAttribute attribute="rel23#role45.ent2#att8" order="ascending"/>
+      <Selector id="sv2#area5#page61#mciu1#su75" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#area5#page61#mciu1#su75#acond66" name="pharmacyOid" predicate="eq" booleanOperator="and" implied="false" attributes="rel17#role34.ent19#att42"/>
+        <AttributesCondition id="sv2#area5#page61#mciu1#su75#acond92" name="isStandard" predicate="eq" booleanOperator="and" implied="false" attributes="rel23#role45.ent2#att7" value="true"/>
+        <AttributesCondition id="sv2#area5#page61#mciu1#su75#acond93" name="quantityPositive" predicate="gt" booleanOperator="and" implied="false" attributes="ent21#att49" value="0"/>
+      </Selector>
+    </MultiChoiceIndexUnit>
+    <GetUnit gr:x="0" gr:y="190" id="sv2#area5#page61#gtu11" name="GetUser" contextParameters="UserCtxParam">
+      <Link id="sv2#area5#page61#gtu11#ln101" name="Flow101" to="sv2#area5#page61#seu18" type="transport" validate="true">
+        <LinkParameter id="sv2#area5#page61#gtu11#ln101#par147" name="UserCtxParam.cf_cf" source="sv2#area5#page61#gtu11.UserCtxParam" target="sv2#area5#page61#seu18#su76#acond91"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit gr:x="185" gr:y="180" id="sv2#area5#page61#seu18" name="SelectorPharmacy" entity="ent1" distinctAttributes="rel15#role30.ent19#att42">
+      <Selector id="sv2#area5#page61#seu18#su76" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#area5#page61#seu18#su76#acond91" name="cf" predicate="eq" booleanOperator="and" implied="false" attributes="rel22#role44.userOID"/>
+      </Selector>
+      <Link id="sv2#area5#page61#seu18#ln102" name="Flow102" to="sv2#area5#page61#mciu1" type="transport" validate="true">
+        <LinkParameter id="sv2#area5#page61#seu18#ln102#par148" name="PharmacistToPharmacy.oid_pharmacyOid" source="rel15#role30$ent19#att42Array" target="sv2#area5#page61#mciu1#su75#acond66"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area5#page61#mciu1">
+          <layout:Attribute attribute="rel23#role45.ent2#att8"/>
+          <layout:Attribute attribute="ent21#att49"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
