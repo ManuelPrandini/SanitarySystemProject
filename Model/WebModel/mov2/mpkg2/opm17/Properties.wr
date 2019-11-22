@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="270" gr:y="395" id="mov2#mpkg2#opm17" name="Reset Password">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="260" gr:y="370" id="mov2#mpkg2#opm17" name="Reset Password">
   <OperationUnits>
     <InputCollectorUnit id="mov2#mpkg2#opm17#icu19" gr:x="70" gr:y="115" linkOrder="mov2#mpkg2#opm17#icu19#ln22">
       <InputCollectorParameter id="mov2#mpkg2#opm17#icu19#icp78" name="password"/>

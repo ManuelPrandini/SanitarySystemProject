@@ -1,8 +1,8 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="375" gr:y="95" id="sv2#area5#page30" name="Men&#249; cliente">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#area5#page30#mssu21" name="Scegli operazione" linkOrder="sv2#area5#page30#mssu21#ln95 sv2#area5#page30#mssu21#ln96">
-      <Link id="sv2#area5#page30#mssu21#ln95" name="Consulta prescrizioni attive" to="sv2#area5#page63#pwu9" type="normal" validate="true">
-        <LinkParameter id="sv2#area5#page30#mssu21#ln95#par149" name="PatientToUser.cf_PASSING_cf_patient" sourceLinkParameter="sv2#area5#page31#dau4#ln92#par146" target="sv2#area5#page63#pwu9#su78#acond94"/>
+      <Link id="sv2#area5#page30#mssu21#ln95" name="Consulta prescrizioni attive" to="sv2#area5#page63#seu30" type="normal" validate="true" gr:bendpoints="145,33,-240,-17">
+        <LinkParameter id="sv2#area5#page30#mssu21#ln95#par279" name="PatientToUser.cf_PASSING_cfPatient" sourceLinkParameter="sv2#area5#page31#dau4#ln92#par146" target="sv2#area5#page63#seu30#su80#acond97"/>
       </Link>
       <Link id="sv2#area5#page30#mssu21#ln96" name="Vendita farmaci senza prescrizione" to="sv2#area5#page61" automaticCoupling="true" type="normal" validate="true"/>
       <Message xml:space="preserve">Seleziona l'operazione che desideri effettuare:</Message>

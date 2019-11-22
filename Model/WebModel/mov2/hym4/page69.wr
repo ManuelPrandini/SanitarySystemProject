@@ -1,0 +1,66 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1185" gr:y="280" id="mov2#hym4#page69" name="Programma Ricovero">
+  <ContentUnits>
+    <EntryUnit id="mov2#hym4#page69#enu1" name="Programma Ricovero" ajaxEnableExpandedLinks="false" gr:x="0" gr:y="0" fieldOrder="mov2#hym4#page69#enu1#fld3 mov2#hym4#page69#enu1#fld11 mov2#hym4#page69#enu1#fld4 mov2#hym4#page69#enu1#sfld3 mov2#hym4#page69#enu1#fld13 mov2#hym4#page69#enu1#fld14 mov2#hym4#page69#enu1#fld15 mov2#hym4#page69#enu1#fld16" linkOrder="mov2#hym4#page69#enu1#ln110 mov2#hym4#page69#enu1#ln114 mov2#hym4#page69#enu1#ln135">
+      <Field id="mov2#hym4#page69#enu1#fld3" name="Ospedale" type="string" preloaded="true"/>
+      <SelectionField id="mov2#hym4#page69#enu1#sfld3" name="Bed" type="string" ajaxEventEnabled="true" ajaxEventLink="mov2#hym4#page69#enu1#ln114"/>
+      <Field id="mov2#hym4#page69#enu1#fld4" name="Data Fine" ajaxEventEnabled="true" type="date" modifiable="true" ajaxEventLink="mov2#hym4#page69#enu1#ln110" ajaxEventIndicator="true"/>
+      <Field id="mov2#hym4#page69#enu1#fld11" name="Data Inizio" type="date" modifiable="true" ajaxEventEnabled="false" ajaxEventIndicator="true"/>
+      <Link id="mov2#hym4#page69#enu1#ln110" name="sceltaDate" to="mov2#hym4#seu32" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page69#enu1#ln110#par201" name="Data Fine_endDate" source="mov2#hym4#page69#enu1#fld11" target="mov2#hym4#seu32#su82#acond51"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln110#par278" name="Data Inizio_startDate" source="mov2#hym4#page69#enu1#fld11" target="mov2#hym4#seu32#su82#acond104"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln110#par324" name="Data Fine_startDateSecond" source="mov2#hym4#page69#enu1#fld4" target="mov2#hym4#seu32#su82#acond98"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln110#par325" name="Data Fine_endDateSecond" source="mov2#hym4#page69#enu1#fld4" target="mov2#hym4#seu32#su82#acond100"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln110#par326" name="Data Fine_endDateThird" source="mov2#hym4#page69#enu1#fld4" target="mov2#hym4#seu32#su82#acond102"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln110#par331" name="Data Inizio_startDateThird" source="mov2#hym4#page69#enu1#fld11" target="mov2#hym4#seu32#su82#acond101"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln110#par984" name="idHospital_PASSING_hospital" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par982" target="mov2#hym4#seu32#su82#acond99"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln110#par985" name="idHospital_PASSING" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par982" passing="true"/>
+      </Link>
+      <Field id="mov2#hym4#page69#enu1#fld13" name="Nome sala ricovero" type="string" preloaded="true"/>
+      <Link id="mov2#hym4#page69#enu1#ln114" name="NomeRecovery" to="mov2#hym4#seu29" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page69#enu1#ln114#par374" name="Bed_oidLetto" source="mov2#hym4#page69#enu1#sfld3" target="mov2#hym4#seu29#su79#acond103"/>
+      </Link>
+      <Field id="mov2#hym4#page69#enu1#fld14" name="Piano" type="integer" preloaded="true"/>
+      <Field id="mov2#hym4#page69#enu1#fld16" name="Descrizione" type="string" modifiable="true"/>
+      <Field id="mov2#hym4#page69#enu1#fld15" name="Titolo" type="string" modifiable="true"/>
+      <Link id="mov2#hym4#page69#enu1#ln135" name="Registra ricovero" to="mov2#hym4#miu1" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page69#enu1#ln135#par651" name="Bed_bedOid" source="mov2#hym4#page69#enu1#sfld3" target="mov2#hym4#miu1.mov2#mpkg2#opm11#icu21#icp103"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln135#par652" name="Data Fine_dataFine" source="mov2#hym4#page69#enu1#fld4" target="mov2#hym4#miu1.mov2#mpkg2#opm11#icu21#icp105"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln135#par653" name="Data Inizio_dataInizio" source="mov2#hym4#page69#enu1#fld11" target="mov2#hym4#miu1.mov2#mpkg2#opm11#icu21#icp104"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln135#par654" name="Descrizione_Descrizione" source="mov2#hym4#page69#enu1#fld16" target="mov2#hym4#miu1.mov2#mpkg2#opm11#icu21#icp108"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln135#par655" name="Titolo_Titolo" source="mov2#hym4#page69#enu1#fld15" target="mov2#hym4#miu1.mov2#mpkg2#opm11#icu21#icp107"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln135#par987" name="doctorCode_PASSING_Dottore" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par981" target="mov2#hym4#miu1.mov2#mpkg2#opm11#icu21#icp106"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln135#par988" name="patientCode_PASSING_Paziente" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par983" target="mov2#hym4#miu1.mov2#mpkg2#opm11#icu21#icp84"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym4#page69#enu1">
+          <layout:Field field="mov2#hym4#page69#enu1#fld3"/>
+          <layout:Field field="mov2#hym4#page69#enu1#fld11"/>
+          <layout:Field field="mov2#hym4#page69#enu1#fld4"/>
+          <layout:Field field="mov2#hym4#page69#enu1#sfld3"/>
+          <layout:Field field="mov2#hym4#page69#enu1#fld13"/>
+          <layout:Field field="mov2#hym4#page69#enu1#fld14"/>
+          <layout:Field field="mov2#hym4#page69#enu1#fld15"/>
+          <layout:Field field="mov2#hym4#page69#enu1#fld16"/>
+          <layout:Link link="mov2#hym4#page69#enu1#ln110"/>
+          <layout:Link link="mov2#hym4#page69#enu1#ln114"/>
+          <layout:Link link="mov2#hym4#page69#enu1#ln135"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,14 +1,38 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1060" gr:y="115" id="mov2#hym4#page48" name="SceltaRicovero">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1190" gr:y="5" id="mov2#hym4#page48" name="SceltaRicovero">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page48#mssu17" name="Vuoi programmare un ricovero">
+    <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page48#mssu17" name="Vuoi programmare un ricovero" linkOrder="mov2#hym4#page48#mssu17#ln129 mov2#hym4#page48#mssu17#ln131">
       <Message xml:space="preserve">Vuoi programmare un ricovero?</Message>
+      <Link id="mov2#hym4#page48#mssu17#ln129" name="Si" to="mov2#hym4#page69#enu1" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page48#mssu17#ln129#par980" name="nameHospital_PASSING_Ospedale" sourceLinkParameter="mov2#hym4#pcu4#oln164#par978" target="mov2#hym4#page69#enu1#fld3_slot"/>
+        <LinkParameter id="mov2#hym4#page48#mssu17#ln129#par981" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#pcu4#oln164#par976" passing="true"/>
+        <LinkParameter id="mov2#hym4#page48#mssu17#ln129#par982" name="idHospital_PASSING" sourceLinkParameter="mov2#hym4#pcu4#oln164#par977" passing="true"/>
+        <LinkParameter id="mov2#hym4#page48#mssu17#ln129#par983" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#pcu4#oln164#par979" passing="true"/>
+      </Link>
+      <Link id="mov2#hym4#page48#mssu17#ln131" name="No" to="mov2#hym4#page4" automaticCoupling="true" type="normal" validate="true"/>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="mov2#hym4#page48#mssu17"/>
+        <layout:Unit unitId="mov2#hym4#page48#mssu17">
+          <layout:Link link="mov2#hym4#page48#mssu17#ln129"/>
+          <layout:Link link="mov2#hym4#page48#mssu17#ln131"/>
+        </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

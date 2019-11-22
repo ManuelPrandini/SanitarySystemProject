@@ -1,9 +1,13 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="620" gr:y="410" id="mov2#hym4#page29" name="Errore!">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="630" gr:y="510" id="mov2#hym4#page29" name="Errore!">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page29#mssu15" name="Medicina gi&#224; prescritta" linkOrder="mov2#hym4#page29#mssu15#ln89">
       <Message xml:space="preserve">Attenzione! hai gi&#224; prescritto per questa visita questo tipo di medicina</Message>
-      <Link id="mov2#hym4#page29#mssu15#ln89" name="Torna a prescrizione" to="mov2#hym4#page16#enu17" type="normal" validate="true">
-        <LinkParameter id="mov2#hym4#page29#mssu15#ln89#par573" name="id_visit_PASSING_id_visit" sourceLinkParameter="mov2#hym4#miu21#kln52#par572" target="mov2#hym4#page16#enu17#fld104_slot"/>
+      <Link id="mov2#hym4#page29#mssu15#ln89" name="Torna a prescrizione" to="mov2#hym4#pcu7" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page29#mssu15#ln89#par1036" name="doctorCode_PASSING_doctorCode" sourceLinkParameter="mov2#hym4#miu21#kln52#par1032" target="mov2#hym4#pcu7#pcp22"/>
+        <LinkParameter id="mov2#hym4#page29#mssu15#ln89#par1037" name="idHospital_PASSING_idHospital" sourceLinkParameter="mov2#hym4#miu21#kln52#par1033" target="mov2#hym4#pcu7#pcp23"/>
+        <LinkParameter id="mov2#hym4#page29#mssu15#ln89#par1038" name="id_visit_PASSING_idVisit" sourceLinkParameter="mov2#hym4#miu21#kln52#par572" target="mov2#hym4#pcu7#pcp24"/>
+        <LinkParameter id="mov2#hym4#page29#mssu15#ln89#par1039" name="nameHospital_PASSING_nameHospital" sourceLinkParameter="mov2#hym4#miu21#kln52#par1034" target="mov2#hym4#pcu7#pcp20"/>
+        <LinkParameter id="mov2#hym4#page29#mssu15#ln89#par1040" name="patientCode_PASSING_patientCode" sourceLinkParameter="mov2#hym4#miu21#kln52#par1035" target="mov2#hym4#pcu7#pcp21"/>
       </Link>
     </MultiMessageUnit>
   </ContentUnits>

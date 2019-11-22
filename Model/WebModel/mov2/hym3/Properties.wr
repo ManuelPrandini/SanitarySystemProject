@@ -1,4 +1,4 @@
-<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="765" gr:y="320" id="mov2#hym3" name="RegisterVisit">
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="680" gr:y="275" id="mov2#hym3" name="RegisterVisit">
   <OperationUnits>
     <InputCollectorUnit gr:x="145" gr:y="120" id="mov2#hym3#icu10">
       <InputCollectorParameter id="mov2#hym3#icu10#icp83" name="patient"/>

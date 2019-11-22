@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area7#page65" name="Registra Visita" landmark="true" gr:x="290" gr:y="355">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area7#page65#pwu1" name="Lista visite" sortable="true" checkable="false" useCountQuery="false" entity="ent29" displayAttributes="ent5#att22 ent5#att24 ent5#att25 rel16#role31.ent10#att50 rel16#role31.rel37#role74.ent4#att14" linkOrder="sv1#area7#page65#pwu1#ln78">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area7#page65#pwu1" name="Lista visite" sortable="true" checkable="false" useCountQuery="false" entity="ent29" displayAttributes="ent5#att22 ent5#att24 ent5#att25 rel16#role31.ent10#att50 rel16#role31.rel37#role74.ent4#att14 rel16#role31.rel37#role74.ent4#att1 rel11#role16.ent6#att11 rel3#role3.ent9#att33" linkOrder="sv1#area7#page65#pwu1#ln78">
       <Selector id="sv1#area7#page65#pwu1#su2" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond9" name="cfPaziente" predicate="eq" booleanOperator="and" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
         <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond16" name="cfDottore" predicate="eq" booleanOperator="and" implied="false" attributes="rel3#role3.rel36#role72.userOID"/>
@@ -15,7 +15,10 @@
         <LinkParameter id="sv1#area7#page65#pwu1#ln78#par483" name="VisitToVisit_Room.name_room" source="data[].rel16#role31$ent10#att50" target="sv1#area7#miu19.mov2#hym4#icu11#icp93"/>
         <LinkParameter id="sv1#area7#page65#pwu1#ln78#par489" name="UserCtxParam.cf_PASSING_doctor_cf" sourceLinkParameter="sv1#area7#page67#mssu9#ln134#par488" target="sv1#area7#miu19.mov2#hym4#icu11#icp88"/>
         <LinkParameter id="sv1#area7#page65#pwu1#ln78#par490" name="PatientToUser.cf_PASSING_patient_cf" sourceLinkParameter="sv1#area7#page67#mssu9#ln134#par487" target="sv1#area7#miu19.mov2#hym4#icu11#icp89"/>
-        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par504" name="DoctorToHospital.name_PASSING_hospital" sourceLinkParameter="sv1#area7#page67#mssu9#ln134#par503" target="sv1#area7#miu19.mov2#hym4#icu11#icp94"/>
+        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par504" name="DoctorToHospital.name_PASSING_hospital" target="sv1#area7#miu19.mov2#hym4#icu11#icp94" source="data[].rel16#role31$rel37#role74$ent4#att14"/>
+        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par646" name="VisitToVisit_Room.RoomToHospital.id_hospital_id_hospital" source="data[].rel16#role31$rel37#role74$ent4#att1" target="sv1#area7#miu19.mov2#hym4#icu11#icp35"/>
+        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par753" name="VisitToDoctor.doctor_code_doctorCode" source="data[].rel3#role3$ent9#att33" target="sv1#area7#miu19.mov2#hym4#icu11#icp109"/>
+        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par754" name="VisitToPatient.patient_code_patientCode" source="data[].rel11#role16$ent6#att11" target="sv1#area7#miu19.mov2#hym4#icu11#icp110"/>
       </Link>
     </PowerIndexUnit>
   </ContentUnits>
@@ -29,6 +32,9 @@
           <layout:Attribute attribute="ent5#att25"/>
           <layout:Attribute attribute="rel16#role31.ent10#att50"/>
           <layout:Attribute attribute="rel16#role31.rel37#role74.ent4#att14"/>
+          <layout:Attribute attribute="rel16#role31.rel37#role74.ent4#att1"/>
+          <layout:Attribute attribute="rel11#role16.ent6#att11"/>
+          <layout:Attribute attribute="rel3#role3.ent9#att33"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

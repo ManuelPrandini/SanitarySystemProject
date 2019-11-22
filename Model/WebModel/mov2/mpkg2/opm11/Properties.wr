@@ -1,5 +1,28 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="275" gr:y="470" id="mov2#mpkg2#opm11" name="RegisterRicovery">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="255" gr:y="425" id="mov2#mpkg2#opm11" name="RegisterRicovery">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg2#opm11#icu21" name="Input Collector" gr:x="30" gr:y="60"/>
+    <InputCollectorUnit id="mov2#mpkg2#opm11#icu21" gr:x="95" gr:y="185">
+      <InputCollectorParameter id="mov2#mpkg2#opm11#icu21#icp84" name="Paziente"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm11#icu21#icp103" name="bedOid"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm11#icu21#icp104" name="dataInizio"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm11#icu21#icp105" name="dataFine"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm11#icu21#icp106" name="Dottore"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm11#icu21#icp107" name="Titolo"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm11#icu21#icp108" name="Descrizione"/>
+      <OKLink id="mov2#mpkg2#opm11#icu21#oln155" name="OKFlow155" to="mov2#mpkg2#opm11#cru11">
+        <LinkParameter id="mov2#mpkg2#opm11#icu21#oln155#par378" name="bedOid_Bed_place.oid(RecoveryToBed_place)" source="mov2#mpkg2#opm11#icu21#icp103" target="mov2#mpkg2#opm11#cru11.rel20#role39.ent25#att55"/>
+        <LinkParameter id="mov2#mpkg2#opm11#icu21#oln155#par385" name="Descrizione_description" source="mov2#mpkg2#opm11#icu21#icp108" target="mov2#mpkg2#opm11#cru11.ent5#att10"/>
+        <LinkParameter id="mov2#mpkg2#opm11#icu21#oln155#par386" name="Dottore_Doctor.doctor_code(VisitToDoctor)" source="mov2#mpkg2#opm11#icu21#icp106" target="mov2#mpkg2#opm11#cru11.rel3#role3.ent9#att33"/>
+        <LinkParameter id="mov2#mpkg2#opm11#icu21#oln155#par387" name="dataFine_endDate" source="mov2#mpkg2#opm11#icu21#icp105" target="mov2#mpkg2#opm11#cru11.ent5#att23"/>
+        <LinkParameter id="mov2#mpkg2#opm11#icu21#oln155#par428" name="Paziente_Patient.patient_code(VisitToPatient)" source="mov2#mpkg2#opm11#icu21#icp84" target="mov2#mpkg2#opm11#cru11.rel11#role16.ent6#att11"/>
+        <LinkParameter id="mov2#mpkg2#opm11#icu21#oln155#par430" name="dataInizio_startDate" source="mov2#mpkg2#opm11#icu21#icp104" target="mov2#mpkg2#opm11#cru11.ent5#att22"/>
+        <LinkParameter id="mov2#mpkg2#opm11#icu21#oln155#par645" name="Titolo_title" source="mov2#mpkg2#opm11#icu21#icp107" target="mov2#mpkg2#opm11#cru11.ent5#att3"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="410" gr:y="230" id="mov2#mpkg2#opm11#cru11" name="CreateRecovery" entity="ent31">
+      <OKLink id="mov2#mpkg2#opm11#cru11#oln156" name="OKFlow156" to="mov2#mpkg2#opm11#okcu20" automaticCoupling="true"/>
+      <KOLink id="mov2#mpkg2#opm11#cru11#kln56" name="KOFlow56" to="mov2#mpkg2#opm11#kocu21" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="780" gr:y="150" id="mov2#mpkg2#opm11#okcu20" name="Success"/>
+    <KOCollectorUnit gr:x="780" gr:y="330" id="mov2#mpkg2#opm11#kocu21" name="Error"/>
   </OperationUnits>
 </OperationModule>

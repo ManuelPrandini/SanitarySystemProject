@@ -1,11 +1,20 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="840" gr:y="295" id="mov2#hym4#page28" name="Altra prescrizione">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="835" gr:y="310" id="mov2#hym4#page28" name="Altra prescrizione">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page28#mssu14" name="altra prescrizione" linkOrder="mov2#hym4#page28#mssu14#ln86 mov2#hym4#page28#mssu14#ln87">
       <Message xml:space="preserve">Vuoi aggiungere un ' altra prescrizione?</Message>
-      <Link id="mov2#hym4#page28#mssu14#ln86" name="Si" to="mov2#hym4#page16#enu17" type="normal" validate="true">
-        <LinkParameter id="mov2#hym4#page28#mssu14#ln86#par567" name="id_visit_PASSING_id_visit" sourceLinkParameter="mov2#hym4#miu21#oln99#par549" target="mov2#hym4#page16#enu17#fld104_slot"/>
+      <Link id="mov2#hym4#page28#mssu14#ln86" name="Si" to="mov2#hym4#pcu7" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page28#mssu14#ln86#par1009" name="id_visit_PASSING_idVisit" sourceLinkParameter="mov2#hym4#miu21#oln99#par549" target="mov2#hym4#pcu7#pcp24"/>
+        <LinkParameter id="mov2#hym4#page28#mssu14#ln86#par1028" name="doctorCode_PASSING_doctorCode" sourceLinkParameter="mov2#hym4#miu21#oln99#par1020" target="mov2#hym4#pcu7#pcp22"/>
+        <LinkParameter id="mov2#hym4#page28#mssu14#ln86#par1029" name="idHospital_PASSING_idHospital" sourceLinkParameter="mov2#hym4#miu21#oln99#par1021" target="mov2#hym4#pcu7#pcp23"/>
+        <LinkParameter id="mov2#hym4#page28#mssu14#ln86#par1030" name="nameHospital_PASSING_nameHospital" sourceLinkParameter="mov2#hym4#miu21#oln99#par1022" target="mov2#hym4#pcu7#pcp20"/>
+        <LinkParameter id="mov2#hym4#page28#mssu14#ln86#par1031" name="patientCode_PASSING_patientCode" sourceLinkParameter="mov2#hym4#miu21#oln99#par1023" target="mov2#hym4#pcu7#pcp21"/>
       </Link>
-      <Link id="mov2#hym4#page28#mssu14#ln87" name="No" to="mov2#hym4#page48#mssu17" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="mov2#hym4#page28#mssu14#ln87" name="No" to="mov2#hym4#pcu4" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page28#mssu14#ln87#par1024" name="doctorCode_PASSING_doctorCode" sourceLinkParameter="mov2#hym4#miu21#oln99#par1020" target="mov2#hym4#pcu4#pcp13"/>
+        <LinkParameter id="mov2#hym4#page28#mssu14#ln87#par1025" name="idHospital_PASSING_idHospital" sourceLinkParameter="mov2#hym4#miu21#oln99#par1021" target="mov2#hym4#pcu4#pcp14"/>
+        <LinkParameter id="mov2#hym4#page28#mssu14#ln87#par1026" name="nameHospital_PASSING_nameHospital" sourceLinkParameter="mov2#hym4#miu21#oln99#par1022" target="mov2#hym4#pcu4#pcp11"/>
+        <LinkParameter id="mov2#hym4#page28#mssu14#ln87#par1027" name="patientCode_PASSING_patientCode" sourceLinkParameter="mov2#hym4#miu21#oln99#par1023" target="mov2#hym4#pcu4#pcp12"/>
+      </Link>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

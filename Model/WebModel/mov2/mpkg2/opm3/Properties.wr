@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg2#opm3" name="RegisterPatient" gr:x="10" gr:y="65">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg2#opm3" name="RegisterPatient" gr:x="35" gr:y="60">
   <OperationUnits>
     <InputCollectorUnit id="mov2#mpkg2#opm3#icu3" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov2#mpkg2#opm3#icu3#icp9" name="email"/>

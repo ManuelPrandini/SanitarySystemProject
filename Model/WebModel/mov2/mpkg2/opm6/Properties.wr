@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="225" gr:y="200" id="mov2#mpkg2#opm6" name="RejectUser">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="275" gr:y="180" id="mov2#mpkg2#opm6" name="RejectUser">
   <OperationUnits>
     <InputCollectorUnit id="mov2#mpkg2#opm6#icu6" gr:x="30" gr:y="190">
       <InputCollectorParameter id="mov2#mpkg2#opm6#icu6#icp24" name="inputPrimaryKey"/>

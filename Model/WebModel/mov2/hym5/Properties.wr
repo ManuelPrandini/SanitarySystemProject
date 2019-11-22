@@ -1,4 +1,4 @@
-<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="760" gr:y="400" id="mov2#hym5" name="Cartella Clinica" landmarks="mov2#hym5#page40">
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="675" gr:y="340" id="mov2#hym5" name="Cartella Clinica" landmarks="mov2#hym5#page40">
   <OperationUnits>
     <InputCollectorUnit gr:x="30" gr:y="250" id="mov2#hym5#icu24">
       <InputCollectorParameter id="mov2#hym5#icu24#icp102" name="PatientCF"/>

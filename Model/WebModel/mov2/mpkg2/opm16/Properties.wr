@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg2#opm16" name="CheckReset Code" gr:x="260" gr:y="335">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg2#opm16" name="CheckReset Code" gr:x="255" gr:y="310">
   <OperationUnits>
     <InputCollectorUnit id="mov2#mpkg2#opm16#icu18" gr:x="-40" gr:y="115">
       <InputCollectorParameter id="mov2#mpkg2#opm16#icu18#icp25" name="code"/>

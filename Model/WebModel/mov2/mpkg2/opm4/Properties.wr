@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="200" gr:y="65" id="mov2#mpkg2#opm4" name="Delete Drug">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="270" gr:y="60" id="mov2#mpkg2#opm4" name="Delete Drug">
   <OperationUnits>
     <InputCollectorUnit id="mov2#mpkg2#opm4#icu4" gr:x="25" gr:y="85">
       <InputCollectorParameter id="mov2#mpkg2#opm4#icu4#icp8" name="Drug id"/>

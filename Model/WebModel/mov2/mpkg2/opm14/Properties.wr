@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg2#opm14" name="CheckExistingPatient" gr:x="5" gr:y="315">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg2#opm14" name="CheckExistingPatient" gr:x="10" gr:y="310">
   <OperationUnits>
     <InputCollectorUnit id="mov2#mpkg2#opm14#icu14" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov2#mpkg2#opm14#icu14#icp60" name="password"/>

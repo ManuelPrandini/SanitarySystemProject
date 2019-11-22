@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page36" name="Pharmacist Info(no Exists)" gr:x="785" gr:y="360">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="60" id="mov2#hym1#page36#enu12" name="registration form" linkOrder="mov2#hym1#page36#enu12#ln41" fieldOrder="mov2#hym1#page36#enu12#fld47 mov2#hym1#page36#enu12#fld50 mov2#hym1#page36#enu12#fld53 mov2#hym1#page36#enu12#sfld14 mov2#hym1#page36#enu12#fld46 mov2#hym1#page36#enu12#fld45 mov2#hym1#page36#enu12#sfld12 mov2#hym1#page36#enu12#sfld15 mov2#hym1#page36#enu12#fld54 mov2#hym1#page36#enu12#fld48 mov2#hym1#page36#enu12#fld51 mov2#hym1#page36#enu12#fld52 mov2#hym1#page36#enu12#sfld55">
+    <EntryUnit gr:x="0" gr:y="60" id="mov2#hym1#page36#enu12" name="registration form" fieldOrder="mov2#hym1#page36#enu12#fld47 mov2#hym1#page36#enu12#fld50 mov2#hym1#page36#enu12#fld53 mov2#hym1#page36#enu12#sfld14 mov2#hym1#page36#enu12#fld46 mov2#hym1#page36#enu12#fld45 mov2#hym1#page36#enu12#sfld15 mov2#hym1#page36#enu12#fld54 mov2#hym1#page36#enu12#fld48 mov2#hym1#page36#enu12#fld51 mov2#hym1#page36#enu12#fld52 mov2#hym1#page36#enu12#sfld55" linkOrder="mov2#hym1#page36#enu12#ln41">
       <Link id="mov2#hym1#page36#enu12#ln41" name="Submit" to="mov2#hym1#miu6" type="normal" validate="true" gr:bendpoints="467,-1,-73,129">
         <LinkParameter id="mov2#hym1#page36#enu12#ln41#par120" name="0_exists?" sourceValue="0" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp74"/>
         <LinkParameter id="mov2#hym1#page36#enu12#ln41#par125" name="0_approved" sourceValue="0" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp37"/>
@@ -21,72 +21,43 @@
         <LinkParameter id="mov2#hym1#page36#enu12#ln41#par863" name="pharmacy_pharmacy" source="mov2#hym1#page36#enu12#sfld55" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp101"/>
       </Link>
       <Field id="mov2#hym1#page36#enu12#fld55" name="username" type="string" hidden="true">
-        <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page36#enu12#fld55#mnd24" name="Mandatory24"/>
-        </VRules>
+        <VRules/>
       </Field>
       <Field id="mov2#hym1#page36#enu12#fld54" name="telephone" type="string" modifiable="true">
-        <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page36#enu12#fld54#mnd23" name="Mandatory23"/>
-        </VRules>
+        <VRules/>
       </Field>
       <Field id="mov2#hym1#page36#enu12#fld53" name="surname" type="string" modifiable="true">
-        <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page36#enu12#fld53#mnd22" name="Mandatory22"/>
-        </VRules>
+        <VRules/>
       </Field>
       <Field id="mov2#hym1#page36#enu12#fld52" name="pharmacist code" type="string" modifiable="true">
-        <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page36#enu12#fld52#mnd21" name="Mandatory21"/>
-        </VRules>
+        <VRules/>
       </Field>
       <Field id="mov2#hym1#page36#enu12#fld51" name="password" type="password" modifiable="true">
-        <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page36#enu12#fld51#mnd20" name="Mandatory20"/>
-        </VRules>
+        <VRules/>
       </Field>
       <Field id="mov2#hym1#page36#enu12#fld50" name="name" type="string" modifiable="true">
-        <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page36#enu12#fld50#mnd19" name="Mandatory19"/>
-        </VRules>
+        <VRules/>
       </Field>
       <SelectionField id="mov2#hym1#page36#enu12#sfld15" name="live in" type="string" modifiable="true">
-        <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page36#enu12#sfld15#mnd51" name="Mandatory51"/>
-        </VRules>
+        <VRules/>
       </SelectionField>
       <SelectionField id="mov2#hym1#page36#enu12#sfld14" name="gender" type="string" modifiable="true" slotOrder="mov2#hym1#page36#enu12#sfld14#slot2">
         <Slot id="mov2#hym1#page36#enu12#sfld14#slot2" name="Gender Option" label="true" output="true" value="Male|Female"/>
-        <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page36#enu12#sfld14#mnd45" name="Mandatory45"/>
-        </VRules>
+        <VRules/>
       </SelectionField>
       <Field id="mov2#hym1#page36#enu12#fld48" name="email" type="string" modifiable="true">
-        <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page36#enu12#fld48#mnd18" name="Mandatory18"/>
-          <EMailValidationRule id="mov2#hym1#page36#enu12#fld48#email2" name="EMail2"/>
-        </VRules>
+        <VRules/>
       </Field>
       <Field id="mov2#hym1#page36#enu12#fld47" name="cf" type="string" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page36#enu12#fld47#mnd17" name="Mandatory17"/>
           <RegularExpressionValidationRule id="mov2#hym1#page36#enu12#fld47#regex2" name="CF_check" regex="^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]$ "/>
         </VRules>
       </Field>
-      <SelectionField id="mov2#hym1#page36#enu12#sfld12" name="born in" type="string" modifiable="true">
-        <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page36#enu12#sfld12#mnd29" name="Mandatory29"/>
-        </VRules>
-      </SelectionField>
       <Field id="mov2#hym1#page36#enu12#fld46" name="birthday" type="date" modifiable="true">
-        <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page36#enu12#fld46#mnd16" name="Mandatory16"/>
-        </VRules>
+        <VRules/>
       </Field>
       <Field id="mov2#hym1#page36#enu12#fld45" name="address" type="string" modifiable="true">
-        <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page36#enu12#fld45#mnd15" name="Mandatory15"/>
-        </VRules>
+        <VRules/>
       </Field>
       <SelectionField id="mov2#hym1#page36#enu12#sfld55" name="pharmacy" type="string"/>
     </EntryUnit>
@@ -117,7 +88,6 @@
           <layout:Field field="mov2#hym1#page36#enu12#sfld14"/>
           <layout:Field field="mov2#hym1#page36#enu12#fld46"/>
           <layout:Field field="mov2#hym1#page36#enu12#fld45"/>
-          <layout:Field field="mov2#hym1#page36#enu12#sfld12"/>
           <layout:Field field="mov2#hym1#page36#enu12#sfld15"/>
           <layout:Field field="mov2#hym1#page36#enu12#fld54"/>
           <layout:Field field="mov2#hym1#page36#enu12#fld48"/>

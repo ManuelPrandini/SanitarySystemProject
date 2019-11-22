@@ -2,10 +2,19 @@
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page13#mssu12" name="scelta prescrizioni" linkOrder="mov2#hym4#page13#mssu12#ln77 mov2#hym4#page13#mssu12#ln52">
       <Message xml:space="preserve">Vuoi aggiungere una prescrizione?</Message>
-      <Link id="mov2#hym4#page13#mssu12#ln77" name="Si" to="mov2#hym4#page16#enu17" type="normal" validate="true">
-        <LinkParameter id="mov2#hym4#page13#mssu12#ln77#par548" name="oid_PASSING_id_visit" sourceLinkParameter="mov2#hym4#mfu5#oln100#par547" target="mov2#hym4#page16#enu17#fld104_slot"/>
+      <Link id="mov2#hym4#page13#mssu12#ln77" name="Si" to="mov2#hym4#pcu7" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page13#mssu12#ln77#par1005" name="doctorCode_PASSING_doctorCode" sourceLinkParameter="mov2#hym4#mfu5#oln100#par784" target="mov2#hym4#pcu7#pcp22"/>
+        <LinkParameter id="mov2#hym4#page13#mssu12#ln77#par1006" name="id_hospital_PASSING_idHospital" sourceLinkParameter="mov2#hym4#mfu5#oln100#par787" target="mov2#hym4#pcu7#pcp23"/>
+        <LinkParameter id="mov2#hym4#page13#mssu12#ln77#par1007" name="hospital_PASSING_nameHospital" sourceLinkParameter="mov2#hym4#mfu5#oln100#par786" target="mov2#hym4#pcu7#pcp20"/>
+        <LinkParameter id="mov2#hym4#page13#mssu12#ln77#par1008" name="patientCode_PASSING_patientCode" sourceLinkParameter="mov2#hym4#mfu5#oln100#par785" target="mov2#hym4#pcu7#pcp21"/>
+        <LinkParameter id="mov2#hym4#page13#mssu12#ln77#par1010" name="id_visit_PASSING_idVisit" sourceLinkParameter="mov2#hym4#mfu5#oln100#par749" target="mov2#hym4#pcu7#pcp24"/>
       </Link>
-      <Link id="mov2#hym4#page13#mssu12#ln52" name="No" to="mov2#hym4#page48#mssu17" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="mov2#hym4#page13#mssu12#ln52" name="No" to="mov2#hym4#pcu4" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page13#mssu12#ln52#par966" name="hospital_PASSING_nameHospital" sourceLinkParameter="mov2#hym4#mfu5#oln100#par786" target="mov2#hym4#pcu4#pcp11"/>
+        <LinkParameter id="mov2#hym4#page13#mssu12#ln52#par970" name="doctorCode_PASSING_doctorCode" sourceLinkParameter="mov2#hym4#mfu5#oln100#par784" target="mov2#hym4#pcu4#pcp13"/>
+        <LinkParameter id="mov2#hym4#page13#mssu12#ln52#par971" name="id_hospital_PASSING_idHospital" sourceLinkParameter="mov2#hym4#mfu5#oln100#par787" target="mov2#hym4#pcu4#pcp14"/>
+        <LinkParameter id="mov2#hym4#page13#mssu12#ln52#par972" name="patientCode_PASSING_patientCode" sourceLinkParameter="mov2#hym4#mfu5#oln100#par785" target="mov2#hym4#pcu4#pcp12"/>
+      </Link>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

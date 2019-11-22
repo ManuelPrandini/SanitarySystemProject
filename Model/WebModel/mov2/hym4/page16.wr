@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="385" gr:y="280" id="mov2#hym4#page16" name="Prescription Info">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="345" gr:y="285" id="mov2#hym4#page16" name="Prescription Info">
   <ContentUnits>
     <EntryUnit id="mov2#hym4#page16#enu17" name="Prescrizione" gr:x="0" gr:y="0" fieldOrder="mov2#hym4#page16#enu17#fld104 mov2#hym4#page16#enu17#sfld23 mov2#hym4#page16#enu17#fld103 mov2#hym4#page16#enu17#fld102" linkOrder="mov2#hym4#page16#enu17#ln94">
       <Field id="mov2#hym4#page16#enu17#fld102" name="description" type="text" modifiable="true"/>
@@ -10,6 +10,10 @@
         <LinkParameter id="mov2#hym4#page16#enu17#ln94#par535" name="drug_id_drug" source="mov2#hym4#page16#enu17#sfld23" target="mov2#hym4#miu21.mov2#mpkg2#opm10#icu20#icp97"/>
         <LinkParameter id="mov2#hym4#page16#enu17#ln94#par536" name="id_visit_id_visit" source="mov2#hym4#page16#enu17#fld104" target="mov2#hym4#miu21.mov2#mpkg2#opm10#icu20#icp95"/>
         <LinkParameter id="mov2#hym4#page16#enu17#ln94#par537" name="quantity_quantity" source="mov2#hym4#page16#enu17#fld103" target="mov2#hym4#miu21.mov2#mpkg2#opm10#icu20#icp96"/>
+        <LinkParameter id="mov2#hym4#page16#enu17#ln94#par1016" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#pcu7#oln166#par1012" passing="true"/>
+        <LinkParameter id="mov2#hym4#page16#enu17#ln94#par1017" name="idHospital_PASSING" sourceLinkParameter="mov2#hym4#pcu7#oln166#par1013" passing="true"/>
+        <LinkParameter id="mov2#hym4#page16#enu17#ln94#par1018" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#pcu7#oln166#par1014" passing="true"/>
+        <LinkParameter id="mov2#hym4#page16#enu17#ln94#par1019" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#pcu7#oln166#par1015" passing="true"/>
       </Link>
     </EntryUnit>
     <SelectorUnit id="mov2#hym4#page16#seu27" name="DrugSelector" gr:x="0" gr:y="105" entity="ent2">
