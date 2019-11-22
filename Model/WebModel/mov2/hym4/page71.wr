@@ -1,8 +1,26 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1585" gr:y="590" id="mov2#hym4#page71" name="Ricovero registrato">
-  <ContentUnits/>
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1375" gr:y="130" id="mov2#hym4#page71" name="Ricovero registrato">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page71#mssu1" name="SceltaIntervento" linkOrder="mov2#hym4#page71#mssu1#ln4 mov2#hym4#page71#mssu1#ln6">
+      <Message xml:space="preserve">Ricovero programmato correttamente!
+Vuoi programmare anche un intervento?</Message>
+      <Link id="mov2#hym4#page71#mssu1#ln4" name="No" to="mov2#hym4#kocu8" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="76,92,-820,6"/>
+      <Link id="mov2#hym4#page71#mssu1#ln6" name="Si" to="mov2#hym4#seu31" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page71#mssu1#ln6#par145" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#miu1#oln157#par7" passing="true"/>
+        <LinkParameter id="mov2#hym4#page71#mssu1#ln6#par149" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#miu1#oln157#par23" passing="true"/>
+        <LinkParameter id="mov2#hym4#page71#mssu1#ln6#par339" name="idHospital_PASSING_hospital" sourceLinkParameter="mov2#hym4#miu1#oln157#par22" target="mov2#hym4#seu31#su81#acond95"/>
+        <LinkParameter id="mov2#hym4#page71#mssu1#ln6#par547" name="doctorCode_PASSING_doctor" sourceLinkParameter="mov2#hym4#miu1#oln157#par7" target="mov2#hym4#seu31#su81#acond105"/>
+        <LinkParameter id="mov2#hym4#page71#mssu1#ln6#par604" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#miu1#oln157#par603" passing="true"/>
+      </Link>
+    </MultiMessageUnit>
+  </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym4#page71#mssu1">
+          <layout:Link link="mov2#hym4#page71#mssu1#ln4"/>
+          <layout:Link link="mov2#hym4#page71#mssu1#ln6"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

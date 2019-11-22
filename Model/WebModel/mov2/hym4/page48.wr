@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1190" gr:y="5" id="mov2#hym4#page48" name="SceltaRicovero">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1160" gr:y="-35" id="mov2#hym4#page48" name="SceltaRicovero">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page48#mssu17" name="Vuoi programmare un ricovero" linkOrder="mov2#hym4#page48#mssu17#ln129 mov2#hym4#page48#mssu17#ln131">
       <Message xml:space="preserve">Vuoi programmare un ricovero?</Message>
@@ -7,8 +7,14 @@
         <LinkParameter id="mov2#hym4#page48#mssu17#ln129#par981" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#pcu4#oln164#par976" passing="true"/>
         <LinkParameter id="mov2#hym4#page48#mssu17#ln129#par982" name="idHospital_PASSING" sourceLinkParameter="mov2#hym4#pcu4#oln164#par977" passing="true"/>
         <LinkParameter id="mov2#hym4#page48#mssu17#ln129#par983" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#pcu4#oln164#par979" passing="true"/>
+        <LinkParameter id="mov2#hym4#page48#mssu17#ln129#par567" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#pcu4#oln164#par978" passing="true"/>
       </Link>
-      <Link id="mov2#hym4#page48#mssu17#ln131" name="No" to="mov2#hym4#page4" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="mov2#hym4#page48#mssu17#ln131" name="No" to="mov2#hym4#pcu1" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page48#mssu17#ln131#par150" name="doctorCode_PASSING_doctorCode" sourceLinkParameter="mov2#hym4#pcu4#oln164#par976" target="mov2#hym4#pcu1#pcp4"/>
+        <LinkParameter id="mov2#hym4#page48#mssu17#ln131#par152" name="idHospital_PASSING_idHospital" sourceLinkParameter="mov2#hym4#pcu4#oln164#par977" target="mov2#hym4#pcu1#pcp5"/>
+        <LinkParameter id="mov2#hym4#page48#mssu17#ln131#par191" name="nameHospital_PASSING_nameHospital" sourceLinkParameter="mov2#hym4#pcu4#oln164#par978" target="mov2#hym4#pcu1#pcp1"/>
+        <LinkParameter id="mov2#hym4#page48#mssu17#ln131#par192" name="patientCode_PASSING_patientCode" sourceLinkParameter="mov2#hym4#pcu4#oln164#par979" target="mov2#hym4#pcu1#pcp2"/>
+      </Link>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

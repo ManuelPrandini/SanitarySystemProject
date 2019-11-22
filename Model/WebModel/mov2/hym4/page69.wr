@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1185" gr:y="280" id="mov2#hym4#page69" name="Programma Ricovero">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1115" gr:y="340" id="mov2#hym4#page69" name="Programma Ricovero">
   <ContentUnits>
     <EntryUnit id="mov2#hym4#page69#enu1" name="Programma Ricovero" ajaxEnableExpandedLinks="false" gr:x="0" gr:y="0" fieldOrder="mov2#hym4#page69#enu1#fld3 mov2#hym4#page69#enu1#fld11 mov2#hym4#page69#enu1#fld4 mov2#hym4#page69#enu1#sfld3 mov2#hym4#page69#enu1#fld13 mov2#hym4#page69#enu1#fld14 mov2#hym4#page69#enu1#fld15 mov2#hym4#page69#enu1#fld16" linkOrder="mov2#hym4#page69#enu1#ln110 mov2#hym4#page69#enu1#ln114 mov2#hym4#page69#enu1#ln135">
       <Field id="mov2#hym4#page69#enu1#fld3" name="Ospedale" type="string" preloaded="true"/>
@@ -30,6 +30,10 @@
         <LinkParameter id="mov2#hym4#page69#enu1#ln135#par655" name="Titolo_Titolo" source="mov2#hym4#page69#enu1#fld15" target="mov2#hym4#miu1.mov2#mpkg2#opm11#icu21#icp107"/>
         <LinkParameter id="mov2#hym4#page69#enu1#ln135#par987" name="doctorCode_PASSING_Dottore" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par981" target="mov2#hym4#miu1.mov2#mpkg2#opm11#icu21#icp106"/>
         <LinkParameter id="mov2#hym4#page69#enu1#ln135#par988" name="patientCode_PASSING_Paziente" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par983" target="mov2#hym4#miu1.mov2#mpkg2#opm11#icu21#icp84"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln135#par4" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par981" passing="true"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln135#par5" name="idHospital_PASSING" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par982" passing="true"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln135#par6" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par983" passing="true"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln135#par573" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par567" passing="true"/>
       </Link>
     </EntryUnit>
   </ContentUnits>

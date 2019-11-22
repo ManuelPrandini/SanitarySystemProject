@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1575" gr:y="710" id="mov2#hym4#page72" name="Errore ricovero">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1615" gr:y="340" id="mov2#hym4#page72" name="Errore ricovero">
   <ContentUnits/>
   <layout:Grid containerType="grid">
     <layout:Row>
