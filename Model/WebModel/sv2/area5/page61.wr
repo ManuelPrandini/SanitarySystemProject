@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="640" gr:y="445" id="sv2#area5#page61" name="Vendita farmaci senza prescrizioni">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="640" gr:y="430" id="sv2#area5#page61" name="Vendita farmaci senza prescrizioni">
   <ContentUnits>
     <MultiChoiceIndexUnit gr:x="75" gr:y="0" id="sv2#area5#page61#mciu1" name="Lista dei farmaci" entity="ent21" displayAttributes="rel23#role45.ent2#att8 ent21#att49">
       <SortAttribute attribute="rel23#role45.ent2#att8" order="ascending"/>

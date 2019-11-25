@@ -2,7 +2,7 @@
   <OperationUnits>
     <InputCollectorUnit gr:x="30" gr:y="250" id="mov2#hym5#icu24">
       <InputCollectorParameter id="mov2#hym5#icu24#icp102" name="PatientCF"/>
-      <OKLink id="mov2#hym5#icu24#oln122" name="OKFlow122" to="mov2#hym5#page40#enu21">
+      <OKLink id="mov2#hym5#icu24#oln122" name="OKFlow122" to="mov2#hym5#page40#enu21" preserveForm="true" ajaxOpenWindow="false">
         <LinkParameter id="mov2#hym5#icu24#oln122#par581" name="PatientCF_Patient" source="mov2#hym5#icu24#icp102" target="mov2#hym5#page40#enu21#fld111_slot"/>
       </OKLink>
     </InputCollectorUnit>

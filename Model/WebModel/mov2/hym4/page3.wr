@@ -1,33 +1,14 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym4#page3" name="Programma Intervento" gr:x="1905" gr:y="325">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym4#page3" name="Programma Intervento" gr:x="1895" gr:y="440">
   <ContentUnits>
-    <EntryUnit id="mov2#hym4#page3#enu9" name="Programma Intervento" ajaxEnableExpandedLinks="false" gr:x="0" gr:y="0" fieldOrder="mov2#hym4#page3#enu9#fld2 mov2#hym4#page3#enu9#fld29 mov2#hym4#page3#enu9#fld28 mov2#hym4#page3#enu9#sfld2 mov2#hym4#page3#enu9#fld27 mov2#hym4#page3#enu9#fld18 mov2#hym4#page3#enu9#sfld9">
-      <Field id="mov2#hym4#page3#enu9#fld2" name="Ospedale" type="string" preloaded="true"/>
-      <Field id="mov2#hym4#page3#enu9#fld18" name="Data" ajaxEventEnabled="false" ajaxEventIndicator="true" type="date" modifiable="true"/>
-      <Field id="mov2#hym4#page3#enu9#fld27" name="Piano" type="integer" preloaded="true"/>
-      <Field id="mov2#hym4#page3#enu9#fld28" name="Descrizione" type="string" modifiable="true"/>
-      <Field id="mov2#hym4#page3#enu9#fld29" name="Titolo" type="string" modifiable="true"/>
-      <SelectionField id="mov2#hym4#page3#enu9#sfld2" name="Sala Intervento" type="string" modifiable="true"/>
-      <SelectionField id="mov2#hym4#page3#enu9#sfld9" name="Orario Inizio" type="string" modifiable="true"/>
-    </EntryUnit>
-    <EventCalendarUnit gr:x="45" gr:y="115" id="mov2#hym4#page3#ecu1" name="Calendar1" entityBased="true" entity="ent5">
+    <EventCalendarUnit gr:x="0" gr:y="0" id="mov2#hym4#page3#ecu1" name="BusinessDoctorANDPatient" entityBased="true" entity="ent5" displayAttributes="ent5#att22 ent5#att24 rel3#role3.ent9#att33 rel11#role16.ent6#att11" dateAttribute="ent5#att22">
       <Selector id="mov2#hym4#page3#ecu1#su88" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="mov2#hym4#page3#ecu1#su88#acond108" name="AttCondition108" predicate="eq" booleanOperator="or" implied="false"/>
+        <AttributesCondition id="mov2#hym4#page3#ecu1#su88#acond126" name="doctorCode" predicate="eq" booleanOperator="and" implied="false" attributes="rel3#role3.ent9#att33"/>
       </Selector>
     </EventCalendarUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="mov2#hym4#page3#enu9">
-          <layout:Field field="mov2#hym4#page3#enu9#fld2"/>
-          <layout:Field field="mov2#hym4#page3#enu9#fld29"/>
-          <layout:Field field="mov2#hym4#page3#enu9#fld28"/>
-          <layout:Field field="mov2#hym4#page3#enu9#sfld2"/>
-          <layout:Field field="mov2#hym4#page3#enu9#fld27"/>
-          <layout:Field field="mov2#hym4#page3#enu9#fld18"/>
-          <layout:Field field="mov2#hym4#page3#enu9#sfld9"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -56,8 +37,26 @@
           <layout:Link link="mov2#hym4#page3#ecu1-month-10"/>
           <layout:Link link="mov2#hym4#page3#ecu1-month-11"/>
           <layout:Link link="mov2#hym4#page3#ecu1-year"/>
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="rel3#role3.ent9#att33"/>
+          <layout:Attribute attribute="rel11#role16.ent6#att11"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

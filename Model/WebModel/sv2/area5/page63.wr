@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="670" gr:y="0" id="sv2#area5#page63" name="Consulta prescrizioni attive">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="615" gr:y="0" id="sv2#area5#page63" name="Consulta prescrizioni attive">
   <ContentUnits>
     <PowerIndexUnit gr:x="110" gr:y="0" id="sv2#area5#page63#pwu9" name="Prescrizioni attive" sortable="true" checkable="false" useCountQuery="false" entity="ent36" displayAttributes="rel30#role60.ent5#att2 rel30#role60.ent5#att3 rel31#role62.ent2#att8 ent36#att80 ent36#att79 ent36#att81">
       <Selector id="sv2#area5#page63#pwu9#su78" defaultPolicy="fill" booleanOperator="and">

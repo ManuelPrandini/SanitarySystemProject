@@ -1,15 +1,14 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1375" gr:y="130" id="mov2#hym4#page71" name="Ricovero registrato">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page71#mssu1" name="SceltaIntervento" linkOrder="mov2#hym4#page71#mssu1#ln4 mov2#hym4#page71#mssu1#ln6">
+    <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page71#mssu1" name="SceltaIntervento" linkOrder="mov2#hym4#page71#mssu1#ln4 mov2#hym4#page71#mssu1#ln75">
       <Message xml:space="preserve">Ricovero programmato correttamente!
 Vuoi programmare anche un intervento?</Message>
       <Link id="mov2#hym4#page71#mssu1#ln4" name="No" to="mov2#hym4#kocu8" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="76,92,-820,6"/>
-      <Link id="mov2#hym4#page71#mssu1#ln6" name="Si" to="mov2#hym4#seu31" type="normal" validate="true">
-        <LinkParameter id="mov2#hym4#page71#mssu1#ln6#par145" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#miu1#oln157#par7" passing="true"/>
-        <LinkParameter id="mov2#hym4#page71#mssu1#ln6#par149" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#miu1#oln157#par23" passing="true"/>
-        <LinkParameter id="mov2#hym4#page71#mssu1#ln6#par339" name="idHospital_PASSING_hospital" sourceLinkParameter="mov2#hym4#miu1#oln157#par22" target="mov2#hym4#seu31#su81#acond95"/>
-        <LinkParameter id="mov2#hym4#page71#mssu1#ln6#par547" name="doctorCode_PASSING_doctor" sourceLinkParameter="mov2#hym4#miu1#oln157#par7" target="mov2#hym4#seu31#su81#acond105"/>
-        <LinkParameter id="mov2#hym4#page71#mssu1#ln6#par604" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#miu1#oln157#par603" passing="true"/>
+      <Link id="mov2#hym4#page71#mssu1#ln75" name="Si" to="mov2#hym4#pcu3" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page71#mssu1#ln75#par339" name="doctorCode_PASSING_doctorCode" sourceLinkParameter="mov2#hym4#miu1#oln157#par7" target="mov2#hym4#pcu3#pcp8"/>
+        <LinkParameter id="mov2#hym4#page71#mssu1#ln75#par426" name="idHospital_PASSING_idHospital" sourceLinkParameter="mov2#hym4#miu1#oln157#par22" target="mov2#hym4#pcu3#pcp9"/>
+        <LinkParameter id="mov2#hym4#page71#mssu1#ln75#par507" name="nameHospital_PASSING_nameHospital" sourceLinkParameter="mov2#hym4#miu1#oln157#par603" target="mov2#hym4#pcu3#pcp6"/>
+        <LinkParameter id="mov2#hym4#page71#mssu1#ln75#par547" name="patientCode_PASSING_patientCode" sourceLinkParameter="mov2#hym4#miu1#oln157#par23" target="mov2#hym4#pcu3#pcp7"/>
       </Link>
     </MultiMessageUnit>
   </ContentUnits>
@@ -18,7 +17,7 @@ Vuoi programmare anche un intervento?</Message>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov2#hym4#page71#mssu1">
           <layout:Link link="mov2#hym4#page71#mssu1#ln4"/>
-          <layout:Link link="mov2#hym4#page71#mssu1#ln6"/>
+          <layout:Link link="mov2#hym4#page71#mssu1#ln75"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

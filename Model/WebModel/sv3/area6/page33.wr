@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="60" gr:y="565" id="sv3#area6#page33" name="Calendario visite" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="60" gr:y="570" id="sv3#area6#page33" name="Calendario visite" landmark="true">
   <ContentUnits>
     <PowerIndexUnit gr:x="0" gr:y="75" id="sv3#area6#page33#pwu7" name="Lista visite in programma" sortable="true" checkable="false" useCountQuery="false" entity="ent29" displayAttributes="rel3#role3.rel36#role72.User#att28 rel3#role3.rel4#role5.ent8#att21 ent5#att22 ent5#att24" linkOrder="sv3#area6#page33#pwu7#ln2 sv3#area6#page33#pwu7#ln67">
       <Selector id="sv3#area6#page33#pwu7#su48" defaultPolicy="fill" booleanOperator="and">
@@ -18,7 +18,7 @@
         <LinkParameter id="sv3#area6#page33#pwu7#ln67#par320" name="oid_PASSING" source="data[].ent5#att2" passing="true"/>
       </Link>
     </PowerIndexUnit>
-    <EventCalendarUnit gr:x="50" gr:y="265" id="sv3#area6#page33#ecu2" name="Calendario" entityBased="true" entity="ent29" displayAttributes="rel3#role3.rel4#role5.ent8#att21 rel3#role3.rel36#role72.User#att28 ent5#att22" dateAttribute="ent5#att22">
+    <EventCalendarUnit gr:x="50" gr:y="265" id="sv3#area6#page33#ecu2" name="Calendario" entityBased="true" entity="ent29" displayAttributes="rel3#role3.rel4#role5.ent8#att21 rel3#role3.rel36#role72.User#att28 ent5#att22" dateAttribute="ent5#att22" ajaxTooltipEnabled="false">
       <Selector id="sv3#area6#page33#ecu2#su53" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area6#page33#ecu2#su53#kcond24" name="KeyCondition24" predicate="in" implied="false"/>
       </Selector>

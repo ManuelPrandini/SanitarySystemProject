@@ -1,11 +1,8 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area7#page65" name="Registra Visita" landmark="true" gr:x="290" gr:y="355">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area7#page65" name="Registra Visita" landmark="true" gr:x="190" gr:y="485">
   <ContentUnits>
     <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area7#page65#pwu1" name="Lista visite" sortable="true" checkable="false" useCountQuery="false" entity="ent29" displayAttributes="ent5#att22 ent5#att24 ent5#att25 rel16#role31.ent10#att50 rel16#role31.rel37#role74.ent4#att14 rel16#role31.rel37#role74.ent4#att1 rel11#role16.ent6#att11 rel3#role3.ent9#att33" linkOrder="sv1#area7#page65#pwu1#ln78">
       <Selector id="sv1#area7#page65#pwu1#su2" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond9" name="cfPaziente" predicate="eq" booleanOperator="and" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
-        <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond16" name="cfDottore" predicate="eq" booleanOperator="and" implied="false" attributes="rel3#role3.rel36#role72.userOID"/>
-        <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond46" name="startDateIsNull" predicate="notNull" booleanOperator="and" implied="false" attributes="ent5#att22"/>
-        <AttributesCondition id="sv1#area7#page65#pwu1#su2#acond61" name="titleIsNull" predicate="null" booleanOperator="and" implied="false" attributes="ent5#att3"/>
+        <KeyCondition id="sv1#area7#page65#pwu1#su2#kcond36" name="oidVisit" predicate="in" implied="false"/>
       </Selector>
       <Link id="sv1#area7#page65#pwu1#ln78" name="Registra" to="sv1#area7#miu19" type="normal" validate="true">
         <LinkParameter id="sv1#area7#page65#pwu1#ln78#par446" name="startDate_date" source="data[].ent5#att22" target="sv1#area7#miu19.mov2#hym4#icu11#icp90"/>
@@ -13,12 +10,12 @@
         <LinkParameter id="sv1#area7#page65#pwu1#ln78#par452" name="startTime_start_time" source="data[].ent5#att24" target="sv1#area7#miu19.mov2#hym4#icu11#icp91"/>
         <LinkParameter id="sv1#area7#page65#pwu1#ln78#par475" name="oid_id_visita" source="data[].ent5#att2" target="sv1#area7#miu19.mov2#hym4#icu11#icp87"/>
         <LinkParameter id="sv1#area7#page65#pwu1#ln78#par483" name="VisitToVisit_Room.name_room" source="data[].rel16#role31$ent10#att50" target="sv1#area7#miu19.mov2#hym4#icu11#icp93"/>
-        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par489" name="UserCtxParam.cf_PASSING_doctor_cf" sourceLinkParameter="sv1#area7#page67#mssu9#ln134#par488" target="sv1#area7#miu19.mov2#hym4#icu11#icp88"/>
-        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par490" name="PatientToUser.cf_PASSING_patient_cf" sourceLinkParameter="sv1#area7#page67#mssu9#ln134#par487" target="sv1#area7#miu19.mov2#hym4#icu11#icp89"/>
         <LinkParameter id="sv1#area7#page65#pwu1#ln78#par504" name="DoctorToHospital.name_PASSING_hospital" target="sv1#area7#miu19.mov2#hym4#icu11#icp94" source="data[].rel16#role31$rel37#role74$ent4#att14"/>
         <LinkParameter id="sv1#area7#page65#pwu1#ln78#par646" name="VisitToVisit_Room.RoomToHospital.id_hospital_id_hospital" source="data[].rel16#role31$rel37#role74$ent4#att1" target="sv1#area7#miu19.mov2#hym4#icu11#icp35"/>
         <LinkParameter id="sv1#area7#page65#pwu1#ln78#par753" name="VisitToDoctor.doctor_code_doctorCode" source="data[].rel3#role3$ent9#att33" target="sv1#area7#miu19.mov2#hym4#icu11#icp109"/>
         <LinkParameter id="sv1#area7#page65#pwu1#ln78#par754" name="VisitToPatient.patient_code_patientCode" source="data[].rel11#role16$ent6#att11" target="sv1#area7#miu19.mov2#hym4#icu11#icp110"/>
+        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par664" name="UserCtxParam.cf_PASSING_doctor_cf" sourceLinkParameter="sv1#area7#inn18#oln158#par663" target="sv1#area7#miu19.mov2#hym4#icu11#icp88"/>
+        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par665" name="PatientToUser.cf_PASSING_patient_cf" sourceLinkParameter="sv1#area7#inn18#oln158#par662" target="sv1#area7#miu19.mov2#hym4#icu11#icp89"/>
       </Link>
     </PowerIndexUnit>
   </ContentUnits>
@@ -37,6 +34,20 @@
           <layout:Attribute attribute="rel3#role3.ent9#att33"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

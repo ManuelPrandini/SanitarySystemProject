@@ -139,17 +139,14 @@
         <LinkParameter id="mov2#hym4#pcu1#oln3#par335" name="patientCode_PASSING" source="mov2#hym4#pcu1#pcp2" passing="true"/>
       </OKLink>
     </ParameterCollectorUnit>
-    <SelectorUnit gr:x="1690" gr:y="145" id="mov2#hym4#seu31" name="SelectSurgeryRoom" entity="ent24" distinctAttributes="rel37#role74.ent4#att14">
-      <Selector id="mov2#hym4#seu31#su81" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="mov2#hym4#seu31#su81#acond95" name="hospital" predicate="eq" booleanOperator="or" implied="false" attributes="rel37#role74.ent4#att1"/>
-        <AttributesCondition id="mov2#hym4#seu31#su81#acond105" name="doctor" predicate="eq" booleanOperator="and" implied="false" attributes="rel5#role20.ent9#att33"/>
-      </Selector>
-      <OKLink id="mov2#hym4#seu31#oln158" name="OKFlow158" to="mov2#hym4#page3#enu9">
-        <LinkParameter id="mov2#hym4#seu31#oln158#par605" name="RoomToHospital.name_Ospedale" source="rel37#role74$ent4#att14Array" target="mov2#hym4#page3#enu9#fld2_slot"/>
-        <LinkParameter id="mov2#hym4#seu31#oln158#par606" name="name_Sala Intervento [label]" source="ent10#att50Array" target="mov2#hym4#page3#enu9#sfld2_label"/>
-        <LinkParameter id="mov2#hym4#seu31#oln158#par607" name="id_room_Sala Intervento [output]" source="ent10#att5Array" target="mov2#hym4#page3#enu9#sfld2_output"/>
-        <LinkParameter id="mov2#hym4#seu31#oln158#par608" name="floor_Piano" source="ent10#att26Array" target="mov2#hym4#page3#enu9#fld27_slot"/>
+    <ParameterCollectorUnit id="mov2#hym4#pcu3" name="Parameter Collector4" gr:x="1785" gr:y="130">
+      <CollectorParameter id="mov2#hym4#pcu3#pcp6" name="nameHospital"/>
+      <CollectorParameter id="mov2#hym4#pcu3#pcp7" name="patientCode"/>
+      <CollectorParameter id="mov2#hym4#pcu3#pcp8" name="doctorCode"/>
+      <CollectorParameter id="mov2#hym4#pcu3#pcp9" name="idHospital"/>
+      <OKLink id="mov2#hym4#pcu3#oln165" name="OKFlow165" to="mov2#hym4#page3#ecu1">
+        <LinkParameter id="mov2#hym4#pcu3#oln165#par704" name="doctorCode_doctorCode" source="mov2#hym4#pcu3#pcp8" target="mov2#hym4#page3#ecu1#su88#acond126"/>
       </OKLink>
-    </SelectorUnit>
+    </ParameterCollectorUnit>
   </OperationUnits>
 </HybridModule>
