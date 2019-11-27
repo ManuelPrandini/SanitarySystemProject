@@ -1,13 +1,13 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page36" name="Pharmacist Info(no Exists)" gr:x="785" gr:y="360">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="60" id="mov2#hym1#page36#enu12" name="registration form" fieldOrder="mov2#hym1#page36#enu12#fld47 mov2#hym1#page36#enu12#fld50 mov2#hym1#page36#enu12#fld53 mov2#hym1#page36#enu12#sfld14 mov2#hym1#page36#enu12#fld46 mov2#hym1#page36#enu12#fld45 mov2#hym1#page36#enu12#sfld15 mov2#hym1#page36#enu12#fld54 mov2#hym1#page36#enu12#fld48 mov2#hym1#page36#enu12#fld51 mov2#hym1#page36#enu12#fld52 mov2#hym1#page36#enu12#sfld55" linkOrder="mov2#hym1#page36#enu12#ln41">
+    <EntryUnit gr:x="0" gr:y="60" id="mov2#hym1#page36#enu12" name="registration form" fieldOrder="mov2#hym1#page36#enu12#fld47 mov2#hym1#page36#enu12#fld51 mov2#hym1#page36#enu12#fld50 mov2#hym1#page36#enu12#fld53 mov2#hym1#page36#enu12#sfld14 mov2#hym1#page36#enu12#fld46 mov2#hym1#page36#enu12#sfld2 mov2#hym1#page36#enu12#sfld15 mov2#hym1#page36#enu12#fld45 mov2#hym1#page36#enu12#fld54 mov2#hym1#page36#enu12#fld48 mov2#hym1#page36#enu12#fld52 mov2#hym1#page36#enu12#sfld55" linkOrder="mov2#hym1#page36#enu12#ln41">
       <Link id="mov2#hym1#page36#enu12#ln41" name="Submit" to="mov2#hym1#miu6" type="normal" validate="true" gr:bendpoints="467,-1,-73,129">
         <LinkParameter id="mov2#hym1#page36#enu12#ln41#par120" name="0_exists?" sourceValue="0" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp74"/>
         <LinkParameter id="mov2#hym1#page36#enu12#ln41#par125" name="0_approved" sourceValue="0" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp37"/>
         <LinkParameter id="mov2#hym1#page36#enu12#ln41#par221" name="address_address" source="mov2#hym1#page36#enu12#fld45" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp33"/>
         <LinkParameter id="mov2#hym1#page36#enu12#ln41#par222" name="birthday_birthday" source="mov2#hym1#page36#enu12#fld46" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp47"/>
         <LinkParameter id="mov2#hym1#page36#enu12#ln41#par223" name="cf_cf" source="mov2#hym1#page36#enu12#fld47" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp42"/>
-        <LinkParameter id="mov2#hym1#page36#enu12#ln41#par224" name="born in_cityBorn" source="mov2#hym1#page36#enu12#sfld12" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp72"/>
+        <LinkParameter id="mov2#hym1#page36#enu12#ln41#par224" name="born in_cityBorn" source="mov2#hym1#page36#enu12#sfld2" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp72"/>
         <LinkParameter id="mov2#hym1#page36#enu12#ln41#par225" name="live in_cityLives" source="mov2#hym1#page36#enu12#sfld15" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp73"/>
         <LinkParameter id="mov2#hym1#page36#enu12#ln41#par226" name="email_email" source="mov2#hym1#page36#enu12#fld48" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp44"/>
         <LinkParameter id="mov2#hym1#page36#enu12#ln41#par227" name="gender_gender" source="mov2#hym1#page36#enu12#sfld14" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp75"/>
@@ -60,13 +60,14 @@
         <VRules/>
       </Field>
       <SelectionField id="mov2#hym1#page36#enu12#sfld55" name="pharmacy" type="string"/>
+      <SelectionField id="mov2#hym1#page36#enu12#sfld2" name="born in" type="string" modifiable="true"/>
     </EntryUnit>
     <SelectorUnit gr:x="220" gr:y="0" id="mov2#hym1#page36#seu19" name="SelectorCity" entity="ent12">
       <Link id="mov2#hym1#page36#seu19#ln116" name="Flow116" to="mov2#hym1#page36#enu12" type="transport" validate="true">
-        <LinkParameter id="mov2#hym1#page36#seu19#ln116#par459" name="name_born in [label]" source="ent12#att39Array" target="mov2#hym1#page36#enu12#sfld12_label"/>
-        <LinkParameter id="mov2#hym1#page36#seu19#ln116#par460" name="oid_born in [output]" source="ent12#att16Array" target="mov2#hym1#page36#enu12#sfld12_output"/>
         <LinkParameter id="mov2#hym1#page36#seu19#ln116#par461" name="name_live in [label]" source="ent12#att39Array" target="mov2#hym1#page36#enu12#sfld15_label"/>
         <LinkParameter id="mov2#hym1#page36#seu19#ln116#par462" name="oid_live in [output]" source="ent12#att16Array" target="mov2#hym1#page36#enu12#sfld15_output"/>
+        <LinkParameter id="mov2#hym1#page36#seu19#ln116#par618" name="name_born in [label]" source="ent12#att39Array" target="mov2#hym1#page36#enu12#sfld2_label"/>
+        <LinkParameter id="mov2#hym1#page36#seu19#ln116#par628" name="oid_born in [output]" source="ent12#att16Array" target="mov2#hym1#page36#enu12#sfld2_output"/>
       </Link>
       <SortAttribute attribute="ent12#att39" order="ascending"/>
     </SelectorUnit>
@@ -83,15 +84,16 @@
         <layout:Unit unitId="mov2#hym1#page36#enu12">
           <layout:Link link="mov2#hym1#page36#enu12#ln41"/>
           <layout:Field field="mov2#hym1#page36#enu12#fld47"/>
+          <layout:Field field="mov2#hym1#page36#enu12#fld51"/>
           <layout:Field field="mov2#hym1#page36#enu12#fld50"/>
           <layout:Field field="mov2#hym1#page36#enu12#fld53"/>
           <layout:Field field="mov2#hym1#page36#enu12#sfld14"/>
           <layout:Field field="mov2#hym1#page36#enu12#fld46"/>
-          <layout:Field field="mov2#hym1#page36#enu12#fld45"/>
+          <layout:Field field="mov2#hym1#page36#enu12#sfld2"/>
           <layout:Field field="mov2#hym1#page36#enu12#sfld15"/>
+          <layout:Field field="mov2#hym1#page36#enu12#fld45"/>
           <layout:Field field="mov2#hym1#page36#enu12#fld54"/>
           <layout:Field field="mov2#hym1#page36#enu12#fld48"/>
-          <layout:Field field="mov2#hym1#page36#enu12#fld51"/>
           <layout:Field field="mov2#hym1#page36#enu12#fld52"/>
           <layout:Field field="mov2#hym1#page36#enu12#sfld55"/>
         </layout:Unit>

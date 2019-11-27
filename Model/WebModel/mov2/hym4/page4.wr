@@ -1,13 +1,18 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1495" gr:y="15" id="mov2#hym4#page4" name="SceltaIntervento">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1720" gr:y="-20" id="mov2#hym4#page4" name="SceltaIntervento">
   <ContentUnits>
-    <MultiMessageUnit id="mov2#hym4#page4#mssu22" name="Vuoi programmare un intervento" gr:x="0" gr:y="0">
+    <MultiMessageUnit id="mov2#hym4#page4#mssu22" name="Vuoi programmare un intervento" gr:x="0" gr:y="0" linkOrder="mov2#hym4#page4#mssu22#ln91 mov2#hym4#page4#mssu22#ln156">
       <Message xml:space="preserve">Vuoi programmare un intervento?</Message>
+      <Link id="mov2#hym4#page4#mssu22#ln91" name="Si" to="mov2#hym4#pcu3" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="mov2#hym4#page4#mssu22#ln156" name="No" to="mov2#hym4#kocu8" automaticCoupling="true" type="normal" validate="true"/>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="mov2#hym4#page4#mssu22"/>
+        <layout:Unit unitId="mov2#hym4#page4#mssu22">
+          <layout:Link link="mov2#hym4#page4#mssu22#ln91"/>
+          <layout:Link link="mov2#hym4#page4#mssu22#ln156"/>
+        </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

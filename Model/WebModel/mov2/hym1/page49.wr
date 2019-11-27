@@ -28,7 +28,7 @@
       <SelectionField id="mov2#hym1#page49#enu10#sfld41" name="medical specialization" type="string" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page49#enu10#ln112" ajaxEventIndicator="true"/>
       <SelectionField id="mov2#hym1#page49#enu10#sfld42" name="room" type="string"/>
       <Link id="mov2#hym1#page49#enu10#ln149" name="Submit" to="mov2#hym1#miu14" type="normal" validate="true" gr:bendpoints="591,-1,-74,159">
-        <LinkParameter id="mov2#hym1#page49#enu10#ln149#par613" name="'_approved" sourceValue="'" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp22"/>
+        <LinkParameter id="mov2#hym1#page49#enu10#ln149#par613" name="'_approved" sourceValue="0" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp22"/>
         <LinkParameter id="mov2#hym1#page49#enu10#ln149#par614" name="1_exists?" sourceValue="0" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp68"/>
         <LinkParameter id="mov2#hym1#page49#enu10#ln149#par615" name="1_group_oid" sourceValue="1" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp54"/>
         <LinkParameter id="mov2#hym1#page49#enu10#ln149#par616" name="address_address" source="mov2#hym1#page49#enu10#fld116" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp30"/>
@@ -65,6 +65,7 @@
       <Selector id="mov2#hym1#page49#seu38#su60" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#hym1#page49#seu38#su60#acond36" name="id_hospital" predicate="eq" booleanOperator="and" implied="false" attributes="rel37#role74.ent4#att1"/>
         <AttributesCondition id="mov2#hym1#page49#seu38#su60#acond37" name="medical_specialization" predicate="eq" booleanOperator="and" implied="false" attributes="rel1#role18.ent8#att21"/>
+        <RelationshipRoleCondition id="mov2#hym1#page49#seu38#su60#rcond1" name="RoleCondition1" predicate="notIn" implied="false" role="rel5#role20.rel5#role19"/>
       </Selector>
       <Link id="mov2#hym1#page49#seu38#ln151" name="Flow151" to="mov2#hym1#page49#enu10" type="transport" validate="true" gr:bendpoints="-222,118,203,-12">
         <LinkParameter id="mov2#hym1#page49#seu38#ln151#par767" name="name_room [label]" source="ent10#att50Array" target="mov2#hym1#page49#enu10#sfld42_label"/>
@@ -78,6 +79,11 @@
         <LinkParameter id="mov2#hym1#page49#seu40#ln103#par458" name="oid_live in [output]" source="ent12#att16Array" target="mov2#hym1#page49#enu10#sfld29_output"/>
         <LinkParameter id="mov2#hym1#page49#seu40#ln103#par561" name="name_born in [label]" source="ent12#att39Array" target="mov2#hym1#page49#enu10#sfld38_label"/>
         <LinkParameter id="mov2#hym1#page49#seu40#ln103#par562" name="oid_born in [output]" source="ent12#att16Array" target="mov2#hym1#page49#enu10#sfld38_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="490" gr:y="160" id="mov2#hym1#page49#seu53" name="SelectorRoom" entity="ent23">
+      <Link id="mov2#hym1#page49#seu53#ln143" name="Flow143" to="mov2#hym1#page49#seu38" type="transport" validate="true">
+        <LinkParameter id="mov2#hym1#page49#seu53#ln143#par606" name="id_room_RoleCondition1 [id_room]" source="ent10#att5Array" target="mov2#hym1#page49#seu38#su60#rcond1.ent10#att5"/>
       </Link>
     </SelectorUnit>
   </ContentUnits>
@@ -104,6 +110,20 @@
           <layout:Link link="mov2#hym1#page49#enu10#ln149"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

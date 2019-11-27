@@ -1,0 +1,82 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area12#page74" name="Search" landmark="false" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <EntryUnit id="sv3#area12#page74#enu9" name="Search drug in a pharmacy" gr:x="0" gr:y="10" fieldOrder="sv3#area12#page74#enu9#fld2 sv3#area12#page74#enu9#sfld1" ajaxEnableExpandedLinks="false" linkOrder="sv3#area12#page74#enu9#ln142">
+      <Field id="sv3#area12#page74#enu9#fld2" name="Drug" type="string" modifiable="true"/>
+      <SelectionField id="sv3#area12#page74#enu9#sfld1" name="City" type="string" modifiable="true"/>
+      <Link id="sv3#area12#page74#enu9#ln142" name="Search" to="sv3#area12#seu52" type="normal" validate="true" gr:bendpoints="86,83,-14,-172">
+        <LinkParameter id="sv3#area12#page74#enu9#ln142#par490" name="City_cityPharmacy" source="sv3#area12#page74#enu9#sfld1" target="sv3#area12#seu52#su90#acond107"/>
+        <LinkParameter id="sv3#area12#page74#enu9#ln142#par503" name="Drug_drug" source="sv3#area12#page74#enu9#fld2" target="sv3#area12#seu52#su90#acond108"/>
+      </Link>
+    </EntryUnit>
+    <PowerIndexUnit id="sv3#area12#page74#pwu3" name="Pharmacies that sell this drug" gr:x="250" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent21" computationMode="execute" ajaxTooltipEnabled="false" displayAttributes="ent21#att49 rel23#role45.ent2#att8 rel23#role45.ent2#att7 rel17#role34.ent19#att43 rel17#role34.ent19#att44 rel17#role34.ent19#att46">
+      <Selector id="sv3#area12#page74#pwu3#su81" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area12#page74#pwu3#su81#kcond33" name="oid" predicate="in" implied="false"/>
+      </Selector>
+    </PowerIndexUnit>
+    <SelectorUnit gr:x="10" gr:y="125" id="sv3#area12#page74#seu39" name="SelectCity" entity="ent12">
+      <Link id="sv3#area12#page74#seu39#ln134" name="Flow134" to="sv3#area12#page74#enu9" type="transport" validate="true">
+        <LinkParameter id="sv3#area12#page74#seu39#ln134#par337" name="name_City [label]" source="ent12#att39Array" target="sv3#area12#page74#enu9#sfld1_label"/>
+        <LinkParameter id="sv3#area12#page74#seu39#ln134#par487" name="oid_City [output]" source="ent12#att16Array" target="sv3#area12#page74#enu9#sfld1_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page74#enu9">
+          <layout:Field field="sv3#area12#page74#enu9#fld2"/>
+          <layout:Field field="sv3#area12#page74#enu9#sfld1"/>
+          <layout:Link link="sv3#area12#page74#enu9#ln142"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page74#pwu3">
+          <layout:Attribute attribute="ent21#att49"/>
+          <layout:Attribute attribute="rel23#role45.ent2#att8"/>
+          <layout:Attribute attribute="rel23#role45.ent2#att7"/>
+          <layout:Attribute attribute="rel17#role34.ent19#att43"/>
+          <layout:Attribute attribute="rel17#role34.ent19#att44"/>
+          <layout:Attribute attribute="rel17#role34.ent19#att46"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

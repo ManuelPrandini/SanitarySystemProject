@@ -1,18 +1,18 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area7#page67" name="Men&#249; Paziente" landmark="false" gr:x="0" gr:y="135">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#area7#page67#mssu9" name="Scegli operazione" linkOrder="sv1#area7#page67#mssu9#ln127 sv1#area7#page67#mssu9#ln134 sv1#area7#page67#mssu9#ln132 sv1#area7#page67#mssu9#ln133">
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#area7#page67#mssu9" name="Scegli operazione" linkOrder="sv1#area7#page67#mssu9#ln127 sv1#area7#page67#mssu9#ln132 sv1#area7#page67#mssu9#ln133 sv1#area7#page67#mssu9#ln152">
       <Link id="sv1#area7#page67#mssu9#ln132" name="Registra ricovero" to="sv1#area7#page66" type="normal" automaticCoupling="true" validate="true"/>
       <Link id="sv1#area7#page67#mssu9#ln133" name="Registra intervento chirurgico" to="sv1#area7#page64" type="normal" automaticCoupling="true" validate="true"/>
-      <Link id="sv1#area7#page67#mssu9#ln134" name="Registra visita" to="sv1#area7#page65#pwu1" type="normal" validate="true" gr:bendpoints="18,211,-212,-9">
-        <LinkParameter id="sv1#area7#page67#mssu9#ln134#par327" name="UserCtxParam.cf_PASSING_cfDottore" sourceLinkParameter="sv1#page62#dau12#ln130#par156" target="sv1#area7#page65#pwu1#su2#acond16"/>
-        <LinkParameter id="sv1#area7#page67#mssu9#ln134#par329" name="PatientToUser.cf_PASSING_cfPaziente" sourceLinkParameter="sv1#page62#dau12#ln130#par155" target="sv1#area7#page65#pwu1#su2#acond9"/>
-        <LinkParameter id="sv1#area7#page67#mssu9#ln134#par487" name="PatientToUser.cf_PASSING" sourceLinkParameter="sv1#page62#dau12#ln130#par155" passing="true"/>
-        <LinkParameter id="sv1#area7#page67#mssu9#ln134#par488" name="UserCtxParam.cf_PASSING" sourceLinkParameter="sv1#page62#dau12#ln130#par156" passing="true"/>
-        <LinkParameter id="sv1#area7#page67#mssu9#ln134#par503" name="DoctorToHospital.name_PASSING" sourceLinkParameter="sv1#page62#dau12#ln130#par493" passing="true"/>
-      </Link>
       <Message xml:space="preserve">Scegli l'operazione da fare sul paziente</Message>
       <Link id="sv1#area7#page67#mssu9#ln127" name="Cartella Clinica" to="sv1#area7#miu20" type="normal" validate="true">
         <LinkParameter id="sv1#area7#page67#mssu9#ln127#par591" name="PatientToUser.cf_PASSING_PatientCF" sourceLinkParameter="sv1#page62#dau12#ln130#par155" target="sv1#area7#miu20.mov2#hym5#icu24#icp102"/>
+      </Link>
+      <Link id="sv1#area7#page67#mssu9#ln152" name="Registra visita" to="sv1#area7#seu54" type="normal" validate="true" gr:bendpoints="18,211,-212,-9">
+        <LinkParameter id="sv1#area7#page67#mssu9#ln152#par643" name="PatientToUser.cf_PASSING" sourceLinkParameter="sv1#page62#dau12#ln130#par155" passing="true"/>
+        <LinkParameter id="sv1#area7#page67#mssu9#ln152#par644" name="UserCtxParam.cf_PASSING" sourceLinkParameter="sv1#page62#dau12#ln130#par156" passing="true"/>
+        <LinkParameter id="sv1#area7#page67#mssu9#ln152#par649" name="DoctorToHospital.name_PASSING" sourceLinkParameter="sv1#page62#dau12#ln130#par493" passing="true"/>
+        <LinkParameter id="sv1#area7#page67#mssu9#ln152#par650" name="UserCtxParam.cf_PASSING_cfDoctor" sourceLinkParameter="sv1#page62#dau12#ln130#par156" target="sv1#area7#seu54#su92#acond117"/>
+        <LinkParameter id="sv1#area7#page67#mssu9#ln152#par656" name="PatientToUser.cf_PASSING_cfPatient" sourceLinkParameter="sv1#page62#dau12#ln130#par155" target="sv1#area7#seu54#su92#acond118"/>
       </Link>
     </MultiMessageUnit>
   </ContentUnits>
@@ -21,9 +21,9 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area7#page67#mssu9">
           <layout:Link link="sv1#area7#page67#mssu9#ln127"/>
-          <layout:Link link="sv1#area7#page67#mssu9#ln134"/>
           <layout:Link link="sv1#area7#page67#mssu9#ln132"/>
           <layout:Link link="sv1#area7#page67#mssu9#ln133"/>
+          <layout:Link link="sv1#area7#page67#mssu9#ln152"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

@@ -22,7 +22,7 @@
       </Field>
     </EntryUnit>
     <MultiMessageUnit gr:x="0" gr:y="75" id="sv4#area8#area10#page10#mssu30" name="Forgot Password?" linkOrder="sv4#area8#area10#page10#mssu30#ln118">
-      <Message xml:space="preserve">Hai dimenticato la password?</Message>
+      <Message xml:space="preserve">Have you forgot the password?</Message>
       <Link id="sv4#area8#area10#page10#mssu30#ln118" name="Reset Password" to="sv4#area8#area11#page55" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="417,-1,-309,59"/>
     </MultiMessageUnit>
   </ContentUnits>
