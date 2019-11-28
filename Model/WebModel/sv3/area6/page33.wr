@@ -1,57 +1,52 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="60" gr:y="570" id="sv3#area6#page33" name="Calendario visite" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="65" gr:y="575" id="sv3#area6#page33" name="Calendario visite" landmark="true">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="75" id="sv3#area6#page33#pwu7" name="Lista visite in programma" sortable="true" checkable="false" useCountQuery="false" entity="ent29" displayAttributes="rel3#role3.rel36#role72.User#att28 rel3#role3.rel4#role5.ent8#att21 ent5#att22 ent5#att24" linkOrder="sv3#area6#page33#pwu7#ln2 sv3#area6#page33#pwu7#ln67">
-      <Selector id="sv3#area6#page33#pwu7#su48" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv3#area6#page33#pwu7#su48#acond17" name="titleIsNull" predicate="null" booleanOperator="and" implied="false" attributes="ent5#att3"/>
-        <AttributesCondition id="sv3#area6#page33#pwu7#su48#acond20" name="cf" predicate="eq" booleanOperator="and" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
-        <AttributesCondition id="sv3#area6#page33#pwu7#su48#acond30" name="date&gt;=today" predicate="gteq" booleanOperator="and" implied="false" attributes="ent5#att22"/>
-      </Selector>
-      <Link id="sv3#area6#page33#pwu7#ln2" name="Mostra dettagli" to="sv3#area6#page33#dau1" type="normal" validate="true">
-        <LinkParameter id="sv3#area6#page33#pwu7#ln2#par197" name="oid_KeyCondition1 [oid]" source="data[].ent5#att2" target="sv3#area6#page33#dau1#su1#kcond1.ent5#att2"/>
-      </Link>
-      <Link id="sv3#area6#page33#pwu7#ln21" name="Flow21" to="sv3#area6#page33#ecu2" type="transport" validate="true">
-        <LinkParameter id="sv3#area6#page33#pwu7#ln21#par199" name="oid_KeyCondition24 [oid]" source="data[].ent5#att2" target="sv3#area6#page33#ecu2#su53#kcond24.ent5#att2"/>
-      </Link>
-      <Link id="sv3#area6#page33#pwu7#ln67" name="Disdici" to="sv3#area6#dlu2" type="normal" validate="true">
-        <LinkParameter id="sv3#area6#page33#pwu7#ln67#par202" name="oid_KeyCondition4 [oid]" source="data[].ent5#att2" target="sv3#area6#dlu2#su46#kcond4.ent5#att2"/>
-        <LinkParameter id="sv3#area6#page33#pwu7#ln67#par205" name="VisitToVisit_Room.id_room_PASSING" source="data[].rel16#role31_ent10#att5" passing="true"/>
-        <LinkParameter id="sv3#area6#page33#pwu7#ln67#par320" name="oid_PASSING" source="data[].ent5#att2" passing="true"/>
-      </Link>
-    </PowerIndexUnit>
-    <EventCalendarUnit gr:x="50" gr:y="265" id="sv3#area6#page33#ecu2" name="Calendario" entityBased="true" entity="ent29" displayAttributes="rel3#role3.rel4#role5.ent8#att21 rel3#role3.rel36#role72.User#att28 ent5#att22" dateAttribute="ent5#att22" ajaxTooltipEnabled="false">
+    <EventCalendarUnit gr:x="0" gr:y="0" id="sv3#area6#page33#ecu2" name="Calendario" entityBased="true" entity="ent29" displayAttributes="rel3#role3.rel4#role5.ent8#att21 rel3#role3.rel36#role72.User#att28 ent5#att22" dateAttribute="ent5#att22" ajaxTooltipEnabled="false" linkOrder="sv3#area6#page33#ecu2#ln6">
       <Selector id="sv3#area6#page33#ecu2#su53" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv3#area6#page33#ecu2#su53#kcond24" name="KeyCondition24" predicate="in" implied="false"/>
+        <AttributesCondition id="sv3#area6#page33#ecu2#su53#acond9" name="title" predicate="null" booleanOperator="and" implied="false" attributes="ent5#att3"/>
+        <AttributesCondition id="sv3#area6#page33#ecu2#su53#acond16" name="cf" predicate="eq" booleanOperator="and" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
+        <AttributesCondition id="sv3#area6#page33#ecu2#su53#acond46" name="startDate" predicate="gteq" booleanOperator="and" implied="false" attributes="ent5#att22"/>
       </Selector>
+      <Link id="sv3#area6#page33#ecu2#ln6" name="Mostra dettagli" to="sv3#area6#page33#dau1" automaticCoupling="true" type="normal" validate="true"/>
     </EventCalendarUnit>
-    <DataUnit gr:x="240" gr:y="0" id="sv3#area6#page33#dau1" name="DettagliVisita" entity="ent29" displayAttributes="rel16#role31.ent10#att50 rel16#role31.ent10#att26 rel16#role31.rel37#role74.ent4#att14 rel16#role31.rel37#role74.ent4#att4">
+    <DataUnit gr:x="305" gr:y="15" id="sv3#area6#page33#dau1" name="DettagliVisita" entity="ent29" displayAttributes="rel16#role31.ent10#att50 rel16#role31.ent10#att26 rel16#role31.rel37#role74.ent4#att14 rel16#role31.rel37#role74.ent4#att4" linkOrder="sv3#area6#page33#dau1#ln21">
       <Selector id="sv3#area6#page33#dau1#su1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area6#page33#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
+      <Link id="sv3#area6#page33#dau1#ln21" name="Disdici visita" to="sv3#area6#dlu2" type="normal" automaticCoupling="true" validate="true"/>
     </DataUnit>
-    <GetUnit id="sv3#area6#page33#gtu1" name="GetUser" gr:x="315" gr:y="290" contextParameters="UserCtxParam">
-      <Link id="sv3#area6#page33#gtu1#ln37" name="Flow20" to="sv3#area6#page33#pwu7" type="transport" validate="true">
-        <LinkParameter id="sv3#area6#page33#gtu1#ln37#par200" name="UserCtxParam.cf_cf" source="sv3#area6#page33#gtu1.UserCtxParam" target="sv3#area6#page33#pwu7#su48#acond20"/>
+    <GetUnit id="sv3#area6#page33#gtu1" name="GetUser" gr:x="170" gr:y="155" contextParameters="UserCtxParam">
+      <Link id="sv3#area6#page33#gtu1#ln5" name="Flow5" to="sv3#area6#page33#ecu2" type="transport" validate="true">
+        <LinkParameter id="sv3#area6#page33#gtu1#ln5#par145" name="UserCtxParam.cf_cf" source="sv3#area6#page33#gtu1.UserCtxParam" target="sv3#area6#page33#ecu2#su53#acond16"/>
       </Link>
     </GetUnit>
-    <TimeUnit id="sv3#area6#page33#tmu3" name="CurrentDate" gr:x="195" gr:y="365">
+    <TimeUnit id="sv3#area6#page33#tmu3" name="CurrentDate" gr:x="50" gr:y="165">
       <Link id="sv3#area6#page33#tmu3#ln70" name="Flow71" to="sv3#area6#page33#ecu2" type="transport" validate="true">
         <LinkParameter id="sv3#area6#page33#tmu3#ln70#par322" name="Current/Input Date_Current Date" source="currentDate" target="sv3#area6#page33#ecu2.inputDate"/>
-      </Link>
-      <Link id="sv3#area6#page33#tmu3#ln71" name="Flow57" to="sv3#area6#page33#pwu7" type="transport" validate="true">
-        <LinkParameter id="sv3#area6#page33#tmu3#ln71#par323" name="Day_date&gt;=today" source="currentDate" target="sv3#area6#page33#pwu7#su48#acond30"/>
+        <LinkParameter id="sv3#area6#page33#tmu3#ln70#par141" name="Current/Input Date_startDate" source="currentDate" target="sv3#area6#page33#ecu2#su53#acond46"/>
       </Link>
     </TimeUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#area6#page33#pwu7">
-          <layout:Attribute attribute="rel3#role3.rel36#role72.User#att28"/>
+        <layout:Unit unitId="sv3#area6#page33#ecu2">
           <layout:Attribute attribute="rel3#role3.rel4#role5.ent8#att21"/>
+          <layout:Attribute attribute="rel3#role3.rel36#role72.User#att28"/>
           <layout:Attribute attribute="ent5#att22"/>
-          <layout:Attribute attribute="ent5#att24"/>
-          <layout:Link link="sv3#area6#page33#pwu7#ln2"/>
-          <layout:Link link="sv3#area6#page33#pwu7#ln67"/>
+          <layout:Link link="sv3#area6#page33#ecu2#ln6"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-0"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-1"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-2"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-3"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-4"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-5"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-6"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-7"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-8"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-9"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-10"/>
+          <layout:Link link="sv3#area6#page33#ecu2-month-11"/>
+          <layout:Link link="sv3#area6#page33#ecu2-year"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -73,6 +68,7 @@
           <layout:Attribute attribute="rel16#role31.ent10#att26"/>
           <layout:Attribute attribute="rel16#role31.rel37#role74.ent4#att14"/>
           <layout:Attribute attribute="rel16#role31.rel37#role74.ent4#att4"/>
+          <layout:Link link="sv3#area6#page33#dau1#ln21"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -88,26 +84,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#area6#page33#ecu2">
-          <layout:Link link="sv3#area6#page33#ecu2-month-0"/>
-          <layout:Link link="sv3#area6#page33#ecu2-month-1"/>
-          <layout:Link link="sv3#area6#page33#ecu2-month-2"/>
-          <layout:Link link="sv3#area6#page33#ecu2-month-3"/>
-          <layout:Link link="sv3#area6#page33#ecu2-month-4"/>
-          <layout:Link link="sv3#area6#page33#ecu2-month-5"/>
-          <layout:Link link="sv3#area6#page33#ecu2-month-6"/>
-          <layout:Link link="sv3#area6#page33#ecu2-month-7"/>
-          <layout:Link link="sv3#area6#page33#ecu2-month-8"/>
-          <layout:Link link="sv3#area6#page33#ecu2-month-9"/>
-          <layout:Link link="sv3#area6#page33#ecu2-month-10"/>
-          <layout:Link link="sv3#area6#page33#ecu2-month-11"/>
-          <layout:Link link="sv3#area6#page33#ecu2-year"/>
-          <layout:Attribute attribute="rel3#role3.rel4#role5.ent8#att21"/>
-          <layout:Attribute attribute="rel3#role3.rel36#role72.User#att28"/>
-          <layout:Attribute attribute="ent5#att22"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1115" gr:y="340" id="mov2#hym4#page69" name="Programma Ricovero">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1180" gr:y="320" id="mov2#hym4#page69" name="Programma Ricovero">
   <ContentUnits>
     <EntryUnit id="mov2#hym4#page69#enu1" name="Programma Ricovero" ajaxEnableExpandedLinks="false" gr:x="0" gr:y="0" fieldOrder="mov2#hym4#page69#enu1#fld3 mov2#hym4#page69#enu1#fld11 mov2#hym4#page69#enu1#fld4 mov2#hym4#page69#enu1#sfld3 mov2#hym4#page69#enu1#fld13 mov2#hym4#page69#enu1#fld14 mov2#hym4#page69#enu1#fld15 mov2#hym4#page69#enu1#fld16" linkOrder="mov2#hym4#page69#enu1#ln110 mov2#hym4#page69#enu1#ln114 mov2#hym4#page69#enu1#ln135">
       <Field id="mov2#hym4#page69#enu1#fld3" name="Ospedale" type="string" preloaded="true"/>

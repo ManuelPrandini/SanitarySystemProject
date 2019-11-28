@@ -1,19 +1,92 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="375" gr:y="80" id="sv2#area5#page30" name="Men&#249; cliente">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="355" gr:y="0" id="sv2#area5#page30" name="Men&#249; cliente">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#area5#page30#mssu21" name="Scegli operazione" linkOrder="sv2#area5#page30#mssu21#ln95 sv2#area5#page30#mssu21#ln96">
-      <Link id="sv2#area5#page30#mssu21#ln95" name="Consulta prescrizioni attive" to="sv2#area5#page63#seu30" type="normal" validate="true" gr:bendpoints="145,33,-240,-17">
-        <LinkParameter id="sv2#area5#page30#mssu21#ln95#par279" name="PatientToUser.cf_PASSING_cfPatient" sourceLinkParameter="sv2#area5#page31#dau4#ln92#par146" target="sv2#area5#page63#seu30#su80#acond97"/>
+    <EntryUnit gr:x="55" gr:y="0" id="sv2#area5#page30#enu22" name="Ricerca farmaco senza prescrizione" linkOrder="sv2#area5#page30#enu22#ln184">
+      <Field id="sv2#area5#page30#enu22#fld29" name="farmaco" type="string" modifiable="true"/>
+      <Link id="sv2#area5#page30#enu22#ln184" name="Cerca farmaco" to="sv2#area5#page30#pwu12" type="normal" validate="true">
+        <LinkParameter id="sv2#area5#page30#enu22#ln184#par715" name="farmaco_name_drug" source="sv2#area5#page30#enu22#fld29" target="sv2#area5#page30#pwu12#su100#acond135"/>
+        <LinkParameter id="sv2#area5#page30#enu22#ln184#par738" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#page31#dau4#ln188#par737" passing="true"/>
       </Link>
-      <Link id="sv2#area5#page30#mssu21#ln96" name="Vendita farmaci senza prescrizione" to="sv2#area5#page61" automaticCoupling="true" type="normal" validate="true"/>
-      <Message xml:space="preserve">Seleziona l'operazione che desideri effettuare:</Message>
-    </MultiMessageUnit>
+    </EntryUnit>
+    <PowerIndexUnit gr:x="50" gr:y="100" id="sv2#area5#page30#pwu12" name="Lista dei farmaci senza prescrizione" sortable="true" checkable="false" useCountQuery="false" entity="ent21" displayAttributes="rel23#role45.ent2#att8 rel23#role45.ent2#att6" linkOrder="sv2#area5#page30#pwu12#ln186">
+      <Selector id="sv2#area5#page30#pwu12#su100" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#area5#page30#pwu12#su100#acond129" name="standard" predicate="eq" booleanOperator="and" implied="false" attributes="rel23#role45.ent2#att7" value="true"/>
+        <AttributesCondition id="sv2#area5#page30#pwu12#su100#acond130" name="pharmacy" predicate="eq" booleanOperator="or" implied="false" attributes="rel17#role34.ent19#att42"/>
+        <AttributesCondition id="sv2#area5#page30#pwu12#su100#acond135" name="name_drug" predicate="beginsWith" booleanOperator="or" implied="false" attributes="rel23#role45.ent2#att8"/>
+        <AttributesCondition id="sv2#area5#page30#pwu12#su100#acond136" name="quantityPositive" predicate="gt" booleanOperator="and" implied="false" attributes="ent21#att49" value="0"/>
+      </Selector>
+      <Link id="sv2#area5#page30#pwu12#ln186" name="Vuoi aggiungere al carrello?" to="sv2#area5#page61#enu26" type="normal" validate="true" ajaxOpenWindow="true" ajaxWindowWidth="750" ajaxWindowHeight="500" ajaxWindowUseTitle="true" ajaxWindowAutoResizing="false" ajaxWindowClosable="true">
+        <LinkParameter id="sv2#area5#page30#pwu12#ln186#par739" name="Quantity_DrugToDrug.name_Farmaco" source="data[].rel23#role45$ent2#att8" target="sv2#area5#page61#enu26#fld32_slot"/>
+        <LinkParameter id="sv2#area5#page30#pwu12#ln186#par740" name="quantity_Quantit&#224; presente" source="data[].ent21#att49" target="sv2#area5#page61#enu26#fld31_slot"/>
+        <LinkParameter id="sv2#area5#page30#pwu12#ln186#par741" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#page30#enu22#ln184#par738" passing="true"/>
+        <LinkParameter id="sv2#area5#page30#pwu12#ln186#par742" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#page30#seu61#ln183#par736" passing="true"/>
+        <LinkParameter id="sv2#area5#page30#pwu12#ln186#par327" name="Quantity_DrugToDrug.id_PASSING" source="data[].rel23#role45$ent2#att6" passing="true"/>
+      </Link>
+    </PowerIndexUnit>
+    <GetUnit id="sv2#area5#page30#gtu12" name="GetUser" gr:x="0" gr:y="295" contextParameters="UserCtxParam">
+      <Link id="sv2#area5#page30#gtu12#ln177" name="Flow101" to="sv2#area5#page30#seu61" type="transport" validate="true">
+        <LinkParameter id="sv2#area5#page30#gtu12#ln177#par711" name="UserCtxParam.cf_cf" source="sv2#area5#page30#gtu12.UserCtxParam" target="sv2#area5#page30#seu61#su101#acond131"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit id="sv2#area5#page30#seu61" name="SelectorPharmacy" gr:x="180" gr:y="285" entity="ent1" distinctAttributes="rel15#role30.ent19#att42">
+      <Selector id="sv2#area5#page30#seu61#su101" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#area5#page30#seu61#su101#acond131" name="cf" predicate="eq" booleanOperator="and" implied="false" attributes="rel22#role44.userOID"/>
+      </Selector>
+      <Link id="sv2#area5#page30#seu61#ln183" name="Flow183" to="sv2#area5#page30#pwu12" type="transport" validate="true">
+        <LinkParameter id="sv2#area5#page30#seu61#ln183#par714" name="PharmacistToPharmacy.oid_pharmacy" source="rel15#role30$ent19#att42Array" target="sv2#area5#page30#pwu12#su100#acond130"/>
+        <LinkParameter id="sv2#area5#page30#seu61#ln183#par736" name="pharmacist_code_PASSING" source="ent1#att32Array" passing="true"/>
+      </Link>
+    </SelectorUnit>
+    <PowerIndexUnit gr:x="110" gr:y="420" id="sv2#area5#page30#pwu13" name="Carrello della spesa" sortable="true" checkable="false" useCountQuery="false" entity="ent13" displayAttributes="ent13#att59 ent13#att60" linkOrder="sv2#area5#page30#pwu13#ln9">
+      <Selector id="sv2#area5#page30#pwu13#su103" defaultPolicy="fill" booleanOperator="and"/>
+      <Link id="sv2#area5#page30#pwu13#ln9" name="Elimina dal carrello" to="sv2#area5#miu5" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#area5#page30#mssu21">
-          <layout:Link link="sv2#area5#page30#mssu21#ln95"/>
-          <layout:Link link="sv2#area5#page30#mssu21#ln96"/>
+        <layout:Unit unitId="sv2#area5#page30#enu22">
+          <layout:Field field="sv2#area5#page30#enu22#fld29"/>
+          <layout:Link link="sv2#area5#page30#enu22#ln184"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area5#page30#pwu12">
+          <layout:Link link="sv2#area5#page30#pwu12#ln186"/>
+          <layout:Attribute attribute="rel23#role45.ent2#att8"/>
+          <layout:Attribute attribute="rel23#role45.ent2#att6"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area5#page30#pwu13">
+          <layout:Attribute attribute="ent13#att59"/>
+          <layout:Attribute attribute="ent13#att60"/>
+          <layout:Link link="sv2#area5#page30#pwu13#ln9"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

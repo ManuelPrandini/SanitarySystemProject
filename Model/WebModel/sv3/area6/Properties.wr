@@ -174,10 +174,7 @@ return ["resultCode" : "success" , "endTime" : endTime]</ScriptUnitText>
       <Selector id="sv3#area6#dlu2#su46" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area6#dlu2#su46#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="sv3#area6#dlu2#oln144" name="OKFlow144" to="sv3#area6#dcnu2">
-        <LinkParameter id="sv3#area6#dlu2#oln144#par319" name="VisitToVisit_Room.id_room_PASSING_KeyCondition27 [id_room] [Visit_Room] [Target]" sourceLinkParameter="sv3#area6#page33#pwu7#ln67#par205" target="sv3#area6#dcnu2#su49#kcond27.ent10#att5"/>
-        <LinkParameter id="sv3#area6#dlu2#oln144#par321" name="oid_PASSING_KeyCondition26 [oid] [Visit] [Source]" sourceLinkParameter="sv3#area6#page33#pwu7#ln67#par320" target="sv3#area6#dcnu2#su47#kcond26.ent5#att2"/>
-      </OKLink>
+      <OKLink id="sv3#area6#dlu2#oln144" name="OKFlow144" to="sv3#area6#dcnu2"/>
       <KOLink id="sv3#area6#dlu2#kln62" name="KOFlow62" to="sv3#area6#page47" automaticCoupling="true"/>
     </DeleteUnit>
     <DisconnectUnit gr:x="605" gr:y="640" id="sv3#area6#dcnu2" name="EliminaVisitaStanza" relationship="rel16#role31">

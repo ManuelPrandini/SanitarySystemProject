@@ -1,0 +1,170 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym4#page73" name="Programma Intervento" landmark="false" gr:x="1750" gr:y="440">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="110" id="mov2#hym4#page73#pwu10" name="Impegni giornalieri paziente" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att22 ent5#att23 ent5#att24 ent5#att25 rel3#role3.ent9#att33">
+      <Selector id="mov2#hym4#page73#pwu10#su88" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym4#page73#pwu10#su88#acond61" name="patientCode" predicate="eq" booleanOperator="or" implied="false" attributes="rel11#role16.ent6#att11"/>
+        <AttributesCondition id="mov2#hym4#page73#pwu10#su88#acond105" name="startDate" predicate="lteq" booleanOperator="or" implied="false" attributes="ent5#att22"/>
+        <AttributesCondition id="mov2#hym4#page73#pwu10#su88#acond111" name="endDate" predicate="gteq" booleanOperator="or" implied="false" attributes="ent5#att23"/>
+      </Selector>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="45" gr:y="0" id="mov2#hym4#page73#enu20" name="Consulta i tuoi impegni giornalieri" fieldOrder="mov2#hym4#page73#enu20#fld26 mov2#hym4#page73#enu20#fld18 mov2#hym4#page73#enu20#fld27 mov2#hym4#page73#enu20#fld17 mov2#hym4#page73#enu20#fld28" linkOrder="mov2#hym4#page73#enu20#ln154">
+      <Field id="mov2#hym4#page73#enu20#fld17" name="Data" type="date" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym4#page73#enu20#ln154" ajaxEventIndicator="true"/>
+      <Field id="mov2#hym4#page73#enu20#fld27" name="Tipologia dell'intervento" type="string" preloaded="true"/>
+      <Field id="mov2#hym4#page73#enu20#fld18" name="Paziente" type="string" preloaded="true"/>
+      <Field id="mov2#hym4#page73#enu20#fld26" name="Dottore" type="string" preloaded="true"/>
+      <Link id="mov2#hym4#page73#enu20#ln154" name="Flow154" to="mov2#hym4#pcu5" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page73#enu20#ln154#par702" name="Data_date" source="mov2#hym4#page73#enu20#fld17" target="mov2#hym4#pcu5#pcp16"/>
+        <LinkParameter id="mov2#hym4#page73#enu20#ln154#par703" name="Dottore_doctorCode" source="mov2#hym4#page73#enu20#fld26" target="mov2#hym4#pcu5#pcp15"/>
+        <LinkParameter id="mov2#hym4#page73#enu20#ln154#par704" name="Paziente_patientCode" source="mov2#hym4#page73#enu20#fld18" target="mov2#hym4#pcu5#pcp10"/>
+      </Link>
+      <Field id="mov2#hym4#page73#enu20#fld28" name="Orario" type="time" modifiable="true"/>
+    </EntryUnit>
+    <PowerIndexUnit id="mov2#hym4#page73#pwu11" name="Impegni giornalieri dottore" gr:x="225" gr:y="200" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att22 ent5#att23 ent5#att24 ent5#att25 rel11#role16.ent6#att11">
+      <Selector id="mov2#hym4#page73#pwu11#su99" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym4#page73#pwu11#su99#acond126" name="doctorCode" predicate="eq" booleanOperator="and" implied="false" attributes="rel3#role3.ent9#att33"/>
+        <AttributesCondition id="mov2#hym4#page73#pwu11#su99#acond127" name="startDate" predicate="lteq" booleanOperator="or" implied="false" attributes="ent5#att22"/>
+        <AttributesCondition id="mov2#hym4#page73#pwu11#su99#acond128" name="endDate" predicate="gteq" booleanOperator="or" implied="false" attributes="ent5#att23"/>
+      </Selector>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym4#page73#enu20">
+          <layout:Field field="mov2#hym4#page73#enu20#fld26"/>
+          <layout:Field field="mov2#hym4#page73#enu20#fld18"/>
+          <layout:Field field="mov2#hym4#page73#enu20#fld27"/>
+          <layout:Field field="mov2#hym4#page73#enu20#fld17"/>
+          <layout:Field field="mov2#hym4#page73#enu20#fld28"/>
+          <layout:Link link="mov2#hym4#page73#enu20#ln154"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym4#page73#pwu10">
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="rel3#role3.ent9#att33"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym4#page73#pwu11">
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="rel11#role16.ent6#att11"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:UnitConfiguration unitType="EventsPlanningUnit" layout:style="StoreTemplates" layout:unitLayout="StoreTemplates/EventsPlanningUnit"/>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

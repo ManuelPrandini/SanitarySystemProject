@@ -433,4 +433,9 @@
     </RelationshipRole2>
   </Relationship>
   <db:Database id="db2" name="hospital" type="MySQL" url="jdbc:mysql://localhost:3306/hospital" username="root" cryptedPassword="true" password="cm9vdA=="/>
+  <Entity gr:x="275" gr:y="1050" id="ent13" name="Vendita temporanea" duration="volatile" volatileStorage="database" attributeOrder="ent13#att58 ent13#att59 ent13#att60">
+    <Attribute id="ent13#att58" key="true" name="oid" type="integer"/>
+    <Attribute id="ent13#att59" name="drugName" type="string"/>
+    <Attribute id="ent13#att60" name="quantity" type="integer"/>
+  </Entity>
 </DataModel>

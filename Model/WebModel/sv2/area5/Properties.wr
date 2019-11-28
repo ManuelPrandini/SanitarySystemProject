@@ -1,3 +1,15 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="995" gr:y="295" id="sv2#area5" name="Interagisci con il cliente" landmark="true" defaultPage="sv2#area5#page31">
-  <OperationUnits/>
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="970" gr:y="280" id="sv2#area5" name="Interagisci con il cliente" landmark="true" landmarks="sv2#area5#page31">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="990" gr:y="475" id="sv2#area5#miu2" action="true" moduleId="mov2#mpkg2#opm18">
+      <OKLink id="sv2#area5#miu2#oln151" name="OKFlow151" to="sv2#area5#cru15">
+        <LinkParameter id="sv2#area5#miu2#oln151#par202" name="oidDrugPrescription_oid" source="mov2#mpkg2#opm18#okcu21#ocp24" target="sv2#area5#cru15.ent13#att58"/>
+        <LinkParameter id="sv2#area5#miu2#oln151#par489" name="drugName_drugName" source="mov2#mpkg2#opm18#okcu21#ocp27" target="sv2#area5#cru15.ent13#att59"/>
+        <LinkParameter id="sv2#area5#miu2#oln151#par548" name="quantityDrug_quantity" source="mov2#mpkg2#opm18#okcu21#ocp25" target="sv2#area5#cru15.ent13#att60"/>
+      </OKLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="660" gr:y="585" id="sv2#area5#miu5" action="true" moduleId="mov2#mpkg2#opm19"/>
+    <CreateUnit gr:x="810" gr:y="470" id="sv2#area5#cru15" name="Create15" entity="ent13">
+      <OKLink id="sv2#area5#cru15#oln176" name="OKFlow176" to="sv2#area5#page30" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
 </Area>

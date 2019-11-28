@@ -1,6 +1,6 @@
 <HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="855" gr:y="275" id="mov2#hym4" name="VisitConclusion">
   <OperationUnits>
-    <InputCollectorUnit gr:x="70" gr:y="70" id="mov2#hym4#icu11">
+    <InputCollectorUnit gr:x="75" gr:y="70" id="mov2#hym4#icu11">
       <InputCollectorParameter id="mov2#hym4#icu11#icp89" name="patient_cf"/>
       <InputCollectorParameter id="mov2#hym4#icu11#icp88" name="doctor_cf"/>
       <InputCollectorParameter id="mov2#hym4#icu11#icp87" name="id_visita"/>
@@ -45,7 +45,7 @@
         <LinkParameter id="mov2#hym4#miu21#kln52#par1035" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#page16#enu17#ln94#par1019" passing="true"/>
       </KOLink>
     </ModuleInstanceUnit>
-    <ModifyUnit gr:x="695" gr:y="120" id="mov2#hym4#mfu5" name="UpdateVisita" entity="ent29">
+    <ModifyUnit gr:x="695" gr:y="115" id="mov2#hym4#mfu5" name="UpdateVisita" entity="ent29">
       <Selector id="mov2#hym4#mfu5#su4" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#hym4#mfu5#su4#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
@@ -58,7 +58,7 @@
       </OKLink>
       <KOLink id="mov2#hym4#mfu5#kln50" name="KOFlow50" to="mov2#hym4#kocu8" automaticCoupling="true" gr:bendpoints="15,104,-825,-16;128,102,-712,-18;589,104,-251,-16"/>
     </ModifyUnit>
-    <ModuleInstanceUnit gr:x="1350" gr:y="350" id="mov2#hym4#miu1" action="true" moduleId="mov2#mpkg2#opm11">
+    <ModuleInstanceUnit gr:x="1380" gr:y="350" id="mov2#hym4#miu1" action="true" moduleId="mov2#mpkg2#opm11">
       <OKLink id="mov2#hym4#miu1#oln157" name="OKFlow157" to="mov2#hym4#page71#mssu1">
         <LinkParameter id="mov2#hym4#miu1#oln157#par7" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#page69#enu1#ln135#par4" passing="true"/>
         <LinkParameter id="mov2#hym4#miu1#oln157#par22" name="idHospital_PASSING" sourceLinkParameter="mov2#hym4#page69#enu1#ln135#par5" passing="true"/>
@@ -82,7 +82,7 @@
         <LinkParameter id="mov2#hym4#seu32#oln153#par986" name="idHospital_PASSING_idHospital" sourceLinkParameter="mov2#hym4#page69#enu1#ln110#par985" target="mov2#hym4#seu17#su59#acond94"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit gr:x="1285" gr:y="570" id="mov2#hym4#seu17" name="BedPlace" entity="ent25">
+    <SelectorUnit gr:x="1315" gr:y="580" id="mov2#hym4#seu17" name="BedPlace" entity="ent25">
       <Selector id="mov2#hym4#seu17#su59" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#hym4#seu17#su59#acond94" name="idHospital" predicate="eq" booleanOperator="and" implied="false" attributes="rel8#role11.rel37#role74.ent4#att1"/>
         <AttributesCondition id="mov2#hym4#seu17#su59#acond96" name="notOccupati" predicate="neq" booleanOperator="and" implied="true" attributes="ent25#att55"/>
@@ -92,7 +92,7 @@
         <LinkParameter id="mov2#hym4#seu17#oln152#par299" name="oid_Bed [output]" source="ent25#att55Array" target="mov2#hym4#page69#enu1#sfld3_output"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit gr:x="1370" gr:y="450" id="mov2#hym4#seu29" name="SelectorRecoveryRoom" entity="ent20">
+    <SelectorUnit gr:x="1425" gr:y="450" id="mov2#hym4#seu29" name="SelectorRecoveryRoom" entity="ent20">
       <Selector id="mov2#hym4#seu29#su79" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#hym4#seu29#su79#acond103" name="oidLetto" predicate="eq" booleanOperator="and" implied="false" attributes="rel8#role12.ent25#att55"/>
       </Selector>
@@ -101,7 +101,7 @@
         <LinkParameter id="mov2#hym4#seu29#oln154#par377" name="floor_Piano" source="ent10#att26Array" target="mov2#hym4#page69#enu1#fld14_slot"/>
       </OKLink>
     </SelectorUnit>
-    <ParameterCollectorUnit gr:x="1085" gr:y="140" id="mov2#hym4#pcu4" name="Parameter Collector4">
+    <ParameterCollectorUnit gr:x="1085" gr:y="105" id="mov2#hym4#pcu4" name="Parameter Collector4">
       <CollectorParameter id="mov2#hym4#pcu4#pcp11" name="nameHospital"/>
       <OKLink id="mov2#hym4#pcu4#oln164" name="OKFlow164" to="mov2#hym4#page48#mssu17">
         <LinkParameter id="mov2#hym4#pcu4#oln164#par976" name="doctorCode_PASSING" source="mov2#hym4#pcu4#pcp13" passing="true"/>
@@ -139,14 +139,42 @@
         <LinkParameter id="mov2#hym4#pcu1#oln3#par335" name="patientCode_PASSING" source="mov2#hym4#pcu1#pcp2" passing="true"/>
       </OKLink>
     </ParameterCollectorUnit>
-    <ParameterCollectorUnit id="mov2#hym4#pcu3" name="Parameter Collector4" gr:x="1785" gr:y="130">
+    <ParameterCollectorUnit id="mov2#hym4#pcu3" name="Parameter Collector4" gr:x="1770" gr:y="135">
       <CollectorParameter id="mov2#hym4#pcu3#pcp6" name="nameHospital"/>
       <CollectorParameter id="mov2#hym4#pcu3#pcp7" name="patientCode"/>
       <CollectorParameter id="mov2#hym4#pcu3#pcp8" name="doctorCode"/>
       <CollectorParameter id="mov2#hym4#pcu3#pcp9" name="idHospital"/>
-      <OKLink id="mov2#hym4#pcu3#oln165" name="OKFlow165" to="mov2#hym4#page3#ecu1">
-        <LinkParameter id="mov2#hym4#pcu3#oln165#par704" name="doctorCode_doctorCode" source="mov2#hym4#pcu3#pcp8" target="mov2#hym4#page3#ecu1#su88#acond126"/>
+      <OKLink id="mov2#hym4#pcu3#oln167" name="OKFlow163" to="mov2#hym4#seu57">
+        <LinkParameter id="mov2#hym4#pcu3#oln167#par638" name="doctorCode_doctorCode [doctor_code]" source="mov2#hym4#pcu3#pcp8" target="mov2#hym4#seu57#su95#kcond46.ent9#att33"/>
+        <LinkParameter id="mov2#hym4#pcu3#oln167#par639" name="idHospital_PASSING" source="mov2#hym4#pcu3#pcp9" passing="true"/>
+        <LinkParameter id="mov2#hym4#pcu3#oln167#par640" name="nameHospital_PASSING" source="mov2#hym4#pcu3#pcp6" passing="true"/>
+        <LinkParameter id="mov2#hym4#pcu3#oln167#par642" name="patientCode_PASSING" source="mov2#hym4#pcu3#pcp7" passing="true"/>
       </OKLink>
+    </ParameterCollectorUnit>
+    <SelectorUnit id="mov2#hym4#seu57" name="SelectorMedicalSpecialization" gr:x="1830" gr:y="300" entity="ent9" distinctAttributes="rel4#role5.ent8#att21">
+      <Selector id="mov2#hym4#seu57#su95" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#hym4#seu57#su95#kcond46" name="doctorCode" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#hym4#seu57#oln168" name="OKFlow168" to="mov2#hym4#page73#enu20">
+        <LinkParameter id="mov2#hym4#seu57#oln168#par666" name="doctor_code_Dottore" source="ent9#att33Array" target="mov2#hym4#page73#enu20#fld26_slot"/>
+        <LinkParameter id="mov2#hym4#seu57#oln168#par667" name="patientCode_PASSING_Paziente" sourceLinkParameter="mov2#hym4#pcu3#oln167#par642" target="mov2#hym4#page73#enu20#fld18_slot"/>
+        <LinkParameter id="mov2#hym4#seu57#oln168#par668" name="DoctorToMedical_specialization.nameSpecialization_Tipologia dell'intervento" source="rel4#role5$ent8#att21Array" target="mov2#hym4#page73#enu20#fld27_slot"/>
+      </OKLink>
+    </SelectorUnit>
+    <ParameterCollectorUnit gr:x="2190" gr:y="515" id="mov2#hym4#pcu5" name="Parameter Collector5" linkOrder="mov2#hym4#pcu5#ln162 mov2#hym4#pcu5#ln163">
+      <CollectorParameter id="mov2#hym4#pcu5#pcp10" name="patientCode"/>
+      <CollectorParameter id="mov2#hym4#pcu5#pcp15" name="doctorCode"/>
+      <CollectorParameter id="mov2#hym4#pcu5#pcp16" name="date"/>
+      <Link id="mov2#hym4#pcu5#ln162" name="Flow162" to="mov2#hym4#page73#pwu10" type="transport" validate="true">
+        <LinkParameter id="mov2#hym4#pcu5#ln162#par705" name="date_endDate" source="mov2#hym4#pcu5#pcp16" target="mov2#hym4#page73#pwu10#su88#acond111"/>
+        <LinkParameter id="mov2#hym4#pcu5#ln162#par706" name="patientCode_patientCode" source="mov2#hym4#pcu5#pcp10" target="mov2#hym4#page73#pwu10#su88#acond61"/>
+        <LinkParameter id="mov2#hym4#pcu5#ln162#par707" name="date_startDate" source="mov2#hym4#pcu5#pcp16" target="mov2#hym4#page73#pwu10#su88#acond105"/>
+      </Link>
+      <Link id="mov2#hym4#pcu5#ln163" name="Flow163" to="mov2#hym4#page73#pwu11" type="transport" validate="true">
+        <LinkParameter id="mov2#hym4#pcu5#ln163#par708" name="doctorCode_doctorCode" source="mov2#hym4#pcu5#pcp15" target="mov2#hym4#page73#pwu11#su99#acond126"/>
+        <LinkParameter id="mov2#hym4#pcu5#ln163#par709" name="date_endDate" source="mov2#hym4#pcu5#pcp16" target="mov2#hym4#page73#pwu11#su99#acond128"/>
+        <LinkParameter id="mov2#hym4#pcu5#ln163#par710" name="date_startDate" source="mov2#hym4#pcu5#pcp16" target="mov2#hym4#page73#pwu11#su99#acond127"/>
+      </Link>
     </ParameterCollectorUnit>
   </OperationUnits>
 </HybridModule>

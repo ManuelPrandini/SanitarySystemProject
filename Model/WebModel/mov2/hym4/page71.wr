@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1375" gr:y="130" id="mov2#hym4#page71" name="Ricovero registrato">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1405" gr:y="130" id="mov2#hym4#page71" name="Ricovero registrato">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page71#mssu1" name="SceltaIntervento" linkOrder="mov2#hym4#page71#mssu1#ln4 mov2#hym4#page71#mssu1#ln75">
       <Message xml:space="preserve">Ricovero programmato correttamente!
