@@ -1,0 +1,57 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="435" gr:y="475" id="sv2#area5#page3" name="Lista Carrello">
+  <ContentUnits>
+    <PowerIndexUnit id="sv2#area5#page3#pwu7" name="Carrello della spesa" linkOrder="sv2#area5#page3#pwu7#ln96" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent13" displayAttributes="ent13#att59 ent13#att60">
+      <Selector id="sv2#area5#page3#pwu7#su75" defaultPolicy="fill" booleanOperator="and"/>
+      <Link id="sv2#area5#page3#pwu7#ln96" name="rimuovi" to="sv2#area5#dlu6" type="normal" automaticCoupling="true" validate="true"/>
+    </PowerIndexUnit>
+    <MultiMessageUnit gr:x="130" gr:y="95" id="sv2#area5#page3#mssu21" name="Azioni" linkOrder="sv2#area5#page3#mssu21#ln101 sv2#area5#page3#mssu21#ln102">
+      <Message xml:space="preserve">Tutti i farmaci aggiunti al carrello. Cosa vuoi fare?</Message>
+      <Link id="sv2#area5#page3#mssu21#ln101" name="termina spesa" to="sv2#area5#seu18" type="normal" validate="true">
+        <LinkParameter id="sv2#area5#page3#mssu21#ln101#par673" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#page30#enu22#ln132#par672" passing="true"/>
+        <LinkParameter id="sv2#area5#page3#mssu21#ln101#par694" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#page30#enu22#ln132#par688" passing="true"/>
+      </Link>
+      <Link id="sv2#area5#page3#mssu21#ln102" name="indietro" to="sv2#area5#page30" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="93,-136,168,284"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area5#page3#pwu7">
+          <layout:Attribute attribute="ent13#att59"/>
+          <layout:Attribute attribute="ent13#att60"/>
+          <layout:Link link="sv2#area5#page3#pwu7#ln96"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area5#page3#mssu21">
+          <layout:Link link="sv2#area5#page3#mssu21#ln101"/>
+          <layout:Link link="sv2#area5#page3#mssu21#ln102"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

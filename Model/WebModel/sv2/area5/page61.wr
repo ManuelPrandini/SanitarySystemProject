@@ -4,13 +4,11 @@
       <Field id="sv2#area5#page61#enu26#fld31" name="Quantit&#224; presente" type="integer" preloaded="true"/>
       <Field id="sv2#area5#page61#enu26#fld33" name="Quantit&#224; da vendere" type="integer" modifiable="true"/>
       <Field id="sv2#area5#page61#enu26#fld32" name="Farmaco" type="string" preloaded="true"/>
-      <Link id="sv2#area5#page61#enu26#ln2" name="Aggiungi al carrello" to="sv2#area5#miu2" type="normal" validate="true">
-        <LinkParameter id="sv2#area5#page61#enu26#ln2#par146" name="Quantit&#224; da vendere_quantity" source="sv2#area5#page61#enu26#fld33" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp117"/>
-        <LinkParameter id="sv2#area5#page61#enu26#ln2#par147" name="2_standard" sourceValue="2" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp113"/>
-        <LinkParameter id="sv2#area5#page61#enu26#ln2#par148" name="Farmaco_drug_id" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp112" sourceLinkParameter="sv2#area5#page30#pwu12#ln186#par327"/>
-        <LinkParameter id="sv2#area5#page61#enu26#ln2#par149" name="patient_code_PASSING_patient_code" sourceLinkParameter="sv2#area5#page30#pwu12#ln186#par741" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp114"/>
-        <LinkParameter id="sv2#area5#page61#enu26#ln2#par197" name="pharmacist_code_PASSING_pharmacist_code" sourceLinkParameter="sv2#area5#page30#pwu12#ln186#par742" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp116"/>
-        <LinkParameter id="sv2#area5#page61#enu26#ln2#par488" name="Farmaco_drugName" source="sv2#area5#page61#enu26#fld32" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp111"/>
+      <Link id="sv2#area5#page61#enu26#ln2" name="Aggiungi al carrello" to="sv2#area5#cru15" type="normal" validate="true">
+        <LinkParameter id="sv2#area5#page61#enu26#ln2#par200" name="Farmaco_drugName" source="sv2#area5#page61#enu26#fld32" target="sv2#area5#cru15.ent13#att59"/>
+        <LinkParameter id="sv2#area5#page61#enu26#ln2#par202" name="Quantity_DrugToDrug.id_PASSING_id_drug" sourceLinkParameter="sv2#area5#page30#pwu12#ln186#par327" target="sv2#area5#cru15.ent13#att52"/>
+        <LinkParameter id="sv2#area5#page61#enu26#ln2#par488" name="2_isStandard" sourceValue="2" target="sv2#area5#cru15.ent13#att36"/>
+        <LinkParameter id="sv2#area5#page61#enu26#ln2#par489" name="Quantit&#224; da vendere_quantity" source="sv2#area5#page61#enu26#fld33" target="sv2#area5#cru15.ent13#att60"/>
       </Link>
     </EntryUnit>
   </ContentUnits>

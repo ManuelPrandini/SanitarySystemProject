@@ -1,15 +1,51 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="970" gr:y="280" id="sv2#area5" name="Interagisci con il cliente" landmark="true" landmarks="sv2#area5#page31">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1365" gr:y="285" id="sv2#area5" name="Interagisci con il cliente" landmark="true" landmarks="sv2#area5#page31" defaultPage="sv2#area5#page31">
   <OperationUnits>
-    <ModuleInstanceUnit gr:x="990" gr:y="475" id="sv2#area5#miu2" action="true" moduleId="mov2#mpkg2#opm18">
-      <OKLink id="sv2#area5#miu2#oln151" name="OKFlow151" to="sv2#area5#cru15">
-        <LinkParameter id="sv2#area5#miu2#oln151#par202" name="oidDrugPrescription_oid" source="mov2#mpkg2#opm18#okcu21#ocp24" target="sv2#area5#cru15.ent13#att58"/>
-        <LinkParameter id="sv2#area5#miu2#oln151#par489" name="drugName_drugName" source="mov2#mpkg2#opm18#okcu21#ocp27" target="sv2#area5#cru15.ent13#att59"/>
-        <LinkParameter id="sv2#area5#miu2#oln151#par548" name="quantityDrug_quantity" source="mov2#mpkg2#opm18#okcu21#ocp25" target="sv2#area5#cru15.ent13#att60"/>
-      </OKLink>
+    <ModuleInstanceUnit gr:x="1205" gr:y="855" id="sv2#area5#miu2" action="true" moduleId="mov2#mpkg2#opm18">
+      <OKLink id="sv2#area5#miu2#oln165" name="OKFlow165" to="sv2#area5#lpu1" automaticCoupling="true" gr:bendpoints="-182,53,144,64"/>
+      <KOLink id="sv2#area5#miu2#kln64" name="KOFlow64" to="sv2#area5#page66" automaticCoupling="true"/>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="660" gr:y="585" id="sv2#area5#miu5" action="true" moduleId="mov2#mpkg2#opm19"/>
     <CreateUnit gr:x="810" gr:y="470" id="sv2#area5#cru15" name="Create15" entity="ent13">
       <OKLink id="sv2#area5#cru15#oln176" name="OKFlow176" to="sv2#area5#page30" automaticCoupling="true"/>
     </CreateUnit>
+    <LoopUnit gr:x="675" gr:y="760" id="sv2#area5#lpu1" name="itera su farmaci">
+      <OKLink id="sv2#area5#lpu1#oln161" name="OKFlow161" to="sv2#area5#seu47" code="next">
+        <LinkParameter id="sv2#area5#lpu1#oln161#par744" name="Next Element_oid [oid]" source="next" target="sv2#area5#seu47#su76#kcond37.ent13#att58"/>
+        <LinkParameter id="sv2#area5#lpu1#oln161#par747" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#seu18#oln163#par695" passing="true"/>
+        <LinkParameter id="sv2#area5#lpu1#oln161#par748" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#seu18#oln163#par696" passing="true"/>
+      </OKLink>
+      <OKLink id="sv2#area5#lpu1#oln162" name="OKFlow162" to="sv2#area5#page64" automaticCoupling="true" code="end"/>
+    </LoopUnit>
+    <DeleteUnit gr:x="155" gr:y="535" id="sv2#area5#dlu6" name="Rimuovi Da carrello" entity="ent13">
+      <Selector id="sv2#area5#dlu6#su48" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area5#dlu6#su48#kcond24" name="KeyCondition24" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#area5#dlu6#oln160" name="OKFlow160" to="sv2#area5#page3" automaticCoupling="true"/>
+    </DeleteUnit>
+    <SelectorUnit gr:x="415" gr:y="720" id="sv2#area5#seu18" name="SelectFarmaciDalCarrello" entity="ent13">
+      <OKLink id="sv2#area5#seu18#oln163" name="OKFlow163" to="sv2#area5#lpu1">
+        <LinkParameter id="sv2#area5#seu18#oln163#par629" name="oid_Input Array" source="ent13#att58Array" target="sv2#area5#lpu1.array"/>
+        <LinkParameter id="sv2#area5#seu18#oln163#par630" name="drugName_PASSING" source="ent13#att59Array" passing="true"/>
+        <LinkParameter id="sv2#area5#seu18#oln163#par631" name="id_drug_PASSING" source="ent13#att52Array" passing="true"/>
+        <LinkParameter id="sv2#area5#seu18#oln163#par633" name="id_drugPrescription_PASSING" source="ent13#att37Array" passing="true"/>
+        <LinkParameter id="sv2#area5#seu18#oln163#par634" name="isStandard_PASSING" source="ent13#att36Array" passing="true"/>
+        <LinkParameter id="sv2#area5#seu18#oln163#par635" name="quantity_PASSING" source="ent13#att60Array" passing="true"/>
+        <LinkParameter id="sv2#area5#seu18#oln163#par695" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#page3#mssu21#ln101#par673" passing="true"/>
+        <LinkParameter id="sv2#area5#seu18#oln163#par696" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#page3#mssu21#ln101#par694" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="sv2#area5#seu47" name="SelectFarmaciDalCarrello" gr:x="900" gr:y="755" entity="ent13">
+      <Selector id="sv2#area5#seu47#su76" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area5#seu47#su76#kcond37" name="oid" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#area5#seu47#oln175" name="OKFlow175" to="sv2#area5#miu2">
+        <LinkParameter id="sv2#area5#seu47#oln175#par750" name="id_drug_drug_id" source="ent13#att52Array" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp112"/>
+        <LinkParameter id="sv2#area5#seu47#oln175#par751" name="id_drugPrescription_drug_prescription" source="ent13#att37Array" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp115"/>
+        <LinkParameter id="sv2#area5#seu47#oln175#par752" name="drugName_drugName" source="ent13#att59Array" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp111"/>
+        <LinkParameter id="sv2#area5#seu47#oln175#par769" name="patient_code_PASSING_patient_code" sourceLinkParameter="sv2#area5#lpu1#oln161#par747" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp114"/>
+        <LinkParameter id="sv2#area5#seu47#oln175#par770" name="pharmacist_code_PASSING_pharmacist_code" sourceLinkParameter="sv2#area5#lpu1#oln161#par748" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp116"/>
+        <LinkParameter id="sv2#area5#seu47#oln175#par771" name="quantity_quantity" source="ent13#att60Array" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp117"/>
+        <LinkParameter id="sv2#area5#seu47#oln175#par772" name="isStandard_standard" source="ent13#att36Array" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp113"/>
+      </OKLink>
+    </SelectorUnit>
   </OperationUnits>
 </Area>

@@ -1,10 +1,14 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="355" gr:y="0" id="sv2#area5#page30" name="Men&#249; cliente">
   <ContentUnits>
-    <EntryUnit gr:x="55" gr:y="0" id="sv2#area5#page30#enu22" name="Ricerca farmaco senza prescrizione" linkOrder="sv2#area5#page30#enu22#ln184">
+    <EntryUnit gr:x="55" gr:y="0" id="sv2#area5#page30#enu22" name="Ricerca farmaco senza prescrizione" linkOrder="sv2#area5#page30#enu22#ln184 sv2#area5#page30#enu22#ln132">
       <Field id="sv2#area5#page30#enu22#fld29" name="farmaco" type="string" modifiable="true"/>
       <Link id="sv2#area5#page30#enu22#ln184" name="Cerca farmaco" to="sv2#area5#page30#pwu12" type="normal" validate="true">
         <LinkParameter id="sv2#area5#page30#enu22#ln184#par715" name="farmaco_name_drug" source="sv2#area5#page30#enu22#fld29" target="sv2#area5#page30#pwu12#su100#acond135"/>
         <LinkParameter id="sv2#area5#page30#enu22#ln184#par738" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#page31#dau4#ln188#par737" passing="true"/>
+      </Link>
+      <Link id="sv2#area5#page30#enu22#ln132" name="Vai al carrello" to="sv2#area5#page3#mssu21" type="normal" validate="true" gr:bendpoints="-217,5,-212,-511;-224,189,-219,-327;-231,365,-226,-151;-187,568,-247,-2">
+        <LinkParameter id="sv2#area5#page30#enu22#ln132#par672" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#page31#dau4#ln188#par737" passing="true"/>
+        <LinkParameter id="sv2#area5#page30#enu22#ln132#par688" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#page30#seu61#ln136#par678" passing="true"/>
       </Link>
     </EntryUnit>
     <PowerIndexUnit gr:x="50" gr:y="100" id="sv2#area5#page30#pwu12" name="Lista dei farmaci senza prescrizione" sortable="true" checkable="false" useCountQuery="false" entity="ent21" displayAttributes="rel23#role45.ent2#att8 rel23#role45.ent2#att6" linkOrder="sv2#area5#page30#pwu12#ln186">
@@ -35,11 +39,10 @@
         <LinkParameter id="sv2#area5#page30#seu61#ln183#par714" name="PharmacistToPharmacy.oid_pharmacy" source="rel15#role30$ent19#att42Array" target="sv2#area5#page30#pwu12#su100#acond130"/>
         <LinkParameter id="sv2#area5#page30#seu61#ln183#par736" name="pharmacist_code_PASSING" source="ent1#att32Array" passing="true"/>
       </Link>
+      <Link id="sv2#area5#page30#seu61#ln136" name="Flow136" to="sv2#area5#page30#enu22" type="transport" validate="true" gr:bendpoints="76,-136,151,164;76,-247,151,53">
+        <LinkParameter id="sv2#area5#page30#seu61#ln136#par678" name="pharmacist_code_PASSING" source="ent1#att32Array" passing="true"/>
+      </Link>
     </SelectorUnit>
-    <PowerIndexUnit gr:x="110" gr:y="420" id="sv2#area5#page30#pwu13" name="Carrello della spesa" sortable="true" checkable="false" useCountQuery="false" entity="ent13" displayAttributes="ent13#att59 ent13#att60" linkOrder="sv2#area5#page30#pwu13#ln9">
-      <Selector id="sv2#area5#page30#pwu13#su103" defaultPolicy="fill" booleanOperator="and"/>
-      <Link id="sv2#area5#page30#pwu13#ln9" name="Elimina dal carrello" to="sv2#area5#miu5" automaticCoupling="true" type="normal" validate="true"/>
-    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -47,6 +50,7 @@
         <layout:Unit unitId="sv2#area5#page30#enu22">
           <layout:Field field="sv2#area5#page30#enu22#fld29"/>
           <layout:Link link="sv2#area5#page30#enu22#ln184"/>
+          <layout:Link link="sv2#area5#page30#enu22#ln132"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -82,13 +86,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#area5#page30#pwu13">
-          <layout:Attribute attribute="ent13#att59"/>
-          <layout:Attribute attribute="ent13#att60"/>
-          <layout:Link link="sv2#area5#page30#pwu13#ln9"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

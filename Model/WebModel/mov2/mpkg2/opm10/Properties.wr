@@ -51,6 +51,7 @@
         <LinkParameter id="mov2#mpkg2#opm10#inn16#kln40#par532" name="quantity_PASSING_quantity" sourceLinkParameter="mov2#mpkg2#opm10#seu28#oln93#par529" target="mov2#mpkg2#opm10#cru8.ent36#att79"/>
         <LinkParameter id="mov2#mpkg2#opm10#inn16#kln40#par533" name="id_visit_PASSING_Visit.oid(Drug_PrescriptionToVisit)" sourceLinkParameter="mov2#mpkg2#opm10#seu28#oln93#par528" target="mov2#mpkg2#opm10#cru8.rel30#role60.ent5#att2"/>
         <LinkParameter id="mov2#mpkg2#opm10#inn16#kln40#par538" name="id_visit_PASSING" sourceLinkParameter="mov2#mpkg2#opm10#seu28#oln93#par528" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm10#inn16#kln40#par199" name="0_assigned" sourceValue="0" target="mov2#mpkg2#opm10#cru8.ent36#att81"/>
       </KOLink>
     </IsNotNullUnit>
   </OperationUnits>
