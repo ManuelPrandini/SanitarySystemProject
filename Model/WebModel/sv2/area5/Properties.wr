@@ -1,51 +1,96 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1365" gr:y="285" id="sv2#area5" name="Interagisci con il cliente" landmark="true" landmarks="sv2#area5#page31" defaultPage="sv2#area5#page31">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1185" gr:y="305" id="sv2#area5" name="Interagisci con il cliente" landmark="true" landmarks="sv2#area5#page31" defaultPage="sv2#area5#page31">
   <OperationUnits>
-    <ModuleInstanceUnit gr:x="1205" gr:y="855" id="sv2#area5#miu2" action="true" moduleId="mov2#mpkg2#opm18">
-      <OKLink id="sv2#area5#miu2#oln165" name="OKFlow165" to="sv2#area5#lpu1" automaticCoupling="true" gr:bendpoints="-182,53,144,64"/>
+    <ModuleInstanceUnit gr:x="1340" gr:y="860" id="sv2#area5#miu2" action="true" moduleId="mov2#mpkg2#opm18">
+      <OKLink id="sv2#area5#miu2#oln165" name="OKFlow165" to="sv2#area5#dlu7" gr:bendpoints="-210,20,170,20">
+        <LinkParameter id="sv2#area5#miu2#oln165#par734" name="oid_carrello_oid [oid]" source="mov2#mpkg2#opm18#okcu21#ocp24" target="sv2#area5#dlu7#su89#kcond39.ent13#att58"/>
+      </OKLink>
       <KOLink id="sv2#area5#miu2#kln64" name="KOFlow64" to="sv2#area5#page66" automaticCoupling="true"/>
     </ModuleInstanceUnit>
-    <CreateUnit gr:x="810" gr:y="470" id="sv2#area5#cru15" name="Create15" entity="ent13">
-      <OKLink id="sv2#area5#cru15#oln176" name="OKFlow176" to="sv2#area5#page30" automaticCoupling="true"/>
+    <CreateUnit gr:x="1290" gr:y="465" id="sv2#area5#cru15" name="Aggiungi al carrello" entity="ent13">
+      <OKLink id="sv2#area5#cru15#oln176" name="OKFlow176" to="sv2#area5#page68#mssu26">
+        <LinkParameter id="sv2#area5#cru15#oln176#par866" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#page61#enu26#ln2#par856" passing="true"/>
+        <LinkParameter id="sv2#area5#cru15#oln176#par869" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#page61#enu26#ln2#par861" passing="true"/>
+        <LinkParameter id="sv2#area5#cru15#oln176#par870" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#page61#enu26#ln2#par865" passing="true"/>
+      </OKLink>
     </CreateUnit>
-    <LoopUnit gr:x="675" gr:y="760" id="sv2#area5#lpu1" name="itera su farmaci">
+    <LoopUnit gr:x="730" gr:y="735" id="sv2#area5#lpu1" name="itera su farmaci">
       <OKLink id="sv2#area5#lpu1#oln161" name="OKFlow161" to="sv2#area5#seu47" code="next">
         <LinkParameter id="sv2#area5#lpu1#oln161#par744" name="Next Element_oid [oid]" source="next" target="sv2#area5#seu47#su76#kcond37.ent13#att58"/>
-        <LinkParameter id="sv2#area5#lpu1#oln161#par747" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#seu18#oln163#par695" passing="true"/>
-        <LinkParameter id="sv2#area5#lpu1#oln161#par748" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#seu18#oln163#par696" passing="true"/>
       </OKLink>
       <OKLink id="sv2#area5#lpu1#oln162" name="OKFlow162" to="sv2#area5#page64" automaticCoupling="true" code="end"/>
     </LoopUnit>
-    <DeleteUnit gr:x="155" gr:y="535" id="sv2#area5#dlu6" name="Rimuovi Da carrello" entity="ent13">
+    <DeleteUnit gr:x="150" gr:y="635" id="sv2#area5#dlu6" name="Rimuovi Da carrello" entity="ent13">
       <Selector id="sv2#area5#dlu6#su48" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area5#dlu6#su48#kcond24" name="KeyCondition24" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="sv2#area5#dlu6#oln160" name="OKFlow160" to="sv2#area5#page3" automaticCoupling="true"/>
+      <OKLink id="sv2#area5#dlu6#oln160" name="OKFlow160" to="sv2#area5#pcu8">
+        <LinkParameter id="sv2#area5#dlu6#oln160#par950" name="patient_code_PASSING_patient_code" sourceLinkParameter="sv2#area5#page3#pwu7#ln96#par947" target="sv2#area5#pcu8#pcp26"/>
+        <LinkParameter id="sv2#area5#dlu6#oln160#par951" name="pharmacist_code_PASSING_pharmacist_code" sourceLinkParameter="sv2#area5#page3#pwu7#ln96#par948" target="sv2#area5#pcu8#pcp25"/>
+        <LinkParameter id="sv2#area5#dlu6#oln160#par952" name="pharmacy_oid_PASSING_pharmacy_oid" sourceLinkParameter="sv2#area5#page3#pwu7#ln96#par949" target="sv2#area5#pcu8#pcp27"/>
+      </OKLink>
     </DeleteUnit>
-    <SelectorUnit gr:x="415" gr:y="720" id="sv2#area5#seu18" name="SelectFarmaciDalCarrello" entity="ent13">
-      <OKLink id="sv2#area5#seu18#oln163" name="OKFlow163" to="sv2#area5#lpu1">
-        <LinkParameter id="sv2#area5#seu18#oln163#par629" name="oid_Input Array" source="ent13#att58Array" target="sv2#area5#lpu1.array"/>
+    <SelectorUnit gr:x="315" gr:y="730" id="sv2#area5#seu18" name="SelectFarmaciDalCarrello" entity="ent13">
+      <OKLink id="sv2#area5#seu18#oln163" name="OKFlow163" to="sv2#area5#inn20">
         <LinkParameter id="sv2#area5#seu18#oln163#par630" name="drugName_PASSING" source="ent13#att59Array" passing="true"/>
         <LinkParameter id="sv2#area5#seu18#oln163#par631" name="id_drug_PASSING" source="ent13#att52Array" passing="true"/>
         <LinkParameter id="sv2#area5#seu18#oln163#par633" name="id_drugPrescription_PASSING" source="ent13#att37Array" passing="true"/>
         <LinkParameter id="sv2#area5#seu18#oln163#par634" name="isStandard_PASSING" source="ent13#att36Array" passing="true"/>
         <LinkParameter id="sv2#area5#seu18#oln163#par635" name="quantity_PASSING" source="ent13#att60Array" passing="true"/>
-        <LinkParameter id="sv2#area5#seu18#oln163#par695" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#page3#mssu21#ln101#par673" passing="true"/>
-        <LinkParameter id="sv2#area5#seu18#oln163#par696" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#page3#mssu21#ln101#par694" passing="true"/>
+        <LinkParameter id="sv2#area5#seu18#oln163#par959" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#page3#mssu21#ln101#par956" passing="true"/>
+        <LinkParameter id="sv2#area5#seu18#oln163#par960" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#page3#mssu21#ln101#par957" passing="true"/>
+        <LinkParameter id="sv2#area5#seu18#oln163#par961" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#page3#mssu21#ln101#par958" passing="true"/>
+        <LinkParameter id="sv2#area5#seu18#oln163#par143" name="oid_Input" source="ent13#att58Array" target="sv2#area5#inn20.isnotnull"/>
+        <LinkParameter id="sv2#area5#seu18#oln163#par144" name="oid_PASSING" source="ent13#att58Array" passing="true"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit id="sv2#area5#seu47" name="SelectFarmaciDalCarrello" gr:x="900" gr:y="755" entity="ent13">
+    <SelectorUnit id="sv2#area5#seu47" name="SelectFarmaciDalCarrello" gr:x="930" gr:y="730" entity="ent13">
       <Selector id="sv2#area5#seu47#su76" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area5#seu47#su76#kcond37" name="oid" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#area5#seu47#oln175" name="OKFlow175" to="sv2#area5#miu2">
-        <LinkParameter id="sv2#area5#seu47#oln175#par750" name="id_drug_drug_id" source="ent13#att52Array" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp112"/>
-        <LinkParameter id="sv2#area5#seu47#oln175#par751" name="id_drugPrescription_drug_prescription" source="ent13#att37Array" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp115"/>
-        <LinkParameter id="sv2#area5#seu47#oln175#par752" name="drugName_drugName" source="ent13#att59Array" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp111"/>
-        <LinkParameter id="sv2#area5#seu47#oln175#par769" name="patient_code_PASSING_patient_code" sourceLinkParameter="sv2#area5#lpu1#oln161#par747" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp114"/>
-        <LinkParameter id="sv2#area5#seu47#oln175#par770" name="pharmacist_code_PASSING_pharmacist_code" sourceLinkParameter="sv2#area5#lpu1#oln161#par748" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp116"/>
-        <LinkParameter id="sv2#area5#seu47#oln175#par771" name="quantity_quantity" source="ent13#att60Array" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp117"/>
-        <LinkParameter id="sv2#area5#seu47#oln175#par772" name="isStandard_standard" source="ent13#att36Array" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp113"/>
+        <LinkParameter id="sv2#area5#seu47#oln175#par329" name="id_drug_drug_id" source="ent13#att52Array" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp112"/>
+        <LinkParameter id="sv2#area5#seu47#oln175#par459" name="id_drugPrescription_drug_prescription" source="ent13#att37Array" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp115"/>
+        <LinkParameter id="sv2#area5#seu47#oln175#par460" name="drugName_drugName" source="ent13#att59Array" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp111"/>
+        <LinkParameter id="sv2#area5#seu47#oln175#par607" name="quantity_quantity" source="ent13#att60Array" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp117"/>
+        <LinkParameter id="sv2#area5#seu47#oln175#par637" name="isStandard_standard" source="ent13#att36Array" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp113"/>
+        <LinkParameter id="sv2#area5#seu47#oln175#par701" name="oid_PASSING" source="ent13#att58Array" passing="true"/>
+        <LinkParameter id="sv2#area5#seu47#oln175#par793" name="oid_oid_carrello" source="ent13#att58Array" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp118"/>
       </OKLink>
     </SelectorUnit>
+    <ParameterCollectorUnit gr:x="390" gr:y="195" id="sv2#area5#pcu6" name="codes of patient and pharmacist">
+      <CollectorParameter id="sv2#area5#pcu6#pcp17" name="pharmacist_code"/>
+      <CollectorParameter id="sv2#area5#pcu6#pcp18" name="patient_code"/>
+      <OKLink id="sv2#area5#pcu6#oln181" name="OKFlow181" to="sv2#area5#page30#enu22">
+        <LinkParameter id="sv2#area5#pcu6#oln181#par796" name="patient_code_PASSING" source="sv2#area5#pcu6#pcp18" passing="true"/>
+        <LinkParameter id="sv2#area5#pcu6#oln181#par797" name="pharmacist_code_PASSING" source="sv2#area5#pcu6#pcp17" passing="true"/>
+        <LinkParameter id="sv2#area5#pcu6#oln181#par832" name="pharmacy_oid_PASSING" source="sv2#area5#pcu6#pcp19" passing="true"/>
+      </OKLink>
+      <CollectorParameter id="sv2#area5#pcu6#pcp19" name="pharmacy_oid"/>
+    </ParameterCollectorUnit>
+    <DeleteUnit gr:x="975" gr:y="850" id="sv2#area5#dlu7" name="Rimuovi da carrello" entity="ent13">
+      <Selector id="sv2#area5#dlu7#su89" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area5#dlu7#su89#kcond39" name="oid" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#area5#dlu7#oln179" name="OKFlow179" to="sv2#area5#lpu1" automaticCoupling="true"/>
+    </DeleteUnit>
+    <ParameterCollectorUnit id="sv2#area5#pcu8" name="codes of patient and pharmacist" gr:x="130" gr:y="435">
+      <CollectorParameter id="sv2#area5#pcu8#pcp25" name="pharmacist_code"/>
+      <CollectorParameter id="sv2#area5#pcu8#pcp26" name="patient_code"/>
+      <CollectorParameter id="sv2#area5#pcu8#pcp27" name="pharmacy_oid"/>
+      <OKLink id="sv2#area5#pcu8#oln182" name="OKFlow182" to="sv2#area5#page3#pwu7">
+        <LinkParameter id="sv2#area5#pcu8#oln182#par941" name="patient_code_PASSING" source="sv2#area5#pcu8#pcp26" passing="true"/>
+        <LinkParameter id="sv2#area5#pcu8#oln182#par942" name="pharmacist_code_PASSING" source="sv2#area5#pcu8#pcp25" passing="true"/>
+        <LinkParameter id="sv2#area5#pcu8#oln182#par943" name="pharmacy_oid_PASSING" source="sv2#area5#pcu8#pcp27" passing="true"/>
+      </OKLink>
+    </ParameterCollectorUnit>
+    <IsNotNullUnit gr:x="535" gr:y="740" id="sv2#area5#inn20" name="IfCarrelloNotEmpty">
+      <OKLink id="sv2#area5#inn20#oln151" name="OKFlow151" to="sv2#area5#lpu1">
+        <LinkParameter id="sv2#area5#inn20#oln151#par146" name="oid_PASSING_Input Array" sourceLinkParameter="sv2#area5#seu18#oln163#par144" target="sv2#area5#lpu1.array"/>
+        <LinkParameter id="sv2#area5#inn20#oln151#par147" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#seu18#oln163#par959" passing="true"/>
+        <LinkParameter id="sv2#area5#inn20#oln151#par148" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#seu18#oln163#par960" passing="true"/>
+        <LinkParameter id="sv2#area5#inn20#oln151#par149" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#seu18#oln163#par961" passing="true"/>
+      </OKLink>
+      <KOLink id="sv2#area5#inn20#kln65" name="KOFlow65" to="sv2#area5#page75#mssu35" automaticCoupling="true"/>
+    </IsNotNullUnit>
   </OperationUnits>
 </Area>

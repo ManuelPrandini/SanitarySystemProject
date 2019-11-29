@@ -437,7 +437,7 @@
     <Attribute id="ent13#att58" key="true" name="oid" type="integer"/>
     <Attribute id="ent13#att59" name="drugName" type="string"/>
     <Attribute id="ent13#att60" name="quantity" type="integer"/>
-    <Attribute id="ent13#att36" name="isStandard" type="boolean"/>
+    <Attribute id="ent13#att36" name="isStandard" type="integer"/>
     <Attribute id="ent13#att37" name="id_drugPrescription" type="integer"/>
     <Attribute id="ent13#att52" name="id_drug" type="integer"/>
   </Entity>

@@ -1,0 +1,32 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="825" gr:y="470" id="sv2#area5#page68" name="Farmaco aggiunto al carrello!">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#area5#page68#mssu26" name="Farmaco aggiunto correttamente al carrello" linkOrder="sv2#area5#page68#mssu26#ln9">
+      <Link id="sv2#area5#page68#mssu26#ln9" name="Seleziona altro" to="sv2#area5#pcu6" type="normal" validate="true" gr:bendpoints="-452,-150,37,146">
+        <LinkParameter id="sv2#area5#page68#mssu26#ln9#par871" name="patient_code_PASSING_patient_code" sourceLinkParameter="sv2#area5#cru15#oln176#par866" target="sv2#area5#pcu6#pcp18"/>
+        <LinkParameter id="sv2#area5#page68#mssu26#ln9#par872" name="pharmacist_code_PASSING_pharmacist_code" sourceLinkParameter="sv2#area5#cru15#oln176#par869" target="sv2#area5#pcu6#pcp17"/>
+        <LinkParameter id="sv2#area5#page68#mssu26#ln9#par898" name="pharmacy_oid_PASSING_pharmacy_oid" sourceLinkParameter="sv2#area5#cru15#oln176#par870" target="sv2#area5#pcu6#pcp19"/>
+      </Link>
+      <Message xml:space="preserve">procedi</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area5#page68#mssu26">
+          <layout:Link link="sv2#area5#page68#mssu26#ln9"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

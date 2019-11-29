@@ -1,27 +1,39 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="35" id="sv2#area5#page31" name="Accedi ai dati del cliente" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="10" id="sv2#area5#page31" name="Accedi ai dati del cliente" landmark="true">
   <ContentUnits>
-    <EntryUnit id="sv2#area5#page31#enu16" name="Inserisci CF" linkOrder="sv2#area5#page31#enu16#ln76" gr:x="0" gr:y="0" fieldOrder="sv2#area5#page31#enu16#fld12">
+    <EntryUnit id="sv2#area5#page31#enu16" name="Inserisci CF" linkOrder="sv2#area5#page31#enu16#ln76" gr:x="20" gr:y="0" fieldOrder="sv2#area5#page31#enu16#fld12">
       <Field id="sv2#area5#page31#enu16#fld12" name="CF" type="string" modifiable="true"/>
       <Link id="sv2#area5#page31#enu16#ln76" name="Cerca" to="sv2#area5#page31#dau4" type="normal" validate="true">
         <LinkParameter id="sv2#area5#page31#enu16#ln76#par142" name="CF_cf" source="sv2#area5#page31#enu16#fld12" target="sv2#area5#page31#dau4#su71#acond63"/>
       </Link>
     </EntryUnit>
-    <DataUnit id="sv2#area5#page31#dau4" name="Scheda Paziente" gr:x="135" gr:y="15" entity="ent6" displayAttributes="rel14#role28.userOID ent6#att11 rel14#role28.User#att27 rel14#role28.User#att28 rel14#role28.email rel14#role28.User#att29 rel14#role28.User#att40 rel14#role28.User#att12 ent6#att30 ent6#att31 rel14#role28.User#att41" linkOrder="sv2#area5#page31#dau4#ln188">
+    <DataUnit id="sv2#area5#page31#dau4" name="Scheda Paziente" gr:x="155" gr:y="15" entity="ent6" displayAttributes="rel14#role28.userOID ent6#att11 rel14#role28.User#att27 rel14#role28.User#att28 rel14#role28.email rel14#role28.User#att29 rel14#role28.User#att40 rel14#role28.User#att12 ent6#att30 ent6#att31 rel14#role28.User#att41" linkOrder="sv2#area5#page31#dau4#ln188">
       <Selector id="sv2#area5#page31#dau4#su71" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv2#area5#page31#dau4#su71#acond63" name="cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.userOID"/>
         <AttributesCondition id="sv2#area5#page31#dau4#su71#acond64" name="cf!=sestesso" predicate="neq" booleanOperator="and" implied="false" attributes="rel14#role28.userOID"/>
         <AttributesCondition id="sv2#area5#page31#dau4#su71#acond65" name="Approved" predicate="eq" booleanOperator="and" implied="false" value="1" attributes="ent6#att19"/>
       </Selector>
-      <Link id="sv2#area5#page31#dau4#ln188" name="Procedi" to="sv2#area5#page30#enu22" type="normal" validate="true">
-        <LinkParameter id="sv2#area5#page31#dau4#ln188#par737" name="patient_code_PASSING" source="data.ent6#att11" passing="true"/>
+      <Link id="sv2#area5#page31#dau4#ln188" name="Procedi" to="sv2#area5#pcu6" type="normal" validate="true">
+        <LinkParameter id="sv2#area5#page31#dau4#ln188#par798" name="patient_code_patient_code" source="data.ent6#att11" target="sv2#area5#pcu6#pcp18"/>
+        <LinkParameter id="sv2#area5#page31#dau4#ln188#par831" name="PharmacistToPharmacy.oid_PASSING_pharmacy_oid" sourceLinkParameter="sv2#area5#page31#seu31#ln71#par802" target="sv2#area5#pcu6#pcp19"/>
+        <LinkParameter id="sv2#area5#page31#dau4#ln188#par910" name="pharmacist_code_PASSING_pharmacist_code" sourceLinkParameter="sv2#area5#page31#seu31#ln71#par909" target="sv2#area5#pcu6#pcp17"/>
       </Link>
     </DataUnit>
-    <GetUnit id="sv2#area5#page31#gtu9" name="CF" gr:x="0" gr:y="125" contextParameters="UserCtxParam">
-      <Link id="sv2#area5#page31#gtu9#ln81" name="Flow17" to="sv2#area5#page31#dau4" type="transport" validate="true">
-        <LinkParameter id="sv2#area5#page31#gtu9#ln81#par143" name="UserCtxParam.cf_cf!=sestesso" source="sv2#area5#page31#gtu9.UserCtxParam" target="sv2#area5#page31#dau4#su71#acond64"/>
-        <LinkParameter id="sv2#area5#page31#gtu9#ln81#par144" name="UserCtxParam.cf_PASSING" source="sv2#area5#page31#gtu9.UserCtxParam" passing="true"/>
+    <GetUnit id="sv2#area5#page31#gtu9" name="CF Farmacista" gr:x="0" gr:y="210" contextParameters="UserCtxParam">
+      <Link id="sv2#area5#page31#gtu9#ln95" name="Flow95" to="sv2#area5#page31#seu31" type="transport" validate="true">
+        <LinkParameter id="sv2#area5#page31#gtu9#ln95#par906" name="UserCtxParam.cf_cf" source="sv2#area5#page31#gtu9.UserCtxParam" target="sv2#area5#page31#seu31#su91#acond17"/>
+        <LinkParameter id="sv2#area5#page31#gtu9#ln95#par907" name="UserCtxParam.cf_PASSING" source="sv2#area5#page31#gtu9.UserCtxParam" passing="true"/>
       </Link>
     </GetUnit>
+    <SelectorUnit id="sv2#area5#page31#seu31" name="SelectorPharmacy" gr:x="160" gr:y="205" entity="ent1" distinctAttributes="rel15#role30.ent19#att42">
+      <Selector id="sv2#area5#page31#seu31#su91" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#area5#page31#seu31#su91#acond17" name="cf" predicate="eq" booleanOperator="and" implied="false" attributes="rel22#role44.userOID"/>
+      </Selector>
+      <Link id="sv2#area5#page31#seu31#ln71" name="Flow71" to="sv2#area5#page31#dau4" type="transport" validate="true">
+        <LinkParameter id="sv2#area5#page31#seu31#ln71#par802" name="PharmacistToPharmacy.oid_PASSING" source="rel15#role30$ent19#att42Array" passing="true"/>
+        <LinkParameter id="sv2#area5#page31#seu31#ln71#par908" name="PharmacistToUser.cf_cf!=sestesso" source="rel22#role44_userOIDArray" target="sv2#area5#page31#dau4#su71#acond64"/>
+        <LinkParameter id="sv2#area5#page31#seu31#ln71#par909" name="pharmacist_code_PASSING" source="ent1#att32Array" passing="true"/>
+      </Link>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -74,6 +86,20 @@
           <layout:Link link="sv2#area5#page31#dau4#ln188"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="825" gr:y="315" id="sv2#area5#page61" name="Dettagli Farmaco" layout:pageLayout="MetroStyle/Empty">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1260" gr:y="240" id="sv2#area5#page61" name="Dettagli Farmaco" layout:pageLayout="MetroStyle/Empty">
   <ContentUnits>
     <EntryUnit id="sv2#area5#page61#enu26" name="Quantit&#224;" gr:x="0" gr:y="0" fieldOrder="sv2#area5#page61#enu26#fld32 sv2#area5#page61#enu26#fld31 sv2#area5#page61#enu26#fld33" linkOrder="sv2#area5#page61#enu26#ln2">
       <Field id="sv2#area5#page61#enu26#fld31" name="Quantit&#224; presente" type="integer" preloaded="true"/>
@@ -7,8 +7,11 @@
       <Link id="sv2#area5#page61#enu26#ln2" name="Aggiungi al carrello" to="sv2#area5#cru15" type="normal" validate="true">
         <LinkParameter id="sv2#area5#page61#enu26#ln2#par200" name="Farmaco_drugName" source="sv2#area5#page61#enu26#fld32" target="sv2#area5#cru15.ent13#att59"/>
         <LinkParameter id="sv2#area5#page61#enu26#ln2#par202" name="Quantity_DrugToDrug.id_PASSING_id_drug" sourceLinkParameter="sv2#area5#page30#pwu12#ln186#par327" target="sv2#area5#cru15.ent13#att52"/>
-        <LinkParameter id="sv2#area5#page61#enu26#ln2#par488" name="2_isStandard" sourceValue="2" target="sv2#area5#cru15.ent13#att36"/>
+        <LinkParameter id="sv2#area5#page61#enu26#ln2#par488" name="2_isStandard" sourceValue="1" target="sv2#area5#cru15.ent13#att36"/>
         <LinkParameter id="sv2#area5#page61#enu26#ln2#par489" name="Quantit&#224; da vendere_quantity" source="sv2#area5#page61#enu26#fld33" target="sv2#area5#cru15.ent13#att60"/>
+        <LinkParameter id="sv2#area5#page61#enu26#ln2#par856" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#page30#pwu12#ln186#par853" passing="true"/>
+        <LinkParameter id="sv2#area5#page61#enu26#ln2#par861" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#page30#pwu12#ln186#par854" passing="true"/>
+        <LinkParameter id="sv2#area5#page61#enu26#ln2#par865" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#page30#pwu12#ln186#par855" passing="true"/>
       </Link>
     </EntryUnit>
   </ContentUnits>

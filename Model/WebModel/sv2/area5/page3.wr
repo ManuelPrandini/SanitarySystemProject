@@ -1,16 +1,31 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="435" gr:y="475" id="sv2#area5#page3" name="Lista Carrello">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="420" gr:y="455" id="sv2#area5#page3" name="Lista Carrello">
   <ContentUnits>
-    <PowerIndexUnit id="sv2#area5#page3#pwu7" name="Carrello della spesa" linkOrder="sv2#area5#page3#pwu7#ln96" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent13" displayAttributes="ent13#att59 ent13#att60">
+    <PowerIndexUnit id="sv2#area5#page3#pwu7" name="Carrello della spesa" linkOrder="sv2#area5#page3#pwu7#ln96" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent13" displayAttributes="ent13#att59 ent13#att60 ent13#att36 ent13#att52">
       <Selector id="sv2#area5#page3#pwu7#su75" defaultPolicy="fill" booleanOperator="and"/>
-      <Link id="sv2#area5#page3#pwu7#ln96" name="rimuovi" to="sv2#area5#dlu6" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv2#area5#page3#pwu7#ln96" name="rimuovi" to="sv2#area5#dlu6" type="normal" validate="true">
+        <LinkParameter id="sv2#area5#page3#pwu7#ln96#par931" name="oid_KeyCondition24 [oid]" source="data[].ent13#att58" target="sv2#area5#dlu6#su48#kcond24.ent13#att58"/>
+        <LinkParameter id="sv2#area5#page3#pwu7#ln96#par947" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#pcu8#oln182#par941" passing="true"/>
+        <LinkParameter id="sv2#area5#page3#pwu7#ln96#par948" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#pcu8#oln182#par942" passing="true"/>
+        <LinkParameter id="sv2#area5#page3#pwu7#ln96#par949" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#pcu8#oln182#par943" passing="true"/>
+      </Link>
+      <Link id="sv2#area5#page3#pwu7#ln136" name="Flow136" to="sv2#area5#page3#mssu21" type="transport" validate="true">
+        <LinkParameter id="sv2#area5#page3#pwu7#ln136#par944" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#pcu8#oln182#par941" passing="true"/>
+        <LinkParameter id="sv2#area5#page3#pwu7#ln136#par945" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#pcu8#oln182#par942" passing="true"/>
+        <LinkParameter id="sv2#area5#page3#pwu7#ln136#par946" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#pcu8#oln182#par943" passing="true"/>
+      </Link>
     </PowerIndexUnit>
-    <MultiMessageUnit gr:x="130" gr:y="95" id="sv2#area5#page3#mssu21" name="Azioni" linkOrder="sv2#area5#page3#mssu21#ln101 sv2#area5#page3#mssu21#ln102">
+    <MultiMessageUnit gr:x="160" gr:y="130" id="sv2#area5#page3#mssu21" name="Azioni" linkOrder="sv2#area5#page3#mssu21#ln101 sv2#area5#page3#mssu21#ln102">
       <Message xml:space="preserve">Tutti i farmaci aggiunti al carrello. Cosa vuoi fare?</Message>
       <Link id="sv2#area5#page3#mssu21#ln101" name="termina spesa" to="sv2#area5#seu18" type="normal" validate="true">
-        <LinkParameter id="sv2#area5#page3#mssu21#ln101#par673" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#page30#enu22#ln132#par672" passing="true"/>
-        <LinkParameter id="sv2#area5#page3#mssu21#ln101#par694" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#page30#enu22#ln132#par688" passing="true"/>
+        <LinkParameter id="sv2#area5#page3#mssu21#ln101#par956" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#page3#pwu7#ln136#par944" passing="true"/>
+        <LinkParameter id="sv2#area5#page3#mssu21#ln101#par957" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#page3#pwu7#ln136#par945" passing="true"/>
+        <LinkParameter id="sv2#area5#page3#mssu21#ln101#par958" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#page3#pwu7#ln136#par946" passing="true"/>
       </Link>
-      <Link id="sv2#area5#page3#mssu21#ln102" name="indietro" to="sv2#area5#page30" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="93,-136,168,284"/>
+      <Link id="sv2#area5#page3#mssu21#ln102" name="indietro" to="sv2#area5#pcu6" type="normal" validate="true" gr:bendpoints="93,-136,168,284;96,-236,156,94">
+        <LinkParameter id="sv2#area5#page3#mssu21#ln102#par953" name="patient_code_PASSING_patient_code" sourceLinkParameter="sv2#area5#page3#pwu7#ln136#par944" target="sv2#area5#pcu6#pcp18"/>
+        <LinkParameter id="sv2#area5#page3#mssu21#ln102#par954" name="pharmacist_code_PASSING_pharmacist_code" sourceLinkParameter="sv2#area5#page3#pwu7#ln136#par945" target="sv2#area5#pcu6#pcp17"/>
+        <LinkParameter id="sv2#area5#page3#mssu21#ln102#par955" name="pharmacy_oid_PASSING_pharmacy_oid" sourceLinkParameter="sv2#area5#page3#pwu7#ln136#par946" target="sv2#area5#pcu6#pcp19"/>
+      </Link>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -19,6 +34,8 @@
         <layout:Unit unitId="sv2#area5#page3#pwu7">
           <layout:Attribute attribute="ent13#att59"/>
           <layout:Attribute attribute="ent13#att60"/>
+          <layout:Attribute attribute="ent13#att36"/>
+          <layout:Attribute attribute="ent13#att52"/>
           <layout:Link link="sv2#area5#page3#pwu7#ln96"/>
         </layout:Unit>
       </layout:Cell>
