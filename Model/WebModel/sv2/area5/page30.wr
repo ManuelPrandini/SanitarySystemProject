@@ -1,38 +1,80 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="810" gr:y="0" id="sv2#area5#page30" name="Men&#249; cliente">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1145" gr:y="20" id="sv2#area5#page30" name="Men&#249; cliente">
   <ContentUnits>
-    <EntryUnit gr:x="55" gr:y="0" id="sv2#area5#page30#enu22" name="Ricerca farmaco senza prescrizione" linkOrder="sv2#area5#page30#enu22#ln184 sv2#area5#page30#enu22#ln132">
+    <EntryUnit gr:x="195" gr:y="0" id="sv2#area5#page30#enu22" name="Ricerca farmaco senza prescrizione" linkOrder="sv2#area5#page30#enu22#ln184 sv2#area5#page30#enu22#ln132">
       <Field id="sv2#area5#page30#enu22#fld29" name="farmaco" type="string" modifiable="true"/>
       <Link id="sv2#area5#page30#enu22#ln184" name="Cerca farmaco" to="sv2#area5#page30#pwu12" type="normal" validate="true">
         <LinkParameter id="sv2#area5#page30#enu22#ln184#par715" name="farmaco_name_drug" source="sv2#area5#page30#enu22#fld29" target="sv2#area5#page30#pwu12#su100#acond135"/>
-        <LinkParameter id="sv2#area5#page30#enu22#ln184#par835" name="pharmacy_oid_PASSING_pharmacy" sourceLinkParameter="sv2#area5#pcu6#oln181#par832" target="sv2#area5#page30#pwu12#su100#acond130"/>
-        <LinkParameter id="sv2#area5#page30#enu22#ln184#par836" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#pcu6#oln181#par796" passing="true"/>
-        <LinkParameter id="sv2#area5#page30#enu22#ln184#par837" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#pcu6#oln181#par797" passing="true"/>
-        <LinkParameter id="sv2#area5#page30#enu22#ln184#par838" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#pcu6#oln181#par832" passing="true"/>
+        <LinkParameter id="sv2#area5#page30#enu22#ln184#par903" name="pharmacy_oid_PASSING_pharmacy" sourceLinkParameter="sv2#area5#page30#pwu14#ln126#par900" target="sv2#area5#page30#pwu12#su100#acond130"/>
+        <LinkParameter id="sv2#area5#page30#enu22#ln184#par904" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#page30#pwu14#ln126#par872" passing="true"/>
+        <LinkParameter id="sv2#area5#page30#enu22#ln184#par905" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#page30#pwu14#ln126#par898" passing="true"/>
+        <LinkParameter id="sv2#area5#page30#enu22#ln184#par911" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#page30#pwu14#ln126#par900" passing="true"/>
       </Link>
-      <Link id="sv2#area5#page30#enu22#ln132" name="Vai al carrello" to="sv2#area5#pcu8" type="normal" validate="true" gr:bendpoints="-217,5,-212,-511;-460,9,-130,-541;-653,337,107,-88;-729,346,31,-79">
-        <LinkParameter id="sv2#area5#page30#enu22#ln132#par938" name="patient_code_PASSING_patient_code" sourceLinkParameter="sv2#area5#pcu6#oln181#par796" target="sv2#area5#pcu8#pcp26"/>
-        <LinkParameter id="sv2#area5#page30#enu22#ln132#par939" name="pharmacist_code_PASSING_pharmacist_code" sourceLinkParameter="sv2#area5#pcu6#oln181#par797" target="sv2#area5#pcu8#pcp25"/>
-        <LinkParameter id="sv2#area5#page30#enu22#ln132#par940" name="pharmacy_oid_PASSING_pharmacy_oid" sourceLinkParameter="sv2#area5#pcu6#oln181#par832" target="sv2#area5#pcu8#pcp27"/>
+      <Link id="sv2#area5#page30#enu22#ln132" name="Vai al carrello" to="sv2#area5#pcu8" type="normal" validate="true" gr:bendpoints="-484,-56,761,-471;-594,1,640,-479;-754,50,491,-365;-762,172,483,-243;-813,232,432,-183;-616,179,124,-96;-729,346,31,-79">
+        <LinkParameter id="sv2#area5#page30#enu22#ln132#par1002" name="patient_code_PASSING_patient_code" sourceLinkParameter="sv2#area5#page30#pwu14#ln126#par872" target="sv2#area5#pcu8#pcp26"/>
+        <LinkParameter id="sv2#area5#page30#enu22#ln132#par1003" name="pharmacist_code_PASSING_pharmacist_code" sourceLinkParameter="sv2#area5#page30#pwu14#ln126#par898" target="sv2#area5#pcu8#pcp25"/>
+        <LinkParameter id="sv2#area5#page30#enu22#ln132#par1004" name="pharmacy_oid_PASSING_pharmacy_oid" sourceLinkParameter="sv2#area5#page30#pwu14#ln126#par900" target="sv2#area5#pcu8#pcp27"/>
       </Link>
     </EntryUnit>
-    <PowerIndexUnit gr:x="50" gr:y="100" id="sv2#area5#page30#pwu12" name="Lista dei farmaci senza prescrizione" sortable="true" checkable="false" useCountQuery="false" entity="ent21" displayAttributes="rel23#role45.ent2#att8 rel23#role45.ent2#att6" linkOrder="sv2#area5#page30#pwu12#ln186">
+    <PowerIndexUnit gr:x="280" gr:y="110" id="sv2#area5#page30#pwu12" name="Lista dei farmaci senza prescrizione" sortable="true" checkable="false" useCountQuery="false" entity="ent21" displayAttributes="rel23#role45.ent2#att8 rel23#role45.ent2#att6" linkOrder="sv2#area5#page30#pwu12#ln186">
       <Selector id="sv2#area5#page30#pwu12#su100" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv2#area5#page30#pwu12#su100#acond129" name="standard" predicate="eq" booleanOperator="and" implied="false" attributes="rel23#role45.ent2#att7" value="true"/>
         <AttributesCondition id="sv2#area5#page30#pwu12#su100#acond130" name="pharmacy" predicate="eq" booleanOperator="or" implied="false" attributes="rel17#role34.ent19#att42"/>
         <AttributesCondition id="sv2#area5#page30#pwu12#su100#acond135" name="name_drug" predicate="beginsWith" booleanOperator="or" implied="false" attributes="rel23#role45.ent2#att8"/>
         <AttributesCondition id="sv2#area5#page30#pwu12#su100#acond136" name="quantityPositive" predicate="gt" booleanOperator="and" implied="false" attributes="ent21#att49" value="0"/>
       </Selector>
-      <Link id="sv2#area5#page30#pwu12#ln186" name="Vuoi aggiungere al carrello?" to="sv2#area5#page61#enu26" type="normal" validate="true" ajaxOpenWindow="true" ajaxWindowWidth="750" ajaxWindowHeight="500" ajaxWindowUseTitle="true" ajaxWindowAutoResizing="false" ajaxWindowClosable="true">
+      <Link id="sv2#area5#page30#pwu12#ln186" name="Vuoi aggiungere al carrello?" to="sv2#area5#page61#enu26" type="normal" validate="true" ajaxWindowClosable="true" ajaxWindowAutoResizing="false" ajaxWindowHeight="500" ajaxWindowWidth="750" ajaxWindowUseTitle="true" ajaxOpenWindow="true">
+        <LinkParameter id="sv2#area5#page30#pwu12#ln186#par327" name="Quantity_DrugToDrug.id_PASSING" source="data[].rel23#role45$ent2#att6" passing="true"/>
         <LinkParameter id="sv2#area5#page30#pwu12#ln186#par739" name="Quantity_DrugToDrug.name_Farmaco" source="data[].rel23#role45$ent2#att8" target="sv2#area5#page61#enu26#fld32_slot"/>
         <LinkParameter id="sv2#area5#page30#pwu12#ln186#par740" name="quantity_Quantit&#224; presente" source="data[].ent21#att49" target="sv2#area5#page61#enu26#fld31_slot"/>
-        <LinkParameter id="sv2#area5#page30#pwu12#ln186#par327" name="Quantity_DrugToDrug.id_PASSING" source="data[].rel23#role45$ent2#att6" passing="true"/>
-        <LinkParameter id="sv2#area5#page30#pwu12#ln186#par853" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#page30#enu22#ln184#par836" passing="true"/>
-        <LinkParameter id="sv2#area5#page30#pwu12#ln186#par854" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#page30#enu22#ln184#par837" passing="true"/>
-        <LinkParameter id="sv2#area5#page30#pwu12#ln186#par855" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#page30#enu22#ln184#par838" passing="true"/>
+        <LinkParameter id="sv2#area5#page30#pwu12#ln186#par932" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#page30#enu22#ln184#par904" passing="true"/>
+        <LinkParameter id="sv2#area5#page30#pwu12#ln186#par933" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#page30#enu22#ln184#par905" passing="true"/>
+        <LinkParameter id="sv2#area5#page30#pwu12#ln186#par934" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#page30#enu22#ln184#par911" passing="true"/>
+      </Link>
+    </PowerIndexUnit>
+    <PowerIndexUnit id="sv2#area5#page30#pwu14" name="Prescrizioni attive" gr:x="0" gr:y="100" sortable="true" checkable="false" useCountQuery="false" entity="ent36" displayAttributes="rel30#role60.ent5#att2 rel30#role60.ent5#att3 rel31#role62.ent2#att8 ent36#att80 ent36#att79 ent36#att81" linkOrder="sv2#area5#page30#pwu14#ln146">
+      <Selector id="sv2#area5#page30#pwu14#su96" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area5#page30#pwu14#su96#kcond40" name="oid" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#area5#page30#pwu14#ln126" name="Flow126" to="sv2#area5#page30#enu22" type="transport" validate="true">
+        <LinkParameter id="sv2#area5#page30#pwu14#ln126#par872" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#scu7#oln181#par869" passing="true"/>
+        <LinkParameter id="sv2#area5#page30#pwu14#ln126#par898" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#scu7#oln181#par870" passing="true"/>
+        <LinkParameter id="sv2#area5#page30#pwu14#ln126#par900" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#scu7#oln181#par871" passing="true"/>
+      </Link>
+      <Link id="sv2#area5#page30#pwu14#ln146" name="Vuoi aggiungere al carrello?" to="sv2#area5#seu60" type="normal" validate="true">
+        <LinkParameter id="sv2#area5#page30#pwu14#ln146#par912" name="oid_PASSING" source="data[].ent36#att78" passing="true"/>
+        <LinkParameter id="sv2#area5#page30#pwu14#ln146#par913" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#scu7#oln181#par869" passing="true"/>
+        <LinkParameter id="sv2#area5#page30#pwu14#ln146#par914" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#scu7#oln181#par870" passing="true"/>
+        <LinkParameter id="sv2#area5#page30#pwu14#ln146#par915" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#scu7#oln181#par871" passing="true"/>
+        <LinkParameter id="sv2#area5#page30#pwu14#ln146#par916" name="Drug_PrescriptionToDrug.name_name_drug" source="data[].rel31#role62$ent2#att8" target="sv2#area5#seu60#su101#acond95"/>
+        <LinkParameter id="sv2#area5#page30#pwu14#ln146#par917" name="pharmacy_oid_PASSING_pharmacy" sourceLinkParameter="sv2#area5#scu7#oln181#par871" target="sv2#area5#seu60#su101#acond93"/>
       </Link>
     </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area5#page30#pwu14">
+          <layout:Attribute attribute="rel30#role60.ent5#att2"/>
+          <layout:Attribute attribute="rel30#role60.ent5#att3"/>
+          <layout:Attribute attribute="rel31#role62.ent2#att8"/>
+          <layout:Attribute attribute="ent36#att80"/>
+          <layout:Attribute attribute="ent36#att79"/>
+          <layout:Attribute attribute="ent36#att81"/>
+          <layout:Link link="sv2#area5#page30#pwu14#ln146"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#area5#page30#enu22">
@@ -56,9 +98,9 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#area5#page30#pwu12">
-          <layout:Link link="sv2#area5#page30#pwu12#ln186"/>
           <layout:Attribute attribute="rel23#role45.ent2#att8"/>
           <layout:Attribute attribute="rel23#role45.ent2#att6"/>
+          <layout:Link link="sv2#area5#page30#pwu12#ln186"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

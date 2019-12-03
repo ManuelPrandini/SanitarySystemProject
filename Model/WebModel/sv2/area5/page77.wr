@@ -1,0 +1,56 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area5#page77" name="Dettagli Farmaco" layout:pageLayout="MetroStyle/Empty" gr:x="1375" gr:y="440">
+  <ContentUnits>
+    <EntryUnit id="sv2#area5#page77#enu25" name="Quantit&#224;" gr:x="0" gr:y="0" fieldOrder="sv2#area5#page77#enu25#fld95 sv2#area5#page77#enu25#fld30 sv2#area5#page77#enu25#fld94" linkOrder="sv2#area5#page77#enu25#ln148">
+      <Field id="sv2#area5#page77#enu25#fld30" name="Quantit&#224; presente" type="integer" preloaded="true"/>
+      <Field id="sv2#area5#page77#enu25#fld94" name="Quantit&#224; da vendere" type="integer" modifiable="true"/>
+      <Field id="sv2#area5#page77#enu25#fld95" name="Farmaco" type="string" preloaded="true"/>
+      <Link id="sv2#area5#page77#enu25#ln148" name="Flow148" to="sv2#area5#cru15" type="normal" validate="true">
+        <LinkParameter id="sv2#area5#page77#enu25#ln148#par935" name="Farmaco_drugName" source="sv2#area5#page77#enu25#fld95" target="sv2#area5#cru15.ent13#att59"/>
+        <LinkParameter id="sv2#area5#page77#enu25#ln148#par936" name="0_isStandard" sourceValue="0" target="sv2#area5#cru15.ent13#att36"/>
+        <LinkParameter id="sv2#area5#page77#enu25#ln148#par937" name="Quantit&#224; da vendere_quantity" source="sv2#area5#page77#enu25#fld94" target="sv2#area5#cru15.ent13#att60"/>
+        <LinkParameter id="sv2#area5#page77#enu25#ln148#par1055" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#inn21#oln188#par1052" passing="true"/>
+        <LinkParameter id="sv2#area5#page77#enu25#ln148#par1056" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#inn21#oln188#par1053" passing="true"/>
+        <LinkParameter id="sv2#area5#page77#enu25#ln148#par1057" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#inn21#oln188#par1054" passing="true"/>
+        <LinkParameter id="sv2#area5#page77#enu25#ln148#par1065" name="Quantity_DrugToDrug.id_PASSING_id_drug" sourceLinkParameter="sv2#area5#inn21#oln188#par1062" target="sv2#area5#cru15.ent13#att52"/>
+        <LinkParameter id="sv2#area5#page77#enu25#ln148#par1066" name="oid_PASSING_id_drugPrescription" sourceLinkParameter="sv2#area5#inn21#oln188#par1061" target="sv2#area5#cru15.ent13#att37"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area5#page77#enu25">
+          <layout:Field field="sv2#area5#page77#enu25#fld95"/>
+          <layout:Field field="sv2#area5#page77#enu25#fld30"/>
+          <layout:Field field="sv2#area5#page77#enu25#fld94"/>
+          <layout:Link link="sv2#area5#page77#enu25#ln148"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
