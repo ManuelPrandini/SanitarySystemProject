@@ -1,12 +1,18 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="420" gr:y="530" id="sv2#area5#page3" name="Lista Carrello">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="420" gr:y="800" id="sv2#area5#page3" name="Lista Carrello">
   <ContentUnits>
     <PowerIndexUnit id="sv2#area5#page3#pwu7" name="Carrello della spesa" linkOrder="sv2#area5#page3#pwu7#ln96" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent13" displayAttributes="ent13#att59 ent13#att60 ent13#att36 ent13#att52">
       <Selector id="sv2#area5#page3#pwu7#su75" defaultPolicy="fill" booleanOperator="and"/>
-      <Link id="sv2#area5#page3#pwu7#ln96" name="rimuovi" to="sv2#area5#dlu6" type="normal" validate="true">
-        <LinkParameter id="sv2#area5#page3#pwu7#ln96#par931" name="oid_KeyCondition24 [oid]" source="data[].ent13#att58" target="sv2#area5#dlu6#su48#kcond24.ent13#att58"/>
+      <Link id="sv2#area5#page3#pwu7#ln96" name="rimuovi" to="sv2#area5#miu15" type="normal" validate="true">
         <LinkParameter id="sv2#area5#page3#pwu7#ln96#par947" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#pcu8#oln182#par941" passing="true"/>
         <LinkParameter id="sv2#area5#page3#pwu7#ln96#par948" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#pcu8#oln182#par942" passing="true"/>
         <LinkParameter id="sv2#area5#page3#pwu7#ln96#par949" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#pcu8#oln182#par943" passing="true"/>
+        <LinkParameter id="sv2#area5#page3#pwu7#ln96#par1571" name="isStandard_PASSING" source="data[].ent13#att36" passing="true"/>
+        <LinkParameter id="sv2#area5#page3#pwu7#ln96#par1572" name="id_drugPrescription_PASSING" source="data[].ent13#att37" passing="true"/>
+        <LinkParameter id="sv2#area5#page3#pwu7#ln96#par1581" name="oid_PASSING" source="data[].ent13#att58" passing="true"/>
+        <LinkParameter id="sv2#area5#page3#pwu7#ln96#par1595" name="id_drugPrescription_drug_prescription" source="data[].ent13#att37" target="sv2#area5#miu15.mov2#mpkg2#opm20#icu25#icp129"/>
+        <LinkParameter id="sv2#area5#page3#pwu7#ln96#par1596" name="oid_oid_shoppingcart" source="data[].ent13#att58" target="sv2#area5#miu15.mov2#mpkg2#opm20#icu25#icp127"/>
+        <LinkParameter id="sv2#area5#page3#pwu7#ln96#par1597" name="quantity_quantityDaRimuovere" source="data[].ent13#att60" target="sv2#area5#miu15.mov2#mpkg2#opm20#icu25#icp130"/>
+        <LinkParameter id="sv2#area5#page3#pwu7#ln96#par1598" name="isStandard_standard" source="data[].ent13#att36" target="sv2#area5#miu15.mov2#mpkg2#opm20#icu25#icp128"/>
       </Link>
       <Link id="sv2#area5#page3#pwu7#ln136" name="Flow136" to="sv2#area5#page3#mssu21" type="transport" validate="true">
         <LinkParameter id="sv2#area5#page3#pwu7#ln136#par944" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#pcu8#oln182#par941" passing="true"/>

@@ -1,27 +1,194 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="290" gr:y="500" id="mov2#mpkg2#opm19" name="AddShoppingCart">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="250" gr:y="485" id="mov2#mpkg2#opm19" name="AddShoppingCart">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg2#opm19#icu23" gr:x="30" gr:y="60">
+    <InputCollectorUnit id="mov2#mpkg2#opm19#icu23" gr:x="40" gr:y="145" linkOrder="mov2#mpkg2#opm19#icu23#ln81">
       <InputCollectorParameter id="mov2#mpkg2#opm19#icu23#icp119" name="drug_prescription"/>
       <InputCollectorParameter id="mov2#mpkg2#opm19#icu23#icp120" name="drug_name"/>
       <InputCollectorParameter id="mov2#mpkg2#opm19#icu23#icp121" name="id_drug"/>
-      <OKLink id="mov2#mpkg2#opm19#icu23#oln191" name="OKFlow191" to="mov2#mpkg2#opm19#inn22" automaticCoupling="true"/>
+      <OKLink id="mov2#mpkg2#opm19#icu23#oln191" name="OKFlow191" to="mov2#mpkg2#opm19#inn22">
+        <LinkParameter id="mov2#mpkg2#opm19#icu23#oln191#par197" name="drug_prescription_Input" source="mov2#mpkg2#opm19#icu23#icp119" target="mov2#mpkg2#opm19#inn22.isnotnull"/>
+        <LinkParameter id="mov2#mpkg2#opm19#icu23#oln191#par733" name="drug_name_PASSING" source="mov2#mpkg2#opm19#icu23#icp120" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#icu23#oln191#par736" name="drug_prescription_PASSING" source="mov2#mpkg2#opm19#icu23#icp119" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#icu23#oln191#par737" name="id_drug_PASSING" source="mov2#mpkg2#opm19#icu23#icp121" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#icu23#oln191#par738" name="is_standard_PASSING" source="mov2#mpkg2#opm19#icu23#icp122" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#icu23#oln191#par741" name="quantityDaAggiungere_PASSING" source="mov2#mpkg2#opm19#icu23#icp123" passing="true"/>
+      </OKLink>
       <InputCollectorParameter id="mov2#mpkg2#opm19#icu23#icp122" name="is_standard"/>
-      <InputCollectorParameter id="mov2#mpkg2#opm19#icu23#icp123" name="quantity"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm19#icu23#icp123" name="quantityDaAggiungere"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm19#icu23#icp124" name="pharmacist"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm19#icu23#icp125" name="patient"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm19#icu23#icp126" name="pharmacy"/>
+      <Link id="mov2#mpkg2#opm19#icu23#ln81" name="Flow81" to="mov2#mpkg2#opm19#okcu22" type="transport" validate="true" gr:bendpoints="406,22,-934,37;680,23,-660,38">
+        <LinkParameter id="mov2#mpkg2#opm19#icu23#ln81#par1087" name="patient_patient" source="mov2#mpkg2#opm19#icu23#icp125" target="mov2#mpkg2#opm19#okcu22#ocp27"/>
+        <LinkParameter id="mov2#mpkg2#opm19#icu23#ln81#par1088" name="pharmacist_pharmacist" source="mov2#mpkg2#opm19#icu23#icp124" target="mov2#mpkg2#opm19#okcu22#ocp25"/>
+        <LinkParameter id="mov2#mpkg2#opm19#icu23#ln81#par1089" name="pharmacy_pharmacy" source="mov2#mpkg2#opm19#icu23#icp126" target="mov2#mpkg2#opm19#okcu22#ocp26"/>
+      </Link>
     </InputCollectorUnit>
-    <CreateUnit id="mov2#mpkg2#opm19#cru16" name="Aggiungi al carrello" gr:x="955" gr:y="180" entity="ent13"/>
-    <IsNotNullUnit gr:x="340" gr:y="100" id="mov2#mpkg2#opm19#inn22" name="esiste drugPrescription?">
-      <OKLink id="mov2#mpkg2#opm19#inn22#oln192" name="OKFlow192" to="mov2#mpkg2#opm19#seu61" automaticCoupling="true"/>
+    <CreateUnit id="mov2#mpkg2#opm19#cru16" name="Aggiungi al carrello" gr:x="910" gr:y="380" entity="ent13">
+      <OKLink id="mov2#mpkg2#opm19#cru16#oln232" name="OKFlow232" to="mov2#mpkg2#opm19#okcu22" automaticCoupling="true" gr:bendpoints="429,-37,-306,223"/>
+    </CreateUnit>
+    <IsNotNullUnit gr:x="340" gr:y="185" id="mov2#mpkg2#opm19#inn22" name="esiste drugPrescription?">
+      <OKLink id="mov2#mpkg2#opm19#inn22#oln192" name="OKFlow192" to="mov2#mpkg2#opm19#seu61">
+        <LinkParameter id="mov2#mpkg2#opm19#inn22#oln192#par922" name="drug_prescription_PASSING_drug_prescription" sourceLinkParameter="mov2#mpkg2#opm19#icu23#oln191#par736" target="mov2#mpkg2#opm19#seu61#su103#acond106"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn22#oln192#par923" name="drug_name_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#icu23#oln191#par733" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn22#oln192#par924" name="drug_prescription_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#icu23#oln191#par736" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn22#oln192#par925" name="id_drug_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#icu23#oln191#par737" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn22#oln192#par926" name="Input Value_PASSING" source="inputValue" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn22#oln192#par927" name="is_standard_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#icu23#oln191#par738" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn22#oln192#par935" name="quantityDaAggiungere_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#icu23#oln191#par741" passing="true"/>
+      </OKLink>
+      <KOLink id="mov2#mpkg2#opm19#inn22#kln66" name="KOFlow66" to="mov2#mpkg2#opm19#seu30">
+        <LinkParameter id="mov2#mpkg2#opm19#inn22#kln66#par742" name="id_drug_PASSING_idDrug" sourceLinkParameter="mov2#mpkg2#opm19#icu23#oln191#par737" target="mov2#mpkg2#opm19#seu30#su78#acond20"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn22#kln66#par796" name="drug_name_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#icu23#oln191#par733" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn22#kln66#par797" name="drug_prescription_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#icu23#oln191#par736" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn22#kln66#par799" name="id_drug_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#icu23#oln191#par737" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn22#kln66#par800" name="Input Value_PASSING" source="inputValue" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn22#kln66#par801" name="is_standard_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#icu23#oln191#par738" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn22#kln66#par832" name="quantityDaAggiungere_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#icu23#oln191#par741" passing="true"/>
+      </KOLink>
     </IsNotNullUnit>
-    <SelectorUnit gr:x="570" gr:y="35" id="mov2#mpkg2#opm19#seu61" name="E' presente nel carrello?" entity="ent13">
+    <SelectorUnit gr:x="540" gr:y="80" id="mov2#mpkg2#opm19#seu61" name="E' presente nel carrello?" entity="ent13">
       <Selector id="mov2#mpkg2#opm19#seu61#su103" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#mpkg2#opm19#seu61#su103#acond106" name="drug_prescription" predicate="eq" booleanOperator="or" implied="false" attributes="ent13#att37"/>
       </Selector>
+      <OKLink id="mov2#mpkg2#opm19#seu61#oln176" name="OKFlow176" to="mov2#mpkg2#opm19#inn23">
+        <LinkParameter id="mov2#mpkg2#opm19#seu61#oln176#par672" name="oid_Input" source="ent13#att58Array" target="mov2#mpkg2#opm19#inn23.isnotnull"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu61#oln176#par673" name="Data Size_PASSING" source="dataSize" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu61#oln176#par678" name="drugName_PASSING" source="ent13#att59Array" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu61#oln176#par688" name="id_drug_PASSING" source="ent13#att52Array" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu61#oln176#par694" name="id_drugPrescription_PASSING" source="ent13#att37Array" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu61#oln176#par695" name="isStandard_PASSING" source="ent13#att36Array" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu61#oln176#par696" name="oid_PASSING" source="ent13#att58Array" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu61#oln176#par697" name="quantity_PASSING" source="ent13#att60Array" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu61#oln176#par936" name="drug_name_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#inn22#oln192#par923" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu61#oln176#par937" name="drug_prescription_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#inn22#oln192#par924" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu61#oln176#par938" name="id_drug_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#inn22#oln192#par925" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu61#oln176#par939" name="Input Value_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#inn22#oln192#par926" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu61#oln176#par940" name="is_standard_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#inn22#oln192#par927" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu61#oln176#par968" name="quantityDaAggiungere_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#inn22#oln192#par935" passing="true"/>
+      </OKLink>
     </SelectorUnit>
-    <IsNotNullUnit gr:x="785" gr:y="55" id="mov2#mpkg2#opm19#inn23" name="Se &#232; presente"/>
-    <ModifyUnit gr:x="950" gr:y="30" id="mov2#mpkg2#opm19#mfu15" name="Update15" entity="ent13">
+    <IsNotNullUnit gr:x="735" gr:y="100" id="mov2#mpkg2#opm19#inn23" name="Se &#232; presente">
+      <OKLink id="mov2#mpkg2#opm19#inn23#oln184" name="OKFlow184" to="mov2#mpkg2#opm19#mathu1">
+        <LinkParameter id="mov2#mpkg2#opm19#inn23#oln184#par700" name="oid_PASSING_Quantit&#224;Presente" sourceLinkParameter="mov2#mpkg2#opm19#seu61#oln176#par697" target="mov2#mpkg2#opm19#mathu1#mathv1"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn23#oln184#par711" name="oid_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#seu61#oln176#par696" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn23#oln184#par1099" name="quantityDaAggiungere_PASSING_Quantit&#224;DaAggiungere" sourceLinkParameter="mov2#mpkg2#opm19#seu61#oln176#par968" target="mov2#mpkg2#opm19#mathu1#mathv2"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn23#oln184#par1521" name="drug_prescription_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#seu61#oln176#par937" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn23#oln184#par1526" name="quantityDaAggiungere_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#seu61#oln176#par968" passing="true"/>
+      </OKLink>
+      <KOLink id="mov2#mpkg2#opm19#inn23#kln69" name="KOFlow69" to="mov2#mpkg2#opm19#cru17">
+        <LinkParameter id="mov2#mpkg2#opm19#inn23#kln69#par973" name="drug_name_PASSING_drugName" sourceLinkParameter="mov2#mpkg2#opm19#seu61#oln176#par936" target="mov2#mpkg2#opm19#cru17.ent13#att59"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn23#kln69#par974" name="id_drug_PASSING_id_drug" sourceLinkParameter="mov2#mpkg2#opm19#seu61#oln176#par688" target="mov2#mpkg2#opm19#cru17.ent13#att52"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn23#kln69#par975" name="drug_prescription_PASSING_id_drugPrescription" sourceLinkParameter="mov2#mpkg2#opm19#seu61#oln176#par937" target="mov2#mpkg2#opm19#cru17.ent13#att37"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn23#kln69#par989" name="is_standard_PASSING_isStandard" sourceLinkParameter="mov2#mpkg2#opm19#seu61#oln176#par940" target="mov2#mpkg2#opm19#cru17.ent13#att36"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn23#kln69#par1055" name="quantityDaAggiungere_PASSING_quantity" sourceLinkParameter="mov2#mpkg2#opm19#seu61#oln176#par968" target="mov2#mpkg2#opm19#cru17.ent13#att60"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn23#kln69#par1520" name="drug_prescription_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#seu61#oln176#par937" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn23#kln69#par1559" name="quantityDaAggiungere_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#seu61#oln176#par968" passing="true"/>
+      </KOLink>
+    </IsNotNullUnit>
+    <ModifyUnit gr:x="1165" gr:y="80" id="mov2#mpkg2#opm19#mfu15" name="UpdateQuantity" entity="ent13">
       <Selector id="mov2#mpkg2#opm19#mfu15#su104" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg2#opm19#mfu15#su104#kcond47" name="KeyCondition47" predicate="in" implied="false"/>
       </Selector>
+      <OKLink id="mov2#mpkg2#opm19#mfu15#oln195" name="OKFlow195" to="mov2#mpkg2#opm19#pcu15">
+        <LinkParameter id="mov2#mpkg2#opm19#mfu15#oln195#par1605" name="drug_prescription_PASSING_drugPrescription" sourceLinkParameter="mov2#mpkg2#opm19#mathu1#oln177#par1522" target="mov2#mpkg2#opm19#pcu15#pcp56"/>
+        <LinkParameter id="mov2#mpkg2#opm19#mfu15#oln195#par1606" name="quantityDaAggiungere_PASSING_quantityDaAggiungere" sourceLinkParameter="mov2#mpkg2#opm19#mathu1#oln177#par1527" target="mov2#mpkg2#opm19#pcu15#pcp57"/>
+      </OKLink>
     </ModifyUnit>
+    <MathUnit gr:x="880" gr:y="90" id="mov2#mpkg2#opm19#mathu1" name="Math" resultType="integer" defaultExpression="Quantit&#224;DaAggiungere + Quantit&#224;Presente">
+      <MathVariable id="mov2#mpkg2#opm19#mathu1#mathv1" name="Quantit&#224;Presente"/>
+      <MathVariable id="mov2#mpkg2#opm19#mathu1#mathv2" name="Quantit&#224;DaAggiungere"/>
+      <OKLink id="mov2#mpkg2#opm19#mathu1#oln177" name="OKFlow177" to="mov2#mpkg2#opm19#mfu15">
+        <LinkParameter id="mov2#mpkg2#opm19#mathu1#oln177#par488" name="Result_quantity" source="result" target="mov2#mpkg2#opm19#mfu15.ent13#att60"/>
+        <LinkParameter id="mov2#mpkg2#opm19#mathu1#oln177#par713" name="oid_PASSING_KeyCondition47 [oid]" sourceLinkParameter="mov2#mpkg2#opm19#inn23#oln184#par711" target="mov2#mpkg2#opm19#mfu15#su104#kcond47.ent13#att58"/>
+        <LinkParameter id="mov2#mpkg2#opm19#mathu1#oln177#par1522" name="drug_prescription_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#inn23#oln184#par1521" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#mathu1#oln177#par1527" name="quantityDaAggiungere_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#inn23#oln184#par1526" passing="true"/>
+      </OKLink>
+    </MathUnit>
+    <OKCollectorUnit gr:x="2310" gr:y="115" id="mov2#mpkg2#opm19#okcu22" name="OK Port22">
+      <OutputCollectorParameter id="mov2#mpkg2#opm19#okcu22#ocp25" name="pharmacist"/>
+      <OutputCollectorParameter id="mov2#mpkg2#opm19#okcu22#ocp26" name="pharmacy"/>
+      <OutputCollectorParameter id="mov2#mpkg2#opm19#okcu22#ocp27" name="patient"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="2310" gr:y="275" id="mov2#mpkg2#opm19#kocu23" name="KO Port23"/>
+    <SelectorUnit gr:x="525" gr:y="265" id="mov2#mpkg2#opm19#seu30" name="Presente nel carrello standard?" entity="ent13">
+      <Selector id="mov2#mpkg2#opm19#seu30#su78" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg2#opm19#seu30#su78#acond20" name="idDrug" predicate="eq" booleanOperator="and" implied="false" attributes="ent13#att52"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm19#seu30#oln185" name="OKFlow185" to="mov2#mpkg2#opm19#inn24">
+        <LinkParameter id="mov2#mpkg2#opm19#seu30#oln185#par714" name="oid_PASSING" source="ent13#att58Array" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu30#oln185#par716" name="oid_Input" source="ent13#att58Array" target="mov2#mpkg2#opm19#inn24.isnotnull"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu30#oln185#par726" name="quantity_PASSING" source="ent13#att60Array" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu30#oln185#par835" name="drug_name_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#inn22#kln66#par796" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu30#oln185#par836" name="id_drug_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#inn22#kln66#par799" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu30#oln185#par837" name="is_standard_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#inn22#kln66#par801" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu30#oln185#par838" name="quantityDaAggiungere_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#inn22#kln66#par832" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <MathUnit gr:x="925" gr:y="275" id="mov2#mpkg2#opm19#mathu3" name="Math2" resultType="integer" defaultExpression="Op1 + Op2">
+      <MathVariable id="mov2#mpkg2#opm19#mathu3#mathv4" name="Op1"/>
+      <MathVariable id="mov2#mpkg2#opm19#mathu3#mathv5" name="Op2"/>
+      <OKLink id="mov2#mpkg2#opm19#mathu3#oln193" name="OKFlow193" to="mov2#mpkg2#opm19#mfu16">
+        <LinkParameter id="mov2#mpkg2#opm19#mathu3#oln193#par730" name="oid_PASSING_KeyCondition30 [oid]" sourceLinkParameter="mov2#mpkg2#opm19#inn24#oln189#par723" target="mov2#mpkg2#opm19#mfu16#su80#kcond30.ent13#att58"/>
+        <LinkParameter id="mov2#mpkg2#opm19#mathu3#oln193#par731" name="Result_quantity" source="result" target="mov2#mpkg2#opm19#mfu16.ent13#att60"/>
+      </OKLink>
+    </MathUnit>
+    <IsNotNullUnit gr:x="755" gr:y="285" id="mov2#mpkg2#opm19#inn24" name="Presente">
+      <OKLink id="mov2#mpkg2#opm19#inn24#oln189" name="OKFlow189" to="mov2#mpkg2#opm19#mathu3">
+        <LinkParameter id="mov2#mpkg2#opm19#inn24#oln189#par723" name="oid_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#seu30#oln185#par714" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn24#oln189#par729" name="quantity_PASSING_Op2" sourceLinkParameter="mov2#mpkg2#opm19#seu30#oln185#par726" target="mov2#mpkg2#opm19#mathu3#mathv5"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn24#oln189#par1100" name="quantityDaAggiungere_PASSING_Op1" sourceLinkParameter="mov2#mpkg2#opm19#seu30#oln185#par838" target="mov2#mpkg2#opm19#mathu3#mathv4"/>
+      </OKLink>
+      <KOLink id="mov2#mpkg2#opm19#inn24#kln68" name="KOFlow68" to="mov2#mpkg2#opm19#cru16">
+        <LinkParameter id="mov2#mpkg2#opm19#inn24#kln68#par732" name="quantity_PASSING_quantity" sourceLinkParameter="mov2#mpkg2#opm19#seu30#oln185#par838" target="mov2#mpkg2#opm19#cru16.ent13#att60"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn24#kln68#par918" name="drug_name_PASSING_drugName" sourceLinkParameter="mov2#mpkg2#opm19#seu30#oln185#par835" target="mov2#mpkg2#opm19#cru16.ent13#att59"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn24#kln68#par919" name="id_drug_PASSING_id_drug" sourceLinkParameter="mov2#mpkg2#opm19#seu30#oln185#par836" target="mov2#mpkg2#opm19#cru16.ent13#att52"/>
+        <LinkParameter id="mov2#mpkg2#opm19#inn24#kln68#par921" name="is_standard_PASSING_isStandard" sourceLinkParameter="mov2#mpkg2#opm19#seu30#oln185#par837" target="mov2#mpkg2#opm19#cru16.ent13#att36"/>
+      </KOLink>
+    </IsNotNullUnit>
+    <ModifyUnit gr:x="1170" gr:y="265" id="mov2#mpkg2#opm19#mfu16" name="UpdateQuantity2" entity="ent13">
+      <Selector id="mov2#mpkg2#opm19#mfu16#su80" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm19#mfu16#su80#kcond30" name="KeyCondition30" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm19#mfu16#oln233" name="OKFlow233" to="mov2#mpkg2#opm19#okcu22" automaticCoupling="true"/>
+    </ModifyUnit>
+    <CreateUnit gr:x="880" gr:y="-25" id="mov2#mpkg2#opm19#cru17" name="Aggiungi al carrello con prescrizione" entity="ent13">
+      <OKLink id="mov2#mpkg2#opm19#cru17#oln197" name="OKFlow197" to="mov2#mpkg2#opm19#pcu15">
+        <LinkParameter id="mov2#mpkg2#opm19#cru17#oln197#par1603" name="drug_prescription_PASSING_drugPrescription" sourceLinkParameter="mov2#mpkg2#opm19#inn23#kln69#par1520" target="mov2#mpkg2#opm19#pcu15#pcp56"/>
+        <LinkParameter id="mov2#mpkg2#opm19#cru17#oln197#par1604" name="quantityDaAggiungere_PASSING_quantityDaAggiungere" sourceLinkParameter="mov2#mpkg2#opm19#inn23#kln69#par1559" target="mov2#mpkg2#opm19#pcu15#pcp57"/>
+      </OKLink>
+    </CreateUnit>
+    <ModifyUnit gr:x="2085" gr:y="35" id="mov2#mpkg2#opm19#mfu17" name="UpdateQuantit&#224;Prescrizione" entity="ent3">
+      <Selector id="mov2#mpkg2#opm19#mfu17#su106" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm19#mfu17#su106#kcond45" name="KeyCondition45" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm19#mfu17#oln231" name="OKFlow231" to="mov2#mpkg2#opm19#okcu22" automaticCoupling="true"/>
+    </ModifyUnit>
+    <MathUnit gr:x="1830" gr:y="20" id="mov2#mpkg2#opm19#mathu10" name="AggiornaAssigned" resultType="integer" defaultExpression="giaAssegnati + quantityDaAggiungere">
+      <MathVariable id="mov2#mpkg2#opm19#mathu10#mathv16" name="quantityDaAggiungere"/>
+      <MathVariable id="mov2#mpkg2#opm19#mathu10#mathv17" name="giaAssegnati"/>
+      <OKLink id="mov2#mpkg2#opm19#mathu10#oln244" name="OKFlow244" to="mov2#mpkg2#opm19#mfu17">
+        <LinkParameter id="mov2#mpkg2#opm19#mathu10#oln244#par1613" name="Result_assignedTemp" source="result" target="mov2#mpkg2#opm19#mfu17.ent3#att57"/>
+        <LinkParameter id="mov2#mpkg2#opm19#mathu10#oln244#par1614" name="drugPrescription_PASSING_KeyCondition45 [oid]" sourceLinkParameter="mov2#mpkg2#opm19#seu68#oln242#par1612" target="mov2#mpkg2#opm19#mfu17#su106#kcond45.ent3#att53"/>
+      </OKLink>
+    </MathUnit>
+    <SelectorUnit gr:x="1595" gr:y="10" id="mov2#mpkg2#opm19#seu68" name="SelectorAssignment" entity="ent3">
+      <Selector id="mov2#mpkg2#opm19#seu68#su110" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm19#seu68#su110#kcond51" name="KeyCondition51" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm19#seu68#oln242" name="OKFlow242" to="mov2#mpkg2#opm19#mathu10">
+        <LinkParameter id="mov2#mpkg2#opm19#seu68#oln242#par1610" name="assignedTemp_giaAssegnati" source="ent3#att57Array" target="mov2#mpkg2#opm19#mathu10#mathv17"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu68#oln242#par1611" name="quantityDaAggiungere_PASSING_quantityDaAggiungere" sourceLinkParameter="mov2#mpkg2#opm19#pcu15#oln243#par1609" target="mov2#mpkg2#opm19#mathu10#mathv16"/>
+        <LinkParameter id="mov2#mpkg2#opm19#seu68#oln242#par1612" name="drugPrescription_PASSING" sourceLinkParameter="mov2#mpkg2#opm19#pcu15#oln243#par1608" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <ParameterCollectorUnit gr:x="1390" gr:y="15" id="mov2#mpkg2#opm19#pcu15" name="Parameter Collector15">
+      <CollectorParameter id="mov2#mpkg2#opm19#pcu15#pcp56" name="drugPrescription"/>
+      <CollectorParameter id="mov2#mpkg2#opm19#pcu15#pcp57" name="quantityDaAggiungere"/>
+      <OKLink id="mov2#mpkg2#opm19#pcu15#oln243" name="OKFlow243" to="mov2#mpkg2#opm19#seu68">
+        <LinkParameter id="mov2#mpkg2#opm19#pcu15#oln243#par1607" name="drugPrescription_KeyCondition51 [oid]" source="mov2#mpkg2#opm19#pcu15#pcp56" target="mov2#mpkg2#opm19#seu68#su110#kcond51.ent3#att53"/>
+        <LinkParameter id="mov2#mpkg2#opm19#pcu15#oln243#par1608" name="drugPrescription_PASSING" source="mov2#mpkg2#opm19#pcu15#pcp56" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm19#pcu15#oln243#par1609" name="quantityDaAggiungere_PASSING" source="mov2#mpkg2#opm19#pcu15#pcp57" passing="true"/>
+      </OKLink>
+    </ParameterCollectorUnit>
   </OperationUnits>
 </OperationModule>

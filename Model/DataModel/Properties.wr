@@ -433,12 +433,21 @@
     </RelationshipRole2>
   </Relationship>
   <db:Database id="db2" name="hospital" type="MySQL" url="jdbc:mysql://localhost:3306/hospital" username="root" cryptedPassword="true" password="cm9vdA=="/>
-  <Entity gr:x="240" gr:y="1040" id="ent13" name="Vendita temporanea" duration="volatile" volatileStorage="database" attributeOrder="ent13#att58 ent13#att59 ent13#att60 ent13#att36 ent13#att37 ent13#att52">
+  <Entity gr:x="90" gr:y="1040" id="ent13" name="Vendita temporanea" duration="volatile" volatileStorage="database" attributeOrder="ent13#att58 ent13#att59 ent13#att60 ent13#att36 ent13#att37 ent13#att52">
     <Attribute id="ent13#att58" key="true" name="oid" type="integer"/>
     <Attribute id="ent13#att59" name="drugName" type="string"/>
     <Attribute id="ent13#att60" name="quantity" type="integer"/>
     <Attribute id="ent13#att36" name="isStandard" type="integer"/>
     <Attribute id="ent13#att37" name="id_drugPrescription" type="integer"/>
     <Attribute id="ent13#att52" name="id_drug" type="integer"/>
+  </Entity>
+  <Entity gr:x="345" gr:y="1040" id="ent3" name="Prescrizioni attive temporanee" duration="volatile" volatileStorage="database" attributeOrder="ent3#att53 ent3#att54 ent3#att56 ent3#att57 ent3#att61 ent3#att62 ent3#att63">
+    <Attribute id="ent3#att53" key="true" name="oid" type="integer" db:idGenerator="assigned"/>
+    <Attribute id="ent3#att54" name="quantityTemp" type="integer"/>
+    <Attribute id="ent3#att56" name="descriptionTemp" type="text"/>
+    <Attribute id="ent3#att57" name="assignedTemp" type="integer"/>
+    <Attribute id="ent3#att61" name="visitIDtemp" type="integer"/>
+    <Attribute id="ent3#att62" name="drugOidTemp" type="integer"/>
+    <Attribute id="ent3#att63" name="drugNameTemp" type="string"/>
   </Entity>
 </DataModel>

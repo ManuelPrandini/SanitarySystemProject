@@ -1,5 +1,65 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg2#opm20" name="RemoveShoppingCart" gr:x="233" gr:y="566">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg2#opm20" name="RemoveShoppingCart" gr:x="240" gr:y="545">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg2#opm20#icu25" gr:x="30" gr:y="60"/>
+    <InputCollectorUnit id="mov2#mpkg2#opm20#icu25" gr:x="95" gr:y="195">
+      <InputCollectorParameter id="mov2#mpkg2#opm20#icu25#icp127" name="oid_shoppingcart"/>
+      <OKLink id="mov2#mpkg2#opm20#icu25#oln234" name="OKFlow234" to="mov2#mpkg2#opm20#dlu8">
+        <LinkParameter id="mov2#mpkg2#opm20#icu25#oln234#par1569" name="oid_drug_PASSING" source="mov2#mpkg2#opm20#icu25#icp127" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm20#icu25#oln234#par1573" name="drug_prescription_PASSING" source="mov2#mpkg2#opm20#icu25#icp129" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm20#icu25#oln234#par1574" name="standard_PASSING" source="mov2#mpkg2#opm20#icu25#icp128" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm20#icu25#oln234#par1575" name="quantityDaRimuovere_PASSING" source="mov2#mpkg2#opm20#icu25#icp130" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm20#icu25#oln234#par1582" name="oid_shoppingcart_KeyCondition24 [oid]" source="mov2#mpkg2#opm20#icu25#icp127" target="mov2#mpkg2#opm20#dlu8#su107#kcond48.ent13#att58"/>
+      </OKLink>
+      <InputCollectorParameter id="mov2#mpkg2#opm20#icu25#icp129" name="drug_prescription"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm20#icu25#icp128" name="standard"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm20#icu25#icp130" name="quantityDaRimuovere"/>
+    </InputCollectorUnit>
+    <DeleteUnit id="mov2#mpkg2#opm20#dlu8" name="Rimuovi Da carrello" gr:x="385" gr:y="170" entity="ent13">
+      <Selector id="mov2#mpkg2#opm20#dlu8#su107" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm20#dlu8#su107#kcond48" name="KeyCondition24" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm20#dlu8#oln235" name="OKFlow235" to="mov2#mpkg2#opm20#switch12">
+        <LinkParameter id="mov2#mpkg2#opm20#dlu8#oln235#par1576" name="drug_prescription_PASSING" sourceLinkParameter="mov2#mpkg2#opm20#icu25#oln234#par1573" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm20#dlu8#oln235#par1577" name="oid_drug_PASSING" sourceLinkParameter="mov2#mpkg2#opm20#icu25#oln234#par1569" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm20#dlu8#oln235#par1578" name="quantityDaRimuovere_PASSING" sourceLinkParameter="mov2#mpkg2#opm20#icu25#oln234#par1575" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm20#dlu8#oln235#par1579" name="standard_PASSING" sourceLinkParameter="mov2#mpkg2#opm20#icu25#oln234#par1574" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm20#dlu8#oln235#par1580" name="standard_PASSING_Switch" sourceLinkParameter="mov2#mpkg2#opm20#icu25#oln234#par1574" target="mov2#mpkg2#opm20#switch12.switch"/>
+      </OKLink>
+    </DeleteUnit>
+    <ModifyUnit gr:x="1060" gr:y="-10" id="mov2#mpkg2#opm20#mfu18" name="Update su Prescrizione Temporanea" entity="ent3">
+      <Selector id="mov2#mpkg2#opm20#mfu18#su108" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm20#mfu18#su108#kcond49" name="KeyCondition49" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm20#mfu18#oln240" name="OKFlow240" to="mov2#mpkg2#opm20#okcu23" automaticCoupling="true"/>
+    </ModifyUnit>
+    <SwitchUnit gr:x="600" gr:y="220" id="mov2#mpkg2#opm20#switch12" name="&#232; standard?">
+      <OKLink id="mov2#mpkg2#opm20#switch12#oln236" name="OKFlow236" to="mov2#mpkg2#opm20#seu67" code="0">
+        <LinkParameter id="mov2#mpkg2#opm20#switch12#oln236#par1584" name="drug_prescription_PASSING_KeyCondition50 [oid]" sourceLinkParameter="mov2#mpkg2#opm20#dlu8#oln235#par1576" target="mov2#mpkg2#opm20#seu67#su109#kcond50.ent3#att53"/>
+        <LinkParameter id="mov2#mpkg2#opm20#switch12#oln236#par1585" name="quantityDaRimuovere_PASSING" sourceLinkParameter="mov2#mpkg2#opm20#dlu8#oln235#par1578" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm20#switch12#oln236#par1589" name="drug_prescription_PASSING" sourceLinkParameter="mov2#mpkg2#opm20#dlu8#oln235#par1576" passing="true"/>
+      </OKLink>
+      <OKLink id="mov2#mpkg2#opm20#switch12#oln237" name="OKFlow237" to="mov2#mpkg2#opm20#okcu23" automaticCoupling="true" gr:bendpoints="222,45,-253,75" code="1"/>
+      <Case value="0"/>
+      <Case value="1"/>
+    </SwitchUnit>
+    <OKCollectorUnit gr:x="1375" gr:y="75" id="mov2#mpkg2#opm20#okcu23" name="OK Port23"/>
+    <KOCollectorUnit gr:x="1375" gr:y="255" id="mov2#mpkg2#opm20#kocu24" name="KO Port24"/>
+    <SelectorUnit gr:x="560" gr:y="70" id="mov2#mpkg2#opm20#seu67" name="SelectAssigned" entity="ent3">
+      <Selector id="mov2#mpkg2#opm20#seu67#su109" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm20#seu67#su109#kcond50" name="KeyCondition50" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm20#seu67#oln238" name="OKFlow238" to="mov2#mpkg2#opm20#mathu9">
+        <LinkParameter id="mov2#mpkg2#opm20#seu67#oln238#par1586" name="assignedTemp_assigned" source="ent3#att57Array" target="mov2#mpkg2#opm20#mathu9#mathv14"/>
+        <LinkParameter id="mov2#mpkg2#opm20#seu67#oln238#par1587" name="quantityDaRimuovere_PASSING_quantityDaRimuovere" sourceLinkParameter="mov2#mpkg2#opm20#switch12#oln236#par1585" target="mov2#mpkg2#opm20#mathu9#mathv15"/>
+        <LinkParameter id="mov2#mpkg2#opm20#seu67#oln238#par1590" name="drug_prescription_PASSING" sourceLinkParameter="mov2#mpkg2#opm20#switch12#oln236#par1589" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <MathUnit gr:x="790" gr:y="80" id="mov2#mpkg2#opm20#mathu9" name="RimuoviAssigned" resultType="float" defaultExpression="assigned - quantityDaRimuovere">
+      <MathVariable id="mov2#mpkg2#opm20#mathu9#mathv14" name="assigned"/>
+      <MathVariable id="mov2#mpkg2#opm20#mathu9#mathv15" name="quantityDaRimuovere"/>
+      <OKLink id="mov2#mpkg2#opm20#mathu9#oln239" name="OKFlow239" to="mov2#mpkg2#opm20#mfu18">
+        <LinkParameter id="mov2#mpkg2#opm20#mathu9#oln239#par1588" name="Result_assignedTemp" source="result" target="mov2#mpkg2#opm20#mfu18.ent3#att57"/>
+        <LinkParameter id="mov2#mpkg2#opm20#mathu9#oln239#par1591" name="drug_prescription_PASSING_KeyCondition49 [oid]" sourceLinkParameter="mov2#mpkg2#opm20#seu67#oln238#par1590" target="mov2#mpkg2#opm20#mfu18#su108#kcond49.ent3#att53"/>
+      </OKLink>
+    </MathUnit>
   </OperationUnits>
 </OperationModule>

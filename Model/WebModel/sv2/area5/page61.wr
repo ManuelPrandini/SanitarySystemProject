@@ -1,17 +1,17 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1815" gr:y="410" id="sv2#area5#page61" name="Dettagli Farmaco" layout:pageLayout="MetroStyle/Empty">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1815" gr:y="680" id="sv2#area5#page61" name="Dettagli Farmaco" layout:pageLayout="MetroStyle/Empty">
   <ContentUnits>
-    <EntryUnit id="sv2#area5#page61#enu26" name="Quantit&#224;" gr:x="0" gr:y="0" fieldOrder="sv2#area5#page61#enu26#fld32 sv2#area5#page61#enu26#fld31 sv2#area5#page61#enu26#fld33" linkOrder="sv2#area5#page61#enu26#ln153">
+    <EntryUnit id="sv2#area5#page61#enu26" name="Quantit&#224;" gr:x="0" gr:y="0" fieldOrder="sv2#area5#page61#enu26#fld32 sv2#area5#page61#enu26#fld31 sv2#area5#page61#enu26#fld33" linkOrder="sv2#area5#page61#enu26#ln37">
       <Field id="sv2#area5#page61#enu26#fld31" name="Quantit&#224; presente" type="integer" preloaded="true"/>
       <Field id="sv2#area5#page61#enu26#fld33" name="Quantit&#224; da vendere" type="integer" modifiable="true"/>
       <Field id="sv2#area5#page61#enu26#fld32" name="Farmaco" type="string" preloaded="true"/>
-      <Link id="sv2#area5#page61#enu26#ln153" name="Flow153" to="sv2#area5#cru12" type="normal" validate="true">
-        <LinkParameter id="sv2#area5#page61#enu26#ln153#par962" name="Farmaco_drugName" source="sv2#area5#page61#enu26#fld32" target="sv2#area5#cru12.ent13#att59"/>
-        <LinkParameter id="sv2#area5#page61#enu26#ln153#par963" name="1_isStandard" sourceValue="1" target="sv2#area5#cru12.ent13#att36"/>
-        <LinkParameter id="sv2#area5#page61#enu26#ln153#par964" name="Quantit&#224; da vendere_quantity" source="sv2#area5#page61#enu26#fld33" target="sv2#area5#cru12.ent13#att60"/>
-        <LinkParameter id="sv2#area5#page61#enu26#ln153#par965" name="Quantity_DrugToDrug.id_PASSING_id_drug" sourceLinkParameter="sv2#area5#page30#pwu12#ln186#par327" target="sv2#area5#cru12.ent13#att52"/>
-        <LinkParameter id="sv2#area5#page61#enu26#ln153#par990" name="patient_code_PASSING" sourceLinkParameter="sv2#area5#page30#pwu12#ln186#par932" passing="true"/>
-        <LinkParameter id="sv2#area5#page61#enu26#ln153#par991" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#page30#pwu12#ln186#par933" passing="true"/>
-        <LinkParameter id="sv2#area5#page61#enu26#ln153#par992" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#page30#pwu12#ln186#par934" passing="true"/>
+      <Link id="sv2#area5#page61#enu26#ln37" name="Flow37" to="sv2#area5#miu5" type="normal" validate="true">
+        <LinkParameter id="sv2#area5#page61#enu26#ln37#par1066" name="Farmaco_drug_name" source="sv2#area5#page61#enu26#fld32" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp120"/>
+        <LinkParameter id="sv2#area5#page61#enu26#ln37#par1070" name="Quantit&#224; da vendere_quantityDaAggiungere" source="sv2#area5#page61#enu26#fld33" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp123"/>
+        <LinkParameter id="sv2#area5#page61#enu26#ln37#par1071" name="1_is_standard" sourceValue="1" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp122"/>
+        <LinkParameter id="sv2#area5#page61#enu26#ln37#par1237" name="drugId_PASSING_id_drug" sourceLinkParameter="sv2#area5#pcu13#oln212#par1229" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp121"/>
+        <LinkParameter id="sv2#area5#page61#enu26#ln37#par1238" name="patientCode_PASSING_patient" sourceLinkParameter="sv2#area5#pcu13#oln212#par1233" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp125"/>
+        <LinkParameter id="sv2#area5#page61#enu26#ln37#par1239" name="pharmacistCode_PASSING_pharmacist" sourceLinkParameter="sv2#area5#pcu13#oln212#par1234" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp124"/>
+        <LinkParameter id="sv2#area5#page61#enu26#ln37#par1240" name="pharmacy_PASSING_pharmacy" sourceLinkParameter="sv2#area5#pcu13#oln212#par1235" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp126"/>
       </Link>
     </EntryUnit>
   </ContentUnits>
@@ -22,7 +22,7 @@
           <layout:Field field="sv2#area5#page61#enu26#fld32"/>
           <layout:Field field="sv2#area5#page61#enu26#fld31"/>
           <layout:Field field="sv2#area5#page61#enu26#fld33"/>
-          <layout:Link link="sv2#area5#page61#enu26#ln153"/>
+          <layout:Link link="sv2#area5#page61#enu26#ln37"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
