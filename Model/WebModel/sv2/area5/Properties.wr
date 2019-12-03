@@ -1,6 +1,6 @@
 <Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1090" gr:y="-60" id="sv2#area5" name="Interagisci con il cliente" landmark="true" landmarks="sv2#area5#page31" defaultPage="sv2#area5#page31">
   <OperationUnits>
-    <ModuleInstanceUnit gr:x="1330" gr:y="1210" id="sv2#area5#miu2" action="true" moduleId="mov2#mpkg2#opm18">
+    <ModuleInstanceUnit gr:x="1110" gr:y="1340" id="sv2#area5#miu2" action="true" moduleId="mov2#mpkg2#opm18">
       <OKLink id="sv2#area5#miu2#oln165" name="OKFlow165" to="sv2#area5#dlu7" gr:bendpoints="-210,20,170,20">
         <LinkParameter id="sv2#area5#miu2#oln165#par734" name="oid_carrello_oid [oid]" source="mov2#mpkg2#opm18#okcu21#ocp24" target="sv2#area5#dlu7#su89#kcond39.ent13#att58"/>
       </OKLink>
@@ -13,7 +13,7 @@
         <LinkParameter id="sv2#area5#lpu1#oln161#par1042" name="pharmacist_code_PASSING" sourceLinkParameter="sv2#area5#inn20#oln151#par148" passing="true"/>
         <LinkParameter id="sv2#area5#lpu1#oln161#par1043" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#inn20#oln151#par149" passing="true"/>
       </OKLink>
-      <OKLink id="sv2#area5#lpu1#oln162" name="OKFlow162" to="sv2#area5#page64" automaticCoupling="true" code="end"/>
+      <OKLink id="sv2#area5#lpu1#oln162" name="OKFlow162" to="sv2#area5#seu71" automaticCoupling="true" code="end"/>
     </LoopUnit>
     <SelectorUnit gr:x="315" gr:y="1075" id="sv2#area5#seu18" name="SelectFarmaciDalCarrello" entity="ent13">
       <OKLink id="sv2#area5#seu18#oln163" name="OKFlow163" to="sv2#area5#inn20">
@@ -29,7 +29,7 @@
         <LinkParameter id="sv2#area5#seu18#oln163#par144" name="oid_PASSING" source="ent13#att58Array" passing="true"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit id="sv2#area5#seu47" name="SelectFarmaciDalCarrello" gr:x="970" gr:y="1115" entity="ent13">
+    <SelectorUnit id="sv2#area5#seu47" name="SelectFarmaciDalCarrello" gr:x="870" gr:y="1245" entity="ent13">
       <Selector id="sv2#area5#seu47#su76" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area5#seu47#su76#kcond37" name="oid" predicate="in" implied="false"/>
       </Selector>
@@ -46,6 +46,7 @@
         <LinkParameter id="sv2#area5#seu47#oln175#par1046" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#lpu1#oln161#par1043" passing="true"/>
         <LinkParameter id="sv2#area5#seu47#oln175#par1067" name="patient_code_PASSING_patient_code" sourceLinkParameter="sv2#area5#lpu1#oln161#par1041" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp114"/>
         <LinkParameter id="sv2#area5#seu47#oln175#par1068" name="pharmacist_code_PASSING_pharmacist_code" sourceLinkParameter="sv2#area5#lpu1#oln161#par1042" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp116"/>
+        <LinkParameter id="sv2#area5#seu47#oln175#par1687" name="pharmacy_oid_PASSING_pharmacy" sourceLinkParameter="sv2#area5#lpu1#oln161#par1043" target="sv2#area5#miu2.mov2#mpkg2#opm18#icu22#icp131"/>
       </OKLink>
     </SelectorUnit>
     <ParameterCollectorUnit gr:x="390" gr:y="540" id="sv2#area5#pcu6" name="codes of patient and pharmacist">
@@ -58,7 +59,7 @@
         <LinkParameter id="sv2#area5#pcu6#oln224#par1324" name="pharmacy_oid_PASSING" source="sv2#area5#pcu6#pcp19" passing="true"/>
       </OKLink>
     </ParameterCollectorUnit>
-    <DeleteUnit gr:x="975" gr:y="1235" id="sv2#area5#dlu7" name="Rimuovi da carrello" entity="ent13">
+    <DeleteUnit gr:x="750" gr:y="1415" id="sv2#area5#dlu7" name="Rimuovi da carrello" entity="ent13">
       <Selector id="sv2#area5#dlu7#su89" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area5#dlu7#su89#kcond39" name="oid" predicate="in" implied="false"/>
       </Selector>
@@ -473,7 +474,7 @@ return ["resultCode" : "success" , "correctOid" : correctOid]</ScriptUnitText>
         <LinkParameter id="sv2#area5#scu8#oln230#par1494" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#seu66#oln229#par1491" passing="true"/>
       </OKLink>
     </ScriptUnit>
-    <SelectorUnit gr:x="1055" gr:y="330" id="sv2#area5#seu66" name="SelectorTempPrescription" entity="ent3">
+    <SelectorUnit gr:x="1055" gr:y="315" id="sv2#area5#seu66" name="SelectorTempPrescription" entity="ent3">
       <OKLink id="sv2#area5#seu66#oln229" name="OKFlow229" to="sv2#area5#scu8">
         <LinkParameter id="sv2#area5#seu66#oln229#par1484" name="oid_oid" source="ent3#att53Array" target="sv2#area5#scu8.oid"/>
         <LinkParameter id="sv2#area5#seu66#oln229#par1486" name="assignedTemp_assignedTemp" source="ent3#att57Array" target="sv2#area5#scu8.assignedTemp"/>
@@ -490,5 +491,16 @@ return ["resultCode" : "success" , "correctOid" : correctOid]</ScriptUnitText>
         <LinkParameter id="sv2#area5#miu15#oln241#par1594" name="pharmacy_oid_PASSING_pharmacy_oid" sourceLinkParameter="sv2#area5#page3#pwu7#ln96#par949" target="sv2#area5#pcu8#pcp27"/>
       </OKLink>
     </ModuleInstanceUnit>
+    <DeleteUnit gr:x="1125" gr:y="1060" id="sv2#area5#dlu10" name="Ripulisci Prescrizioni Temporanee" entity="ent3">
+      <OKLink id="sv2#area5#dlu10#oln254" name="OKFlow254" to="sv2#area5#page64" automaticCoupling="true"/>
+      <Selector id="sv2#area5#dlu10#su119" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area5#dlu10#su119#kcond59" name="KeyCondition59" predicate="in" implied="false"/>
+      </Selector>
+    </DeleteUnit>
+    <SelectorUnit gr:x="925" gr:y="1070" id="sv2#area5#seu71" name="Presc Temp" entity="ent13">
+      <OKLink id="sv2#area5#seu71#oln255" name="OKFlow255" to="sv2#area5#dlu10">
+        <LinkParameter id="sv2#area5#seu71#oln255#par1736" name="oid_KeyCondition59 [oid]" source="ent13#att58Array" target="sv2#area5#dlu10#su119#kcond59.ent3#att53"/>
+      </OKLink>
+    </SelectorUnit>
   </OperationUnits>
 </Area>
