@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1005" gr:y="-450" id="mov2#hym1#page50" name="Doctor Info (Exists)">
   <ContentUnits>
-    <EntryUnit id="mov2#hym1#page50#enu23" name="registration form" gr:x="155" gr:y="140" fieldOrder="mov2#hym1#page50#enu23#fld144 mov2#hym1#page50#enu23#fld143 mov2#hym1#page50#enu23#fld141 mov2#hym1#page50#enu23#fld140 mov2#hym1#page50#enu23#fld148 mov2#hym1#page50#enu23#fld139 mov2#hym1#page50#enu23#fld138 mov2#hym1#page50#enu23#fld137 mov2#hym1#page50#enu23#fld136 mov2#hym1#page50#enu23#fld147 mov2#hym1#page50#enu23#fld146 mov2#hym1#page50#enu23#fld145 mov2#hym1#page50#enu23#sfld50 mov2#hym1#page50#enu23#sfld52 mov2#hym1#page50#enu23#sfld53" linkOrder="mov2#hym1#page50#enu23#ln159 mov2#hym1#page50#enu23#ln161">
+    <EntryUnit id="mov2#hym1#page50#enu23" name="registration form" gr:x="155" gr:y="140" fieldOrder="mov2#hym1#page50#enu23#fld144 mov2#hym1#page50#enu23#fld141 mov2#hym1#page50#enu23#fld140 mov2#hym1#page50#enu23#fld148 mov2#hym1#page50#enu23#fld139 mov2#hym1#page50#enu23#fld138 mov2#hym1#page50#enu23#fld137 mov2#hym1#page50#enu23#fld136 mov2#hym1#page50#enu23#fld147 mov2#hym1#page50#enu23#fld146 mov2#hym1#page50#enu23#fld145 mov2#hym1#page50#enu23#sfld50 mov2#hym1#page50#enu23#sfld52 mov2#hym1#page50#enu23#sfld53 mov2#hym1#page50#enu23#fld143" linkOrder="mov2#hym1#page50#enu23#ln159 mov2#hym1#page50#enu23#ln161">
       <Field id="mov2#hym1#page50#enu23#fld136" name="address" type="string" preloaded="true"/>
       <Field id="mov2#hym1#page50#enu23#fld137" name="telephone" type="string" preloaded="true"/>
       <Field id="mov2#hym1#page50#enu23#fld138" name="birthday" type="date" preloaded="true"/>
@@ -18,9 +18,10 @@
       <SelectionField id="mov2#hym1#page50#enu23#sfld50" name="hospital" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page50#enu23#ln159" ajaxEventIndicator="true"/>
       <SelectionField id="mov2#hym1#page50#enu23#sfld53" name="room" type="string" modifiable="true"/>
       <SelectionField id="mov2#hym1#page50#enu23#sfld52" name="medical specialization" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page50#enu23#ln159" ajaxEventIndicator="true"/>
-      <Link id="mov2#hym1#page50#enu23#ln159" name="Select Visit Room" to="mov2#hym1#page50#seu45" type="normal" validate="true">
+      <Link id="mov2#hym1#page50#enu23#ln159" name="Select Visit Room" to="mov2#hym1#page50#seu45" type="normal" validate="true" preserveForm="true">
         <LinkParameter id="mov2#hym1#page50#enu23#ln159#par807" name="hospital_id_hospital" source="mov2#hym1#page50#enu23#sfld50" target="mov2#hym1#page50#seu45#su66#acond47"/>
         <LinkParameter id="mov2#hym1#page50#enu23#ln159#par808" name="medical specialization_medical_specialization" source="mov2#hym1#page50#enu23#sfld52" target="mov2#hym1#page50#seu45#su66#acond48"/>
+        <LinkParameter id="mov2#hym1#page50#enu23#ln159#par1265" name="password_PASSING" source="mov2#hym1#page50#enu23#fld143" passing="true"/>
       </Link>
       <Link id="mov2#hym1#page50#enu23#ln161" name="Submit" to="mov2#hym1#miu14" type="normal" validate="true" gr:bendpoints="478,-20,-22,-235">
         <LinkParameter id="mov2#hym1#page50#enu23#ln161#par811" name="address_address" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp30" source="mov2#hym1#page50#enu23#fld136"/>
@@ -68,6 +69,7 @@
       <Link id="mov2#hym1#page50#seu45#ln160" name="Flow160" to="mov2#hym1#page50#enu23" type="transport" validate="true" gr:bendpoints="-177,88,118,-32">
         <LinkParameter id="mov2#hym1#page50#seu45#ln160#par809" name="name_room [label]" source="ent10#att50Array" target="mov2#hym1#page50#enu23#sfld53_label"/>
         <LinkParameter id="mov2#hym1#page50#seu45#ln160#par810" name="id_room_room [output]" source="ent10#att5Array" target="mov2#hym1#page50#enu23#sfld53_output"/>
+        <LinkParameter id="mov2#hym1#page50#seu45#ln160#par1266" name="password_PASSING" sourceLinkParameter="mov2#hym1#page50#enu23#ln159#par1265" passing="true"/>
       </Link>
     </SelectorUnit>
     <SelectorUnit id="mov2#hym1#page50#seu55" name="SelectorRoom" gr:x="480" gr:y="155" entity="ent23">
@@ -80,8 +82,9 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov2#hym1#page50#enu23">
+          <layout:Link link="mov2#hym1#page50#enu23#ln159"/>
+          <layout:Link link="mov2#hym1#page50#enu23#ln161"/>
           <layout:Field field="mov2#hym1#page50#enu23#fld144"/>
-          <layout:Field field="mov2#hym1#page50#enu23#fld143"/>
           <layout:Field field="mov2#hym1#page50#enu23#fld141"/>
           <layout:Field field="mov2#hym1#page50#enu23#fld140"/>
           <layout:Field field="mov2#hym1#page50#enu23#fld148"/>
@@ -95,8 +98,7 @@
           <layout:Field field="mov2#hym1#page50#enu23#sfld50"/>
           <layout:Field field="mov2#hym1#page50#enu23#sfld52"/>
           <layout:Field field="mov2#hym1#page50#enu23#sfld53"/>
-          <layout:Link link="mov2#hym1#page50#enu23#ln159"/>
-          <layout:Link link="mov2#hym1#page50#enu23#ln161"/>
+          <layout:Field field="mov2#hym1#page50#enu23#fld143"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

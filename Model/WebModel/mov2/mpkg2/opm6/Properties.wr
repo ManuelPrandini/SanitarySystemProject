@@ -9,8 +9,8 @@
         <LinkParameter id="mov2#mpkg2#opm6#icu6#oln113#par431" name="groupID_PASSING" source="mov2#mpkg2#opm6#icu6#icp80" passing="true"/>
       </OKLink>
     </InputCollectorUnit>
-    <OKCollectorUnit gr:x="1055" gr:y="45" id="mov2#mpkg2#opm6#okcu7" name="User Deleted"/>
-    <KOCollectorUnit gr:x="1055" gr:y="340" id="mov2#mpkg2#opm6#kocu6" name="Error"/>
+    <OKCollectorUnit gr:x="1785" gr:y="50" id="mov2#mpkg2#opm6#okcu7" name="User Deleted"/>
+    <KOCollectorUnit gr:x="1785" gr:y="340" id="mov2#mpkg2#opm6#kocu6" name="Error"/>
     <SwitchUnit gr:x="345" gr:y="200" id="mov2#mpkg2#opm6#switch11" name="Switch">
       <Case value="1"/>
       <Case value="2"/>
@@ -35,30 +35,33 @@
       <Selector id="mov2#mpkg2#opm6#dlu3#su38" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#mpkg2#opm6#dlu3#su38#acond31" name="CFcondition" predicate="eq" booleanOperator="or" implied="false" attributes="rel36#role72.userOID"/>
       </Selector>
-      <OKLink id="mov2#mpkg2#opm6#dlu3#oln117" name="OKFlow117" to="mov2#mpkg2#opm6#dcnu1">
-        <LinkParameter id="mov2#mpkg2#opm6#dlu3#oln117#par435" name="inputPrimaryKey_PASSING_KeyCondition31 [cf] [User] [Source]" sourceLinkParameter="mov2#mpkg2#opm6#switch11#oln114#par425" target="mov2#mpkg2#opm6#dcnu1#su41#kcond31.userOID"/>
-        <LinkParameter id="mov2#mpkg2#opm6#dlu3#oln117#par436" name="groupID_PASSING_KeyCondition32 [oid] [Group] [Target]" sourceLinkParameter="mov2#mpkg2#opm6#switch11#oln114#par432" target="mov2#mpkg2#opm6#dcnu1#su42#kcond32.groupOID"/>
+      <OKLink id="mov2#mpkg2#opm6#dlu3#oln117" name="OKFlow117" to="mov2#mpkg2#opm6#seu72">
+        <LinkParameter id="mov2#mpkg2#opm6#dlu3#oln117#par63" name="inputPrimaryKey_PASSING_cf" sourceLinkParameter="mov2#mpkg2#opm6#switch11#oln114#par425" target="mov2#mpkg2#opm6#seu72#su115#acond109"/>
+        <LinkParameter id="mov2#mpkg2#opm6#dlu3#oln117#par65" name="inputPrimaryKey_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#switch11#oln114#par425" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm6#dlu3#oln117#par68" name="groupID_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#switch11#oln114#par432" passing="true"/>
       </OKLink>
     </DeleteUnit>
     <DeleteUnit gr:x="545" gr:y="180" id="mov2#mpkg2#opm6#dlu4" name="DeletePharmacist" entity="ent1">
       <Selector id="mov2#mpkg2#opm6#dlu4#su39" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#mpkg2#opm6#dlu4#su39#acond32" name="CFcondition" predicate="eq" booleanOperator="or" implied="false" attributes="rel22#role44.userOID"/>
       </Selector>
-      <OKLink id="mov2#mpkg2#opm6#dlu4#oln118" name="OKFlow118" to="mov2#mpkg2#opm6#dcnu1">
-        <LinkParameter id="mov2#mpkg2#opm6#dlu4#oln118#par437" name="inputPrimaryKey_PASSING_KeyCondition31 [cf] [User] [Source]" sourceLinkParameter="mov2#mpkg2#opm6#switch11#oln115#par427" target="mov2#mpkg2#opm6#dcnu1#su41#kcond31.userOID"/>
-        <LinkParameter id="mov2#mpkg2#opm6#dlu4#oln118#par438" name="groupID_PASSING_KeyCondition32 [oid] [Group] [Target]" sourceLinkParameter="mov2#mpkg2#opm6#switch11#oln115#par433" target="mov2#mpkg2#opm6#dcnu1#su42#kcond32.groupOID"/>
+      <OKLink id="mov2#mpkg2#opm6#dlu4#oln118" name="OKFlow118" to="mov2#mpkg2#opm6#seu75">
+        <LinkParameter id="mov2#mpkg2#opm6#dlu4#oln118#par1053" name="inputPrimaryKey_PASSING_cf" sourceLinkParameter="mov2#mpkg2#opm6#switch11#oln115#par427" target="mov2#mpkg2#opm6#seu75#su123#acond113"/>
+        <LinkParameter id="mov2#mpkg2#opm6#dlu4#oln118#par1054" name="groupID_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#switch11#oln115#par433" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm6#dlu4#oln118#par1056" name="inputPrimaryKey_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#switch11#oln115#par427" passing="true"/>
       </OKLink>
     </DeleteUnit>
     <DeleteUnit gr:x="555" gr:y="330" id="mov2#mpkg2#opm6#dlu5" name="DeletePatient" entity="ent6">
       <Selector id="mov2#mpkg2#opm6#dlu5#su40" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#mpkg2#opm6#dlu5#su40#acond33" name="CFcondition" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.userOID"/>
       </Selector>
-      <OKLink id="mov2#mpkg2#opm6#dlu5#oln119" name="OKFlow119" to="mov2#mpkg2#opm6#dcnu1">
-        <LinkParameter id="mov2#mpkg2#opm6#dlu5#oln119#par439" name="inputPrimaryKey_PASSING_KeyCondition31 [cf] [User] [Source]" sourceLinkParameter="mov2#mpkg2#opm6#switch11#oln116#par429" target="mov2#mpkg2#opm6#dcnu1#su41#kcond31.userOID"/>
-        <LinkParameter id="mov2#mpkg2#opm6#dlu5#oln119#par440" name="groupID_PASSING_KeyCondition32 [oid] [Group] [Target]" sourceLinkParameter="mov2#mpkg2#opm6#switch11#oln116#par434" target="mov2#mpkg2#opm6#dcnu1#su42#kcond32.groupOID"/>
+      <OKLink id="mov2#mpkg2#opm6#dlu5#oln119" name="OKFlow119" to="mov2#mpkg2#opm6#seu76">
+        <LinkParameter id="mov2#mpkg2#opm6#dlu5#oln119#par1091" name="inputPrimaryKey_PASSING_cf" sourceLinkParameter="mov2#mpkg2#opm6#switch11#oln116#par429" target="mov2#mpkg2#opm6#seu76#su124#acond114"/>
+        <LinkParameter id="mov2#mpkg2#opm6#dlu5#oln119#par1092" name="groupID_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#switch11#oln116#par434" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm6#dlu5#oln119#par1093" name="inputPrimaryKey_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#switch11#oln116#par429" passing="true"/>
       </OKLink>
     </DeleteUnit>
-    <DisconnectUnit gr:x="885" gr:y="175" id="mov2#mpkg2#opm6#dcnu1" name="Disconnect" relationship="User2Group">
+    <DisconnectUnit gr:x="1670" gr:y="165" id="mov2#mpkg2#opm6#dcnu1" name="Disconnect" relationship="User2Group">
       <SourceSelector id="mov2#mpkg2#opm6#dcnu1#su41" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg2#opm6#dcnu1#su41#kcond31" name="KeyCondition31" predicate="in" implied="false"/>
       </SourceSelector>
@@ -68,5 +71,158 @@
       <OKLink id="mov2#mpkg2#opm6#dcnu1#oln120" name="OKFlow120" to="mov2#mpkg2#opm6#okcu7" automaticCoupling="true"/>
       <KOLink id="mov2#mpkg2#opm6#dcnu1#kln53" name="KOFlow53" to="mov2#mpkg2#opm6#kocu6" automaticCoupling="true"/>
     </DisconnectUnit>
+    <SelectorUnit gr:x="740" gr:y="40" id="mov2#mpkg2#opm6#seu72" name="ExistsPatient?" entity="ent6" distinctAttributes="ent6#att11">
+      <Selector id="mov2#mpkg2#opm6#seu72#su115" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg2#opm6#seu72#su115#acond109" name="cf" predicate="eq" booleanOperator="and" implied="false" attributes="rel14#role28.userOID"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm6#seu72#oln173" name="OKFlow173" to="mov2#mpkg2#opm6#inn29">
+        <LinkParameter id="mov2#mpkg2#opm6#seu72#oln173#par66" name="PatientToUser.cf_Input" source="ent6#att11Array" target="mov2#mpkg2#opm6#inn29.isnotnull"/>
+        <LinkParameter id="mov2#mpkg2#opm6#seu72#oln173#par67" name="inputPrimaryKey_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#dlu3#oln117#par65" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm6#seu72#oln173#par69" name="groupID_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#dlu3#oln117#par68" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="920" gr:y="60" id="mov2#mpkg2#opm6#inn29" name="se esiste">
+      <KOLink id="mov2#mpkg2#opm6#inn29#kln77" name="KOFlow77" to="mov2#mpkg2#opm6#seu73">
+        <LinkParameter id="mov2#mpkg2#opm6#inn29#kln77#par866" name="inputPrimaryKey_PASSING_cf" sourceLinkParameter="mov2#mpkg2#opm6#seu72#oln173#par67" target="mov2#mpkg2#opm6#seu73#su118#acond110"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn29#kln77#par870" name="groupID_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#seu72#oln173#par69" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn29#kln77#par934" name="inputPrimaryKey_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#seu72#oln173#par67" passing="true"/>
+      </KOLink>
+      <OKLink id="mov2#mpkg2#opm6#inn29#oln214" name="OKFlow214" to="mov2#mpkg2#opm6#dcnu1" gr:bendpoints="37,51,-693,-79;499,61,-231,-69">
+        <LinkParameter id="mov2#mpkg2#opm6#inn29#oln214#par435" name="inputPrimaryKey_PASSING_KeyCondition31 [cf] [User] [Source]" sourceLinkParameter="mov2#mpkg2#opm6#seu72#oln173#par67" target="mov2#mpkg2#opm6#dcnu1#su41#kcond31.userOID"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn29#oln214#par436" name="groupID_PASSING_KeyCondition32 [oid] [Group] [Target]" sourceLinkParameter="mov2#mpkg2#opm6#seu72#oln173#par69" target="mov2#mpkg2#opm6#dcnu1#su42#kcond32.groupOID"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <SelectorUnit gr:x="1030" gr:y="40" id="mov2#mpkg2#opm6#seu73" name="ExistsPharmacist?" entity="ent1" distinctAttributes="ent1#att32">
+      <Selector id="mov2#mpkg2#opm6#seu73#su118" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg2#opm6#seu73#su118#acond110" name="cf" predicate="eq" booleanOperator="and" implied="false" attributes="rel22#role44.userOID"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm6#seu73#oln222" name="OKFlow222" to="mov2#mpkg2#opm6#inn30">
+        <LinkParameter id="mov2#mpkg2#opm6#seu73#oln222#par950" name="pharmacist_code_Input" source="ent1#att32Array" target="mov2#mpkg2#opm6#inn30.isnotnull"/>
+        <LinkParameter id="mov2#mpkg2#opm6#seu73#oln222#par951" name="groupID_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#inn29#kln77#par870" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm6#seu73#oln222#par952" name="inputPrimaryKey_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#inn29#kln77#par934" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit id="mov2#mpkg2#opm6#inn30" name="se esiste" gr:x="1230" gr:y="55">
+      <OKLink id="mov2#mpkg2#opm6#inn30#oln215" name="OKFlow214" to="mov2#mpkg2#opm6#dcnu1" gr:bendpoints="43,74,-417,-61;238,81,-222,-54;332,122,-128,-13">
+        <LinkParameter id="mov2#mpkg2#opm6#inn30#oln215#par962" name="inputPrimaryKey_PASSING_KeyCondition31 [cf] [User] [Source]" sourceLinkParameter="mov2#mpkg2#opm6#seu73#oln222#par952" target="mov2#mpkg2#opm6#dcnu1#su41#kcond31.userOID"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn30#oln215#par963" name="groupID_PASSING_KeyCondition32 [oid] [Group] [Target]" sourceLinkParameter="mov2#mpkg2#opm6#seu73#oln222#par951" target="mov2#mpkg2#opm6#dcnu1#su42#kcond32.groupOID"/>
+      </OKLink>
+      <KOLink id="mov2#mpkg2#opm6#inn30#kln79" name="KOFlow79" to="mov2#mpkg2#opm6#dlu9">
+        <LinkParameter id="mov2#mpkg2#opm6#inn30#kln79#par964" name="inputPrimaryKey_PASSING_KeyCondition58 [cf]" sourceLinkParameter="mov2#mpkg2#opm6#seu73#oln222#par952" target="mov2#mpkg2#opm6#dlu9#su120#kcond58.userOID"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn30#kln79#par965" name="groupID_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#seu73#oln222#par951" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn30#kln79#par967" name="inputPrimaryKey_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#seu73#oln222#par952" passing="true"/>
+      </KOLink>
+    </IsNotNullUnit>
+    <DeleteUnit gr:x="1360" gr:y="50" id="mov2#mpkg2#opm6#dlu9" name="Elimina Utente" entity="User">
+      <Selector id="mov2#mpkg2#opm6#dlu9#su120" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm6#dlu9#su120#kcond58" name="KeyCondition58" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm6#dlu9#oln223" name="OKFlow223" to="mov2#mpkg2#opm6#dcnu1">
+        <LinkParameter id="mov2#mpkg2#opm6#dlu9#oln223#par969" name="inputPrimaryKey_PASSING_KeyCondition31 [cf] [User] [Source]" sourceLinkParameter="mov2#mpkg2#opm6#inn30#kln79#par967" target="mov2#mpkg2#opm6#dcnu1#su41#kcond31.userOID"/>
+        <LinkParameter id="mov2#mpkg2#opm6#dlu9#oln223#par974" name="groupID_PASSING_KeyCondition32 [oid] [Group] [Target]" sourceLinkParameter="mov2#mpkg2#opm6#inn30#kln79#par965" target="mov2#mpkg2#opm6#dcnu1#su42#kcond32.groupOID"/>
+      </OKLink>
+    </DeleteUnit>
+    <IsNotNullUnit id="mov2#mpkg2#opm6#inn31" name="se esiste" gr:x="1240" gr:y="185">
+      <KOLink id="mov2#mpkg2#opm6#inn31#kln80" name="KOFlow79" to="mov2#mpkg2#opm6#dlu11">
+        <LinkParameter id="mov2#mpkg2#opm6#inn31#kln80#par1074" name="inputPrimaryKey_PASSING_KeyCondition58 [cf]" sourceLinkParameter="mov2#mpkg2#opm6#seu74#oln263#par1073" target="mov2#mpkg2#opm6#dlu11#su121#kcond60.userOID"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn31#kln80#par1075" name="groupID_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#seu74#oln263#par1072" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn31#kln80#par1076" name="inputPrimaryKey_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#seu74#oln263#par1073" passing="true"/>
+      </KOLink>
+      <OKLink id="mov2#mpkg2#opm6#inn31#oln270" name="OKFlow270" to="mov2#mpkg2#opm6#dcnu1" gr:bendpoints="1,58,-409,53;256,55,-194,50">
+        <LinkParameter id="mov2#mpkg2#opm6#inn31#oln270#par1124" name="inputPrimaryKey_PASSING_KeyCondition31 [cf] [User] [Source]" sourceLinkParameter="mov2#mpkg2#opm6#seu74#oln263#par1073" target="mov2#mpkg2#opm6#dcnu1#su41#kcond31.userOID"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn31#oln270#par1125" name="groupID_PASSING_KeyCondition32 [oid] [Group] [Target]" sourceLinkParameter="mov2#mpkg2#opm6#seu74#oln263#par1072" target="mov2#mpkg2#opm6#dcnu1#su42#kcond32.groupOID"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <DeleteUnit id="mov2#mpkg2#opm6#dlu11" name="Elimina Utente" gr:x="1375" gr:y="175" entity="User">
+      <Selector id="mov2#mpkg2#opm6#dlu11#su121" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm6#dlu11#su121#kcond60" name="KeyCondition58" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm6#dlu11#oln265" name="OKFlow265" to="mov2#mpkg2#opm6#dcnu1">
+        <LinkParameter id="mov2#mpkg2#opm6#dlu11#oln265#par1077" name="inputPrimaryKey_PASSING_KeyCondition31 [cf] [User] [Source]" sourceLinkParameter="mov2#mpkg2#opm6#inn31#kln80#par1076" target="mov2#mpkg2#opm6#dcnu1#su41#kcond31.userOID"/>
+        <LinkParameter id="mov2#mpkg2#opm6#dlu11#oln265#par1078" name="groupID_PASSING_KeyCondition32 [oid] [Group] [Target]" sourceLinkParameter="mov2#mpkg2#opm6#inn31#kln80#par1075" target="mov2#mpkg2#opm6#dcnu1#su42#kcond32.groupOID"/>
+      </OKLink>
+    </DeleteUnit>
+    <SelectorUnit id="mov2#mpkg2#opm6#seu74" name="ExistsDoctor?" gr:x="1045" gr:y="165" entity="ent9">
+      <Selector id="mov2#mpkg2#opm6#seu74#su122" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg2#opm6#seu74#su122#acond112" name="cf" predicate="eq" booleanOperator="and" implied="false" attributes="rel36#role72.userOID"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm6#seu74#oln263" name="OKFlow222" to="mov2#mpkg2#opm6#inn31">
+        <LinkParameter id="mov2#mpkg2#opm6#seu74#oln263#par993" name="pharmacist_code_Input" source="ent9#att33Array" target="mov2#mpkg2#opm6#inn31.isnotnull"/>
+        <LinkParameter id="mov2#mpkg2#opm6#seu74#oln263#par1072" name="groupID_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#inn32#kln81#par1062" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm6#seu74#oln263#par1073" name="inputPrimaryKey_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#inn32#kln81#par1069" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="mov2#mpkg2#opm6#seu75" name="ExistsPatient?" gr:x="750" gr:y="170" entity="ent6" distinctAttributes="ent6#att11">
+      <Selector id="mov2#mpkg2#opm6#seu75#su123" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg2#opm6#seu75#su123#acond113" name="cf" predicate="eq" booleanOperator="and" implied="false" attributes="rel14#role28.userOID"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm6#seu75#oln264" name="OKFlow173" to="mov2#mpkg2#opm6#inn32">
+        <LinkParameter id="mov2#mpkg2#opm6#seu75#oln264#par1002" name="PatientToUser.cf_Input" source="ent6#att11Array" target="mov2#mpkg2#opm6#inn32.isnotnull"/>
+        <LinkParameter id="mov2#mpkg2#opm6#seu75#oln264#par1057" name="groupID_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#dlu4#oln118#par1054" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm6#seu75#oln264#par1058" name="inputPrimaryKey_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#dlu4#oln118#par1056" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit id="mov2#mpkg2#opm6#inn32" name="se esiste" gr:x="915" gr:y="185">
+      <KOLink id="mov2#mpkg2#opm6#inn32#kln81" name="KOFlow77" to="mov2#mpkg2#opm6#seu74">
+        <LinkParameter id="mov2#mpkg2#opm6#inn32#kln81#par1061" name="inputPrimaryKey_PASSING_cf" sourceLinkParameter="mov2#mpkg2#opm6#seu75#oln264#par1058" target="mov2#mpkg2#opm6#seu74#su122#acond112"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn32#kln81#par1062" name="groupID_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#seu75#oln264#par1057" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn32#kln81#par1069" name="inputPrimaryKey_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#seu75#oln264#par1058" passing="true"/>
+      </KOLink>
+      <OKLink id="mov2#mpkg2#opm6#inn32#oln269" name="OKFlow269" to="mov2#mpkg2#opm6#dcnu1" gr:bendpoints="-1,73,-736,68;568,71,-167,66">
+        <LinkParameter id="mov2#mpkg2#opm6#inn32#oln269#par1122" name="inputPrimaryKey_PASSING_KeyCondition31 [cf] [User] [Source]" sourceLinkParameter="mov2#mpkg2#opm6#seu75#oln264#par1058" target="mov2#mpkg2#opm6#dcnu1#su41#kcond31.userOID"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn32#oln269#par1123" name="groupID_PASSING_KeyCondition32 [oid] [Group] [Target]" sourceLinkParameter="mov2#mpkg2#opm6#seu75#oln264#par1057" target="mov2#mpkg2#opm6#dcnu1#su42#kcond32.groupOID"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <IsNotNullUnit id="mov2#mpkg2#opm6#inn33" name="se esiste" gr:x="1267" gr:y="329">
+      <KOLink id="mov2#mpkg2#opm6#inn33#kln82" name="KOFlow79" to="mov2#mpkg2#opm6#dlu12">
+        <LinkParameter id="mov2#mpkg2#opm6#inn33#kln82#par1107" name="inputPrimaryKey_PASSING_KeyCondition58 [cf]" sourceLinkParameter="mov2#mpkg2#opm6#seu77#oln267#par1106" target="mov2#mpkg2#opm6#dlu12#su125#kcond61.userOID"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn33#kln82#par1108" name="groupID_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#seu77#oln267#par1105" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn33#kln82#par1109" name="inputPrimaryKey_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#seu77#oln267#par1106" passing="true"/>
+      </KOLink>
+      <OKLink id="mov2#mpkg2#opm6#inn33#oln272" name="OKFlow272" to="mov2#mpkg2#opm6#dcnu1" gr:bendpoints="-22,52,-442,192;300,53,-120,193">
+        <LinkParameter id="mov2#mpkg2#opm6#inn33#oln272#par1120" name="inputPrimaryKey_PASSING_KeyCondition31 [cf] [User] [Source]" sourceLinkParameter="mov2#mpkg2#opm6#seu77#oln267#par1106" target="mov2#mpkg2#opm6#dcnu1#su41#kcond31.userOID"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn33#oln272#par1121" name="groupID_PASSING_KeyCondition32 [oid] [Group] [Target]" sourceLinkParameter="mov2#mpkg2#opm6#seu77#oln267#par1105" target="mov2#mpkg2#opm6#dcnu1#su42#kcond32.groupOID"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <SelectorUnit id="mov2#mpkg2#opm6#seu76" name="ExistsPharmacist?" gr:x="777" gr:y="314" entity="ent1" distinctAttributes="ent1#att32">
+      <Selector id="mov2#mpkg2#opm6#seu76#su124" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg2#opm6#seu76#su124#acond114" name="cf" predicate="eq" booleanOperator="and" implied="false" attributes="rel22#role44.userOID"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm6#seu76#oln266" name="OKFlow173" to="mov2#mpkg2#opm6#inn34">
+        <LinkParameter id="mov2#mpkg2#opm6#seu76#oln266#par1082" name="PatientToUser.cf_Input" source="ent1#att32Array" target="mov2#mpkg2#opm6#inn34.isnotnull"/>
+        <LinkParameter id="mov2#mpkg2#opm6#seu76#oln266#par1094" name="groupID_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#dlu5#oln119#par1092" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm6#seu76#oln266#par1095" name="inputPrimaryKey_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#dlu5#oln119#par1093" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit id="mov2#mpkg2#opm6#inn34" name="se esiste" gr:x="965" gr:y="335">
+      <KOLink id="mov2#mpkg2#opm6#inn34#kln83" name="KOFlow77" to="mov2#mpkg2#opm6#seu77">
+        <LinkParameter id="mov2#mpkg2#opm6#inn34#kln83#par1098" name="inputPrimaryKey_PASSING_cf" sourceLinkParameter="mov2#mpkg2#opm6#seu76#oln266#par1095" target="mov2#mpkg2#opm6#seu77#su126#acond115"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn34#kln83#par1103" name="groupID_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#seu76#oln266#par1094" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn34#kln83#par1104" name="inputPrimaryKey_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#seu76#oln266#par1095" passing="true"/>
+      </KOLink>
+      <OKLink id="mov2#mpkg2#opm6#inn34#oln271" name="OKFlow271" to="mov2#mpkg2#opm6#dcnu1" gr:bendpoints="2,61,-723,206;628,60,-97,205;622,52,-103,197">
+        <LinkParameter id="mov2#mpkg2#opm6#inn34#oln271#par1115" name="inputPrimaryKey_PASSING_KeyCondition31 [cf] [User] [Source]" sourceLinkParameter="mov2#mpkg2#opm6#seu76#oln266#par1095" target="mov2#mpkg2#opm6#dcnu1#su41#kcond31.userOID"/>
+        <LinkParameter id="mov2#mpkg2#opm6#inn34#oln271#par1116" name="groupID_PASSING_KeyCondition32 [oid] [Group] [Target]" sourceLinkParameter="mov2#mpkg2#opm6#seu76#oln266#par1094" target="mov2#mpkg2#opm6#dcnu1#su42#kcond32.groupOID"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <DeleteUnit id="mov2#mpkg2#opm6#dlu12" name="Elimina Utente" gr:x="1420" gr:y="310" entity="User">
+      <Selector id="mov2#mpkg2#opm6#dlu12#su125" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm6#dlu12#su125#kcond61" name="KeyCondition58" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm6#dlu12#oln268" name="OKFlow268" to="mov2#mpkg2#opm6#dcnu1">
+        <LinkParameter id="mov2#mpkg2#opm6#dlu12#oln268#par1113" name="inputPrimaryKey_PASSING_KeyCondition31 [cf] [User] [Source]" sourceLinkParameter="mov2#mpkg2#opm6#inn33#kln82#par1109" target="mov2#mpkg2#opm6#dcnu1#su41#kcond31.userOID"/>
+        <LinkParameter id="mov2#mpkg2#opm6#dlu12#oln268#par1114" name="groupID_PASSING_KeyCondition32 [oid] [Group] [Target]" sourceLinkParameter="mov2#mpkg2#opm6#inn33#kln82#par1108" target="mov2#mpkg2#opm6#dcnu1#su42#kcond32.groupOID"/>
+      </OKLink>
+    </DeleteUnit>
+    <SelectorUnit id="mov2#mpkg2#opm6#seu77" name="ExistsDoctor?" gr:x="1072" gr:y="309" entity="ent9">
+      <Selector id="mov2#mpkg2#opm6#seu77#su126" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg2#opm6#seu77#su126#acond115" name="cf" predicate="eq" booleanOperator="and" implied="false" attributes="rel36#role72.userOID"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm6#seu77#oln267" name="OKFlow222" to="mov2#mpkg2#opm6#inn33">
+        <LinkParameter id="mov2#mpkg2#opm6#seu77#oln267#par1088" name="pharmacist_code_Input" source="ent9#att33Array" target="mov2#mpkg2#opm6#inn33.isnotnull"/>
+        <LinkParameter id="mov2#mpkg2#opm6#seu77#oln267#par1105" name="groupID_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#inn34#kln83#par1103" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm6#seu77#oln267#par1106" name="inputPrimaryKey_PASSING" sourceLinkParameter="mov2#mpkg2#opm6#inn34#kln83#par1104" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
   </OperationUnits>
 </OperationModule>

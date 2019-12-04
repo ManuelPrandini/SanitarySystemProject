@@ -1,7 +1,7 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page35" name="Pharmacist Info(Exists)" gr:x="1160" gr:y="165">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="75" id="mov2#hym1#page35#enu11" name="registration form" linkOrder="mov2#hym1#page35#enu11#ln47" fieldOrder="mov2#hym1#page35#enu11#fld20 mov2#hym1#page35#enu11#fld40 mov2#hym1#page35#enu11#fld41 mov2#hym1#page35#enu11#fld153 mov2#hym1#page35#enu11#fld8 mov2#hym1#page35#enu11#fld7 mov2#hym1#page35#enu11#fld152 mov2#hym1#page35#enu11#fld154 mov2#hym1#page35#enu11#fld43 mov2#hym1#page35#enu11#fld44 mov2#hym1#page35#enu11#fld35 mov2#hym1#page35#enu11#fld42 mov2#hym1#page35#enu11#fld34 mov2#hym1#page35#enu11#sfld54">
-      <Link id="mov2#hym1#page35#enu11#ln47" name="Submit" to="mov2#hym1#miu6" type="normal" validate="true">
+      <Link id="mov2#hym1#page35#enu11#ln47" name="Registrati" to="mov2#hym1#miu6" type="normal" validate="true">
         <LinkParameter id="mov2#hym1#page35#enu11#ln47#par121" name="1_exists?" sourceValue="1" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp74"/>
         <LinkParameter id="mov2#hym1#page35#enu11#ln47#par124" name="0_approved" sourceValue="0" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp37"/>
         <LinkParameter id="mov2#hym1#page35#enu11#ln47#par151" name="address_address" source="mov2#hym1#page35#enu11#fld7" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp33"/>

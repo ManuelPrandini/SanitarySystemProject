@@ -1,26 +1,27 @@
-[04 dic 2019 11:43:35] DEBUG Executing SQL script
-[04 dic 2019 11:43:35] INFO ================================================================================
-[04 dic 2019 11:43:35] INFO onError= 'stop'
-[04 dic 2019 11:43:35] INFO autoCommit= 'false'
-[04 dic 2019 11:43:35] INFO username= 'root'
-[04 dic 2019 11:43:35] INFO outputPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\SanitarySystemProject\.Temp~\UpdateSQL.xml'
-[04 dic 2019 11:43:35] INFO outputLogPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\SanitarySystemProject\.Temp~\UpdateSQL.xml.log'
-[04 dic 2019 11:43:35] INFO encoding= ''
-[04 dic 2019 11:43:35] INFO driverClass= 'com.mysql.jdbc.Driver'
-[04 dic 2019 11:43:35] INFO sqlScript= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\SanitarySystemProject\.Temp~\UpdateSQL.sql'
-[04 dic 2019 11:43:35] INFO eventSocketPort= '63853'
-[04 dic 2019 11:43:35] INFO statementSeparator= ';'
-[04 dic 2019 11:43:35] INFO derby.system.home= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
-[04 dic 2019 11:43:35] INFO password= 'root'
-[04 dic 2019 11:43:35] INFO url= 'jdbc:mysql://localhost:3306/hospital'
-[04 dic 2019 11:43:35] INFO ================================================================================
-[04 dic 2019 11:43:35] INFO Connecting to the Database...
-[04 dic 2019 11:43:35] INFO Database connection estabilished
-[04 dic 2019 11:43:35] INFO transaction isolation: 4
-[04 dic 2019 11:43:35] DEBUG ================================================================================
-[04 dic 2019 11:43:35] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\SanitarySystemProject\.Temp~\UpdateSQL.sql
-[04 dic 2019 11:43:35] DEBUG Executing statement:  create table `autoincrementoid` ( `oid`  integer  not null, primary key (`oid`) )
-[04 dic 2019 11:43:36] DEBUG ================================================================================
-[04 dic 2019 11:43:36] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[04 dic 2019 11:43:36] INFO Database connection closed
-[04 dic 2019 11:43:36] DEBUG Total time: 322 milliseconds
+[04 dic 2019 14:01:42] DEBUG Executing SQL script
+[04 dic 2019 14:01:42] INFO ================================================================================
+[04 dic 2019 14:01:42] INFO onError= 'stop'
+[04 dic 2019 14:01:42] INFO autoCommit= 'false'
+[04 dic 2019 14:01:42] INFO username= 'root'
+[04 dic 2019 14:01:42] INFO outputPath= '/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/SanitarySystemProject/.Temp~/UpdateSQL.xml'
+[04 dic 2019 14:01:42] INFO outputLogPath= '/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/SanitarySystemProject/.Temp~/UpdateSQL.xml.log'
+[04 dic 2019 14:01:42] INFO encoding= ''
+[04 dic 2019 14:01:42] INFO driverClass= 'com.mysql.jdbc.Driver'
+[04 dic 2019 14:01:42] INFO sqlScript= '/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/SanitarySystemProject/.Temp~/UpdateSQL.sql'
+[04 dic 2019 14:01:42] INFO eventSocketPort= '35897'
+[04 dic 2019 14:01:42] INFO statementSeparator= ';'
+[04 dic 2019 14:01:42] INFO derby.system.home= '/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/.metadata/.plugins/com.webratio.commons.db/derby'
+[04 dic 2019 14:01:42] INFO password= 'root'
+[04 dic 2019 14:01:42] INFO url= 'jdbc:mysql://localhost:3306/hospital'
+[04 dic 2019 14:01:42] INFO ================================================================================
+[04 dic 2019 14:01:42] INFO Connecting to the Database...
+[04 dic 2019 14:01:43] INFO Database connection estabilished
+[04 dic 2019 14:01:43] INFO transaction isolation: 4
+[04 dic 2019 14:01:43] DEBUG ================================================================================
+[04 dic 2019 14:01:43] DEBUG Executing SQL script file: /home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/SanitarySystemProject/.Temp~/UpdateSQL.sql
+[04 dic 2019 14:01:43] DEBUG Executing statement:  create table `faq` ( `oid`  integer  not null, `question`  longtext, `answer`  longtext, primary key (`oid`) )
+[04 dic 2019 14:01:43] DEBUG Executing statement:    create table `autoincrementoid` ( `oid`  integer  not null, primary key (`oid`) )
+[04 dic 2019 14:01:43] DEBUG ================================================================================
+[04 dic 2019 14:01:43] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[04 dic 2019 14:01:43] INFO Database connection closed
+[04 dic 2019 14:01:43] DEBUG Total time: 1059 milliseconds

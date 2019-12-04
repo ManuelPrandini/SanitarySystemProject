@@ -14,13 +14,13 @@
         <LinkParameter id="mov2#hym1#seu5#ln56#par833" name="cf_cf" source="userOIDArray" target="mov2#hym1#page50#enu23#fld144_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln56#par834" name="email_email" source="emailArray" target="mov2#hym1#page50#enu23#fld139_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln56#par839" name="name_name" source="User#att27Array" target="mov2#hym1#page50#enu23#fld141_slot"/>
-        <LinkParameter id="mov2#hym1#seu5#ln56#par840" name="password_password" source="passwordArray" target="mov2#hym1#page50#enu23#fld143_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln56#par841" name="surname_surname" source="User#att28Array" target="mov2#hym1#page50#enu23#fld140_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln56#par842" name="telephone_telephone" source="User#att41Array" target="mov2#hym1#page50#enu23#fld137_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln56#par843" name="username_username" source="userNameArray" target="mov2#hym1#page50#enu23#fld142_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln56#par844" name="Borns.name_born in" source="rel7#role10$ent12#att39Array" target="mov2#hym1#page50#enu23#fld147_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln56#par845" name="Lives.name_live in" source="rel9#role14$ent12#att39Array" target="mov2#hym1#page50#enu23#fld146_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln56#par846" name="gender_gender" source="User#att12Array" target="mov2#hym1#page50#enu23#fld148_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln56#par1051" name="password_password" source="passwordArray" target="mov2#hym1#page50#enu23#fld143_slot"/>
       </Link>
       <Link id="mov2#hym1#seu5#ln65" name="Flow65" to="mov2#hym1#page35#enu11" type="transport" validate="true">
         <LinkParameter id="mov2#hym1#seu5#ln65#par274" name="address_address" source="User#att40Array" target="mov2#hym1#page35#enu11#fld7_slot"/>
@@ -28,13 +28,13 @@
         <LinkParameter id="mov2#hym1#seu5#ln65#par276" name="cf_cf" source="userOIDArray" target="mov2#hym1#page35#enu11#fld20_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln65#par277" name="email_email" source="emailArray" target="mov2#hym1#page35#enu11#fld35_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln65#par280" name="name_name" source="User#att27Array" target="mov2#hym1#page35#enu11#fld40_slot"/>
-        <LinkParameter id="mov2#hym1#seu5#ln65#par281" name="password_password" source="passwordArray" target="mov2#hym1#page35#enu11#fld42_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln65#par282" name="surname_surname" source="User#att28Array" target="mov2#hym1#page35#enu11#fld41_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln65#par283" name="telephone_telephone" source="User#att41Array" target="mov2#hym1#page35#enu11#fld43_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln65#par284" name="username_username" source="userNameArray" target="mov2#hym1#page35#enu11#fld44_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln65#par850" name="Borns.name_born in" source="rel7#role10$ent12#att39Array" target="mov2#hym1#page35#enu11#fld152_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln65#par851" name="gender_gender" source="User#att12Array" target="mov2#hym1#page35#enu11#fld153_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln65#par852" name="Lives.name_live in" source="rel9#role14$ent12#att39Array" target="mov2#hym1#page35#enu11#fld154_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln65#par1079" name="password_password" source="passwordArray" target="mov2#hym1#page35#enu11#fld42_slot"/>
       </Link>
       <Link id="mov2#hym1#seu5#ln66" name="Flow66" to="mov2#hym1#page32#enu13" type="transport" validate="true" gr:bendpoints="-1,380,-476,-10">
         <LinkParameter id="mov2#hym1#seu5#ln66#par285" name="address_address" source="User#att40Array" target="mov2#hym1#page32#enu13#fld56_slot"/>
@@ -42,13 +42,12 @@
         <LinkParameter id="mov2#hym1#seu5#ln66#par287" name="cf_cf" source="userOIDArray" target="mov2#hym1#page32#enu13#fld59_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln66#par288" name="email_email" source="emailArray" target="mov2#hym1#page32#enu13#fld60_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln66#par291" name="name_name" source="User#att27Array" target="mov2#hym1#page32#enu13#fld61_slot"/>
-        <LinkParameter id="mov2#hym1#seu5#ln66#par292" name="password_password" source="passwordArray" target="mov2#hym1#page32#enu13#fld62_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln66#par293" name="surname_surname" source="User#att28Array" target="mov2#hym1#page32#enu13#fld66_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln66#par294" name="telephone_telephone" source="User#att41Array" target="mov2#hym1#page32#enu13#fld67_slot"/>
-        <LinkParameter id="mov2#hym1#seu5#ln66#par295" name="username_username" source="userNameArray" target="mov2#hym1#page32#enu13#fld68_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln66#par847" name="Borns.name_born in" source="rel7#role10$ent12#att39Array" target="mov2#hym1#page32#enu13#fld151_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln66#par848" name="gender_gender" source="User#att12Array" target="mov2#hym1#page32#enu13#fld150_slot"/>
         <LinkParameter id="mov2#hym1#seu5#ln66#par849" name="Lives.name_live in" source="rel9#role14$ent12#att39Array" target="mov2#hym1#page32#enu13#fld149_slot"/>
+        <LinkParameter id="mov2#hym1#seu5#ln66#par1052" name="password_password" source="passwordArray" target="mov2#hym1#page32#enu13#fld62_slot"/>
       </Link>
     </SelectorUnit>
     <InputCollectorUnit gr:x="5" gr:y="80" id="mov2#hym1#icu17" linkOrder="mov2#hym1#icu17#ln48 mov2#hym1#icu17#ln49">
@@ -57,6 +56,7 @@
       <OKLink id="mov2#hym1#icu17#oln43" name="OKFlow43" to="mov2#hym1#seu5">
         <LinkParameter id="mov2#hym1#icu17#oln43#par70" name="cf_cf [cf]" source="mov2#hym1#icu17#icp64" target="mov2#hym1#seu5#su20#kcond13.userOID"/>
         <LinkParameter id="mov2#hym1#icu17#oln43#par71" name="password_password" source="mov2#hym1#icu17#icp65" target="mov2#hym1#seu5#su20#acond14"/>
+        <LinkParameter id="mov2#hym1#icu17#oln43#par437" name="password_PASSING" source="mov2#hym1#icu17#icp65" passing="true"/>
       </OKLink>
       <InputCollectorParameter id="mov2#hym1#icu17#icp66" name="group"/>
       <Link id="mov2#hym1#icu17#ln48" name="Flow48" to="mov2#hym1#switch3" type="transport" validate="true">
@@ -69,16 +69,16 @@
     <OKCollectorUnit gr:x="2060" gr:y="95" id="mov2#hym1#okcu12" name="OK Port12"/>
     <KOCollectorUnit gr:x="2060" gr:y="415" id="mov2#hym1#kocu14" name="KO Port14"/>
     <IsNotNullUnit gr:x="500" gr:y="80" id="mov2#hym1#inn7" name="if exists">
-      <OKLink id="mov2#hym1#inn7#oln49" name="OKFlow49" to="mov2#hym1#switch3" automaticCoupling="true"/>
+      <OKLink id="mov2#hym1#inn7#oln49" name="OKFlow49" to="mov2#hym1#switch3"/>
       <KOLink id="mov2#hym1#inn7#kln32" name="KOFlow32" to="mov2#hym1#switch4" automaticCoupling="true" gr:bendpoints="-131,273,-185,-7"/>
     </IsNotNullUnit>
     <SwitchUnit gr:x="525" gr:y="245" id="mov2#hym1#switch3" name="ExistsSelectGroup">
       <Case value="1"/>
       <Case value="2"/>
       <Case value="3"/>
-      <OKLink id="mov2#hym1#switch3#oln45" name="OKFlow45" to="mov2#hym1#cru25" automaticCoupling="true" code="1" gr:bendpoints="17,-75,-128,165;53,-155,-92,85"/>
-      <OKLink id="mov2#hym1#switch3#oln47" name="OKFlow47" to="mov2#hym1#cru23" automaticCoupling="true" code="2"/>
-      <OKLink id="mov2#hym1#switch3#oln48" name="OKFlow48" to="mov2#hym1#cru15" automaticCoupling="true" code="3"/>
+      <OKLink id="mov2#hym1#switch3#oln45" name="OKFlow45" to="mov2#hym1#cru25" code="1" gr:bendpoints="17,-75,-128,165;53,-155,-92,85"/>
+      <OKLink id="mov2#hym1#switch3#oln47" name="OKFlow47" to="mov2#hym1#cru23" code="2"/>
+      <OKLink id="mov2#hym1#switch3#oln48" name="OKFlow48" to="mov2#hym1#cru15" code="3"/>
     </SwitchUnit>
     <SwitchUnit gr:x="515" gr:y="360" id="mov2#hym1#switch4" name="noExistsSelectGroup">
       <Case value="1"/>
@@ -132,7 +132,7 @@ return ["resultCode" : "success" , "patientCode" : patientCode]</ScriptUnitText>
         <LinkParameter id="mov2#hym1#cru21#oln225#par871" name="oid_oid" source="ent26#att67Array" target="mov2#hym1#scu13.oid"/>
       </OKLink>
     </CreateUnit>
-    <ScriptUnit id="mov2#hym1#scu14" name="ScriptGeneraCodiceFarmacista" gr:x="945" gr:y="315">
+    <ScriptUnit id="mov2#hym1#scu14" name="ScriptGeneraCodiceFarmacista" gr:x="900" gr:y="310">
       <ScriptUnitText xml:space="preserve">#input int oid
 #output String pharmacistCode
 
@@ -159,7 +159,7 @@ return ["resultCode" : "success" , "pharmacistCode" : pharmacistCode]</ScriptUni
         <LinkParameter id="mov2#hym1#cru22#oln256#par903" name="oid_oid" source="ent26#att67Array" target="mov2#hym1#scu15.oid"/>
       </OKLink>
     </CreateUnit>
-    <CreateUnit id="mov2#hym1#cru23" name="CreateOid" gr:x="775" gr:y="270" entity="ent26">
+    <CreateUnit id="mov2#hym1#cru23" name="CreateOid" gr:x="725" gr:y="265" entity="ent26">
       <OKLink id="mov2#hym1#cru23#oln248" name="OKFlow248" to="mov2#hym1#scu14">
         <LinkParameter id="mov2#hym1#cru23#oln248#par900" name="oid_oid" source="ent26#att67Array" target="mov2#hym1#scu14.oid"/>
       </OKLink>
