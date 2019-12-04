@@ -1,18 +1,26 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area5#page77" name="Dettagli Farmaco" layout:pageLayout="MetroStyle/Empty" gr:x="1650" gr:y="735">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area5#page77" name="Dettagli Farmaco" layout:pageLayout="MetroStyle/Empty" gr:x="1775" gr:y="720">
   <ContentUnits>
     <EntryUnit id="sv2#area5#page77#enu25" name="Quantit&#224;" gr:x="0" gr:y="0" fieldOrder="sv2#area5#page77#enu25#fld95 sv2#area5#page77#enu25#fld30 sv2#area5#page77#enu25#fld94" linkOrder="sv2#area5#page77#enu25#ln2">
       <Field id="sv2#area5#page77#enu25#fld30" name="Quantit&#224; presente" type="integer" preloaded="true"/>
-      <Field id="sv2#area5#page77#enu25#fld94" name="Quantit&#224; da vendere" type="integer" modifiable="true"/>
+      <Field id="sv2#area5#page77#enu25#fld94" name="Quantit&#224; da vendere" type="integer" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="sv2#area5#page77#enu25#fld94#cmp5" name="Compare5" predicate="lteq" valueField="sv2#area5#page77#enu25#fld30" errorMessage="Non puoi inserire una quantit&#224; maggiore di quella presente"/>
+          <MandatoryValidationRule id="sv2#area5#page77#enu25#fld94#mnd5" name="Mandatory5"/>
+        </VRules>
+      </Field>
       <Field id="sv2#area5#page77#enu25#fld95" name="Farmaco" type="string" preloaded="true"/>
-      <Link id="sv2#area5#page77#enu25#ln2" name="Flow2" to="sv2#area5#miu5" type="normal" validate="true">
+      <Link id="sv2#area5#page77#enu25#ln2" name="Aggiungi" to="sv2#area5#miu5" type="normal" validate="true">
         <LinkParameter id="sv2#area5#page77#enu25#ln2#par489" name="Quantity_DrugToDrug.name_PASSING_drug_name" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp120" source="sv2#area5#page77#enu25#fld95"/>
         <LinkParameter id="sv2#area5#page77#enu25#ln2#par629" name="Quantity_DrugToDrug.isStandard_PASSING_is_standard" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp122" sourceValue="0"/>
         <LinkParameter id="sv2#area5#page77#enu25#ln2#par669" name="Quantit&#224; da vendere_quantityDaAggiungere" source="sv2#area5#page77#enu25#fld94" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp123"/>
-        <LinkParameter id="sv2#area5#page77#enu25#ln2#par1150" name="drugPrescription_PASSING_drug_prescription" sourceLinkParameter="sv2#area5#pcu12#oln206#par1144" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp119"/>
-        <LinkParameter id="sv2#area5#page77#enu25#ln2#par1151" name="drugId_PASSING_id_drug" sourceLinkParameter="sv2#area5#pcu12#oln206#par1142" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp121"/>
-        <LinkParameter id="sv2#area5#page77#enu25#ln2#par1152" name="patientCode_PASSING_patient" sourceLinkParameter="sv2#area5#pcu12#oln206#par1146" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp125"/>
-        <LinkParameter id="sv2#area5#page77#enu25#ln2#par1153" name="pharmacistCode_PASSING_pharmacist" sourceLinkParameter="sv2#area5#pcu12#oln206#par1147" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp124"/>
-        <LinkParameter id="sv2#area5#page77#enu25#ln2#par1154" name="pharmacy_PASSING_pharmacy" sourceLinkParameter="sv2#area5#pcu12#oln206#par1148" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp126"/>
+        <LinkParameter id="sv2#area5#page77#enu25#ln2#par794" name="drugPrescription_PASSING_drug_prescription" sourceLinkParameter="sv2#area5#scu9#oln201#par739" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp119"/>
+        <LinkParameter id="sv2#area5#page77#enu25#ln2#par795" name="drugId_PASSING_id_drug" sourceLinkParameter="sv2#area5#scu9#oln201#par727" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp121"/>
+        <LinkParameter id="sv2#area5#page77#enu25#ln2#par853" name="patientCode_PASSING_patient" sourceLinkParameter="sv2#area5#scu9#oln201#par747" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp125"/>
+        <LinkParameter id="sv2#area5#page77#enu25#ln2#par854" name="pharmacistCode_PASSING_pharmacist" sourceLinkParameter="sv2#area5#scu9#oln201#par748" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp124"/>
+        <LinkParameter id="sv2#area5#page77#enu25#ln2#par855" name="pharmacy_PASSING_pharmacy" sourceLinkParameter="sv2#area5#scu9#oln201#par791" target="sv2#area5#miu5.mov2#mpkg2#opm19#icu23#icp126"/>
+        <LinkParameter id="sv2#area5#page77#enu25#ln2#par856" name="patientCode_PASSING" sourceLinkParameter="sv2#area5#scu9#oln201#par747" passing="true"/>
+        <LinkParameter id="sv2#area5#page77#enu25#ln2#par861" name="pharmacistCode_PASSING" sourceLinkParameter="sv2#area5#scu9#oln201#par748" passing="true"/>
+        <LinkParameter id="sv2#area5#page77#enu25#ln2#par865" name="pharmacy_PASSING" sourceLinkParameter="sv2#area5#scu9#oln201#par791" passing="true"/>
       </Link>
     </EntryUnit>
   </ContentUnits>

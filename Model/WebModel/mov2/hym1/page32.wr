@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page32" name="Patient Info(Exists)" gr:x="785" gr:y="665">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page32" name="Patient Info(Exists)" gr:x="1160" gr:y="670" ajaxEnabled="false">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="mov2#hym1#page32#enu13" name="registration form" linkOrder="mov2#hym1#page32#enu13#ln51" fieldOrder="mov2#hym1#page32#enu13#fld59 mov2#hym1#page32#enu13#fld61 mov2#hym1#page32#enu13#fld66 mov2#hym1#page32#enu13#fld150 mov2#hym1#page32#enu13#fld151 mov2#hym1#page32#enu13#fld149 mov2#hym1#page32#enu13#fld57 mov2#hym1#page32#enu13#fld56 mov2#hym1#page32#enu13#fld67 mov2#hym1#page32#enu13#fld60 mov2#hym1#page32#enu13#fld62 mov2#hym1#page32#enu13#fld63 mov2#hym1#page32#enu13#fld65 mov2#hym1#page32#enu13#fld64">
       <Link id="mov2#hym1#page32#enu13#ln51" name="Flow51" to="mov2#hym1#miu11" type="normal" validate="true">
@@ -37,7 +37,7 @@
           <TypeValidationRule id="mov2#hym1#page32#enu13#fld64#tvr3" name="Type Validation3" type="integer" errorMessage="Valore non inserito correttamente"/>
         </VRules>
       </Field>
-      <Field id="mov2#hym1#page32#enu13#fld63" name="patient code" type="string" modifiable="true">
+      <Field id="mov2#hym1#page32#enu13#fld63" name="patient code" type="string" preloaded="true" ajaxEventEnabled="false">
         <VRules>
           <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld63#mnd25" name="Mandatory25"/>
         </VRules>
@@ -57,7 +57,6 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov2#hym1#page32#enu13">
-          <layout:Link link="mov2#hym1#page32#enu13#ln51"/>
           <layout:Field field="mov2#hym1#page32#enu13#fld59"/>
           <layout:Field field="mov2#hym1#page32#enu13#fld61"/>
           <layout:Field field="mov2#hym1#page32#enu13#fld66"/>
@@ -72,8 +71,23 @@
           <layout:Field field="mov2#hym1#page32#enu13#fld63"/>
           <layout:Field field="mov2#hym1#page32#enu13#fld65"/>
           <layout:Field field="mov2#hym1#page32#enu13#fld64"/>
+          <layout:Link link="mov2#hym1#page32#enu13#ln51"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

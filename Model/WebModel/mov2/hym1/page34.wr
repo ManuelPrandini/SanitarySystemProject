@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page34" name="Patient Info(no Exists)" gr:x="780" gr:y="800">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page34" name="Patient Info(no Exists)" gr:x="1155" gr:y="795">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="10" id="mov2#hym1#page34#enu14" name="registration form" linkOrder="mov2#hym1#page34#enu14#ln50" fieldOrder="mov2#hym1#page34#enu14#fld72 mov2#hym1#page34#enu14#fld75 mov2#hym1#page34#enu14#fld77 mov2#hym1#page34#enu14#sfld21 mov2#hym1#page34#enu14#sfld20 mov2#hym1#page34#enu14#sfld22 mov2#hym1#page34#enu14#fld70 mov2#hym1#page34#enu14#fld69 mov2#hym1#page34#enu14#fld79 mov2#hym1#page34#enu14#fld73 mov2#hym1#page34#enu14#fld84 mov2#hym1#page34#enu14#fld76 mov2#hym1#page34#enu14#fld74 mov2#hym1#page34#enu14#fld80">
       <Link id="mov2#hym1#page34#enu14#ln50" name="Flow50" to="mov2#hym1#miu11" type="normal" validate="true">
@@ -38,7 +38,7 @@
           <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld77#mnd38" name="Mandatory38"/>
         </VRules>
       </Field>
-      <Field id="mov2#hym1#page34#enu14#fld76" name="patient code" type="string" modifiable="true">
+      <Field id="mov2#hym1#page34#enu14#fld76" name="patient code" type="string" preloaded="true">
         <VRules>
           <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld76#mnd37" name="Mandatory37"/>
         </VRules>

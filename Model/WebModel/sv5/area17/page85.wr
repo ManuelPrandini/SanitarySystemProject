@@ -1,0 +1,38 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="230" gr:y="135" id="sv5#area17#page85" name="Nuova risposta" layout:pageLayout="MetroStyle/Empty">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv5#area17#page85#enu29" name="Aggiorna FAQ" fieldOrder="sv5#area17#page85#enu29#fld98 sv5#area17#page85#enu29#fld105" linkOrder="sv5#area17#page85#enu29#ln177">
+      <Field id="sv5#area17#page85#enu29#fld105" name="Nuova risposta" type="text" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv5#area17#page85#enu29#fld105#mnd4" name="Mandatory4"/>
+        </VRules>
+      </Field>
+      <Field id="sv5#area17#page85#enu29#fld98" name="Domanda" type="text" preloaded="true"/>
+      <Link id="sv5#area17#page85#enu29#ln177" name="Aggiorna" to="sv5#area17#miu23" type="normal" validate="true">
+        <LinkParameter id="sv5#area17#page85#enu29#ln177#par671" name="oid_PASSING_id_FAQ" sourceLinkParameter="sv5#area17#page82#inu5#ln155#par670" target="sv5#area17#miu23.mov2#mpkg2#opm23#icu28#icp135"/>
+        <LinkParameter id="sv5#area17#page85#enu29#ln177#par678" name="Nuova risposta_new_answer" source="sv5#area17#page85#enu29#fld105" target="sv5#area17#miu23.mov2#mpkg2#opm23#icu28#icp136"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area17#page85#enu29">
+          <layout:Field field="sv5#area17#page85#enu29#fld98"/>
+          <layout:Field field="sv5#area17#page85#enu29#fld105"/>
+          <layout:Link link="sv5#area17#page85#enu29#ln177"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

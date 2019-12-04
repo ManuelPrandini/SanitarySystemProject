@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page62" name="Accedi dati paziente" landmark="true" gr:x="60" gr:y="920">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page62" name="Accedi dati paziente" landmark="true" gr:x="25" gr:y="470">
   <ContentUnits>
     <EntryUnit id="sv1#page62#enu18" name="Inserisci CF" linkOrder="sv1#page62#enu18#ln113" gr:x="0" gr:y="0" fieldOrder="sv1#page62#enu18#fld83">
       <Field id="sv1#page62#enu18#fld83" name="CF" type="string" modifiable="true"/>

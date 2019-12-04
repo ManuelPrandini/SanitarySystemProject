@@ -1,0 +1,19 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="35" gr:y="615" id="mov2#mpkg2#opm22" name="Rimuovi FAQ">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg2#opm22#icu27" gr:x="50" gr:y="160">
+      <InputCollectorParameter id="mov2#mpkg2#opm22#icu27#icp134" name="id_FAQ"/>
+      <OKLink id="mov2#mpkg2#opm22#icu27#oln186" name="OKFlow186" to="mov2#mpkg2#opm22#dlu6">
+        <LinkParameter id="mov2#mpkg2#opm22#icu27#oln186#par296" name="id_FAQ_KeyCondition53 [oid]" source="mov2#mpkg2#opm22#icu27#icp134" target="mov2#mpkg2#opm22#dlu6#su111#kcond53.ent14#att64"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="525" gr:y="95" id="mov2#mpkg2#opm22#okcu25" name="OK Port25"/>
+    <KOCollectorUnit gr:x="525" gr:y="210" id="mov2#mpkg2#opm22#kocu26" name="KO Port26"/>
+    <DeleteUnit gr:x="350" gr:y="150" id="mov2#mpkg2#opm22#dlu6" name="Delete FAQ" entity="ent14">
+      <Selector id="mov2#mpkg2#opm22#dlu6#su111" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm22#dlu6#su111#kcond53" name="KeyCondition53" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm22#dlu6#oln190" name="OKFlow190" to="mov2#mpkg2#opm22#okcu25" automaticCoupling="true"/>
+      <KOLink id="mov2#mpkg2#opm22#dlu6#kln71" name="KOFlow71" to="mov2#mpkg2#opm22#kocu26" automaticCoupling="true"/>
+    </DeleteUnit>
+  </OperationUnits>
+</OperationModule>

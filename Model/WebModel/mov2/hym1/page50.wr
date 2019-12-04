@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="700" gr:y="-435" id="mov2#hym1#page50" name="Doctor Info (Exists)">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1005" gr:y="-450" id="mov2#hym1#page50" name="Doctor Info (Exists)">
   <ContentUnits>
     <EntryUnit id="mov2#hym1#page50#enu23" name="registration form" gr:x="155" gr:y="140" fieldOrder="mov2#hym1#page50#enu23#fld144 mov2#hym1#page50#enu23#fld143 mov2#hym1#page50#enu23#fld141 mov2#hym1#page50#enu23#fld140 mov2#hym1#page50#enu23#fld148 mov2#hym1#page50#enu23#fld139 mov2#hym1#page50#enu23#fld138 mov2#hym1#page50#enu23#fld137 mov2#hym1#page50#enu23#fld136 mov2#hym1#page50#enu23#fld147 mov2#hym1#page50#enu23#fld146 mov2#hym1#page50#enu23#fld145 mov2#hym1#page50#enu23#sfld50 mov2#hym1#page50#enu23#sfld52 mov2#hym1#page50#enu23#sfld53" linkOrder="mov2#hym1#page50#enu23#ln159 mov2#hym1#page50#enu23#ln161">
       <Field id="mov2#hym1#page50#enu23#fld136" name="address" type="string" preloaded="true"/>
@@ -10,7 +10,7 @@
       <Field id="mov2#hym1#page50#enu23#fld142" name="username" type="string" preloaded="true" hidden="true"/>
       <Field id="mov2#hym1#page50#enu23#fld143" name="password" type="password" preloaded="true"/>
       <Field id="mov2#hym1#page50#enu23#fld144" name="cf" type="string" preloaded="true"/>
-      <Field id="mov2#hym1#page50#enu23#fld145" name="doctor code" type="string" modifiable="true">
+      <Field id="mov2#hym1#page50#enu23#fld145" name="doctor code" type="string" preloaded="true">
         <VRules>
           <TypeValidationRule id="mov2#hym1#page50#enu23#fld145#tvr10" name="Type Validation1"/>
         </VRules>

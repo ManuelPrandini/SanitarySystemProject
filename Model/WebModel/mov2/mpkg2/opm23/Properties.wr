@@ -1,0 +1,21 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="265" gr:y="615" id="mov2#mpkg2#opm23" name="Aggiorna FAQ">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg2#opm23#icu28" gr:x="30" gr:y="135">
+      <InputCollectorParameter id="mov2#mpkg2#opm23#icu28#icp135" name="id_FAQ"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm23#icu28#icp136" name="new_answer"/>
+      <OKLink id="mov2#mpkg2#opm23#icu28#oln194" name="OKFlow194" to="mov2#mpkg2#opm23#mfu14">
+        <LinkParameter id="mov2#mpkg2#opm23#icu28#oln194#par297" name="new_answer_answer" source="mov2#mpkg2#opm23#icu28#icp136" target="mov2#mpkg2#opm23#mfu14.ent14#att66"/>
+        <LinkParameter id="mov2#mpkg2#opm23#icu28#oln194#par548" name="id_FAQ_KeyCondition56 [oid]" source="mov2#mpkg2#opm23#icu28#icp135" target="mov2#mpkg2#opm23#mfu14#su112#kcond56.ent14#att64"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="345" gr:y="125" id="mov2#mpkg2#opm23#mfu14" name="Update FAQ" entity="ent14">
+      <Selector id="mov2#mpkg2#opm23#mfu14#su112" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm23#mfu14#su112#kcond56" name="KeyCondition56" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm23#mfu14#oln196" name="OKFlow196" to="mov2#mpkg2#opm23#okcu26" automaticCoupling="true"/>
+      <KOLink id="mov2#mpkg2#opm23#mfu14#kln75" name="KOFlow75" to="mov2#mpkg2#opm23#kocu27" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="605" gr:y="85" id="mov2#mpkg2#opm23#okcu26" name="OK Port26"/>
+    <KOCollectorUnit gr:x="605" gr:y="190" id="mov2#mpkg2#opm23#kocu27" name="KO Port27"/>
+  </OperationUnits>
+</OperationModule>

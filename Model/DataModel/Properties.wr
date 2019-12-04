@@ -432,7 +432,8 @@
       <db:JoinColumn attribute="ent10#att5" name="room_id_room"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="hospital" type="MySQL" url="jdbc:mysql://localhost:3306/hospital" username="root" cryptedPassword="true" password="cm9vdA=="/>
+  <db:Database id="db2" name="hospital" type="MySQL" url="jdbc:mysql://localhost:3306/hospital" username="root" cryptedPassword="true" password="cm9vdA==">
+  </db:Database>
   <Entity gr:x="90" gr:y="1040" id="ent13" name="Vendita temporanea" duration="volatile" volatileStorage="database" attributeOrder="ent13#att58 ent13#att59 ent13#att60 ent13#att36 ent13#att37 ent13#att52">
     <Attribute id="ent13#att58" key="true" name="oid" type="integer"/>
     <Attribute id="ent13#att59" name="drugName" type="string"/>
@@ -449,5 +450,13 @@
     <Attribute id="ent3#att61" name="visitIDtemp" type="integer"/>
     <Attribute id="ent3#att62" name="drugOidTemp" type="integer"/>
     <Attribute id="ent3#att63" name="drugNameTemp" type="string"/>
+  </Entity>
+  <Entity gr:x="595" gr:y="1040" id="ent14" name="FAQ" duration="persistent" attributeOrder="ent14#att64 ent14#att65 ent14#att66" db:database="db2" db:table="faq">
+    <Attribute id="ent14#att64" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent14#att65" name="question" type="text" db:column="question"/>
+    <Attribute id="ent14#att66" name="answer" type="text" db:column="answer"/>
+  </Entity>
+  <Entity gr:x="580" gr:y="1150" id="ent26" name="AutoIncrementOID" duration="persistent" db:database="db2" db:table="autoincrementoid">
+    <Attribute id="ent26#att67" key="true" name="oid" type="integer" db:column="oid"/>
   </Entity>
 </DataModel>

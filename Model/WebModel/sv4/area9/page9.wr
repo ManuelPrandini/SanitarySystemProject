@@ -13,20 +13,10 @@
       </Field>
       <Link id="sv4#area9#page9#enu3#ln28" name="verify" to="sv4#area9#switch2" type="normal" validate="true" gr:bendpoints="43,88,-62,-62">
         <LinkParameter id="sv4#area9#page9#enu3#ln28#par62" name="group_Switch" source="sv4#area9#page9#enu3#fld9" target="sv4#area9#switch2.switch"/>
+        <LinkParameter id="sv4#area9#page9#enu3#ln28#par915" name="cf_PASSING" source="sv4#area9#page9#enu3#fld5" passing="true"/>
+        <LinkParameter id="sv4#area9#page9#enu3#ln28#par917" name="password_PASSING" source="sv4#area9#page9#enu3#fld6" passing="true"/>
       </Link>
       <Field id="sv4#area9#page9#enu3#fld9" name="group" type="string" hidden="true" preloaded="true"/>
-      <Link id="sv4#area9#page9#enu3#ln38" name="Flow38" to="sv4#area9#miu7" type="transport" validate="true">
-        <LinkParameter id="sv4#area9#page9#enu3#ln38#par63" name="cf_cf" source="sv4#area9#page9#enu3#fld5" target="sv4#area9#miu7.mov2#mpkg2#opm8#icu8#icp49"/>
-        <LinkParameter id="sv4#area9#page9#enu3#ln38#par65" name="password_password" source="sv4#area9#page9#enu3#fld6" target="sv4#area9#miu7.mov2#mpkg2#opm8#icu8#icp57"/>
-      </Link>
-      <Link id="sv4#area9#page9#enu3#ln42" name="Flow42" to="sv4#area9#miu10" type="transport" validate="true">
-        <LinkParameter id="sv4#area9#page9#enu3#ln42#par66" name="cf_cf" source="sv4#area9#page9#enu3#fld5" target="sv4#area9#miu10.mov2#mpkg2#opm15#icu15#icp63"/>
-        <LinkParameter id="sv4#area9#page9#enu3#ln42#par67" name="password_password" source="sv4#area9#page9#enu3#fld6" target="sv4#area9#miu10.mov2#mpkg2#opm15#icu15#icp62"/>
-      </Link>
-      <Link id="sv4#area9#page9#enu3#ln43" name="Flow43" to="sv4#area9#miu9" type="transport" validate="true">
-        <LinkParameter id="sv4#area9#page9#enu3#ln43#par68" name="cf_cf" source="sv4#area9#page9#enu3#fld5" target="sv4#area9#miu9.mov2#mpkg2#opm14#icu14#icp61"/>
-        <LinkParameter id="sv4#area9#page9#enu3#ln43#par69" name="password_password" source="sv4#area9#page9#enu3#fld6" target="sv4#area9#miu9.mov2#mpkg2#opm14#icu14#icp60"/>
-      </Link>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

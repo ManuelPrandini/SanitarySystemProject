@@ -1,0 +1,13 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="770" gr:y="345" id="sv5#area17" name="Modifica della sezione FAQ" landmark="true" defaultPage="sv5#area17#page81" landmarks="sv5#area17#page81 sv5#area17#page82 sv5#area17#page84">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="185" gr:y="30" id="sv5#area17#miu22" action="true" moduleId="mov2#mpkg2#opm21">
+      <OKLink id="sv5#area17#miu22#oln181" name="OKFlow181" to="sv5#area17#page83#mssu42" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="410" gr:y="165" id="sv5#area17#miu23" action="true" moduleId="mov2#mpkg2#opm23">
+      <OKLink id="sv5#area17#miu23#oln200" name="OKFlow200" to="sv5#area17#page82#inu5" automaticCoupling="true" gr:bendpoints="-206,77,214,77"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="215" gr:y="315" id="sv5#area17#miu24" action="true" moduleId="mov2#mpkg2#opm22">
+      <OKLink id="sv5#area17#miu24#oln199" name="OKFlow199" to="sv5#area17#page84" automaticCoupling="true" gr:bendpoints="-68,-51,157,-41"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</Area>

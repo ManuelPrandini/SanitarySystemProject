@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1#area7" name="Info Paziente" defaultPage="sv1#area7#page67" landmarks="sv1#area7#page65" landmark="false" gr:x="495" gr:y="750">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1#area7" name="Info Paziente" defaultPage="sv1#area7#page67" landmarks="sv1#area7#page65" landmark="false" gr:x="540" gr:y="350">
   <OperationUnits>
     <ModuleInstanceUnit gr:x="650" gr:y="410" id="sv1#area7#miu19" action="false" moduleId="mov2#hym4">
       <KOLink id="sv1#area7#miu19#kln51" name="KOFlow51" to="sv1#area7#page19" automaticCoupling="true"/>

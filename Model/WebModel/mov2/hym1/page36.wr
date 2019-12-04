@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page36" name="Pharmacist Info(no Exists)" gr:x="785" gr:y="360">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page36" name="Pharmacist Info(no Exists)" gr:x="1160" gr:y="370">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="60" id="mov2#hym1#page36#enu12" name="registration form" fieldOrder="mov2#hym1#page36#enu12#fld47 mov2#hym1#page36#enu12#fld51 mov2#hym1#page36#enu12#fld50 mov2#hym1#page36#enu12#fld53 mov2#hym1#page36#enu12#sfld14 mov2#hym1#page36#enu12#fld46 mov2#hym1#page36#enu12#sfld2 mov2#hym1#page36#enu12#sfld15 mov2#hym1#page36#enu12#fld45 mov2#hym1#page36#enu12#fld54 mov2#hym1#page36#enu12#fld48 mov2#hym1#page36#enu12#fld52 mov2#hym1#page36#enu12#sfld55" linkOrder="mov2#hym1#page36#enu12#ln41">
       <Link id="mov2#hym1#page36#enu12#ln41" name="Submit" to="mov2#hym1#miu6" type="normal" validate="true" gr:bendpoints="467,-1,-73,129">
@@ -29,7 +29,7 @@
       <Field id="mov2#hym1#page36#enu12#fld53" name="surname" type="string" modifiable="true">
         <VRules/>
       </Field>
-      <Field id="mov2#hym1#page36#enu12#fld52" name="pharmacist code" type="string" modifiable="true">
+      <Field id="mov2#hym1#page36#enu12#fld52" name="pharmacist code" type="string" preloaded="true">
         <VRules/>
       </Field>
       <Field id="mov2#hym1#page36#enu12#fld51" name="password" type="password" modifiable="true">

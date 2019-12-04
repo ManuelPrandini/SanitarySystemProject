@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="710" gr:y="-150" id="mov2#hym1#page49" name="Doctor Info (no Exists)">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1040" gr:y="-145" id="mov2#hym1#page49" name="Doctor Info (no Exists)">
   <ContentUnits>
     <EntryUnit id="mov2#hym1#page49#enu10" name="registration form" gr:x="270" gr:y="175" fieldOrder="mov2#hym1#page49#enu10#fld124 mov2#hym1#page49#enu10#fld123 mov2#hym1#page49#enu10#fld121 mov2#hym1#page49#enu10#fld120 mov2#hym1#page49#enu10#sfld39 mov2#hym1#page49#enu10#fld119 mov2#hym1#page49#enu10#fld118 mov2#hym1#page49#enu10#fld117 mov2#hym1#page49#enu10#fld116 mov2#hym1#page49#enu10#sfld38 mov2#hym1#page49#enu10#sfld29 mov2#hym1#page49#enu10#fld125 mov2#hym1#page49#enu10#sfld40 mov2#hym1#page49#enu10#sfld41 mov2#hym1#page49#enu10#sfld42" linkOrder="mov2#hym1#page49#enu10#ln112 mov2#hym1#page49#enu10#ln149">
       <SelectionField id="mov2#hym1#page49#enu10#sfld29" name="live in" type="integer" modifiable="true"/>
@@ -7,7 +7,7 @@
       <Field id="mov2#hym1#page49#enu10#fld117" name="telephone" type="string" modifiable="true"/>
       <Field id="mov2#hym1#page49#enu10#fld118" name="birthday" type="date" modifiable="true"/>
       <Field id="mov2#hym1#page49#enu10#fld119" name="email" type="string" modifiable="true"/>
-      <SelectionField id="mov2#hym1#page49#enu10#sfld39" name="gender" type="string" modifiable="true">
+      <SelectionField id="mov2#hym1#page49#enu10#sfld39" name="gender" type="string" modifiable="true" slotOrder="mov2#hym1#page49#enu10#sfld39#slot4">
         <Slot id="mov2#hym1#page49#enu10#sfld39#slot4" name="Slot5" label="true" output="true" value="Male|Female"/>
       </SelectionField>
       <Field id="mov2#hym1#page49#enu10#fld120" name="surname" type="string" modifiable="true"/>
@@ -15,7 +15,7 @@
       <Field id="mov2#hym1#page49#enu10#fld122" name="username" type="string" hidden="true"/>
       <Field id="mov2#hym1#page49#enu10#fld123" name="password" type="password" modifiable="true"/>
       <Field id="mov2#hym1#page49#enu10#fld124" name="cf" type="string" modifiable="true"/>
-      <Field id="mov2#hym1#page49#enu10#fld125" name="doctor code" type="string" modifiable="true">
+      <Field id="mov2#hym1#page49#enu10#fld125" name="doctor code" type="string" preloaded="true">
         <VRules>
           <TypeValidationRule id="mov2#hym1#page49#enu10#fld125#tvr8" name="Type Validation1"/>
         </VRules>

@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="85" gr:y="340" id="sv5#area4" name="Registrazioni in attesa" landmark="true" defaultPage="sv5#area4#page5">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="80" gr:y="345" id="sv5#area4" name="Registrazioni in attesa" landmark="true" defaultPage="sv5#area4#page5">
   <OperationUnits>
     <ModuleInstanceUnit gr:x="320" gr:y="65" id="sv5#area4#miu3" action="true" moduleId="mov2#mpkg2#opm5">
       <OKLink id="sv5#area4#miu3#oln19" name="OKFlow19" to="sv5#area4#page5" automaticCoupling="true" gr:bendpoints="-144,-43,151,-48"/>

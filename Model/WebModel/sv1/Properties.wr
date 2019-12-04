@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="DoctorSiteView" protected="true" landmarks="sv1#lou8 sv1#page58 sv1#page62" linkVisibilityPolicy="hide" homePage="sv1#page54">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="DoctorSiteView" protected="true" landmarks="sv1#page58 sv1#page62 sv1#area14 sv1#lou8" linkVisibilityPolicy="hide" homePage="sv1#page54">
   <OperationUnits>
     <LogoutUnit id="sv1#lou8" name="Logout" landmark="true" gr:x="358" gr:y="286" siteView="sv4"/>
   </OperationUnits>
