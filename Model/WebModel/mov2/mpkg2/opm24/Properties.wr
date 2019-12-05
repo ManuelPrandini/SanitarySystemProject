@@ -1,0 +1,61 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="15" gr:y="695" id="mov2#mpkg2#opm24" name="Seleziona visit room o pronto soccorso">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg2#opm24#icu29" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov2#mpkg2#opm24#icu29#icp137" name="id_hospital"/>
+      <InputCollectorParameter id="mov2#mpkg2#opm24#icu29#icp138" name="medical_specialization"/>
+      <OKLink id="mov2#mpkg2#opm24#icu29#oln276" name="OKFlow276" to="mov2#mpkg2#opm24#scu11">
+        <LinkParameter id="mov2#mpkg2#opm24#icu29#oln276#par158" name="id_hospital_PASSING" source="mov2#mpkg2#opm24#icu29#icp137" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm24#icu29#oln276#par159" name="medical_specializzation_PASSING" source="mov2#mpkg2#opm24#icu29#icp138" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm24#icu29#oln276#par160" name="medical_specializzation_medical_specializzation" source="mov2#mpkg2#opm24#icu29#icp138" target="mov2#mpkg2#opm24#scu11.medical_specializzation"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <SelectorUnit id="mov2#mpkg2#opm24#seu78" name="SelectorRoom" gr:x="740" gr:y="130" entity="ent23">
+      <OKLink id="mov2#mpkg2#opm24#seu78#oln281" name="OKFlow281" to="mov2#mpkg2#opm24#seu79">
+        <LinkParameter id="mov2#mpkg2#opm24#seu78#oln281#par341" name="id_hospital_PASSING_id_hospital" sourceLinkParameter="mov2#mpkg2#opm24#scu11#oln277#par330" target="mov2#mpkg2#opm24#seu79#su127#acond125"/>
+        <LinkParameter id="mov2#mpkg2#opm24#seu78#oln281#par344" name="medical_specializzation_PASSING_medical_specialization" sourceLinkParameter="mov2#mpkg2#opm24#scu11#oln277#par340" target="mov2#mpkg2#opm24#seu79#su127#acond131"/>
+        <LinkParameter id="mov2#mpkg2#opm24#seu78#oln281#par345" name="id_room_RoleCondition1 [id_room]" source="ent10#att5Array" target="mov2#mpkg2#opm24#seu79#su127#rcond3.ent10#att5"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="mov2#mpkg2#opm24#seu79" name="SelectorVisitRoom" gr:x="655" gr:y="-15" entity="ent23">
+      <Selector id="mov2#mpkg2#opm24#seu79#su127" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg2#opm24#seu79#su127#acond125" name="id_hospital" predicate="eq" booleanOperator="and" implied="false" attributes="rel37#role74.ent4#att1"/>
+        <AttributesCondition id="mov2#mpkg2#opm24#seu79#su127#acond131" name="medical_specialization" predicate="eq" booleanOperator="and" implied="false" attributes="rel1#role18.ent8#att21"/>
+        <RelationshipRoleCondition id="mov2#mpkg2#opm24#seu79#su127#rcond3" name="RoleCondition1" predicate="notIn" implied="false" role="rel5#role20.rel5#role19"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm24#seu79#oln278" name="OKFlow278" to="mov2#mpkg2#opm24#okcu27">
+        <LinkParameter id="mov2#mpkg2#opm24#seu79#oln278#par164" name="id_room_id_room" source="ent10#att5Array" target="mov2#mpkg2#opm24#okcu27#ocp29"/>
+        <LinkParameter id="mov2#mpkg2#opm24#seu79#oln278#par165" name="name_label_room" source="ent10#att50Array" target="mov2#mpkg2#opm24#okcu27#ocp28"/>
+      </OKLink>
+    </SelectorUnit>
+    <ScriptUnit gr:x="420" gr:y="135" id="mov2#mpkg2#opm24#scu11" name="CheckMedicalSpecialization">
+      <ScriptUnitText xml:space="preserve">#input medical_specializzation
+
+if( medical_specializzation == "pronto soccorso" )
+	return [resultCode:"error"];
+else
+	return [resultCode:"success"];</ScriptUnitText>
+      <ScriptInput id="mov2#mpkg2#opm24#scu11#sci8" name="medical_specializzation"/>
+      <OKLink id="mov2#mpkg2#opm24#scu11#oln277" name="OKFlow277" to="mov2#mpkg2#opm24#seu78">
+        <LinkParameter id="mov2#mpkg2#opm24#scu11#oln277#par330" name="id_hospital_PASSING" sourceLinkParameter="mov2#mpkg2#opm24#icu29#oln276#par158" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm24#scu11#oln277#par340" name="medical_specializzation_PASSING" sourceLinkParameter="mov2#mpkg2#opm24#icu29#oln276#par159" passing="true"/>
+      </OKLink>
+      <KOLink id="mov2#mpkg2#opm24#scu11#kln78" name="KOFlow78" to="mov2#mpkg2#opm24#seu80">
+        <LinkParameter id="mov2#mpkg2#opm24#scu11#kln78#par163" name="id_hospital_PASSING_AttCondition132" sourceLinkParameter="mov2#mpkg2#opm24#icu29#oln276#par158" target="mov2#mpkg2#opm24#seu80#su128#acond132"/>
+      </KOLink>
+    </ScriptUnit>
+    <SelectorUnit gr:x="465" gr:y="265" id="mov2#mpkg2#opm24#seu80" name="SelectEmergencyRoom" entity="ent16">
+      <Selector id="mov2#mpkg2#opm24#seu80#su128" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg2#opm24#seu80#su128#acond132" name="AttCondition132" predicate="eq" booleanOperator="or" implied="false" attributes="rel26#role52.ent4#att1"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm24#seu80#oln279" name="OKFlow279" to="mov2#mpkg2#opm24#okcu27" gr:bendpoints="389,-32,-251,128">
+        <LinkParameter id="mov2#mpkg2#opm24#seu80#oln279#par166" name="oid_id_room" source="ent16#att35Array" target="mov2#mpkg2#opm24#okcu27#ocp29"/>
+        <LinkParameter id="mov2#mpkg2#opm24#seu80#oln279#par167" name="oid_label_room" source="ent16#att35Array" target="mov2#mpkg2#opm24#okcu27#ocp28"/>
+      </OKLink>
+    </SelectorUnit>
+    <OKCollectorUnit gr:x="1115" gr:y="110" id="mov2#mpkg2#opm24#okcu27" name="OK Port27">
+      <OutputCollectorParameter id="mov2#mpkg2#opm24#okcu27#ocp28" name="label_room"/>
+      <OutputCollectorParameter id="mov2#mpkg2#opm24#okcu27#ocp29" name="id_room"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="1115" gr:y="305" id="mov2#mpkg2#opm24#kocu28" name="KO Port28"/>
+  </OperationUnits>
+</OperationModule>

@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="305" gr:y="120" id="sv4#area9#page9" name="Verify that you are registered yet">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="305" gr:y="125" id="sv4#area9#page9" name="Inserimento credenziali">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv4#area9#page9#enu3" name="User Info" entity="User" linkOrder="sv4#area9#page9#enu3#ln28" fieldOrder="sv4#area9#page9#enu3#fld5 sv4#area9#page9#enu3#fld6">
+    <EntryUnit gr:x="0" gr:y="0" id="sv4#area9#page9#enu3" name="Verifica se gi&#224; sei iscritto al sistema" entity="User" linkOrder="sv4#area9#page9#enu3#ln28" fieldOrder="sv4#area9#page9#enu3#fld5 sv4#area9#page9#enu3#fld6">
       <Field id="sv4#area9#page9#enu3#fld5" name="cf" type="string" modifiable="true">
         <VRules>
           <MandatoryValidationRule id="sv4#area9#page9#enu3#fld5#mnd46" name="Mandatory46"/>
@@ -11,7 +11,7 @@
           <MandatoryValidationRule id="sv4#area9#page9#enu3#fld6#mnd47" name="Mandatory47"/>
         </VRules>
       </Field>
-      <Link id="sv4#area9#page9#enu3#ln28" name="verify" to="sv4#area9#switch2" type="normal" validate="true" gr:bendpoints="43,88,-62,-62">
+      <Link id="sv4#area9#page9#enu3#ln28" name="Verifica" to="sv4#area9#switch2" type="normal" validate="true" gr:bendpoints="43,88,-62,-62">
         <LinkParameter id="sv4#area9#page9#enu3#ln28#par62" name="group_Switch" source="sv4#area9#page9#enu3#fld9" target="sv4#area9#switch2.switch"/>
         <LinkParameter id="sv4#area9#page9#enu3#ln28#par915" name="cf_PASSING" source="sv4#area9#page9#enu3#fld5" passing="true"/>
         <LinkParameter id="sv4#area9#page9#enu3#ln28#par917" name="password_PASSING" source="sv4#area9#page9#enu3#fld6" passing="true"/>

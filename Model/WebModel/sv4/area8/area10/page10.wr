@@ -1,11 +1,11 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv4#area8#area10#page10" name="Login Page" landmark="false" customURLName="Login">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv4#area8#area10#page10" name="Login" landmark="false" customURLName="Login">
   <ContentUnits>
-    <MultiMessageUnit gr:x="10" gr:y="155" id="sv4#area8#area10#page10#mssu7" name="notRegistered?" linkOrder="sv4#area8#area10#page10#mssu7#ln38">
-      <Message xml:space="preserve">Not registered yet? Sign up now!</Message>
+    <MultiMessageUnit gr:x="10" gr:y="155" id="sv4#area8#area10#page10#mssu7" name="Non sei registrato? Registrati ora" linkOrder="sv4#area8#area10#page10#mssu7#ln38">
+      <Message xml:space="preserve">Non sei registrato o vuoi registrare una nuova tipologia di utente? Registrati ora</Message>
       <Link id="sv4#area8#area10#page10#mssu7#ln38" name="Registrati" to="sv4#area9#page8#mssu2" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-96,296,-45,-314;-110,440,-59,-170"/>
     </MultiMessageUnit>
-    <EntryUnit gr:x="10" gr:y="0" id="sv4#area8#area10#page10#enu4" name="PleaseLogin" linkOrder="sv4#area8#area10#page10#enu4#ln60">
-      <Link id="sv4#area8#area10#page10#enu4#ln60" name="Login" to="sv4#area8#miu13" type="normal" validate="true">
+    <EntryUnit gr:x="10" gr:y="0" id="sv4#area8#area10#page10#enu4" name="Accedi al sistema" linkOrder="sv4#area8#area10#page10#enu4#ln60">
+      <Link id="sv4#area8#area10#page10#enu4#ln60" name="Accedi" to="sv4#area8#miu13" type="normal" validate="true">
         <LinkParameter id="sv4#area8#area10#page10#enu4#ln60#par269" name="CF_CF" source="sv4#area8#area10#page10#enu4#fld81" target="sv4#area8#miu13.mov2#hym2#icu13#icp76"/>
         <LinkParameter id="sv4#area8#area10#page10#enu4#ln60#par270" name="Password_Password" source="sv4#area8#area10#page10#enu4#fld82" target="sv4#area8#miu13.mov2#hym2#icu13#icp77"/>
         <LinkParameter id="sv4#area8#area10#page10#enu4#ln60#par336" name="User Object_UserObject" source="entityBean" target="sv4#area8#miu13.mov2#hym2#icu13#icp78"/>
@@ -21,9 +21,9 @@
         </VRules>
       </Field>
     </EntryUnit>
-    <MultiMessageUnit gr:x="0" gr:y="75" id="sv4#area8#area10#page10#mssu30" name="Forgot Password?" linkOrder="sv4#area8#area10#page10#mssu30#ln118">
-      <Message xml:space="preserve">Have you forgot the password?</Message>
-      <Link id="sv4#area8#area10#page10#mssu30#ln118" name="Reset Password" to="sv4#area8#area11#page55" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="417,-1,-309,59"/>
+    <MultiMessageUnit gr:x="0" gr:y="75" id="sv4#area8#area10#page10#mssu30" name="Password dimenticata?" linkOrder="sv4#area8#area10#page10#mssu30#ln118">
+      <Message xml:space="preserve">Clicca qui per recuperare la password</Message>
+      <Link id="sv4#area8#area10#page10#mssu30#ln118" name="Recupera Password" to="sv4#area8#area11#page55" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="417,-1,-309,59"/>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

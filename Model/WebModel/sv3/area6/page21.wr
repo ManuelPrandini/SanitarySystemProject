@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1210" gr:y="210" id="sv3#area6#page21" name="Procedura completata correttamente">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1210" gr:y="210" id="sv3#area6#page21" name="Prenotazione avvenuta correttamente!">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv3#area6#page21#mssu11" name="Completata">
       <Message xml:space="preserve">La visita &#232; stata salvata correttamente. Puoi consultare la sezione Calendario per vedere tutte le visite prenotate.</Message>

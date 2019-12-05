@@ -1,8 +1,8 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="805" gr:y="270" id="sv1#area7#page18" name="Visita Registrata correttamente!">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#area7#page18#mssu13" linkOrder="sv1#area7#page18#mssu13#ln83" name=".">
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#area7#page18#mssu13" linkOrder="sv1#area7#page18#mssu13#ln83" name="Visita registrata">
       <Link id="sv1#area7#page18#mssu13#ln83" name="Torna al men&#249;" to="sv1#area7#page67#mssu9" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-730,6,135,121"/>
-      <Message xml:space="preserve">ok</Message>
+      <Message xml:space="preserve">La visita &#232; stata registrata correttamente nella cartella clinica del paziente</Message>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

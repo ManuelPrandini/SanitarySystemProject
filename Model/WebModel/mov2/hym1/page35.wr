@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page35" name="Pharmacist Info(Exists)" gr:x="1160" gr:y="165">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page35" name="Registrazione farmacista" gr:x="1155" gr:y="155">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="75" id="mov2#hym1#page35#enu11" name="registration form" linkOrder="mov2#hym1#page35#enu11#ln47" fieldOrder="mov2#hym1#page35#enu11#fld20 mov2#hym1#page35#enu11#fld40 mov2#hym1#page35#enu11#fld41 mov2#hym1#page35#enu11#fld153 mov2#hym1#page35#enu11#fld8 mov2#hym1#page35#enu11#fld7 mov2#hym1#page35#enu11#fld152 mov2#hym1#page35#enu11#fld154 mov2#hym1#page35#enu11#fld43 mov2#hym1#page35#enu11#fld44 mov2#hym1#page35#enu11#fld35 mov2#hym1#page35#enu11#fld42 mov2#hym1#page35#enu11#fld34 mov2#hym1#page35#enu11#sfld54">
+    <EntryUnit gr:x="5" gr:y="85" id="mov2#hym1#page35#enu11" name="compila la form" linkOrder="mov2#hym1#page35#enu11#ln47" fieldOrder="mov2#hym1#page35#enu11#fld20 mov2#hym1#page35#enu11#fld40 mov2#hym1#page35#enu11#fld41 mov2#hym1#page35#enu11#fld153 mov2#hym1#page35#enu11#fld8 mov2#hym1#page35#enu11#fld7 mov2#hym1#page35#enu11#fld152 mov2#hym1#page35#enu11#fld154 mov2#hym1#page35#enu11#fld43 mov2#hym1#page35#enu11#fld44 mov2#hym1#page35#enu11#fld35 mov2#hym1#page35#enu11#fld42 mov2#hym1#page35#enu11#fld34 mov2#hym1#page35#enu11#sfld54">
       <Link id="mov2#hym1#page35#enu11#ln47" name="Registrati" to="mov2#hym1#miu6" type="normal" validate="true">
         <LinkParameter id="mov2#hym1#page35#enu11#ln47#par121" name="1_exists?" sourceValue="1" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp74"/>
         <LinkParameter id="mov2#hym1#page35#enu11#ln47#par124" name="0_approved" sourceValue="0" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp37"/>
@@ -43,14 +43,33 @@
       <Field id="mov2#hym1#page35#enu11#fld154" type="string" name="live in" preloaded="true"/>
       <SelectionField id="mov2#hym1#page35#enu11#sfld54" name="pharmacy" type="string"/>
     </EntryUnit>
-    <SelectorUnit gr:x="210" gr:y="0" id="mov2#hym1#page35#seu46" name="SelectorPharmacy" entity="ent19">
+    <SelectorUnit gr:x="270" gr:y="45" id="mov2#hym1#page35#seu46" name="SelectorPharmacy" entity="ent19">
       <Link id="mov2#hym1#page35#seu46#ln171" name="Flow171" to="mov2#hym1#page35#enu11" type="transport" validate="true">
         <LinkParameter id="mov2#hym1#page35#seu46#ln171#par859" name="Data Size_pharmacy [label]" source="ent19#att43Array" target="mov2#hym1#page35#enu11#sfld54_label"/>
         <LinkParameter id="mov2#hym1#page35#seu46#ln171#par860" name="oid_pharmacy [output]" source="ent19#att42Array" target="mov2#hym1#page35#enu11#sfld54_output"/>
       </Link>
     </SelectorUnit>
+    <MultiMessageUnit id="mov2#hym1#page35#mssu45" name="E' stata trovata una corrispondenza!" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Sono stati riempiti i campi con i dati di registrazione compilati in precendenza</Message>
+    </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym1#page35#mssu45"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov2#hym1#page35#enu11">

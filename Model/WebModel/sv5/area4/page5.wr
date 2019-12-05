@@ -1,40 +1,40 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv5#area4#page5" name="Registrazioni in attesa">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv5#area4#page5#pwu4" name="Waiting Doctors" sortable="true" checkable="false" useCountQuery="false" entity="ent9" displayAttributes="ent9#att33 rel36#role72.userOID rel36#role72.User#att27 rel36#role72.User#att28 rel4#role5.ent8#att21" linkOrder="sv5#area4#page5#pwu4#ln10 sv5#area4#page5#pwu4#ln13">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv5#area4#page5#pwu4" name="Dottori in attesa di approvazione" sortable="true" checkable="false" useCountQuery="false" entity="ent9" displayAttributes="ent9#att33 rel36#role72.userOID rel36#role72.User#att27 rel36#role72.User#att28 rel4#role5.ent8#att21" linkOrder="sv5#area4#page5#pwu4#ln10 sv5#area4#page5#pwu4#ln13">
       <Selector id="sv5#area4#page5#pwu4#su9" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv5#area4#page5#pwu4#su9#acond2" name="DaApprovare" predicate="eq" booleanOperator="or" implied="false" value="0" attributes="ent9#att17"/>
       </Selector>
-      <Link id="sv5#area4#page5#pwu4#ln10" name="Accept User" to="sv5#area4#miu3" type="normal" validate="true">
+      <Link id="sv5#area4#page5#pwu4#ln10" name="Accetta" to="sv5#area4#miu3" type="normal" validate="true">
         <LinkParameter id="sv5#area4#page5#pwu4#ln10#par30" name="cf_UserPrimaryKey" source="data[].rel36#role72_userOID" target="sv5#area4#miu3.mov2#mpkg2#opm5#icu5#icp23"/>
         <LinkParameter id="sv5#area4#page5#pwu4#ln10#par406" name="1_groupID" sourceValue="1" target="sv5#area4#miu3.mov2#mpkg2#opm5#icu5#icp79"/>
       </Link>
-      <Link id="sv5#area4#page5#pwu4#ln13" name="Reject User" to="sv5#area4#miu4" type="normal" validate="true">
+      <Link id="sv5#area4#page5#pwu4#ln13" name="Rifiuta" to="sv5#area4#miu4" type="normal" validate="true">
         <LinkParameter id="sv5#area4#page5#pwu4#ln13#par32" name="cf_inputPrimaryKey" source="data[].rel36#role72_userOID" target="sv5#area4#miu4.mov2#mpkg2#opm6#icu6#icp24"/>
         <LinkParameter id="sv5#area4#page5#pwu4#ln13#par417" name="1_groupID" sourceValue="1" target="sv5#area4#miu4.mov2#mpkg2#opm6#icu6#icp80"/>
       </Link>
     </PowerIndexUnit>
-    <PowerIndexUnit id="sv5#area4#page5#pwu5" name="Waiting Pharmacists" linkOrder="sv5#area4#page5#pwu5#ln14 sv5#area4#page5#pwu5#ln15" gr:x="0" gr:y="125" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att32 rel22#role44.userOID rel22#role44.User#att27 rel22#role44.User#att28">
+    <PowerIndexUnit id="sv5#area4#page5#pwu5" name="Farmacisti in attesa di approvazione" linkOrder="sv5#area4#page5#pwu5#ln14 sv5#area4#page5#pwu5#ln15" gr:x="0" gr:y="125" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att32 rel22#role44.userOID rel22#role44.User#att27 rel22#role44.User#att28">
       <Selector id="sv5#area4#page5#pwu5#su14" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv5#area4#page5#pwu5#su14#acond5" name="DaApprovare" predicate="eq" booleanOperator="or" implied="false" value="0" attributes="ent1#att20"/>
       </Selector>
-      <Link id="sv5#area4#page5#pwu5#ln14" name="Accept User" to="sv5#area4#miu3" type="normal" validate="true">
+      <Link id="sv5#area4#page5#pwu5#ln14" name="Accetta" to="sv5#area4#miu3" type="normal" validate="true">
         <LinkParameter id="sv5#area4#page5#pwu5#ln14#par34" name="cf_UserPrimaryKey" source="data[].rel22#role44_userOID" target="sv5#area4#miu3.mov2#mpkg2#opm5#icu5#icp23"/>
         <LinkParameter id="sv5#area4#page5#pwu5#ln14#par407" name="2_groupID" sourceValue="2" target="sv5#area4#miu3.mov2#mpkg2#opm5#icu5#icp79"/>
       </Link>
-      <Link id="sv5#area4#page5#pwu5#ln15" name="Reject User" to="sv5#area4#miu4" type="normal" validate="true">
+      <Link id="sv5#area4#page5#pwu5#ln15" name="Rifiuta" to="sv5#area4#miu4" type="normal" validate="true">
         <LinkParameter id="sv5#area4#page5#pwu5#ln15#par35" name="cf_inputPrimaryKey" source="data[].rel22#role44_userOID" target="sv5#area4#miu4.mov2#mpkg2#opm6#icu6#icp24"/>
         <LinkParameter id="sv5#area4#page5#pwu5#ln15#par418" name="2_groupID" sourceValue="2" target="sv5#area4#miu4.mov2#mpkg2#opm6#icu6#icp80"/>
       </Link>
     </PowerIndexUnit>
-    <PowerIndexUnit id="sv5#area4#page5#pwu6" name="Waiting Patients" linkOrder="sv5#area4#page5#pwu6#ln24 sv5#area4#page5#pwu6#ln32" gr:x="0" gr:y="250" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att11 rel14#role28.userOID rel14#role28.User#att27 rel14#role28.User#att28">
+    <PowerIndexUnit id="sv5#area4#page5#pwu6" name="Pazienti in attesa di approvazione" linkOrder="sv5#area4#page5#pwu6#ln24 sv5#area4#page5#pwu6#ln32" gr:x="0" gr:y="250" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att11 rel14#role28.userOID rel14#role28.User#att27 rel14#role28.User#att28">
       <Selector id="sv5#area4#page5#pwu6#su15" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv5#area4#page5#pwu6#su15#acond8" name="DaApprovare" predicate="eq" booleanOperator="or" implied="false" value="0" attributes="ent6#att19"/>
       </Selector>
-      <Link id="sv5#area4#page5#pwu6#ln24" name="Accept User" to="sv5#area4#miu3" type="normal" validate="true">
+      <Link id="sv5#area4#page5#pwu6#ln24" name="Accetta" to="sv5#area4#miu3" type="normal" validate="true">
         <LinkParameter id="sv5#area4#page5#pwu6#ln24#par36" name="cf_UserPrimaryKey" source="data[].rel14#role28_userOID" target="sv5#area4#miu3.mov2#mpkg2#opm5#icu5#icp23"/>
         <LinkParameter id="sv5#area4#page5#pwu6#ln24#par408" name="3_groupID" sourceValue="3" target="sv5#area4#miu3.mov2#mpkg2#opm5#icu5#icp79"/>
       </Link>
-      <Link id="sv5#area4#page5#pwu6#ln32" name="Reject User" to="sv5#area4#miu4" type="normal" validate="true">
+      <Link id="sv5#area4#page5#pwu6#ln32" name="Rifiuta" to="sv5#area4#miu4" type="normal" validate="true">
         <LinkParameter id="sv5#area4#page5#pwu6#ln32#par37" name="cf_inputPrimaryKey" source="data[].rel14#role28_userOID" target="sv5#area4#miu4.mov2#mpkg2#opm6#icu6#icp24"/>
         <LinkParameter id="sv5#area4#page5#pwu6#ln32#par419" name="3_groupID" sourceValue="3" target="sv5#area4#miu4.mov2#mpkg2#opm6#icu6#icp80"/>
       </Link>

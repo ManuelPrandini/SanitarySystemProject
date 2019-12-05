@@ -12,7 +12,7 @@
         <LinkParameter id="sv1#page54#seu62#ln92#par202" name="surname_surname" source="User#att28Array" target="sv1#page54#mssu40.sv1#page54#mssu40#ph3"/>
       </Link>
     </SelectorUnit>
-    <MultiMessageUnit id="sv1#page54#mssu40" name="Welcome" gr:x="0" gr:y="20">
+    <MultiMessageUnit id="sv1#page54#mssu40" name="Benvenuto" gr:x="0" gr:y="20">
       <Message xml:space="preserve">Benvenuto nel tuo account da Dottore $$name$$ $$surname$$ !
 Da questo pannello puoi gestire tutti i tuoi impegni e tutti i tuoi pazienti.</Message>
       <Placeholder id="sv1#page54#mssu40#ph3" name="surname"/>

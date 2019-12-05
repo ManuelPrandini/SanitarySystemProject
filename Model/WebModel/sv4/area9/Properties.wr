@@ -1,6 +1,6 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="35" gr:y="255" id="sv4#area9" name="Registration Area" landmark="true" defaultPage="sv4#area9#page8">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="35" gr:y="250" id="sv4#area9" name="Area di Registrazione" landmark="true" defaultPage="sv4#area9#page8">
   <OperationUnits>
-    <ModuleInstanceUnit id="sv4#area9#miu7" gr:x="670" gr:y="140" action="true" moduleId="mov2#mpkg2#opm8">
+    <ModuleInstanceUnit id="sv4#area9#miu7" gr:x="670" gr:y="145" action="true" moduleId="mov2#mpkg2#opm8">
       <OKLink id="sv4#area9#miu7#oln1" name="OKFlow1" to="sv4#area9#page11" automaticCoupling="true"/>
       <KOLink id="sv4#area9#miu7#kln29" name="KOFlow29" to="sv4#area9#miu12">
         <LinkParameter id="sv4#area9#miu7#kln29#par108" name="cf_cf" source="mov2#mpkg2#opm8#kocu10#ocp13" target="sv4#area9#miu12.mov2#hym1#icu17#icp64"/>
@@ -8,7 +8,7 @@
         <LinkParameter id="sv4#area9#miu7#kln29#par111" name="password_password" source="mov2#mpkg2#opm8#kocu10#ocp15" target="sv4#area9#miu12.mov2#hym1#icu17#icp65"/>
       </KOLink>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="660" gr:y="340" id="sv4#area9#miu9" action="true" moduleId="mov2#mpkg2#opm14">
+    <ModuleInstanceUnit gr:x="660" gr:y="345" id="sv4#area9#miu9" action="true" moduleId="mov2#mpkg2#opm14">
       <OKLink id="sv4#area9#miu9#oln42" name="OKFlow42" to="sv4#area9#page27" automaticCoupling="true" gr:bendpoints="278,-62,8,203;281,-102,11,163"/>
       <KOLink id="sv4#area9#miu9#kln31" name="KOFlow31" to="sv4#area9#miu12">
         <LinkParameter id="sv4#area9#miu9#kln31#par118" name="cf_cf" source="mov2#mpkg2#opm14#kocu12#ocp16" target="sv4#area9#miu12.mov2#hym1#icu17#icp64"/>
@@ -16,7 +16,7 @@
         <LinkParameter id="sv4#area9#miu9#kln31#par129" name="password_password" source="mov2#mpkg2#opm14#kocu12#ocp17" target="sv4#area9#miu12.mov2#hym1#icu17#icp65"/>
       </KOLink>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="650" gr:y="235" id="sv4#area9#miu10" action="true" moduleId="mov2#mpkg2#opm15">
+    <ModuleInstanceUnit gr:x="650" gr:y="240" id="sv4#area9#miu10" action="true" moduleId="mov2#mpkg2#opm15">
       <OKLink id="sv4#area9#miu10#oln41" name="OKFlow41" to="sv4#area9#page23" automaticCoupling="true" gr:bendpoints="156,-57,66,128;156,-97,66,88"/>
       <KOLink id="sv4#area9#miu10#kln30" name="KOFlow30" to="sv4#area9#miu12">
         <LinkParameter id="sv4#area9#miu10#kln30#par112" name="cf_cf" source="mov2#mpkg2#opm15#kocu13#ocp19" target="sv4#area9#miu12.mov2#hym1#icu17#icp64"/>
@@ -24,7 +24,7 @@
         <LinkParameter id="sv4#area9#miu10#kln30#par117" name="password_password" source="mov2#mpkg2#opm15#kocu13#ocp20" target="sv4#area9#miu12.mov2#hym1#icu17#icp65"/>
       </KOLink>
     </ModuleInstanceUnit>
-    <SwitchUnit gr:x="410" gr:y="315" id="sv4#area9#switch2" name="selectCheck">
+    <SwitchUnit gr:x="410" gr:y="320" id="sv4#area9#switch2" name="selectCheck">
       <Case value="1"/>
       <Case value="2"/>
       <Case value="3"/>
@@ -41,7 +41,7 @@
         <LinkParameter id="sv4#area9#switch2#oln40#par933" name="password_PASSING_password" sourceLinkParameter="sv4#area9#page9#enu3#ln28#par917" target="sv4#area9#miu9.mov2#mpkg2#opm14#icu14#icp60"/>
       </OKLink>
     </SwitchUnit>
-    <ModuleInstanceUnit gr:x="1015" gr:y="340" id="sv4#area9#miu12" action="false" moduleId="mov2#hym1">
+    <ModuleInstanceUnit gr:x="1015" gr:y="345" id="sv4#area9#miu12" action="false" moduleId="mov2#hym1">
       <OKLink id="sv4#area9#miu12#oln59" name="OKFlow59" to="sv4#area9#page38" automaticCoupling="true"/>
       <KOLink id="sv4#area9#miu12#kln36" name="KOFlow36" to="sv4#area9#page37" automaticCoupling="true"/>
     </ModuleInstanceUnit>

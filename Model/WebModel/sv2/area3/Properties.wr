@@ -1,15 +1,15 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="15" gr:y="280" id="sv2#area3" name="Farmaci" landmark="true" defaultPage="sv2#area3#page60" landmarks="sv2#area3#page60 sv2#area3#page59">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="15" gr:y="270" id="sv2#area3" name="Farmaci" landmark="true" defaultPage="sv2#area3#page60" landmarks="sv2#area3#page60 sv2#area3#page59">
   <OperationUnits>
-    <CreateUnit gr:x="575" gr:y="645" id="sv2#area3#cru10" name="CreateDrugQuantity" entity="ent21">
+    <CreateUnit gr:x="575" gr:y="655" id="sv2#area3#cru10" name="CreateDrugQuantity" entity="ent21">
       <OKLink id="sv2#area3#cru10#oln150" name="OKFlow150" to="sv2#area3#page60" automaticCoupling="true" gr:bendpoints="-107,-10,248,195"/>
     </CreateUnit>
-    <ModifyUnit gr:x="780" gr:y="650" id="sv2#area3#mfu13" name="UpdateDrugQuantity" entity="ent21">
+    <ModifyUnit gr:x="780" gr:y="660" id="sv2#area3#mfu13" name="UpdateDrugQuantity" entity="ent21">
       <Selector id="sv2#area3#mfu13#su74" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area3#mfu13#su74#kcond29" name="KeyCondition29" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#area3#mfu13#oln147" name="OKFlow147" to="sv2#area3#page60" automaticCoupling="true" gr:bendpoints="1,-219,561,1"/>
     </ModifyUnit>
-    <ScriptUnit id="sv2#area3#scu5" name="ScriptAggiornaQuantit&#224;" gr:x="610" gr:y="530">
+    <ScriptUnit id="sv2#area3#scu5" name="ScriptAggiornaQuantit&#224;" gr:x="610" gr:y="540">
       <ScriptInput id="sv2#area3#scu5#sci5" name="quantitaPresente"/>
       <ScriptInput id="sv2#area3#scu5#sci6" name="nuovaQuantita"/>
       <ScriptOutput id="sv2#area3#scu5#sco3" name="quantitaFinale"/>

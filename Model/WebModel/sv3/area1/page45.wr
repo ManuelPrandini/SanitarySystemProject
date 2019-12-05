@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area1#page45" name="Home" gr:x="0" gr:y="315">
   <ContentUnits>
-    <MultiMessageUnit id="sv3#area1#page45#mssu19" name="Welcome" gr:x="0" gr:y="20">
+    <MultiMessageUnit id="sv3#area1#page45#mssu19" name="Benvenuto" gr:x="0" gr:y="20">
       <Message xml:space="preserve">Benvenuto nel sistema SanitarySystemProject  $$name$$ $$surname$$ !
 Puoi iniziare subito a controllare il tuo profilo o ad interagire con i medici e i farmacisti della nostra piattaforma.</Message>
       <Placeholder id="sv3#area1#page45#mssu19#ph4" name="surname"/>

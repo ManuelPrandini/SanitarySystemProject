@@ -12,9 +12,10 @@
         <LinkParameter id="sv2#page46#seu16#ln74#par140" name="surname_surname" source="User#att28Array" target="sv2#page46#mssu20.sv2#page46#mssu20#ph1"/>
       </Link>
     </SelectorUnit>
-    <MultiMessageUnit id="sv2#page46#mssu20" name="Welcome" gr:x="0" gr:y="20">
+    <MultiMessageUnit id="sv2#page46#mssu20" name="Benvenuto" gr:x="0" gr:y="20">
       <Message xml:space="preserve">Benvenuto nel tuo account da Farmacista  $$name$$ $$surname$$ !
-Da questo pannello puoi controllare tutte le informazioni della tua farmacia.</Message>
+Da questo pannello puoi controllare tutte le informazioni della tua farmacia e 
+vendere farmaci ai clienti.</Message>
       <Placeholder id="sv2#page46#mssu20#ph1" name="surname"/>
       <Placeholder id="sv2#page46#mssu20#ph2" name="name"/>
     </MultiMessageUnit>

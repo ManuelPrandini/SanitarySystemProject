@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1005" gr:y="-450" id="mov2#hym1#page50" name="Doctor Info (Exists)">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="980" gr:y="-490" id="mov2#hym1#page50" name="Registrazione dottore">
   <ContentUnits>
-    <EntryUnit id="mov2#hym1#page50#enu23" name="registration form" gr:x="155" gr:y="140" fieldOrder="mov2#hym1#page50#enu23#fld144 mov2#hym1#page50#enu23#fld141 mov2#hym1#page50#enu23#fld140 mov2#hym1#page50#enu23#fld148 mov2#hym1#page50#enu23#fld139 mov2#hym1#page50#enu23#fld138 mov2#hym1#page50#enu23#fld137 mov2#hym1#page50#enu23#fld136 mov2#hym1#page50#enu23#fld147 mov2#hym1#page50#enu23#fld146 mov2#hym1#page50#enu23#fld145 mov2#hym1#page50#enu23#sfld50 mov2#hym1#page50#enu23#sfld52 mov2#hym1#page50#enu23#sfld53 mov2#hym1#page50#enu23#fld143" linkOrder="mov2#hym1#page50#enu23#ln159 mov2#hym1#page50#enu23#ln161">
+    <EntryUnit id="mov2#hym1#page50#enu23" name="compila la form" gr:x="155" gr:y="140" fieldOrder="mov2#hym1#page50#enu23#fld144 mov2#hym1#page50#enu23#fld141 mov2#hym1#page50#enu23#fld140 mov2#hym1#page50#enu23#fld148 mov2#hym1#page50#enu23#fld139 mov2#hym1#page50#enu23#fld138 mov2#hym1#page50#enu23#fld137 mov2#hym1#page50#enu23#fld136 mov2#hym1#page50#enu23#fld147 mov2#hym1#page50#enu23#fld146 mov2#hym1#page50#enu23#fld145 mov2#hym1#page50#enu23#sfld50 mov2#hym1#page50#enu23#sfld52 mov2#hym1#page50#enu23#sfld53 mov2#hym1#page50#enu23#fld143" linkOrder="mov2#hym1#page50#enu23#ln159 mov2#hym1#page50#enu23#ln161">
       <Field id="mov2#hym1#page50#enu23#fld136" name="address" type="string" preloaded="true"/>
       <Field id="mov2#hym1#page50#enu23#fld137" name="telephone" type="string" preloaded="true"/>
       <Field id="mov2#hym1#page50#enu23#fld138" name="birthday" type="date" preloaded="true"/>
@@ -23,7 +23,7 @@
         <LinkParameter id="mov2#hym1#page50#enu23#ln159#par808" name="medical specialization_medical_specialization" source="mov2#hym1#page50#enu23#sfld52" target="mov2#hym1#page50#seu45#su66#acond48"/>
         <LinkParameter id="mov2#hym1#page50#enu23#ln159#par1265" name="password_PASSING" source="mov2#hym1#page50#enu23#fld143" passing="true"/>
       </Link>
-      <Link id="mov2#hym1#page50#enu23#ln161" name="Submit" to="mov2#hym1#miu14" type="normal" validate="true" gr:bendpoints="478,-20,-22,-235">
+      <Link id="mov2#hym1#page50#enu23#ln161" name="Registrati" to="mov2#hym1#miu14" type="normal" validate="true" gr:bendpoints="478,-20,-22,-235">
         <LinkParameter id="mov2#hym1#page50#enu23#ln161#par811" name="address_address" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp30" source="mov2#hym1#page50#enu23#fld136"/>
         <LinkParameter id="mov2#hym1#page50#enu23#ln161#par812" name="0_approved" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp22" sourceValue="0"/>
         <LinkParameter id="mov2#hym1#page50#enu23#ln161#par813" name="birthday_birthday" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp5" source="mov2#hym1#page50#enu23#fld138"/>
@@ -77,8 +77,27 @@
         <LinkParameter id="mov2#hym1#page50#seu55#ln144#par608" name="id_room_RoleCondition2 [id_room]" source="ent10#att5Array" target="mov2#hym1#page50#seu45#su66#rcond2.ent10#att5"/>
       </Link>
     </SelectorUnit>
+    <MultiMessageUnit id="mov2#hym1#page50#mssu46" name="E' stata trovata una corrispondenza!" gr:x="135" gr:y="210">
+      <Message xml:space="preserve">Sono stati riempiti i campi con i dati di registrazione compilati in precendenza</Message>
+    </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym1#page50#mssu46"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov2#hym1#page50#enu23">
@@ -101,6 +120,20 @@
           <layout:Field field="mov2#hym1#page50#enu23#fld143"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page32" name="Patient Info(Exists)" gr:x="1160" gr:y="670" ajaxEnabled="false">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page32" name="Registrazione paziente" gr:x="1190" gr:y="640" ajaxEnabled="false">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="mov2#hym1#page32#enu13" name="registration form" linkOrder="mov2#hym1#page32#enu13#ln51" fieldOrder="mov2#hym1#page32#enu13#fld59 mov2#hym1#page32#enu13#fld61 mov2#hym1#page32#enu13#fld66 mov2#hym1#page32#enu13#fld150 mov2#hym1#page32#enu13#fld151 mov2#hym1#page32#enu13#fld149 mov2#hym1#page32#enu13#fld57 mov2#hym1#page32#enu13#fld56 mov2#hym1#page32#enu13#fld67 mov2#hym1#page32#enu13#fld60 mov2#hym1#page32#enu13#fld62 mov2#hym1#page32#enu13#fld63 mov2#hym1#page32#enu13#fld65 mov2#hym1#page32#enu13#fld64">
+    <EntryUnit gr:x="0" gr:y="65" id="mov2#hym1#page32#enu13" name="compila la form" linkOrder="mov2#hym1#page32#enu13#ln51" fieldOrder="mov2#hym1#page32#enu13#fld59 mov2#hym1#page32#enu13#fld61 mov2#hym1#page32#enu13#fld66 mov2#hym1#page32#enu13#fld150 mov2#hym1#page32#enu13#fld151 mov2#hym1#page32#enu13#fld149 mov2#hym1#page32#enu13#fld57 mov2#hym1#page32#enu13#fld56 mov2#hym1#page32#enu13#fld67 mov2#hym1#page32#enu13#fld60 mov2#hym1#page32#enu13#fld62 mov2#hym1#page32#enu13#fld63 mov2#hym1#page32#enu13#fld65 mov2#hym1#page32#enu13#fld64">
       <Link id="mov2#hym1#page32#enu13#ln51" name="Registrati" to="mov2#hym1#miu11" type="normal" validate="true">
         <LinkParameter id="mov2#hym1#page32#enu13#ln51#par123" name="1_exists?" sourceValue="1" target="mov2#hym1#miu11.mov2#mpkg2#opm3#icu3#icp59"/>
         <LinkParameter id="mov2#hym1#page32#enu13#ln51#par126" name="0_approved" sourceValue="0" target="mov2#hym1#miu11.mov2#mpkg2#opm3#icu3#icp36"/>
@@ -52,8 +52,27 @@
       <Field id="mov2#hym1#page32#enu13#fld150" type="string" name="gender" preloaded="true"/>
       <Field id="mov2#hym1#page32#enu13#fld151" type="string" name="born in" preloaded="true"/>
     </EntryUnit>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym1#page32#mssu44" name="E' stata trovata una corrispondenza!">
+      <Message xml:space="preserve">Sono stati riempiti i campi con i dati di registrazione compilati in precendenza</Message>
+    </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym1#page32#mssu44"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov2#hym1#page32#enu13">
@@ -74,6 +93,20 @@
           <layout:Link link="mov2#hym1#page32#enu13#ln51"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

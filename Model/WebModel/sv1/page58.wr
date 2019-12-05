@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page58" name="Doctor Info" landmark="true" gr:x="23" gr:y="241">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page58" name="Informazioni personali" landmark="true" gr:x="23" gr:y="241">
   <ContentUnits>
-    <DataUnit id="sv1#page58#dau11" name="Profile" gr:x="160" gr:y="0" entity="User" displayAttributes="userOID userName email User#att27 User#att28 User#att29 User#att40 User#att41 rel36#role71.ent9#att33">
+    <DataUnit id="sv1#page58#dau11" name="Dati personali" gr:x="160" gr:y="0" entity="User" displayAttributes="userOID userName email User#att27 User#att28 User#att29 User#att40 User#att41 rel36#role71.ent9#att33">
       <Selector id="sv1#page58#dau11#su58" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#page58#dau11#su58#kcond25" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>

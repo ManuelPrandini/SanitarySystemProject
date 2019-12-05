@@ -1,8 +1,14 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1265" gr:y="250" id="sv4#area9#page37" name="err">
-  <ContentUnits/>
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1265" gr:y="255" id="sv4#area9#page37" name="Errore">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv4#area9#page37#mssu43" name="Errore di registrazione utente">
+      <Message xml:space="preserve">Attenzione! Qualcosa &#232; andato storto durante la registrazione al sistema!</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area9#page37#mssu43"/>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

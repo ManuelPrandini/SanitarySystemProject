@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="325" id="sv2#area3#page60" name="Inventario" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="320" id="sv2#area3#page60" name="Rifornimento" landmark="true">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="25" id="sv2#area3#page60#enu24" name="Inserisci farmaco" fieldOrder="sv2#area3#page60#enu24#fld156 sv2#area3#page60#enu24#sfld56 sv2#area3#page60#enu24#fld158 sv2#area3#page60#enu24#fld159" linkOrder="sv2#area3#page60#enu24#ln176 sv2#area3#page60#enu24#ln180">
+    <EntryUnit gr:x="0" gr:y="40" id="sv2#area3#page60#enu24" name="Inserisci farmaco da rifornire" fieldOrder="sv2#area3#page60#enu24#fld156 sv2#area3#page60#enu24#sfld56 sv2#area3#page60#enu24#fld158 sv2#area3#page60#enu24#fld159" linkOrder="sv2#area3#page60#enu24#ln176 sv2#area3#page60#enu24#ln180">
       <Field id="sv2#area3#page60#enu24#fld156" name="Farmacia" type="string" preloaded="true" ajaxEventEnabled="true" ajaxEventLink="sv2#area3#page60#enu24#ln176"/>
       <Field id="sv2#area3#page60#enu24#fld158" name="Quantit&#224; in magazzino" type="integer" preloaded="true"/>
       <SelectionField id="sv2#area3#page60#enu24#sfld56" name="Drug" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="sv2#area3#page60#enu24#ln176"/>
@@ -16,12 +16,12 @@
         <LinkParameter id="sv2#area3#page60#enu24#ln180#par901" name="PharmacistToPharmacy.oid_PASSING" sourceLinkParameter="sv2#area3#page60#seu49#ln174#par892" passing="true"/>
       </Link>
     </EntryUnit>
-    <GetUnit gr:x="440" gr:y="10" id="sv2#area3#page60#gtu5" name="GetPharmacist" contextParameters="UserCtxParam">
+    <GetUnit gr:x="440" gr:y="25" id="sv2#area3#page60#gtu5" name="GetPharmacist" contextParameters="UserCtxParam">
       <Link id="sv2#area3#page60#gtu5#ln172" name="Flow172" to="sv2#area3#page60#seu49" type="transport" validate="true">
         <LinkParameter id="sv2#area3#page60#gtu5#ln172#par885" name="UserCtxParam.cf_cf" source="sv2#area3#page60#gtu5.UserCtxParam" target="sv2#area3#page60#seu49#su72#acond58"/>
       </Link>
     </GetUnit>
-    <SelectorUnit gr:x="195" gr:y="0" id="sv2#area3#page60#seu49" name="SelezionaFarmacia" entity="ent1" distinctAttributes="rel15#role30.ent19#att43">
+    <SelectorUnit gr:x="250" gr:y="0" id="sv2#area3#page60#seu49" name="SelezionaFarmacia" entity="ent1" distinctAttributes="rel15#role30.ent19#att43">
       <Selector id="sv2#area3#page60#seu49#su72" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv2#area3#page60#seu49#su72#acond58" name="cf" predicate="eq" booleanOperator="and" implied="false" attributes="rel22#role44.userOID"/>
       </Selector>
@@ -30,13 +30,13 @@
         <LinkParameter id="sv2#area3#page60#seu49#ln174#par892" name="PharmacistToPharmacy.oid_PASSING" source="rel15#role30_ent19#att42Array" passing="true"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit gr:x="20" gr:y="140" id="sv2#area3#page60#seu50" name="Drug" entity="ent2">
+    <SelectorUnit gr:x="20" gr:y="155" id="sv2#area3#page60#seu50" name="Drug" entity="ent2">
       <Link id="sv2#area3#page60#seu50#ln175" name="Flow175" to="sv2#area3#page60#enu24" type="transport" validate="true">
         <LinkParameter id="sv2#area3#page60#seu50#ln175#par887" name="name_Drug [label]" source="ent2#att8Array" target="sv2#area3#page60#enu24#sfld56_label"/>
         <LinkParameter id="sv2#area3#page60#seu50#ln175#par888" name="id_Drug [output]" source="ent2#att6Array" target="sv2#area3#page60#enu24#sfld56_output"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit gr:x="145" gr:y="150" id="sv2#area3#page60#seu51" name="SelectorDrugQuantity" entity="ent21">
+    <SelectorUnit gr:x="145" gr:y="165" id="sv2#area3#page60#seu51" name="SelectorDrugQuantity" entity="ent21">
       <Selector id="sv2#area3#page60#seu51#su73" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv2#area3#page60#seu51#su73#acond59" name="PharmacyOid" predicate="eq" booleanOperator="and" implied="false" attributes="rel17#role34.ent19#att42"/>
         <AttributesCondition id="sv2#area3#page60#seu51#su73#acond60" name="drug" predicate="eq" booleanOperator="and" implied="false" attributes="rel23#role45.ent2#att6"/>

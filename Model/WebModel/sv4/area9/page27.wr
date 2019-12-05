@@ -1,7 +1,8 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area9#page27" name="Esiste paz" gr:x="980" gr:y="5">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area9#page27" name="Errore" gr:x="980" gr:y="10">
   <ContentUnits>
-    <MultiMessageUnit id="sv4#area9#page27#mssu5" name="existMessage" linkOrder="sv4#area9#page27#mssu5#ln46" gr:x="0" gr:y="0">
-      <Message xml:space="preserve">The CF and password inserted correspond to a patient yet!</Message>
+    <MultiMessageUnit id="sv4#area9#page27#mssu5" name="Errore di registrazione paziente" linkOrder="sv4#area9#page27#mssu5#ln46" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Attenzione!
+Il Codice Fiscale e la password sono gi&#224; associati ad un paziente all'interno del sistema!</Message>
       <Link id="sv4#area9#page27#mssu5#ln46" name="Return to Preregistration" to="sv4#area9#page8#mssu2" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="71,-124,1146,-44;78,-233,1153,-153;-1000,-268,75,-188"/>
     </MultiMessageUnit>
   </ContentUnits>

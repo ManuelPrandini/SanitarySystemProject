@@ -1,14 +1,14 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area12#page74" name="Search" landmark="false" gr:x="0" gr:y="0">
   <ContentUnits>
-    <EntryUnit id="sv3#area12#page74#enu9" name="Search drug in a pharmacy" gr:x="0" gr:y="10" fieldOrder="sv3#area12#page74#enu9#fld2 sv3#area12#page74#enu9#sfld1" ajaxEnableExpandedLinks="false" linkOrder="sv3#area12#page74#enu9#ln142">
+    <EntryUnit id="sv3#area12#page74#enu9" name="Cerca un farmaco " gr:x="0" gr:y="10" fieldOrder="sv3#area12#page74#enu9#fld2 sv3#area12#page74#enu9#sfld1" ajaxEnableExpandedLinks="false" linkOrder="sv3#area12#page74#enu9#ln142">
       <Field id="sv3#area12#page74#enu9#fld2" name="Drug" type="string" modifiable="true"/>
       <SelectionField id="sv3#area12#page74#enu9#sfld1" name="City" type="string" modifiable="true"/>
-      <Link id="sv3#area12#page74#enu9#ln142" name="Search" to="sv3#area12#seu52" type="normal" validate="true" gr:bendpoints="86,83,-14,-172">
+      <Link id="sv3#area12#page74#enu9#ln142" name="Cerca" to="sv3#area12#seu52" type="normal" validate="true" gr:bendpoints="86,83,-14,-172">
         <LinkParameter id="sv3#area12#page74#enu9#ln142#par490" name="City_cityPharmacy" source="sv3#area12#page74#enu9#sfld1" target="sv3#area12#seu52#su90#acond107"/>
         <LinkParameter id="sv3#area12#page74#enu9#ln142#par503" name="Drug_drug" source="sv3#area12#page74#enu9#fld2" target="sv3#area12#seu52#su90#acond108"/>
       </Link>
     </EntryUnit>
-    <PowerIndexUnit id="sv3#area12#page74#pwu3" name="Pharmacies that sell this drug" gr:x="250" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent21" computationMode="execute" ajaxTooltipEnabled="false" displayAttributes="ent21#att49 rel23#role45.ent2#att8 rel23#role45.ent2#att7 rel17#role34.ent19#att43 rel17#role34.ent19#att44 rel17#role34.ent19#att46">
+    <PowerIndexUnit id="sv3#area12#page74#pwu3" name="Farmacie che vendono il farmaco" gr:x="250" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent21" computationMode="execute" ajaxTooltipEnabled="false" displayAttributes="ent21#att49 rel23#role45.ent2#att8 rel23#role45.ent2#att7 rel17#role34.ent19#att43 rel17#role34.ent19#att44 rel17#role34.ent19#att46">
       <Selector id="sv3#area12#page74#pwu3#su81" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area12#page74#pwu3#su81#kcond33" name="oid" predicate="in" implied="false"/>
       </Selector>

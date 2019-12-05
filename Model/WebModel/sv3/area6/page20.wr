@@ -23,7 +23,7 @@
         <LinkParameter id="sv3#area6#page20#gtu6#ln58#par180" name="UserCtxParam.cf_cf" source="sv3#area6#page20#gtu6.UserCtxParam" target="sv3#area6#seu36#su69#acond70"/>
       </Link>
     </GetUnit>
-    <EntryUnit gr:x="0" gr:y="0" id="sv3#area6#page20#enu15" name="BookingVisit" fieldOrder="sv3#area6#page20#enu15#sfld4 sv3#area6#page20#enu15#sfld5 sv3#area6#page20#enu15#sfld6 sv3#area6#page20#enu15#sfld7 sv3#area6#page20#enu15#fld24 sv3#area6#page20#enu15#sfld8" ajaxEnableExpandedLinks="false" linkOrder="sv3#area6#page20#enu15#ln61 sv3#area6#page20#enu15#ln62 sv3#area6#page20#enu15#ln63 sv3#area6#page20#enu15#ln68 sv3#area6#page20#enu15#ln36">
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#area6#page20#enu15" name="Form di prenotazione visita" fieldOrder="sv3#area6#page20#enu15#sfld4 sv3#area6#page20#enu15#sfld5 sv3#area6#page20#enu15#sfld6 sv3#area6#page20#enu15#sfld7 sv3#area6#page20#enu15#fld24 sv3#area6#page20#enu15#sfld8" ajaxEnableExpandedLinks="false" linkOrder="sv3#area6#page20#enu15#ln61 sv3#area6#page20#enu15#ln62 sv3#area6#page20#enu15#ln63 sv3#area6#page20#enu15#ln68 sv3#area6#page20#enu15#ln36">
       <SelectionField id="sv3#area6#page20#enu15#sfld4" name="City" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="sv3#area6#page20#enu15#ln61" ajaxEventIndicator="true"/>
       <SelectionField id="sv3#area6#page20#enu15#sfld8" name="Time" type="time" modifiable="true" ajaxEventEnabled="false" ajaxEventIndicator="true" ajaxEventLink="sv3#area6#page20#enu15#ln36"/>
       <Field id="sv3#area6#page20#enu15#fld24" name="Date" type="date" modifiable="true" ajaxEventEnabled="true" ajaxEventIndicator="true" ajaxEventLink="sv3#area6#page20#enu15#ln68"/>
@@ -44,7 +44,7 @@
         <LinkParameter id="sv3#area6#page20#enu15#ln68#par188" name="Date_Date" source="sv3#area6#page20#enu15#fld24" target="sv3#area6#seu37#su70#acond86"/>
         <LinkParameter id="sv3#area6#page20#enu15#ln68#par189" name="Doctor_Doctor" source="sv3#area6#page20#enu15#sfld7" target="sv3#area6#seu37#su70#acond81"/>
       </Link>
-      <Link id="sv3#area6#page20#enu15#ln36" name="Salva visita" to="sv3#area6#scu4" type="normal" validate="true">
+      <Link id="sv3#area6#page20#enu15#ln36" name="Prenota" to="sv3#area6#scu4" type="normal" validate="true">
         <LinkParameter id="sv3#area6#page20#enu15#ln36#par110" name="Time_startTime" source="sv3#area6#page20#enu15#sfld8" target="sv3#area6#scu4.startTime"/>
         <LinkParameter id="sv3#area6#page20#enu15#ln36#par172" name="Date_PASSING" source="sv3#area6#page20#enu15#fld24" passing="true"/>
         <LinkParameter id="sv3#area6#page20#enu15#ln36#par173" name="Doctor_PASSING" source="sv3#area6#page20#enu15#sfld7" passing="true"/>
