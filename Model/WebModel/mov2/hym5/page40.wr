@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym5#page40" name="Cartella Clinica" landmark="true" gr:x="380" gr:y="-70">
   <ContentUnits>
-    <EntryUnit id="mov2#hym5#page40#enu21" name="Periodo di interesse" gr:x="0" gr:y="290" fieldOrder="mov2#hym5#page40#enu21#fld108 mov2#hym5#page40#enu21#fld109 mov2#hym5#page40#enu21#fld111 mov2#hym5#page40#enu21#sfld26" linkOrder="mov2#hym5#page40#enu21#ln128">
+    <EntryUnit id="mov2#hym5#page40#enu21" name="Periodo di interesse" gr:x="0" gr:y="290" fieldOrder="mov2#hym5#page40#enu21#fld108 mov2#hym5#page40#enu21#fld109 mov2#hym5#page40#enu21#sfld26" linkOrder="mov2#hym5#page40#enu21#ln128">
       <Field id="mov2#hym5#page40#enu21#fld108" name="StartDate" type="date" modifiable="true">
         <VRules>
           <CompareValidationRule id="mov2#hym5#page40#enu21#fld108#cmp13" name="Today" predicate="lteq" value="today()"/>
@@ -12,16 +12,14 @@
           <CompareValidationRule id="mov2#hym5#page40#enu21#fld109#cmp15" name="CompareWithStart" predicate="gteq" valueField="mov2#hym5#page40#enu21#fld108"/>
         </VRules>
       </Field>
-      <Field id="mov2#hym5#page40#enu21#fld111" name="Patient" type="string" preloaded="true"/>
-      <SelectionField id="mov2#hym5#page40#enu21#sfld26" name="Cosa vuoi vedere?" type="string">
+      <SelectionField id="mov2#hym5#page40#enu21#sfld26" name="Cosa vuoi vedere?" type="string" slotOrder="mov2#hym5#page40#enu21#sfld26#slot6">
         <Slot id="mov2#hym5#page40#enu21#sfld26#slot6" name="Scelte" label="true" output="true" value="Visite|Ricoveri|ProntoSoccorso|Interventi"/>
       </SelectionField>
       <Link id="mov2#hym5#page40#enu21#ln128" name="Procedi" to="mov2#hym5#switch9" type="normal" validate="true" gr:bendpoints="-28,172,-128,-98">
         <LinkParameter id="mov2#hym5#page40#enu21#ln128#par582" name="Cosa vuoi vedere?_Switch" source="mov2#hym5#page40#enu21#sfld26" target="mov2#hym5#switch9.switch"/>
-        <LinkParameter id="mov2#hym5#page40#enu21#ln128#par583" name="Doctor_PASSING" source="mov2#hym5#page40#enu21#fld110" passing="true"/>
         <LinkParameter id="mov2#hym5#page40#enu21#ln128#par584" name="EndDate_PASSING" source="mov2#hym5#page40#enu21#fld109" passing="true"/>
-        <LinkParameter id="mov2#hym5#page40#enu21#ln128#par585" name="Patient_PASSING" source="mov2#hym5#page40#enu21#fld111" passing="true"/>
         <LinkParameter id="mov2#hym5#page40#enu21#ln128#par586" name="StartDate_PASSING" source="mov2#hym5#page40#enu21#fld108" passing="true"/>
+        <LinkParameter id="mov2#hym5#page40#enu21#ln128#par162" name="PatientCF_PASSING" sourceLinkParameter="mov2#hym5#icu24#oln122#par161" passing="true"/>
       </Link>
     </EntryUnit>
     <PowerIndexUnit id="mov2#hym5#page40#pwu15" name="Lista visite" linkOrder="mov2#hym5#page40#pwu15#ln97" gr:x="215" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent29" displayAttributes="ent5#att22 ent5#att24 ent5#att25 ent5#att3 ent5#att10 ent5#att23 rel11#role16.rel14#role28.userOID">
@@ -84,7 +82,6 @@
           <layout:Link link="mov2#hym5#page40#enu21#ln128"/>
           <layout:Field field="mov2#hym5#page40#enu21#fld108"/>
           <layout:Field field="mov2#hym5#page40#enu21#fld109"/>
-          <layout:Field field="mov2#hym5#page40#enu21#fld111"/>
           <layout:Field field="mov2#hym5#page40#enu21#sfld26"/>
         </layout:Unit>
       </layout:Cell>

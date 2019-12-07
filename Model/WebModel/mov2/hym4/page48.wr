@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1160" gr:y="-30" id="mov2#hym4#page48" name="SceltaRicovero">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page48#mssu17" name="Vuoi programmare un ricovero" linkOrder="mov2#hym4#page48#mssu17#ln129 mov2#hym4#page48#mssu17#ln131">
+    <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page48#mssu17" name="Vuoi programmare un ricovero" linkOrder="mov2#hym4#page48#mssu17#ln129 mov2#hym4#page48#mssu17#ln179">
       <Message xml:space="preserve">Vuoi programmare un ricovero?</Message>
       <Link id="mov2#hym4#page48#mssu17#ln129" name="Si" to="mov2#hym4#page69#enu1" type="normal" validate="true">
         <LinkParameter id="mov2#hym4#page48#mssu17#ln129#par980" name="nameHospital_PASSING_Ospedale" sourceLinkParameter="mov2#hym4#pcu4#oln164#par978" target="mov2#hym4#page69#enu1#fld3_slot"/>
@@ -9,12 +9,7 @@
         <LinkParameter id="mov2#hym4#page48#mssu17#ln129#par983" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#pcu4#oln164#par979" passing="true"/>
         <LinkParameter id="mov2#hym4#page48#mssu17#ln129#par567" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#pcu4#oln164#par978" passing="true"/>
       </Link>
-      <Link id="mov2#hym4#page48#mssu17#ln131" name="No" to="mov2#hym4#pcu1" type="normal" validate="true">
-        <LinkParameter id="mov2#hym4#page48#mssu17#ln131#par150" name="doctorCode_PASSING_doctorCode" sourceLinkParameter="mov2#hym4#pcu4#oln164#par976" target="mov2#hym4#pcu1#pcp4"/>
-        <LinkParameter id="mov2#hym4#page48#mssu17#ln131#par152" name="idHospital_PASSING_idHospital" sourceLinkParameter="mov2#hym4#pcu4#oln164#par977" target="mov2#hym4#pcu1#pcp5"/>
-        <LinkParameter id="mov2#hym4#page48#mssu17#ln131#par191" name="nameHospital_PASSING_nameHospital" sourceLinkParameter="mov2#hym4#pcu4#oln164#par978" target="mov2#hym4#pcu1#pcp1"/>
-        <LinkParameter id="mov2#hym4#page48#mssu17#ln131#par192" name="patientCode_PASSING_patientCode" sourceLinkParameter="mov2#hym4#pcu4#oln164#par979" target="mov2#hym4#pcu1#pcp2"/>
-      </Link>
+      <Link id="mov2#hym4#page48#mssu17#ln179" name="No" to="mov2#hym4#okcu18" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="649,19,-411,-227"/>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -22,7 +17,7 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov2#hym4#page48#mssu17">
           <layout:Link link="mov2#hym4#page48#mssu17#ln129"/>
-          <layout:Link link="mov2#hym4#page48#mssu17#ln131"/>
+          <layout:Link link="mov2#hym4#page48#mssu17#ln179"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

@@ -48,8 +48,8 @@
         <LinkParameter id="sv3#area6#page20#enu15#ln36#par110" name="Time_startTime" source="sv3#area6#page20#enu15#sfld8" target="sv3#area6#scu4.startTime"/>
         <LinkParameter id="sv3#area6#page20#enu15#ln36#par172" name="Date_PASSING" source="sv3#area6#page20#enu15#fld24" passing="true"/>
         <LinkParameter id="sv3#area6#page20#enu15#ln36#par173" name="Doctor_PASSING" source="sv3#area6#page20#enu15#sfld7" passing="true"/>
-        <LinkParameter id="sv3#area6#page20#enu15#ln36#par185" name="DoctorToRoom.id_room_PASSING" sourceLinkParameter="sv3#area6#seu36#oln140#par756" passing="true"/>
         <LinkParameter id="sv3#area6#page20#enu15#ln36#par186" name="Time_PASSING" source="sv3#area6#page20#enu15#sfld8" passing="true"/>
+        <LinkParameter id="sv3#area6#page20#enu15#ln36#par201" name="id_room_PASSING" sourceLinkParameter="sv3#area6#seu90#oln3#par196" passing="true"/>
       </Link>
     </EntryUnit>
   </ContentUnits>

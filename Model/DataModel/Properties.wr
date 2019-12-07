@@ -293,12 +293,12 @@
       <db:JoinColumn attribute="ent36#att78" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="210" gr:y="340" id="ent37" name="Sell" duration="persistent" attributeOrder="ent37#att82 ent37#att83 ent37#att84" db:database="db2" db:table="assignement">
+  <Entity gr:x="210" gr:y="340" id="ent37" name="Sell" duration="persistent" attributeOrder="ent37#att82 ent37#att83 ent37#att84" db:database="db2" db:table="sell">
     <Attribute id="ent37#att82" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent37#att83" name="quantity" type="integer" db:column="quantity"/>
     <Attribute id="ent37#att84" name="date" type="timestamp" db:column="date"/>
   </Entity>
-  <Relationship id="rel32" name="Pharmacist_Assignement" sourceEntity="ent1" targetEntity="ent37" db:database="db2" db:table="assignement">
+  <Relationship id="rel32" name="Pharmacist_Assignement" sourceEntity="ent1" targetEntity="ent37" db:database="db2" db:table="sell">
     <RelationshipRole1 id="rel32#role63" name="PharmacistToAssignement" maxCard="N">
       <db:JoinColumn attribute="ent1#att32" name="pharmacist_pharmacist_code"/>
     </RelationshipRole1>
@@ -308,7 +308,7 @@
   </Relationship>
   <Relationship id="rel33" name="Assignement_Drug_Prescription" sourceEntity="ent7" targetEntity="ent36" db:database="db2" db:table="with_prescription">
     <RelationshipRole1 id="rel33#role65" name="AssignementToDrug_Prescription" maxCard="1">
-      <db:JoinColumn attribute="ent37#att82" name="assignement_oid"/>
+      <db:JoinColumn attribute="ent37#att82" name="sell_oid"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel33#role66" name="Drug_PrescriptionToAssignement" maxCard="N">
       <db:JoinColumn attribute="ent36#att78" name="drug_prescription_oid"/>
@@ -325,12 +325,12 @@
   </Entity>
   <Entity gr:x="195" gr:y="480" id="ent7" name="With_Prescription" duration="persistent" db:database="db2" db:table="with_prescription">
     <Generalization superEntity="ent37">
-      <db:JoinColumn attribute="ent37#att82" name="assignement_oid"/>
+      <db:JoinColumn attribute="ent37#att82" name="sell_oid"/>
     </Generalization>
   </Entity>
   <Entity gr:x="440" gr:y="335" id="ent15" name="Without_Prescription" duration="persistent" db:database="db2" db:table="without_prescription">
     <Generalization superEntity="ent37">
-      <db:JoinColumn attribute="ent37#att82" name="assignement_oid"/>
+      <db:JoinColumn attribute="ent37#att82" name="sell_oid"/>
     </Generalization>
   </Entity>
   <Relationship id="rel19" name="Patient_Without_Prescription" sourceEntity="ent6" targetEntity="ent15" db:database="db2" db:table="without_prescription">
@@ -338,7 +338,7 @@
       <db:JoinColumn attribute="ent6#att11" name="patient_patient_code"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel19#role38" name="Without_PrescriptionToPatient" maxCard="1">
-      <db:JoinColumn attribute="ent37#att82" name="assignement_oid"/>
+      <db:JoinColumn attribute="ent37#att82" name="sell_oid"/>
     </RelationshipRole2>
   </Relationship>
   <Relationship id="rel25" name="Drug_Without_Prescription" sourceEntity="ent2" targetEntity="ent15" gr:bendpoints="321,-190,-114,250" db:database="db2" db:table="without_prescription">
@@ -346,20 +346,14 @@
       <db:JoinColumn attribute="ent2#att6" name="drug_id"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel25#role50" name="Without_PrescriptionToDrug" maxCard="1">
-      <db:JoinColumn attribute="ent37#att82" name="assignement_oid"/>
+      <db:JoinColumn attribute="ent37#att82" name="sell_oid"/>
     </RelationshipRole2>
   </Relationship>
   <Entity gr:x="1395" gr:y="575" id="ent16" name="Emergency_Room" duration="persistent" db:database="db2" db:table="emergency_room">
-    <Attribute id="ent16#att35" key="true" name="oid" type="integer" db:column="oid"/>
+    <Generalization superEntity="ent10">
+      <db:JoinColumn attribute="ent10#att5" name="room_id_room"/>
+    </Generalization>
   </Entity>
-  <Relationship id="rel26" name="Hospital_Emergency_Room" sourceEntity="ent4" targetEntity="ent16" db:database="db2" db:table="emergency_room">
-    <RelationshipRole1 id="rel26#role51" name="HospitalToEmergency_Room" maxCard="1">
-      <db:JoinColumn attribute="ent4#att1" name="hospital_id_hospital"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel26#role52" name="Emergency_RoomToHospital" maxCard="1">
-      <db:JoinColumn attribute="ent16#att35" name="oid"/>
-    </RelationshipRole2>
-  </Relationship>
   <Entity gr:x="335" gr:y="660" id="ent17" name="Emergency_operation" duration="persistent" db:database="db2" db:table="emergency_operation">
     <Generalization superEntity="ent5">
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
@@ -381,7 +375,7 @@
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel35#role70" name="Emergency_RoomToEmergency_operation" maxCard="N">
-      <db:JoinColumn attribute="ent16#att35" name="emergency_room_oid"/>
+      <db:JoinColumn attribute="ent10#att5" name="emergency_room_id_room"/>
     </RelationshipRole2>
   </Relationship>
   <Relationship id="rel14" name="User_Patient" sourceEntity="User" targetEntity="ent6" db:database="db2" db:table="patient">

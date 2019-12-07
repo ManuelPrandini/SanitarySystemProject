@@ -1,0 +1,25 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2875" gr:y="175" id="mov2#hym4#page92" name="Orario selezionato errato">
+  <ContentUnits>
+    <MultiMessageUnit id="mov2#hym4#page92#mssu51" name="Errore" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Nell'orario selezionato la sala operatoria &#232; gi&#224; occupata da un altro intervento!</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym4#page92#mssu51"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

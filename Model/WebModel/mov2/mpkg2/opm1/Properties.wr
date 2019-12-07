@@ -101,6 +101,7 @@
         <LinkParameter id="mov2#mpkg2#opm1#switch5#oln55#par1220" name="telephone_PASSING" sourceLinkParameter="mov2#mpkg2#opm1#icu1#oln53#par1135" passing="true"/>
         <LinkParameter id="mov2#mpkg2#opm1#switch5#oln55#par1221" name="username_PASSING" sourceLinkParameter="mov2#mpkg2#opm1#icu1#oln53#par1136" passing="true"/>
         <LinkParameter id="mov2#mpkg2#opm1#switch5#oln55#par1222" name="visit_room_PASSING" sourceLinkParameter="mov2#mpkg2#opm1#icu1#oln53#par1137" passing="true"/>
+        <LinkParameter id="mov2#mpkg2#opm1#switch5#oln55#par157" name="group_oid_PASSING_Group.oid(groups)" sourceLinkParameter="mov2#mpkg2#opm1#icu1#oln53#par1127" target="mov2#mpkg2#opm1#cru5.User2Group.groupOID"/>
       </OKLink>
     </SwitchUnit>
     <CreateUnit gr:x="735" gr:y="20" id="mov2#mpkg2#opm1#cru4" name="CreateDoctor" entity="ent9">

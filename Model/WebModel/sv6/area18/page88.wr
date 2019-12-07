@@ -1,0 +1,92 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv6#area18#page88" name="Registra Pronto Soccorso" linkVisibilityPolicy="hide">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv6#area18#page88#enu28" name="Inserisci dati dell'intervento" fieldOrder="sv6#area18#page88#enu28#fld110 sv6#area18#page88#enu28#fld106 sv6#area18#page88#enu28#sfld9 sv6#area18#page88#enu28#fld111 sv6#area18#page88#enu28#fld112 sv6#area18#page88#enu28#fld113 sv6#area18#page88#enu28#fld114" linkOrder="sv6#area18#page88#enu28#ln153">
+      <Field id="sv6#area18#page88#enu28#fld106" name="CF paziente" type="string" modifiable="true"/>
+      <Field id="sv6#area18#page88#enu28#fld114" name="descrizione" type="text" modifiable="true"/>
+      <Field id="sv6#area18#page88#enu28#fld113" name="titolo" type="string" modifiable="true"/>
+      <Field id="sv6#area18#page88#enu28#fld112" name="ora fine" type="time" modifiable="true"/>
+      <Field id="sv6#area18#page88#enu28#fld111" name="ora inizio" type="time" modifiable="true"/>
+      <SelectionField id="sv6#area18#page88#enu28#sfld9" name="codice intervento" type="string" modifiable="true"/>
+      <Field id="sv6#area18#page88#enu28#fld110" name="data " type="date" preloaded="true"/>
+      <Link id="sv6#area18#page88#enu28#ln153" name="Registra" to="sv6#area18#seu84" type="normal" validate="true" gr:bendpoints="364,52,-166,-83">
+        <LinkParameter id="sv6#area18#page88#enu28#ln153#par1199" name="CF paziente_cf" source="sv6#area18#page88#enu28#fld106" target="sv6#area18#seu84#su131#acond134"/>
+        <LinkParameter id="sv6#area18#page88#enu28#ln153#par1200" name="CF paziente_PASSING" source="sv6#area18#page88#enu28#fld106" passing="true"/>
+        <LinkParameter id="sv6#area18#page88#enu28#ln153#par1201" name="codice intervento_PASSING" source="sv6#area18#page88#enu28#sfld9" passing="true"/>
+        <LinkParameter id="sv6#area18#page88#enu28#ln153#par1202" name="data _PASSING" source="sv6#area18#page88#enu28#fld110" passing="true"/>
+        <LinkParameter id="sv6#area18#page88#enu28#ln153#par1271" name="descrizione_PASSING" source="sv6#area18#page88#enu28#fld114" passing="true"/>
+        <LinkParameter id="sv6#area18#page88#enu28#ln153#par1272" name="doctor_code_PASSING" sourceLinkParameter="sv6#area18#page88#seu83#ln151#par1004" passing="true"/>
+        <LinkParameter id="sv6#area18#page88#enu28#ln153#par1273" name="DoctorToRoom.id_room_PASSING" sourceLinkParameter="sv6#area18#page88#seu83#ln151#par1050" passing="true"/>
+        <LinkParameter id="sv6#area18#page88#enu28#ln153#par1274" name="ora fine_PASSING" source="sv6#area18#page88#enu28#fld112" passing="true"/>
+        <LinkParameter id="sv6#area18#page88#enu28#ln153#par1275" name="ora inizio_PASSING" source="sv6#area18#page88#enu28#fld111" passing="true"/>
+        <LinkParameter id="sv6#area18#page88#enu28#ln153#par1276" name="titolo_PASSING" source="sv6#area18#page88#enu28#fld113" passing="true"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="110" gr:y="120" id="sv6#area18#page88#seu82" name="CodiceIntervento" entity="ent18">
+      <Link id="sv6#area18#page88#seu82#ln64" name="Flow64" to="sv6#area18#page88#enu28" type="transport" validate="true">
+        <LinkParameter id="sv6#area18#page88#seu82#ln64#par991" name="code_codice intervento [label]" source="ent18#att38Array" target="sv6#area18#page88#enu28#sfld9_label"/>
+        <LinkParameter id="sv6#area18#page88#seu82#ln64#par992" name="code_codice intervento [output]" source="ent18#att38Array" target="sv6#area18#page88#enu28#sfld9_output"/>
+      </Link>
+    </SelectorUnit>
+    <TimeUnit gr:x="5" gr:y="100" id="sv6#area18#page88#tmu4" name="dataOggi">
+      <Link id="sv6#area18#page88#tmu4#ln108" name="Flow108" to="sv6#area18#page88#enu28" type="transport" validate="true">
+        <LinkParameter id="sv6#area18#page88#tmu4#ln108#par994" name="Current/Input Date_data " source="currentDate" target="sv6#area18#page88#enu28#fld110_slot"/>
+      </Link>
+    </TimeUnit>
+    <SelectorUnit gr:x="275" gr:y="115" id="sv6#area18#page88#seu83" name="InfoDottoreEemergencyRoom" entity="ent9" distinctAttributes="ent9#att33 rel5#role19.ent10#att5">
+      <Selector id="sv6#area18#page88#seu83#su130" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv6#area18#page88#seu83#su130#acond133" name="cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel36#role72.userOID"/>
+      </Selector>
+      <Link id="sv6#area18#page88#seu83#ln151" name="Flow151" to="sv6#area18#page88#enu28" type="transport" validate="true">
+        <LinkParameter id="sv6#area18#page88#seu83#ln151#par1004" name="doctor_code_PASSING" source="ent9#att33Array" passing="true"/>
+        <LinkParameter id="sv6#area18#page88#seu83#ln151#par1050" name="DoctorToRoom.id_room_PASSING" source="rel5#role19$ent10#att5Array" passing="true"/>
+      </Link>
+    </SelectorUnit>
+    <GetUnit gr:x="305" gr:y="235" id="sv6#area18#page88#gtu15" name="RecuperoDottoreCF" contextParameters="UserCtxParam">
+      <Link id="sv6#area18#page88#gtu15#ln112" name="Flow112" to="sv6#area18#page88#seu83" type="transport" validate="true">
+        <LinkParameter id="sv6#area18#page88#gtu15#ln112#par995" name="UserCtxParam.cf_PASSING" source="sv6#area18#page88#gtu15.UserCtxParam" passing="true"/>
+        <LinkParameter id="sv6#area18#page88#gtu15#ln112#par1003" name="UserCtxParam.cf_cf" source="sv6#area18#page88#gtu15.UserCtxParam" target="sv6#area18#page88#seu83#su130#acond133"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#area18#page88#enu28">
+          <layout:Field field="sv6#area18#page88#enu28#fld110"/>
+          <layout:Field field="sv6#area18#page88#enu28#fld106"/>
+          <layout:Field field="sv6#area18#page88#enu28#sfld9"/>
+          <layout:Field field="sv6#area18#page88#enu28#fld111"/>
+          <layout:Field field="sv6#area18#page88#enu28#fld112"/>
+          <layout:Field field="sv6#area18#page88#enu28#fld113"/>
+          <layout:Field field="sv6#area18#page88#enu28#fld114"/>
+          <layout:Link link="sv6#area18#page88#enu28#ln153"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

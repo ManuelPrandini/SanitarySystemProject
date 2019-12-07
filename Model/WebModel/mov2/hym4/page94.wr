@@ -1,0 +1,25 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2730" gr:y="900" id="mov2#hym4#page94" name="Errore selezione data" layout:pageLayout="MetroStyle/Empty">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page94#mssu52" name="Errore">
+      <Message xml:space="preserve">Il paziente non &#232; ricoverato nella seguente data.</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym4#page94#mssu52"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

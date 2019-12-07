@@ -1,0 +1,98 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2550" gr:y="490" id="mov2#hym4#page91" name="Registra intervento" layout:pageLayout="MetroStyle/Login">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="10" id="mov2#hym4#page91#enu30" name="Info intervento" fieldOrder="mov2#hym4#page91#enu30#fld107 mov2#hym4#page91#enu30#fld115 mov2#hym4#page91#enu30#fld126 mov2#hym4#page91#enu30#fld127 mov2#hym4#page91#enu30#fld128 mov2#hym4#page91#enu30#fld129 mov2#hym4#page91#enu30#sfld10" linkOrder="mov2#hym4#page91#enu30#ln194 mov2#hym4#page91#enu30#ln200">
+      <SelectionField id="mov2#hym4#page91#enu30#sfld10" name="sala operatoria" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym4#page91#enu30#ln194" ajaxEventIndicator="true"/>
+      <Field id="mov2#hym4#page91#enu30#fld129" name="orario fine" type="time" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="mov2#hym4#page91#enu30#fld129#cmp12" name="&gt; oraInizio" predicate="gt" valueField="mov2#hym4#page91#enu30#fld128" errorMessage="L'orario di fine deve essere maggiore dell'orario di inizio dell'intervento"/>
+        </VRules>
+      </Field>
+      <Field id="mov2#hym4#page91#enu30#fld128" name="orario inizio" type="time" modifiable="true">
+        <VRules/>
+      </Field>
+      <Field id="mov2#hym4#page91#enu30#fld127" name="descrizione" type="text" modifiable="true"/>
+      <Field id="mov2#hym4#page91#enu30#fld126" name="titolo" type="string" modifiable="true"/>
+      <Field id="mov2#hym4#page91#enu30#fld115" name="paziente" type="string" preloaded="true"/>
+      <Field id="mov2#hym4#page91#enu30#fld107" name="data intervento" type="date" preloaded="true"/>
+      <Link id="mov2#hym4#page91#enu30#ln194" name="Registra" to="mov2#hym4#seu89" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page91#enu30#ln194#par1379" name="data intervento_data" source="mov2#hym4#page91#enu30#fld107" target="mov2#hym4#seu89#su138#acond153"/>
+        <LinkParameter id="mov2#hym4#page91#enu30#ln194#par1386" name="sala operatoria_sala_operatoria" source="mov2#hym4#page91#enu30#sfld10" target="mov2#hym4#seu89#su138#acond152"/>
+        <LinkParameter id="mov2#hym4#page91#enu30#ln194#par667" name="orario inizio_endTime" source="mov2#hym4#page91#enu30#fld128" target="mov2#hym4#seu89#su138#acond168"/>
+        <LinkParameter id="mov2#hym4#page91#enu30#ln194#par668" name="orario fine_endTimeSecond" source="mov2#hym4#page91#enu30#fld129" target="mov2#hym4#seu89#su138#acond171"/>
+        <LinkParameter id="mov2#hym4#page91#enu30#ln194#par702" name="orario fine_endTimeThird" source="mov2#hym4#page91#enu30#fld129" target="mov2#hym4#seu89#su138#acond169"/>
+        <LinkParameter id="mov2#hym4#page91#enu30#ln194#par703" name="orario inizio_startTime" source="mov2#hym4#page91#enu30#fld128" target="mov2#hym4#seu89#su138#acond170"/>
+        <LinkParameter id="mov2#hym4#page91#enu30#ln194#par704" name="orario fine_startTimeSecond" source="mov2#hym4#page91#enu30#fld129" target="mov2#hym4#seu89#su138#acond167"/>
+        <LinkParameter id="mov2#hym4#page91#enu30#ln194#par705" name="orario inizio_startTimeThird" source="mov2#hym4#page91#enu30#fld128" target="mov2#hym4#seu89#su138#acond166"/>
+      </Link>
+      <Link id="mov2#hym4#page91#enu30#ln200" name="Registra" to="mov2#hym4#cru20" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page91#enu30#ln200#par1409" name="descrizione_description" source="mov2#hym4#page91#enu30#fld127" target="mov2#hym4#cru20.ent5#att10"/>
+        <LinkParameter id="mov2#hym4#page91#enu30#ln200#par1410" name="data intervento_endDate" source="mov2#hym4#page91#enu30#fld107" target="mov2#hym4#cru20.ent5#att23"/>
+        <LinkParameter id="mov2#hym4#page91#enu30#ln200#par1411" name="orario fine_endTime" source="mov2#hym4#page91#enu30#fld129" target="mov2#hym4#cru20.ent5#att25"/>
+        <LinkParameter id="mov2#hym4#page91#enu30#ln200#par1412" name="paziente_Patient.patient_code(VisitToPatient)" source="mov2#hym4#page91#enu30#fld115" target="mov2#hym4#cru20.rel11#role16.ent6#att11"/>
+        <LinkParameter id="mov2#hym4#page91#enu30#ln200#par1413" name="data intervento_startDate" source="mov2#hym4#page91#enu30#fld107" target="mov2#hym4#cru20.ent5#att22"/>
+        <LinkParameter id="mov2#hym4#page91#enu30#ln200#par1414" name="orario inizio_startTime" source="mov2#hym4#page91#enu30#fld128" target="mov2#hym4#cru20.ent5#att24"/>
+        <LinkParameter id="mov2#hym4#page91#enu30#ln200#par1415" name="sala operatoria_Surgery_Room.id_room(Clinical_SurgeryToSurgery_Room)" source="mov2#hym4#page91#enu30#sfld10" target="mov2#hym4#cru20.rel18#role35.ent10#att5"/>
+        <LinkParameter id="mov2#hym4#page91#enu30#ln200#par1416" name="titolo_title" source="mov2#hym4#page91#enu30#fld126" target="mov2#hym4#cru20.ent5#att3"/>
+        <LinkParameter id="mov2#hym4#page91#enu30#ln200#par1469" name="doctorCode_PASSING_Doctor.doctor_code(VisitToDoctor)" sourceLinkParameter="mov2#hym4#page91#seu88#ln193#par1466" target="mov2#hym4#cru20.rel3#role3.ent9#att33"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit id="mov2#hym4#page91#seu88" name="Sale operatorie dottore" gr:x="165" gr:y="90" entity="ent24">
+      <Selector id="mov2#hym4#page91#seu88#su137" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym4#page91#seu88#su137#acond151" name="doctor" predicate="eq" booleanOperator="or" implied="false" attributes="rel5#role20.ent9#att33"/>
+      </Selector>
+      <Link id="mov2#hym4#page91#seu88#ln193" name="Flow193" to="mov2#hym4#page91#enu30" type="transport" validate="true">
+        <LinkParameter id="mov2#hym4#page91#seu88#ln193#par1370" name="name_sala operatoria [label]" source="ent10#att50Array" target="mov2#hym4#page91#enu30#sfld10_label"/>
+        <LinkParameter id="mov2#hym4#page91#seu88#ln193#par1371" name="id_room_sala operatoria [output]" source="ent10#att5Array" target="mov2#hym4#page91#enu30#sfld10_output"/>
+        <LinkParameter id="mov2#hym4#page91#seu88#ln193#par1403" name="Selected Date_PASSING_data intervento" sourceLinkParameter="mov2#hym4#scu12#oln289#par1402" target="mov2#hym4#page91#enu30#fld107_slot"/>
+        <LinkParameter id="mov2#hym4#page91#seu88#ln193#par1463" name="patientCode_PASSING_paziente" sourceLinkParameter="mov2#hym4#scu12#oln289#par1462" target="mov2#hym4#page91#enu30#fld115_slot"/>
+        <LinkParameter id="mov2#hym4#page91#seu88#ln193#par1464" name="dataFine_PASSING" sourceLinkParameter="mov2#hym4#scu12#oln289#par1458" passing="true"/>
+        <LinkParameter id="mov2#hym4#page91#seu88#ln193#par1465" name="dataInizio_PASSING" sourceLinkParameter="mov2#hym4#scu12#oln289#par1459" passing="true"/>
+        <LinkParameter id="mov2#hym4#page91#seu88#ln193#par1466" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#scu12#oln289#par1460" passing="true"/>
+        <LinkParameter id="mov2#hym4#page91#seu88#ln193#par1467" name="id_room_PASSING" sourceLinkParameter="mov2#hym4#scu12#oln289#par1461" passing="true"/>
+        <LinkParameter id="mov2#hym4#page91#seu88#ln193#par1468" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#scu12#oln289#par1462" passing="true"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym4#page91#enu30">
+          <layout:Field field="mov2#hym4#page91#enu30#fld107"/>
+          <layout:Field field="mov2#hym4#page91#enu30#fld115"/>
+          <layout:Field field="mov2#hym4#page91#enu30#fld126"/>
+          <layout:Field field="mov2#hym4#page91#enu30#fld127"/>
+          <layout:Field field="mov2#hym4#page91#enu30#fld128"/>
+          <layout:Field field="mov2#hym4#page91#enu30#fld129"/>
+          <layout:Field field="mov2#hym4#page91#enu30#sfld10"/>
+          <layout:Link link="mov2#hym4#page91#enu30#ln194"/>
+          <layout:Link link="mov2#hym4#page91#enu30#ln200"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

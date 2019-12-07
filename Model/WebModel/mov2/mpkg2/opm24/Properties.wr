@@ -6,7 +6,7 @@
       <OKLink id="mov2#mpkg2#opm24#icu29#oln276" name="OKFlow276" to="mov2#mpkg2#opm24#scu11">
         <LinkParameter id="mov2#mpkg2#opm24#icu29#oln276#par158" name="id_hospital_PASSING" source="mov2#mpkg2#opm24#icu29#icp137" passing="true"/>
         <LinkParameter id="mov2#mpkg2#opm24#icu29#oln276#par159" name="medical_specializzation_PASSING" source="mov2#mpkg2#opm24#icu29#icp138" passing="true"/>
-        <LinkParameter id="mov2#mpkg2#opm24#icu29#oln276#par160" name="medical_specializzation_medical_specializzation" source="mov2#mpkg2#opm24#icu29#icp138" target="mov2#mpkg2#opm24#scu11.medical_specializzation"/>
+        <LinkParameter id="mov2#mpkg2#opm24#icu29#oln276#par598" name="medical_specialization_medical_specialization" source="mov2#mpkg2#opm24#icu29#icp138" target="mov2#mpkg2#opm24#scu11.medical_specialization"/>
       </OKLink>
     </InputCollectorUnit>
     <SelectorUnit id="mov2#mpkg2#opm24#seu78" name="SelectorRoom" gr:x="740" gr:y="130" entity="ent23">
@@ -28,9 +28,9 @@
       </OKLink>
     </SelectorUnit>
     <ScriptUnit gr:x="420" gr:y="135" id="mov2#mpkg2#opm24#scu11" name="CheckMedicalSpecialization">
-      <ScriptUnitText xml:space="preserve">#input medical_specializzation
+      <ScriptUnitText xml:space="preserve">#input medical_specialization
 
-if( medical_specializzation == "pronto soccorso" )
+if( medical_specialization == "pronto soccorso" )
 	return [resultCode:"error"];
 else
 	return [resultCode:"success"];</ScriptUnitText>
@@ -45,11 +45,11 @@ else
     </ScriptUnit>
     <SelectorUnit gr:x="465" gr:y="265" id="mov2#mpkg2#opm24#seu80" name="SelectEmergencyRoom" entity="ent16">
       <Selector id="mov2#mpkg2#opm24#seu80#su128" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="mov2#mpkg2#opm24#seu80#su128#acond132" name="AttCondition132" predicate="eq" booleanOperator="or" implied="false" attributes="rel26#role52.ent4#att1"/>
+        <AttributesCondition id="mov2#mpkg2#opm24#seu80#su128#acond132" name="hospital" predicate="eq" booleanOperator="or" implied="false" attributes="rel37#role74.ent4#att1"/>
       </Selector>
       <OKLink id="mov2#mpkg2#opm24#seu80#oln279" name="OKFlow279" to="mov2#mpkg2#opm24#okcu27" gr:bendpoints="389,-32,-251,128">
-        <LinkParameter id="mov2#mpkg2#opm24#seu80#oln279#par166" name="oid_id_room" source="ent16#att35Array" target="mov2#mpkg2#opm24#okcu27#ocp29"/>
-        <LinkParameter id="mov2#mpkg2#opm24#seu80#oln279#par167" name="oid_label_room" source="ent16#att35Array" target="mov2#mpkg2#opm24#okcu27#ocp28"/>
+        <LinkParameter id="mov2#mpkg2#opm24#seu80#oln279#par166" name="oid_id_room" source="ent10#att5Array" target="mov2#mpkg2#opm24#okcu27#ocp29"/>
+        <LinkParameter id="mov2#mpkg2#opm24#seu80#oln279#par167" name="oid_label_room" source="ent10#att50Array" target="mov2#mpkg2#opm24#okcu27#ocp28"/>
       </OKLink>
     </SelectorUnit>
     <OKCollectorUnit gr:x="1115" gr:y="110" id="mov2#mpkg2#opm24#okcu27" name="OK Port27">

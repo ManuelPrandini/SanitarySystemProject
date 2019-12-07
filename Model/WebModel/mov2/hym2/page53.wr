@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1850" gr:y="100" id="mov2#hym2#page53" name="In Attesa Farmacista">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1990" gr:y="100" id="mov2#hym2#page53" name="In Attesa Farmacista">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym2#page53#mssu29" name="Attesa">
       <Message xml:space="preserve">Il tuo account come Farmacista &#232; in attesa di approvazione

@@ -1,20 +1,16 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1180" gr:y="320" id="mov2#hym4#page69" name="Programma Ricovero">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1130" gr:y="315" id="mov2#hym4#page69" name="Programma Ricovero">
   <ContentUnits>
-    <EntryUnit id="mov2#hym4#page69#enu1" name="Programma Ricovero" ajaxEnableExpandedLinks="false" gr:x="0" gr:y="0" fieldOrder="mov2#hym4#page69#enu1#fld3 mov2#hym4#page69#enu1#fld11 mov2#hym4#page69#enu1#fld4 mov2#hym4#page69#enu1#sfld3 mov2#hym4#page69#enu1#fld13 mov2#hym4#page69#enu1#fld14 mov2#hym4#page69#enu1#fld15 mov2#hym4#page69#enu1#fld16" linkOrder="mov2#hym4#page69#enu1#ln110 mov2#hym4#page69#enu1#ln114 mov2#hym4#page69#enu1#ln135">
+    <EntryUnit id="mov2#hym4#page69#enu1" name="Programma Ricovero" ajaxEnableExpandedLinks="false" gr:x="0" gr:y="0" fieldOrder="mov2#hym4#page69#enu1#fld3 mov2#hym4#page69#enu1#fld11 mov2#hym4#page69#enu1#fld4 mov2#hym4#page69#enu1#sfld3 mov2#hym4#page69#enu1#fld13 mov2#hym4#page69#enu1#fld14 mov2#hym4#page69#enu1#fld15 mov2#hym4#page69#enu1#fld16" linkOrder="mov2#hym4#page69#enu1#ln114 mov2#hym4#page69#enu1#ln135 mov2#hym4#page69#enu1#ln183">
       <Field id="mov2#hym4#page69#enu1#fld3" name="Ospedale" type="string" preloaded="true"/>
       <SelectionField id="mov2#hym4#page69#enu1#sfld3" name="Bed" type="string" ajaxEventEnabled="true" ajaxEventLink="mov2#hym4#page69#enu1#ln114"/>
-      <Field id="mov2#hym4#page69#enu1#fld4" name="Data Fine" ajaxEventEnabled="true" type="date" modifiable="true" ajaxEventLink="mov2#hym4#page69#enu1#ln110" ajaxEventIndicator="true"/>
-      <Field id="mov2#hym4#page69#enu1#fld11" name="Data Inizio" type="date" modifiable="true" ajaxEventEnabled="false" ajaxEventIndicator="true"/>
-      <Link id="mov2#hym4#page69#enu1#ln110" name="sceltaDate" to="mov2#hym4#seu32" type="normal" validate="true">
-        <LinkParameter id="mov2#hym4#page69#enu1#ln110#par201" name="Data Fine_endDate" source="mov2#hym4#page69#enu1#fld11" target="mov2#hym4#seu32#su82#acond51"/>
-        <LinkParameter id="mov2#hym4#page69#enu1#ln110#par278" name="Data Inizio_startDate" source="mov2#hym4#page69#enu1#fld11" target="mov2#hym4#seu32#su82#acond104"/>
-        <LinkParameter id="mov2#hym4#page69#enu1#ln110#par324" name="Data Fine_startDateSecond" source="mov2#hym4#page69#enu1#fld4" target="mov2#hym4#seu32#su82#acond98"/>
-        <LinkParameter id="mov2#hym4#page69#enu1#ln110#par325" name="Data Fine_endDateSecond" source="mov2#hym4#page69#enu1#fld4" target="mov2#hym4#seu32#su82#acond100"/>
-        <LinkParameter id="mov2#hym4#page69#enu1#ln110#par326" name="Data Fine_endDateThird" source="mov2#hym4#page69#enu1#fld4" target="mov2#hym4#seu32#su82#acond102"/>
-        <LinkParameter id="mov2#hym4#page69#enu1#ln110#par331" name="Data Inizio_startDateThird" source="mov2#hym4#page69#enu1#fld11" target="mov2#hym4#seu32#su82#acond101"/>
-        <LinkParameter id="mov2#hym4#page69#enu1#ln110#par984" name="idHospital_PASSING_hospital" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par982" target="mov2#hym4#seu32#su82#acond99"/>
-        <LinkParameter id="mov2#hym4#page69#enu1#ln110#par985" name="idHospital_PASSING" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par982" passing="true"/>
-      </Link>
+      <Field id="mov2#hym4#page69#enu1#fld4" name="Data Fine" ajaxEventEnabled="true" type="date" modifiable="true" ajaxEventIndicator="true" ajaxEventLink="mov2#hym4#page69#enu1#ln183">
+        <VRules>
+          <CompareValidationRule id="mov2#hym4#page69#enu1#fld4#cmp9" name="&gt;=dataInizio" predicate="gteq" valueField="mov2#hym4#page69#enu1#fld11" errorMessage="la data di fine deve essere successiva a quella di inizio"/>
+        </VRules>
+      </Field>
+      <Field id="mov2#hym4#page69#enu1#fld11" name="Data Inizio" type="date" modifiable="true" ajaxEventEnabled="false" ajaxEventIndicator="true">
+        <VRules/>
+      </Field>
       <Field id="mov2#hym4#page69#enu1#fld13" name="Nome sala ricovero" type="string" preloaded="true"/>
       <Link id="mov2#hym4#page69#enu1#ln114" name="NomeRecovery" to="mov2#hym4#seu29" type="normal" validate="true">
         <LinkParameter id="mov2#hym4#page69#enu1#ln114#par374" name="Bed_oidLetto" source="mov2#hym4#page69#enu1#sfld3" target="mov2#hym4#seu29#su79#acond103"/>
@@ -34,6 +30,20 @@
         <LinkParameter id="mov2#hym4#page69#enu1#ln135#par5" name="idHospital_PASSING" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par982" passing="true"/>
         <LinkParameter id="mov2#hym4#page69#enu1#ln135#par6" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par983" passing="true"/>
         <LinkParameter id="mov2#hym4#page69#enu1#ln135#par573" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par567" passing="true"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln135#par1308" name="Data Fine_PASSING" source="mov2#hym4#page69#enu1#fld4" passing="true"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln135#par1309" name="Data Inizio_PASSING" source="mov2#hym4#page69#enu1#fld11" passing="true"/>
+      </Link>
+      <Link id="mov2#hym4#page69#enu1#ln183" name="sceltaDate" to="mov2#hym4#seu85" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page69#enu1#ln183#par192" name="patientCode_PASSING_paziente" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par983" target="mov2#hym4#seu85#su132#acond137"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln183#par198" name="Data Fine_endDate" source="mov2#hym4#page69#enu1#fld11" target="mov2#hym4#seu85#su132#acond142"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln183#par319" name="Data Fine_endDateSecond" source="mov2#hym4#page69#enu1#fld4" target="mov2#hym4#seu85#su132#acond144"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln183#par320" name="Data Fine_endDateThird" source="mov2#hym4#page69#enu1#fld4" target="mov2#hym4#seu85#su132#acond140"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln183#par321" name="Data Inizio_startDate" source="mov2#hym4#page69#enu1#fld11" target="mov2#hym4#seu85#su132#acond143"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln183#par323" name="Data Inizio_startDateSecond" source="mov2#hym4#page69#enu1#fld4" target="mov2#hym4#seu85#su132#acond145"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln183#par332" name="Data Inizio_startDateThird" source="mov2#hym4#page69#enu1#fld11" target="mov2#hym4#seu85#su132#acond141"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln183#par333" name="Data Fine_PASSING" source="mov2#hym4#page69#enu1#fld4" passing="true"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln183#par335" name="Data Inizio_PASSING" source="mov2#hym4#page69#enu1#fld11" passing="true"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln183#par376" name="idHospital_PASSING" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par982" passing="true"/>
       </Link>
     </EntryUnit>
   </ContentUnits>
@@ -49,9 +59,9 @@
           <layout:Field field="mov2#hym4#page69#enu1#fld14"/>
           <layout:Field field="mov2#hym4#page69#enu1#fld15"/>
           <layout:Field field="mov2#hym4#page69#enu1#fld16"/>
-          <layout:Link link="mov2#hym4#page69#enu1#ln110"/>
           <layout:Link link="mov2#hym4#page69#enu1#ln114"/>
           <layout:Link link="mov2#hym4#page69#enu1#ln135"/>
+          <layout:Link link="mov2#hym4#page69#enu1#ln183"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

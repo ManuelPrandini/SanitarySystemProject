@@ -27,8 +27,8 @@
       <InputCollectorParameter id="mov2#hym4#icu11#icp109" name="doctorCode"/>
       <InputCollectorParameter id="mov2#hym4#icu11#icp110" name="patientCode"/>
     </InputCollectorUnit>
-    <OKCollectorUnit gr:x="2240" gr:y="105" id="mov2#hym4#okcu18" name="OK Port18"/>
-    <KOCollectorUnit gr:x="2240" gr:y="240" id="mov2#hym4#kocu8" name="KO Port8"/>
+    <OKCollectorUnit gr:x="3465" gr:y="55" id="mov2#hym4#okcu18" name="OK Port18"/>
+    <KOCollectorUnit gr:x="3465" gr:y="295" id="mov2#hym4#kocu8" name="KO Port8"/>
     <ModuleInstanceUnit gr:x="720" gr:y="700" id="mov2#hym4#miu21" action="true" moduleId="mov2#mpkg2#opm10">
       <OKLink id="mov2#hym4#miu21#oln99" name="OKFlow99" to="mov2#hym4#page28#mssu14">
         <LinkParameter id="mov2#hym4#miu21#oln99#par549" name="id_visit_PASSING" source="mov2#mpkg2#opm10#okcu19#ocp1" passing="true"/>
@@ -58,16 +58,18 @@
       </OKLink>
       <KOLink id="mov2#hym4#mfu5#kln50" name="KOFlow50" to="mov2#hym4#kocu8" automaticCoupling="true" gr:bendpoints="15,104,-825,-16;128,102,-712,-18;589,104,-251,-16"/>
     </ModifyUnit>
-    <ModuleInstanceUnit gr:x="1380" gr:y="350" id="mov2#hym4#miu1" action="true" moduleId="mov2#mpkg2#opm11">
+    <ModuleInstanceUnit gr:x="1505" gr:y="365" id="mov2#hym4#miu1" action="true" moduleId="mov2#mpkg2#opm11">
       <OKLink id="mov2#hym4#miu1#oln157" name="OKFlow157" to="mov2#hym4#page71#mssu1">
         <LinkParameter id="mov2#hym4#miu1#oln157#par7" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#page69#enu1#ln135#par4" passing="true"/>
         <LinkParameter id="mov2#hym4#miu1#oln157#par22" name="idHospital_PASSING" sourceLinkParameter="mov2#hym4#page69#enu1#ln135#par5" passing="true"/>
         <LinkParameter id="mov2#hym4#miu1#oln157#par23" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#page69#enu1#ln135#par6" passing="true"/>
         <LinkParameter id="mov2#hym4#miu1#oln157#par603" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#page69#enu1#ln135#par573" passing="true"/>
+        <LinkParameter id="mov2#hym4#miu1#oln157#par1310" name="Data Fine_PASSING" sourceLinkParameter="mov2#hym4#page69#enu1#ln135#par1308" passing="true"/>
+        <LinkParameter id="mov2#hym4#miu1#oln157#par1311" name="Data Inizio_PASSING" sourceLinkParameter="mov2#hym4#page69#enu1#ln135#par1309" passing="true"/>
       </OKLink>
       <KOLink id="mov2#hym4#miu1#kln57" name="KOFlow57" to="mov2#hym4#page72" automaticCoupling="true"/>
     </ModuleInstanceUnit>
-    <SelectorUnit id="mov2#hym4#seu32" name="SelectorBedPlace" gr:x="945" gr:y="500" entity="ent31" distinctAttributes="rel20#role39.ent25#att55">
+    <SelectorUnit id="mov2#hym4#seu32" name="Selezione letti occupati" gr:x="1210" gr:y="840" entity="ent31" distinctAttributes="rel20#role39.ent25#att55">
       <Selector id="mov2#hym4#seu32#su82" defaultPolicy="fill" booleanOperator="and" expression="( mov2#hym4#seu32#su82#acond99 ) AND ( ( mov2#hym4#seu32#su82#acond104 AND mov2#hym4#seu32#su82#acond51 ) OR ( mov2#hym4#seu32#su82#acond98 AND mov2#hym4#seu32#su82#acond100 ) OR ( mov2#hym4#seu32#su82#acond101 AND mov2#hym4#seu32#su82#acond102 ) )">
         <AttributesCondition id="mov2#hym4#seu32#su82#acond99" name="hospital" predicate="eq" booleanOperator="and" implied="false" attributes="rel3#role3.rel5#role19.rel37#role74.ent4#att1"/>
         <AttributesCondition id="mov2#hym4#seu32#su82#acond104" name="startDate" predicate="lteq" booleanOperator="and" implied="false" attributes="ent5#att22"/>
@@ -79,10 +81,10 @@
       </Selector>
       <OKLink id="mov2#hym4#seu32#oln153" name="Flow6" to="mov2#hym4#seu17">
         <LinkParameter id="mov2#hym4#seu32#oln153#par338" name="RecoveryToBed_place.oid_notOccupati" source="rel20#role39$ent25#att55Array" target="mov2#hym4#seu17#su59#acond96"/>
-        <LinkParameter id="mov2#hym4#seu32#oln153#par986" name="idHospital_PASSING_idHospital" sourceLinkParameter="mov2#hym4#page69#enu1#ln110#par985" target="mov2#hym4#seu17#su59#acond94"/>
+        <LinkParameter id="mov2#hym4#seu32#oln153#par1302" name="idHospital_PASSING_idHospital" sourceLinkParameter="mov2#hym4#inn35#kln84#par1301" target="mov2#hym4#seu17#su59#acond94"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit gr:x="1315" gr:y="580" id="mov2#hym4#seu17" name="BedPlace" entity="ent25">
+    <SelectorUnit gr:x="1500" gr:y="670" id="mov2#hym4#seu17" name="Selezione letti totali - occupati" entity="ent25">
       <Selector id="mov2#hym4#seu17#su59" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#hym4#seu17#su59#acond94" name="idHospital" predicate="eq" booleanOperator="and" implied="false" attributes="rel8#role11.rel37#role74.ent4#att1"/>
         <AttributesCondition id="mov2#hym4#seu17#su59#acond96" name="notOccupati" predicate="neq" booleanOperator="and" implied="true" attributes="ent25#att55"/>
@@ -92,7 +94,7 @@
         <LinkParameter id="mov2#hym4#seu17#oln152#par299" name="oid_Bed [output]" source="ent25#att55Array" target="mov2#hym4#page69#enu1#sfld3_output"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit gr:x="1425" gr:y="450" id="mov2#hym4#seu29" name="SelectorRecoveryRoom" entity="ent20">
+    <SelectorUnit gr:x="1625" gr:y="515" id="mov2#hym4#seu29" name="SelectorRecoveryRoom" entity="ent20">
       <Selector id="mov2#hym4#seu29#su79" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#hym4#seu29#su79#acond103" name="oidLetto" predicate="eq" booleanOperator="and" implied="false" attributes="rel8#role12.ent25#att55"/>
       </Selector>
@@ -127,19 +129,7 @@
       </OKLink>
       <CollectorParameter id="mov2#hym4#pcu7#pcp24" name="idVisit"/>
     </ParameterCollectorUnit>
-    <ParameterCollectorUnit id="mov2#hym4#pcu1" name="Parameter Collector4" gr:x="1470" gr:y="-25">
-      <CollectorParameter id="mov2#hym4#pcu1#pcp1" name="nameHospital"/>
-      <CollectorParameter id="mov2#hym4#pcu1#pcp2" name="patientCode"/>
-      <CollectorParameter id="mov2#hym4#pcu1#pcp4" name="doctorCode"/>
-      <CollectorParameter id="mov2#hym4#pcu1#pcp5" name="idHospital"/>
-      <OKLink id="mov2#hym4#pcu1#oln3" name="OKFlow3" to="mov2#hym4#page4#mssu22">
-        <LinkParameter id="mov2#hym4#pcu1#oln3#par198" name="doctorCode_PASSING" source="mov2#hym4#pcu1#pcp4" passing="true"/>
-        <LinkParameter id="mov2#hym4#pcu1#oln3#par332" name="idHospital_PASSING" source="mov2#hym4#pcu1#pcp5" passing="true"/>
-        <LinkParameter id="mov2#hym4#pcu1#oln3#par333" name="nameHospital_PASSING" source="mov2#hym4#pcu1#pcp1" passing="true"/>
-        <LinkParameter id="mov2#hym4#pcu1#oln3#par335" name="patientCode_PASSING" source="mov2#hym4#pcu1#pcp2" passing="true"/>
-      </OKLink>
-    </ParameterCollectorUnit>
-    <ParameterCollectorUnit id="mov2#hym4#pcu3" name="Parameter Collector4" gr:x="1770" gr:y="135">
+    <ParameterCollectorUnit id="mov2#hym4#pcu3" name="Parameter Collector4" gr:x="1980" gr:y="0">
       <CollectorParameter id="mov2#hym4#pcu3#pcp6" name="nameHospital"/>
       <CollectorParameter id="mov2#hym4#pcu3#pcp7" name="patientCode"/>
       <CollectorParameter id="mov2#hym4#pcu3#pcp8" name="doctorCode"/>
@@ -149,32 +139,123 @@
         <LinkParameter id="mov2#hym4#pcu3#oln167#par639" name="idHospital_PASSING" source="mov2#hym4#pcu3#pcp9" passing="true"/>
         <LinkParameter id="mov2#hym4#pcu3#oln167#par640" name="nameHospital_PASSING" source="mov2#hym4#pcu3#pcp6" passing="true"/>
         <LinkParameter id="mov2#hym4#pcu3#oln167#par642" name="patientCode_PASSING" source="mov2#hym4#pcu3#pcp7" passing="true"/>
+        <LinkParameter id="mov2#hym4#pcu3#oln167#par1314" name="dataFine_PASSING" source="mov2#hym4#pcu3#pcp36" passing="true"/>
+        <LinkParameter id="mov2#hym4#pcu3#oln167#par1315" name="dataInizio_PASSING" source="mov2#hym4#pcu3#pcp35" passing="true"/>
+        <LinkParameter id="mov2#hym4#pcu3#oln167#par1316" name="doctorCode_PASSING" source="mov2#hym4#pcu3#pcp8" passing="true"/>
       </OKLink>
+      <CollectorParameter id="mov2#hym4#pcu3#pcp35" name="dataInizio"/>
+      <CollectorParameter id="mov2#hym4#pcu3#pcp36" name="dataFine"/>
     </ParameterCollectorUnit>
-    <SelectorUnit id="mov2#hym4#seu57" name="SelectorMedicalSpecialization" gr:x="1830" gr:y="300" entity="ent9" distinctAttributes="rel4#role5.ent8#att21">
+    <SelectorUnit id="mov2#hym4#seu57" name="SelectorMedicalSpecialization" gr:x="2190" gr:y="155" entity="ent9" distinctAttributes="rel4#role5.ent8#att21">
       <Selector id="mov2#hym4#seu57#su95" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#hym4#seu57#su95#kcond46" name="doctorCode" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="mov2#hym4#seu57#oln168" name="OKFlow168" to="mov2#hym4#page73#enu20">
-        <LinkParameter id="mov2#hym4#seu57#oln168#par666" name="doctor_code_Dottore" source="ent9#att33Array" target="mov2#hym4#page73#enu20#fld26_slot"/>
-        <LinkParameter id="mov2#hym4#seu57#oln168#par667" name="patientCode_PASSING_Paziente" sourceLinkParameter="mov2#hym4#pcu3#oln167#par642" target="mov2#hym4#page73#enu20#fld18_slot"/>
-        <LinkParameter id="mov2#hym4#seu57#oln168#par668" name="DoctorToMedical_specialization.nameSpecialization_Tipologia dell'intervento" source="rel4#role5$ent8#att21Array" target="mov2#hym4#page73#enu20#fld27_slot"/>
+      <OKLink id="mov2#hym4#seu57#oln274" name="OKFlow286" to="mov2#hym4#seu92" gr:bendpoints="210,-7,305,-667;212,424,386,-380;174,613,348,-191">
+        <LinkParameter id="mov2#hym4#seu57#oln274#par1329" name="doctor_code_doctor" sourceLinkParameter="mov2#hym4#pcu3#oln167#par1316" target="mov2#hym4#seu92#su141#acond126"/>
+        <LinkParameter id="mov2#hym4#seu57#oln274#par1330" name="dataFine_PASSING" sourceLinkParameter="mov2#hym4#pcu3#oln167#par1314" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu57#oln274#par1331" name="dataInizio_PASSING" sourceLinkParameter="mov2#hym4#pcu3#oln167#par1315" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu57#oln274#par1332" name="idHospital_PASSING" sourceLinkParameter="mov2#hym4#pcu3#oln167#par639" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu57#oln274#par1338" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#pcu3#oln167#par1316" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu57#oln274#par1339" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#pcu3#oln167#par642" passing="true"/>
       </OKLink>
     </SelectorUnit>
-    <ParameterCollectorUnit gr:x="2190" gr:y="515" id="mov2#hym4#pcu5" name="Parameter Collector5" linkOrder="mov2#hym4#pcu5#ln162 mov2#hym4#pcu5#ln163">
-      <CollectorParameter id="mov2#hym4#pcu5#pcp10" name="patientCode"/>
-      <CollectorParameter id="mov2#hym4#pcu5#pcp15" name="doctorCode"/>
-      <CollectorParameter id="mov2#hym4#pcu5#pcp16" name="date"/>
-      <Link id="mov2#hym4#pcu5#ln162" name="Flow162" to="mov2#hym4#page73#pwu10" type="transport" validate="true">
-        <LinkParameter id="mov2#hym4#pcu5#ln162#par705" name="date_endDate" source="mov2#hym4#pcu5#pcp16" target="mov2#hym4#page73#pwu10#su88#acond111"/>
-        <LinkParameter id="mov2#hym4#pcu5#ln162#par706" name="patientCode_patientCode" source="mov2#hym4#pcu5#pcp10" target="mov2#hym4#page73#pwu10#su88#acond61"/>
-        <LinkParameter id="mov2#hym4#pcu5#ln162#par707" name="date_startDate" source="mov2#hym4#pcu5#pcp16" target="mov2#hym4#page73#pwu10#su88#acond105"/>
-      </Link>
-      <Link id="mov2#hym4#pcu5#ln163" name="Flow163" to="mov2#hym4#page73#pwu11" type="transport" validate="true">
-        <LinkParameter id="mov2#hym4#pcu5#ln163#par708" name="doctorCode_doctorCode" source="mov2#hym4#pcu5#pcp15" target="mov2#hym4#page73#pwu11#su99#acond126"/>
-        <LinkParameter id="mov2#hym4#pcu5#ln163#par709" name="date_endDate" source="mov2#hym4#pcu5#pcp16" target="mov2#hym4#page73#pwu11#su99#acond128"/>
-        <LinkParameter id="mov2#hym4#pcu5#ln163#par710" name="date_startDate" source="mov2#hym4#pcu5#pcp16" target="mov2#hym4#page73#pwu11#su99#acond127"/>
-      </Link>
-    </ParameterCollectorUnit>
+    <SelectorUnit gr:x="975" gr:y="525" id="mov2#hym4#seu85" name="Verifica ricoveri-visite presente" entity="ent5">
+      <Selector id="mov2#hym4#seu85#su132" defaultPolicy="fill" booleanOperator="and" expression="mov2#hym4#seu85#su132#acond137 AND ( ( mov2#hym4#seu85#su132#acond140 AND mov2#hym4#seu85#su132#acond141 ) OR ( mov2#hym4#seu85#su132#acond142 AND mov2#hym4#seu85#su132#acond143 ) OR ( mov2#hym4#seu85#su132#acond144 AND mov2#hym4#seu85#su132#acond145 ) )">
+        <AttributesCondition id="mov2#hym4#seu85#su132#acond137" name="paziente" predicate="eq" booleanOperator="or" implied="false" attributes="rel11#role16.ent6#att11"/>
+        <AttributesCondition id="mov2#hym4#seu85#su132#acond140" name="endDateThird" predicate="lteq" booleanOperator="or" implied="false" attributes="ent5#att23"/>
+        <AttributesCondition id="mov2#hym4#seu85#su132#acond141" name="startDateThird" predicate="gteq" booleanOperator="or" implied="false" attributes="ent5#att22"/>
+        <AttributesCondition id="mov2#hym4#seu85#su132#acond142" name="endDate" predicate="gteq" booleanOperator="and" implied="false" attributes="ent5#att23"/>
+        <AttributesCondition id="mov2#hym4#seu85#su132#acond143" name="startDate" predicate="lteq" booleanOperator="and" implied="false" attributes="ent5#att22"/>
+        <AttributesCondition id="mov2#hym4#seu85#su132#acond144" name="endDateSecond" predicate="gteq" booleanOperator="or" implied="false" attributes="ent5#att23"/>
+        <AttributesCondition id="mov2#hym4#seu85#su132#acond145" name="startDateSecond" predicate="lteq" booleanOperator="or" implied="false" attributes="ent5#att22"/>
+      </Selector>
+      <OKLink id="mov2#hym4#seu85#oln104" name="OKFlow104" to="mov2#hym4#inn35">
+        <LinkParameter id="mov2#hym4#seu85#oln104#par394" name="oid_Input" source="ent5#att2Array" target="mov2#hym4#inn35.isnotnull"/>
+        <LinkParameter id="mov2#hym4#seu85#oln104#par395" name="endDate_PASSING" source="ent5#att23Array" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu85#oln104#par438" name="startDate_PASSING" source="ent5#att22Array" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu85#oln104#par440" name="oid_PASSING" source="ent5#att2Array" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu85#oln104#par1299" name="idHospital_PASSING" sourceLinkParameter="mov2#hym4#page69#enu1#ln183#par376" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu85#oln104#par1303" name="Data Fine_PASSING" sourceLinkParameter="mov2#hym4#page69#enu1#ln183#par333" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu85#oln104#par1304" name="Data Inizio_PASSING" sourceLinkParameter="mov2#hym4#page69#enu1#ln183#par335" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="1045" gr:y="745" id="mov2#hym4#inn35" name="Se &#232; presente">
+      <KOLink id="mov2#hym4#inn35#kln84" name="KOFlow84" to="mov2#hym4#seu32">
+        <LinkParameter id="mov2#hym4#inn35#kln84#par585" name="startDate_PASSING_endDate" sourceLinkParameter="mov2#hym4#seu85#oln104#par1304" target="mov2#hym4#seu32#su82#acond51"/>
+        <LinkParameter id="mov2#hym4#inn35#kln84#par588" name="endDate_PASSING_endDateSecond" sourceLinkParameter="mov2#hym4#seu85#oln104#par1303" target="mov2#hym4#seu32#su82#acond100"/>
+        <LinkParameter id="mov2#hym4#inn35#kln84#par675" name="endDate_PASSING_endDateThird" sourceLinkParameter="mov2#hym4#seu85#oln104#par1303" target="mov2#hym4#seu32#su82#acond102"/>
+        <LinkParameter id="mov2#hym4#inn35#kln84#par1296" name="startDate_PASSING_startDate" sourceLinkParameter="mov2#hym4#seu85#oln104#par1304" target="mov2#hym4#seu32#su82#acond104"/>
+        <LinkParameter id="mov2#hym4#inn35#kln84#par1297" name="endDate_PASSING_startDateSecond" sourceLinkParameter="mov2#hym4#seu85#oln104#par1303" target="mov2#hym4#seu32#su82#acond98"/>
+        <LinkParameter id="mov2#hym4#inn35#kln84#par1298" name="startDate_PASSING_startDateThird" sourceLinkParameter="mov2#hym4#seu85#oln104#par1304" target="mov2#hym4#seu32#su82#acond101"/>
+        <LinkParameter id="mov2#hym4#inn35#kln84#par1300" name="idHospital_PASSING_hospital" sourceLinkParameter="mov2#hym4#seu85#oln104#par1299" target="mov2#hym4#seu32#su82#acond99"/>
+        <LinkParameter id="mov2#hym4#inn35#kln84#par1301" name="idHospital_PASSING" sourceLinkParameter="mov2#hym4#seu85#oln104#par1299" passing="true"/>
+      </KOLink>
+      <OKLink id="mov2#hym4#inn35#oln285" name="OKFlow285" to="mov2#hym4#page87#pwu9" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowWidth="900" ajaxWindowHeight="500" ajaxWindowClosable="true" ajaxWindowTitle="Attenzione!" ajaxWindowModal="true">
+        <LinkParameter id="mov2#hym4#inn35#oln285#par439" name="Input Value_oid [oid]" target="mov2#hym4#page87#pwu9#su133#kcond62.ent5#att2" sourceLinkParameter="mov2#hym4#seu85#oln104#par440"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <SelectorUnit gr:x="2570" gr:y="250" id="mov2#hym4#seu89" name="Verifica orario corretto" entity="ent30">
+      <Selector id="mov2#hym4#seu89#su138" defaultPolicy="fill" booleanOperator="and" expression="mov2#hym4#seu89#su138#acond152 AND mov2#hym4#seu89#su138#acond153 AND ( ( mov2#hym4#seu89#su138#acond168 AND mov2#hym4#seu89#su138#acond170 ) OR ( mov2#hym4#seu89#su138#acond171 AND mov2#hym4#seu89#su138#acond167 ) OR ( mov2#hym4#seu89#su138#acond166 AND mov2#hym4#seu89#su138#acond169 ) )">
+        <AttributesCondition id="mov2#hym4#seu89#su138#acond152" name="sala_operatoria" predicate="eq" booleanOperator="or" implied="false" attributes="rel18#role35.ent10#att5"/>
+        <AttributesCondition id="mov2#hym4#seu89#su138#acond153" name="data" predicate="eq" booleanOperator="or" implied="false" attributes="ent5#att22"/>
+        <AttributesCondition id="mov2#hym4#seu89#su138#acond166" name="startTimeThird" predicate="gteq" booleanOperator="or" implied="false" attributes="ent5#att24"/>
+        <AttributesCondition id="mov2#hym4#seu89#su138#acond167" name="startTimeSecond" predicate="lteq" booleanOperator="or" implied="false" attributes="ent5#att24"/>
+        <AttributesCondition id="mov2#hym4#seu89#su138#acond168" name="endTime" predicate="gteq" booleanOperator="and" implied="false" attributes="ent5#att25"/>
+        <AttributesCondition id="mov2#hym4#seu89#su138#acond169" name="endTimeThird" predicate="lteq" booleanOperator="or" implied="false" attributes="ent5#att25"/>
+        <AttributesCondition id="mov2#hym4#seu89#su138#acond170" name="startTime" predicate="lteq" booleanOperator="and" implied="false" attributes="ent5#att24"/>
+        <AttributesCondition id="mov2#hym4#seu89#su138#acond171" name="endTimeSecond" predicate="gteq" booleanOperator="or" implied="false" attributes="ent5#att25"/>
+      </Selector>
+      <OKLink id="mov2#hym4#seu89#oln287" name="OKFlow287" to="mov2#hym4#inn36">
+        <LinkParameter id="mov2#hym4#seu89#oln287#par1387" name="oid_Input" source="ent5#att2Array" target="mov2#hym4#inn36.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="2910" gr:y="400" id="mov2#hym4#inn36" name="Se esiste un intervento">
+      <OKLink id="mov2#hym4#inn36#oln288" name="OKFlow288" to="mov2#hym4#page92" automaticCoupling="true"/>
+      <KOLink id="mov2#hym4#inn36#kln87" name="KOFlow87" to="mov2#hym4#page91#enu30" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <ScriptUnit gr:x="2510" gr:y="770" id="mov2#hym4#scu12" name="Controllo intervento compreso in ricovero">
+      <ScriptUnitText xml:space="preserve">#input date data_inizio
+#input date data_fine
+#input date data_selezionata
+
+if( data_selezionata &lt; data_inizio || data_selezionata &gt; data_fine)
+	return [resultCode: "error"]
+else
+	return [resultCode: "success"]</ScriptUnitText>
+      <OKLink id="mov2#hym4#scu12#oln289" name="Registra" to="mov2#hym4#page91#seu88" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Programmazione intervento" ajaxWindowWidth="800" ajaxWindowHeight="500" ajaxWindowClosable="true" ajaxWindowModal="true">
+        <LinkParameter id="mov2#hym4#scu12#oln289#par1402" name="Selected Date_PASSING" sourceLinkParameter="mov2#hym4#page73#ecu1#ln198#par1399" passing="true"/>
+        <LinkParameter id="mov2#hym4#scu12#oln289#par1457" name="doctorCode_PASSING_doctor" sourceLinkParameter="mov2#hym4#page73#ecu1#ln198#par1454" target="mov2#hym4#page91#seu88#su137#acond151"/>
+        <LinkParameter id="mov2#hym4#scu12#oln289#par1458" name="dataFine_PASSING" sourceLinkParameter="mov2#hym4#page73#ecu1#ln198#par1452" passing="true"/>
+        <LinkParameter id="mov2#hym4#scu12#oln289#par1459" name="dataInizio_PASSING" sourceLinkParameter="mov2#hym4#page73#ecu1#ln198#par1453" passing="true"/>
+        <LinkParameter id="mov2#hym4#scu12#oln289#par1460" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#page73#ecu1#ln198#par1454" passing="true"/>
+        <LinkParameter id="mov2#hym4#scu12#oln289#par1461" name="id_room_PASSING" sourceLinkParameter="mov2#hym4#page73#ecu1#ln198#par1455" passing="true"/>
+        <LinkParameter id="mov2#hym4#scu12#oln289#par1462" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#page73#ecu1#ln198#par1456" passing="true"/>
+      </OKLink>
+      <KOLink id="mov2#hym4#scu12#kln88" name="KOFlow88" to="mov2#hym4#page94" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowWidth="500" ajaxWindowHeight="250" ajaxWindowTitle="Errore selezione data" ajaxWindowModal="true" ajaxWindowClosable="true"/>
+    </ScriptUnit>
+    <CreateUnit gr:x="3060" gr:y="525" id="mov2#hym4#cru20" name="RegistraIntervento" entity="ent30">
+      <OKLink id="mov2#hym4#cru20#oln290" name="OKFlow290" to="mov2#hym4#okcu18" automaticCoupling="true"/>
+    </CreateUnit>
+    <SelectorUnit id="mov2#hym4#seu91" name="Seleziona impegni sale operatorie" gr:x="1955" gr:y="740" entity="ent30" distinctAttributes="ent5#att2">
+      <Selector id="mov2#hym4#seu91#su140" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym4#seu91#su140#acond61" name="startDate" predicate="gteq" booleanOperator="and" implied="false" attributes="ent5#att22"/>
+        <AttributesCondition id="mov2#hym4#seu91#su140#acond105" name="endDate" predicate="lteq" booleanOperator="and" implied="false" attributes="ent5#att23"/>
+        <AttributesCondition id="mov2#hym4#seu91#su140#acond111" name="idSurgeryRoom" predicate="eq" booleanOperator="and" implied="false" attributes="rel18#role35.ent10#att5"/>
+      </Selector>
+    </SelectorUnit>
+    <SelectorUnit id="mov2#hym4#seu92" name="Sale operatorie dottore" gr:x="2033" gr:y="957" entity="ent24">
+      <Selector id="mov2#hym4#seu92#su141" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym4#seu92#su141#acond126" name="doctor" predicate="eq" booleanOperator="or" implied="false" attributes="rel5#role20.ent9#att33"/>
+      </Selector>
+      <OKLink id="mov2#hym4#seu92#oln286" name="OKFlow286" to="mov2#hym4#page73#mssu53" gr:bendpoints="148,-203,4,231">
+        <LinkParameter id="mov2#hym4#seu92#oln286#par1372" name="dataFine_PASSING" sourceLinkParameter="mov2#hym4#seu57#oln274#par1330" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu92#oln286#par1373" name="dataInizio_PASSING" sourceLinkParameter="mov2#hym4#seu57#oln274#par1331" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu92#oln286#par1374" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#seu57#oln274#par1339" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu92#oln286#par1375" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#seu57#oln274#par1338" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu92#oln286#par1439" name="dataFine_PASSING_dataFine" sourceLinkParameter="mov2#hym4#seu57#oln274#par1330" target="mov2#hym4#page73#mssu53.mov2#hym4#page73#mssu53#ph16"/>
+        <LinkParameter id="mov2#hym4#seu92#oln286#par1440" name="dataInizio_PASSING_dataInizio" sourceLinkParameter="mov2#hym4#seu57#oln274#par1331" target="mov2#hym4#page73#mssu53.mov2#hym4#page73#mssu53#ph15"/>
+        <LinkParameter id="mov2#hym4#seu92#oln286#par1443" name="id_room_PASSING" source="ent10#att5Array" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
   </OperationUnits>
 </HybridModule>

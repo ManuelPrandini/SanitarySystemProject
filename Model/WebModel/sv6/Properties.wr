@@ -1,0 +1,5 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv6" name="ProntoSoccorsoSiteView" homePage="sv6#page86" landmarks="sv6#lou1 sv6#area18" protected="true">
+  <OperationUnits>
+    <LogoutUnit id="sv6#lou1" name="Logout" landmark="true" gr:x="55" gr:y="215" siteView="sv4"/>
+  </OperationUnits>
+</SiteView>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page32" name="Registrazione paziente" gr:x="1190" gr:y="640" ajaxEnabled="false">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page32" name="Registrazione paziente (ESISTENTE)" gr:x="1190" gr:y="640" ajaxEnabled="false">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="65" id="mov2#hym1#page32#enu13" name="compila la form" linkOrder="mov2#hym1#page32#enu13#ln51" fieldOrder="mov2#hym1#page32#enu13#fld59 mov2#hym1#page32#enu13#fld61 mov2#hym1#page32#enu13#fld66 mov2#hym1#page32#enu13#fld150 mov2#hym1#page32#enu13#fld151 mov2#hym1#page32#enu13#fld149 mov2#hym1#page32#enu13#fld57 mov2#hym1#page32#enu13#fld56 mov2#hym1#page32#enu13#fld67 mov2#hym1#page32#enu13#fld60 mov2#hym1#page32#enu13#fld62 mov2#hym1#page32#enu13#fld63 mov2#hym1#page32#enu13#fld65 mov2#hym1#page32#enu13#fld64">
       <Link id="mov2#hym1#page32#enu13#ln51" name="Registrati" to="mov2#hym1#miu11" type="normal" validate="true">
