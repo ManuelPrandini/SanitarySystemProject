@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-125" gr:y="1405" id="sv3#area2" name="Cartella clinica" landmark="true" defaultPage="sv3#area2#miu8">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="530" gr:y="1920" id="sv3#area2" name="Cartella clinica" landmark="true" defaultPage="sv3#area2#miu8">
   <OperationUnits>
     <ModuleInstanceUnit gr:x="285" gr:y="5" id="sv3#area2#miu8" action="false" moduleId="mov2#hym5"/>
     <GetUnit gr:x="0" gr:y="0" id="sv3#area2#gtu19" name="Get19" contextParameters="UserCtxParam" linkOrder="sv3#area2#gtu19#ln173">

@@ -1,0 +1,77 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="5" gr:y="0" id="sv6#area22#page97" name="Registra paziente" linkVisibilityPolicy="hide" landmark="true">
+  <ContentUnits>
+    <EntryUnit id="sv6#area22#page97#enu20" name="Inserisci dati paziente" gr:x="10" gr:y="0" fieldOrder="sv6#area22#page97#enu20#fld130 sv6#area22#page97#enu20#fld131 sv6#area22#page97#enu20#fld17 sv6#area22#page97#enu20#sfld11" linkOrder="sv6#area22#page97#enu20#ln195">
+      <Field id="sv6#area22#page97#enu20#fld17" name="CF paziente" type="string" modifiable="true"/>
+      <SelectionField id="sv6#area22#page97#enu20#sfld11" name="codice intervento" type="string" modifiable="true"/>
+      <Field id="sv6#area22#page97#enu20#fld130" name="data " type="date" preloaded="true"/>
+      <Field id="sv6#area22#page97#enu20#fld131" name="ora arrivo" type="time" preloaded="true"/>
+      <Link id="sv6#area22#page97#enu20#ln195" name="Metti in coda" to="sv6#area22#seu93" type="normal" validate="true">
+        <LinkParameter id="sv6#area22#page97#enu20#ln195#par1441" name="CF paziente_cf" source="sv6#area22#page97#enu20#fld17" target="sv6#area22#seu93#su142#acond154"/>
+        <LinkParameter id="sv6#area22#page97#enu20#ln195#par1442" name="CF paziente_PASSING" source="sv6#area22#page97#enu20#fld17" passing="true"/>
+        <LinkParameter id="sv6#area22#page97#enu20#ln195#par1443" name="codice intervento_PASSING" source="sv6#area22#page97#enu20#sfld11" passing="true"/>
+        <LinkParameter id="sv6#area22#page97#enu20#ln195#par1444" name="data _PASSING" source="sv6#area22#page97#enu20#fld130" passing="true"/>
+        <LinkParameter id="sv6#area22#page97#enu20#ln195#par1445" name="DoctorToRoom.RoomToHospital.HospitalToCodaprontosoccorso.oid_PASSING" sourceLinkParameter="sv6#area22#page97#seu87#ln192#par1440" passing="true"/>
+        <LinkParameter id="sv6#area22#page97#enu20#ln195#par1446" name="ora arrivo_PASSING" source="sv6#area22#page97#enu20#fld131" passing="true"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="0" gr:y="100" id="sv6#area22#page97#seu86" name="Selezione codice" entity="ent18">
+      <Link id="sv6#area22#page97#seu86#ln187" name="Flow187" to="sv6#area22#page97#enu20" type="transport" validate="true">
+        <LinkParameter id="sv6#area22#page97#seu86#ln187#par1431" name="code_codice intervento [label]" source="ent18#att38Array" target="sv6#area22#page97#enu20#sfld11_label"/>
+        <LinkParameter id="sv6#area22#page97#seu86#ln187#par1432" name="code_codice intervento [output]" source="ent18#att38Array" target="sv6#area22#page97#enu20#sfld11_output"/>
+      </Link>
+    </SelectorUnit>
+    <GetUnit gr:x="250" gr:y="235" id="sv6#area22#page97#gtu21" name="CFDottore" contextParameters="UserCtxParam">
+      <Link id="sv6#area22#page97#gtu21#ln191" name="Flow191" to="sv6#area22#page97#seu87" type="transport" validate="true">
+        <LinkParameter id="sv6#area22#page97#gtu21#ln191#par1437" name="UserCtxParam.cf_cf" source="sv6#area22#page97#gtu21.UserCtxParam" target="sv6#area22#page97#seu87#su140#acond150"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit gr:x="15" gr:y="215" id="sv6#area22#page97#seu87" name="InfoDottoreOspedale" entity="ent9" distinctAttributes="rel5#role19.ent10#att5 rel5#role19.ent10#att50 rel5#role19.rel37#role74.rel41#role81.ent32#att69">
+      <Selector id="sv6#area22#page97#seu87#su140" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv6#area22#page97#seu87#su140#acond150" name="cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel36#role72.userOID"/>
+      </Selector>
+      <Link id="sv6#area22#page97#seu87#ln192" name="Flow192" to="sv6#area22#page97#enu20" type="transport" validate="true" gr:bendpoints="70,-144,75,86">
+        <LinkParameter id="sv6#area22#page97#seu87#ln192#par1438" name="DoctorToRoom.id_room_PASSING" source="rel5#role19$ent10#att5Array" passing="true"/>
+        <LinkParameter id="sv6#area22#page97#seu87#ln192#par1439" name="DoctorToRoom.name_PASSING" source="rel5#role19$ent10#att50Array" passing="true"/>
+        <LinkParameter id="sv6#area22#page97#seu87#ln192#par1440" name="DoctorToRoom.RoomToHospital.HospitalToCodaprontosoccorso.oid_PASSING" source="rel5#role19$rel37#role74$rel41#role81$ent32#att69Array" passing="true"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#area22#page97#enu20">
+          <layout:Field field="sv6#area22#page97#enu20#fld130"/>
+          <layout:Field field="sv6#area22#page97#enu20#fld131"/>
+          <layout:Field field="sv6#area22#page97#enu20#fld17"/>
+          <layout:Field field="sv6#area22#page97#enu20#sfld11"/>
+          <layout:Link link="sv6#area22#page97#enu20#ln195"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,204 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym4#area20#page73" name="Programma Intervento" landmark="false" localized="false" gr:x="112" gr:y="43">
+  <ContentUnits>
+    <EventCalendarUnit id="mov2#hym4#area20#page73#ecu4" name="Calendario sale operatorie" linkOrder="mov2#hym4#area20#page73#ecu4#ln110" computationMode="execute" gr:x="85" gr:y="0" entityBased="true" entity="ent30" displayAttributes="ent5#att2 rel3#role3.ent9#att33 ent5#att24 ent5#att25" dateAttribute="ent5#att22">
+      <Link id="mov2#hym4#area20#page73#ecu4#ln110" name="Programma Intervento" to="mov2#hym4#scu12" type="normal" validate="true" gr:bendpoints="230,130,-180,-120">
+        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1329" name="Selected Date_data_selezionata" source="date[].date" target="mov2#hym4#scu12.data_selezionata"/>
+        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1330" name="Selected Date_PASSING" source="date[].date" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1331" name="id_room_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par1373" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1332" name="dataFine_PASSING_data_fine" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par1376" target="mov2#hym4#scu12.data_fine"/>
+        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1338" name="dataInizio_PASSING_data_inizio" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par1377" target="mov2#hym4#scu12.data_inizio"/>
+        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1339" name="dataFine_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par1376" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1340" name="dataInizio_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par1377" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1355" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par1378" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1369" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par1380" passing="true"/>
+      </Link>
+      <Selector id="mov2#hym4#area20#page73#ecu4#su99" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym4#area20#page73#ecu4#su99#acond127" name="idSurgeryRoom" predicate="eq" booleanOperator="and" implied="false" attributes="rel18#role35.ent10#att5"/>
+        <AttributesCondition id="mov2#hym4#area20#page73#ecu4#su99#acond128" name="startDate" predicate="gteq" booleanOperator="and" implied="false" attributes="ent5#att22"/>
+        <AttributesCondition id="mov2#hym4#area20#page73#ecu4#su99#acond138" name="endDate" predicate="lteq" booleanOperator="and" implied="false" attributes="ent5#att23"/>
+      </Selector>
+    </EventCalendarUnit>
+    <MultiMessageUnit id="mov2#hym4#area20#page73#mssu22" name="Riepilogo del ricovero" gr:x="100" gr:y="170">
+      <Placeholder id="mov2#hym4#area20#page73#mssu22#ph11" name="dataInizio"/>
+      <Placeholder id="mov2#hym4#area20#page73#mssu22#ph12" name="dataFine"/>
+      <Message xml:space="preserve">Per il paziente hai programmato un ricovero dal $$dataInizio$$ al $$dataFine$$ </Message>
+      <Link id="mov2#hym4#area20#page73#mssu22#ln131" name="Flow189" to="mov2#hym4#area20#page73#ecu4" type="transport" validate="true">
+        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1372" name="id_room_PASSING_idSurgeryRoom" sourceLinkParameter="mov2#hym4#seu92#oln274#par1382" target="mov2#hym4#area20#page73#ecu4#su99#acond127"/>
+        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1373" name="id_room_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln274#par1382" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1374" name="dataFine_PASSING_endDate" sourceLinkParameter="mov2#hym4#seu92#oln274#par1383" target="mov2#hym4#area20#page73#ecu4#su99#acond138"/>
+        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1375" name="dataInizio_PASSING_startDate" sourceLinkParameter="mov2#hym4#seu92#oln274#par1384" target="mov2#hym4#area20#page73#ecu4#su99#acond128"/>
+        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1376" name="dataFine_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln274#par1383" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1377" name="dataInizio_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln274#par1384" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1378" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln274#par1385" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1380" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln274#par1388" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1381" name="dataInizio_PASSING_Current Date" sourceLinkParameter="mov2#hym4#seu92#oln274#par1384" target="mov2#hym4#area20#page73#ecu4.inputDate"/>
+      </Link>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym4#area20#page73#mssu22"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym4#area20#page73#ecu4" layout:frameLayout="MetroStyle/Default">
+          <layout:Link link="mov2#hym4#area20#page73#ecu4#ln110"/>
+          <layout:Link link="mov2#hym4#area20#page73#ecu4-month-0"/>
+          <layout:Link link="mov2#hym4#area20#page73#ecu4-month-1"/>
+          <layout:Link link="mov2#hym4#area20#page73#ecu4-month-2"/>
+          <layout:Link link="mov2#hym4#area20#page73#ecu4-month-3"/>
+          <layout:Link link="mov2#hym4#area20#page73#ecu4-month-4"/>
+          <layout:Link link="mov2#hym4#area20#page73#ecu4-month-5"/>
+          <layout:Link link="mov2#hym4#area20#page73#ecu4-month-6"/>
+          <layout:Link link="mov2#hym4#area20#page73#ecu4-month-7"/>
+          <layout:Link link="mov2#hym4#area20#page73#ecu4-month-8"/>
+          <layout:Link link="mov2#hym4#area20#page73#ecu4-month-9"/>
+          <layout:Link link="mov2#hym4#area20#page73#ecu4-month-10"/>
+          <layout:Link link="mov2#hym4#area20#page73#ecu4-month-11"/>
+          <layout:Link link="mov2#hym4#area20#page73#ecu4-year"/>
+          <layout:Attribute attribute="ent5#att2"/>
+          <layout:Attribute attribute="rel3#role3.ent9#att33"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:UnitConfiguration unitType="EventsPlanningUnit" layout:style="StoreTemplates" layout:unitLayout="StoreTemplates/EventsPlanningUnit"/>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

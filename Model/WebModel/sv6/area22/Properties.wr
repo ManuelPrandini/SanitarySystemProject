@@ -1,0 +1,23 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="50" gr:y="825" id="sv6#area22" name="Accettazione" landmark="true" defaultPage="sv6#area22#page97" landmarks="sv6#area22#page97 sv6#area22#page98">
+  <OperationUnits>
+    <TimeUnit id="sv6#area22#tmu9" name="Data e orario arrivo/dimissione" gr:x="380" gr:y="30" linkOrder="sv6#area22#tmu9#ln189">
+      <Link id="sv6#area22#tmu9#ln189" name="Flow189" to="sv6#area22#page97#enu20" type="transport" validate="true">
+        <LinkParameter id="sv6#area22#tmu9#ln189#par1433" name="Current/Input Date_data " source="currentDate" target="sv6#area22#page97#enu20#fld130_slot"/>
+        <LinkParameter id="sv6#area22#tmu9#ln189#par1434" name="Current/Input Time_ora arrivo" source="currentTime" target="sv6#area22#page97#enu20#fld131_slot"/>
+      </Link>
+    </TimeUnit>
+    <CreateUnit gr:x="450" gr:y="275" id="sv6#area22#cru26" name="RegistraProntoSoccorso" entity="ent17"/>
+    <SelectorUnit id="sv6#area22#seu93" name="selezione cod paziente" gr:x="460" gr:y="120" entity="ent6" distinctAttributes="ent6#att11">
+      <OKLink id="sv6#area22#seu93#oln286" name="OKFlow286" to="sv6#area22#cru26">
+        <LinkParameter id="sv6#area22#seu93#oln286#par1447" name="DoctorToRoom.RoomToHospital.HospitalToCodaprontosoccorso.oid_PASSING_Codaprontosoccorso.oid(EmergencyOperationToCodaprontosoccorso)" sourceLinkParameter="sv6#area22#page97#enu20#ln195#par1445" target="sv6#area22#cru26.rel27#role54.ent32#att69"/>
+        <LinkParameter id="sv6#area22#seu93#oln286#par1448" name="codice intervento_PASSING_Emergency_code.code(Emergency_operationToEmergency_code)" sourceLinkParameter="sv6#area22#page97#enu20#ln195#par1443" target="sv6#area22#cru26.rel34#role67.ent18#att38"/>
+        <LinkParameter id="sv6#area22#seu93#oln286#par1449" name="patient_code_Patient.patient_code(VisitToPatient)" source="ent6#att11Array" target="sv6#area22#cru26.rel11#role16.ent6#att11"/>
+        <LinkParameter id="sv6#area22#seu93#oln286#par1450" name="data _PASSING_startDate" sourceLinkParameter="sv6#area22#page97#enu20#ln195#par1444" target="sv6#area22#cru26.ent5#att22"/>
+        <LinkParameter id="sv6#area22#seu93#oln286#par1451" name="ora arrivo_PASSING_startTime" sourceLinkParameter="sv6#area22#page97#enu20#ln195#par1446" target="sv6#area22#cru26.ent5#att24"/>
+      </OKLink>
+      <Selector id="sv6#area22#seu93#su142" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv6#area22#seu93#su142#acond154" name="cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.userOID"/>
+      </Selector>
+    </SelectorUnit>
+  </OperationUnits>
+</Area>
