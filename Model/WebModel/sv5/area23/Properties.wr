@@ -1,0 +1,25 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="920" gr:y="1100" id="sv5#area23" name="Gestione delle farmacie" landmark="true" defaultPage="sv5#area23#page98" landmarks="sv5#area23#page98 sv5#area23#page111">
+  <OperationUnits>
+    <SelectorUnit id="sv5#area23#seu94" name="Seleziona citt&#224;" gr:x="40" gr:y="205" entity="ent12">
+      <Selector id="sv5#area23#seu94#su131" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv5#area23#seu94#su131#acond134" name="nazione" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role8.ent11#att15"/>
+      </Selector>
+      <OKLink id="sv5#area23#seu94#oln296" name="OKFlow296" to="sv5#area23#page98#enu31" gr:bendpoints="96,-59,-54,61">
+        <LinkParameter id="sv5#area23#seu94#oln296#par1317" name="name_Citt&#224; [label]" source="ent12#att39Array" target="sv5#area23#page98#enu31#sfld17_label"/>
+        <LinkParameter id="sv5#area23#seu94#oln296#par1318" name="oid_Citt&#224; [output]" source="ent12#att16Array" target="sv5#area23#page98#enu31#sfld17_output"/>
+      </OKLink>
+    </SelectorUnit>
+    <CreateUnit gr:x="215" gr:y="225" id="sv5#area23#cru27" name="Inserisci farmacia" entity="ent19">
+      <OKLink id="sv5#area23#cru27#oln297" name="OKFlow297" to="sv5#area23#page102" automaticCoupling="true"/>
+      <KOLink id="sv5#area23#cru27#kln91" name="KOFlow91" to="sv5#area23#page105" automaticCoupling="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="50" gr:y="695" id="sv5#area23#cru29" name="Creazione del farmaco" entity="ent2">
+      <OKLink id="sv5#area23#cru29#oln302" name="OKFlow302" to="sv5#area23#page112#mssu69">
+        <LinkParameter id="sv5#area23#cru29#oln302#par1454" name="id_PASSING" source="ent2#att6Array" passing="true"/>
+      </OKLink>
+    </CreateUnit>
+    <CreateUnit gr:x="540" gr:y="540" id="sv5#area23#cru30" name="Aggiungi descrizione" entity="ent22">
+      <OKLink id="sv5#area23#cru30#oln304" name="OKFlow304" to="sv5#area23#page114" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
+</Area>

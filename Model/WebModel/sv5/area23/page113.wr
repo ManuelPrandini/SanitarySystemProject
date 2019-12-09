@@ -1,0 +1,32 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="275" gr:y="515" id="sv5#area23#page113" name="Aggiungi descrizione" layout:pageLayout="MetroStyle/Empty">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv5#area23#page113#enu36" name="Descrizione del farmaco" linkOrder="sv5#area23#page113#enu36#ln207">
+      <Field id="sv5#area23#page113#enu36#fld162" name="Descrizione" type="string" modifiable="true"/>
+      <Link id="sv5#area23#page113#enu36#ln207" name="Aggiungi descrizione" to="sv5#area23#cru30" type="normal" validate="true">
+        <LinkParameter id="sv5#area23#page113#enu36#ln207#par1456" name="id_PASSING_Drug.id(Drug_DescriptionToDrug)" sourceLinkParameter="sv5#area23#page112#mssu69#ln206#par1455" target="sv5#area23#cru30.rel24#role48.ent2#att6"/>
+        <LinkParameter id="sv5#area23#page113#enu36#ln207#par1457" name="Descrizione_name" source="sv5#area23#page113#enu36#fld162" target="sv5#area23#cru30.ent22#att51"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area23#page113#enu36">
+          <layout:Field field="sv5#area23#page113#enu36#fld162"/>
+          <layout:Link link="sv5#area23#page113#enu36#ln207"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

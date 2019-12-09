@@ -1,0 +1,25 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="400" gr:y="350" id="sv5#area18#page100" name="Errore nell'inserimento dell'ospedale" layout:pageLayout="MetroStyle/Default">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv5#area18#page100#mssu61" name="Errore">
+      <Message xml:space="preserve">Si &#232; verificato un errore nella registrazione dell'ospedale!</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area18#page100#mssu61"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

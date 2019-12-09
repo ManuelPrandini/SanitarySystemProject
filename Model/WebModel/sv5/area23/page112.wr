@@ -1,0 +1,32 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="275" gr:y="670" id="sv5#area23#page112" name="Descrizione del farmaco">
+  <ContentUnits>
+    <MultiMessageUnit id="sv5#area23#page112#mssu69" name="Descrizione del farmaco" gr:x="0" gr:y="0" linkOrder="sv5#area23#page112#mssu69#ln204 sv5#area23#page112#mssu69#ln206">
+      <Message xml:space="preserve">Vuoi inserire la descrizione del farmaco?</Message>
+      <Link id="sv5#area23#page112#mssu69#ln204" name="No" to="sv5#area23#page114" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv5#area23#page112#mssu69#ln206" name="Si" to="sv5#area23#page113#enu36" type="normal" validate="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Aggiungi descrizione" ajaxWindowWidth="750" ajaxWindowHeight="400" ajaxWindowClosable="true" ajaxWindowModal="true">
+        <LinkParameter id="sv5#area23#page112#mssu69#ln206#par1455" name="id_PASSING" sourceLinkParameter="sv5#area23#cru29#oln302#par1454" passing="true"/>
+      </Link>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area23#page112#mssu69">
+          <layout:Link link="sv5#area23#page112#mssu69#ln204"/>
+          <layout:Link link="sv5#area23#page112#mssu69#ln206"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

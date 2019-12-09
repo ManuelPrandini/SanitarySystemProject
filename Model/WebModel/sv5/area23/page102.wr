@@ -1,0 +1,25 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area23#page102" name="Farmacia aggiunto in modo corretto" layout:pageLayout="MetroStyle/Default" gr:x="385" gr:y="220">
+  <ContentUnits>
+    <MultiMessageUnit id="sv5#area23#page102#mssu62" name="Modifiche avvenute correttamente" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">La farmacia &#232; stata aggiunta in modo corretto</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area23#page102#mssu62"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

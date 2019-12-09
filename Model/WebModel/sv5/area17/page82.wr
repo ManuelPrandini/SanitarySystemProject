@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="10" gr:y="140" id="sv5#area17#page82" name="Aggiorna FAQ" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="15" gr:y="140" id="sv5#area17#page82" name="Aggiorna FAQ" landmark="true">
   <ContentUnits>
-    <IndexUnit gr:x="75" gr:y="0" id="sv5#area17#page82#inu5" name="Domande e risposte" entity="ent14" linkOrder="sv5#area17#page82#inu5#ln155" displayAttributes="ent14#att65 ent14#att66" ajaxTooltipEnabled="false">
+    <IndexUnit gr:x="0" gr:y="0" id="sv5#area17#page82#inu5" name="Domande e risposte" entity="ent14" linkOrder="sv5#area17#page82#inu5#ln155" displayAttributes="ent14#att65 ent14#att66" ajaxTooltipEnabled="false">
       <Link id="sv5#area17#page82#inu5#ln155" name="Aggiorna" to="sv5#area17#page85#enu29" type="normal" validate="true" ajaxOpenWindow="true" ajaxWindowUseTitle="false" ajaxWindowClosable="true" ajaxWindowTitle="800" ajaxWindowWidth="500">
         <LinkParameter id="sv5#area17#page82#inu5#ln155#par604" name="question_Domanda" source="data[].ent14#att65" target="sv5#area17#page85#enu29#fld98_slot"/>
         <LinkParameter id="sv5#area17#page82#inu5#ln155#par670" name="oid_PASSING" source="data[].ent14#att64" passing="true"/>

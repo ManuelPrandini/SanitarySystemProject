@@ -1,0 +1,39 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="75" gr:y="1100" id="sv5#area18" name="Gestione degli ospedali" landmark="true" defaultPage="sv5#area18#page90" landmarks="sv5#area18#page90 sv5#area18#page108">
+  <OperationUnits>
+    <SelectorUnit gr:x="15" gr:y="205" id="sv5#area18#seu82" name="Seleziona citt&#224;" entity="ent12">
+      <OKLink id="sv5#area18#seu82#oln291" name="OKFlow291" to="sv5#area18#page90#enu28" gr:bendpoints="98,-43,-82,67">
+        <LinkParameter id="sv5#area18#seu82#oln291#par640" name="name_Citt&#224; [label]" source="ent12#att39Array" target="sv5#area18#page90#enu28#sfld12_label"/>
+        <LinkParameter id="sv5#area18#seu82#oln291#par706" name="oid_Citt&#224; [output]" source="ent12#att16Array" target="sv5#area18#page90#enu28#sfld12_output"/>
+      </OKLink>
+      <Selector id="sv5#area18#seu82#su95" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv5#area18#seu82#su95#acond105" name="nazione" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role8.ent11#att15"/>
+      </Selector>
+    </SelectorUnit>
+    <CreateUnit gr:x="225" gr:y="210" id="sv5#area18#cru19" name="Inserisci ospedale" entity="ent4">
+      <OKLink id="sv5#area18#cru19#oln292" name="OKFlow292" to="sv5#area18#page99" automaticCoupling="true"/>
+      <KOLink id="sv5#area18#cru19#kln86" name="KOFlow86" to="sv5#area18#page100" automaticCoupling="true"/>
+    </CreateUnit>
+    <SelectorUnit id="sv5#area18#seu96" name="Seleziona citt&#224;" gr:x="10" gr:y="620" entity="ent12">
+      <Selector id="sv5#area18#seu96#su140" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv5#area18#seu96#su140#acond150" name="nazione" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role8.ent11#att15"/>
+      </Selector>
+      <OKLink id="sv5#area18#seu96#oln298" name="OKFlow298" to="sv5#area18#page108#enu34" gr:bendpoints="121,-60,-84,70">
+        <LinkParameter id="sv5#area18#seu96#oln298#par1437" name="name_Citt&#224; [label]" source="ent12#att39Array" target="sv5#area18#page108#enu34#sfld24_label"/>
+        <LinkParameter id="sv5#area18#seu96#oln298#par1438" name="oid_Citt&#224; [output]" source="ent12#att16Array" target="sv5#area18#page108#enu34#sfld24_output"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit gr:x="195" gr:y="630" id="sv5#area18#seu97" name="Seleziona ospedale" entity="ent4">
+      <Selector id="sv5#area18#seu97#su144" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv5#area18#seu97#su144#acond155" name="citt&#224;" predicate="eq" booleanOperator="or" implied="false" attributes="rel2#role2.ent12#att16"/>
+      </Selector>
+      <OKLink id="sv5#area18#seu97#oln299" name="OKFlow299" to="sv5#area18#page108#enu34" gr:bendpoints="26,-79,6,61">
+        <LinkParameter id="sv5#area18#seu97#oln299#par1447" name="name_Ospedale [label]" source="ent4#att14Array" target="sv5#area18#page108#enu34#sfld25_label"/>
+        <LinkParameter id="sv5#area18#seu97#oln299#par1448" name="id_hospital_Ospedale [output]" source="ent4#att1Array" target="sv5#area18#page108#enu34#sfld25_output"/>
+      </OKLink>
+    </SelectorUnit>
+    <CreateUnit gr:x="380" gr:y="625" id="sv5#area18#cru28" name="Aggiungi stanza" entity="ent10">
+      <OKLink id="sv5#area18#cru28#oln300" name="OKFlow300" to="sv5#area18#page109" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Modifiche effettuate con successo" ajaxWindowWidth="750" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+      <KOLink id="sv5#area18#cru28#kln92" name="KOFlow92" to="sv5#area18#page110" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Errore" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowWidth="600" ajaxWindowHeight="300"/>
+    </CreateUnit>
+  </OperationUnits>
+</Area>

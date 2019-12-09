@@ -1,0 +1,74 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv5#area23#page98" name="Registra nuova farmacia" landmark="true">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="145" gr:y="0" id="sv5#area23#page98#mssu58" name="Area registrazione nuova farmacia">
+      <Message xml:space="preserve">In quest'area puoi procedere con la registrazione di una nuova farmacia</Message>
+    </MultiMessageUnit>
+    <EntryUnit gr:x="170" gr:y="70" id="sv5#area23#page98#enu31" name="Registra nuova farmacia" fieldOrder="sv5#area23#page98#enu31#sfld16 sv5#area23#page98#enu31#sfld17 sv5#area23#page98#enu31#fld114 sv5#area23#page98#enu31#fld133 sv5#area23#page98#enu31#fld134 sv5#area23#page98#enu31#fld135" linkOrder="sv5#area23#page98#enu31#ln190 sv5#area23#page98#enu31#ln191">
+      <Field id="sv5#area23#page98#enu31#fld135" name="sito web" type="url" modifiable="true"/>
+      <Field id="sv5#area23#page98#enu31#fld134" name="telefono" type="string" modifiable="true"/>
+      <Field id="sv5#area23#page98#enu31#fld133" name="indirizzo" type="string" modifiable="true"/>
+      <Field id="sv5#area23#page98#enu31#fld114" name="nome Farmacia" type="string" modifiable="true"/>
+      <SelectionField id="sv5#area23#page98#enu31#sfld17" name="Citt&#224;" type="string" modifiable="true"/>
+      <SelectionField id="sv5#area23#page98#enu31#sfld16" name="Nazione" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="sv5#area23#page98#enu31#ln190"/>
+      <Link id="sv5#area23#page98#enu31#ln190" name="Flow190" to="sv5#area23#seu94" type="normal" validate="true">
+        <LinkParameter id="sv5#area23#page98#enu31#ln190#par1316" name="Nazione_nazione" source="sv5#area23#page98#enu31#sfld16" target="sv5#area23#seu94#su131#acond134"/>
+      </Link>
+      <Link id="sv5#area23#page98#enu31#ln191" name="Registra" to="sv5#area23#cru27" type="normal" validate="true">
+        <LinkParameter id="sv5#area23#page98#enu31#ln191#par1319" name="indirizzo_address" source="sv5#area23#page98#enu31#fld133" target="sv5#area23#cru27.ent19#att44"/>
+        <LinkParameter id="sv5#area23#page98#enu31#ln191#par1320" name="Citt&#224;_City.oid(PharmacyToCity)" source="sv5#area23#page98#enu31#sfld17" target="sv5#area23#cru27.rel13#role25.ent12#att16"/>
+        <LinkParameter id="sv5#area23#page98#enu31#ln191#par1321" name="nome Farmacia_name" source="sv5#area23#page98#enu31#fld114" target="sv5#area23#cru27.ent19#att43"/>
+        <LinkParameter id="sv5#area23#page98#enu31#ln191#par1328" name="telefono_telephone" source="sv5#area23#page98#enu31#fld134" target="sv5#area23#cru27.ent19#att46"/>
+        <LinkParameter id="sv5#area23#page98#enu31#ln191#par1433" name="sito web_website" source="sv5#area23#page98#enu31#fld135" target="sv5#area23#cru27.ent19#att45"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit id="sv5#area23#page98#seu84" name="Seleziona Nazione" gr:x="0" gr:y="60" entity="ent11">
+      <Link id="sv5#area23#page98#seu84#ln153" name="Flow153" to="sv5#area23#page98#enu31" type="transport" validate="true">
+        <LinkParameter id="sv5#area23#page98#seu84#ln153#par1307" name="name_Nazione [label]" source="ent11#att18Array" target="sv5#area23#page98#enu31#sfld16_label"/>
+        <LinkParameter id="sv5#area23#page98#seu84#ln153#par1314" name="oid_Nazione [output]" source="ent11#att15Array" target="sv5#area23#page98#enu31#sfld16_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area23#page98#mssu58"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area23#page98#enu31">
+          <layout:Field field="sv5#area23#page98#enu31#sfld16"/>
+          <layout:Field field="sv5#area23#page98#enu31#sfld17"/>
+          <layout:Field field="sv5#area23#page98#enu31#fld114"/>
+          <layout:Field field="sv5#area23#page98#enu31#fld133"/>
+          <layout:Field field="sv5#area23#page98#enu31#fld134"/>
+          <layout:Field field="sv5#area23#page98#enu31#fld135"/>
+          <layout:Link link="sv5#area23#page98#enu31#ln190"/>
+          <layout:Link link="sv5#area23#page98#enu31#ln191"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

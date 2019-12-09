@@ -1,143 +1,143 @@
-[08 dic 2019 17:57:17] DEBUG Executing SQL script
-[08 dic 2019 17:57:17] INFO ================================================================================
-[08 dic 2019 17:57:17] INFO onError= 'stop'
-[08 dic 2019 17:57:17] INFO autoCommit= 'false'
-[08 dic 2019 17:57:17] INFO username= 'root'
-[08 dic 2019 17:57:17] INFO outputPath= '/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/SanitarySystemProject/.Temp~/UpdateSQL.xml'
-[08 dic 2019 17:57:17] INFO outputLogPath= '/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/SanitarySystemProject/.Temp~/UpdateSQL.xml.log'
-[08 dic 2019 17:57:17] INFO encoding= ''
-[08 dic 2019 17:57:17] INFO driverClass= 'com.mysql.jdbc.Driver'
-[08 dic 2019 17:57:17] INFO sqlScript= '/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/SanitarySystemProject/.Temp~/UpdateSQL.sql'
-[08 dic 2019 17:57:17] INFO eventSocketPort= '42473'
-[08 dic 2019 17:57:17] INFO statementSeparator= ';'
-[08 dic 2019 17:57:17] INFO derby.system.home= '/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/.metadata/.plugins/com.webratio.commons.db/derby'
-[08 dic 2019 17:57:17] INFO password= 'root'
-[08 dic 2019 17:57:17] INFO url= 'jdbc:mysql://localhost:3306/hospital'
-[08 dic 2019 17:57:17] INFO ================================================================================
-[08 dic 2019 17:57:17] INFO Connecting to the Database...
-[08 dic 2019 17:57:17] INFO Database connection estabilished
-[08 dic 2019 17:57:17] INFO transaction isolation: 4
-[08 dic 2019 17:57:17] DEBUG ================================================================================
-[08 dic 2019 17:57:17] DEBUG Executing SQL script file: /home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/SanitarySystemProject/.Temp~/UpdateSQL.sql
-[08 dic 2019 17:57:17] DEBUG Executing statement:  create table `group` ( `oid`  integer  not null, `groupname`  varchar(255), primary key (`oid`) )
-[08 dic 2019 17:57:17] DEBUG Executing statement:    create table `module` ( `oid`  integer  not null, `moduleid`  varchar(255), `modulename`  varchar(255), primary key (`oid`) )
-[08 dic 2019 17:57:18] DEBUG Executing statement:    create table `user` ( `cf`  varchar(255)  not null, `username`  varchar(255), `password`  varchar(255), `email`  varchar(255), `name`  varchar(255), `surname`  varchar(255), `birthday`  date, `address`  varchar(255), `telephone`  varchar(255), `gender`  varchar(255), `code`  varchar(255), `expiration_date`  date, primary key (`cf`) )
-[08 dic 2019 17:57:18] DEBUG Executing statement:    create table `pharmacist` ( `pharmacist_code`  varchar(255)  not null, `approved`  integer, primary key (`pharmacist_code`) )
-[08 dic 2019 17:57:19] DEBUG Executing statement:    create table `room` ( `id_room`  integer  not null, `floor`  integer, `name`  varchar(255), primary key (`id_room`) )
-[08 dic 2019 17:57:19] DEBUG Executing statement:    create table `country` ( `oid`  integer  not null, `name`  varchar(255), primary key (`oid`) )
-[08 dic 2019 17:57:19] DEBUG Executing statement:    create table `city` ( `oid`  integer  not null, `name`  varchar(255), primary key (`oid`) )
-[08 dic 2019 17:57:20] DEBUG Executing statement:    create table `faq` ( `oid`  integer  not null, `question`  longtext, `answer`  longtext, primary key (`oid`) )
-[08 dic 2019 17:57:20] DEBUG Executing statement:    create table `without_prescription` ( `sell_oid`  integer  not null, primary key (`sell_oid`) )
-[08 dic 2019 17:57:20] DEBUG Executing statement:    create table `emergency_room` ( `room_id_room`  integer  not null, primary key (`room_id_room`) )
-[08 dic 2019 17:57:20] DEBUG Executing statement:    create table `emergency_operation` ( `action_oid`  integer  not null, primary key (`action_oid`) )
-[08 dic 2019 17:57:21] DEBUG Executing statement:    create table `emergency_code` ( `code`  varchar(255)  not null, primary key (`code`) )
-[08 dic 2019 17:57:21] DEBUG Executing statement:    create table `pharmacy` ( `oid`  integer  not null, `name`  varchar(255), `address`  varchar(255), `telephone`  varchar(255), `website`  varchar(255), primary key (`oid`) )
-[08 dic 2019 17:57:21] DEBUG Executing statement:    create table `drug` ( `id`  integer  not null, `isstandard`  bit, `name`  varchar(255), primary key (`id`) )
-[08 dic 2019 17:57:22] DEBUG Executing statement:    create table `recovery_room` ( `room_id_room`  integer  not null, primary key (`room_id_room`) )
-[08 dic 2019 17:57:22] DEBUG Executing statement:    create table `quantity_drug` ( `quantity`  integer, `oid`  integer  not null, primary key (`oid`) )
-[08 dic 2019 17:57:22] DEBUG Executing statement:    create table `drug_description` ( `name`  varchar(255)  not null, primary key (`name`) )
-[08 dic 2019 17:57:23] DEBUG Executing statement:    create table `visit_room` ( `room_id_room`  integer  not null, primary key (`room_id_room`) )
-[08 dic 2019 17:57:23] DEBUG Executing statement:    create table `surgery_room` ( `room_id_room`  integer  not null, primary key (`room_id_room`) )
-[08 dic 2019 17:57:23] DEBUG Executing statement:    create table `bed_place` ( `oid`  integer  not null, primary key (`oid`) )
-[08 dic 2019 17:57:24] DEBUG Executing statement:    create table `autoincrementoid` ( `oid`  integer  not null, primary key (`oid`) )
-[08 dic 2019 17:57:24] DEBUG Executing statement:    create table `visit` ( `action_oid`  integer  not null, primary key (`action_oid`) )
-[08 dic 2019 17:57:24] DEBUG Executing statement:    create table `clinical_surgery` ( `action_oid`  integer  not null, primary key (`action_oid`) )
-[08 dic 2019 17:57:25] DEBUG Executing statement:    create table `recovery` ( `action_oid`  integer  not null, primary key (`action_oid`) )
-[08 dic 2019 17:57:25] DEBUG Executing statement:    create table `codaprontosoccorso` ( `oid`  integer  not null, primary key (`oid`) )
-[08 dic 2019 17:57:25] DEBUG Executing statement:    create table `drug_prescription` ( `oid`  integer  not null, `quantity`  integer, `description`  longtext, `assigned`  integer, primary key (`oid`) )
-[08 dic 2019 17:57:26] DEBUG Executing statement:    create table `sell` ( `oid`  integer  not null, `quantity`  integer, `date`  datetime, primary key (`oid`) )
-[08 dic 2019 17:57:26] DEBUG Executing statement:    create table `hospital` ( `id_hospital`  integer  not null, `address`  varchar(255), `name`  varchar(255), `telephone`  varchar(255), `website`  varchar(255), primary key (`id_hospital`) )
-[08 dic 2019 17:57:26] DEBUG Executing statement:    create table `action` ( `oid`  integer  not null, `title`  varchar(255), `description`  longtext, `startdate`  date, `endtime`  time, `starttime`  time, `enddate`  date, primary key (`oid`) )
-[08 dic 2019 17:57:27] DEBUG Executing statement:    create table `patient` ( `weight`  integer, `height`  integer, `approved`  integer, `patient_code`  varchar(255)  not null, primary key (`patient_code`) )
-[08 dic 2019 17:57:27] DEBUG Executing statement:    create table `with_prescription` ( `sell_oid`  integer  not null, primary key (`sell_oid`) )
-[08 dic 2019 17:57:27] DEBUG Executing statement:    create table `medical_specialization` ( `namespecialization`  varchar(255)  not null, primary key (`namespecialization`) )
-[08 dic 2019 17:57:28] DEBUG Executing statement:    create table `doctor` ( `doctor_code`  varchar(255)  not null, `approved`  integer, primary key (`doctor_code`) )
-[08 dic 2019 17:57:28] DEBUG Executing statement:    alter table `group`  add column  `module_oid`  integer
-[08 dic 2019 17:57:29] DEBUG Executing statement:  alter table `group`   add index fk_group_module (`module_oid`), add constraint fk_group_module foreign key (`module_oid`) references `module` (`oid`)
-[08 dic 2019 17:57:30] DEBUG Executing statement:    create table `group_module` ( `group_oid`  integer not null, `module_oid`  integer not null, primary key (`group_oid`, `module_oid`) )
-[08 dic 2019 17:57:30] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_group (`group_oid`), add constraint fk_group_module_group foreign key (`group_oid`) references `group` (`oid`)
-[08 dic 2019 17:57:31] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_module (`module_oid`), add constraint fk_group_module_module foreign key (`module_oid`) references `module` (`oid`)
-[08 dic 2019 17:57:32] DEBUG Executing statement:    alter table `user`  add column  `group_oid`  integer
-[08 dic 2019 17:57:33] DEBUG Executing statement:  alter table `user`   add index fk_user_group (`group_oid`), add constraint fk_user_group foreign key (`group_oid`) references `group` (`oid`)
-[08 dic 2019 17:57:34] DEBUG Executing statement:    create table `user_group` ( `user_cf`  varchar(255) not null, `group_oid`  integer not null, primary key (`user_cf`, `group_oid`) )
-[08 dic 2019 17:57:34] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_user (`user_cf`), add constraint fk_user_group_user foreign key (`user_cf`) references `user` (`cf`)
-[08 dic 2019 17:57:35] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_group (`group_oid`), add constraint fk_user_group_group foreign key (`group_oid`) references `group` (`oid`)
-[08 dic 2019 17:57:36] DEBUG Executing statement:    alter table `visit_room`  add column  `medical_specialization_namespe`  varchar(255)
-[08 dic 2019 17:57:36] DEBUG Executing statement:  alter table `visit_room`   add index fk_visit_room_medical_speciali (`medical_specialization_namespe`), add constraint fk_visit_room_medical_speciali foreign key (`medical_specialization_namespe`) references `medical_specialization` (`namespecialization`)
-[08 dic 2019 17:57:37] DEBUG Executing statement:    alter table `action`  add column  `patient_patient_code`  varchar(255)
-[08 dic 2019 17:57:38] DEBUG Executing statement:  alter table `action`   add index fk_action_patient (`patient_patient_code`), add constraint fk_action_patient foreign key (`patient_patient_code`) references `patient` (`patient_code`)
-[08 dic 2019 17:57:38] DEBUG Executing statement:    alter table `pharmacy`  add column  `city_oid`  integer
-[08 dic 2019 17:57:39] DEBUG Executing statement:  alter table `pharmacy`   add index fk_pharmacy_city (`city_oid`), add constraint fk_pharmacy_city foreign key (`city_oid`) references `city` (`oid`)
-[08 dic 2019 17:57:40] DEBUG Executing statement:    alter table `patient`  add column  `user_cf`  varchar(255)
-[08 dic 2019 17:57:40] DEBUG Executing statement:  alter table `patient`   add index fk_patient_user (`user_cf`), add constraint fk_patient_user foreign key (`user_cf`) references `user` (`cf`)
-[08 dic 2019 17:57:41] DEBUG Executing statement:    alter table `pharmacist`  add column  `pharmacy_oid`  integer
-[08 dic 2019 17:57:42] DEBUG Executing statement:  alter table `pharmacist`   add index fk_pharmacist_pharmacy (`pharmacy_oid`), add constraint fk_pharmacist_pharmacy foreign key (`pharmacy_oid`) references `pharmacy` (`oid`)
-[08 dic 2019 17:57:42] DEBUG Executing statement:    alter table `visit`  add column  `visit_room_id_room`  integer
-[08 dic 2019 17:57:43] DEBUG Executing statement:  alter table `visit`   add index fk_visit_visit_room (`visit_room_id_room`), add constraint fk_visit_visit_room foreign key (`visit_room_id_room`) references `visit_room` (`room_id_room`)
-[08 dic 2019 17:57:44] DEBUG Executing statement:    alter table `quantity_drug`  add column  `pharmacy_oid`  integer
-[08 dic 2019 17:57:44] DEBUG Executing statement:  alter table `quantity_drug`   add index fk_quantity_drug_pharmacy (`pharmacy_oid`), add constraint fk_quantity_drug_pharmacy foreign key (`pharmacy_oid`) references `pharmacy` (`oid`)
-[08 dic 2019 17:57:45] DEBUG Executing statement:    alter table `clinical_surgery`  add column  `surgery_room_id_room`  integer
-[08 dic 2019 17:57:45] DEBUG Executing statement:  alter table `clinical_surgery`   add index fk_clinical_surgery_surgery_ro (`surgery_room_id_room`), add constraint fk_clinical_surgery_surgery_ro foreign key (`surgery_room_id_room`) references `surgery_room` (`room_id_room`)
-[08 dic 2019 17:57:46] DEBUG Executing statement:    alter table `without_prescription`  add column  `patient_patient_code`  varchar(255)
-[08 dic 2019 17:57:47] DEBUG Executing statement:  alter table `without_prescription`   add index fk_without_prescription_patien (`patient_patient_code`), add constraint fk_without_prescription_patien foreign key (`patient_patient_code`) references `patient` (`patient_code`)
-[08 dic 2019 17:57:47] DEBUG Executing statement:    alter table `hospital`  add column  `city_oid`  integer
-[08 dic 2019 17:57:48] DEBUG Executing statement:  alter table `hospital`   add index fk_hospital_city (`city_oid`), add constraint fk_hospital_city foreign key (`city_oid`) references `city` (`oid`)
-[08 dic 2019 17:57:49] DEBUG Executing statement:    alter table `recovery`  add column  `bed_place_oid`  integer
-[08 dic 2019 17:57:50] DEBUG Executing statement:  alter table `recovery`   add index fk_recovery_bed_place (`bed_place_oid`), add constraint fk_recovery_bed_place foreign key (`bed_place_oid`) references `bed_place` (`oid`)
-[08 dic 2019 17:57:50] DEBUG Executing statement:    alter table `pharmacist`  add column  `user_cf`  varchar(255)
-[08 dic 2019 17:57:51] DEBUG Executing statement:  alter table `pharmacist`   add index fk_pharmacist_user (`user_cf`), add constraint fk_pharmacist_user foreign key (`user_cf`) references `user` (`cf`)
-[08 dic 2019 17:57:52] DEBUG Executing statement:    alter table `quantity_drug`  add column  `drug_id`  integer
-[08 dic 2019 17:57:53] DEBUG Executing statement:  alter table `quantity_drug`   add index fk_quantity_drug_drug (`drug_id`), add constraint fk_quantity_drug_drug foreign key (`drug_id`) references `drug` (`id`)
-[08 dic 2019 17:57:54] DEBUG Executing statement:    alter table `drug_description`  add column  `drug_id`  integer
-[08 dic 2019 17:57:54] DEBUG Executing statement:  alter table `drug_description`   add index fk_drug_description_drug (`drug_id`), add constraint fk_drug_description_drug foreign key (`drug_id`) references `drug` (`id`)
-[08 dic 2019 17:57:55] DEBUG Executing statement:    alter table `without_prescription`  add column  `drug_id`  integer
-[08 dic 2019 17:57:56] DEBUG Executing statement:  alter table `without_prescription`   add index fk_without_prescription_drug (`drug_id`), add constraint fk_without_prescription_drug foreign key (`drug_id`) references `drug` (`id`)
-[08 dic 2019 17:57:57] DEBUG Executing statement:    alter table `emergency_operation`  add column  `codaprontosoccorso_oid`  integer
-[08 dic 2019 17:57:58] DEBUG Executing statement:  alter table `emergency_operation`   add index fk_emergency_operation_codapro (`codaprontosoccorso_oid`), add constraint fk_emergency_operation_codapro foreign key (`codaprontosoccorso_oid`) references `codaprontosoccorso` (`oid`)
-[08 dic 2019 17:57:59] DEBUG Executing statement:    alter table `action`  add column  `doctor_doctor_code`  varchar(255)
-[08 dic 2019 17:58:00] DEBUG Executing statement:  alter table `action`   add index fk_action_doctor (`doctor_doctor_code`), add constraint fk_action_doctor foreign key (`doctor_doctor_code`) references `doctor` (`doctor_code`)
-[08 dic 2019 17:58:01] DEBUG Executing statement:    alter table `drug_prescription`  add column  `visit_oid`  integer
-[08 dic 2019 17:58:01] DEBUG Executing statement:  alter table `drug_prescription`   add index fk_drug_prescription_visit (`visit_oid`), add constraint fk_drug_prescription_visit foreign key (`visit_oid`) references `visit` (`action_oid`)
-[08 dic 2019 17:58:02] DEBUG Executing statement:    alter table `drug_prescription`  add column  `drug_id`  integer
-[08 dic 2019 17:58:03] DEBUG Executing statement:  alter table `drug_prescription`   add index fk_drug_prescription_drug (`drug_id`), add constraint fk_drug_prescription_drug foreign key (`drug_id`) references `drug` (`id`)
-[08 dic 2019 17:58:04] DEBUG Executing statement:    alter table `sell`  add column  `pharmacist_pharmacist_code`  varchar(255)
-[08 dic 2019 17:58:05] DEBUG Executing statement:  alter table `sell`   add index fk_sell_pharmacist (`pharmacist_pharmacist_code`), add constraint fk_sell_pharmacist foreign key (`pharmacist_pharmacist_code`) references `pharmacist` (`pharmacist_code`)
-[08 dic 2019 17:58:06] DEBUG Executing statement:    alter table `with_prescription`  add column  `drug_prescription_oid`  integer
-[08 dic 2019 17:58:07] DEBUG Executing statement:  alter table `with_prescription`   add index fk_with_prescription_drug_pres (`drug_prescription_oid`), add constraint fk_with_prescription_drug_pres foreign key (`drug_prescription_oid`) references `drug_prescription` (`oid`)
-[08 dic 2019 17:58:08] DEBUG Executing statement:    alter table `emergency_operation`  add column  `emergency_code_code`  varchar(255)
-[08 dic 2019 17:58:09] DEBUG Executing statement:  alter table `emergency_operation`   add index fk_emergency_operation_emergen (`emergency_code_code`), add constraint fk_emergency_operation_emergen foreign key (`emergency_code_code`) references `emergency_code` (`code`)
-[08 dic 2019 17:58:10] DEBUG Executing statement:    alter table `emergency_operation`  add column  `emergency_room_id_room`  integer
-[08 dic 2019 17:58:10] DEBUG Executing statement:  alter table `emergency_operation`   add index fk_emergency_operation_emerg_2 (`emergency_room_id_room`), add constraint fk_emergency_operation_emerg_2 foreign key (`emergency_room_id_room`) references `emergency_room` (`room_id_room`)
-[08 dic 2019 17:58:11] DEBUG Executing statement:    alter table `doctor`  add column  `user_cf`  varchar(255)
-[08 dic 2019 17:58:12] DEBUG Executing statement:  alter table `doctor`   add index fk_doctor_user (`user_cf`), add constraint fk_doctor_user foreign key (`user_cf`) references `user` (`cf`)
-[08 dic 2019 17:58:13] DEBUG Executing statement:    alter table `room`  add column  `hospital_id_hospital`  integer
-[08 dic 2019 17:58:13] DEBUG Executing statement:  alter table `room`   add index fk_room_hospital (`hospital_id_hospital`), add constraint fk_room_hospital foreign key (`hospital_id_hospital`) references `hospital` (`id_hospital`)
-[08 dic 2019 17:58:14] DEBUG Executing statement:    alter table `doctor`  add column  `medical_specialization_namespe`  varchar(255)
-[08 dic 2019 17:58:15] DEBUG Executing statement:  alter table `doctor`   add index fk_doctor_medical_specializati (`medical_specialization_namespe`), add constraint fk_doctor_medical_specializati foreign key (`medical_specialization_namespe`) references `medical_specialization` (`namespecialization`)
-[08 dic 2019 17:58:16] DEBUG Executing statement:    alter table `codaprontosoccorso`  add column  `hospital_id_hospital`  integer
-[08 dic 2019 17:58:16] DEBUG Executing statement:  alter table `codaprontosoccorso`   add index fk_codaprontosoccorso_hospital (`hospital_id_hospital`), add constraint fk_codaprontosoccorso_hospital foreign key (`hospital_id_hospital`) references `hospital` (`id_hospital`)
-[08 dic 2019 17:58:17] DEBUG Executing statement:    create table `doctor_room` ( `doctor_doctor_code`  varchar(255) not null, `room_id_room`  integer not null, primary key (`doctor_doctor_code`, `room_id_room`) )
-[08 dic 2019 17:58:18] DEBUG Executing statement:  alter table `doctor_room`   add index fk_doctor_room_doctor (`doctor_doctor_code`), add constraint fk_doctor_room_doctor foreign key (`doctor_doctor_code`) references `doctor` (`doctor_code`)
-[08 dic 2019 17:58:19] DEBUG Executing statement:  alter table `doctor_room`   add index fk_doctor_room_room (`room_id_room`), add constraint fk_doctor_room_room foreign key (`room_id_room`) references `room` (`id_room`)
-[08 dic 2019 17:58:19] DEBUG Executing statement:    alter table `city`  add column  `country_oid`  integer
-[08 dic 2019 17:58:20] DEBUG Executing statement:  alter table `city`   add index fk_city_country (`country_oid`), add constraint fk_city_country foreign key (`country_oid`) references `country` (`oid`)
-[08 dic 2019 17:58:21] DEBUG Executing statement:    alter table `user`  add column  `city_oid`  integer
-[08 dic 2019 17:58:21] DEBUG Executing statement:  alter table `user`   add index fk_user_city (`city_oid`), add constraint fk_user_city foreign key (`city_oid`) references `city` (`oid`)
-[08 dic 2019 17:58:23] DEBUG Executing statement:    alter table `bed_place`  add column  `recovery_room_id_room`  integer
-[08 dic 2019 17:58:23] DEBUG Executing statement:  alter table `bed_place`   add index fk_bed_place_recovery_room (`recovery_room_id_room`), add constraint fk_bed_place_recovery_room foreign key (`recovery_room_id_room`) references `recovery_room` (`room_id_room`)
-[08 dic 2019 17:58:24] DEBUG Executing statement:    alter table `user`  add column  `city_oid_2`  integer
-[08 dic 2019 17:58:25] DEBUG Executing statement:  alter table `user`   add index fk_user_city_2 (`city_oid_2`), add constraint fk_user_city_2 foreign key (`city_oid_2`) references `city` (`oid`)
-[08 dic 2019 17:58:26] DEBUG Executing statement:    alter table `without_prescription`   add index fk_without_prescription_sell (`sell_oid`), add constraint fk_without_prescription_sell foreign key (`sell_oid`) references `sell` (`oid`)
-[08 dic 2019 17:58:27] DEBUG Executing statement:    alter table `emergency_room`   add index fk_emergency_room_room (`room_id_room`), add constraint fk_emergency_room_room foreign key (`room_id_room`) references `room` (`id_room`)
-[08 dic 2019 17:58:28] DEBUG Executing statement:    alter table `emergency_operation`   add index fk_emergency_operation_action (`action_oid`), add constraint fk_emergency_operation_action foreign key (`action_oid`) references `action` (`oid`)
-[08 dic 2019 17:58:29] DEBUG Executing statement:    alter table `recovery_room`   add index fk_recovery_room_room (`room_id_room`), add constraint fk_recovery_room_room foreign key (`room_id_room`) references `room` (`id_room`)
-[08 dic 2019 17:58:30] DEBUG Executing statement:    alter table `visit_room`   add index fk_visit_room_room (`room_id_room`), add constraint fk_visit_room_room foreign key (`room_id_room`) references `room` (`id_room`)
-[08 dic 2019 17:58:31] DEBUG Executing statement:    alter table `surgery_room`   add index fk_surgery_room_room (`room_id_room`), add constraint fk_surgery_room_room foreign key (`room_id_room`) references `room` (`id_room`)
-[08 dic 2019 17:58:32] DEBUG Executing statement:    alter table `visit`   add index fk_visit_action (`action_oid`), add constraint fk_visit_action foreign key (`action_oid`) references `action` (`oid`)
-[08 dic 2019 17:58:33] DEBUG Executing statement:    alter table `clinical_surgery`   add index fk_clinical_surgery_action (`action_oid`), add constraint fk_clinical_surgery_action foreign key (`action_oid`) references `action` (`oid`)
-[08 dic 2019 17:58:34] DEBUG Executing statement:    alter table `recovery`   add index fk_recovery_action (`action_oid`), add constraint fk_recovery_action foreign key (`action_oid`) references `action` (`oid`)
-[08 dic 2019 17:58:35] DEBUG Executing statement:    alter table `with_prescription`   add index fk_with_prescription_sell (`sell_oid`), add constraint fk_with_prescription_sell foreign key (`sell_oid`) references `sell` (`oid`)
-[08 dic 2019 17:58:36] DEBUG ================================================================================
-[08 dic 2019 17:58:36] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[08 dic 2019 17:58:36] INFO Database connection closed
-[08 dic 2019 17:58:36] DEBUG Total time: 79264 milliseconds
+[09 dic 2019 21:05:32] DEBUG Executing SQL script
+[09 dic 2019 21:05:32] INFO ================================================================================
+[09 dic 2019 21:05:32] INFO onError= 'stop'
+[09 dic 2019 21:05:32] INFO autoCommit= 'false'
+[09 dic 2019 21:05:32] INFO username= 'root'
+[09 dic 2019 21:05:32] INFO outputPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\SanitarySystemProject\.Temp~\UpdateSQL.xml'
+[09 dic 2019 21:05:32] INFO outputLogPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\SanitarySystemProject\.Temp~\UpdateSQL.xml.log'
+[09 dic 2019 21:05:32] INFO encoding= ''
+[09 dic 2019 21:05:32] INFO driverClass= 'com.mysql.jdbc.Driver'
+[09 dic 2019 21:05:32] INFO sqlScript= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\SanitarySystemProject\.Temp~\UpdateSQL.sql'
+[09 dic 2019 21:05:32] INFO eventSocketPort= '60597'
+[09 dic 2019 21:05:32] INFO statementSeparator= ';'
+[09 dic 2019 21:05:32] INFO derby.system.home= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[09 dic 2019 21:05:32] INFO password= 'root'
+[09 dic 2019 21:05:32] INFO url= 'jdbc:mysql://localhost:3306/hospital'
+[09 dic 2019 21:05:32] INFO ================================================================================
+[09 dic 2019 21:05:32] INFO Connecting to the Database...
+[09 dic 2019 21:05:33] INFO Database connection estabilished
+[09 dic 2019 21:05:33] INFO transaction isolation: 4
+[09 dic 2019 21:05:33] DEBUG ================================================================================
+[09 dic 2019 21:05:33] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\SanitarySystemProject\.Temp~\UpdateSQL.sql
+[09 dic 2019 21:05:33] DEBUG Executing statement:  create table `group` ( `oid`  integer  not null, `groupname`  varchar(255), primary key (`oid`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `module` ( `oid`  integer  not null, `moduleid`  varchar(255), `modulename`  varchar(255), primary key (`oid`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `user` ( `cf`  varchar(255)  not null, `username`  varchar(255), `password`  varchar(255), `email`  varchar(255), `name`  varchar(255), `surname`  varchar(255), `birthday`  date, `address`  varchar(255), `telephone`  varchar(255), `gender`  varchar(255), `code`  varchar(255), `expiration_date`  date, primary key (`cf`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `pharmacist` ( `pharmacist_code`  varchar(255)  not null, `approved`  integer, primary key (`pharmacist_code`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `room` ( `id_room`  integer  not null, `floor`  integer, `name`  varchar(255), primary key (`id_room`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `country` ( `oid`  integer  not null, `name`  varchar(255), primary key (`oid`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `city` ( `oid`  integer  not null, `name`  varchar(255), primary key (`oid`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `faq` ( `oid`  integer  not null, `question`  longtext, `answer`  longtext, primary key (`oid`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `without_prescription` ( `sell_oid`  integer  not null, primary key (`sell_oid`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `emergency_room` ( `room_id_room`  integer  not null, primary key (`room_id_room`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `emergency_operation` ( `action_oid`  integer  not null, primary key (`action_oid`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `emergency_code` ( `code`  varchar(255)  not null, primary key (`code`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `pharmacy` ( `oid`  integer  not null, `name`  varchar(255), `address`  varchar(255), `telephone`  varchar(255), `website`  varchar(255), primary key (`oid`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `drug` ( `id`  integer  not null, `isstandard`  bit, `name`  varchar(255), primary key (`id`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `recovery_room` ( `room_id_room`  integer  not null, primary key (`room_id_room`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `quantity_drug` ( `quantity`  integer, `oid`  integer  not null, primary key (`oid`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `drug_description` ( `name`  varchar(255)  not null, primary key (`name`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `visit_room` ( `room_id_room`  integer  not null, primary key (`room_id_room`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `surgery_room` ( `room_id_room`  integer  not null, primary key (`room_id_room`) )
+[09 dic 2019 21:05:33] DEBUG Executing statement:    create table `bed_place` ( `oid`  integer  not null, primary key (`oid`) )
+[09 dic 2019 21:05:34] DEBUG Executing statement:    create table `autoincrementoid` ( `oid`  integer  not null, primary key (`oid`) )
+[09 dic 2019 21:05:34] DEBUG Executing statement:    create table `visit` ( `action_oid`  integer  not null, primary key (`action_oid`) )
+[09 dic 2019 21:05:34] DEBUG Executing statement:    create table `clinical_surgery` ( `action_oid`  integer  not null, primary key (`action_oid`) )
+[09 dic 2019 21:05:34] DEBUG Executing statement:    create table `recovery` ( `action_oid`  integer  not null, primary key (`action_oid`) )
+[09 dic 2019 21:05:34] DEBUG Executing statement:    create table `codaprontosoccorso` ( `oid`  integer  not null, primary key (`oid`) )
+[09 dic 2019 21:05:34] DEBUG Executing statement:    create table `drug_prescription` ( `oid`  integer  not null, `quantity`  integer, `description`  longtext, `assigned`  integer, primary key (`oid`) )
+[09 dic 2019 21:05:34] DEBUG Executing statement:    create table `sell` ( `oid`  integer  not null, `quantity`  integer, `date`  datetime, primary key (`oid`) )
+[09 dic 2019 21:05:34] DEBUG Executing statement:    create table `hospital` ( `id_hospital`  integer  not null, `address`  varchar(255), `name`  varchar(255), `telephone`  varchar(255), `website`  varchar(255), primary key (`id_hospital`) )
+[09 dic 2019 21:05:34] DEBUG Executing statement:    create table `action` ( `oid`  integer  not null, `title`  varchar(255), `description`  longtext, `startdate`  date, `endtime`  time, `starttime`  time, `enddate`  date, primary key (`oid`) )
+[09 dic 2019 21:05:34] DEBUG Executing statement:    create table `patient` ( `weight`  integer, `height`  integer, `approved`  integer, `patient_code`  varchar(255)  not null, primary key (`patient_code`) )
+[09 dic 2019 21:05:34] DEBUG Executing statement:    create table `with_prescription` ( `sell_oid`  integer  not null, primary key (`sell_oid`) )
+[09 dic 2019 21:05:34] DEBUG Executing statement:    create table `medical_specialization` ( `namespecialization`  varchar(255)  not null, primary key (`namespecialization`) )
+[09 dic 2019 21:05:34] DEBUG Executing statement:    create table `doctor` ( `doctor_code`  varchar(255)  not null, `approved`  integer, primary key (`doctor_code`) )
+[09 dic 2019 21:05:34] DEBUG Executing statement:    alter table `group`  add column  `module_oid`  integer
+[09 dic 2019 21:05:34] DEBUG Executing statement:  alter table `group`   add index fk_group_module (`module_oid`), add constraint fk_group_module foreign key (`module_oid`) references `module` (`oid`)
+[09 dic 2019 21:05:34] DEBUG Executing statement:    create table `group_module` ( `group_oid`  integer not null, `module_oid`  integer not null, primary key (`group_oid`, `module_oid`) )
+[09 dic 2019 21:05:34] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_group (`group_oid`), add constraint fk_group_module_group foreign key (`group_oid`) references `group` (`oid`)
+[09 dic 2019 21:05:35] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_module (`module_oid`), add constraint fk_group_module_module foreign key (`module_oid`) references `module` (`oid`)
+[09 dic 2019 21:05:35] DEBUG Executing statement:    alter table `user`  add column  `group_oid`  integer
+[09 dic 2019 21:05:35] DEBUG Executing statement:  alter table `user`   add index fk_user_group (`group_oid`), add constraint fk_user_group foreign key (`group_oid`) references `group` (`oid`)
+[09 dic 2019 21:05:35] DEBUG Executing statement:    create table `user_group` ( `user_cf`  varchar(255) not null, `group_oid`  integer not null, primary key (`user_cf`, `group_oid`) )
+[09 dic 2019 21:05:35] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_user (`user_cf`), add constraint fk_user_group_user foreign key (`user_cf`) references `user` (`cf`)
+[09 dic 2019 21:05:35] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_group (`group_oid`), add constraint fk_user_group_group foreign key (`group_oid`) references `group` (`oid`)
+[09 dic 2019 21:05:35] DEBUG Executing statement:    alter table `visit_room`  add column  `medical_specialization_namespe`  varchar(255)
+[09 dic 2019 21:05:35] DEBUG Executing statement:  alter table `visit_room`   add index fk_visit_room_medical_speciali (`medical_specialization_namespe`), add constraint fk_visit_room_medical_speciali foreign key (`medical_specialization_namespe`) references `medical_specialization` (`namespecialization`)
+[09 dic 2019 21:05:35] DEBUG Executing statement:    alter table `action`  add column  `patient_patient_code`  varchar(255)
+[09 dic 2019 21:05:36] DEBUG Executing statement:  alter table `action`   add index fk_action_patient (`patient_patient_code`), add constraint fk_action_patient foreign key (`patient_patient_code`) references `patient` (`patient_code`)
+[09 dic 2019 21:05:36] DEBUG Executing statement:    alter table `pharmacy`  add column  `city_oid`  integer
+[09 dic 2019 21:05:36] DEBUG Executing statement:  alter table `pharmacy`   add index fk_pharmacy_city (`city_oid`), add constraint fk_pharmacy_city foreign key (`city_oid`) references `city` (`oid`)
+[09 dic 2019 21:05:36] DEBUG Executing statement:    alter table `patient`  add column  `user_cf`  varchar(255)
+[09 dic 2019 21:05:36] DEBUG Executing statement:  alter table `patient`   add index fk_patient_user (`user_cf`), add constraint fk_patient_user foreign key (`user_cf`) references `user` (`cf`)
+[09 dic 2019 21:05:36] DEBUG Executing statement:    alter table `pharmacist`  add column  `pharmacy_oid`  integer
+[09 dic 2019 21:05:36] DEBUG Executing statement:  alter table `pharmacist`   add index fk_pharmacist_pharmacy (`pharmacy_oid`), add constraint fk_pharmacist_pharmacy foreign key (`pharmacy_oid`) references `pharmacy` (`oid`)
+[09 dic 2019 21:05:36] DEBUG Executing statement:    alter table `visit`  add column  `visit_room_id_room`  integer
+[09 dic 2019 21:05:36] DEBUG Executing statement:  alter table `visit`   add index fk_visit_visit_room (`visit_room_id_room`), add constraint fk_visit_visit_room foreign key (`visit_room_id_room`) references `visit_room` (`room_id_room`)
+[09 dic 2019 21:05:36] DEBUG Executing statement:    alter table `quantity_drug`  add column  `pharmacy_oid`  integer
+[09 dic 2019 21:05:37] DEBUG Executing statement:  alter table `quantity_drug`   add index fk_quantity_drug_pharmacy (`pharmacy_oid`), add constraint fk_quantity_drug_pharmacy foreign key (`pharmacy_oid`) references `pharmacy` (`oid`)
+[09 dic 2019 21:05:37] DEBUG Executing statement:    alter table `clinical_surgery`  add column  `surgery_room_id_room`  integer
+[09 dic 2019 21:05:37] DEBUG Executing statement:  alter table `clinical_surgery`   add index fk_clinical_surgery_surgery_ro (`surgery_room_id_room`), add constraint fk_clinical_surgery_surgery_ro foreign key (`surgery_room_id_room`) references `surgery_room` (`room_id_room`)
+[09 dic 2019 21:05:37] DEBUG Executing statement:    alter table `without_prescription`  add column  `patient_patient_code`  varchar(255)
+[09 dic 2019 21:05:37] DEBUG Executing statement:  alter table `without_prescription`   add index fk_without_prescription_patien (`patient_patient_code`), add constraint fk_without_prescription_patien foreign key (`patient_patient_code`) references `patient` (`patient_code`)
+[09 dic 2019 21:05:37] DEBUG Executing statement:    alter table `hospital`  add column  `city_oid`  integer
+[09 dic 2019 21:05:37] DEBUG Executing statement:  alter table `hospital`   add index fk_hospital_city (`city_oid`), add constraint fk_hospital_city foreign key (`city_oid`) references `city` (`oid`)
+[09 dic 2019 21:05:37] DEBUG Executing statement:    alter table `recovery`  add column  `bed_place_oid`  integer
+[09 dic 2019 21:05:37] DEBUG Executing statement:  alter table `recovery`   add index fk_recovery_bed_place (`bed_place_oid`), add constraint fk_recovery_bed_place foreign key (`bed_place_oid`) references `bed_place` (`oid`)
+[09 dic 2019 21:05:37] DEBUG Executing statement:    alter table `pharmacist`  add column  `user_cf`  varchar(255)
+[09 dic 2019 21:05:38] DEBUG Executing statement:  alter table `pharmacist`   add index fk_pharmacist_user (`user_cf`), add constraint fk_pharmacist_user foreign key (`user_cf`) references `user` (`cf`)
+[09 dic 2019 21:05:38] DEBUG Executing statement:    alter table `quantity_drug`  add column  `drug_id`  integer
+[09 dic 2019 21:05:38] DEBUG Executing statement:  alter table `quantity_drug`   add index fk_quantity_drug_drug (`drug_id`), add constraint fk_quantity_drug_drug foreign key (`drug_id`) references `drug` (`id`)
+[09 dic 2019 21:05:38] DEBUG Executing statement:    alter table `drug_description`  add column  `drug_id`  integer
+[09 dic 2019 21:05:38] DEBUG Executing statement:  alter table `drug_description`   add index fk_drug_description_drug (`drug_id`), add constraint fk_drug_description_drug foreign key (`drug_id`) references `drug` (`id`)
+[09 dic 2019 21:05:38] DEBUG Executing statement:    alter table `without_prescription`  add column  `drug_id`  integer
+[09 dic 2019 21:05:38] DEBUG Executing statement:  alter table `without_prescription`   add index fk_without_prescription_drug (`drug_id`), add constraint fk_without_prescription_drug foreign key (`drug_id`) references `drug` (`id`)
+[09 dic 2019 21:05:38] DEBUG Executing statement:    alter table `emergency_operation`  add column  `codaprontosoccorso_oid`  integer
+[09 dic 2019 21:05:38] DEBUG Executing statement:  alter table `emergency_operation`   add index fk_emergency_operation_codapro (`codaprontosoccorso_oid`), add constraint fk_emergency_operation_codapro foreign key (`codaprontosoccorso_oid`) references `codaprontosoccorso` (`oid`)
+[09 dic 2019 21:05:38] DEBUG Executing statement:    alter table `action`  add column  `doctor_doctor_code`  varchar(255)
+[09 dic 2019 21:05:39] DEBUG Executing statement:  alter table `action`   add index fk_action_doctor (`doctor_doctor_code`), add constraint fk_action_doctor foreign key (`doctor_doctor_code`) references `doctor` (`doctor_code`)
+[09 dic 2019 21:05:39] DEBUG Executing statement:    alter table `drug_prescription`  add column  `visit_oid`  integer
+[09 dic 2019 21:05:39] DEBUG Executing statement:  alter table `drug_prescription`   add index fk_drug_prescription_visit (`visit_oid`), add constraint fk_drug_prescription_visit foreign key (`visit_oid`) references `visit` (`action_oid`)
+[09 dic 2019 21:05:39] DEBUG Executing statement:    alter table `drug_prescription`  add column  `drug_id`  integer
+[09 dic 2019 21:05:39] DEBUG Executing statement:  alter table `drug_prescription`   add index fk_drug_prescription_drug (`drug_id`), add constraint fk_drug_prescription_drug foreign key (`drug_id`) references `drug` (`id`)
+[09 dic 2019 21:05:39] DEBUG Executing statement:    alter table `sell`  add column  `pharmacist_pharmacist_code`  varchar(255)
+[09 dic 2019 21:05:39] DEBUG Executing statement:  alter table `sell`   add index fk_sell_pharmacist (`pharmacist_pharmacist_code`), add constraint fk_sell_pharmacist foreign key (`pharmacist_pharmacist_code`) references `pharmacist` (`pharmacist_code`)
+[09 dic 2019 21:05:39] DEBUG Executing statement:    alter table `with_prescription`  add column  `drug_prescription_oid`  integer
+[09 dic 2019 21:05:39] DEBUG Executing statement:  alter table `with_prescription`   add index fk_with_prescription_drug_pres (`drug_prescription_oid`), add constraint fk_with_prescription_drug_pres foreign key (`drug_prescription_oid`) references `drug_prescription` (`oid`)
+[09 dic 2019 21:05:40] DEBUG Executing statement:    alter table `emergency_operation`  add column  `emergency_code_code`  varchar(255)
+[09 dic 2019 21:05:40] DEBUG Executing statement:  alter table `emergency_operation`   add index fk_emergency_operation_emerg_2 (`emergency_code_code`), add constraint fk_emergency_operation_emerg_2 foreign key (`emergency_code_code`) references `emergency_code` (`code`)
+[09 dic 2019 21:05:40] DEBUG Executing statement:    alter table `emergency_operation`  add column  `emergency_room_id_room`  integer
+[09 dic 2019 21:05:40] DEBUG Executing statement:  alter table `emergency_operation`   add index fk_emergency_operation_emergen (`emergency_room_id_room`), add constraint fk_emergency_operation_emergen foreign key (`emergency_room_id_room`) references `emergency_room` (`room_id_room`)
+[09 dic 2019 21:05:40] DEBUG Executing statement:    alter table `doctor`  add column  `user_cf`  varchar(255)
+[09 dic 2019 21:05:40] DEBUG Executing statement:  alter table `doctor`   add index fk_doctor_user (`user_cf`), add constraint fk_doctor_user foreign key (`user_cf`) references `user` (`cf`)
+[09 dic 2019 21:05:40] DEBUG Executing statement:    alter table `room`  add column  `hospital_id_hospital`  integer
+[09 dic 2019 21:05:40] DEBUG Executing statement:  alter table `room`   add index fk_room_hospital (`hospital_id_hospital`), add constraint fk_room_hospital foreign key (`hospital_id_hospital`) references `hospital` (`id_hospital`)
+[09 dic 2019 21:05:41] DEBUG Executing statement:    alter table `doctor`  add column  `medical_specialization_namespe`  varchar(255)
+[09 dic 2019 21:05:41] DEBUG Executing statement:  alter table `doctor`   add index fk_doctor_medical_specializati (`medical_specialization_namespe`), add constraint fk_doctor_medical_specializati foreign key (`medical_specialization_namespe`) references `medical_specialization` (`namespecialization`)
+[09 dic 2019 21:05:41] DEBUG Executing statement:    alter table `codaprontosoccorso`  add column  `hospital_id_hospital`  integer
+[09 dic 2019 21:05:41] DEBUG Executing statement:  alter table `codaprontosoccorso`   add index fk_codaprontosoccorso_hospital (`hospital_id_hospital`), add constraint fk_codaprontosoccorso_hospital foreign key (`hospital_id_hospital`) references `hospital` (`id_hospital`)
+[09 dic 2019 21:05:41] DEBUG Executing statement:    create table `doctor_room` ( `doctor_doctor_code`  varchar(255) not null, `room_id_room`  integer not null, primary key (`doctor_doctor_code`, `room_id_room`) )
+[09 dic 2019 21:05:41] DEBUG Executing statement:  alter table `doctor_room`   add index fk_doctor_room_doctor (`doctor_doctor_code`), add constraint fk_doctor_room_doctor foreign key (`doctor_doctor_code`) references `doctor` (`doctor_code`)
+[09 dic 2019 21:05:41] DEBUG Executing statement:  alter table `doctor_room`   add index fk_doctor_room_room (`room_id_room`), add constraint fk_doctor_room_room foreign key (`room_id_room`) references `room` (`id_room`)
+[09 dic 2019 21:05:41] DEBUG Executing statement:    alter table `city`  add column  `country_oid`  integer
+[09 dic 2019 21:05:41] DEBUG Executing statement:  alter table `city`   add index fk_city_country (`country_oid`), add constraint fk_city_country foreign key (`country_oid`) references `country` (`oid`)
+[09 dic 2019 21:05:42] DEBUG Executing statement:    alter table `user`  add column  `city_oid`  integer
+[09 dic 2019 21:05:42] DEBUG Executing statement:  alter table `user`   add index fk_user_city_2 (`city_oid`), add constraint fk_user_city_2 foreign key (`city_oid`) references `city` (`oid`)
+[09 dic 2019 21:05:42] DEBUG Executing statement:    alter table `bed_place`  add column  `recovery_room_id_room`  integer
+[09 dic 2019 21:05:42] DEBUG Executing statement:  alter table `bed_place`   add index fk_bed_place_recovery_room (`recovery_room_id_room`), add constraint fk_bed_place_recovery_room foreign key (`recovery_room_id_room`) references `recovery_room` (`room_id_room`)
+[09 dic 2019 21:05:42] DEBUG Executing statement:    alter table `user`  add column  `city_oid_2`  integer
+[09 dic 2019 21:05:42] DEBUG Executing statement:  alter table `user`   add index fk_user_city (`city_oid_2`), add constraint fk_user_city foreign key (`city_oid_2`) references `city` (`oid`)
+[09 dic 2019 21:05:42] DEBUG Executing statement:    alter table `without_prescription`   add index fk_without_prescription_sell (`sell_oid`), add constraint fk_without_prescription_sell foreign key (`sell_oid`) references `sell` (`oid`)
+[09 dic 2019 21:05:42] DEBUG Executing statement:    alter table `emergency_room`   add index fk_emergency_room_room (`room_id_room`), add constraint fk_emergency_room_room foreign key (`room_id_room`) references `room` (`id_room`)
+[09 dic 2019 21:05:42] DEBUG Executing statement:    alter table `emergency_operation`   add index fk_emergency_operation_action (`action_oid`), add constraint fk_emergency_operation_action foreign key (`action_oid`) references `action` (`oid`)
+[09 dic 2019 21:05:42] DEBUG Executing statement:    alter table `recovery_room`   add index fk_recovery_room_room (`room_id_room`), add constraint fk_recovery_room_room foreign key (`room_id_room`) references `room` (`id_room`)
+[09 dic 2019 21:05:43] DEBUG Executing statement:    alter table `visit_room`   add index fk_visit_room_room (`room_id_room`), add constraint fk_visit_room_room foreign key (`room_id_room`) references `room` (`id_room`)
+[09 dic 2019 21:05:43] DEBUG Executing statement:    alter table `surgery_room`   add index fk_surgery_room_room (`room_id_room`), add constraint fk_surgery_room_room foreign key (`room_id_room`) references `room` (`id_room`)
+[09 dic 2019 21:05:43] DEBUG Executing statement:    alter table `visit`   add index fk_visit_action (`action_oid`), add constraint fk_visit_action foreign key (`action_oid`) references `action` (`oid`)
+[09 dic 2019 21:05:43] DEBUG Executing statement:    alter table `clinical_surgery`   add index fk_clinical_surgery_action (`action_oid`), add constraint fk_clinical_surgery_action foreign key (`action_oid`) references `action` (`oid`)
+[09 dic 2019 21:05:43] DEBUG Executing statement:    alter table `recovery`   add index fk_recovery_action (`action_oid`), add constraint fk_recovery_action foreign key (`action_oid`) references `action` (`oid`)
+[09 dic 2019 21:05:43] DEBUG Executing statement:    alter table `with_prescription`   add index fk_with_prescription_sell (`sell_oid`), add constraint fk_with_prescription_sell foreign key (`sell_oid`) references `sell` (`oid`)
+[09 dic 2019 21:05:43] DEBUG ================================================================================
+[09 dic 2019 21:05:43] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[09 dic 2019 21:05:43] INFO Database connection closed
+[09 dic 2019 21:05:43] DEBUG Total time: 11040 milliseconds

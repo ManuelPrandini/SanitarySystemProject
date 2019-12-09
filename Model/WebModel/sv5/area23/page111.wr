@@ -1,0 +1,53 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="475" id="sv5#area23#page111" name="Aggiungi nuovo farmaco" landmark="true">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv5#area23#page111#mssu68" name="Area di registrazione nuovo farmaco">
+      <Message xml:space="preserve">In quest'area puoi immettere nel mercato sanitario una nuova tipologia di farmaco</Message>
+    </MultiMessageUnit>
+    <EntryUnit gr:x="50" gr:y="70" id="sv5#area23#page111#enu35" name="Registra farmaco" fieldOrder="sv5#area23#page111#enu35#fld160 sv5#area23#page111#enu35#fld161" linkOrder="sv5#area23#page111#enu35#ln203">
+      <Field id="sv5#area23#page111#enu35#fld161" name="Standard" type="boolean" modifiable="true"/>
+      <Field id="sv5#area23#page111#enu35#fld160" name="nome farmaco" type="string" modifiable="true"/>
+      <Link id="sv5#area23#page111#enu35#ln203" name="Registra farmaco" to="sv5#area23#cru29" type="normal" validate="true">
+        <LinkParameter id="sv5#area23#page111#enu35#ln203#par1452" name="Standard_isStandard" source="sv5#area23#page111#enu35#fld161" target="sv5#area23#cru29.ent2#att7"/>
+        <LinkParameter id="sv5#area23#page111#enu35#ln203#par1453" name="nome farmaco_name" source="sv5#area23#page111#enu35#fld160" target="sv5#area23#cru29.ent2#att8"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area23#page111#mssu68"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area23#page111#enu35">
+          <layout:Field field="sv5#area23#page111#enu35#fld160"/>
+          <layout:Field field="sv5#area23#page111#enu35#fld161"/>
+          <layout:Link link="sv5#area23#page111#enu35#ln203"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
