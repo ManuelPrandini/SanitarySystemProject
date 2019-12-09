@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="450" gr:y="360" id="sv6#area22#area19#page104" name="Coda interventi">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="450" gr:y="365" id="sv6#area22#area19#page104" name="Coda interventi">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv6#area22#area19#page104#mssu63" name="Coda vuota">
       <Message xml:space="preserve">La coda del Pronto soccorso &#232; vuota!</Message>

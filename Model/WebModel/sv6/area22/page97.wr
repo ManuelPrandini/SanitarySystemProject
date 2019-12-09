@@ -12,6 +12,7 @@
         <LinkParameter id="sv6#area22#page97#enu20#ln195#par1444" name="data _PASSING" source="sv6#area22#page97#enu20#fld130" passing="true"/>
         <LinkParameter id="sv6#area22#page97#enu20#ln195#par1446" name="ora arrivo_PASSING" source="sv6#area22#page97#enu20#fld131" passing="true"/>
         <LinkParameter id="sv6#area22#page97#enu20#ln195#par1315" name="DoctorToRoom.RoomToHospital.HospitalToCodaprontosoccorso.oid_PASSING" sourceLinkParameter="sv6#area22#page97#seu87#ln196#par709" passing="true"/>
+        <LinkParameter id="sv6#area22#page97#enu20#ln195#par331" name="UserCtxParam.cf_PASSING_cf!=dottore" sourceLinkParameter="sv6#area22#page97#seu87#ln196#par326" target="sv6#area22#seu93#su142#acond61"/>
       </Link>
     </EntryUnit>
     <SelectorUnit gr:x="45" gr:y="100" id="sv6#area22#page97#seu86" name="Selezione codice" entity="ent18">
@@ -26,11 +27,13 @@
       </Selector>
       <Link id="sv6#area22#page97#seu87#ln196" name="Flow196" to="sv6#area22#page97#enu20" type="transport" validate="true" gr:bendpoints="-67,-74,-122,146;-66,-176,-121,44">
         <LinkParameter id="sv6#area22#page97#seu87#ln196#par709" name="DoctorToRoom.RoomToHospital.HospitalToCodaprontosoccorso.oid_PASSING" source="rel5#role19$rel37#role74$rel41#role81$ent32#att69Array" passing="true"/>
+        <LinkParameter id="sv6#area22#page97#seu87#ln196#par326" name="UserCtxParam.cf_PASSING" sourceLinkParameter="sv6#area22#page97#gtu23#ln192#par325" passing="true"/>
       </Link>
     </SelectorUnit>
     <GetUnit id="sv6#area22#page97#gtu23" name="CFDottore" gr:x="230" gr:y="235" contextParameters="UserCtxParam">
       <Link id="sv6#area22#page97#gtu23#ln192" name="Flow191" to="sv6#area22#page97#seu87" type="transport" validate="true">
         <LinkParameter id="sv6#area22#page97#gtu23#ln192#par708" name="UserCtxParam.cf_cf" source="sv6#area22#page97#gtu23.UserCtxParam" target="sv6#area22#page97#seu87#su143#acond111"/>
+        <LinkParameter id="sv6#area22#page97#gtu23#ln192#par325" name="UserCtxParam.cf_PASSING" source="sv6#area22#page97#gtu23.UserCtxParam" passing="true"/>
       </Link>
     </GetUnit>
     <TimeUnit id="sv6#area22#page97#tmu5" name="Data e orario arrivo/dimissione" gr:x="190" gr:y="120">

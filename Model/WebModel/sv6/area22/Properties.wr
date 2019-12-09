@@ -1,19 +1,31 @@
 <Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="35" gr:y="405" id="sv6#area22" name="Accettazione" landmark="true" landmarks="sv6#area22#page97 sv6#area22#area19" defaultArea="sv6#area22#area19">
   <OperationUnits>
-    <CreateUnit gr:x="510" gr:y="275" id="sv6#area22#cru26" name="RegistraProntoSoccorso" entity="ent17">
-      <OKLink id="sv6#area22#cru26#oln167" name="OKFlow167" to="sv6#area22#page4" automaticCoupling="true"/>
+    <CreateUnit gr:x="520" gr:y="325" id="sv6#area22#cru26" name="RegistraProntoSoccorso" entity="ent17">
+      <OKLink id="sv6#area22#cru26#oln167" name="OKFlow167" to="sv6#area22#page4" automaticCoupling="true" ajaxOpenWindow="false" ajaxWindowUseTitle="true" ajaxWindowTitle="Operazione Completata!" ajaxWindowWidth="600" ajaxWindowHeight="300" ajaxWindowModal="true" ajaxWindowClosable="true"/>
     </CreateUnit>
-    <SelectorUnit id="sv6#area22#seu93" name="selezione cod paziente" gr:x="520" gr:y="120" entity="ent6" distinctAttributes="ent6#att11">
-      <OKLink id="sv6#area22#seu93#oln286" name="OKFlow286" to="sv6#area22#cru26">
-        <LinkParameter id="sv6#area22#seu93#oln286#par1448" name="codice intervento_PASSING_Emergency_code.code(Emergency_operationToEmergency_code)" sourceLinkParameter="sv6#area22#page97#enu20#ln195#par1443" target="sv6#area22#cru26.rel34#role67.ent18#att38"/>
-        <LinkParameter id="sv6#area22#seu93#oln286#par1449" name="patient_code_Patient.patient_code(VisitToPatient)" source="ent6#att11Array" target="sv6#area22#cru26.rel11#role16.ent6#att11"/>
-        <LinkParameter id="sv6#area22#seu93#oln286#par1450" name="data _PASSING_startDate" sourceLinkParameter="sv6#area22#page97#enu20#ln195#par1444" target="sv6#area22#cru26.ent5#att22"/>
-        <LinkParameter id="sv6#area22#seu93#oln286#par1451" name="ora arrivo_PASSING_startTime" sourceLinkParameter="sv6#area22#page97#enu20#ln195#par1446" target="sv6#area22#cru26.ent5#att24"/>
-        <LinkParameter id="sv6#area22#seu93#oln286#par1316" name="DoctorToRoom.RoomToHospital.HospitalToCodaprontosoccorso.oid_PASSING_Codaprontosoccorso.oid(EmergencyOperationToCodaprontosoccorso)" sourceLinkParameter="sv6#area22#page97#enu20#ln195#par1315" target="sv6#area22#cru26.rel27#role54.ent32#att69"/>
-      </OKLink>
+    <SelectorUnit id="sv6#area22#seu93" name="selezione cod paziente" gr:x="520" gr:y="50" entity="ent6" distinctAttributes="ent6#att11">
       <Selector id="sv6#area22#seu93#su142" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv6#area22#seu93#su142#acond154" name="cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.userOID"/>
+        <AttributesCondition id="sv6#area22#seu93#su142#acond61" name="cf!=dottore" predicate="neq" booleanOperator="and" implied="false" attributes="rel14#role28.userOID"/>
       </Selector>
+      <OKLink id="sv6#area22#seu93#oln286" name="OKFlow286" to="sv6#area22#inn37">
+        <LinkParameter id="sv6#area22#seu93#oln286#par1272" name="codice intervento_PASSING" sourceLinkParameter="sv6#area22#page97#enu20#ln195#par1443" passing="true"/>
+        <LinkParameter id="sv6#area22#seu93#oln286#par1273" name="data _PASSING" sourceLinkParameter="sv6#area22#page97#enu20#ln195#par1444" passing="true"/>
+        <LinkParameter id="sv6#area22#seu93#oln286#par1274" name="DoctorToRoom.RoomToHospital.HospitalToCodaprontosoccorso.oid_PASSING" sourceLinkParameter="sv6#area22#page97#enu20#ln195#par1315" passing="true"/>
+        <LinkParameter id="sv6#area22#seu93#oln286#par1275" name="ora arrivo_PASSING" sourceLinkParameter="sv6#area22#page97#enu20#ln195#par1446" passing="true"/>
+        <LinkParameter id="sv6#area22#seu93#oln286#par1276" name="patient_code_PASSING" source="ent6#att11Array" passing="true"/>
+        <LinkParameter id="sv6#area22#seu93#oln286#par1278" name="patient_code_Input" source="ent6#att11Array" target="sv6#area22#inn37.isnotnull"/>
+      </OKLink>
     </SelectorUnit>
+    <IsNotNullUnit gr:x="570" gr:y="215" id="sv6#area22#inn37" name="Se esiste">
+      <OKLink id="sv6#area22#inn37#oln284" name="OKFlow286" to="sv6#area22#cru26">
+        <LinkParameter id="sv6#area22#inn37#oln284#par1050" name="codice intervento_PASSING_Emergency_code.code(Emergency_operationToEmergency_code)" sourceLinkParameter="sv6#area22#seu93#oln286#par1272" target="sv6#area22#cru26.rel34#role67.ent18#att38"/>
+        <LinkParameter id="sv6#area22#inn37#oln284#par1200" name="data _PASSING_startDate" sourceLinkParameter="sv6#area22#seu93#oln286#par1273" target="sv6#area22#cru26.ent5#att22"/>
+        <LinkParameter id="sv6#area22#inn37#oln284#par1201" name="ora arrivo_PASSING_startTime" sourceLinkParameter="sv6#area22#seu93#oln286#par1275" target="sv6#area22#cru26.ent5#att24"/>
+        <LinkParameter id="sv6#area22#inn37#oln284#par1202" name="DoctorToRoom.RoomToHospital.HospitalToCodaprontosoccorso.oid_PASSING_Codaprontosoccorso.oid(EmergencyOperationToCodaprontosoccorso)" sourceLinkParameter="sv6#area22#seu93#oln286#par1274" target="sv6#area22#cru26.rel27#role54.ent32#att69"/>
+        <LinkParameter id="sv6#area22#inn37#oln284#par1277" name="patient_code_PASSING_Patient.patient_code(VisitToPatient)" sourceLinkParameter="sv6#area22#seu93#oln286#par1276" target="sv6#area22#cru26.rel11#role16.ent6#att11"/>
+      </OKLink>
+      <KOLink id="sv6#area22#inn37#kln90" name="KOFlow86" to="sv6#area22#page88" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Errore!" ajaxWindowWidth="750" ajaxWindowHeight="500" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+    </IsNotNullUnit>
   </OperationUnits>
 </Area>

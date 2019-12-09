@@ -1,0 +1,25 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1100" gr:y="0" id="sv6#area22#area19#page89" name="Errore!" layout:pageLayout="MetroStyle/Empty">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv6#area22#area19#page89#mssu56" name="Errore dottore">
+      <Message xml:space="preserve">Attenzione! Il paziente pu&#242; essere dimesso solo dal dottore che lo ha visitato</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#area22#area19#page89#mssu56"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

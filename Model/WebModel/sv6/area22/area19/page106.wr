@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="845" gr:y="370" id="sv6#area22#area19#page106" name="Seleziona stanza" ajaxEnabled="false" layout:pageLayout="MetroStyle/Empty">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="845" gr:y="375" id="sv6#area22#area19#page106" name="Seleziona stanza" ajaxEnabled="false" layout:pageLayout="MetroStyle/Empty">
   <ContentUnits>
     <EntryUnit id="sv6#area22#area19#page106#enu32" name="Seleziona stanza" linkOrder="sv6#area22#area19#page106#enu32#ln218" gr:x="0" gr:y="5">
       <SelectionField id="sv6#area22#area19#page106#enu32#sfld13" name="stanza" type="string"/>
