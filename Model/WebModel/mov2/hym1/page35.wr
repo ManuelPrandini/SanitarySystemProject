@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page35" name="Registrazione farmacista (ESISTENTE)" gr:x="1155" gr:y="155">
   <ContentUnits>
-    <EntryUnit gr:x="5" gr:y="85" id="mov2#hym1#page35#enu11" name="compila la form" linkOrder="mov2#hym1#page35#enu11#ln47" fieldOrder="mov2#hym1#page35#enu11#fld20 mov2#hym1#page35#enu11#fld40 mov2#hym1#page35#enu11#fld41 mov2#hym1#page35#enu11#fld153 mov2#hym1#page35#enu11#fld8 mov2#hym1#page35#enu11#fld7 mov2#hym1#page35#enu11#fld152 mov2#hym1#page35#enu11#fld154 mov2#hym1#page35#enu11#fld43 mov2#hym1#page35#enu11#fld44 mov2#hym1#page35#enu11#fld35 mov2#hym1#page35#enu11#fld42 mov2#hym1#page35#enu11#fld34 mov2#hym1#page35#enu11#sfld54">
+    <EntryUnit gr:x="5" gr:y="85" id="mov2#hym1#page35#enu11" name="compila la form" linkOrder="mov2#hym1#page35#enu11#ln47" fieldOrder="mov2#hym1#page35#enu11#fld20 mov2#hym1#page35#enu11#fld40 mov2#hym1#page35#enu11#fld41 mov2#hym1#page35#enu11#fld153 mov2#hym1#page35#enu11#fld8 mov2#hym1#page35#enu11#fld152 mov2#hym1#page35#enu11#fld154 mov2#hym1#page35#enu11#fld7 mov2#hym1#page35#enu11#fld35 mov2#hym1#page35#enu11#fld43 mov2#hym1#page35#enu11#sfld54 mov2#hym1#page35#enu11#fld42">
       <Link id="mov2#hym1#page35#enu11#ln47" name="Registrati" to="mov2#hym1#miu6" type="normal" validate="true">
         <LinkParameter id="mov2#hym1#page35#enu11#ln47#par121" name="1_exists?" sourceValue="1" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp74"/>
         <LinkParameter id="mov2#hym1#page35#enu11#ln47#par124" name="0_approved" sourceValue="0" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp37"/>
@@ -20,28 +20,62 @@
         <LinkParameter id="mov2#hym1#page35#enu11#ln47#par220" name="2_group_oid" sourceValue="2" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp56"/>
         <LinkParameter id="mov2#hym1#page35#enu11#ln47#par862" name="pharmacy_pharmacy" source="mov2#hym1#page35#enu11#sfld54" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp101"/>
       </Link>
-      <Field id="mov2#hym1#page35#enu11#fld44" name="username" type="string" preloaded="true"/>
-      <Field id="mov2#hym1#page35#enu11#fld43" name="telephone" type="string" preloaded="true"/>
-      <Field id="mov2#hym1#page35#enu11#fld42" name="password" type="password" preloaded="true"/>
-      <Field id="mov2#hym1#page35#enu11#fld41" name="surname" type="string" preloaded="true"/>
-      <Field id="mov2#hym1#page35#enu11#fld40" name="name" type="string" preloaded="true"/>
-      <Field id="mov2#hym1#page35#enu11#fld35" name="email" type="string" preloaded="true"/>
-      <Field id="mov2#hym1#page35#enu11#fld34" name="pharmacist code" type="string" preloaded="true">
+      <Field id="mov2#hym1#page35#enu11#fld44" name="username" type="string" preloaded="true" hidden="true"/>
+      <Field id="mov2#hym1#page35#enu11#fld43" name="telefono" type="string" preloaded="true"/>
+      <Field id="mov2#hym1#page35#enu11#fld42" name="password *" type="password" preloaded="true">
+        <VRules/>
+      </Field>
+      <Field id="mov2#hym1#page35#enu11#fld41" name="cognome *" type="string" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page35#enu11#fld41#mnd40" name="Mandatory39"/>
+        </VRules>
+      </Field>
+      <Field id="mov2#hym1#page35#enu11#fld40" name="nome *" type="string" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page35#enu11#fld40#mnd53" name="Mandatory39"/>
+        </VRules>
+      </Field>
+      <Field id="mov2#hym1#page35#enu11#fld35" name="email *" type="string" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page35#enu11#fld35#mnd44" name="Mandatory39"/>
+        </VRules>
+      </Field>
+      <Field id="mov2#hym1#page35#enu11#fld34" name="pharmacist code" type="string" preloaded="true" hidden="true">
         <VRules>
           <MandatoryValidationRule id="mov2#hym1#page35#enu11#fld34#mnd14" name="Mandatory14"/>
         </VRules>
       </Field>
-      <Field id="mov2#hym1#page35#enu11#fld20" name="cf" type="string" preloaded="true"/>
-      <Field id="mov2#hym1#page35#enu11#fld8" name="birthday" type="date" preloaded="true">
+      <Field id="mov2#hym1#page35#enu11#fld20" name="cf *" type="string" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page35#enu11#fld20#mnd39" name="Mandatory39"/>
+        </VRules>
+      </Field>
+      <Field id="mov2#hym1#page35#enu11#fld8" name="data di nascita *" type="date" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page35#enu11#fld8#mnd41" name="Mandatory39"/>
+        </VRules>
+      </Field>
+      <Field id="mov2#hym1#page35#enu11#fld7" name="indirizzo di residenza " type="string" preloaded="true">
         <VRules/>
       </Field>
-      <Field id="mov2#hym1#page35#enu11#fld7" name="address" type="string" preloaded="true">
+      <Field id="mov2#hym1#page35#enu11#fld152" type="string" name="luogo di nascita *" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page35#enu11#fld152#mnd51" name="Mandatory39"/>
+        </VRules>
+      </Field>
+      <Field id="mov2#hym1#page35#enu11#fld153" type="string" name="sesso *" preloaded="true">
         <VRules/>
       </Field>
-      <Field id="mov2#hym1#page35#enu11#fld152" type="string" name="born in" preloaded="true"/>
-      <Field id="mov2#hym1#page35#enu11#fld153" type="string" name="gender" preloaded="true"/>
-      <Field id="mov2#hym1#page35#enu11#fld154" type="string" name="live in" preloaded="true"/>
-      <SelectionField id="mov2#hym1#page35#enu11#sfld54" name="pharmacy" type="string"/>
+      <Field id="mov2#hym1#page35#enu11#fld154" type="string" name="luogo di residenza *" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page35#enu11#fld154#mnd52" name="Mandatory39"/>
+        </VRules>
+      </Field>
+      <SelectionField id="mov2#hym1#page35#enu11#sfld54" name="farmacia di lavoro *" type="string">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page35#enu11#sfld54#mnd45" name="Mandatory39"/>
+        </VRules>
+      </SelectionField>
     </EntryUnit>
     <SelectorUnit gr:x="270" gr:y="45" id="mov2#hym1#page35#seu46" name="SelectorPharmacy" entity="ent19">
       <Link id="mov2#hym1#page35#seu46#ln171" name="Flow171" to="mov2#hym1#page35#enu11" type="transport" validate="true">
@@ -79,15 +113,13 @@
           <layout:Field field="mov2#hym1#page35#enu11#fld41"/>
           <layout:Field field="mov2#hym1#page35#enu11#fld153"/>
           <layout:Field field="mov2#hym1#page35#enu11#fld8"/>
-          <layout:Field field="mov2#hym1#page35#enu11#fld7"/>
           <layout:Field field="mov2#hym1#page35#enu11#fld152"/>
           <layout:Field field="mov2#hym1#page35#enu11#fld154"/>
-          <layout:Field field="mov2#hym1#page35#enu11#fld43"/>
-          <layout:Field field="mov2#hym1#page35#enu11#fld44"/>
+          <layout:Field field="mov2#hym1#page35#enu11#fld7"/>
           <layout:Field field="mov2#hym1#page35#enu11#fld35"/>
-          <layout:Field field="mov2#hym1#page35#enu11#fld42"/>
-          <layout:Field field="mov2#hym1#page35#enu11#fld34"/>
+          <layout:Field field="mov2#hym1#page35#enu11#fld43"/>
           <layout:Field field="mov2#hym1#page35#enu11#sfld54"/>
+          <layout:Field field="mov2#hym1#page35#enu11#fld42"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

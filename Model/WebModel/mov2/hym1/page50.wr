@@ -1,23 +1,57 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="980" gr:y="-490" id="mov2#hym1#page50" name="Registrazione dottore ( ESISTENTE)">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="980" gr:y="-550" id="mov2#hym1#page50" name="Registrazione dottore ( ESISTENTE)">
   <ContentUnits>
-    <EntryUnit id="mov2#hym1#page50#enu23" name="compila la form" gr:x="155" gr:y="140" fieldOrder="mov2#hym1#page50#enu23#fld144 mov2#hym1#page50#enu23#fld141 mov2#hym1#page50#enu23#fld140 mov2#hym1#page50#enu23#fld148 mov2#hym1#page50#enu23#fld139 mov2#hym1#page50#enu23#fld138 mov2#hym1#page50#enu23#fld137 mov2#hym1#page50#enu23#fld136 mov2#hym1#page50#enu23#fld147 mov2#hym1#page50#enu23#fld146 mov2#hym1#page50#enu23#fld145 mov2#hym1#page50#enu23#sfld50 mov2#hym1#page50#enu23#sfld52 mov2#hym1#page50#enu23#sfld53 mov2#hym1#page50#enu23#fld143" linkOrder="mov2#hym1#page50#enu23#ln159 mov2#hym1#page50#enu23#ln161">
-      <Field id="mov2#hym1#page50#enu23#fld136" name="address" type="string" preloaded="true"/>
-      <Field id="mov2#hym1#page50#enu23#fld137" name="telephone" type="string" preloaded="true"/>
-      <Field id="mov2#hym1#page50#enu23#fld138" name="birthday" type="date" preloaded="true"/>
-      <Field id="mov2#hym1#page50#enu23#fld139" name="email" type="string" preloaded="true"/>
-      <Field id="mov2#hym1#page50#enu23#fld140" name="surname" type="string" preloaded="true"/>
-      <Field id="mov2#hym1#page50#enu23#fld141" name="name" type="string" preloaded="true"/>
+    <EntryUnit id="mov2#hym1#page50#enu23" name="compila la form" gr:x="155" gr:y="140" fieldOrder="mov2#hym1#page50#enu23#fld144 mov2#hym1#page50#enu23#fld141 mov2#hym1#page50#enu23#fld140 mov2#hym1#page50#enu23#fld148 mov2#hym1#page50#enu23#fld138 mov2#hym1#page50#enu23#fld147 mov2#hym1#page50#enu23#fld146 mov2#hym1#page50#enu23#fld136 mov2#hym1#page50#enu23#fld139 mov2#hym1#page50#enu23#fld137 mov2#hym1#page50#enu23#sfld50 mov2#hym1#page50#enu23#sfld52 mov2#hym1#page50#enu23#sfld53 mov2#hym1#page50#enu23#fld143" linkOrder="mov2#hym1#page50#enu23#ln159 mov2#hym1#page50#enu23#ln161">
+      <Field id="mov2#hym1#page50#enu23#fld136" name="indirizzo di residenza" type="string" preloaded="true"/>
+      <Field id="mov2#hym1#page50#enu23#fld137" name="telefono" type="string" preloaded="true"/>
+      <Field id="mov2#hym1#page50#enu23#fld138" name="data di nascita *" type="date" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page50#enu23#fld138#mnd10" name="Mandatory8"/>
+        </VRules>
+      </Field>
+      <Field id="mov2#hym1#page50#enu23#fld139" name="email *" type="string" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page50#enu23#fld139#mnd11" name="Mandatory8"/>
+        </VRules>
+      </Field>
+      <Field id="mov2#hym1#page50#enu23#fld140" name="cognome *" type="string" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page50#enu23#fld140#mnd9" name="Mandatory8"/>
+        </VRules>
+      </Field>
+      <Field id="mov2#hym1#page50#enu23#fld141" name="nome *" type="string" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page50#enu23#fld141#mnd15" name="Mandatory8"/>
+        </VRules>
+      </Field>
       <Field id="mov2#hym1#page50#enu23#fld142" name="username" type="string" preloaded="true" hidden="true"/>
-      <Field id="mov2#hym1#page50#enu23#fld143" name="password" type="password" preloaded="true"/>
-      <Field id="mov2#hym1#page50#enu23#fld144" name="cf" type="string" preloaded="true"/>
-      <Field id="mov2#hym1#page50#enu23#fld145" name="doctor code" type="string" preloaded="true">
+      <Field id="mov2#hym1#page50#enu23#fld143" name="password *" type="password" preloaded="true">
+        <VRules/>
+      </Field>
+      <Field id="mov2#hym1#page50#enu23#fld144" name="cf *" type="string" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page50#enu23#fld144#mnd8" name="Mandatory8"/>
+        </VRules>
+      </Field>
+      <Field id="mov2#hym1#page50#enu23#fld145" name="doctor code" type="string" preloaded="true" hidden="true">
         <VRules>
           <TypeValidationRule id="mov2#hym1#page50#enu23#fld145#tvr10" name="Type Validation1"/>
         </VRules>
       </Field>
-      <SelectionField id="mov2#hym1#page50#enu23#sfld50" name="hospital" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page50#enu23#ln159" ajaxEventIndicator="true"/>
-      <SelectionField id="mov2#hym1#page50#enu23#sfld53" name="room" type="string" modifiable="true"/>
-      <SelectionField id="mov2#hym1#page50#enu23#sfld52" name="medical specialization" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page50#enu23#ln159" ajaxEventIndicator="true"/>
+      <SelectionField id="mov2#hym1#page50#enu23#sfld50" name="ospedale di lavoro *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page50#enu23#ln159" ajaxEventIndicator="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page50#enu23#sfld50#mnd16" name="Mandatory8"/>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="mov2#hym1#page50#enu23#sfld53" name="stanza di lavoro *" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page50#enu23#sfld53#mnd20" name="Mandatory8"/>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="mov2#hym1#page50#enu23#sfld52" name="specializzazione medica *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page50#enu23#ln159" ajaxEventIndicator="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page50#enu23#sfld52#mnd19" name="Mandatory8"/>
+        </VRules>
+      </SelectionField>
       <Link id="mov2#hym1#page50#enu23#ln159" name="Select Visit Room" to="mov2#hym1#page50#seu45" type="normal" validate="true" preserveForm="true">
         <LinkParameter id="mov2#hym1#page50#enu23#ln159#par807" name="hospital_id_hospital" source="mov2#hym1#page50#enu23#sfld50" target="mov2#hym1#page50#seu45#su66#acond47"/>
         <LinkParameter id="mov2#hym1#page50#enu23#ln159#par808" name="medical specialization_medical_specialization" source="mov2#hym1#page50#enu23#sfld52" target="mov2#hym1#page50#seu45#su66#acond48"/>
@@ -43,9 +77,21 @@
         <LinkParameter id="mov2#hym1#page50#enu23#ln161#par827" name="username_username" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp51" source="mov2#hym1#page50#enu23#fld142"/>
         <LinkParameter id="mov2#hym1#page50#enu23#ln161#par828" name="visit room_visit_room" source="mov2#hym1#page50#enu23#sfld53" target="mov2#hym1#miu14.mov2#mpkg2#opm1#icu1#icp100"/>
       </Link>
-      <Field id="mov2#hym1#page50#enu23#fld146" type="string" name="live in" preloaded="true"/>
-      <Field id="mov2#hym1#page50#enu23#fld147" type="string" name="born in" preloaded="true"/>
-      <Field id="mov2#hym1#page50#enu23#fld148" type="string" name="gender" preloaded="true"/>
+      <Field id="mov2#hym1#page50#enu23#fld146" type="string" name="luogo di residenza *" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page50#enu23#fld146#mnd13" name="Mandatory8"/>
+        </VRules>
+      </Field>
+      <Field id="mov2#hym1#page50#enu23#fld147" type="string" name="luogo di nascita *" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page50#enu23#fld147#mnd12" name="Mandatory8"/>
+        </VRules>
+      </Field>
+      <Field id="mov2#hym1#page50#enu23#fld148" type="string" name="sesso *" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page50#enu23#fld148#mnd18" name="Mandatory8"/>
+        </VRules>
+      </Field>
     </EntryUnit>
     <SelectorUnit id="mov2#hym1#page50#seu41" name="SelectorHospital" gr:x="0" gr:y="0" entity="ent4">
       <Link id="mov2#hym1#page50#seu41#ln157" name="Flow157" to="mov2#hym1#page50#enu23" type="transport" validate="true">
@@ -72,7 +118,7 @@
         <LinkParameter id="mov2#hym1#page50#seu45#ln160#par1266" name="password_PASSING" sourceLinkParameter="mov2#hym1#page50#enu23#ln159#par1265" passing="true"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit id="mov2#hym1#page50#seu55" name="SelectorRoom" gr:x="480" gr:y="155" entity="ent23">
+    <SelectorUnit id="mov2#hym1#page50#seu55" name="SelectorRoom" gr:x="490" gr:y="185" entity="ent23">
       <Link id="mov2#hym1#page50#seu55#ln144" name="Flow144" to="mov2#hym1#page50#seu45" type="transport" validate="true">
         <LinkParameter id="mov2#hym1#page50#seu55#ln144#par608" name="id_room_RoleCondition2 [id_room]" source="ent10#att5Array" target="mov2#hym1#page50#seu45#su66#rcond2.ent10#att5"/>
       </Link>
@@ -107,13 +153,12 @@
           <layout:Field field="mov2#hym1#page50#enu23#fld141"/>
           <layout:Field field="mov2#hym1#page50#enu23#fld140"/>
           <layout:Field field="mov2#hym1#page50#enu23#fld148"/>
-          <layout:Field field="mov2#hym1#page50#enu23#fld139"/>
           <layout:Field field="mov2#hym1#page50#enu23#fld138"/>
-          <layout:Field field="mov2#hym1#page50#enu23#fld137"/>
-          <layout:Field field="mov2#hym1#page50#enu23#fld136"/>
           <layout:Field field="mov2#hym1#page50#enu23#fld147"/>
           <layout:Field field="mov2#hym1#page50#enu23#fld146"/>
-          <layout:Field field="mov2#hym1#page50#enu23#fld145"/>
+          <layout:Field field="mov2#hym1#page50#enu23#fld136"/>
+          <layout:Field field="mov2#hym1#page50#enu23#fld139"/>
+          <layout:Field field="mov2#hym1#page50#enu23#fld137"/>
           <layout:Field field="mov2#hym1#page50#enu23#sfld50"/>
           <layout:Field field="mov2#hym1#page50#enu23#sfld52"/>
           <layout:Field field="mov2#hym1#page50#enu23#sfld53"/>

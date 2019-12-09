@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="465" gr:y="35" id="sv4#area8#page12" name="Errore">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="545" gr:y="25" id="sv4#area8#page12" name="Errore">
   <ContentUnits>
     <MultiMessageUnit id="sv4#area8#page12#mssu10" name="Credenziali errate" gr:x="0" gr:y="0">
       <Message xml:space="preserve">Attenzione! Codice Fiscale o password errati!</Message>

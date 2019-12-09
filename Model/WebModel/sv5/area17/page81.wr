@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="10" gr:y="0" id="sv5#area17#page81" name="Inserisci FAQ" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv5#area17#page81" name="Inserisci FAQ" landmark="true">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv5#area17#page81#enu27" name="Nuova FAQ" fieldOrder="sv5#area17#page81#enu27#fld96 sv5#area17#page81#enu27#fld97" linkOrder="sv5#area17#page81#enu27#ln137">
       <Field id="sv5#area17#page81#enu27#fld97" name="Risposta" type="text" modifiable="true">

@@ -1,12 +1,28 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="80" gr:y="345" id="sv5#area4" name="Registrazioni in attesa" landmark="true" defaultPage="sv5#area4#page5">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="80" gr:y="345" id="sv5#area4" name="Registrazioni in attesa" landmark="true" defaultPage="sv5#area4#seu99">
   <OperationUnits>
-    <ModuleInstanceUnit gr:x="320" gr:y="65" id="sv5#area4#miu3" action="true" moduleId="mov2#mpkg2#opm5">
-      <OKLink id="sv5#area4#miu3#oln19" name="OKFlow19" to="sv5#area4#page5" automaticCoupling="true" gr:bendpoints="-144,-43,151,-48"/>
+    <ModuleInstanceUnit gr:x="470" gr:y="0" id="sv5#area4#miu3" action="true" moduleId="mov2#mpkg2#opm5">
+      <OKLink id="sv5#area4#miu3#oln19" name="OKFlow19" to="sv5#area4#page5" automaticCoupling="true"/>
       <KOLink id="sv5#area4#miu3#kln17" name="KOFlow17" to="sv5#area4#page7" automaticCoupling="true"/>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="335" gr:y="290" id="sv5#area4#miu4" action="true" name="RejectUser" moduleId="mov2#mpkg2#opm6">
+    <ModuleInstanceUnit gr:x="480" gr:y="320" id="sv5#area4#miu4" action="true" name="RejectUser" moduleId="mov2#mpkg2#opm6">
       <OKLink id="sv5#area4#miu4#oln25" name="OKFlow25" to="sv5#area4#page5" automaticCoupling="true" gr:bendpoints="15,-63,110,92"/>
       <KOLink id="sv5#area4#miu4#kln19" name="KOFlow19" to="sv5#area4#page7" automaticCoupling="true"/>
     </ModuleInstanceUnit>
+    <IsNotNullUnit id="sv5#area4#inn38" name="se non esistono" gr:x="265" gr:y="520" emptyStringAsNull="true">
+      <KOLink id="sv5#area4#inn38#kln93" name="KOFlow89" to="sv5#area4#page101#mssu60" ajaxOpenWindow="false">
+        <LinkParameter id="sv5#area4#inn38#kln93#par985" name="La lista &#232; vuota! Nessun utente da registrare._messaggio" target="sv5#area4#page101#mssu60.sv5#area4#page101#mssu60#ph14" sourceValue="&quot;Non c'&#232; nessun utente in attesa da registrare!&quot;"/>
+      </KOLink>
+      <OKLink id="sv5#area4#inn38#oln294" name="OKFlow294" to="sv5#area4#page5" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <SelectorUnit id="sv5#area4#seu99" name="Verifica utenti approvati" gr:x="5" gr:y="535" entity="User" distinctAttributes="userOID">
+      <Selector id="sv5#area4#seu99#su148" defaultPolicy="fill" booleanOperator="or">
+        <AttributesCondition id="sv5#area4#seu99#su148#acond165" name="patient_approved" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role27.ent6#att19" value="0"/>
+        <AttributesCondition id="sv5#area4#seu99#su148#acond172" name="doctor_approved" predicate="eq" booleanOperator="or" implied="false" attributes="rel36#role71.ent9#att17" value="0"/>
+        <AttributesCondition id="sv5#area4#seu99#su148#acond173" name="pharmacist_approved" predicate="eq" booleanOperator="or" implied="false" attributes="rel22#role43.ent1#att20" value="0"/>
+      </Selector>
+      <OKLink id="sv5#area4#seu99#oln295" name="OKFlow295" to="sv5#area4#inn38">
+        <LinkParameter id="sv5#area4#seu99#oln295#par1305" name="cf_Input" source="userOIDArray" target="sv5#area4#inn38.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
   </OperationUnits>
 </Area>

@@ -182,7 +182,7 @@ return ["resultCode" : "success" , "doctorCode" : doctorCode]</ScriptUnitText>
 doctorCode = "dottore" + String.valueOf(oid);
 
 return ["resultCode" : "success" , "doctorCode" : doctorCode]</ScriptUnitText>
-      <OKLink id="mov2#hym1#scu17#oln260" name="OKFlow260" to="mov2#hym1#page49#enu10">
+      <OKLink id="mov2#hym1#scu17#oln260" name="OKFlow260" to="mov2#hym1#page49#enu10" preserveForm="true">
         <LinkParameter id="mov2#hym1#scu17#oln260#par912" name="doctorCode_doctor code" source="result(doctorCode)" target="mov2#hym1#page49#enu10#fld125_slot"/>
       </OKLink>
     </ScriptUnit>

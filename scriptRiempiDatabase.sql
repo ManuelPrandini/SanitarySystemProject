@@ -10,6 +10,7 @@ INSERT INTO hospital.group (oid,groupname,module_oid) VALUES (1,'doctor',1);
 INSERT INTO hospital.group (oid,groupname,module_oid) VALUES (2,'pharmacist',2);
 INSERT INTO hospital.group (oid,groupname,module_oid) VALUES (3,'Patient',3);
 INSERT INTO hospital.group (oid,groupname,module_oid) VALUES (4,'Admin',4);
+INSERT INTO hospital.group (oid,groupname,module_oid) VALUES (5,'pronto soccorso',5);
 
 /* ------------- POPULATE TABLE country ---------------- */
 INSERT INTO hospital.country (oid,name) VALUES (1,'Austria');

@@ -1,7 +1,7 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area7#page70" name="Attenzione" gr:x="460" gr:y="670">
   <ContentUnits>
     <MultiMessageUnit id="sv1#area7#page70#mssu24" name="Nessuna visita attiva" gr:x="0" gr:y="0">
-      <Message xml:space="preserve">Patient hasn't active visits !</Message>
+      <Message xml:space="preserve">Il paziente non ha visite attive!</Message>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

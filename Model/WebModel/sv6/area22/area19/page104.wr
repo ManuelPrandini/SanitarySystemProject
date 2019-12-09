@@ -1,0 +1,25 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="450" gr:y="360" id="sv6#area22#area19#page104" name="Coda interventi">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv6#area22#area19#page104#mssu63" name="Coda vuota">
+      <Message xml:space="preserve">La coda del Pronto soccorso &#232; vuota!</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#area22#area19#page104#mssu63"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

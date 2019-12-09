@@ -1,0 +1,55 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="845" gr:y="370" id="sv6#area22#area19#page106" name="Seleziona stanza" ajaxEnabled="false" layout:pageLayout="MetroStyle/Empty">
+  <ContentUnits>
+    <EntryUnit id="sv6#area22#area19#page106#enu32" name="Seleziona stanza" linkOrder="sv6#area22#area19#page106#enu32#ln218" gr:x="0" gr:y="5">
+      <SelectionField id="sv6#area22#area19#page106#enu32#sfld13" name="stanza" type="string"/>
+      <Link id="sv6#area22#area19#page106#enu32#ln218" name="Ok" to="sv6#area22#area19#mfu19" type="normal" validate="true">
+        <LinkParameter id="sv6#area22#area19#page106#enu32#ln218#par1471" name="$$NULL$$_Codaprontosoccorso.oid(EmergencyOperationToCodaprontosoccorso)" sourceValue="$$NULL$$" target="sv6#area22#area19#mfu19.rel27#role54.ent32#att69"/>
+        <LinkParameter id="sv6#area22#area19#page106#enu32#ln218#par1472" name="stanza_Emergency_Room.id_room(Emergency_operationToEmergency_Room)" source="sv6#area22#area19#page106#enu32#sfld13" target="sv6#area22#area19#mfu19.rel35#role69.ent10#att5"/>
+        <LinkParameter id="sv6#area22#area19#page106#enu32#ln218#par1478" name="oid_PASSING_KeyCondition65 [oid]" sourceLinkParameter="sv6#area22#area19#seu109#oln306#par1476" target="sv6#area22#area19#mfu19#su158#kcond65.ent5#att2"/>
+        <LinkParameter id="sv6#area22#area19#page106#enu32#ln218#par1528" name="RoomToDoctor.doctor_code_PASSING_Doctor.doctor_code(VisitToDoctor)" sourceLinkParameter="sv6#area22#area19#page106#seu108#ln219#par1525" target="sv6#area22#area19#mfu19.rel3#role3.ent9#att33"/>
+        <LinkParameter id="sv6#area22#area19#page106#enu32#ln218#par1568" name="Current/Input Time_PASSING_startTime" sourceLinkParameter="sv6#area22#area19#page106#tmu10#ln226#par1558" target="sv6#area22#area19#mfu19.ent5#att24"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit id="sv6#area22#area19#page106#seu108" name="Sale operatorie" gr:x="190" gr:y="0" entity="ent16" distinctAttributes="rel5#role20.ent9#att33">
+      <Selector id="sv6#area22#area19#page106#seu108#su157" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv6#area22#area19#page106#seu108#su157#acond187" name="dottore" predicate="eq" booleanOperator="or" implied="false" attributes="rel5#role20.rel36#role72.userOID"/>
+      </Selector>
+      <Link id="sv6#area22#area19#page106#seu108#ln219" name="Flow216" to="sv6#area22#area19#page106#enu32" type="transport" validate="true">
+        <LinkParameter id="sv6#area22#area19#page106#seu108#ln219#par1466" name="name_stanza [label]" source="ent10#att50Array" target="sv6#area22#area19#page106#enu32#sfld13_label"/>
+        <LinkParameter id="sv6#area22#area19#page106#seu108#ln219#par1467" name="id_room_stanza [output]" source="ent10#att5Array" target="sv6#area22#area19#page106#enu32#sfld13_output"/>
+        <LinkParameter id="sv6#area22#area19#page106#seu108#ln219#par1525" name="RoomToDoctor.doctor_code_PASSING" source="rel5#role20$ent9#att33Array" passing="true"/>
+      </Link>
+    </SelectorUnit>
+    <GetUnit id="sv6#area22#area19#page106#gtu25" name="CFDottore" gr:x="250" gr:y="125" contextParameters="UserCtxParam">
+      <Link id="sv6#area22#area19#page106#gtu25#ln220" name="Flow215" to="sv6#area22#area19#page106#seu108" type="transport" validate="true">
+        <LinkParameter id="sv6#area22#area19#page106#gtu25#ln220#par1468" name="UserCtxParam.cf_dottore" source="sv6#area22#area19#page106#gtu25.UserCtxParam" target="sv6#area22#area19#page106#seu108#su157#acond187"/>
+      </Link>
+    </GetUnit>
+    <TimeUnit id="sv6#area22#area19#page106#tmu10" name="orario inizio operazione" gr:x="0" gr:y="100">
+      <Link id="sv6#area22#area19#page106#tmu10#ln226" name="Flow226" to="sv6#area22#area19#page106#enu32" type="transport" validate="true">
+        <LinkParameter id="sv6#area22#area19#page106#tmu10#ln226#par1558" name="Current/Input Time_PASSING" source="currentTime" passing="true"/>
+      </Link>
+    </TimeUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#area22#area19#page106#enu32">
+          <layout:Field field="sv6#area22#area19#page106#enu32#sfld13"/>
+          <layout:Link link="sv6#area22#area19#page106#enu32#ln218"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

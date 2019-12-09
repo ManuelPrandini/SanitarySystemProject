@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="620" gr:y="190" id="sv4#area8#area11#page57" name="Insert New Password">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="650" gr:y="215" id="sv4#area8#area11#page57" name="Insert New Password">
   <ContentUnits>
     <MultiMessageUnit gr:x="20" gr:y="0" id="sv4#area8#area11#page57#mssu34" name="Instructions">
       <Message xml:space="preserve">Choose your new password to complete the reset procedure</Message>

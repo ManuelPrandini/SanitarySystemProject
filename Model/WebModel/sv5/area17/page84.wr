@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="275" id="sv5#area17#page84" name="Elimina FAQ" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="40" gr:y="415" id="sv5#area17#page84" name="Elimina FAQ" landmark="true">
   <ContentUnits>
     <IndexUnit id="sv5#area17#page84#inu6" name="Domande e risposte" gr:x="0" gr:y="0" entity="ent14" linkOrder="sv5#area17#page84#inu6#ln148" displayAttributes="ent14#att65 ent14#att66">
       <Link id="sv5#area17#page84#inu6#ln148" name="Rimuovi" to="sv5#area17#miu24" type="normal" validate="true">

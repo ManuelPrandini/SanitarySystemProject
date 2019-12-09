@@ -1,5 +1,0 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="740" gr:y="10" id="sv6#area18#page89" name="Operazione completata!">
-  <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv6#area18#page89#mssu48" name="Registrazione effettuata!">
-      <Message xml:space="preserve">Il pronto soccorso &#232; stato registrato correttamente! Ora &#232; possibile visualizzarlo nella cartella clinica del paziente.
-</Message>    </MultiMessageUnit>  </ContentUnits>  <layout:Grid containerType="grid">    <layout:Row>      <layout:Cell colspan="12">        <layout:Unit unitId="sv6#area18#page89#mssu48"/>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>  </layout:Grid></Page>

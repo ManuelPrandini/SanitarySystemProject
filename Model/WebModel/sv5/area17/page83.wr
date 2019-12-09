@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="400" gr:y="0" id="sv5#area17#page83" name="FAQ inserita correttamente">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="435" gr:y="5" id="sv5#area17#page83" name="FAQ inserita correttamente">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv5#area17#page83#mssu42" name="Modifica completata con successo" linkOrder="sv5#area17#page83#mssu42#ln145 sv5#area17#page83#mssu42#ln147">
       <Message xml:space="preserve">La nuova FAQ &#232; stata aggiunta correttamente</Message>

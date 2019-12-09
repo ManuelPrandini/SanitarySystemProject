@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv4#area8#area11#page55" name="Recupera la password">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="10" id="sv4#area8#area11#page55" name="Recupera la password">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv4#area8#area11#page55#mssu31" name="Istruzioni">
       <Message xml:space="preserve">Per favore, inserisci il tuo Codice Fiscale, la tua mail e i caratteri mostrati nella figura
