@@ -4,7 +4,7 @@
       <OKLink id="sv5#area4#miu3#oln19" name="OKFlow19" to="sv5#area4#page5" automaticCoupling="true"/>
       <KOLink id="sv5#area4#miu3#kln17" name="KOFlow17" to="sv5#area4#page7" automaticCoupling="true"/>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="480" gr:y="320" id="sv5#area4#miu4" action="true" name="RejectUser" moduleId="mov2#mpkg2#opm6">
+    <ModuleInstanceUnit gr:x="475" gr:y="320" id="sv5#area4#miu4" action="true" name="RejectUser" moduleId="mov2#mpkg2#opm6">
       <OKLink id="sv5#area4#miu4#oln25" name="OKFlow25" to="sv5#area4#page5" automaticCoupling="true" gr:bendpoints="15,-63,110,92"/>
       <KOLink id="sv5#area4#miu4#kln19" name="KOFlow19" to="sv5#area4#page7" automaticCoupling="true"/>
     </ModuleInstanceUnit>

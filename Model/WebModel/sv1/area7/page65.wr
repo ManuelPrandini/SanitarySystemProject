@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area7#page65" name="Registra Visita" landmark="true" gr:x="190" gr:y="485">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area7#page65#pwu1" name="Lista visite" sortable="true" checkable="false" useCountQuery="false" entity="ent29" displayAttributes="ent5#att22 ent5#att24 ent5#att25 rel16#role31.ent10#att50 rel16#role31.rel37#role74.ent4#att14 rel16#role31.rel37#role74.ent4#att1 rel11#role16.ent6#att11 rel3#role3.ent9#att33" linkOrder="sv1#area7#page65#pwu1#ln78">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#area7#page65#pwu1" name="Lista visite" sortable="true" checkable="false" useCountQuery="false" entity="ent29" displayAttributes="ent5#att22 ent5#att24 ent5#att25 rel16#role31.rel37#role74.ent4#att1 rel16#role31.rel37#role74.ent4#att14 rel16#role31.ent10#att50 rel11#role16.ent6#att11 rel3#role3.ent9#att33" linkOrder="sv1#area7#page65#pwu1#ln78">
       <Selector id="sv1#area7#page65#pwu1#su2" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area7#page65#pwu1#su2#kcond36" name="oidVisit" predicate="in" implied="false"/>
       </Selector>
@@ -24,14 +24,14 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area7#page65#pwu1">
           <layout:Link link="sv1#area7#page65#pwu1#ln78"/>
-          <layout:Attribute attribute="ent5#att22"/>
-          <layout:Attribute attribute="ent5#att24"/>
-          <layout:Attribute attribute="ent5#att25"/>
-          <layout:Attribute attribute="rel16#role31.ent10#att50"/>
-          <layout:Attribute attribute="rel16#role31.rel37#role74.ent4#att14"/>
-          <layout:Attribute attribute="rel16#role31.rel37#role74.ent4#att1"/>
-          <layout:Attribute attribute="rel11#role16.ent6#att11"/>
-          <layout:Attribute attribute="rel3#role3.ent9#att33"/>
+          <layout:Attribute attribute="ent5#att22" label="data di inizio"/>
+          <layout:Attribute attribute="ent5#att24" label="orario di inizio"/>
+          <layout:Attribute attribute="ent5#att25" label="orario di fine"/>
+          <layout:Attribute attribute="rel16#role31.rel37#role74.ent4#att1" label="id_ospedale"/>
+          <layout:Attribute attribute="rel16#role31.rel37#role74.ent4#att14" label="nome ospedale"/>
+          <layout:Attribute attribute="rel16#role31.ent10#att50" label="nome stanza"/>
+          <layout:Attribute attribute="rel11#role16.ent6#att11" label="codice paziente"/>
+          <layout:Attribute attribute="rel3#role3.ent9#att33" label="codice dottore"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

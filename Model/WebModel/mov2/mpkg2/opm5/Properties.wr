@@ -8,8 +8,8 @@
       </OKLink>
       <InputCollectorParameter id="mov2#mpkg2#opm5#icu5#icp79" name="groupID"/>
     </InputCollectorUnit>
-    <OKCollectorUnit gr:x="825" gr:y="30" id="mov2#mpkg2#opm5#okcu5" name="utente registrato"/>
-    <KOCollectorUnit gr:x="825" gr:y="345" id="mov2#mpkg2#opm5#kocu5" name="errore"/>
+    <OKCollectorUnit gr:x="1365" gr:y="25" id="mov2#mpkg2#opm5#okcu5" name="utente registrato"/>
+    <KOCollectorUnit gr:x="1365" gr:y="345" id="mov2#mpkg2#opm5#kocu5" name="errore"/>
     <SwitchUnit gr:x="325" gr:y="190" id="mov2#mpkg2#opm5#switch10" name="Switch">
       <Case value="1"/>
       <Case value="2"/>
@@ -31,22 +31,82 @@
       <Selector id="mov2#mpkg2#opm5#mfu6#su35" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#mpkg2#opm5#mfu6#su35#acond29" name="CFcondition" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.userOID"/>
       </Selector>
-      <OKLink id="mov2#mpkg2#opm5#mfu6#oln112" name="OKFlow112" to="mov2#mpkg2#opm5#okcu5" automaticCoupling="true"/>
+      <OKLink id="mov2#mpkg2#opm5#mfu6#oln112" name="OKFlow112" to="mov2#mpkg2#opm5#seu98">
+        <LinkParameter id="mov2#mpkg2#opm5#mfu6#oln112#par1294" name="patient_code_code [patient_code]" source="ent6#att11Array" target="mov2#mpkg2#opm5#seu98#su146#kcond70.ent6#att11"/>
+      </OKLink>
       <KOLink id="mov2#mpkg2#opm5#mfu6#kln49" name="KOFlow49" to="mov2#mpkg2#opm5#kocu5" automaticCoupling="true"/>
     </ModifyUnit>
     <ModifyUnit gr:x="480" gr:y="170" id="mov2#mpkg2#opm5#mfu7" name="UpdatePharmacistApproved" entity="ent1">
       <Selector id="mov2#mpkg2#opm5#mfu7#su36" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#mpkg2#opm5#mfu7#su36#acond28" name="CFcondition" predicate="eq" booleanOperator="or" implied="false" attributes="rel22#role44.userOID"/>
       </Selector>
-      <OKLink id="mov2#mpkg2#opm5#mfu7#oln111" name="OKFlow111" to="mov2#mpkg2#opm5#okcu5" automaticCoupling="true"/>
+      <OKLink id="mov2#mpkg2#opm5#mfu7#oln111" name="OKFlow111" to="mov2#mpkg2#opm5#seu91">
+        <LinkParameter id="mov2#mpkg2#opm5#mfu7#oln111#par639" name="pharmacist_code_code [pharmacist_code]" source="ent1#att32Array" target="mov2#mpkg2#opm5#seu91#su145#kcond69.ent1#att32"/>
+      </OKLink>
       <KOLink id="mov2#mpkg2#opm5#mfu7#kln48" name="KOFlow48" to="mov2#mpkg2#opm5#kocu5" automaticCoupling="true"/>
     </ModifyUnit>
     <ModifyUnit gr:x="490" gr:y="20" id="mov2#mpkg2#opm5#mfu8" name="UpdateDoctorApproved" entity="ent9">
       <Selector id="mov2#mpkg2#opm5#mfu8#su37" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#mpkg2#opm5#mfu8#su37#acond27" name="CFcondition" predicate="eq" booleanOperator="or" implied="false" attributes="rel36#role72.userOID"/>
       </Selector>
-      <OKLink id="mov2#mpkg2#opm5#mfu8#oln110" name="OKFlow110" to="mov2#mpkg2#opm5#okcu5" automaticCoupling="true"/>
+      <OKLink id="mov2#mpkg2#opm5#mfu8#oln110" name="OKFlow110" to="mov2#mpkg2#opm5#seu57">
+        <LinkParameter id="mov2#mpkg2#opm5#mfu8#oln110#par638" name="doctor_code_code [doctor_code]" source="ent9#att33Array" target="mov2#mpkg2#opm5#seu57#su130#kcond46.ent9#att33"/>
+      </OKLink>
       <KOLink id="mov2#mpkg2#opm5#mfu8#kln47" name="KOFlow47" to="mov2#mpkg2#opm5#kocu5" automaticCoupling="true"/>
     </ModifyUnit>
+    <MailUnit gr:x="1035" gr:y="15" id="mov2#mpkg2#opm5#mlu1" name="MailDiConfermaDottore" format="plainText" smtpServer="smtp1">
+      <Placeholder id="mov2#mpkg2#opm5#mlu1#ph13" name="Nome"/>
+      <Placeholder id="mov2#mpkg2#opm5#mlu1#ph14" name="Cognome"/>
+      <BodyTemplate xml:space="preserve">Gentile $$Nome$$ $$Cognome$$ sei stato approvato come Dottore dall'admin del sistema!</BodyTemplate>
+      <SubjectTemplate xml:space="preserve">Conferma iscrizione SanitarySystem</SubjectTemplate>
+      <OKLink id="mov2#mpkg2#opm5#mlu1#oln312" name="OKFlow312" to="mov2#mpkg2#opm5#okcu5" automaticCoupling="true"/>
+      <KOLink id="mov2#mpkg2#opm5#mlu1#kln94" name="KOFlow94" to="mov2#mpkg2#opm5#kocu5" automaticCoupling="true"/>
+    </MailUnit>
+    <MailUnit id="mov2#mpkg2#opm5#mlu3" name="MailDiConfermaFarmacista" gr:x="1040" gr:y="110" format="plainText" smtpServer="smtp1">
+      <Placeholder id="mov2#mpkg2#opm5#mlu3#ph15" name="Nome"/>
+      <Placeholder id="mov2#mpkg2#opm5#mlu3#ph16" name="Cognome"/>
+      <BodyTemplate xml:space="preserve">Gentile $$Nome$$ $$Cognome$$ sei stato approvato come Farmacista dall'admin del sistema!</BodyTemplate>
+      <SubjectTemplate xml:space="preserve">Conferma iscrizione SanitarySystem</SubjectTemplate>
+      <OKLink id="mov2#mpkg2#opm5#mlu3#oln313" name="OKFlow313" to="mov2#mpkg2#opm5#okcu5" automaticCoupling="true"/>
+      <KOLink id="mov2#mpkg2#opm5#mlu3#kln95" name="KOFlow95" to="mov2#mpkg2#opm5#kocu5" automaticCoupling="true"/>
+    </MailUnit>
+    <MailUnit id="mov2#mpkg2#opm5#mlu4" name="MailDiConfermaPaziente" gr:x="1045" gr:y="205" format="plainText" smtpServer="smtp1">
+      <Placeholder id="mov2#mpkg2#opm5#mlu4#ph17" name="Nome"/>
+      <Placeholder id="mov2#mpkg2#opm5#mlu4#ph18" name="Cognome"/>
+      <BodyTemplate xml:space="preserve">Gentile $$Nome$$ $$Cognome$$ sei stato approvato come Paziente dall'admin del sistema!</BodyTemplate>
+      <SubjectTemplate xml:space="preserve">Conferma iscrizione SanitarySystem</SubjectTemplate>
+      <OKLink id="mov2#mpkg2#opm5#mlu4#oln314" name="OKFlow314" to="mov2#mpkg2#opm5#okcu5" automaticCoupling="true"/>
+      <KOLink id="mov2#mpkg2#opm5#mlu4#kln97" name="KOFlow97" to="mov2#mpkg2#opm5#kocu5" automaticCoupling="true"/>
+    </MailUnit>
+    <SelectorUnit gr:x="760" gr:y="20" id="mov2#mpkg2#opm5#seu57" name="Seleziona Dati Dottore" entity="ent9" distinctAttributes="rel36#role72.email rel36#role72.User#att27 rel36#role72.User#att28">
+      <Selector id="mov2#mpkg2#opm5#seu57#su130" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm5#seu57#su130#kcond46" name="code" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm5#seu57#oln293" name="OKFlow293" to="mov2#mpkg2#opm5#mlu1">
+        <LinkParameter id="mov2#mpkg2#opm5#seu57#oln293#par1295" name="DoctorToUser.surname_Cognome" source="rel36#role72$User#att28Array" target="mov2#mpkg2#opm5#mlu1.Cognome"/>
+        <LinkParameter id="mov2#mpkg2#opm5#seu57#oln293#par1306" name="DoctorToUser.email_Mail - To" source="rel36#role72$emailArray" target="mov2#mpkg2#opm5#mlu1.to"/>
+        <LinkParameter id="mov2#mpkg2#opm5#seu57#oln293#par1458" name="DoctorToUser.name_Nome" source="rel36#role72$User#att27Array" target="mov2#mpkg2#opm5#mlu1.Nome"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="mov2#mpkg2#opm5#seu91" name="Seleziona Dati Farmacista" gr:x="750" gr:y="155" entity="ent1" distinctAttributes="rel22#role44.email rel22#role44.User#att27 rel22#role44.User#att28">
+      <Selector id="mov2#mpkg2#opm5#seu91#su145" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm5#seu91#su145#kcond69" name="code" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm5#seu91#oln310" name="OKFlow310" to="mov2#mpkg2#opm5#mlu3">
+        <LinkParameter id="mov2#mpkg2#opm5#seu91#oln310#par1459" name="PharmacistToUser.surname_Cognome" source="rel22#role44$User#att28Array" target="mov2#mpkg2#opm5#mlu3.Cognome"/>
+        <LinkParameter id="mov2#mpkg2#opm5#seu91#oln310#par1460" name="PharmacistToUser.email_Mail - To" source="rel22#role44$emailArray" target="mov2#mpkg2#opm5#mlu3.to"/>
+        <LinkParameter id="mov2#mpkg2#opm5#seu91#oln310#par1461" name="PharmacistToUser.name_Nome" source="rel22#role44$User#att27Array" target="mov2#mpkg2#opm5#mlu3.Nome"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="mov2#mpkg2#opm5#seu98" name="Seleziona Dati Paziente" gr:x="775" gr:y="280" entity="ent6" distinctAttributes="rel14#role28.email rel14#role28.User#att27 rel14#role28.User#att28">
+      <Selector id="mov2#mpkg2#opm5#seu98#su146" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg2#opm5#seu98#su146#kcond70" name="code" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg2#opm5#seu98#oln311" name="OKFlow311" to="mov2#mpkg2#opm5#mlu4">
+        <LinkParameter id="mov2#mpkg2#opm5#seu98#oln311#par1463" name="PatientToUser.surname_Cognome" source="rel14#role28$User#att28Array" target="mov2#mpkg2#opm5#mlu4.Cognome"/>
+        <LinkParameter id="mov2#mpkg2#opm5#seu98#oln311#par1464" name="PatientToUser.email_Mail - To" source="rel14#role28$emailArray" target="mov2#mpkg2#opm5#mlu4.to"/>
+        <LinkParameter id="mov2#mpkg2#opm5#seu98#oln311#par1465" name="PatientToUser.name_Nome" source="rel14#role28$User#att27Array" target="mov2#mpkg2#opm5#mlu4.Nome"/>
+      </OKLink>
+    </SelectorUnit>
   </OperationUnits>
 </OperationModule>

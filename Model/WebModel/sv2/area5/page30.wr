@@ -56,11 +56,11 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#area5#page30#pwu14">
           <layout:Attribute attribute="ent3#att53"/>
-          <layout:Attribute attribute="ent3#att61"/>
-          <layout:Attribute attribute="ent3#att63"/>
-          <layout:Attribute attribute="ent3#att56"/>
-          <layout:Attribute attribute="ent3#att54"/>
-          <layout:Attribute attribute="ent3#att57"/>
+          <layout:Attribute attribute="ent3#att61" label="ID_visita"/>
+          <layout:Attribute attribute="ent3#att63" label="nome farmaco"/>
+          <layout:Attribute attribute="ent3#att56" label="descrizione prescrizione"/>
+          <layout:Attribute attribute="ent3#att54" label="quantit&#224;"/>
+          <layout:Attribute attribute="ent3#att57" label="assegnati"/>
           <layout:Link link="sv2#area5#page30#pwu14#ln146"/>
         </layout:Unit>
       </layout:Cell>
@@ -99,8 +99,8 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#area5#page30#pwu12">
-          <layout:Attribute attribute="rel23#role45.ent2#att8"/>
-          <layout:Attribute attribute="rel23#role45.ent2#att6"/>
+          <layout:Attribute attribute="rel23#role45.ent2#att8" label="nome farmaco"/>
+          <layout:Attribute attribute="rel23#role45.ent2#att6" label="id_farmaco"/>
           <layout:Link link="sv2#area5#page30#pwu12#ln186"/>
         </layout:Unit>
       </layout:Cell>

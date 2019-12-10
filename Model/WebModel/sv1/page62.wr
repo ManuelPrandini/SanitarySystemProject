@@ -6,7 +6,7 @@
         <LinkParameter id="sv1#page62#enu18#ln113#par441" name="CF_cf" source="sv1#page62#enu18#fld83" target="sv1#page62#dau12#su61#acond52"/>
       </Link>
     </EntryUnit>
-    <DataUnit id="sv1#page62#dau12" name="Scheda Paziente" gr:x="140" gr:y="15" entity="ent6" displayAttributes="rel14#role28.userOID ent6#att11 rel14#role28.User#att27 rel14#role28.User#att28 rel14#role28.email rel14#role28.User#att29 rel14#role28.User#att40 rel14#role28.User#att12 ent6#att30 ent6#att31 rel14#role28.User#att41" linkOrder="sv1#page62#dau12#ln130">
+    <DataUnit id="sv1#page62#dau12" name="Scheda Paziente" gr:x="140" gr:y="15" entity="ent6" displayAttributes="rel14#role28.userOID ent6#att11 rel14#role28.User#att27 rel14#role28.User#att28 rel14#role28.email rel14#role28.User#att29 rel14#role28.User#att40 rel14#role28.User#att12 rel14#role28.User#att41 ent6#att30 ent6#att31" linkOrder="sv1#page62#dau12#ln130">
       <Selector id="sv1#page62#dau12#su61" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#page62#dau12#su61#acond52" name="cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.userOID"/>
         <AttributesCondition id="sv1#page62#dau12#su61#acond1" name="cf!=sestesso" predicate="neq" booleanOperator="and" implied="false" attributes="rel14#role28.userOID"/>
@@ -59,18 +59,18 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page62#dau12">
-          <layout:Attribute attribute="rel14#role28.userOID"/>
-          <layout:Attribute attribute="ent6#att11"/>
-          <layout:Attribute attribute="rel14#role28.User#att27"/>
-          <layout:Attribute attribute="rel14#role28.User#att28"/>
-          <layout:Attribute attribute="rel14#role28.email"/>
-          <layout:Attribute attribute="rel14#role28.User#att29"/>
-          <layout:Attribute attribute="rel14#role28.User#att40"/>
-          <layout:Attribute attribute="rel14#role28.User#att12"/>
-          <layout:Attribute attribute="ent6#att30"/>
-          <layout:Attribute attribute="ent6#att31"/>
-          <layout:Attribute attribute="rel14#role28.User#att41"/>
           <layout:Link link="sv1#page62#dau12#ln130"/>
+          <layout:Attribute attribute="rel14#role28.userOID" label="cf paziente"/>
+          <layout:Attribute attribute="ent6#att11" label="codice paziente"/>
+          <layout:Attribute attribute="rel14#role28.User#att27" label="nome paziente"/>
+          <layout:Attribute attribute="rel14#role28.User#att28" label="cognome paziente"/>
+          <layout:Attribute attribute="rel14#role28.email" label="email paziente"/>
+          <layout:Attribute attribute="rel14#role28.User#att29" label="data di nascita paziente"/>
+          <layout:Attribute attribute="rel14#role28.User#att40" label="indirizzo paziente"/>
+          <layout:Attribute attribute="rel14#role28.User#att12" label="sesso paziente"/>
+          <layout:Attribute attribute="rel14#role28.User#att41" label="telefono paziente"/>
+          <layout:Attribute attribute="ent6#att30" label="peso paziente"/>
+          <layout:Attribute attribute="ent6#att31" label="altezza paziente"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

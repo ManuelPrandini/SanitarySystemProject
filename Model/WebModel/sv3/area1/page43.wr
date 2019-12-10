@@ -17,14 +17,14 @@
           <layout:Attribute attribute="userOID"/>
           <layout:Attribute attribute="userName"/>
           <layout:Attribute attribute="email"/>
-          <layout:Attribute attribute="User#att27"/>
-          <layout:Attribute attribute="User#att28"/>
-          <layout:Attribute attribute="User#att29"/>
-          <layout:Attribute attribute="User#att40"/>
-          <layout:Attribute attribute="User#att41"/>
-          <layout:Attribute attribute="rel14#role27.ent6#att30"/>
-          <layout:Attribute attribute="rel14#role27.ent6#att31"/>
-          <layout:Attribute attribute="rel14#role27.ent6#att11"/>
+          <layout:Attribute attribute="User#att27" label="nome"/>
+          <layout:Attribute attribute="User#att28" label="cognome"/>
+          <layout:Attribute attribute="User#att29" label="data di nascita"/>
+          <layout:Attribute attribute="User#att40" label="indirizzo"/>
+          <layout:Attribute attribute="User#att41" label="telefono"/>
+          <layout:Attribute attribute="rel14#role27.ent6#att30" label="peso"/>
+          <layout:Attribute attribute="rel14#role27.ent6#att31" label="altezza"/>
+          <layout:Attribute attribute="rel14#role27.ent6#att11" label="codice paziente"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

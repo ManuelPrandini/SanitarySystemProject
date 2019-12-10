@@ -16,9 +16,9 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv5#page6#dau5">
-          <layout:Attribute attribute="User#att27"/>
-          <layout:Attribute attribute="User#att28"/>
-          <layout:Attribute attribute="User#att29"/>
+          <layout:Attribute attribute="User#att27" label="Nome"/>
+          <layout:Attribute attribute="User#att28" label="Cognome"/>
+          <layout:Attribute attribute="User#att29" label="Data di nascita"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

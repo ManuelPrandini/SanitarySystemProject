@@ -11,8 +11,8 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv5#area17#page84#inu6">
           <layout:Link link="sv5#area17#page84#inu6#ln148"/>
-          <layout:Attribute attribute="ent14#att65"/>
-          <layout:Attribute attribute="ent14#att66"/>
+          <layout:Attribute attribute="ent14#att65" label="Domanda"/>
+          <layout:Attribute attribute="ent14#att66" label="Risposta"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

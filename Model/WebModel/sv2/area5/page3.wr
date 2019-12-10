@@ -38,10 +38,10 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#area5#page3#pwu7">
-          <layout:Attribute attribute="ent13#att59"/>
-          <layout:Attribute attribute="ent13#att60"/>
-          <layout:Attribute attribute="ent13#att36"/>
-          <layout:Attribute attribute="ent13#att52"/>
+          <layout:Attribute attribute="ent13#att59" label="nome farmaco"/>
+          <layout:Attribute attribute="ent13#att60" label="quantit&#224;"/>
+          <layout:Attribute attribute="ent13#att36" label="E' standard?"/>
+          <layout:Attribute attribute="ent13#att52" label="id_farmaco"/>
           <layout:Link link="sv2#area5#page3#pwu7#ln96"/>
         </layout:Unit>
       </layout:Cell>

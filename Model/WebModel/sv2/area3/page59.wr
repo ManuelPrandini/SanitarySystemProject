@@ -50,9 +50,9 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#area3#page59#pwu2">
-          <layout:Attribute attribute="ent21#att49"/>
-          <layout:Attribute attribute="rel23#role45.ent2#att8"/>
-          <layout:Attribute attribute="rel23#role45.ent2#att7"/>
+          <layout:Attribute attribute="ent21#att49" label="quantit&#224;"/>
+          <layout:Attribute attribute="rel23#role45.ent2#att8" label="nome farmaco"/>
+          <layout:Attribute attribute="rel23#role45.ent2#att7" label="E' standard?"/>
           <layout:Link link="sv2#area3#page59#pwu2rel23#role45$ent2#att8"/>
         </layout:Unit>
       </layout:Cell>

@@ -19,12 +19,12 @@
           <layout:Attribute attribute="userOID"/>
           <layout:Attribute attribute="userName"/>
           <layout:Attribute attribute="email"/>
-          <layout:Attribute attribute="User#att27"/>
-          <layout:Attribute attribute="User#att28"/>
-          <layout:Attribute attribute="User#att29"/>
-          <layout:Attribute attribute="User#att40"/>
-          <layout:Attribute attribute="User#att41"/>
-          <layout:Attribute attribute="rel36#role71.ent9#att33"/>
+          <layout:Attribute attribute="User#att27" label="nome"/>
+          <layout:Attribute attribute="User#att28" label="cognome"/>
+          <layout:Attribute attribute="User#att29" label="data di nascita"/>
+          <layout:Attribute attribute="User#att40" label="indirizzo"/>
+          <layout:Attribute attribute="User#att41" label="telefono"/>
+          <layout:Attribute attribute="rel36#role71.ent9#att33" label="codice dottore"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
