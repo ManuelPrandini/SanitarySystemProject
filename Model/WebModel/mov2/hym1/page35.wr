@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page35" name="Registrazione farmacista (ESISTENTE)" gr:x="1155" gr:y="155">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page35" name="Registrazione farmacista (ESISTENTE)" gr:x="1230" gr:y="60">
   <ContentUnits>
-    <EntryUnit gr:x="5" gr:y="85" id="mov2#hym1#page35#enu11" name="compila la form" linkOrder="mov2#hym1#page35#enu11#ln47" fieldOrder="mov2#hym1#page35#enu11#fld20 mov2#hym1#page35#enu11#fld40 mov2#hym1#page35#enu11#fld41 mov2#hym1#page35#enu11#fld153 mov2#hym1#page35#enu11#fld8 mov2#hym1#page35#enu11#fld152 mov2#hym1#page35#enu11#fld154 mov2#hym1#page35#enu11#fld7 mov2#hym1#page35#enu11#fld35 mov2#hym1#page35#enu11#fld43 mov2#hym1#page35#enu11#sfld54 mov2#hym1#page35#enu11#fld42">
+    <EntryUnit gr:x="195" gr:y="80" id="mov2#hym1#page35#enu11" name="compila la form" linkOrder="mov2#hym1#page35#enu11#ln47 mov2#hym1#page35#enu11#ln239 mov2#hym1#page35#enu11#ln240" fieldOrder="mov2#hym1#page35#enu11#fld20 mov2#hym1#page35#enu11#fld40 mov2#hym1#page35#enu11#fld41 mov2#hym1#page35#enu11#fld153 mov2#hym1#page35#enu11#fld8 mov2#hym1#page35#enu11#fld152 mov2#hym1#page35#enu11#fld154 mov2#hym1#page35#enu11#fld7 mov2#hym1#page35#enu11#fld35 mov2#hym1#page35#enu11#fld43 mov2#hym1#page35#enu11#sfld44 mov2#hym1#page35#enu11#sfld45 mov2#hym1#page35#enu11#sfld54 mov2#hym1#page35#enu11#fld42">
       <Link id="mov2#hym1#page35#enu11#ln47" name="Registrati" to="mov2#hym1#miu6" type="normal" validate="true">
         <LinkParameter id="mov2#hym1#page35#enu11#ln47#par121" name="1_exists?" sourceValue="1" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp74"/>
         <LinkParameter id="mov2#hym1#page35#enu11#ln47#par124" name="0_approved" sourceValue="0" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp37"/>
@@ -76,16 +76,43 @@
           <MandatoryValidationRule id="mov2#hym1#page35#enu11#sfld54#mnd45" name="Mandatory39"/>
         </VRules>
       </SelectionField>
-    </EntryUnit>
-    <SelectorUnit gr:x="270" gr:y="45" id="mov2#hym1#page35#seu46" name="SelectorPharmacy" entity="ent19">
-      <Link id="mov2#hym1#page35#seu46#ln171" name="Flow171" to="mov2#hym1#page35#enu11" type="transport" validate="true">
-        <LinkParameter id="mov2#hym1#page35#seu46#ln171#par859" name="Data Size_pharmacy [label]" source="ent19#att43Array" target="mov2#hym1#page35#enu11#sfld54_label"/>
-        <LinkParameter id="mov2#hym1#page35#seu46#ln171#par860" name="oid_pharmacy [output]" source="ent19#att42Array" target="mov2#hym1#page35#enu11#sfld54_output"/>
+      <SelectionField id="mov2#hym1#page35#enu11#sfld45" name="citt&#224; farmacia *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page35#enu11#ln240"/>
+      <SelectionField id="mov2#hym1#page35#enu11#sfld44" name="paese farmacia *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page35#enu11#ln239"/>
+      <Link id="mov2#hym1#page35#enu11#ln239" name="SelezionaCitt&#224;Farmacia" to="mov2#hym1#page35#seu120" type="normal" validate="true">
+        <LinkParameter id="mov2#hym1#page35#enu11#ln239#par1770" name="paese farmacia *_nazione" source="mov2#hym1#page35#enu11#sfld44" target="mov2#hym1#page35#seu120#su168#acond175"/>
       </Link>
-    </SelectorUnit>
-    <MultiMessageUnit id="mov2#hym1#page35#mssu45" name="E' stata trovata una corrispondenza!" gr:x="0" gr:y="0">
+      <Link id="mov2#hym1#page35#enu11#ln240" name="SelezionaFarmacia" to="mov2#hym1#page35#seu121" type="normal" validate="true">
+        <LinkParameter id="mov2#hym1#page35#enu11#ln240#par1773" name="citt&#224; farmacia *_citt&#224;" source="mov2#hym1#page35#enu11#sfld45" target="mov2#hym1#page35#seu121#su169#acond176"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit id="mov2#hym1#page35#mssu45" name="E' stata trovata una corrispondenza!" gr:x="155" gr:y="0">
       <Message xml:space="preserve">Sono stati riempiti i campi con i dati di registrazione compilati in precendenza</Message>
     </MultiMessageUnit>
+    <SelectorUnit id="mov2#hym1#page35#seu117" name="Seleziona Nazione" gr:x="0" gr:y="195" entity="ent11">
+      <Link id="mov2#hym1#page35#seu117#ln236" name="Flow236" to="mov2#hym1#page35#enu11" type="transport" validate="true">
+        <LinkParameter id="mov2#hym1#page35#seu117#ln236#par1766" name="name_paese farmacia * [label]" source="ent11#att18Array" target="mov2#hym1#page35#enu11#sfld44_label"/>
+        <LinkParameter id="mov2#hym1#page35#seu117#ln236#par1767" name="oid_paese farmacia * [output]" source="ent11#att15Array" target="mov2#hym1#page35#enu11#sfld44_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="mov2#hym1#page35#seu120" name="Seleziona citt&#224; farmacia" gr:x="200" gr:y="185" entity="ent12">
+      <SortAttribute attribute="ent12#att39" order="ascending"/>
+      <Selector id="mov2#hym1#page35#seu120#su168" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym1#page35#seu120#su168#acond175" name="nazione" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role8.ent11#att15"/>
+      </Selector>
+      <Link id="mov2#hym1#page35#seu120#ln243" name="Flow243" to="mov2#hym1#page35#enu11" type="transport" validate="true" gr:bendpoints="-164,-52,136,73">
+        <LinkParameter id="mov2#hym1#page35#seu120#ln243#par1771" name="name_citt&#224; farmacia * [label]" source="ent12#att39Array" target="mov2#hym1#page35#enu11#sfld45_label"/>
+        <LinkParameter id="mov2#hym1#page35#seu120#ln243#par1772" name="oid_citt&#224; farmacia * [output]" source="ent12#att16Array" target="mov2#hym1#page35#enu11#sfld45_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="mov2#hym1#page35#seu121" name="SelectorPharmacy" gr:x="465" gr:y="175" entity="ent19">
+      <Selector id="mov2#hym1#page35#seu121#su169" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym1#page35#seu121#su169#acond176" name="citt&#224;" predicate="eq" booleanOperator="or" implied="false" attributes="rel13#role25.ent12#att16"/>
+      </Selector>
+      <Link id="mov2#hym1#page35#seu121#ln244" name="Flow244" to="mov2#hym1#page35#enu11" type="transport" validate="true" gr:bendpoints="-159,33,146,-2">
+        <LinkParameter id="mov2#hym1#page35#seu121#ln244#par1774" name="name_farmacia di lavoro * [label]" source="ent19#att43Array" target="mov2#hym1#page35#enu11#sfld54_label"/>
+        <LinkParameter id="mov2#hym1#page35#seu121#ln244#par1775" name="oid_farmacia di lavoro * [output]" source="ent19#att42Array" target="mov2#hym1#page35#enu11#sfld54_output"/>
+      </Link>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -108,6 +135,8 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov2#hym1#page35#enu11">
           <layout:Link link="mov2#hym1#page35#enu11#ln47"/>
+          <layout:Link link="mov2#hym1#page35#enu11#ln239"/>
+          <layout:Link link="mov2#hym1#page35#enu11#ln240"/>
           <layout:Field field="mov2#hym1#page35#enu11#fld20"/>
           <layout:Field field="mov2#hym1#page35#enu11#fld40"/>
           <layout:Field field="mov2#hym1#page35#enu11#fld41"/>
@@ -118,6 +147,8 @@
           <layout:Field field="mov2#hym1#page35#enu11#fld7"/>
           <layout:Field field="mov2#hym1#page35#enu11#fld35"/>
           <layout:Field field="mov2#hym1#page35#enu11#fld43"/>
+          <layout:Field field="mov2#hym1#page35#enu11#sfld44"/>
+          <layout:Field field="mov2#hym1#page35#enu11#sfld45"/>
           <layout:Field field="mov2#hym1#page35#enu11#sfld54"/>
           <layout:Field field="mov2#hym1#page35#enu11#fld42"/>
         </layout:Unit>

@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1085" gr:y="-205" id="mov2#hym1#page49" name="Registrazione dottore">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1035" gr:y="-465" id="mov2#hym1#page49" name="Registrazione dottore">
   <ContentUnits>
-    <EntryUnit id="mov2#hym1#page49#enu10" name="compila la form" gr:x="275" gr:y="200" fieldOrder="mov2#hym1#page49#enu10#fld124 mov2#hym1#page49#enu10#fld121 mov2#hym1#page49#enu10#fld120 mov2#hym1#page49#enu10#sfld39 mov2#hym1#page49#enu10#fld118 mov2#hym1#page49#enu10#sfld38 mov2#hym1#page49#enu10#sfld29 mov2#hym1#page49#enu10#fld116 mov2#hym1#page49#enu10#fld119 mov2#hym1#page49#enu10#fld117 mov2#hym1#page49#enu10#sfld40 mov2#hym1#page49#enu10#sfld41 mov2#hym1#page49#enu10#sfld42 mov2#hym1#page49#enu10#fld123" linkOrder="mov2#hym1#page49#enu10#ln149 mov2#hym1#page49#enu10#ln59">
+    <EntryUnit id="mov2#hym1#page49#enu10" name="compila la form" gr:x="280" gr:y="170" fieldOrder="mov2#hym1#page49#enu10#fld124 mov2#hym1#page49#enu10#fld121 mov2#hym1#page49#enu10#fld120 mov2#hym1#page49#enu10#sfld39 mov2#hym1#page49#enu10#fld118 mov2#hym1#page49#enu10#sfld48 mov2#hym1#page49#enu10#sfld38 mov2#hym1#page49#enu10#sfld49 mov2#hym1#page49#enu10#sfld29 mov2#hym1#page49#enu10#fld116 mov2#hym1#page49#enu10#fld119 mov2#hym1#page49#enu10#fld117 mov2#hym1#page49#enu10#sfld51 mov2#hym1#page49#enu10#sfld57 mov2#hym1#page49#enu10#sfld40 mov2#hym1#page49#enu10#sfld41 mov2#hym1#page49#enu10#sfld42 mov2#hym1#page49#enu10#fld123" linkOrder="mov2#hym1#page49#enu10#ln149 mov2#hym1#page49#enu10#ln59 mov2#hym1#page49#enu10#ln253 mov2#hym1#page49#enu10#ln254 mov2#hym1#page49#enu10#ln255 mov2#hym1#page49#enu10#ln256">
       <SelectionField id="mov2#hym1#page49#enu10#sfld29" name="luogo di residenza *" type="integer" modifiable="true">
         <VRules>
           <MandatoryValidationRule id="mov2#hym1#page49#enu10#sfld29#mnd30" name="Mandatory8"/>
@@ -91,11 +91,30 @@
         <LinkParameter id="mov2#hym1#page49#enu10#ln59#par281" name="hospital_id_hospital" source="mov2#hym1#page49#enu10#sfld40" target="mov2#hym1#miu26.mov2#mpkg2#opm24#icu29#icp137"/>
         <LinkParameter id="mov2#hym1#page49#enu10#ln59#par292" name="medical specialization_medical_specializzation" source="mov2#hym1#page49#enu10#sfld41" target="mov2#hym1#miu26.mov2#mpkg2#opm24#icu29#icp138"/>
       </Link>
+      <Link id="mov2#hym1#page49#enu10#ln253" name="SelezionaCitt&#224;Nascita" to="mov2#hym1#page49#seu129" type="normal" validate="true">
+        <LinkParameter id="mov2#hym1#page49#enu10#ln253#par1788" name="paese di nascita *_nazione" source="mov2#hym1#page49#enu10#sfld48" target="mov2#hym1#page49#seu129#su175#acond195"/>
+      </Link>
+      <Link id="mov2#hym1#page49#enu10#ln254" name="SelezionaCitt&#224;Residenza" to="mov2#hym1#page49#seu130" type="normal" validate="true">
+        <LinkParameter id="mov2#hym1#page49#enu10#ln254#par1789" name="paese di residenza *_nazione" source="mov2#hym1#page49#enu10#sfld49" target="mov2#hym1#page49#seu130#su176#acond196"/>
+      </Link>
+      <Link id="mov2#hym1#page49#enu10#ln255" name="SelezionaCitt&#224;Ospedale" to="mov2#hym1#page49#seu131" type="normal" validate="true">
+        <LinkParameter id="mov2#hym1#page49#enu10#ln255#par1790" name="paese ospedale *_nazione" source="mov2#hym1#page49#enu10#sfld51" target="mov2#hym1#page49#seu131#su177#acond197"/>
+      </Link>
+      <Link id="mov2#hym1#page49#enu10#ln256" name="SelezionaOspedale" to="mov2#hym1#page49#seu23" type="normal" validate="true">
+        <LinkParameter id="mov2#hym1#page49#enu10#ln256#par1787" name="citt&#224; ospedale *_citt&#224;" source="mov2#hym1#page49#enu10#sfld57" target="mov2#hym1#page49#seu23#su178#acond198"/>
+      </Link>
+      <SelectionField id="mov2#hym1#page49#enu10#sfld57" name="citt&#224; ospedale *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page49#enu10#ln256"/>
+      <SelectionField id="mov2#hym1#page49#enu10#sfld51" name="paese ospedale *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page49#enu10#ln255"/>
+      <SelectionField id="mov2#hym1#page49#enu10#sfld49" name="paese di residenza *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page49#enu10#ln254"/>
+      <SelectionField id="mov2#hym1#page49#enu10#sfld48" name="paese di nascita *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page49#enu10#ln253"/>
     </EntryUnit>
-    <SelectorUnit id="mov2#hym1#page49#seu23" name="SelectorHospital" gr:x="5" gr:y="95" entity="ent4">
-      <Link id="mov2#hym1#page49#seu23#ln104" name="Flow104" to="mov2#hym1#page49#enu10" type="transport" validate="true">
-        <LinkParameter id="mov2#hym1#page49#seu23#ln104#par611" name="name_hospital [label]" source="ent4#att14Array" target="mov2#hym1#page49#enu10#sfld40_label"/>
-        <LinkParameter id="mov2#hym1#page49#seu23#ln104#par612" name="id_hospital_hospital [output]" source="ent4#att1Array" target="mov2#hym1#page49#enu10#sfld40_output"/>
+    <SelectorUnit id="mov2#hym1#page49#seu23" name="SelectorHospital" gr:x="5" gr:y="160" entity="ent4">
+      <Selector id="mov2#hym1#page49#seu23#su178" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym1#page49#seu23#su178#acond198" name="citt&#224;" predicate="eq" booleanOperator="or" implied="false" attributes="rel2#role2.ent12#att16"/>
+      </Selector>
+      <Link id="mov2#hym1#page49#seu23#ln257" name="Flow257" to="mov2#hym1#page49#enu10" type="transport" validate="true" gr:bendpoints="138,9,-137,19">
+        <LinkParameter id="mov2#hym1#page49#seu23#ln257#par1803" name="name_ospedale di lavoro  [label]" source="ent4#att14Array" target="mov2#hym1#page49#enu10#sfld40_label"/>
+        <LinkParameter id="mov2#hym1#page49#seu23#ln257#par1804" name="id_hospital_ospedale di lavoro  [output]" source="ent4#att1Array" target="mov2#hym1#page49#enu10#sfld40_output"/>
       </Link>
     </SelectorUnit>
     <SelectorUnit id="mov2#hym1#page49#seu25" name="SelectorMedicalSpecialization" gr:x="275" gr:y="0" entity="ent8">
@@ -105,31 +124,50 @@
         <LinkParameter id="mov2#hym1#page49#seu25#ln150#par610" name="nameSpecialization_medical specialization [output]" source="ent8#att21Array" target="mov2#hym1#page49#enu10#sfld41_output"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit id="mov2#hym1#page49#seu38" name="SelectorVisitRoom(VECCHIO NON CANCELLARE)" gr:x="520" gr:y="5" entity="ent23">
-      <Selector id="mov2#hym1#page49#seu38#su60" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="mov2#hym1#page49#seu38#su60#acond36" name="id_hospital" predicate="eq" booleanOperator="and" implied="false" attributes="rel37#role74.ent4#att1"/>
-        <AttributesCondition id="mov2#hym1#page49#seu38#su60#acond37" name="medical_specialization" predicate="eq" booleanOperator="and" implied="false" attributes="rel1#role18.ent8#att21"/>
-        <RelationshipRoleCondition id="mov2#hym1#page49#seu38#su60#rcond1" name="RoleCondition1" predicate="notIn" implied="false" role="rel5#role20.rel5#role19"/>
-      </Selector>
-    </SelectorUnit>
-    <SelectorUnit id="mov2#hym1#page49#seu40" name="SelectorCity" gr:x="20" gr:y="190" entity="ent12">
-      <SortAttribute attribute="ent12#att39" order="ascending"/>
-      <Link id="mov2#hym1#page49#seu40#ln103" name="Flow103" to="mov2#hym1#page49#enu10" type="transport" validate="true">
-        <LinkParameter id="mov2#hym1#page49#seu40#ln103#par457" name="name_live in [label]" source="ent12#att39Array" target="mov2#hym1#page49#enu10#sfld29_label"/>
-        <LinkParameter id="mov2#hym1#page49#seu40#ln103#par458" name="oid_live in [output]" source="ent12#att16Array" target="mov2#hym1#page49#enu10#sfld29_output"/>
-        <LinkParameter id="mov2#hym1#page49#seu40#ln103#par561" name="name_born in [label]" source="ent12#att39Array" target="mov2#hym1#page49#enu10#sfld38_label"/>
-        <LinkParameter id="mov2#hym1#page49#seu40#ln103#par562" name="oid_born in [output]" source="ent12#att16Array" target="mov2#hym1#page49#enu10#sfld38_output"/>
-      </Link>
-    </SelectorUnit>
-    <SelectorUnit gr:x="735" gr:y="200" id="mov2#hym1#page49#seu53" name="SelectorRoom" entity="ent23">
-      <Link id="mov2#hym1#page49#seu53#ln143" name="Flow143" to="mov2#hym1#page49#seu38" type="transport" validate="true">
-        <LinkParameter id="mov2#hym1#page49#seu53#ln143#par606" name="id_room_RoleCondition1 [id_room]" source="ent10#att5Array" target="mov2#hym1#page49#seu38#su60#rcond1.ent10#att5"/>
-      </Link>
-    </SelectorUnit>
     <MultiMessageUnit gr:x="0" gr:y="10" id="mov2#hym1#page49#mssu53" name="Nessuna corrispondenza trovata!">
       <Message xml:space="preserve">Non &#232; stato trovato nessun utente registrato in precedenza con le credenziali inserite.
 Registra un nuovo utente compilando la form qua sotto!</Message>
     </MultiMessageUnit>
+    <SelectorUnit id="mov2#hym1#page49#seu128" name="Seleziona Nazione" gr:x="20" gr:y="275" entity="ent11">
+      <Link id="mov2#hym1#page49#seu128#ln252" name="Flow252" to="mov2#hym1#page49#enu10" type="transport" validate="true">
+        <LinkParameter id="mov2#hym1#page49#seu128#ln252#par1791" name="name_paese di nascita * [label]" source="ent11#att18Array" target="mov2#hym1#page49#enu10#sfld48_label"/>
+        <LinkParameter id="mov2#hym1#page49#seu128#ln252#par1792" name="oid_paese di nascita * [output]" source="ent11#att15Array" target="mov2#hym1#page49#enu10#sfld48_output"/>
+        <LinkParameter id="mov2#hym1#page49#seu128#ln252#par1793" name="name_paese di residenza * [label]" source="ent11#att18Array" target="mov2#hym1#page49#enu10#sfld49_label"/>
+        <LinkParameter id="mov2#hym1#page49#seu128#ln252#par1794" name="oid_paese di residenza * [output]" source="ent11#att15Array" target="mov2#hym1#page49#enu10#sfld49_output"/>
+        <LinkParameter id="mov2#hym1#page49#seu128#ln252#par1795" name="name_paese ospedale * [label]" source="ent11#att18Array" target="mov2#hym1#page49#enu10#sfld51_label"/>
+        <LinkParameter id="mov2#hym1#page49#seu128#ln252#par1796" name="oid_paese ospedale * [output]" source="ent11#att15Array" target="mov2#hym1#page49#enu10#sfld51_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="mov2#hym1#page49#seu129" name="Seleziona citt&#224; nascita" gr:x="215" gr:y="270" entity="ent12">
+      <SortAttribute attribute="ent12#att39" order="ascending"/>
+      <Selector id="mov2#hym1#page49#seu129#su175" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym1#page49#seu129#su175#acond195" name="nazione" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role8.ent11#att15"/>
+      </Selector>
+      <Link id="mov2#hym1#page49#seu129#ln258" name="Flow258" to="mov2#hym1#page49#enu10" type="transport" validate="true" gr:bendpoints="50,-64,-15,56">
+        <LinkParameter id="mov2#hym1#page49#seu129#ln258#par1797" name="name_luogo di nascita * [label]" source="ent12#att39Array" target="mov2#hym1#page49#enu10#sfld38_label"/>
+        <LinkParameter id="mov2#hym1#page49#seu129#ln258#par1798" name="oid_luogo di nascita * [output]" source="ent12#att16Array" target="mov2#hym1#page49#enu10#sfld38_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="mov2#hym1#page49#seu130" name="Seleziona citt&#224; residenza" gr:x="375" gr:y="270" entity="ent12">
+      <SortAttribute attribute="ent12#att39" order="ascending"/>
+      <Selector id="mov2#hym1#page49#seu130#su176" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym1#page49#seu130#su176#acond196" name="nazione" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role8.ent11#att15"/>
+      </Selector>
+      <Link id="mov2#hym1#page49#seu130#ln259" name="Flow259" to="mov2#hym1#page49#enu10" type="transport" validate="true" gr:bendpoints="-71,-61,29,59">
+        <LinkParameter id="mov2#hym1#page49#seu130#ln259#par1799" name="name_luogo di residenza * [label]" source="ent12#att39Array" target="mov2#hym1#page49#enu10#sfld29_label"/>
+        <LinkParameter id="mov2#hym1#page49#seu130#ln259#par1800" name="oid_luogo di residenza * [output]" source="ent12#att16Array" target="mov2#hym1#page49#enu10#sfld29_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="mov2#hym1#page49#seu131" name="Seleziona citt&#224; ospedale" gr:x="635" gr:y="265" entity="ent12">
+      <SortAttribute attribute="ent12#att39" order="ascending"/>
+      <Selector id="mov2#hym1#page49#seu131#su177" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym1#page49#seu131#su177#acond197" name="nazione" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role8.ent11#att15"/>
+      </Selector>
+      <Link id="mov2#hym1#page49#seu131#ln260" name="Flow260" to="mov2#hym1#page49#enu10" type="transport" validate="true" gr:bendpoints="-171,-45,154,70">
+        <LinkParameter id="mov2#hym1#page49#seu131#ln260#par1801" name="name_citt&#224; ospedale * [label]" source="ent12#att39Array" target="mov2#hym1#page49#enu10#sfld57_label"/>
+        <LinkParameter id="mov2#hym1#page49#seu131#ln260#par1802" name="oid_citt&#224; ospedale * [output]" source="ent12#att16Array" target="mov2#hym1#page49#enu10#sfld57_output"/>
+      </Link>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -153,16 +191,24 @@ Registra un nuovo utente compilando la form qua sotto!</Message>
         <layout:Unit unitId="mov2#hym1#page49#enu10">
           <layout:Link link="mov2#hym1#page49#enu10#ln149"/>
           <layout:Link link="mov2#hym1#page49#enu10#ln59"/>
+          <layout:Link link="mov2#hym1#page49#enu10#ln253"/>
+          <layout:Link link="mov2#hym1#page49#enu10#ln254"/>
+          <layout:Link link="mov2#hym1#page49#enu10#ln255"/>
+          <layout:Link link="mov2#hym1#page49#enu10#ln256"/>
           <layout:Field field="mov2#hym1#page49#enu10#fld124"/>
           <layout:Field field="mov2#hym1#page49#enu10#fld121"/>
           <layout:Field field="mov2#hym1#page49#enu10#fld120"/>
           <layout:Field field="mov2#hym1#page49#enu10#sfld39"/>
           <layout:Field field="mov2#hym1#page49#enu10#fld118"/>
+          <layout:Field field="mov2#hym1#page49#enu10#sfld48"/>
           <layout:Field field="mov2#hym1#page49#enu10#sfld38"/>
+          <layout:Field field="mov2#hym1#page49#enu10#sfld49"/>
           <layout:Field field="mov2#hym1#page49#enu10#sfld29"/>
           <layout:Field field="mov2#hym1#page49#enu10#fld116"/>
           <layout:Field field="mov2#hym1#page49#enu10#fld119"/>
           <layout:Field field="mov2#hym1#page49#enu10#fld117"/>
+          <layout:Field field="mov2#hym1#page49#enu10#sfld51"/>
+          <layout:Field field="mov2#hym1#page49#enu10#sfld57"/>
           <layout:Field field="mov2#hym1#page49#enu10#sfld40"/>
           <layout:Field field="mov2#hym1#page49#enu10#sfld41"/>
           <layout:Field field="mov2#hym1#page49#enu10#sfld42"/>

@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page34" name="Registrazione paziente" gr:x="1220" gr:y="930">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page34" name="Registrazione paziente" gr:x="1030" gr:y="1005">
   <ContentUnits>
-    <EntryUnit gr:x="10" gr:y="10" id="mov2#hym1#page34#enu14" name="compila la form" linkOrder="mov2#hym1#page34#enu14#ln50" fieldOrder="mov2#hym1#page34#enu14#fld72 mov2#hym1#page34#enu14#fld75 mov2#hym1#page34#enu14#fld77 mov2#hym1#page34#enu14#sfld21 mov2#hym1#page34#enu14#fld70 mov2#hym1#page34#enu14#sfld20 mov2#hym1#page34#enu14#sfld22 mov2#hym1#page34#enu14#fld69 mov2#hym1#page34#enu14#fld73 mov2#hym1#page34#enu14#fld79 mov2#hym1#page34#enu14#fld74 mov2#hym1#page34#enu14#fld80 mov2#hym1#page34#enu14#fld84">
+    <EntryUnit gr:x="255" gr:y="10" id="mov2#hym1#page34#enu14" name="compila la form" linkOrder="mov2#hym1#page34#enu14#ln50 mov2#hym1#page34#enu14#ln210 mov2#hym1#page34#enu14#ln211" fieldOrder="mov2#hym1#page34#enu14#fld72 mov2#hym1#page34#enu14#fld75 mov2#hym1#page34#enu14#fld77 mov2#hym1#page34#enu14#sfld21 mov2#hym1#page34#enu14#fld70 mov2#hym1#page34#enu14#sfld18 mov2#hym1#page34#enu14#sfld20 mov2#hym1#page34#enu14#sfld28 mov2#hym1#page34#enu14#sfld22 mov2#hym1#page34#enu14#fld69 mov2#hym1#page34#enu14#fld73 mov2#hym1#page34#enu14#fld79 mov2#hym1#page34#enu14#fld74 mov2#hym1#page34#enu14#fld80 mov2#hym1#page34#enu14#fld84">
       <Link id="mov2#hym1#page34#enu14#ln50" name="Registrati" to="mov2#hym1#miu11" type="normal" validate="true">
         <LinkParameter id="mov2#hym1#page34#enu14#ln50#par122" name="0_exists?" sourceValue="0" target="mov2#hym1#miu11.mov2#mpkg2#opm3#icu3#icp59"/>
         <LinkParameter id="mov2#hym1#page34#enu14#ln50#par127" name="0_approved" sourceValue="0" target="mov2#hym1#miu11.mov2#mpkg2#opm3#icu3#icp36"/>
@@ -95,20 +95,47 @@
           <PasswordStrengthValidationRule id="mov2#hym1#page34#enu14#fld84#psvr3" name="Password Strength3" securityLevel="custom"/>
         </VRules>
       </Field>
-    </EntryUnit>
-    <SelectorUnit gr:x="245" gr:y="0" id="mov2#hym1#page34#seu20" name="SelectorCity" entity="ent12">
-      <Link id="mov2#hym1#page34#seu20#ln117" name="Flow117" to="mov2#hym1#page34#enu14" type="transport" validate="true">
-        <LinkParameter id="mov2#hym1#page34#seu20#ln117#par463" name="name_born in [label]" source="ent12#att39Array" target="mov2#hym1#page34#enu14#sfld20_label"/>
-        <LinkParameter id="mov2#hym1#page34#seu20#ln117#par464" name="oid_born in [output]" source="ent12#att16Array" target="mov2#hym1#page34#enu14#sfld20_output"/>
-        <LinkParameter id="mov2#hym1#page34#seu20#ln117#par465" name="name_live in [label]" source="ent12#att39Array" target="mov2#hym1#page34#enu14#sfld22_label"/>
-        <LinkParameter id="mov2#hym1#page34#seu20#ln117#par466" name="oid_live in [output]" source="ent12#att16Array" target="mov2#hym1#page34#enu14#sfld22_output"/>
+      <SelectionField id="mov2#hym1#page34#enu14#sfld28" name="paese di residenza *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page34#enu14#ln211"/>
+      <SelectionField id="mov2#hym1#page34#enu14#sfld18" name="paese di nascita *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page34#enu14#ln210"/>
+      <Link id="mov2#hym1#page34#enu14#ln210" name="SelezionaCitt&#224;Nascita" to="mov2#hym1#page34#seu111" type="normal" validate="true">
+        <LinkParameter id="mov2#hym1#page34#enu14#ln210#par1705" name="paese di nascita *_nazione" source="mov2#hym1#page34#enu14#sfld18" target="mov2#hym1#page34#seu111#su151#acond158"/>
       </Link>
+      <Link id="mov2#hym1#page34#enu14#ln211" name="SelezionaCitt&#224;Residenza" to="mov2#hym1#page34#seu20" type="normal" validate="true">
+        <LinkParameter id="mov2#hym1#page34#enu14#ln211#par1707" name="paese di residenza *_nazione" source="mov2#hym1#page34#enu14#sfld28" target="mov2#hym1#page34#seu20#su156#acond159"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="520" gr:y="100" id="mov2#hym1#page34#seu20" name="Seleziona citt&#224; residenza" entity="ent12">
       <SortAttribute attribute="ent12#att39" order="ascending"/>
+      <Link id="mov2#hym1#page34#seu20#ln216" name="Flow216" to="mov2#hym1#page34#enu14" type="transport" validate="true" gr:bendpoints="-125,-50,90,65">
+        <LinkParameter id="mov2#hym1#page34#seu20#ln216#par1722" name="name_luogo di residenza * [label]" source="ent12#att39Array" target="mov2#hym1#page34#enu14#sfld22_label"/>
+        <LinkParameter id="mov2#hym1#page34#seu20#ln216#par1737" name="oid_luogo di residenza * [output]" source="ent12#att16Array" target="mov2#hym1#page34#enu14#sfld22_output"/>
+      </Link>
+      <Selector id="mov2#hym1#page34#seu20#su156" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym1#page34#seu20#su156#acond159" name="nazione" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role8.ent11#att15"/>
+      </Selector>
     </SelectorUnit>
-    <MultiMessageUnit id="mov2#hym1#page34#mssu55" name="Nessuna corrispondenza trovata!" gr:x="0" gr:y="85">
+    <MultiMessageUnit id="mov2#hym1#page34#mssu55" name="Nessuna corrispondenza trovata!" gr:x="230" gr:y="130">
       <Message xml:space="preserve">Non &#232; stato trovato nessun utente registrato in precedenza con le credenziali inserite.
 Registra un nuovo utente compilando la form qua sotto!</Message>
     </MultiMessageUnit>
+    <SelectorUnit id="mov2#hym1#page34#seu107" name="Seleziona Nazione" gr:x="0" gr:y="0" entity="ent11">
+      <Link id="mov2#hym1#page34#seu107#ln209" name="Flow209" to="mov2#hym1#page34#enu14" type="transport" validate="true">
+        <LinkParameter id="mov2#hym1#page34#seu107#ln209#par1599" name="name_paese di nascita * [label]" source="ent11#att18Array" target="mov2#hym1#page34#enu14#sfld18_label"/>
+        <LinkParameter id="mov2#hym1#page34#seu107#ln209#par1702" name="oid_paese di nascita * [output]" source="ent11#att15Array" target="mov2#hym1#page34#enu14#sfld18_output"/>
+        <LinkParameter id="mov2#hym1#page34#seu107#ln209#par1738" name="name_paese di residenza * [label]" source="ent11#att18Array" target="mov2#hym1#page34#enu14#sfld28_label"/>
+        <LinkParameter id="mov2#hym1#page34#seu107#ln209#par1739" name="oid_paese di residenza * [output]" source="ent11#att15Array" target="mov2#hym1#page34#enu14#sfld28_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="mov2#hym1#page34#seu111" name="Seleziona citt&#224; nascita" gr:x="20" gr:y="115" entity="ent12">
+      <SortAttribute attribute="ent12#att39" order="ascending"/>
+      <Link id="mov2#hym1#page34#seu111#ln215" name="Flow215" to="mov2#hym1#page34#enu14" type="transport" validate="true" gr:bendpoints="124,-48,-101,67">
+        <LinkParameter id="mov2#hym1#page34#seu111#ln215#par1720" name="name_luogo di nascita * [label]" source="ent12#att39Array" target="mov2#hym1#page34#enu14#sfld20_label"/>
+        <LinkParameter id="mov2#hym1#page34#seu111#ln215#par1721" name="oid_luogo di nascita * [output]" source="ent12#att16Array" target="mov2#hym1#page34#enu14#sfld20_output"/>
+      </Link>
+      <Selector id="mov2#hym1#page34#seu111#su151" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym1#page34#seu111#su151#acond158" name="nazione" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role8.ent11#att15"/>
+      </Selector>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -130,13 +157,14 @@ Registra un nuovo utente compilando la form qua sotto!</Message>
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov2#hym1#page34#enu14">
-          <layout:Link link="mov2#hym1#page34#enu14#ln50"/>
           <layout:Field field="mov2#hym1#page34#enu14#fld72"/>
           <layout:Field field="mov2#hym1#page34#enu14#fld75"/>
           <layout:Field field="mov2#hym1#page34#enu14#fld77"/>
           <layout:Field field="mov2#hym1#page34#enu14#sfld21"/>
           <layout:Field field="mov2#hym1#page34#enu14#fld70"/>
+          <layout:Field field="mov2#hym1#page34#enu14#sfld18"/>
           <layout:Field field="mov2#hym1#page34#enu14#sfld20"/>
+          <layout:Field field="mov2#hym1#page34#enu14#sfld28"/>
           <layout:Field field="mov2#hym1#page34#enu14#sfld22"/>
           <layout:Field field="mov2#hym1#page34#enu14#fld69"/>
           <layout:Field field="mov2#hym1#page34#enu14#fld73"/>
@@ -144,6 +172,9 @@ Registra un nuovo utente compilando la form qua sotto!</Message>
           <layout:Field field="mov2#hym1#page34#enu14#fld74"/>
           <layout:Field field="mov2#hym1#page34#enu14#fld80"/>
           <layout:Field field="mov2#hym1#page34#enu14#fld84"/>
+          <layout:Link link="mov2#hym1#page34#enu14#ln50"/>
+          <layout:Link link="mov2#hym1#page34#enu14#ln210"/>
+          <layout:Link link="mov2#hym1#page34#enu14#ln211"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
