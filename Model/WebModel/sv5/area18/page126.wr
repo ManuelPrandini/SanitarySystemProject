@@ -1,0 +1,44 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area18#page126" name="Registra stanza visite" gr:x="815" gr:y="515">
+  <ContentUnits>
+    <EntryUnit id="sv5#area18#page126#enu43" name="Modifica struttura stanza visite" gr:x="0" gr:y="0" fieldOrder="sv5#area18#page126#enu43#fld176 sv5#area18#page126#enu43#fld175 sv5#area18#page126#enu43#sfld59" linkOrder="sv5#area18#page126#enu43#ln247">
+      <Field id="sv5#area18#page126#enu43#fld175" name="Piano stanza" type="integer" modifiable="true"/>
+      <Field id="sv5#area18#page126#enu43#fld176" name="Nome stanza" type="string" modifiable="true"/>
+      <SelectionField id="sv5#area18#page126#enu43#sfld59" name="specializzazione" type="string"/>
+      <Link id="sv5#area18#page126#enu43#ln247" name="Registra" to="sv5#area18#cru36" type="normal" validate="true">
+        <LinkParameter id="sv5#area18#page126#enu43#ln247#par1980" name="Piano stanza_floor" source="sv5#area18#page126#enu43#fld175" target="sv5#area18#cru36.ent10#att26"/>
+        <LinkParameter id="sv5#area18#page126#enu43#ln247#par1981" name="Ospedale_PASSING_Hospital.id_hospital(RoomToHospital)" sourceLinkParameter="sv5#area18#switch13#oln330#par1973" target="sv5#area18#cru36.rel37#role74.ent4#att1"/>
+        <LinkParameter id="sv5#area18#page126#enu43#ln247#par1982" name="specializzazione_Medical_specialization.nameSpecialization(Visit_RoomToMedical_specialization)" source="sv5#area18#page126#enu43#sfld59" target="sv5#area18#cru36.rel1#role18.ent8#att21"/>
+        <LinkParameter id="sv5#area18#page126#enu43#ln247#par1983" name="Nome stanza_name" source="sv5#area18#page126#enu43#fld176" target="sv5#area18#cru36.ent10#att50"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit id="sv5#area18#page126#seu112" name="Selezione specializzazioni" gr:x="70" gr:y="95" entity="ent8">
+      <Link id="sv5#area18#page126#seu112#ln262" name="Flow238" to="sv5#area18#page126#enu43" type="transport" validate="true">
+        <LinkParameter id="sv5#area18#page126#seu112#ln262#par1993" name="nameSpecialization_specializzazione [label]" source="ent8#att21Array" target="sv5#area18#page126#enu43#sfld59_label"/>
+        <LinkParameter id="sv5#area18#page126#seu112#ln262#par1994" name="nameSpecialization_specializzazione [output]" source="ent8#att21Array" target="sv5#area18#page126#enu43#sfld59_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area18#page126#enu43">
+          <layout:Field field="sv5#area18#page126#enu43#fld176"/>
+          <layout:Field field="sv5#area18#page126#enu43#fld175"/>
+          <layout:Field field="sv5#area18#page126#enu43#sfld59"/>
+          <layout:Link link="sv5#area18#page126#enu43#ln247"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,68 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1775" gr:y="35" id="mov2#hym4#page119" name="Accertamento" layout:pageLayout="MetroStyle/Empty">
+  <ContentUnits>
+    <EntryUnit gr:x="20" gr:y="0" id="mov2#hym4#page119#enu38" name="Registra accertamento" fieldOrder="mov2#hym4#page119#enu38#sfld37 mov2#hym4#page119#enu38#fld106 mov2#hym4#page119#enu38#fld163 mov2#hym4#page119#enu38#fld164" linkOrder="mov2#hym4#page119#enu38#ln116">
+      <Field id="mov2#hym4#page119#enu38#fld164" name="descrizione" type="text" modifiable="true"/>
+      <Field id="mov2#hym4#page119#enu38#fld163" name="orario" type="time" modifiable="true"/>
+      <Field id="mov2#hym4#page119#enu38#fld106" name="data" type="date" preloaded="true"/>
+      <SelectionField id="mov2#hym4#page119#enu38#sfld37" name="Tipologia accertamento" type="string" modifiable="true"/>
+      <Link id="mov2#hym4#page119#enu38#ln116" name="Registra" to="mov2#hym4#cru31" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page119#enu38#ln116#par606" name="data_data" source="mov2#hym4#page119#enu38#fld106" target="mov2#hym4#cru31.ent27#att68"/>
+        <LinkParameter id="mov2#hym4#page119#enu38#ln116#par611" name="descrizione_descrizione" source="mov2#hym4#page119#enu38#fld164" target="mov2#hym4#cru31.ent27#att73"/>
+        <LinkParameter id="mov2#hym4#page119#enu38#ln116#par612" name="Tipologia accertamento_Descrizione_Accertamento.Tipologia(AccertamentoToDescrizione_Accertamento)" source="mov2#hym4#page119#enu38#sfld37" target="mov2#hym4#cru31.rel21#role41.ent28#att71"/>
+        <LinkParameter id="mov2#hym4#page119#enu38#ln116#par618" name="orario_orario" source="mov2#hym4#page119#enu38#fld163" target="mov2#hym4#cru31.ent27#att72"/>
+        <LinkParameter id="mov2#hym4#page119#enu38#ln116#par1864" name="id_ricovero_PASSING_Recovery.oid(AccertamentoToRecovery)" sourceLinkParameter="mov2#hym4#scu18#oln321#par1860" target="mov2#hym4#cru31.rel10#role22.ent5#att2"/>
+        <LinkParameter id="mov2#hym4#page119#enu38#ln116#par1865" name="dataFine_Ricovero_PASSING" sourceLinkParameter="mov2#hym4#scu18#oln321#par1856" passing="true"/>
+        <LinkParameter id="mov2#hym4#page119#enu38#ln116#par1866" name="dataInizio_Ricovero_PASSING" sourceLinkParameter="mov2#hym4#scu18#oln321#par1857" passing="true"/>
+        <LinkParameter id="mov2#hym4#page119#enu38#ln116#par1867" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#scu18#oln321#par1858" passing="true"/>
+        <LinkParameter id="mov2#hym4#page119#enu38#ln116#par1868" name="id_Hospital_PASSING" sourceLinkParameter="mov2#hym4#scu18#oln321#par1859" passing="true"/>
+        <LinkParameter id="mov2#hym4#page119#enu38#ln116#par1869" name="id_ricovero_PASSING" sourceLinkParameter="mov2#hym4#scu18#oln321#par1860" passing="true"/>
+        <LinkParameter id="mov2#hym4#page119#enu38#ln116#par1870" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#scu18#oln321#par1861" passing="true"/>
+        <LinkParameter id="mov2#hym4#page119#enu38#ln116#par1871" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#scu18#oln321#par1862" passing="true"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="0" gr:y="90" id="mov2#hym4#page119#seu19" name="Seleziona Tipi di accertamento" entity="ent28">
+      <Link id="mov2#hym4#page119#seu19#ln103" name="Flow103" to="mov2#hym4#page119#enu38" type="transport" validate="true">
+        <LinkParameter id="mov2#hym4#page119#seu19#ln103#par462" name="Tipologia_Tipologia accertamento [label]" source="ent28#att71Array" target="mov2#hym4#page119#enu38#sfld37_label"/>
+        <LinkParameter id="mov2#hym4#page119#seu19#ln103#par463" name="Tipologia_Tipologia accertamento [output]" source="ent28#att71Array" target="mov2#hym4#page119#enu38#sfld37_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym4#page119#enu38">
+          <layout:Field field="mov2#hym4#page119#enu38#sfld37"/>
+          <layout:Field field="mov2#hym4#page119#enu38#fld106"/>
+          <layout:Field field="mov2#hym4#page119#enu38#fld163"/>
+          <layout:Field field="mov2#hym4#page119#enu38#fld164"/>
+          <layout:Link link="mov2#hym4#page119#enu38#ln116"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

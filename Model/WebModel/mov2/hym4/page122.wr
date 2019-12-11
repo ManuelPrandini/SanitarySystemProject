@@ -1,0 +1,47 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1440" gr:y="190" id="mov2#hym4#page122" name="Vuoi aggiungere accertamenti?" layout:pageLayout="MetroStyle/Default">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page122#mssu75" name="Scelta accertamenti" linkOrder="mov2#hym4#page122#mssu75#ln165 mov2#hym4#page122#mssu75#ln171">
+      <Message xml:space="preserve">Vuoi prescrivere degli accertamenti durante il ricovero?</Message>
+      <Link id="mov2#hym4#page122#mssu75#ln165" name="Si" to="mov2#hym4#area24#page118#ecu1" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1840" name="dataFine_Ricovero_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1825" passing="true"/>
+        <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1841" name="dataInizio_Ricovero_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1826" passing="true"/>
+        <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1842" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1827" passing="true"/>
+        <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1843" name="id_Hospital_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1828" passing="true"/>
+        <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1844" name="id_ricovero_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1829" passing="true"/>
+        <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1845" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1830" passing="true"/>
+        <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1846" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1831" passing="true"/>
+        <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1838" name="dataInizio_Ricovero_PASSING_Current Date" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1826" target="mov2#hym4#area24#page118#ecu1.inputDate"/>
+        <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1839" name="id_ricovero_PASSING_id_ricovero" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1829" target="mov2#hym4#area24#page118#ecu1#su60#acond36"/>
+      </Link>
+      <Link id="mov2#hym4#page122#mssu75#ln171" name="No" to="mov2#hym4#page71#mssu1" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page122#mssu75#ln171#par1832" name="dataFine_Ricovero_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1825" passing="true"/>
+        <LinkParameter id="mov2#hym4#page122#mssu75#ln171#par1833" name="dataInizio_Ricovero_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1826" passing="true"/>
+        <LinkParameter id="mov2#hym4#page122#mssu75#ln171#par1834" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1827" passing="true"/>
+        <LinkParameter id="mov2#hym4#page122#mssu75#ln171#par1835" name="id_Hospital_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1828" passing="true"/>
+        <LinkParameter id="mov2#hym4#page122#mssu75#ln171#par1836" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1830" passing="true"/>
+        <LinkParameter id="mov2#hym4#page122#mssu75#ln171#par1837" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1831" passing="true"/>
+      </Link>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym4#page122#mssu75">
+          <layout:Link link="mov2#hym4#page122#mssu75#ln165"/>
+          <layout:Link link="mov2#hym4#page122#mssu75#ln171"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

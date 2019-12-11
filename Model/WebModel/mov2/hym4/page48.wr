@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1160" gr:y="-30" id="mov2#hym4#page48" name="SceltaRicovero">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1100" gr:y="-240" id="mov2#hym4#page48" name="SceltaRicovero">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page48#mssu17" name="Vuoi programmare un ricovero" linkOrder="mov2#hym4#page48#mssu17#ln129 mov2#hym4#page48#mssu17#ln179">
       <Message xml:space="preserve">Vuoi programmare un ricovero?</Message>

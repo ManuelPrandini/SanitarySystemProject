@@ -206,7 +206,7 @@
       <db:JoinColumn attribute="ent4#att1" name="id_hospital"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="1345" gr:y="890" id="ent20" name="Recovery_Room" duration="persistent" db:database="db1" db:table="recovery_room">
+  <Entity gr:x="1335" gr:y="880" id="ent20" name="Recovery_Room" duration="persistent" db:database="db1" db:table="recovery_room">
     <Generalization superEntity="ent10">
       <db:JoinColumn attribute="ent10#att5" name="room_id_room"/>
     </Generalization>
@@ -232,17 +232,17 @@
       <db:JoinColumn attribute="ent10#att5" name="recovery_room_id_room"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="590" gr:y="760" id="ent29" name="Visit" duration="persistent" db:database="db1" db:table="visit">
+  <Entity gr:x="540" gr:y="725" id="ent29" name="Visit" duration="persistent" db:database="db1" db:table="visit">
     <Generalization superEntity="ent5">
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="715" gr:y="760" id="ent30" name="Clinical_Surgery" duration="persistent" db:database="db1" db:table="clinical_surgery">
+  <Entity gr:x="715" gr:y="730" id="ent30" name="Clinical_Surgery" duration="persistent" db:database="db1" db:table="clinical_surgery">
     <Generalization superEntity="ent5">
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="920" gr:y="750" id="ent31" name="Recovery" duration="persistent" db:database="db1" db:table="recovery">
+  <Entity gr:x="945" gr:y="730" id="ent31" name="Recovery" duration="persistent" db:database="db1" db:table="recovery">
     <Generalization superEntity="ent5">
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </Generalization>
@@ -354,12 +354,12 @@
       <db:JoinColumn attribute="ent10#att5" name="room_id_room"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="335" gr:y="660" id="ent17" name="Emergency_operation" duration="persistent" db:database="db1" db:table="emergency_operation">
+  <Entity gr:x="335" gr:y="645" id="ent17" name="Emergency_operation" duration="persistent" db:database="db1" db:table="emergency_operation">
     <Generalization superEntity="ent5">
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="350" gr:y="745" id="ent18" name="Emergency_code" duration="persistent" attributeOrder="ent18#att38" db:database="db1" db:table="emergency_code">
+  <Entity gr:x="350" gr:y="725" id="ent18" name="Emergency_code" duration="persistent" attributeOrder="ent18#att38" db:database="db1" db:table="emergency_code">
     <Attribute id="ent18#att38" name="code" key="true" type="string" db:column="code"/>
   </Entity>
   <Relationship id="rel34" name="Emergency_operation_Emergency_code" sourceEntity="ent17" targetEntity="ent18" db:database="db1" db:table="emergency_operation">
@@ -448,7 +448,7 @@
     <Attribute id="ent14#att65" name="question" type="text" db:column="question"/>
     <Attribute id="ent14#att66" name="answer" type="text" db:column="answer"/>
   </Entity>
-  <Entity gr:x="670" gr:y="1180" id="ent26" name="AutoIncrementOID" duration="persistent" db:database="db1" db:table="autoincrementoid">
+  <Entity gr:x="685" gr:y="1180" id="ent26" name="AutoIncrementOID" duration="persistent" db:database="db1" db:table="autoincrementoid">
     <Attribute id="ent26#att67" key="true" name="oid" type="integer" db:column="oid"/>
   </Entity>
   <Entity id="ent32" name="Codaprontosoccorso" duration="persistent" gr:x="1085" gr:y="500" db:database="db1" db:table="codaprontosoccorso">
@@ -462,13 +462,39 @@
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="hospital" type="MySQL" url="jdbc:mysql://localhost:3306/hospital" username="root" password="cm9vdA==" cryptedPassword="true"/>
+  <db:Database id="db1" name="hospital" type="MySQL" url="jdbc:mysql://localhost:3306/hospital" username="root" password="cm9vdA==" cryptedPassword="true">
+  </db:Database>
   <Relationship id="rel41" name="Hospital_Codaprontosoccorso" sourceEntity="ent4" targetEntity="ent32" db:database="db1" db:table="codaprontosoccorso">
     <RelationshipRole1 id="rel41#role81" name="HospitalToCodaprontosoccorso" maxCard="1">
       <db:JoinColumn attribute="ent4#att1" name="hospital_id_hospital"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel41#role82" name="CodaprontosoccorsoToHospital" maxCard="1">
       <db:JoinColumn attribute="ent32#att69" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="920" gr:y="820" id="ent27" name="Accertamento" duration="persistent" attributeOrder="ent27#att35 ent27#att68 ent27#att72 ent27#att73" db:database="db1" db:table="accertamento">
+    <Attribute id="ent27#att35" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent27#att68" name="data" type="date" db:column="data"/>
+    <Attribute id="ent27#att72" name="orario" type="time" db:column="orario"/>
+    <Attribute id="ent27#att73" name="descrizione" type="text" db:column="descrizione"/>
+  </Entity>
+  <Entity gr:x="1115" gr:y="850" id="ent28" name="Descrizione_Accertamento" duration="persistent" db:database="db1" db:table="descrizione_accertamento">
+    <Attribute id="ent28#att71" key="true" name="Tipologia" type="string" db:column="tipologia"/>
+  </Entity>
+  <Relationship id="rel10" name="Recovery_Accertamento" sourceEntity="ent31" targetEntity="ent27" db:database="db1" db:table="accertamento">
+    <RelationshipRole1 id="rel10#role21" name="RecoveryToAccertamento" maxCard="N">
+      <db:JoinColumn attribute="ent5#att2" name="recovery_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel10#role22" name="AccertamentoToRecovery" maxCard="1">
+      <db:JoinColumn attribute="ent27#att35" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel21" name="Accertamento_Descrizione_Accertamento" sourceEntity="ent27" targetEntity="ent28" db:database="db1" db:table="accertamento">
+    <RelationshipRole1 id="rel21#role41" name="AccertamentoToDescrizione_Accertamento" maxCard="1">
+      <db:JoinColumn attribute="ent27#att35" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel21#role42" name="Descrizione_AccertamentoToAccertamento" maxCard="N">
+      <db:JoinColumn attribute="ent28#att71" name="descrizione_accertamento_tipol"/>
     </RelationshipRole2>
   </Relationship>
 </DataModel>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym4#area20#page73" name="Programma Intervento" landmark="false" localized="false" gr:x="112" gr:y="43">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym4#area20#page73" name="Programma Intervento" landmark="false" localized="false" gr:x="0" gr:y="0">
   <ContentUnits>
     <EventCalendarUnit id="mov2#hym4#area20#page73#ecu4" name="Calendario sale operatorie" linkOrder="mov2#hym4#area20#page73#ecu4#ln110" computationMode="execute" gr:x="85" gr:y="0" entityBased="true" entity="ent30" displayAttributes="ent5#att2 rel3#role3.ent9#att33 ent5#att24 ent5#att25" dateAttribute="ent5#att22">
       <Link id="mov2#hym4#area20#page73#ecu4#ln110" name="Programma Intervento" to="mov2#hym4#scu12" type="normal" validate="true" gr:bendpoints="230,130,-180,-120">

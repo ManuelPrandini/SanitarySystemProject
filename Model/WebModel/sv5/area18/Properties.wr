@@ -31,10 +31,6 @@
         <LinkParameter id="sv5#area18#seu97#oln299#par1448" name="id_hospital_Ospedale [output]" source="ent4#att1Array" target="sv5#area18#page108#enu34#sfld25_output"/>
       </OKLink>
     </SelectorUnit>
-    <CreateUnit gr:x="380" gr:y="625" id="sv5#area18#cru28" name="Aggiungi stanza" entity="ent10">
-      <OKLink id="sv5#area18#cru28#oln300" name="OKFlow300" to="sv5#area18#page109" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Modifiche effettuate con successo" ajaxWindowWidth="750" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true"/>
-      <KOLink id="sv5#area18#cru28#kln92" name="KOFlow92" to="sv5#area18#page110" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Errore" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowWidth="600" ajaxWindowHeight="300"/>
-    </CreateUnit>
     <SelectorUnit id="sv5#area18#seu101" name="Seleziona citt&#224;" gr:x="5" gr:y="925" entity="ent12">
       <Selector id="sv5#area18#seu101#su147" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv5#area18#seu101#su147#acond133" name="nazione" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role8.ent11#att15"/>
@@ -71,5 +67,72 @@
     <CreateUnit gr:x="765" gr:y="915" id="sv5#area18#cru32" name="Crea pronto soccorso" entity="ent32">
       <OKLink id="sv5#area18#cru32#oln320" name="OKFlow320" to="sv5#area18#page116" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Pronto soccorso registrato con successo" ajaxWindowWidth="600" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true"/>
     </CreateUnit>
+    <ScriptUnit id="sv5#area18#scu23" name="Seleziona Tipologia" gr:x="435" gr:y="510">
+      <ScriptUnitText xml:space="preserve">#input String tipologia
+#output int outputCode
+
+if (tipologia.equals("SalaRicoveri"))
+	return ["resultCode":"success", "outputCode":1]
+else if (tipologia.equals("SalaInterventi"))
+	return ["resultCode":"success", "outputCode":2]
+else if (tipologia.equals("SalaProntoSoccorso"))
+	return ["resultCode":"success", "outputCode":3]
+else if (tipologia.equals("SalaVisite"))
+	return ["resultCode":"success", "outputCode":4]
+else 
+	return ["resultCode":"error"]
+	</ScriptUnitText>
+      <OKLink id="sv5#area18#scu23#oln326" name="OKFlow326" to="sv5#area18#switch13">
+        <LinkParameter id="sv5#area18#scu23#oln326#par1964" name="outputCode_Switch" source="result(outputCode)" target="sv5#area18#switch13.switch"/>
+        <LinkParameter id="sv5#area18#scu23#oln326#par1969" name="Ospedale_PASSING" sourceLinkParameter="sv5#area18#page108#enu34#ln202#par1968" passing="true"/>
+      </OKLink>
+      <KOLink id="sv5#area18#scu23#kln104" name="KOFlow104" to="sv5#area18#page127" automaticCoupling="true"/>
+    </ScriptUnit>
+    <SwitchUnit gr:x="605" gr:y="430" id="sv5#area18#switch13" name="Seleziona Form Corretta">
+      <Case value="1"/>
+      <Case value="2"/>
+      <Case value="3"/>
+      <Case value="4"/>
+      <OKLink id="sv5#area18#switch13#oln327" name="OKFlow327" to="sv5#area18#page123#enu40" code="1">
+        <LinkParameter id="sv5#area18#switch13#oln327#par1970" name="Ospedale_PASSING" sourceLinkParameter="sv5#area18#scu23#oln326#par1969" passing="true"/>
+      </OKLink>
+      <OKLink id="sv5#area18#switch13#oln328" name="OKFlow328" to="sv5#area18#page124#enu41" code="2">
+        <LinkParameter id="sv5#area18#switch13#oln328#par1971" name="Ospedale_PASSING" sourceLinkParameter="sv5#area18#scu23#oln326#par1969" passing="true"/>
+      </OKLink>
+      <OKLink id="sv5#area18#switch13#oln329" name="OKFlow329" to="sv5#area18#page125#enu42" code="3">
+        <LinkParameter id="sv5#area18#switch13#oln329#par1972" name="Ospedale_PASSING" sourceLinkParameter="sv5#area18#scu23#oln326#par1969" passing="true"/>
+      </OKLink>
+      <OKLink id="sv5#area18#switch13#oln330" name="OKFlow330" to="sv5#area18#page126#enu43" code="4">
+        <LinkParameter id="sv5#area18#switch13#oln330#par1973" name="Ospedale_PASSING" sourceLinkParameter="sv5#area18#scu23#oln326#par1969" passing="true"/>
+      </OKLink>
+    </SwitchUnit>
+    <CreateUnit gr:x="1030" gr:y="160" id="sv5#area18#cru33" name="Crea stanza ricoveri" entity="ent20">
+      <KOLink id="sv5#area18#cru33#kln103" name="KOFlow103" to="sv5#area18#page110" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Errore" ajaxWindowWidth="600" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+      <OKLink id="sv5#area18#cru33#oln337" name="OKFlow337" to="sv5#area18#lpu3">
+        <LinkParameter id="sv5#area18#cru33#oln337#par1988" name="Numero letti_PASSING_Iteration Count" sourceLinkParameter="sv5#area18#page123#enu40#ln241#par1987" target="sv5#area18#lpu3.iterationCount"/>
+        <LinkParameter id="sv5#area18#cru33#oln337#par1989" name="id_room_PASSING" source="ent10#att5Array" passing="true"/>
+      </OKLink>
+    </CreateUnit>
+    <CreateUnit gr:x="1100" gr:y="290" id="sv5#area18#cru34" name="Crea stanza interventi" entity="ent24">
+      <OKLink id="sv5#area18#cru34#oln333" name="OKFlow333" to="sv5#area18#page109" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Modifiche effettuate correttamente" ajaxWindowWidth="750" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+      <KOLink id="sv5#area18#cru34#kln102" name="KOFlow102" to="sv5#area18#page110" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Errore" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowWidth="600" ajaxWindowHeight="300"/>
+    </CreateUnit>
+    <CreateUnit gr:x="1150" gr:y="415" id="sv5#area18#cru35" name="Crea stanza pronto soccorso" entity="ent16">
+      <OKLink id="sv5#area18#cru35#oln332" name="OKFlow332" to="sv5#area18#page109" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Modifiche effettuate correttamente" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+      <KOLink id="sv5#area18#cru35#kln101" name="KOFlow101" to="sv5#area18#page110" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Errore" ajaxWindowWidth="600" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="1095" gr:y="540" id="sv5#area18#cru36" name="Crea stanza visite" entity="ent23">
+      <OKLink id="sv5#area18#cru36#oln331" name="OKFlow300" to="sv5#area18#page109" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Modifiche effettuate con successo" ajaxWindowWidth="750" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+      <KOLink id="sv5#area18#cru36#kln99" name="KOFlow92" to="sv5#area18#page110" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Errore" ajaxWindowWidth="600" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="1180" gr:y="15" id="sv5#area18#cru37" name="AggiungiLetti" entity="ent25">
+      <OKLink id="sv5#area18#cru37#oln339" name="OKFlow339" to="sv5#area18#lpu3" automaticCoupling="true" gr:bendpoints="66,57,-84,-33"/>
+    </CreateUnit>
+    <LoopUnit gr:x="1325" gr:y="115" id="sv5#area18#lpu3" name="InserimentoLetti">
+      <OKLink id="sv5#area18#lpu3#oln336" name="OKFlow334" to="sv5#area18#page109" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Modifiche effettuate correttamente" ajaxWindowWidth="750" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowMaximizable="false" ajaxWindowModal="true" code="end"/>
+      <OKLink id="sv5#area18#lpu3#oln338" name="OKFlow338" to="sv5#area18#cru37" code="next">
+        <LinkParameter id="sv5#area18#lpu3#oln338#par1990" name="id_room_PASSING_Recovery_Room.id_room(Bed_placeToRecovery_Room)" sourceLinkParameter="sv5#area18#cru33#oln337#par1989" target="sv5#area18#cru37.rel8#role11.ent10#att5"/>
+      </OKLink>
+    </LoopUnit>
   </OperationUnits>
 </Area>

@@ -1,8 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="5" gr:y="465" id="sv5#area18#page108" name="Inserisci reparti ospedalieri" landmark="true">
   <ContentUnits>
-    <EntryUnit gr:x="175" gr:y="10" id="sv5#area18#page108#enu34" name="Modifica struttura ospedale" fieldOrder="sv5#area18#page108#enu34#sfld19 sv5#area18#page108#enu34#sfld24 sv5#area18#page108#enu34#sfld25 sv5#area18#page108#enu34#fld155 sv5#area18#page108#enu34#fld157" linkOrder="sv5#area18#page108#enu34#ln199 sv5#area18#page108#enu34#ln201 sv5#area18#page108#enu34#ln202">
-      <Field id="sv5#area18#page108#enu34#fld157" name="nome stanza" type="string" modifiable="true"/>
-      <Field id="sv5#area18#page108#enu34#fld155" name="piano stanza" type="integer" modifiable="true"/>
+    <EntryUnit gr:x="175" gr:y="10" id="sv5#area18#page108#enu34" name="Modifica struttura ospedale" fieldOrder="sv5#area18#page108#enu34#sfld19 sv5#area18#page108#enu34#sfld24 sv5#area18#page108#enu34#sfld25 sv5#area18#page108#enu34#sfld58" linkOrder="sv5#area18#page108#enu34#ln199 sv5#area18#page108#enu34#ln201 sv5#area18#page108#enu34#ln202">
       <SelectionField id="sv5#area18#page108#enu34#sfld25" name="Ospedale" type="string" modifiable="true"/>
       <SelectionField id="sv5#area18#page108#enu34#sfld24" name="Citt&#224;" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="sv5#area18#page108#enu34#ln201"/>
       <SelectionField id="sv5#area18#page108#enu34#sfld19" name="Nazione" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="sv5#area18#page108#enu34#ln199"/>
@@ -12,11 +10,13 @@
       <Link id="sv5#area18#page108#enu34#ln201" name="Seleziona ospedale" to="sv5#area18#seu97" type="normal" validate="true">
         <LinkParameter id="sv5#area18#page108#enu34#ln201#par1445" name="Citt&#224;_citt&#224;" source="sv5#area18#page108#enu34#sfld24" target="sv5#area18#seu97#su144#acond155"/>
       </Link>
-      <Link id="sv5#area18#page108#enu34#ln202" name="Registra modifiche" to="sv5#area18#cru28" type="normal" validate="true">
-        <LinkParameter id="sv5#area18#page108#enu34#ln202#par1449" name="piano stanza_floor" source="sv5#area18#page108#enu34#fld155" target="sv5#area18#cru28.ent10#att26"/>
-        <LinkParameter id="sv5#area18#page108#enu34#ln202#par1450" name="Ospedale_Hospital.id_hospital(RoomToHospital)" source="sv5#area18#page108#enu34#sfld25" target="sv5#area18#cru28.rel37#role74.ent4#att1"/>
-        <LinkParameter id="sv5#area18#page108#enu34#ln202#par1451" name="nome stanza_name" source="sv5#area18#page108#enu34#fld157" target="sv5#area18#cru28.ent10#att50"/>
+      <Link id="sv5#area18#page108#enu34#ln202" name="Continua" to="sv5#area18#scu23" type="normal" validate="true">
+        <LinkParameter id="sv5#area18#page108#enu34#ln202#par1967" name="Tipologia_tipologia" source="sv5#area18#page108#enu34#sfld58" target="sv5#area18#scu23.tipologia"/>
+        <LinkParameter id="sv5#area18#page108#enu34#ln202#par1968" name="Ospedale_PASSING" source="sv5#area18#page108#enu34#sfld25" passing="true"/>
       </Link>
+      <SelectionField id="sv5#area18#page108#enu34#sfld58" name="Tipologia" type="string" modifiable="true" slotOrder="sv5#area18#page108#enu34#sfld58#slot5">
+        <Slot id="sv5#area18#page108#enu34#sfld58#slot5" name="Slot1" label="true" output="true" value="SalaRicoveri|SalaInterventi|SalaProntoSoccorso|SalaVisite"/>
+      </SelectionField>
     </EntryUnit>
     <SelectorUnit id="sv5#area18#page108#seu95" name="Seleziona Nazione" gr:x="0" gr:y="0" entity="ent11">
       <Link id="sv5#area18#page108#seu95#ln198" name="Flow198" to="sv5#area18#page108#enu34" type="transport" validate="true">
@@ -29,14 +29,13 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv5#area18#page108#enu34">
-          <layout:Field field="sv5#area18#page108#enu34#sfld19"/>
-          <layout:Field field="sv5#area18#page108#enu34#sfld24"/>
-          <layout:Field field="sv5#area18#page108#enu34#sfld25"/>
-          <layout:Field field="sv5#area18#page108#enu34#fld155"/>
-          <layout:Field field="sv5#area18#page108#enu34#fld157"/>
           <layout:Link link="sv5#area18#page108#enu34#ln199"/>
           <layout:Link link="sv5#area18#page108#enu34#ln201"/>
           <layout:Link link="sv5#area18#page108#enu34#ln202"/>
+          <layout:Field field="sv5#area18#page108#enu34#sfld19"/>
+          <layout:Field field="sv5#area18#page108#enu34#sfld24"/>
+          <layout:Field field="sv5#area18#page108#enu34#sfld25"/>
+          <layout:Field field="sv5#area18#page108#enu34#sfld58"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

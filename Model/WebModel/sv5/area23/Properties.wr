@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1045" gr:y="1100" id="sv5#area23" name="Gestione delle farmacie" landmark="true" defaultPage="sv5#area23#page98" landmarks="sv5#area23#page98 sv5#area23#page111">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1920" gr:y="1100" id="sv5#area23" name="Gestione delle farmacie" landmark="true" defaultPage="sv5#area23#page98" landmarks="sv5#area23#page98 sv5#area23#page111">
   <OperationUnits>
     <SelectorUnit id="sv5#area23#seu94" name="Seleziona citt&#224;" gr:x="40" gr:y="205" entity="ent12">
       <Selector id="sv5#area23#seu94#su131" defaultPolicy="fill" booleanOperator="and">

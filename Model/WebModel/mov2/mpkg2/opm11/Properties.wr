@@ -18,11 +18,15 @@
         <LinkParameter id="mov2#mpkg2#opm11#icu21#oln155#par645" name="Titolo_title" source="mov2#mpkg2#opm11#icu21#icp107" target="mov2#mpkg2#opm11#cru11.ent5#att3"/>
       </OKLink>
     </InputCollectorUnit>
-    <CreateUnit gr:x="410" gr:y="230" id="mov2#mpkg2#opm11#cru11" name="CreateRecovery" entity="ent31">
-      <OKLink id="mov2#mpkg2#opm11#cru11#oln156" name="OKFlow156" to="mov2#mpkg2#opm11#okcu20" automaticCoupling="true"/>
+    <CreateUnit gr:x="450" gr:y="230" id="mov2#mpkg2#opm11#cru11" name="CreateRecovery" entity="ent31">
+      <OKLink id="mov2#mpkg2#opm11#cru11#oln156" name="OKFlow156" to="mov2#mpkg2#opm11#okcu20">
+        <LinkParameter id="mov2#mpkg2#opm11#cru11#oln156#par457" name="oid_id_ricovero" source="ent5#att2Array" target="mov2#mpkg2#opm11#okcu20#ocp30"/>
+      </OKLink>
       <KOLink id="mov2#mpkg2#opm11#cru11#kln56" name="KOFlow56" to="mov2#mpkg2#opm11#kocu21" automaticCoupling="true"/>
     </CreateUnit>
-    <OKCollectorUnit gr:x="780" gr:y="150" id="mov2#mpkg2#opm11#okcu20" name="Success"/>
+    <OKCollectorUnit gr:x="780" gr:y="150" id="mov2#mpkg2#opm11#okcu20" name="Success">
+      <OutputCollectorParameter id="mov2#mpkg2#opm11#okcu20#ocp30" name="id_ricovero"/>
+    </OKCollectorUnit>
     <KOCollectorUnit gr:x="780" gr:y="330" id="mov2#mpkg2#opm11#kocu21" name="Error"/>
   </OperationUnits>
 </OperationModule>

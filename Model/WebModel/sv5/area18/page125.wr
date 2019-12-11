@@ -1,0 +1,35 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area18#page125" name="Registra stanza pronto soccorso" gr:x="845" gr:y="390">
+  <ContentUnits>
+    <EntryUnit id="sv5#area18#page125#enu42" name="Modifica struttura stanza pronto soccorso" gr:x="0" gr:y="0" fieldOrder="sv5#area18#page125#enu42#fld173 sv5#area18#page125#enu42#fld172" linkOrder="sv5#area18#page125#enu42#ln246">
+      <Field id="sv5#area18#page125#enu42#fld172" name="Piano stanza" type="integer" modifiable="true"/>
+      <Field id="sv5#area18#page125#enu42#fld173" name="Nome stanza" type="string" modifiable="true"/>
+      <Link id="sv5#area18#page125#enu42#ln246" name="Registra" to="sv5#area18#cru35" type="normal" validate="true">
+        <LinkParameter id="sv5#area18#page125#enu42#ln246#par1977" name="Piano stanza_floor" source="sv5#area18#page125#enu42#fld172" target="sv5#area18#cru35.ent10#att26"/>
+        <LinkParameter id="sv5#area18#page125#enu42#ln246#par1978" name="Ospedale_PASSING_Hospital.id_hospital(RoomToHospital)" sourceLinkParameter="sv5#area18#switch13#oln329#par1972" target="sv5#area18#cru35.rel37#role74.ent4#att1"/>
+        <LinkParameter id="sv5#area18#page125#enu42#ln246#par1979" name="Nome stanza_name" source="sv5#area18#page125#enu42#fld173" target="sv5#area18#cru35.ent10#att50"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area18#page125#enu42">
+          <layout:Field field="sv5#area18#page125#enu42#fld173"/>
+          <layout:Field field="sv5#area18#page125#enu42#fld172"/>
+          <layout:Link link="sv5#area18#page125#enu42#ln246"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
