@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="525" gr:y="680" id="sv5#area23#page114" name="Operazione completata con successo">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="680" gr:y="675" id="sv5#area23#page114" name="Operazione completata con successo">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv5#area23#page114#mssu70" name="Operazione completata con successo">
       <Message xml:space="preserve">Il farmaco &#232; stato salvato correttamente nel sistema</Message>

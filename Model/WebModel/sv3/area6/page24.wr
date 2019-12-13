@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="855" gr:y="655" id="sv3#area6#page24" name="Visita disdetta correttamente!">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="875" gr:y="655" id="sv3#area6#page24" name="Visita disdetta correttamente!">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv3#area6#page24#mssu23" name="La visita &#232; stata disdetta in modo corretto" linkOrder="sv3#area6#page24#mssu23#ln67">
       <Link id="sv3#area6#page24#mssu23#ln67" name="Torna al calendario" to="sv3#area6#page33" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-263,-113,387,-138"/>

@@ -3,13 +3,13 @@
     <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page120#mssu73" name="Successo" linkOrder="mov2#hym4#page120#mssu73#ln214">
       <Message xml:space="preserve">L'accertamento &#232; stato registrato con successo!</Message>
       <Link id="mov2#hym4#page120#mssu73#ln214" name="Continua" to="mov2#hym4#pcu5" type="normal" validate="true">
-        <LinkParameter id="mov2#hym4#page120#mssu73#ln214#par1879" name="dataFine_Ricovero_PASSING_dataFine_Ricovero" sourceLinkParameter="mov2#hym4#cru31#oln319#par1872" target="mov2#hym4#pcu5#pcp5"/>
-        <LinkParameter id="mov2#hym4#page120#mssu73#ln214#par1880" name="dataInizio_Ricovero_PASSING_dataInizio_Ricovero" sourceLinkParameter="mov2#hym4#cru31#oln319#par1873" target="mov2#hym4#pcu5#pcp10"/>
-        <LinkParameter id="mov2#hym4#page120#mssu73#ln214#par1881" name="doctorCode_PASSING_doctorCode" sourceLinkParameter="mov2#hym4#cru31#oln319#par1874" target="mov2#hym4#pcu5#pcp15"/>
-        <LinkParameter id="mov2#hym4#page120#mssu73#ln214#par1882" name="id_Hospital_PASSING_id_Hospital" sourceLinkParameter="mov2#hym4#cru31#oln319#par1875" target="mov2#hym4#pcu5#pcp66"/>
-        <LinkParameter id="mov2#hym4#page120#mssu73#ln214#par1883" name="id_ricovero_PASSING_id_ricovero" sourceLinkParameter="mov2#hym4#cru31#oln319#par1876" target="mov2#hym4#pcu5#pcp4"/>
-        <LinkParameter id="mov2#hym4#page120#mssu73#ln214#par1884" name="nameHospital_PASSING_nameHospital" sourceLinkParameter="mov2#hym4#cru31#oln319#par1877" target="mov2#hym4#pcu5#pcp65"/>
-        <LinkParameter id="mov2#hym4#page120#mssu73#ln214#par1885" name="patientCode_PASSING_patientCode" sourceLinkParameter="mov2#hym4#cru31#oln319#par1878" target="mov2#hym4#pcu5#pcp16"/>
+        <LinkParameter id="mov2#hym4#page120#mssu73#ln214#par1864" name="dataFine_Ricovero_PASSING_dataFine_Ricovero" sourceLinkParameter="mov2#hym4#cru31#oln319#par1857" target="mov2#hym4#pcu5#pcp5"/>
+        <LinkParameter id="mov2#hym4#page120#mssu73#ln214#par1865" name="dataInizio_Ricovero_PASSING_dataInizio_Ricovero" sourceLinkParameter="mov2#hym4#cru31#oln319#par1858" target="mov2#hym4#pcu5#pcp10"/>
+        <LinkParameter id="mov2#hym4#page120#mssu73#ln214#par1866" name="doctorCode_PASSING_doctorCode" sourceLinkParameter="mov2#hym4#cru31#oln319#par1859" target="mov2#hym4#pcu5#pcp15"/>
+        <LinkParameter id="mov2#hym4#page120#mssu73#ln214#par1867" name="id_Hospital_PASSING_id_Hospital" sourceLinkParameter="mov2#hym4#cru31#oln319#par1860" target="mov2#hym4#pcu5#pcp66"/>
+        <LinkParameter id="mov2#hym4#page120#mssu73#ln214#par1868" name="id_ricovero_PASSING_id_ricovero" sourceLinkParameter="mov2#hym4#cru31#oln319#par1861" target="mov2#hym4#pcu5#pcp4"/>
+        <LinkParameter id="mov2#hym4#page120#mssu73#ln214#par1869" name="nameHospital_PASSING_nameHospital" sourceLinkParameter="mov2#hym4#cru31#oln319#par1862" target="mov2#hym4#pcu5#pcp65"/>
+        <LinkParameter id="mov2#hym4#page120#mssu73#ln214#par1870" name="patientCode_PASSING_patientCode" sourceLinkParameter="mov2#hym4#cru31#oln319#par1863" target="mov2#hym4#pcu5#pcp16"/>
       </Link>
     </MultiMessageUnit>
   </ContentUnits>

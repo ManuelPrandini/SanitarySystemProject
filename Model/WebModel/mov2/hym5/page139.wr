@@ -1,0 +1,31 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym5#page139" name="Accertamenti" gr:x="1325" gr:y="160" layout:pageLayout="MetroStyle/Empty">
+  <ContentUnits>
+    <IndexUnit id="mov2#hym5#page139#inu12" name="Accertamenti effettuati" gr:x="0" gr:y="0" entity="ent27" displayAttributes="rel21#role41.ent28#att71 ent27#att68 ent27#att73">
+      <Selector id="mov2#hym5#page139#inu12#su184" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#hym5#page139#inu12#su184#kcond68" name="oid" predicate="in" implied="false"/>
+      </Selector>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym5#page139#inu12">
+          <layout:Attribute attribute="rel21#role41.ent28#att71"/>
+          <layout:Attribute attribute="ent27#att68"/>
+          <layout:Attribute attribute="ent27#att73"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

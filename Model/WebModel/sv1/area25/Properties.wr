@@ -1,0 +1,64 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="60" gr:y="1265" id="sv1#area25" name="Registrati in sala operatoria" landmark="true" defaultPage="sv1#area25#seu53">
+  <OperationUnits>
+    <GetUnit id="sv1#area25#gtu21" name="GetCfDottore" gr:x="5" gr:y="5" contextParameters="UserCtxParam">
+      <Link id="sv1#area25#gtu21#ln189" name="Flow189" to="sv1#area25#seu53" type="transport" validate="true">
+        <LinkParameter id="sv1#area25#gtu21#ln189#par858" name="UserCtxParam.cf_cf" source="sv1#area25#gtu21.UserCtxParam" target="sv1#area25#seu53#su171#acond157"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit id="sv1#area25#seu53" name="Selezione Info dottore" gr:x="0" gr:y="130" entity="ent9" distinctAttributes="rel5#role19.rel37#role74.ent4#att1">
+      <Selector id="sv1#area25#seu53#su171" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area25#seu53#su171#acond157" name="cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel36#role72.userOID"/>
+      </Selector>
+      <OKLink id="sv1#area25#seu53#oln335" name="Flow205" to="sv1#area25#seu100">
+        <LinkParameter id="sv1#area25#seu53#oln335#par860" name="DoctorToRoom.RoomToHospital.id_hospital_ospedale" source="rel5#role19$rel37#role74$ent4#att1Array" target="sv1#area25#seu100#su174#acond164"/>
+        <LinkParameter id="sv1#area25#seu53#oln335#par1450" name="doctor_code_PASSING" source="ent9#att33Array" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="sv1#area25#seu100" name="Selezione sale operatorie" gr:x="230" gr:y="135" entity="ent24" distinctAttributes="rel37#role74.ent4#att1 ent10#att5 ent10#att50">
+      <Selector id="sv1#area25#seu100#su174" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area25#seu100#su174#acond164" name="ospedale" predicate="eq" booleanOperator="or" implied="false" attributes="rel37#role74.ent4#att1"/>
+      </Selector>
+      <OKLink id="sv1#area25#seu100#oln340" name="OKFlow340" to="sv1#area25#inn41">
+        <LinkParameter id="sv1#area25#seu100#oln340#par1310" name="id_room_Input" source="ent10#att5Array" target="sv1#area25#inn41.isnotnull"/>
+        <LinkParameter id="sv1#area25#seu100#oln340#par1311" name="id_room_PASSING" source="ent10#att5Array" passing="true"/>
+        <LinkParameter id="sv1#area25#seu100#oln340#par1312" name="name_PASSING" source="ent10#att50Array" passing="true"/>
+        <LinkParameter id="sv1#area25#seu100#oln340#par1451" name="doctor_code_PASSING" sourceLinkParameter="sv1#area25#seu53#oln335#par1450" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="465" gr:y="145" id="sv1#area25#inn41" name="se esistono sale">
+      <OKLink id="sv1#area25#inn41#oln341" name="OKFlow341" to="sv1#area25#page135#enu44">
+        <LinkParameter id="sv1#area25#inn41#oln341#par1313" name="name_PASSING_Sala [label]" sourceLinkParameter="sv1#area25#seu100#oln340#par1312" target="sv1#area25#page135#enu44#sfld60_label"/>
+        <LinkParameter id="sv1#area25#inn41#oln341#par1449" name="id_room_PASSING_Sala [output]" sourceLinkParameter="sv1#area25#seu100#oln340#par1311" target="sv1#area25#page135#enu44#sfld60_output"/>
+        <LinkParameter id="sv1#area25#inn41#oln341#par1454" name="doctor_code_PASSING" sourceLinkParameter="sv1#area25#seu100#oln340#par1451" passing="true"/>
+      </OKLink>
+      <KOLink id="sv1#area25#inn41#kln107" name="KOFlow107" to="sv1#area25#page134" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <ConnectUnit gr:x="890" gr:y="120" id="sv1#area25#cnu4" name="Registra dottore-sala" relationship="rel5#role19">
+      <SourceSelector id="sv1#area25#cnu4#su179" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area25#cnu4#su179#kcond72" name="KeyCondition72" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#area25#cnu4#su180" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area25#cnu4#su180#kcond73" name="KeyCondition73" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv1#area25#cnu4#oln342" name="OKFlow342" to="sv1#area25#page136" automaticCoupling="true"/>
+    </ConnectUnit>
+    <SelectorUnit gr:x="620" gr:y="135" id="sv1#area25#seu101" name="Verifica se gi&#224; sei registrato" entity="ent24">
+      <Selector id="sv1#area25#seu101#su182" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area25#seu101#su182#acond177" name="dottore" predicate="eq" booleanOperator="or" implied="false" attributes="rel5#role20.ent9#att33"/>
+        <AttributesCondition id="sv1#area25#seu101#su182#acond186" name="sala" predicate="eq" booleanOperator="or" implied="false" attributes="ent10#att5"/>
+      </Selector>
+      <OKLink id="sv1#area25#seu101#oln344" name="OKFlow344" to="sv1#area25#inn42">
+        <LinkParameter id="sv1#area25#seu101#oln344#par1524" name="id_room_Input" source="ent10#att5Array" target="sv1#area25#inn42.isnotnull"/>
+        <LinkParameter id="sv1#area25#seu101#oln344#par1583" name="doctor_code_PASSING" sourceLinkParameter="sv1#area25#page135#enu44#ln208#par1474" passing="true"/>
+        <LinkParameter id="sv1#area25#seu101#oln344#par1600" name="Sala_PASSING" sourceLinkParameter="sv1#area25#page135#enu44#ln208#par1475" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="625" gr:y="270" id="sv1#area25#inn42" name="se sei registrato..">
+      <OKLink id="sv1#area25#inn42#oln343" name="OKFlow343" to="sv1#area25#page137" automaticCoupling="true"/>
+      <KOLink id="sv1#area25#inn42#kln108" name="KOFlow108" to="sv1#area25#cnu4">
+        <LinkParameter id="sv1#area25#inn42#kln108#par1622" name="doctor_code_PASSING_KeyCondition72 [doctor_code] [Doctor] [Source]" sourceLinkParameter="sv1#area25#seu101#oln344#par1583" target="sv1#area25#cnu4#su179#kcond72.ent9#att33"/>
+        <LinkParameter id="sv1#area25#inn42#kln108#par1684" name="Sala_PASSING_KeyCondition73 [id_room] [Room] [Target]" sourceLinkParameter="sv1#area25#seu101#oln344#par1600" target="sv1#area25#cnu4#su180#kcond73.ent10#att5"/>
+      </KOLink>
+    </IsNotNullUnit>
+  </OperationUnits>
+</Area>

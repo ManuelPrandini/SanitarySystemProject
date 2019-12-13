@@ -14,6 +14,7 @@
         <LinkParameter id="mov2#hym4#page16#enu17#ln94#par1017" name="idHospital_PASSING" sourceLinkParameter="mov2#hym4#pcu7#oln166#par1013" passing="true"/>
         <LinkParameter id="mov2#hym4#page16#enu17#ln94#par1018" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#pcu7#oln166#par1014" passing="true"/>
         <LinkParameter id="mov2#hym4#page16#enu17#ln94#par1019" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#pcu7#oln166#par1015" passing="true"/>
+        <LinkParameter id="mov2#hym4#page16#enu17#ln94#par1955" name="data_visita_PASSING" sourceLinkParameter="mov2#hym4#pcu7#oln166#par1954" passing="true"/>
       </Link>
     </EntryUnit>
     <SelectorUnit id="mov2#hym4#page16#seu27" name="DrugSelector" gr:x="0" gr:y="105" entity="ent2">

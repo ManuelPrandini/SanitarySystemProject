@@ -1,17 +1,23 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area12#page74" name="Search" landmark="false" gr:x="0" gr:y="0">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area12#page74" name="Selezione farmaco e citt&#224;" landmark="false" gr:x="0" gr:y="0">
   <ContentUnits>
     <EntryUnit id="sv3#area12#page74#enu9" name="Cerca un farmaco " gr:x="0" gr:y="10" fieldOrder="sv3#area12#page74#enu9#fld2 sv3#area12#page74#enu9#sfld1" ajaxEnableExpandedLinks="false" linkOrder="sv3#area12#page74#enu9#ln142">
-      <Field id="sv3#area12#page74#enu9#fld2" name="Drug" type="string" modifiable="true"/>
-      <SelectionField id="sv3#area12#page74#enu9#sfld1" name="City" type="string" modifiable="true"/>
-      <Link id="sv3#area12#page74#enu9#ln142" name="Cerca" to="sv3#area12#seu52" type="normal" validate="true" gr:bendpoints="86,83,-14,-172">
-        <LinkParameter id="sv3#area12#page74#enu9#ln142#par490" name="City_cityPharmacy" source="sv3#area12#page74#enu9#sfld1" target="sv3#area12#seu52#su90#acond107"/>
-        <LinkParameter id="sv3#area12#page74#enu9#ln142#par503" name="Drug_drug" source="sv3#area12#page74#enu9#fld2" target="sv3#area12#seu52#su90#acond108"/>
+      <Field id="sv3#area12#page74#enu9#fld2" name="Nome farmaco" type="string" modifiable="true"/>
+      <SelectionField id="sv3#area12#page74#enu9#sfld1" name="Citt&#224; di ricerca" type="string" modifiable="true"/>
+      <Link id="sv3#area12#page74#enu9#ln142" name="Cerca" to="sv3#area12#page74#pwu3" type="normal" validate="true" gr:bendpoints="111,42,-204,17;139,40,-176,15" ajaxEnabled="true">
+        <LinkParameter id="sv3#area12#page74#enu9#ln142#par1940" name="Citt&#224; di ricerca_cityPharmacy" source="sv3#area12#page74#enu9#sfld1" target="sv3#area12#page74#pwu3#su81#acond183"/>
+        <LinkParameter id="sv3#area12#page74#enu9#ln142#par1941" name="Nome farmaco_drug" source="sv3#area12#page74#enu9#fld2" target="sv3#area12#page74#pwu3#su81#acond182"/>
+        <UnitComputation unitId="sv3#area12#page74#pwu3" mode="execute"/>
       </Link>
     </EntryUnit>
-    <PowerIndexUnit id="sv3#area12#page74#pwu3" name="Farmacie che vendono il farmaco" gr:x="250" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent21" computationMode="execute" ajaxTooltipEnabled="false" displayAttributes="ent21#att49 rel23#role45.ent2#att8 rel23#role45.ent2#att7 rel17#role34.ent19#att43 rel17#role34.ent19#att44 rel17#role34.ent19#att46">
+    <PowerIndexUnit id="sv3#area12#page74#pwu3" name="Farmacie che vendono il farmaco" gr:x="250" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent21" computationMode="execute" ajaxTooltipEnabled="false" displayAttributes="ent21#att49 rel23#role45.ent2#att8 rel23#role45.ent2#att7 rel17#role34.ent19#att43 rel17#role34.ent19#att44 rel17#role34.ent19#att46" linkOrder="sv3#area12#page74#pwu3#ln238" distinct="true">
       <Selector id="sv3#area12#page74#pwu3#su81" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv3#area12#page74#pwu3#su81#kcond33" name="oid" predicate="in" implied="false"/>
+        <AttributesCondition id="sv3#area12#page74#pwu3#su81#acond182" name="drug" predicate="beginsWith" booleanOperator="and" implied="true" attributes="rel23#role45.ent2#att8"/>
+        <AttributesCondition id="sv3#area12#page74#pwu3#su81#acond183" name="cityPharmacy" predicate="eq" booleanOperator="and" implied="true" attributes="rel17#role34.rel13#role25.ent12#att16"/>
+        <AttributesCondition id="sv3#area12#page74#pwu3#su81#acond185" name="quantity&gt;0" predicate="gt" booleanOperator="or" implied="false" attributes="ent21#att49" value="0"/>
       </Selector>
+      <Link id="sv3#area12#page74#pwu3#ln238" name="Descrizioni farmaco" to="sv3#area12#seu87" type="normal" validate="true">
+        <LinkParameter id="sv3#area12#page74#pwu3#ln238#par1943" name="Quantity_DrugToDrug.id_id_drug" source="data[].rel23#role45_ent2#att6" target="sv3#area12#seu87#su160#acond187"/>
+      </Link>
     </PowerIndexUnit>
     <SelectorUnit gr:x="10" gr:y="125" id="sv3#area12#page74#seu39" name="SelectCity" entity="ent12">
       <Link id="sv3#area12#page74#seu39#ln134" name="Flow134" to="sv3#area12#page74#enu9" type="transport" validate="true">
@@ -50,6 +56,7 @@
           <layout:Attribute attribute="rel17#role34.ent19#att43"/>
           <layout:Attribute attribute="rel17#role34.ent19#att44"/>
           <layout:Attribute attribute="rel17#role34.ent19#att46"/>
+          <layout:Link link="sv3#area12#page74#pwu3#ln238"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

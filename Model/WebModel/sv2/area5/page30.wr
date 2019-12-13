@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1390" gr:y="290" id="sv2#area5#page30" name="Men&#249; cliente">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1800" gr:y="245" id="sv2#area5#page30" name="Men&#249; cliente">
   <ContentUnits>
-    <EntryUnit gr:x="195" gr:y="0" id="sv2#area5#page30#enu22" name="Ricerca farmaco senza prescrizione" linkOrder="sv2#area5#page30#enu22#ln184 sv2#area5#page30#enu22#ln132">
+    <EntryUnit gr:x="170" gr:y="0" id="sv2#area5#page30#enu22" name="Ricerca farmaco senza prescrizione" linkOrder="sv2#area5#page30#enu22#ln184 sv2#area5#page30#enu22#ln132">
       <Field id="sv2#area5#page30#enu22#fld29" name="farmaco" type="string" modifiable="true"/>
       <Link id="sv2#area5#page30#enu22#ln184" name="Cerca farmaco" to="sv2#area5#page30#pwu12" type="normal" validate="true">
         <LinkParameter id="sv2#area5#page30#enu22#ln184#par715" name="farmaco_name_drug" source="sv2#area5#page30#enu22#fld29" target="sv2#area5#page30#pwu12#su100#acond135"/>
@@ -15,7 +15,7 @@
         <LinkParameter id="sv2#area5#page30#enu22#ln132#par1557" name="pharmacy_oid_PASSING_pharmacy_oid" sourceLinkParameter="sv2#area5#page30#pwu14#ln126#par1532" target="sv2#area5#pcu8#pcp27"/>
       </Link>
     </EntryUnit>
-    <PowerIndexUnit gr:x="280" gr:y="80" id="sv2#area5#page30#pwu12" name="Lista dei farmaci senza prescrizione" sortable="true" checkable="false" useCountQuery="false" entity="ent21" displayAttributes="rel23#role45.ent2#att8 rel23#role45.ent2#att6 " linkOrder="sv2#area5#page30#pwu12#ln186">
+    <PowerIndexUnit gr:x="280" gr:y="125" id="sv2#area5#page30#pwu12" name="Lista dei farmaci senza prescrizione" sortable="true" checkable="false" useCountQuery="false" entity="ent21" displayAttributes="rel23#role45.ent2#att8 rel23#role45.ent2#att6 " linkOrder="sv2#area5#page30#pwu12#ln186" distinct="true">
       <Selector id="sv2#area5#page30#pwu12#su100" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv2#area5#page30#pwu12#su100#acond129" name="standard" predicate="eq" booleanOperator="and" implied="false" attributes="rel23#role45.ent2#att7" value="true"/>
         <AttributesCondition id="sv2#area5#page30#pwu12#su100#acond130" name="pharmacy" predicate="eq" booleanOperator="or" implied="false" attributes="rel17#role34.ent19#att42"/>
@@ -32,7 +32,7 @@
         <LinkParameter id="sv2#area5#page30#pwu12#ln186#par1539" name="pharmacy_oid_PASSING" sourceLinkParameter="sv2#area5#page30#enu22#ln184#par1536" passing="true"/>
       </Link>
     </PowerIndexUnit>
-    <PowerIndexUnit id="sv2#area5#page30#pwu14" name="Prescrizioni attive" gr:x="0" gr:y="100" sortable="true" checkable="false" useCountQuery="false" entity="ent3" linkOrder="sv2#area5#page30#pwu14#ln146" displayAttributes="ent3#att53 ent3#att61 ent3#att63 ent3#att56 ent3#att54 ent3#att57">
+    <PowerIndexUnit id="sv2#area5#page30#pwu14" name="Prescrizioni attive" gr:x="0" gr:y="145" sortable="true" checkable="false" useCountQuery="false" entity="ent3" linkOrder="sv2#area5#page30#pwu14#ln146" displayAttributes="ent3#att53 ent3#att61 ent3#att63 ent3#att56 ent3#att54 ent3#att57">
       <Selector id="sv2#area5#page30#pwu14#su96" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area5#page30#pwu14#su96#kcond40" name="KeyCondition40" predicate="in" implied="false"/>
       </Selector>

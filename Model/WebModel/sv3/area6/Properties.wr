@@ -1,10 +1,10 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-120" gr:y="505" id="sv3#area6" name="Visite e Ricoveri" landmark="true" landmarks="sv3#area6#page20 sv3#area6#page33 sv3#area6#page93" defaultPage="sv3#area6#page20">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-160" gr:y="505" id="sv3#area6" name="Visite e Ricoveri" landmark="true" landmarks="sv3#area6#page20 sv3#area6#page33 sv3#area6#page93" defaultPage="sv3#area6#page20">
   <OperationUnits>
-    <CreateUnit gr:x="1225" gr:y="350" id="sv3#area6#cru9" name="CreatePendingVisit" entity="ent29">
+    <CreateUnit gr:x="1245" gr:y="350" id="sv3#area6#cru9" name="CreatePendingVisit" entity="ent29">
       <KOLink id="sv3#area6#cru9#kln12" name="KOFlow12" to="sv3#area6#page22" automaticCoupling="true"/>
       <OKLink id="sv3#area6#cru9#oln16" name="OKFlow16" to="sv3#area6#page21#mssu11" automaticCoupling="true"/>
     </CreateUnit>
-    <SelectorUnit id="sv3#area6#seu34" name="Selector Hospital" gr:x="490" gr:y="70" entity="ent4">
+    <SelectorUnit id="sv3#area6#seu34" name="Selector Hospital" gr:x="510" gr:y="70" entity="ent4">
       <Selector id="sv3#area6#seu34#su67" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv3#area6#seu34#su67#acond62" name="City" predicate="eq" booleanOperator="and" implied="false" attributes="rel2#role2.ent12#att16"/>
       </Selector>
@@ -13,7 +13,7 @@
         <LinkParameter id="sv3#area6#seu34#oln134#par176" name="id_hospital_Hospital [output]" source="ent4#att1Array" target="sv3#area6#page20#enu15#sfld5_output"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit id="sv3#area6#seu35" name="SelectorTypeVisit" gr:x="125" gr:y="60" entity="ent8" distinct="false">
+    <SelectorUnit id="sv3#area6#seu35" name="SelectorTypeVisit" gr:x="145" gr:y="60" entity="ent8" distinct="false">
       <Selector id="sv3#area6#seu35#su68" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv3#area6#seu35#su68#acond67" name="hospital_ID" predicate="eq" booleanOperator="and" implied="false" attributes="rel1#role17.rel37#role74.ent4#att1"/>
       </Selector>
@@ -22,7 +22,7 @@
         <LinkParameter id="sv3#area6#seu35#oln139#par179" name="nameSpecialization_TypeVisit [output]" source="ent8#att21Array" target="sv3#area6#page20#enu15#sfld6_output"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit gr:x="0" gr:y="260" id="sv3#area6#seu36" name="DoctorForThatSpecialization" entity="ent9" distinctAttributes="rel36#role72.User#att28 rel5#role19.ent10#att5 ent9#att33" distinct="false">
+    <SelectorUnit gr:x="5" gr:y="295" id="sv3#area6#seu36" name="DoctorForThatSpecialization" entity="ent9" distinctAttributes="rel36#role72.User#att28 rel5#role19.ent10#att5 ent9#att33" distinct="false">
       <Selector id="sv3#area6#seu36#su69" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv3#area6#seu36#su69#acond68" name="approvedValue" predicate="eq" booleanOperator="and" implied="false" value="1" attributes="ent9#att17"/>
         <AttributesCondition id="sv3#area6#seu36#su69#acond70" name="cf" predicate="neq" booleanOperator="and" implied="false" attributes="rel36#role72.userOID"/>
@@ -33,7 +33,7 @@
         <LinkParameter id="sv3#area6#seu36#oln140#par150" name="DoctorToRoom.id_room_oid [id_room]" source="rel5#role19$ent10#att5Array" target="sv3#area6#seu90#su88#kcond64.ent10#att5"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit gr:x="680" gr:y="70" id="sv3#area6#seu37" name="SelectVisitForThatDate" entity="ent5" distinctAttributes="ent5#att24">
+    <SelectorUnit gr:x="700" gr:y="70" id="sv3#area6#seu37" name="SelectVisitForThatDate" entity="ent5" distinctAttributes="ent5#att24">
       <Selector id="sv3#area6#seu37#su70" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv3#area6#seu37#su70#acond81" name="Doctor" predicate="eq" booleanOperator="and" implied="false" attributes="rel3#role3.ent9#att33"/>
         <AttributesCondition id="sv3#area6#seu37#su70#acond86" name="Date" predicate="eq" booleanOperator="and" implied="false" attributes="ent5#att22"/>
@@ -43,7 +43,7 @@
       </OKLink>
       <SortAttribute attribute="ent5#att24" order="ascending"/>
     </SelectorUnit>
-    <ScriptUnit gr:x="995" gr:y="120" id="sv3#area6#scu3" name="ScriptTime">
+    <ScriptUnit gr:x="1015" gr:y="120" id="sv3#area6#scu3" name="ScriptTime">
       <ScriptUnitText xml:space="preserve">#input Time[] slotOccupati
 #output Time[] slotLiberi
 
@@ -135,7 +135,7 @@ else {
         <LinkParameter id="sv3#area6#scu3#oln149#par318" name="slotLiberi_Time [output]" source="result(slotLiberi)" target="sv3#area6#page20#enu15#sfld8_output"/>
       </OKLink>
     </ScriptUnit>
-    <IsNotNullUnit gr:x="935" gr:y="0" id="sv3#area6#inn19" name="not Null">
+    <IsNotNullUnit gr:x="955" gr:y="0" id="sv3#area6#inn19" name="not Null">
       <OKLink id="sv3#area6#inn19#oln148" name="OKFlow148" to="sv3#area6#scu3">
         <LinkParameter id="sv3#area6#inn19#oln148#par204" name="Input Value_slotOccupati" source="inputValue" target="sv3#area6#scu3.slotOccupati"/>
       </OKLink>
@@ -143,7 +143,7 @@ else {
         <LinkParameter id="sv3#area6#inn19#kln59#par692" name="Input Value_slotOccupati" source="inputValue" target="sv3#area6#scu3.slotOccupati"/>
       </KOLink>
     </IsNotNullUnit>
-    <ScriptUnit id="sv3#area6#scu4" name="AddEndTime" gr:x="800" gr:y="305">
+    <ScriptUnit id="sv3#area6#scu4" name="AddEndTime" gr:x="820" gr:y="305">
       <ScriptInput id="sv3#area6#scu4#sci2" name="startTIme"/>
       <ScriptUnitText xml:space="preserve">#input Time startTime
 #output Time endTime
@@ -164,18 +164,21 @@ return ["resultCode" : "success" , "endTime" : endTime]</ScriptUnitText>
         <LinkParameter id="sv3#area6#scu4#oln141#par193" name="endTime_endTime" source="result(endTime)" target="sv3#area6#cru9.ent5#att25"/>
         <LinkParameter id="sv3#area6#scu4#oln141#par194" name="Date_PASSING_startDate" sourceLinkParameter="sv3#area6#page20#enu15#ln36#par172" target="sv3#area6#cru9.ent5#att22"/>
         <LinkParameter id="sv3#area6#scu4#oln141#par195" name="Time_PASSING_startTime" sourceLinkParameter="sv3#area6#page20#enu15#ln36#par186" target="sv3#area6#cru9.ent5#att24"/>
-        <LinkParameter id="sv3#area6#scu4#oln141#par278" name="id_room_PASSING_Visit_Room.id_room(VisitToVisit_Room)" sourceLinkParameter="sv3#area6#page20#enu15#ln36#par201" target="sv3#area6#cru9.rel16#role31.ent10#att5"/>
+        <LinkParameter id="sv3#area6#scu4#oln141#par660" name="id_room_PASSING_Visit_Room.id_room(VisitToVisit_Room)" sourceLinkParameter="sv3#area6#page20#enu15#ln36#par659" target="sv3#area6#cru9.rel16#role31.ent10#att5"/>
       </OKLink>
       <KOLink id="sv3#area6#scu4#kln60" name="KOFlow60" to="sv3#area6#page15" automaticCoupling="true" gr:bendpoints="218,-89,-192,141"/>
     </ScriptUnit>
-    <DeleteUnit gr:x="540" gr:y="825" id="sv3#area6#dlu2" name="EliminaVisitaDaSvolgere" entity="ent29">
+    <DeleteUnit gr:x="560" gr:y="825" id="sv3#area6#dlu2" name="EliminaVisitaDaSvolgere" entity="ent29">
       <Selector id="sv3#area6#dlu2#su46" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area6#dlu2#su46#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="sv3#area6#dlu2#oln144" name="OKFlow144" to="sv3#area6#dcnu2"/>
+      <OKLink id="sv3#area6#dlu2#oln144" name="OKFlow144" to="sv3#area6#dcnu2">
+        <LinkParameter id="sv3#area6#dlu2#oln144#par156" name="oid_PASSING_KeyCondition26 [oid] [Visit] [Source]" sourceLinkParameter="sv3#area6#page33#dau1#ln21#par155" target="sv3#area6#dcnu2#su47#kcond26.ent5#att2"/>
+        <LinkParameter id="sv3#area6#dlu2#oln144#par325" name="VisitToVisit_Room.id_room_PASSING_KeyCondition27 [id_room] [Visit_Room] [Target]" sourceLinkParameter="sv3#area6#page33#dau1#ln21#par31" target="sv3#area6#dcnu2#su49#kcond27.ent10#att5"/>
+      </OKLink>
       <KOLink id="sv3#area6#dlu2#kln62" name="KOFlow62" to="sv3#area6#page47" automaticCoupling="true"/>
     </DeleteUnit>
-    <DisconnectUnit gr:x="605" gr:y="640" id="sv3#area6#dcnu2" name="EliminaVisitaStanza" relationship="rel16#role31">
+    <DisconnectUnit gr:x="625" gr:y="640" id="sv3#area6#dcnu2" name="EliminaVisitaStanza" relationship="rel16#role31">
       <SourceSelector id="sv3#area6#dcnu2#su47" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area6#dcnu2#su47#kcond26" name="KeyCondition26" predicate="in" implied="false"/>
       </SourceSelector>
@@ -185,15 +188,34 @@ return ["resultCode" : "success" , "endTime" : endTime]</ScriptUnitText>
       <OKLink id="sv3#area6#dcnu2#oln145" name="OKFlow145" to="sv3#area6#page24" automaticCoupling="true"/>
       <KOLink id="sv3#area6#dcnu2#kln63" name="KOFlow63" to="sv3#area6#page47" automaticCoupling="true"/>
     </DisconnectUnit>
-    <SelectorUnit gr:x="130" gr:y="445" id="sv3#area6#seu90" name="Filtra solo visit room" entity="ent23" distinctAttributes="ent10#att5 rel1#role18.rel4#role6.rel36#role72.User#att28 rel1#role18.rel4#role6.ent9#att33">
+    <SelectorUnit gr:x="150" gr:y="445" id="sv3#area6#seu90" name="Filtra solo visit room" entity="ent23" distinctAttributes="ent10#att5 rel1#role18.rel4#role6.rel36#role72.User#att28 rel1#role18.rel4#role6.ent9#att33">
       <Selector id="sv3#area6#seu90#su88" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area6#seu90#su88#kcond64" name="oid" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="sv3#area6#seu90#oln3" name="OKFlow3" to="sv3#area6#page20#enu15">
-        <LinkParameter id="sv3#area6#seu90#oln3#par185" name="Visit_RoomToMedical_specialization.Medical_specializationToDoctor.DoctorToUser.surname_Doctor [label]" source="rel1#role18$rel4#role6$rel36#role72$User#att28Array" target="sv3#area6#page20#enu15#sfld7_label"/>
-        <LinkParameter id="sv3#area6#seu90#oln3#par191" name="Visit_RoomToMedical_specialization.Medical_specializationToDoctor.doctor_code_Doctor [output]" source="rel1#role18$rel4#role6$ent9#att33Array" target="sv3#area6#page20#enu15#sfld7_output"/>
-        <LinkParameter id="sv3#area6#seu90#oln3#par196" name="id_room_PASSING" source="ent10#att5Array" passing="true"/>
+      <OKLink id="sv3#area6#seu90#oln303" name="OKFlow303" to="sv3#area6#inn39">
+        <LinkParameter id="sv3#area6#seu90#oln303#par644" name="id_room_PASSING" source="ent10#att5Array" passing="true"/>
+        <LinkParameter id="sv3#area6#seu90#oln303#par649" name="Visit_RoomToMedical_specialization.Medical_specializationToDoctor.doctor_code_PASSING" source="rel1#role18$rel4#role6$ent9#att33Array" passing="true"/>
+        <LinkParameter id="sv3#area6#seu90#oln303#par650" name="Visit_RoomToMedical_specialization.Medical_specializationToDoctor.DoctorToUser.surname_PASSING" source="rel1#role18$rel4#role6$rel36#role72$User#att28Array" passing="true"/>
+        <LinkParameter id="sv3#area6#seu90#oln303#par658" name="id_room_Input" source="ent10#att5Array" target="sv3#area6#inn39.isnotnull"/>
       </OKLink>
     </SelectorUnit>
+    <SelectorUnit id="sv3#area6#seu127" name="SelectorCity" gr:x="190" gr:y="185" entity="ent12">
+      <SortAttribute attribute="ent12#att39" order="ascending"/>
+      <Selector id="sv3#area6#seu127#su201" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area6#seu127#su201#acond219" name="stato" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role8.ent11#att15"/>
+      </Selector>
+      <OKLink id="sv3#area6#seu127#oln357" name="OKFlow357" to="sv3#area6#page20#enu15" gr:bendpoints="103,-1,-152,-32">
+        <LinkParameter id="sv3#area6#seu127#oln357#par1950" name="name_Citt&#224; [label]" source="ent12#att39Array" target="sv3#area6#page20#enu15#sfld4_label"/>
+        <LinkParameter id="sv3#area6#seu127#oln357#par1951" name="oid_Citt&#224; [output]" source="ent12#att16Array" target="sv3#area6#page20#enu15#sfld4_output"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="320" gr:y="590" id="sv3#area6#inn39" name="se ci sono dottori..">
+      <OKLink id="sv3#area6#inn39#oln301" name="OKFlow3" to="sv3#area6#page20#enu15" gr:bendpoints="-55,-100,-155,214;-56,-198,-156,116">
+        <LinkParameter id="sv3#area6#inn39#oln301#par603" name="Visit_RoomToMedical_specialization.Medical_specializationToDoctor.DoctorToUser.surname_Doctor [label]" target="sv3#area6#page20#enu15#sfld7_label" sourceLinkParameter="sv3#area6#seu90#oln303#par650"/>
+        <LinkParameter id="sv3#area6#inn39#oln301#par642" name="Visit_RoomToMedical_specialization.Medical_specializationToDoctor.doctor_code_Doctor [output]" target="sv3#area6#page20#enu15#sfld7_output" sourceLinkParameter="sv3#area6#seu90#oln303#par649"/>
+        <LinkParameter id="sv3#area6#inn39#oln301#par656" name="id_room_PASSING" sourceLinkParameter="sv3#area6#seu90#oln303#par644" passing="true"/>
+      </OKLink>
+      <KOLink id="sv3#area6#inn39#kln96" name="KOFlow90" to="sv3#area6#page88#mssu49" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Attenzione!" ajaxWindowWidth="300" ajaxWindowHeight="200" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+    </IsNotNullUnit>
   </OperationUnits>
 </Area>

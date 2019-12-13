@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="5" gr:y="465" id="sv5#area18#page108" name="Inserisci reparti ospedalieri" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="30" gr:y="475" id="sv5#area18#page108" name="Inserisci reparti ospedalieri" landmark="true">
   <ContentUnits>
-    <EntryUnit gr:x="175" gr:y="10" id="sv5#area18#page108#enu34" name="Modifica struttura ospedale" fieldOrder="sv5#area18#page108#enu34#sfld19 sv5#area18#page108#enu34#sfld24 sv5#area18#page108#enu34#sfld25 sv5#area18#page108#enu34#sfld58" linkOrder="sv5#area18#page108#enu34#ln199 sv5#area18#page108#enu34#ln201 sv5#area18#page108#enu34#ln202">
+    <EntryUnit gr:x="175" gr:y="80" id="sv5#area18#page108#enu34" name="Modifica struttura ospedale" fieldOrder="sv5#area18#page108#enu34#sfld19 sv5#area18#page108#enu34#sfld24 sv5#area18#page108#enu34#sfld25 sv5#area18#page108#enu34#sfld58" linkOrder="sv5#area18#page108#enu34#ln199 sv5#area18#page108#enu34#ln201 sv5#area18#page108#enu34#ln202">
       <SelectionField id="sv5#area18#page108#enu34#sfld25" name="Ospedale" type="string" modifiable="true"/>
       <SelectionField id="sv5#area18#page108#enu34#sfld24" name="Citt&#224;" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="sv5#area18#page108#enu34#ln201"/>
       <SelectionField id="sv5#area18#page108#enu34#sfld19" name="Nazione" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="sv5#area18#page108#enu34#ln199"/>
@@ -18,14 +18,33 @@
         <Slot id="sv5#area18#page108#enu34#sfld58#slot5" name="Slot1" label="true" output="true" value="SalaRicoveri|SalaInterventi|SalaProntoSoccorso|SalaVisite"/>
       </SelectionField>
     </EntryUnit>
-    <SelectorUnit id="sv5#area18#page108#seu95" name="Seleziona Nazione" gr:x="0" gr:y="0" entity="ent11">
+    <SelectorUnit id="sv5#area18#page108#seu95" name="Seleziona Nazione" gr:x="0" gr:y="70" entity="ent11">
       <Link id="sv5#area18#page108#seu95#ln198" name="Flow198" to="sv5#area18#page108#enu34" type="transport" validate="true">
         <LinkParameter id="sv5#area18#page108#seu95#ln198#par1434" name="name_Nazione [label]" source="ent11#att18Array" target="sv5#area18#page108#enu34#sfld19_label"/>
         <LinkParameter id="sv5#area18#page108#seu95#ln198#par1435" name="oid_Nazione [output]" source="ent11#att15Array" target="sv5#area18#page108#enu34#sfld19_output"/>
       </Link>
     </SelectorUnit>
+    <MultiMessageUnit gr:x="20" gr:y="0" id="sv5#area18#page108#mssu76" name="Messaggio">
+      <Message xml:space="preserve">Per favore, inserisci l'ospedale a cui vuoi modificare la struttura, inserendo la sua nazione, la citt&#224;, il nome e infine, la tipologia di stanza che vuoi creare</Message>
+    </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area18#page108#mssu76"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv5#area18#page108#enu34">
@@ -38,6 +57,20 @@
           <layout:Field field="sv5#area18#page108#enu34#sfld58"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

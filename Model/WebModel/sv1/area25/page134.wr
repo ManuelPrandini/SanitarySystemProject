@@ -1,0 +1,25 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="275" gr:y="5" id="sv1#area25#page134" name="Attenzione!">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#area25#page134#mssu81" name="Errore">
+      <Message xml:space="preserve">Attenzione! L'ospedale dove lavori attualmente non ha sale operatorie!</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area25#page134#mssu81"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

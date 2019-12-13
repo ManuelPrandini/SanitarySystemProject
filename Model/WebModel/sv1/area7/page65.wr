@@ -14,8 +14,8 @@
         <LinkParameter id="sv1#area7#page65#pwu1#ln78#par646" name="VisitToVisit_Room.RoomToHospital.id_hospital_id_hospital" source="data[].rel16#role31$rel37#role74$ent4#att1" target="sv1#area7#miu19.mov2#hym4#icu11#icp35"/>
         <LinkParameter id="sv1#area7#page65#pwu1#ln78#par753" name="VisitToDoctor.doctor_code_doctorCode" source="data[].rel3#role3$ent9#att33" target="sv1#area7#miu19.mov2#hym4#icu11#icp109"/>
         <LinkParameter id="sv1#area7#page65#pwu1#ln78#par754" name="VisitToPatient.patient_code_patientCode" source="data[].rel11#role16$ent6#att11" target="sv1#area7#miu19.mov2#hym4#icu11#icp110"/>
-        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par664" name="UserCtxParam.cf_PASSING_doctor_cf" sourceLinkParameter="sv1#area7#inn18#oln158#par663" target="sv1#area7#miu19.mov2#hym4#icu11#icp88"/>
-        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par665" name="PatientToUser.cf_PASSING_patient_cf" sourceLinkParameter="sv1#area7#inn18#oln158#par662" target="sv1#area7#miu19.mov2#hym4#icu11#icp89"/>
+        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par1813" name="cf_paziente_PASSING_patient_cf" sourceLinkParameter="sv1#area7#inn18#oln158#par1812" target="sv1#area7#miu19.mov2#hym4#icu11#icp89"/>
+        <LinkParameter id="sv1#area7#page65#pwu1#ln78#par1814" name="cf_dottore_PASSING_doctor_cf" sourceLinkParameter="sv1#area7#inn18#oln158#par1811" target="sv1#area7#miu19.mov2#hym4#icu11#icp88"/>
       </Link>
     </PowerIndexUnit>
   </ContentUnits>

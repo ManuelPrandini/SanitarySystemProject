@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page54" name="Home" gr:x="25" gr:y="80">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page54" name="Home" gr:x="15" gr:y="80">
   <ContentUnits>
-    <GetUnit id="sv1#page54#gtu11" name="Get17" gr:x="370" gr:y="10" contextParameters="UserCtxParam">
+    <GetUnit id="sv1#page54#gtu11" name="GetCfDottore" gr:x="370" gr:y="10" contextParameters="UserCtxParam">
       <Link id="sv1#page54#gtu11#ln81" name="Flow166" to="sv1#page54#seu62" type="transport" automaticCoupling="true" validate="true"/>
     </GetUnit>
     <SelectorUnit id="sv1#page54#seu62" name="SelectorUserNameSurname" gr:x="135" gr:y="0" entity="User">

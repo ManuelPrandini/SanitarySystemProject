@@ -1,0 +1,25 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym5#page95" name="Attenzione!" layout:pageLayout="MetroStyle/Empty" gr:x="1045" gr:y="70">
+  <ContentUnits>
+    <MultiMessageUnit id="mov2#hym5#page95#mssu56" name="precrizioni non presenti" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Non ci sono accertamenti per questo ricovero!</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym5#page95#mssu56"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area5#page77" name="Dettagli Farmaco" layout:pageLayout="MetroStyle/Empty" gr:x="1775" gr:y="720">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area5#page77" name="Dettagli Farmaco" layout:pageLayout="MetroStyle/Empty" gr:x="2185" gr:y="720">
   <ContentUnits>
     <EntryUnit id="sv2#area5#page77#enu25" name="Quantit&#224;" gr:x="0" gr:y="0" fieldOrder="sv2#area5#page77#enu25#fld95 sv2#area5#page77#enu25#fld30 sv2#area5#page77#enu25#fld94" linkOrder="sv2#area5#page77#enu25#ln2">
       <Field id="sv2#area5#page77#enu25#fld30" name="Quantit&#224; presente" type="integer" preloaded="true"/>

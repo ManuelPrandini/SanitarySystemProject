@@ -8,12 +8,14 @@
         <LinkParameter id="mov2#hym4#page13#mssu12#ln77#par1007" name="hospital_PASSING_nameHospital" sourceLinkParameter="mov2#hym4#mfu5#oln100#par786" target="mov2#hym4#pcu7#pcp20"/>
         <LinkParameter id="mov2#hym4#page13#mssu12#ln77#par1008" name="patientCode_PASSING_patientCode" sourceLinkParameter="mov2#hym4#mfu5#oln100#par785" target="mov2#hym4#pcu7#pcp21"/>
         <LinkParameter id="mov2#hym4#page13#mssu12#ln77#par1010" name="id_visit_PASSING_idVisit" sourceLinkParameter="mov2#hym4#mfu5#oln100#par749" target="mov2#hym4#pcu7#pcp24"/>
+        <LinkParameter id="mov2#hym4#page13#mssu12#ln77#par1953" name="date_PASSING_data_visita" sourceLinkParameter="mov2#hym4#mfu5#oln100#par1952" target="mov2#hym4#pcu7#pcp71"/>
       </Link>
       <Link id="mov2#hym4#page13#mssu12#ln52" name="No" to="mov2#hym4#pcu4" type="normal" validate="true">
         <LinkParameter id="mov2#hym4#page13#mssu12#ln52#par966" name="hospital_PASSING_nameHospital" sourceLinkParameter="mov2#hym4#mfu5#oln100#par786" target="mov2#hym4#pcu4#pcp11"/>
         <LinkParameter id="mov2#hym4#page13#mssu12#ln52#par970" name="doctorCode_PASSING_doctorCode" sourceLinkParameter="mov2#hym4#mfu5#oln100#par784" target="mov2#hym4#pcu4#pcp13"/>
         <LinkParameter id="mov2#hym4#page13#mssu12#ln52#par971" name="id_hospital_PASSING_idHospital" sourceLinkParameter="mov2#hym4#mfu5#oln100#par787" target="mov2#hym4#pcu4#pcp14"/>
         <LinkParameter id="mov2#hym4#page13#mssu12#ln52#par972" name="patientCode_PASSING_patientCode" sourceLinkParameter="mov2#hym4#mfu5#oln100#par785" target="mov2#hym4#pcu4#pcp12"/>
+        <LinkParameter id="mov2#hym4#page13#mssu12#ln52#par1961" name="date_PASSING_data_visita" sourceLinkParameter="mov2#hym4#mfu5#oln100#par1952" target="mov2#hym4#pcu4#pcp72"/>
       </Link>
     </MultiMessageUnit>
   </ContentUnits>

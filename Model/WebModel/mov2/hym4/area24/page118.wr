@@ -1,47 +1,82 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="mov2#hym4#area24#page118" name="Programma accertamento">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="mov2#hym4#area24#page118" name="Programma accertamento" linkVisibilityPolicy="always">
   <ContentUnits>
-    <EventCalendarUnit gr:x="0" gr:y="0" id="mov2#hym4#area24#page118#ecu1" name="Calendario del ricovero" entityBased="true" entity="ent27" linkOrder="mov2#hym4#area24#page118#ecu1#ln143" displayAttributes="ent27#att72 ent27#att73 rel21#role41.ent28#att71" dateAttribute="ent27#att68">
-      <Selector id="mov2#hym4#area24#page118#ecu1#su60" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="mov2#hym4#area24#page118#ecu1#su60#acond36" name="id_ricovero" predicate="eq" booleanOperator="and" implied="false" attributes="rel10#role22.ent5#att2"/>
+    <IndexUnit gr:x="160" gr:y="0" id="mov2#hym4#area24#page118#inu7" name="Accertamenti gi&#224; prescritti" entity="ent27" displayAttributes="rel21#role41.ent28#att71 ent27#att68 ent27#att72">
+      <Selector id="mov2#hym4#area24#page118#inu7#su143" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#hym4#area24#page118#inu7#su143#acond74" name="ricovero" predicate="eq" booleanOperator="or" implied="false" attributes="rel10#role22.ent5#att2"/>
       </Selector>
-      <Link id="mov2#hym4#area24#page118#ecu1#ln143" name="Prescrivi accertamento" to="mov2#hym4#scu18" type="normal" validate="true">
-        <LinkParameter id="mov2#hym4#area24#page118#ecu1#ln143#par1808" name="Selected Date_data_selezionata" source="date[].date" target="mov2#hym4#scu18.data_selezionata"/>
-        <LinkParameter id="mov2#hym4#area24#page118#ecu1#ln143#par1816" name="Selected Date_PASSING" source="date[].date" passing="true"/>
-        <LinkParameter id="mov2#hym4#area24#page118#ecu1#ln143#par1847" name="dataFine_Ricovero_PASSING_data_fine" sourceLinkParameter="mov2#hym4#page122#mssu75#ln165#par1840" target="mov2#hym4#scu18.data_fine"/>
-        <LinkParameter id="mov2#hym4#area24#page118#ecu1#ln143#par1848" name="dataInizio_Ricovero_PASSING_data_inizio" sourceLinkParameter="mov2#hym4#page122#mssu75#ln165#par1841" target="mov2#hym4#scu18.data_inizio"/>
-        <LinkParameter id="mov2#hym4#area24#page118#ecu1#ln143#par1849" name="dataFine_Ricovero_PASSING" sourceLinkParameter="mov2#hym4#page122#mssu75#ln165#par1840" passing="true"/>
-        <LinkParameter id="mov2#hym4#area24#page118#ecu1#ln143#par1850" name="dataInizio_Ricovero_PASSING" sourceLinkParameter="mov2#hym4#page122#mssu75#ln165#par1841" passing="true"/>
-        <LinkParameter id="mov2#hym4#area24#page118#ecu1#ln143#par1851" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#page122#mssu75#ln165#par1842" passing="true"/>
-        <LinkParameter id="mov2#hym4#area24#page118#ecu1#ln143#par1852" name="id_Hospital_PASSING" sourceLinkParameter="mov2#hym4#page122#mssu75#ln165#par1843" passing="true"/>
-        <LinkParameter id="mov2#hym4#area24#page118#ecu1#ln143#par1853" name="id_ricovero_PASSING" sourceLinkParameter="mov2#hym4#page122#mssu75#ln165#par1844" passing="true"/>
-        <LinkParameter id="mov2#hym4#area24#page118#ecu1#ln143#par1854" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#page122#mssu75#ln165#par1845" passing="true"/>
-        <LinkParameter id="mov2#hym4#area24#page118#ecu1#ln143#par1855" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#page122#mssu75#ln165#par1846" passing="true"/>
+      <SortAttribute attribute="ent27#att68" order="ascending"/>
+    </IndexUnit>
+    <MultiMessageUnit gr:x="0" gr:y="5" id="mov2#hym4#area24#page118#mssu63" name="SceltaOperazioni" linkOrder="mov2#hym4#area24#page118#mssu63#ln213">
+      <Message xml:space="preserve">E' stato programmato il ricovero dal $$data_inizio_ric$$ al $$data_fine_ric$$. </Message>
+      <Link id="mov2#hym4#area24#page118#mssu63#ln197" name="Flow192" to="mov2#hym4#area24#page118#inu7" type="transport" validate="true">
+        <LinkParameter id="mov2#hym4#area24#page118#mssu63#ln197#par1871" name="id_ricovero_PASSING_ricovero" sourceLinkParameter="mov2#hym4#page122#mssu75#ln165#par1844" target="mov2#hym4#area24#page118#inu7#su143#acond74"/>
       </Link>
-    </EventCalendarUnit>
+      <Link id="mov2#hym4#area24#page118#mssu63#ln213" name="Prescrivi accertamento" to="mov2#hym4#page119#enu38" type="normal" gr:bendpoints="327,-153,-213,-233" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dati Accertamento" ajaxWindowWidth="500" ajaxWindowHeight="400" ajaxWindowClosable="true" ajaxWindowModal="true">
+        <LinkParameter id="mov2#hym4#area24#page118#mssu63#ln213#par1625" name="dataFine_Ricovero_PASSING" sourceLinkParameter="mov2#hym4#page122#mssu75#ln165#par1840" passing="true"/>
+        <LinkParameter id="mov2#hym4#area24#page118#mssu63#ln213#par1683" name="dataInizio_Ricovero_PASSING" sourceLinkParameter="mov2#hym4#page122#mssu75#ln165#par1841" passing="true"/>
+        <LinkParameter id="mov2#hym4#area24#page118#mssu63#ln213#par1765" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#page122#mssu75#ln165#par1842" passing="true"/>
+        <LinkParameter id="mov2#hym4#area24#page118#mssu63#ln213#par1808" name="id_Hospital_PASSING" sourceLinkParameter="mov2#hym4#page122#mssu75#ln165#par1843" passing="true"/>
+        <LinkParameter id="mov2#hym4#area24#page118#mssu63#ln213#par1816" name="id_ricovero_PASSING" sourceLinkParameter="mov2#hym4#page122#mssu75#ln165#par1844" passing="true"/>
+        <LinkParameter id="mov2#hym4#area24#page118#mssu63#ln213#par1838" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#page122#mssu75#ln165#par1845" passing="true"/>
+        <LinkParameter id="mov2#hym4#area24#page118#mssu63#ln213#par1839" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#page122#mssu75#ln165#par1846" passing="true"/>
+      </Link>
+    </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="mov2#hym4#area24#page118#ecu1">
-          <layout:Link link="mov2#hym4#area24#page118#ecu1#ln143"/>
-          <layout:Link link="mov2#hym4#area24#page118#ecu1-month-0"/>
-          <layout:Link link="mov2#hym4#area24#page118#ecu1-month-1"/>
-          <layout:Link link="mov2#hym4#area24#page118#ecu1-month-2"/>
-          <layout:Link link="mov2#hym4#area24#page118#ecu1-month-3"/>
-          <layout:Link link="mov2#hym4#area24#page118#ecu1-month-4"/>
-          <layout:Link link="mov2#hym4#area24#page118#ecu1-month-5"/>
-          <layout:Link link="mov2#hym4#area24#page118#ecu1-month-6"/>
-          <layout:Link link="mov2#hym4#area24#page118#ecu1-month-7"/>
-          <layout:Link link="mov2#hym4#area24#page118#ecu1-month-8"/>
-          <layout:Link link="mov2#hym4#area24#page118#ecu1-month-9"/>
-          <layout:Link link="mov2#hym4#area24#page118#ecu1-month-10"/>
-          <layout:Link link="mov2#hym4#area24#page118#ecu1-month-11"/>
-          <layout:Link link="mov2#hym4#area24#page118#ecu1-year"/>
-          <layout:Attribute attribute="ent27#att72"/>
-          <layout:Attribute attribute="ent27#att73"/>
-          <layout:Attribute attribute="rel21#role41.ent28#att71"/>
+        <layout:Unit unitId="mov2#hym4#area24#page118#mssu63">
+          <layout:Link link="mov2#hym4#area24#page118#mssu63#ln213"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym4#area24#page118#inu7">
+          <layout:Attribute attribute="rel21#role41.ent28#att71"/>
+          <layout:Attribute attribute="ent27#att68"/>
+          <layout:Attribute attribute="ent27#att72"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

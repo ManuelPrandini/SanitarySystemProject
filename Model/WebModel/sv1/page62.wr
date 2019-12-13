@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page62" name="Accedi dati paziente" landmark="true" gr:x="25" gr:y="470">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page62" name="Accedi dati paziente" landmark="true" gr:x="15" gr:y="630">
   <ContentUnits>
     <EntryUnit id="sv1#page62#enu18" name="Inserisci CF" linkOrder="sv1#page62#enu18#ln113" gr:x="0" gr:y="0" fieldOrder="sv1#page62#enu18#fld83">
       <Field id="sv1#page62#enu18#fld83" name="CF" type="string" modifiable="true"/>
@@ -12,10 +12,10 @@
         <AttributesCondition id="sv1#page62#dau12#su61#acond1" name="cf!=sestesso" predicate="neq" booleanOperator="and" implied="false" attributes="rel14#role28.userOID"/>
         <AttributesCondition id="sv1#page62#dau12#su61#acond53" name="Approved" predicate="eq" booleanOperator="and" implied="false" value="1" attributes="ent6#att19"/>
       </Selector>
-      <Link id="sv1#page62#dau12#ln130" name="Procedi" to="sv1#area7#page67#mssu9" type="normal" validate="true">
-        <LinkParameter id="sv1#page62#dau12#ln130#par155" name="PatientToUser.cf_PASSING" source="data.rel14#role28_userOID" passing="true"/>
-        <LinkParameter id="sv1#page62#dau12#ln130#par156" name="UserCtxParam.cf_PASSING" sourceLinkParameter="sv1#page62#gtu2#ln17#par25" passing="true"/>
-        <LinkParameter id="sv1#page62#dau12#ln130#par493" name="DoctorToHospital.name_PASSING" sourceLinkParameter="sv1#page62#seu26#ln90#par492" passing="true"/>
+      <Link id="sv1#page62#dau12#ln130" name="Procedi" to="sv1#area7#pcu17" type="normal" validate="true">
+        <LinkParameter id="sv1#page62#dau12#ln130#par1742" name="UserCtxParam.cf_PASSING_cf_dottore" sourceLinkParameter="sv1#page62#gtu2#ln17#par25" target="sv1#area7#pcu17#pcp68"/>
+        <LinkParameter id="sv1#page62#dau12#ln130#par1743" name="PatientToUser.cf_cf_paziente" source="data.rel14#role28$userOID" target="sv1#area7#pcu17#pcp69"/>
+        <LinkParameter id="sv1#page62#dau12#ln130#par1762" name="DoctorToHospital.name_PASSING_nome_ospedale" sourceLinkParameter="sv1#page62#seu26#ln90#par492" target="sv1#area7#pcu17#pcp70"/>
       </Link>
     </DataUnit>
     <GetUnit gr:x="0" gr:y="125" id="sv1#page62#gtu2" name="CF" contextParameters="UserCtxParam">

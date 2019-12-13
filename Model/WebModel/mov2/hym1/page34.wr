@@ -84,6 +84,7 @@
       <Field id="mov2#hym1#page34#enu14#fld70" name="data di nascita *" type="date" modifiable="true">
         <VRules>
           <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld70#mnd76" name="Mandatory39"/>
+          <CompareValidationRule id="mov2#hym1#page34#enu14#fld70#cmp19" name="noNatoNelFuturo" predicate="gt" value="today()"/>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page34#enu14#fld69" name="indirizzo di residenza" type="string" modifiable="true">

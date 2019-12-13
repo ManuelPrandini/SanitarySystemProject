@@ -1,0 +1,28 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="735" gr:y="400" id="sv2#area3#page96" name="Inserimento avvenuto!" layout:pageLayout="MetroStyle/Empty">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#area3#page96#mssu65" name="Inserimento avvenuto" linkOrder="sv2#area3#page96#mssu65#ln220">
+      <Message xml:space="preserve">la quantit&#224; della medicina &#232; stata aggiunta correttamente!</Message>
+      <Link id="sv2#area3#page96#mssu65#ln220" name="Ok" to="sv2#area3#page60#enu24" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-354,28,350,73"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area3#page96#mssu65">
+          <layout:Link link="sv2#area3#page96#mssu65#ln220"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

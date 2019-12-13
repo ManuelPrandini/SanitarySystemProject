@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="25" gr:y="930" id="sv3#area6#page93" name="Calendario ricoveri" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="1080" id="sv3#area6#page93" name="Calendario ricoveri" landmark="true">
   <ContentUnits>
     <EventCalendarUnit id="sv3#area6#page93#ecu5" name="Calendario" gr:x="0" gr:y="0" entityBased="true" entity="ent31" displayAttributes="ent5#att3" dateAttribute="ent5#att22" linkOrder="sv3#area6#page93#ecu5#ln162">
       <Selector id="sv3#area6#page93#ecu5#su134" defaultPolicy="fill" booleanOperator="and">
@@ -32,6 +32,9 @@
         <LinkParameter id="sv3#area6#page93#dau6#ln163#par1419" name="UserCtxParam.cf_PASSING" sourceLinkParameter="sv3#area6#page93#ecu5#ln162#par1418" passing="true"/>
         <LinkParameter id="sv3#area6#page93#dau6#ln163#par1420" name="UserCtxParam.cf_PASSING_cf" sourceLinkParameter="sv3#area6#page93#ecu5#ln162#par1418" target="sv3#area6#page93#dau7#su136#acond147"/>
       </Link>
+      <Link id="sv3#area6#page93#dau6#ln217" name="Flow217" to="sv3#area6#page93#inu9" type="transport" validate="true">
+        <LinkParameter id="sv3#area6#page93#dau6#ln217#par1470" name="oid_ricovero" source="data.ent5#att2" target="sv3#area6#page93#inu9#su181#acond174"/>
+      </Link>
     </DataUnit>
     <DataUnit gr:x="315" gr:y="140" id="sv3#area6#page93#dau7" name="DettagliIntervento" entity="ent30" displayAttributes="rel3#role3.rel4#role5.ent8#att21 ent5#att3 ent5#att10 rel18#role35.rel37#role74.ent4#att14 ent5#att22 ent5#att24 ent5#att25 rel3#role3.rel36#role72.User#att28">
       <Selector id="sv3#area6#page93#dau7#su136" defaultPolicy="fill" booleanOperator="and">
@@ -40,6 +43,11 @@
         <AttributesCondition id="sv3#area6#page93#dau7#su136#acond149" name="endDate" predicate="lteq" booleanOperator="and" implied="false" attributes="ent5#att23"/>
       </Selector>
     </DataUnit>
+    <IndexUnit gr:x="435" gr:y="10" id="sv3#area6#page93#inu9" name="ListaAccertamenti" entity="ent27" displayAttributes="ent27#att68 ent27#att72 ent27#att73">
+      <Selector id="sv3#area6#page93#inu9#su181" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area6#page93#inu9#su181#acond174" name="ricovero" predicate="eq" booleanOperator="or" implied="false" attributes="rel10#role22.ent5#att2"/>
+      </Selector>
+    </IndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -109,6 +117,26 @@
           <layout:Attribute attribute="ent5#att24"/>
           <layout:Attribute attribute="ent5#att25"/>
           <layout:Attribute attribute="rel3#role3.rel36#role72.User#att28"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area6#page93#inu9">
+          <layout:Attribute attribute="ent27#att68"/>
+          <layout:Attribute attribute="ent27#att72"/>
+          <layout:Attribute attribute="ent27#att73"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

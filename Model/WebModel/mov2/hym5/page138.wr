@@ -1,0 +1,31 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1270" gr:y="-115" id="mov2#hym5#page138" name="Prescrizioni visita" layout:pageLayout="MetroStyle/Empty">
+  <ContentUnits>
+    <IndexUnit id="mov2#hym5#page138#inu11" name="Medicine prescritte" gr:x="0" gr:y="0" entity="ent36" displayAttributes="rel31#role62.ent2#att8 ent36#att79 ent36#att80">
+      <Selector id="mov2#hym5#page138#inu11#su183" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#hym5#page138#inu11#su183#kcond67" name="oid" predicate="in" implied="false"/>
+      </Selector>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym5#page138#inu11">
+          <layout:Attribute attribute="rel31#role62.ent2#att8"/>
+          <layout:Attribute attribute="ent36#att79"/>
+          <layout:Attribute attribute="ent36#att80"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

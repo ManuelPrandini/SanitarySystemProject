@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="880" gr:y="325" id="mov2#hym4#page28" name="Altra prescrizione">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="860" gr:y="260" id="mov2#hym4#page28" name="Altra prescrizione">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page28#mssu14" name="altra prescrizione" linkOrder="mov2#hym4#page28#mssu14#ln86 mov2#hym4#page28#mssu14#ln87">
       <Message xml:space="preserve">Vuoi aggiungere un ' altra prescrizione?</Message>
@@ -8,12 +8,14 @@
         <LinkParameter id="mov2#hym4#page28#mssu14#ln86#par1029" name="idHospital_PASSING_idHospital" sourceLinkParameter="mov2#hym4#miu21#oln99#par1021" target="mov2#hym4#pcu7#pcp23"/>
         <LinkParameter id="mov2#hym4#page28#mssu14#ln86#par1030" name="nameHospital_PASSING_nameHospital" sourceLinkParameter="mov2#hym4#miu21#oln99#par1022" target="mov2#hym4#pcu7#pcp20"/>
         <LinkParameter id="mov2#hym4#page28#mssu14#ln86#par1031" name="patientCode_PASSING_patientCode" sourceLinkParameter="mov2#hym4#miu21#oln99#par1023" target="mov2#hym4#pcu7#pcp21"/>
+        <LinkParameter id="mov2#hym4#page28#mssu14#ln86#par1959" name="data_visita_PASSING_data_visita" sourceLinkParameter="mov2#hym4#miu21#oln99#par1958" target="mov2#hym4#pcu7#pcp71"/>
       </Link>
       <Link id="mov2#hym4#page28#mssu14#ln87" name="No" to="mov2#hym4#pcu4" type="normal" validate="true">
         <LinkParameter id="mov2#hym4#page28#mssu14#ln87#par1024" name="doctorCode_PASSING_doctorCode" sourceLinkParameter="mov2#hym4#miu21#oln99#par1020" target="mov2#hym4#pcu4#pcp13"/>
         <LinkParameter id="mov2#hym4#page28#mssu14#ln87#par1025" name="idHospital_PASSING_idHospital" sourceLinkParameter="mov2#hym4#miu21#oln99#par1021" target="mov2#hym4#pcu4#pcp14"/>
         <LinkParameter id="mov2#hym4#page28#mssu14#ln87#par1026" name="nameHospital_PASSING_nameHospital" sourceLinkParameter="mov2#hym4#miu21#oln99#par1022" target="mov2#hym4#pcu4#pcp11"/>
         <LinkParameter id="mov2#hym4#page28#mssu14#ln87#par1027" name="patientCode_PASSING_patientCode" sourceLinkParameter="mov2#hym4#miu21#oln99#par1023" target="mov2#hym4#pcu4#pcp12"/>
+        <LinkParameter id="mov2#hym4#page28#mssu14#ln87#par1960" name="data_visita_PASSING_data_visita" sourceLinkParameter="mov2#hym4#miu21#oln99#par1958" target="mov2#hym4#pcu4#pcp72"/>
       </Link>
     </MultiMessageUnit>
   </ContentUnits>

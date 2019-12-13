@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="30" gr:y="570" id="sv3#area6#page33" name="Calendario visite" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="55" gr:y="715" id="sv3#area6#page33" name="Calendario visite" landmark="true">
   <ContentUnits>
     <EventCalendarUnit gr:x="0" gr:y="0" id="sv3#area6#page33#ecu2" name="Calendario" entityBased="true" entity="ent29" displayAttributes="rel3#role3.rel4#role5.ent8#att21 rel3#role3.rel36#role72.User#att28 ent5#att22" dateAttribute="ent5#att22" ajaxTooltipEnabled="false" linkOrder="sv3#area6#page33#ecu2#ln6">
       <Selector id="sv3#area6#page33#ecu2#su53" defaultPolicy="fill" booleanOperator="and">
@@ -12,7 +12,11 @@
       <Selector id="sv3#area6#page33#dau1#su1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area6#page33#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv3#area6#page33#dau1#ln21" name="Disdici visita" to="sv3#area6#dlu2" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#area6#page33#dau1#ln21" name="Disdici visita" to="sv3#area6#dlu2" type="normal" validate="true">
+        <LinkParameter id="sv3#area6#page33#dau1#ln21#par27" name="oid_KeyCondition4 [oid]" source="data.ent5#att2" target="sv3#area6#dlu2#su46#kcond4.ent5#att2"/>
+        <LinkParameter id="sv3#area6#page33#dau1#ln21#par31" name="VisitToVisit_Room.id_room_PASSING" source="data.rel16#role31_ent10#att5" passing="true"/>
+        <LinkParameter id="sv3#area6#page33#dau1#ln21#par155" name="oid_PASSING" source="data.ent5#att2" passing="true"/>
+      </Link>
     </DataUnit>
     <GetUnit id="sv3#area6#page33#gtu1" name="GetUser" gr:x="170" gr:y="155" contextParameters="UserCtxParam">
       <Link id="sv3#area6#page33#gtu1#ln5" name="Flow5" to="sv3#area6#page33#ecu2" type="transport" validate="true">

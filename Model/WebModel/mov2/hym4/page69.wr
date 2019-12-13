@@ -1,14 +1,14 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1130" gr:y="315" id="mov2#hym4#page69" name="Programma Ricovero">
   <ContentUnits>
-    <EntryUnit id="mov2#hym4#page69#enu1" name="Programma Ricovero" ajaxEnableExpandedLinks="false" gr:x="0" gr:y="0" fieldOrder="mov2#hym4#page69#enu1#fld3 mov2#hym4#page69#enu1#fld11 mov2#hym4#page69#enu1#fld4 mov2#hym4#page69#enu1#sfld3 mov2#hym4#page69#enu1#fld13 mov2#hym4#page69#enu1#fld14 mov2#hym4#page69#enu1#fld15 mov2#hym4#page69#enu1#fld16" linkOrder="mov2#hym4#page69#enu1#ln114 mov2#hym4#page69#enu1#ln135 mov2#hym4#page69#enu1#ln183">
+    <EntryUnit id="mov2#hym4#page69#enu1" name="Programma Ricovero" ajaxEnableExpandedLinks="false" gr:x="0" gr:y="0" fieldOrder="mov2#hym4#page69#enu1#fld3 mov2#hym4#page69#enu1#fld11 mov2#hym4#page69#enu1#fld4 mov2#hym4#page69#enu1#sfld3 mov2#hym4#page69#enu1#fld13 mov2#hym4#page69#enu1#fld14 mov2#hym4#page69#enu1#fld15 mov2#hym4#page69#enu1#fld16" linkOrder="mov2#hym4#page69#enu1#ln114 mov2#hym4#page69#enu1#ln135 mov2#hym4#page69#enu1#ln183 mov2#hym4#page69#enu1#ln285">
       <Field id="mov2#hym4#page69#enu1#fld3" name="Ospedale" type="string" preloaded="true"/>
-      <SelectionField id="mov2#hym4#page69#enu1#sfld3" name="Bed" type="string" ajaxEventEnabled="true" ajaxEventLink="mov2#hym4#page69#enu1#ln114"/>
+      <SelectionField id="mov2#hym4#page69#enu1#sfld3" name="Letto" type="string" ajaxEventEnabled="true" ajaxEventLink="mov2#hym4#page69#enu1#ln114"/>
       <Field id="mov2#hym4#page69#enu1#fld4" name="Data Fine" ajaxEventEnabled="true" type="date" modifiable="true" ajaxEventIndicator="true" ajaxEventLink="mov2#hym4#page69#enu1#ln183">
         <VRules>
           <CompareValidationRule id="mov2#hym4#page69#enu1#fld4#cmp9" name="&gt;=dataInizio" predicate="gteq" valueField="mov2#hym4#page69#enu1#fld11" errorMessage="la data di fine deve essere successiva a quella di inizio"/>
         </VRules>
       </Field>
-      <Field id="mov2#hym4#page69#enu1#fld11" name="Data Inizio" type="date" modifiable="true" ajaxEventEnabled="false" ajaxEventIndicator="true">
+      <Field id="mov2#hym4#page69#enu1#fld11" name="Data Inizio" type="date" modifiable="true" ajaxEventEnabled="true" ajaxEventIndicator="true" ajaxEventLink="mov2#hym4#page69#enu1#ln285">
         <VRules/>
       </Field>
       <Field id="mov2#hym4#page69#enu1#fld13" name="Nome sala ricovero" type="string" preloaded="true"/>
@@ -45,6 +45,14 @@
         <LinkParameter id="mov2#hym4#page69#enu1#ln183#par335" name="Data Inizio_PASSING" source="mov2#hym4#page69#enu1#fld11" passing="true"/>
         <LinkParameter id="mov2#hym4#page69#enu1#ln183#par376" name="idHospital_PASSING" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par982" passing="true"/>
       </Link>
+      <Link id="mov2#hym4#page69#enu1#ln285" name="CheckData" to="mov2#hym4#scu26" type="normal" validate="true" gr:bendpoints="-164,10,46,-85">
+        <LinkParameter id="mov2#hym4#page69#enu1#ln285#par1966" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par981" passing="true"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln285#par1978" name="idHospital_PASSING" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par982" passing="true"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln285#par1991" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par567" passing="true"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln285#par1992" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par983" passing="true"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln285#par2001" name="Data Inizio_dataRicovero" source="mov2#hym4#page69#enu1#fld11" target="mov2#hym4#scu26.dataRicovero"/>
+        <LinkParameter id="mov2#hym4#page69#enu1#ln285#par2002" name="data_visita_PASSING_dataVisita" sourceLinkParameter="mov2#hym4#page48#mssu17#ln129#par1963" target="mov2#hym4#scu26.dataVisita"/>
+      </Link>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -62,6 +70,7 @@
           <layout:Link link="mov2#hym4#page69#enu1#ln114"/>
           <layout:Link link="mov2#hym4#page69#enu1#ln135"/>
           <layout:Link link="mov2#hym4#page69#enu1#ln183"/>
+          <layout:Link link="mov2#hym4#page69#enu1#ln285"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

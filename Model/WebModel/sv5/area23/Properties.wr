@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1920" gr:y="1100" id="sv5#area23" name="Gestione delle farmacie" landmark="true" defaultPage="sv5#area23#page98" landmarks="sv5#area23#page98 sv5#area23#page111">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="2305" gr:y="1455" id="sv5#area23" name="Gestione delle farmacie" landmark="true" defaultPage="sv5#area23#page98" landmarks="sv5#area23#page98 sv5#area23#page111">
   <OperationUnits>
     <SelectorUnit id="sv5#area23#seu94" name="Seleziona citt&#224;" gr:x="40" gr:y="205" entity="ent12">
       <Selector id="sv5#area23#seu94#su131" defaultPolicy="fill" booleanOperator="and">
@@ -14,12 +14,20 @@
       <KOLink id="sv5#area23#cru27#kln91" name="KOFlow91" to="sv5#area23#page105" automaticCoupling="true"/>
     </CreateUnit>
     <CreateUnit gr:x="50" gr:y="695" id="sv5#area23#cru29" name="Creazione del farmaco" entity="ent2">
-      <OKLink id="sv5#area23#cru29#oln302" name="OKFlow302" to="sv5#area23#page112#mssu69">
-        <LinkParameter id="sv5#area23#cru29#oln302#par1454" name="id_PASSING" source="ent2#att6Array" passing="true"/>
+      <OKLink id="sv5#area23#cru29#oln302" name="OKFlow302" to="sv5#area23#pcu10">
+        <LinkParameter id="sv5#area23#cru29#oln302#par507" name="id_id_farmaco" source="ent2#att6Array" target="sv5#area23#pcu10#pcp67"/>
       </OKLink>
     </CreateUnit>
-    <CreateUnit gr:x="540" gr:y="540" id="sv5#area23#cru30" name="Aggiungi descrizione" entity="ent22">
-      <OKLink id="sv5#area23#cru30#oln304" name="OKFlow304" to="sv5#area23#page114" automaticCoupling="true"/>
+    <CreateUnit gr:x="570" gr:y="520" id="sv5#area23#cru30" name="Aggiungi descrizione" entity="ent22">
+      <OKLink id="sv5#area23#cru30#oln304" name="OKFlow304" to="sv5#area23#page132#mssu80">
+        <LinkParameter id="sv5#area23#cru30#oln304#par628" name="id_farmaco_PASSING" sourceLinkParameter="sv5#area23#page113#enu36#ln207#par562" passing="true"/>
+      </OKLink>
     </CreateUnit>
+    <ParameterCollectorUnit gr:x="290" gr:y="795" id="sv5#area23#pcu10" name="id_farmaco">
+      <CollectorParameter id="sv5#area23#pcu10#pcp67" name="id_farmaco"/>
+      <OKLink id="sv5#area23#pcu10#oln334" name="OKFlow334" to="sv5#area23#page112#mssu69">
+        <LinkParameter id="sv5#area23#pcu10#oln334#par466" name="id_farmaco_PASSING" source="sv5#area23#pcu10#pcp67" passing="true"/>
+      </OKLink>
+    </ParameterCollectorUnit>
   </OperationUnits>
 </Area>

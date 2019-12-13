@@ -2,16 +2,20 @@
   <OperationUnits>
     <ModuleInstanceUnit gr:x="650" gr:y="410" id="sv1#area7#miu19" action="false" moduleId="mov2#hym4">
       <KOLink id="sv1#area7#miu19#kln51" name="KOFlow51" to="sv1#area7#page19" automaticCoupling="true"/>
-      <OKLink id="sv1#area7#miu19#oln121" name="OKFlow121" to="sv1#area7#page18" automaticCoupling="true"/>
+      <OKLink id="sv1#area7#miu19#oln121" name="OKFlow121" to="sv1#area7#page18#mssu13">
+        <LinkParameter id="sv1#area7#miu19#oln121#par1704" name="patient_cf_PASSING" source="mov2#hym4#okcu18#ocp31" passing="true"/>
+        <LinkParameter id="sv1#area7#miu19#oln121#par1815" name="cf_dottore_PASSING" source="mov2#hym4#okcu18#ocp32" passing="true"/>
+        <LinkParameter id="sv1#area7#miu19#oln121#par1817" name="ospedale_PASSING" source="mov2#hym4#okcu18#ocp33" passing="true"/>
+      </OKLink>
     </ModuleInstanceUnit>
     <ModuleInstanceUnit gr:x="315" gr:y="0" id="sv1#area7#miu20" action="false" moduleId="mov2#hym5"/>
     <IsNotNullUnit gr:x="310" gr:y="735" id="sv1#area7#inn18" name="VisitsNotNull?">
       <OKLink id="sv1#area7#inn18#oln158" name="OKFlow158" to="sv1#area7#page65#pwu1">
         <LinkParameter id="sv1#area7#inn18#oln158#par619" name="Input Value_oidVisit [oid]" source="inputValue" target="sv1#area7#page65#pwu1#su2#kcond36.ent5#att2"/>
         <LinkParameter id="sv1#area7#inn18#oln158#par632" name="Input Value_PASSING" source="inputValue" passing="true"/>
-        <LinkParameter id="sv1#area7#inn18#oln158#par661" name="DoctorToHospital.name_PASSING" sourceLinkParameter="sv1#area7#seu54#oln159#par658" passing="true"/>
-        <LinkParameter id="sv1#area7#inn18#oln158#par662" name="PatientToUser.cf_PASSING" sourceLinkParameter="sv1#area7#seu54#oln159#par659" passing="true"/>
-        <LinkParameter id="sv1#area7#inn18#oln158#par663" name="UserCtxParam.cf_PASSING" sourceLinkParameter="sv1#area7#seu54#oln159#par660" passing="true"/>
+        <LinkParameter id="sv1#area7#inn18#oln158#par1805" name="nome_ospedale_PASSING" sourceLinkParameter="sv1#area7#seu54#oln159#par1778" passing="true"/>
+        <LinkParameter id="sv1#area7#inn18#oln158#par1811" name="cf_dottore_PASSING" sourceLinkParameter="sv1#area7#seu54#oln159#par1809" passing="true"/>
+        <LinkParameter id="sv1#area7#inn18#oln158#par1812" name="cf_paziente_PASSING" sourceLinkParameter="sv1#area7#seu54#oln159#par1810" passing="true"/>
       </OKLink>
       <KOLink id="sv1#area7#inn18#kln4" name="KOFlow2" to="sv1#area7#page70#mssu24" automaticCoupling="true"/>
     </IsNotNullUnit>
@@ -24,10 +28,20 @@
       </Selector>
       <OKLink id="sv1#area7#seu54#oln159" name="OKFlow159" to="sv1#area7#inn18" gr:bendpoints="138,5,-97,20">
         <LinkParameter id="sv1#area7#seu54#oln159#par657" name="oid_Input" source="ent5#att2Array" target="sv1#area7#inn18.isnotnull"/>
-        <LinkParameter id="sv1#area7#seu54#oln159#par658" name="DoctorToHospital.name_PASSING" sourceLinkParameter="sv1#area7#page67#mssu9#ln152#par649" passing="true"/>
-        <LinkParameter id="sv1#area7#seu54#oln159#par659" name="PatientToUser.cf_PASSING" sourceLinkParameter="sv1#area7#page67#mssu9#ln152#par643" passing="true"/>
-        <LinkParameter id="sv1#area7#seu54#oln159#par660" name="UserCtxParam.cf_PASSING" sourceLinkParameter="sv1#area7#page67#mssu9#ln152#par644" passing="true"/>
+        <LinkParameter id="sv1#area7#seu54#oln159#par1778" name="nome_ospedale_PASSING" sourceLinkParameter="sv1#area7#page67#mssu9#ln152#par1777" passing="true"/>
+        <LinkParameter id="sv1#area7#seu54#oln159#par1809" name="cf_dottore_PASSING" sourceLinkParameter="sv1#area7#page67#mssu9#ln152#par1806" passing="true"/>
+        <LinkParameter id="sv1#area7#seu54#oln159#par1810" name="cf_paziente_PASSING" sourceLinkParameter="sv1#area7#page67#mssu9#ln152#par1807" passing="true"/>
       </OKLink>
     </SelectorUnit>
+    <ParameterCollectorUnit gr:x="100" gr:y="320" id="sv1#area7#pcu17" name="Parametri">
+      <CollectorParameter id="sv1#area7#pcu17#pcp68" name="cf_dottore"/>
+      <CollectorParameter id="sv1#area7#pcu17#pcp69" name="cf_paziente"/>
+      <CollectorParameter id="sv1#area7#pcu17#pcp70" name="nome_ospedale"/>
+      <OKLink id="sv1#area7#pcu17#oln345" name="OKFlow345" to="sv1#area7#page67#mssu9">
+        <LinkParameter id="sv1#area7#pcu17#oln345#par1763" name="cf_dottore_PASSING" source="sv1#area7#pcu17#pcp68" passing="true"/>
+        <LinkParameter id="sv1#area7#pcu17#oln345#par1764" name="cf_paziente_PASSING" source="sv1#area7#pcu17#pcp69" passing="true"/>
+        <LinkParameter id="sv1#area7#pcu17#oln345#par1768" name="nome_ospedale_PASSING" source="sv1#area7#pcu17#pcp70" passing="true"/>
+      </OKLink>
+    </ParameterCollectorUnit>
   </OperationUnits>
 </Area>

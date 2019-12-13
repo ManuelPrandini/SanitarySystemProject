@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1100" gr:y="-240" id="mov2#hym4#page48" name="SceltaRicovero">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="860" gr:y="-175" id="mov2#hym4#page48" name="SceltaRicovero">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page48#mssu17" name="Vuoi programmare un ricovero" linkOrder="mov2#hym4#page48#mssu17#ln129 mov2#hym4#page48#mssu17#ln179">
       <Message xml:space="preserve">Vuoi programmare un ricovero?</Message>
@@ -8,6 +8,7 @@
         <LinkParameter id="mov2#hym4#page48#mssu17#ln129#par982" name="idHospital_PASSING" sourceLinkParameter="mov2#hym4#pcu4#oln164#par977" passing="true"/>
         <LinkParameter id="mov2#hym4#page48#mssu17#ln129#par983" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#pcu4#oln164#par979" passing="true"/>
         <LinkParameter id="mov2#hym4#page48#mssu17#ln129#par567" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#pcu4#oln164#par978" passing="true"/>
+        <LinkParameter id="mov2#hym4#page48#mssu17#ln129#par1963" name="data_visita_PASSING" sourceLinkParameter="mov2#hym4#pcu4#oln164#par1962" passing="true"/>
       </Link>
       <Link id="mov2#hym4#page48#mssu17#ln179" name="No" to="mov2#hym4#okcu18" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="649,19,-411,-227"/>
     </MultiMessageUnit>

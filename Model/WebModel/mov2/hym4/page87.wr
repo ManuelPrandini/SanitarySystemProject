@@ -1,10 +1,13 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="975" gr:y="875" id="mov2#hym4#page87" name="Attenzione!" layout:pageLayout="MetroStyle/Empty">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="mov2#hym4#page87#pwu9" name="Impegni del paziente" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att2 rel3#role3.rel4#role5.ent8#att21 ent5#att22 ent5#att23">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="mov2#hym4#page87#pwu9" name="Impegni del paziente" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att2 rel3#role3.rel4#role5.ent8#att21 ent5#att22 ent5#att23" linkOrder="mov2#hym4#page87#pwu9#ln25">
       <Selector id="mov2#hym4#page87#pwu9#su133" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#hym4#page87#pwu9#su133#kcond62" name="oid" predicate="in" implied="false"/>
       </Selector>
       <SortAttribute attribute="ent5#att22" order="ascending"/>
+      <Link id="mov2#hym4#page87#pwu9#ln25" name="Disdici" to="mov2#hym4#seu22" type="normal" validate="true">
+        <LinkParameter id="mov2#hym4#page87#pwu9#ln25#par661" name="oid_oid" source="data[].ent5#att2" target="mov2#hym4#seu22#su57#acond61"/>
+      </Link>
     </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -15,6 +18,7 @@
           <layout:Attribute attribute="rel3#role3.rel4#role5.ent8#att21"/>
           <layout:Attribute attribute="ent5#att22"/>
           <layout:Attribute attribute="ent5#att23"/>
+          <layout:Link link="mov2#hym4#page87#pwu9#ln25"/>
           <layout:Link link="mov2#hym4#page87#pwu9ent5#att22"/>
         </layout:Unit>
       </layout:Cell>

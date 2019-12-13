@@ -1,0 +1,29 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area12#page103" name="Descrizioni farmaco" layout:pageLayout="MetroStyle/Empty" gr:x="480" gr:y="310">
+  <ContentUnits>
+    <IndexUnit id="sv3#area12#page103#inu15" name="Descrizioni farmaco" gr:x="0" gr:y="0" entity="ent22" displayAttributes="ent22#att51">
+      <Selector id="sv3#area12#page103#inu15#su158" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area12#page103#inu15#su158#kcond77" name="KeyCondition77" predicate="in" implied="false"/>
+      </Selector>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page103#inu15">
+          <layout:Attribute attribute="ent22#att51"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,16 +1,32 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page58" name="Informazioni personali" landmark="true" gr:x="23" gr:y="241">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page58" name="Informazioni personali" landmark="true" gr:x="15" gr:y="245">
   <ContentUnits>
-    <DataUnit id="sv1#page58#dau11" name="Dati personali" gr:x="160" gr:y="0" entity="User" displayAttributes="userOID userName email User#att27 User#att28 User#att29 User#att40 User#att41 rel36#role71.ent9#att33">
+    <DataUnit id="sv1#page58#dau11" name="Dati personali" gr:x="170" gr:y="0" entity="User" displayAttributes="userOID userName email User#att27 User#att28 User#att29 User#att40 User#att41 rel36#role71.ent9#att33 rel36#role71.rel4#role5.ent8#att21">
       <Selector id="sv1#page58#dau11#su58" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#page58#dau11#su58#kcond25" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
       <Link id="sv1#page58#dau11#ln99" name="Flow17" to="sv1#lou8" type="transport" automaticCoupling="true" validate="true"/>
     </DataUnit>
-    <GetUnit id="sv1#page58#gtu10" name="User info" gr:x="0" gr:y="10" contextParameters="UserCtxParam">
+    <GetUnit id="sv1#page58#gtu10" name="User info" gr:x="10" gr:y="10" contextParameters="UserCtxParam">
       <Link id="sv1#page58#gtu10#ln100" name="Flow16" to="sv1#page58#dau11" type="transport" validate="true">
         <LinkParameter id="sv1#page58#gtu10#ln100#par384" name="UserCtxParam.cf_KeyCondition1 [cf]" source="sv1#page58#gtu10.UserCtxParam" target="sv1#page58#dau11#su58#kcond25.userOID"/>
       </Link>
+      <Link id="sv1#page58#gtu10#ln117" name="Flow117" to="sv1#page58#dau9" type="transport" validate="true">
+        <LinkParameter id="sv1#page58#gtu10#ln117#par804" name="UserCtxParam.cf_cf" source="sv1#page58#gtu10.UserCtxParam" target="sv1#page58#dau9#su167#acond133"/>
+      </Link>
+      <Link id="sv1#page58#gtu10#ln157" name="Flow157" to="sv1#page58#inu8" type="transport" validate="true">
+        <LinkParameter id="sv1#page58#gtu10#ln157#par857" name="UserCtxParam.cf_cd_dottore" source="sv1#page58#gtu10.UserCtxParam" target="sv1#page58#inu8#su170#acond156"/>
+      </Link>
     </GetUnit>
+    <DataUnit gr:x="0" gr:y="160" id="sv1#page58#dau9" name="Lavoro" entity="ent23" displayAttributes="ent10#att50 rel37#role74.ent4#att14">
+      <Selector id="sv1#page58#dau9#su167" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#page58#dau9#su167#acond133" name="cf" predicate="eq" booleanOperator="and" implied="false" attributes="rel5#role20.rel36#role72.userOID"/>
+      </Selector>
+    </DataUnit>
+    <IndexUnit gr:x="235" gr:y="170" id="sv1#page58#inu8" name="Sale Operatorie" entity="ent24" displayAttributes="ent10#att50">
+      <Selector id="sv1#page58#inu8#su170" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#page58#inu8#su170#acond156" name="cd_dottore" predicate="eq" booleanOperator="or" implied="false" attributes="rel5#role20.rel36#role72.userOID"/>
+      </Selector>
+    </IndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -25,6 +41,7 @@
           <layout:Attribute attribute="User#att40" label="indirizzo"/>
           <layout:Attribute attribute="User#att41" label="telefono"/>
           <layout:Attribute attribute="rel36#role71.ent9#att33" label="codice dottore"/>
+          <layout:Attribute attribute="rel36#role71.rel4#role5.ent8#att21" label="specializzazione medica"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -40,7 +57,30 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page58#dau9">
+          <layout:Attribute attribute="ent10#att50" label="Nome stanza"/>
+          <layout:Attribute attribute="rel37#role74.ent4#att14" label="Ospedale"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page58#inu8">
+          <layout:Attribute attribute="ent10#att50" label="Nome stanza"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

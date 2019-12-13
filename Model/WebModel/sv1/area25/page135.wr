@@ -1,0 +1,34 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="465" gr:y="0" id="sv1#area25#page135" name="Registrati in sala operatoria">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#area25#page135#enu44" name="Selezione sala" fieldOrder="sv1#area25#page135#enu44#sfld60" linkOrder="sv1#area25#page135#enu44#ln208">
+      <SelectionField id="sv1#area25#page135#enu44#sfld60" name="Sala" type="string" modifiable="true"/>
+      <Link id="sv1#area25#page135#enu44#ln208" name="Registrati" to="sv1#area25#seu101" type="normal" validate="true">
+        <LinkParameter id="sv1#area25#page135#enu44#ln208#par1473" name="doctor_code_PASSING_dottore" sourceLinkParameter="sv1#area25#inn41#oln341#par1454" target="sv1#area25#seu101#su182#acond177"/>
+        <LinkParameter id="sv1#area25#page135#enu44#ln208#par1474" name="doctor_code_PASSING" sourceLinkParameter="sv1#area25#inn41#oln341#par1454" passing="true"/>
+        <LinkParameter id="sv1#area25#page135#enu44#ln208#par1475" name="Sala_PASSING" source="sv1#area25#page135#enu44#sfld60" passing="true"/>
+        <LinkParameter id="sv1#area25#page135#enu44#ln208#par1523" name="Sala_sala" source="sv1#area25#page135#enu44#sfld60" target="sv1#area25#seu101#su182#acond186"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area25#page135#enu44">
+          <layout:Field field="sv1#area25#page135#enu44#sfld60"/>
+          <layout:Link link="sv1#area25#page135#enu44#ln208"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

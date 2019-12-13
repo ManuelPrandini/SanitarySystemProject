@@ -1,7 +1,7 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="420" gr:y="150" id="sv5#area18#page99" name="Ospedale aggiunto in modo corretto" layout:pageLayout="MetroStyle/Default">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="495" gr:y="15" id="sv5#area18#page99" name="Ospedale aggiunto in modo corretto" layout:pageLayout="MetroStyle/Default">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv5#area18#page99#mssu59" name="Modifiche avvenute correttamente">
-      <Message xml:space="preserve">L'ospedale &#232; stato aggiunto in modo corretto</Message>
+      <Message xml:space="preserve">L'ospedale e il suo pronto soccorso sono stati aggiunti in modo corretto!</Message>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

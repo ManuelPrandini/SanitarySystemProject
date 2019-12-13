@@ -1,7 +1,7 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="730" gr:y="800" id="sv2#area5#page68" name="Farmaco aggiunto al carrello!">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1125" gr:y="850" id="sv2#area5#page68" name="Farmaco aggiunto al carrello!">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#area5#page68#mssu26" name="Farmaco aggiunto correttamente al carrello" linkOrder="sv2#area5#page68#mssu26#ln9">
-      <Link id="sv2#area5#page68#mssu26#ln9" name="Seleziona altro" to="sv2#area5#pcu6" type="normal" validate="true" gr:bendpoints="-452,-150,37,146">
+      <Link id="sv2#area5#page68#mssu26#ln9" name="Seleziona altro" to="sv2#area5#pcu6" type="normal" validate="true" gr:bendpoints="-365,-391,155,195">
         <LinkParameter id="sv2#area5#page68#mssu26#ln9#par999" name="patient_code_PASSING_patient_code" sourceLinkParameter="sv2#area5#pcu11#oln187#par996" target="sv2#area5#pcu6#pcp18"/>
         <LinkParameter id="sv2#area5#page68#mssu26#ln9#par1000" name="pharmacist_code_PASSING_pharmacist_code" sourceLinkParameter="sv2#area5#pcu11#oln187#par997" target="sv2#area5#pcu6#pcp17"/>
         <LinkParameter id="sv2#area5#page68#mssu26#ln9#par1001" name="pharmacy_oid_PASSING_pharmacy_oid" sourceLinkParameter="sv2#area5#pcu11#oln187#par998" target="sv2#area5#pcu6#pcp19"/>

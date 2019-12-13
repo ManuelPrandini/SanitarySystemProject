@@ -8,6 +8,7 @@
         <LinkParameter id="mov2#hym4#page29#mssu15#ln89#par1038" name="id_visit_PASSING_idVisit" sourceLinkParameter="mov2#hym4#miu21#kln52#par572" target="mov2#hym4#pcu7#pcp24"/>
         <LinkParameter id="mov2#hym4#page29#mssu15#ln89#par1039" name="nameHospital_PASSING_nameHospital" sourceLinkParameter="mov2#hym4#miu21#kln52#par1034" target="mov2#hym4#pcu7#pcp20"/>
         <LinkParameter id="mov2#hym4#page29#mssu15#ln89#par1040" name="patientCode_PASSING_patientCode" sourceLinkParameter="mov2#hym4#miu21#kln52#par1035" target="mov2#hym4#pcu7#pcp21"/>
+        <LinkParameter id="mov2#hym4#page29#mssu15#ln89#par1957" name="data_visita_PASSING_data_visita" sourceLinkParameter="mov2#hym4#miu21#kln52#par1956" target="mov2#hym4#pcu7#pcp71"/>
       </Link>
     </MultiMessageUnit>
   </ContentUnits>

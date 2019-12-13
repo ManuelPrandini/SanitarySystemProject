@@ -1,0 +1,25 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="75" gr:y="580" id="sv3#area6#page88" name="Attenzione!" layout:pageLayout="MetroStyle/Empty">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv3#area6#page88#mssu49" name="Dottore_no_presente">
+      <Message xml:space="preserve">Attenzione! Non esistono dottori disponibili per questo tipo di visita in questo ospedale!</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area6#page88#mssu49"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

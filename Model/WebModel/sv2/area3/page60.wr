@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="320" id="sv2#area3#page60" name="Rifornimento" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="315" id="sv2#area3#page60" name="Rifornimento" landmark="true">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="40" id="sv2#area3#page60#enu24" name="Inserisci farmaco da rifornire" fieldOrder="sv2#area3#page60#enu24#fld156 sv2#area3#page60#enu24#sfld56 sv2#area3#page60#enu24#fld158 sv2#area3#page60#enu24#fld159" linkOrder="sv2#area3#page60#enu24#ln176 sv2#area3#page60#enu24#ln180">
       <Field id="sv2#area3#page60#enu24#fld156" name="Farmacia" type="string" preloaded="true" ajaxEventEnabled="true" ajaxEventLink="sv2#area3#page60#enu24#ln176"/>

@@ -1,10 +1,11 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="275" gr:y="515" id="sv5#area23#page113" name="Aggiungi descrizione" layout:pageLayout="MetroStyle/Empty">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="305" gr:y="495" id="sv5#area23#page113" name="Aggiungi descrizione" layout:pageLayout="MetroStyle/Empty">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv5#area23#page113#enu36" name="Descrizione del farmaco" linkOrder="sv5#area23#page113#enu36#ln207">
-      <Field id="sv5#area23#page113#enu36#fld162" name="Descrizione" type="string" modifiable="true"/>
+    <EntryUnit gr:x="0" gr:y="0" id="sv5#area23#page113#enu36" name="Descrizione del farmaco" linkOrder="sv5#area23#page113#enu36#ln207" fieldOrder="sv5#area23#page113#enu36#fld162">
+      <Field id="sv5#area23#page113#enu36#fld162" name="Descrizione" type="text" modifiable="true"/>
       <Link id="sv5#area23#page113#enu36#ln207" name="Aggiungi descrizione" to="sv5#area23#cru30" type="normal" validate="true">
-        <LinkParameter id="sv5#area23#page113#enu36#ln207#par1456" name="id_PASSING_Drug.id(Drug_DescriptionToDrug)" sourceLinkParameter="sv5#area23#page112#mssu69#ln206#par1455" target="sv5#area23#cru30.rel24#role48.ent2#att6"/>
         <LinkParameter id="sv5#area23#page113#enu36#ln207#par1457" name="Descrizione_name" source="sv5#area23#page113#enu36#fld162" target="sv5#area23#cru30.ent22#att51"/>
+        <LinkParameter id="sv5#area23#page113#enu36#ln207#par561" name="id_farmaco_PASSING_Drug.id(Drug_DescriptionToDrug)" sourceLinkParameter="sv5#area23#page112#mssu69#ln206#par547" target="sv5#area23#cru30.rel24#role48.ent2#att6"/>
+        <LinkParameter id="sv5#area23#page113#enu36#ln207#par562" name="id_farmaco_PASSING" sourceLinkParameter="sv5#area23#page112#mssu69#ln206#par547" passing="true"/>
       </Link>
     </EntryUnit>
   </ContentUnits>

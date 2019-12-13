@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="415" gr:y="270" id="sv5#area18#page100" name="Errore nell'inserimento dell'ospedale" layout:pageLayout="MetroStyle/Default">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="455" gr:y="305" id="sv5#area18#page100" name="Errore nell'inserimento dell'ospedale" layout:pageLayout="MetroStyle/Default">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv5#area18#page100#mssu61" name="Errore">
       <Message xml:space="preserve">Si &#232; verificato un errore nella registrazione dell'ospedale!</Message>

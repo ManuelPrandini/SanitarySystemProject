@@ -3,14 +3,14 @@
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#area7#page67#mssu9" name="Scegli operazione" linkOrder="sv1#area7#page67#mssu9#ln127 sv1#area7#page67#mssu9#ln152">
       <Message xml:space="preserve">Scegli l'operazione da fare sul paziente</Message>
       <Link id="sv1#area7#page67#mssu9#ln127" name="Cartella Clinica" to="sv1#area7#miu20" type="normal" validate="true">
-        <LinkParameter id="sv1#area7#page67#mssu9#ln127#par591" name="PatientToUser.cf_PASSING_PatientCF" sourceLinkParameter="sv1#page62#dau12#ln130#par155" target="sv1#area7#miu20.mov2#hym5#icu24#icp102"/>
+        <LinkParameter id="sv1#area7#page67#mssu9#ln127#par1895" name="cf_paziente_PASSING_PatientCF" sourceLinkParameter="sv1#area7#pcu17#oln345#par1764" target="sv1#area7#miu20.mov2#hym5#icu24#icp102"/>
       </Link>
       <Link id="sv1#area7#page67#mssu9#ln152" name="Registra visita" to="sv1#area7#seu54" type="normal" validate="true" gr:bendpoints="18,211,-212,-9">
-        <LinkParameter id="sv1#area7#page67#mssu9#ln152#par643" name="PatientToUser.cf_PASSING" sourceLinkParameter="sv1#page62#dau12#ln130#par155" passing="true"/>
-        <LinkParameter id="sv1#area7#page67#mssu9#ln152#par644" name="UserCtxParam.cf_PASSING" sourceLinkParameter="sv1#page62#dau12#ln130#par156" passing="true"/>
-        <LinkParameter id="sv1#area7#page67#mssu9#ln152#par649" name="DoctorToHospital.name_PASSING" sourceLinkParameter="sv1#page62#dau12#ln130#par493" passing="true"/>
-        <LinkParameter id="sv1#area7#page67#mssu9#ln152#par650" name="UserCtxParam.cf_PASSING_cfDoctor" sourceLinkParameter="sv1#page62#dau12#ln130#par156" target="sv1#area7#seu54#su92#acond117"/>
-        <LinkParameter id="sv1#area7#page67#mssu9#ln152#par656" name="PatientToUser.cf_PASSING_cfPatient" sourceLinkParameter="sv1#page62#dau12#ln130#par155" target="sv1#area7#seu54#su92#acond118"/>
+        <LinkParameter id="sv1#area7#page67#mssu9#ln152#par1769" name="cf_dottore_PASSING_cfDoctor" sourceLinkParameter="sv1#area7#pcu17#oln345#par1763" target="sv1#area7#seu54#su92#acond117"/>
+        <LinkParameter id="sv1#area7#page67#mssu9#ln152#par1776" name="cf_paziente_PASSING_cfPatient" sourceLinkParameter="sv1#area7#pcu17#oln345#par1764" target="sv1#area7#seu54#su92#acond118"/>
+        <LinkParameter id="sv1#area7#page67#mssu9#ln152#par1777" name="nome_ospedale_PASSING" sourceLinkParameter="sv1#area7#pcu17#oln345#par1768" passing="true"/>
+        <LinkParameter id="sv1#area7#page67#mssu9#ln152#par1806" name="cf_dottore_PASSING" sourceLinkParameter="sv1#area7#pcu17#oln345#par1763" passing="true"/>
+        <LinkParameter id="sv1#area7#page67#mssu9#ln152#par1807" name="cf_paziente_PASSING" sourceLinkParameter="sv1#area7#pcu17#oln345#par1764" passing="true"/>
       </Link>
     </MultiMessageUnit>
   </ContentUnits>

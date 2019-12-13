@@ -2,7 +2,7 @@
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="mov2#hym4#page122#mssu75" name="Scelta accertamenti" linkOrder="mov2#hym4#page122#mssu75#ln165 mov2#hym4#page122#mssu75#ln171">
       <Message xml:space="preserve">Vuoi prescrivere degli accertamenti durante il ricovero?</Message>
-      <Link id="mov2#hym4#page122#mssu75#ln165" name="Si" to="mov2#hym4#area24#page118#ecu1" type="normal" validate="true">
+      <Link id="mov2#hym4#page122#mssu75#ln165" name="Si" to="mov2#hym4#area24#page118#mssu63" type="normal" validate="true">
         <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1840" name="dataFine_Ricovero_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1825" passing="true"/>
         <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1841" name="dataInizio_Ricovero_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1826" passing="true"/>
         <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1842" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1827" passing="true"/>
@@ -10,8 +10,8 @@
         <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1844" name="id_ricovero_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1829" passing="true"/>
         <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1845" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1830" passing="true"/>
         <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1846" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1831" passing="true"/>
-        <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1838" name="dataInizio_Ricovero_PASSING_Current Date" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1826" target="mov2#hym4#area24#page118#ecu1.inputDate"/>
-        <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1839" name="id_ricovero_PASSING_id_ricovero" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1829" target="mov2#hym4#area24#page118#ecu1#su60#acond36"/>
+        <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1558" name="dataFine_Ricovero_PASSING_dataFineRic" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1825" target="mov2#hym4#area24#page118#mssu63.dataFineRic"/>
+        <LinkParameter id="mov2#hym4#page122#mssu75#ln165#par1568" name="dataInizio_Ricovero_PASSING_dataInizioRic" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1826" target="mov2#hym4#area24#page118#mssu63.dataInizioRic"/>
       </Link>
       <Link id="mov2#hym4#page122#mssu75#ln171" name="No" to="mov2#hym4#page71#mssu1" type="normal" validate="true">
         <LinkParameter id="mov2#hym4#page122#mssu75#ln171#par1832" name="dataFine_Ricovero_PASSING" sourceLinkParameter="mov2#hym4#pcu5#oln322#par1825" passing="true"/>

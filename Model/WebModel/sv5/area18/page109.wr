@@ -1,7 +1,7 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1425" gr:y="230" id="sv5#area18#page109" name="Modifiche effettuate correttamente" layout:pageLayout="MetroStyle/Empty">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1830" gr:y="230" id="sv5#area18#page109" name="Modifiche effettuate correttamente" layout:pageLayout="MetroStyle/Empty">
   <ContentUnits>
     <MultiMessageUnit id="sv5#area18#page109#mssu66" name="Modifiche avvenute correttamente" gr:x="0" gr:y="0">
-      <Message xml:space="preserve">La stanza &#232; stata registrata in modo corretto!</Message>
+      <Message xml:space="preserve">La stanza &#232; stata registrata in modo corretto! Rimani sulla pagina per registrare un'altra stanza di questa tipologia altrimenti naviga per altre sezioni.</Message>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
