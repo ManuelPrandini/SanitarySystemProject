@@ -15,9 +15,9 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov2#hym4#page87#pwu9">
           <layout:Attribute attribute="ent5#att2"/>
-          <layout:Attribute attribute="rel3#role3.rel4#role5.ent8#att21"/>
-          <layout:Attribute attribute="ent5#att22"/>
-          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="rel3#role3.rel4#role5.ent8#att21" label="Tipologia visita"/>
+          <layout:Attribute attribute="ent5#att22" label="data inizio"/>
+          <layout:Attribute attribute="ent5#att23" label="data fine"/>
           <layout:Link link="mov2#hym4#page87#pwu9#ln25"/>
           <layout:Link link="mov2#hym4#page87#pwu9ent5#att22"/>
         </layout:Unit>

@@ -10,9 +10,9 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov2#hym5#page138#inu11">
-          <layout:Attribute attribute="rel31#role62.ent2#att8"/>
-          <layout:Attribute attribute="ent36#att79"/>
-          <layout:Attribute attribute="ent36#att80"/>
+          <layout:Attribute attribute="rel31#role62.ent2#att8" label="nome farmaco"/>
+          <layout:Attribute attribute="ent36#att79" label="quantit&#224; prescritta"/>
+          <layout:Attribute attribute="ent36#att80" label="descrizione"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

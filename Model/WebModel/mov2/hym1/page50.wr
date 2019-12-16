@@ -101,7 +101,7 @@
         <LinkParameter id="mov2#hym1#page50#enu23#ln250#par1784" name="citt&#224; ospedale *_citt&#224;" source="mov2#hym1#page50#enu23#sfld47" target="mov2#hym1#page50#seu41#su173#acond191"/>
       </Link>
     </EntryUnit>
-    <SelectorUnit id="mov2#hym1#page50#seu41" name="SelectorHospital" gr:x="140" gr:y="0" entity="ent4">
+    <SelectorUnit id="mov2#hym1#page50#seu41" name="Selezione ospedale" gr:x="140" gr:y="0" entity="ent4">
       <Selector id="mov2#hym1#page50#seu41#su173" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#hym1#page50#seu41#su173#acond191" name="citt&#224;" predicate="eq" booleanOperator="or" implied="false" attributes="rel2#role2.ent12#att16"/>
       </Selector>
@@ -110,14 +110,14 @@
         <LinkParameter id="mov2#hym1#page50#seu41#ln251#par1786" name="id_hospital_ospedale di lavoro * [output]" source="ent4#att1Array" target="mov2#hym1#page50#enu23#sfld50_output"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit id="mov2#hym1#page50#seu42" name="SelectorMedicalSpecialization" gr:x="305" gr:y="15" entity="ent8">
+    <SelectorUnit id="mov2#hym1#page50#seu42" name="Selezione spec medica" gr:x="305" gr:y="15" entity="ent8">
       <SortAttribute attribute="ent8#att21" order="ascending"/>
       <Link id="mov2#hym1#page50#seu42#ln158" name="Flow158" to="mov2#hym1#page50#enu23" type="transport" validate="true">
         <LinkParameter id="mov2#hym1#page50#seu42#ln158#par805" name="nameSpecialization_medical specialization [label]" source="ent8#att21Array" target="mov2#hym1#page50#enu23#sfld52_label"/>
         <LinkParameter id="mov2#hym1#page50#seu42#ln158#par806" name="nameSpecialization_medical specialization [output]" source="ent8#att21Array" target="mov2#hym1#page50#enu23#sfld52_output"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit id="mov2#hym1#page50#seu45" name="SelectorVisitRoom" gr:x="570" gr:y="15" entity="ent23">
+    <SelectorUnit id="mov2#hym1#page50#seu45" name="Selezione stanza visite non occupate" gr:x="570" gr:y="15" entity="ent23">
       <Selector id="mov2#hym1#page50#seu45#su66" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#hym1#page50#seu45#su66#acond47" name="id_hospital" predicate="eq" booleanOperator="and" implied="false" attributes="rel37#role74.ent4#att1"/>
         <AttributesCondition id="mov2#hym1#page50#seu45#su66#acond48" name="medical_specialization" predicate="eq" booleanOperator="and" implied="false" attributes="rel1#role18.ent8#att21"/>
@@ -129,7 +129,7 @@
         <LinkParameter id="mov2#hym1#page50#seu45#ln160#par1266" name="password_PASSING" sourceLinkParameter="mov2#hym1#page50#enu23#ln159#par1265" passing="true"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit id="mov2#hym1#page50#seu55" name="SelectorRoom" gr:x="930" gr:y="35" entity="ent23">
+    <SelectorUnit id="mov2#hym1#page50#seu55" name="Selezione stanze visite" gr:x="930" gr:y="35" entity="ent23">
       <Link id="mov2#hym1#page50#seu55#ln144" name="Flow144" to="mov2#hym1#page50#seu45" type="transport" validate="true">
         <LinkParameter id="mov2#hym1#page50#seu55#ln144#par608" name="id_room_RoleCondition2 [id_room]" source="ent10#att5Array" target="mov2#hym1#page50#seu45#su66#rcond2.ent10#att5"/>
       </Link>

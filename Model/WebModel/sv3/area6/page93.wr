@@ -10,13 +10,13 @@
         <LinkParameter id="sv3#area6#page93#ecu5#ln162#par1418" name="UserCtxParam.cf_PASSING" sourceLinkParameter="sv3#area6#page93#gtu16#ln156#par1408" passing="true"/>
       </Link>
     </EventCalendarUnit>
-    <TimeUnit id="sv3#area6#page93#tmu6" name="CurrentDate" gr:x="5" gr:y="165">
+    <TimeUnit id="sv3#area6#page93#tmu6" name="Data corrente" gr:x="5" gr:y="165">
       <Link id="sv3#area6#page93#tmu6#ln154" name="Flow154" to="sv3#area6#page93#ecu5" type="transport" validate="true">
         <LinkParameter id="sv3#area6#page93#tmu6#ln154#par1403" name="Current/Input Date_Current Date" source="currentDate" target="sv3#area6#page93#ecu5.inputDate"/>
         <LinkParameter id="sv3#area6#page93#tmu6#ln154#par1405" name="Current/Input Date_startDate" source="currentDate" target="sv3#area6#page93#ecu5#su134#acond146"/>
       </Link>
     </TimeUnit>
-    <GetUnit id="sv3#area6#page93#gtu16" name="GetUser" gr:x="155" gr:y="145" contextParameters="UserCtxParam">
+    <GetUnit id="sv3#area6#page93#gtu16" name="GetUserCf" gr:x="155" gr:y="145" contextParameters="UserCtxParam">
       <Link id="sv3#area6#page93#gtu16#ln156" name="Flow156" to="sv3#area6#page93#ecu5" type="transport" validate="true">
         <LinkParameter id="sv3#area6#page93#gtu16#ln156#par1404" name="UserCtxParam.cf_cf" source="sv3#area6#page93#gtu16.UserCtxParam" target="sv3#area6#page93#ecu5#su134#acond139"/>
         <LinkParameter id="sv3#area6#page93#gtu16#ln156#par1408" name="UserCtxParam.cf_PASSING" source="sv3#area6#page93#gtu16.UserCtxParam" passing="true"/>
@@ -85,13 +85,13 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#area6#page93#dau6">
-          <layout:Attribute attribute="ent5#att3"/>
-          <layout:Attribute attribute="ent5#att10"/>
-          <layout:Attribute attribute="ent5#att22"/>
-          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="ent5#att3" label="titolo"/>
+          <layout:Attribute attribute="ent5#att10" label="descrizione"/>
+          <layout:Attribute attribute="ent5#att22" label="data inizio"/>
+          <layout:Attribute attribute="ent5#att23" label="data fine"/>
           <layout:Attribute attribute="rel20#role39.rel8#role11.rel37#role74.ent4#att14" label="ospedale"/>
-          <layout:Attribute attribute="rel20#role39.rel8#role11.ent10#att50"/>
-          <layout:Attribute attribute="rel20#role39.ent25#att55"/>
+          <layout:Attribute attribute="rel20#role39.rel8#role11.ent10#att50" label="sala ricovero"/>
+          <layout:Attribute attribute="rel20#role39.ent25#att55" label="letto"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -109,14 +109,14 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#area6#page93#dau7">
-          <layout:Attribute attribute="rel3#role3.rel4#role5.ent8#att21"/>
-          <layout:Attribute attribute="ent5#att3"/>
-          <layout:Attribute attribute="ent5#att10"/>
-          <layout:Attribute attribute="rel18#role35.rel37#role74.ent4#att14"/>
-          <layout:Attribute attribute="ent5#att22"/>
-          <layout:Attribute attribute="ent5#att24"/>
-          <layout:Attribute attribute="ent5#att25"/>
-          <layout:Attribute attribute="rel3#role3.rel36#role72.User#att28"/>
+          <layout:Attribute attribute="rel3#role3.rel4#role5.ent8#att21" label="tipologia intervento"/>
+          <layout:Attribute attribute="ent5#att3" label="titolo"/>
+          <layout:Attribute attribute="ent5#att10" label="descrizione"/>
+          <layout:Attribute attribute="rel18#role35.rel37#role74.ent4#att14" label="ospedale"/>
+          <layout:Attribute attribute="ent5#att22" label="data"/>
+          <layout:Attribute attribute="ent5#att24" label="orario"/>
+          <layout:Attribute attribute="ent5#att25" label="orario di fine"/>
+          <layout:Attribute attribute="rel3#role3.rel36#role72.User#att28" label="dottore"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

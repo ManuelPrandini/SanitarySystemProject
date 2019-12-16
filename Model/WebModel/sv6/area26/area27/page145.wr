@@ -1,0 +1,49 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#area26#area27#page145" name="Dimetti paziente" layout:pageLayout="MetroStyle/Empty" gr:x="1330" gr:y="40">
+  <ContentUnits>
+    <EntryUnit id="sv6#area26#area27#page145#enu39" name="Dimetti paziente" linkOrder="sv6#area26#area27#page145#enu39#ln277" gr:x="0" gr:y="0" fieldOrder="sv6#area26#area27#page145#enu39#fld174 sv6#area26#area27#page145#enu39#fld171 sv6#area26#area27#page145#enu39#fld168 sv6#area26#area27#page145#enu39#fld157 sv6#area26#area27#page145#enu39#fld132">
+      <Field id="sv6#area26#area27#page145#enu39#fld132" name="descrizione" type="text" modifiable="true"/>
+      <Field id="sv6#area26#area27#page145#enu39#fld157" name="titolo" type="string" modifiable="true"/>
+      <Field id="sv6#area26#area27#page145#enu39#fld168" name="sala operatoria" type="string" preloaded="true"/>
+      <Field id="sv6#area26#area27#page145#enu39#fld171" name="orario fine intervento" type="time" preloaded="true"/>
+      <Field id="sv6#area26#area27#page145#enu39#fld174" name="Cf paziente" type="string" preloaded="true"/>
+      <Link id="sv6#area26#area27#page145#enu39#ln277" name="Dimetti" to="sv6#area26#area27#mfu20" type="normal" validate="true">
+        <LinkParameter id="sv6#area26#area27#page145#enu39#ln277#par2017" name="descrizione_description" source="sv6#area26#area27#page145#enu39#fld132" target="sv6#area26#area27#mfu20.ent5#att10"/>
+        <LinkParameter id="sv6#area26#area27#page145#enu39#ln277#par2018" name="orario fine intervento_endTime" source="sv6#area26#area27#page145#enu39#fld171" target="sv6#area26#area27#mfu20.ent5#att25"/>
+        <LinkParameter id="sv6#area26#area27#page145#enu39#ln277#par2019" name="titolo_title" source="sv6#area26#area27#page145#enu39#fld157" target="sv6#area26#area27#mfu20.ent5#att3"/>
+        <LinkParameter id="sv6#area26#area27#page145#enu39#ln277#par2020" name="Current/Input Date_PASSING_endDate" sourceLinkParameter="sv6#area26#area27#page145#tmu8#ln278#par2023" target="sv6#area26#area27#mfu20.ent5#att23"/>
+        <LinkParameter id="sv6#area26#area27#page145#enu39#ln277#par2021" name="oid_PASSING_KeyCondition68 [oid]" sourceLinkParameter="sv6#area26#area27#scu24#oln365#par1909" target="sv6#area26#area27#mfu20#su194#kcond79.ent5#att2"/>
+      </Link>
+    </EntryUnit>
+    <TimeUnit id="sv6#area26#area27#page145#tmu8" name="orario fine intervento" gr:x="0" gr:y="95">
+      <Link id="sv6#area26#area27#page145#tmu8#ln278" name="Flow228" to="sv6#area26#area27#page145#enu39" type="transport" validate="true">
+        <LinkParameter id="sv6#area26#area27#page145#tmu8#ln278#par2022" name="Current/Input Time_orario fine intervento" source="currentTime" target="sv6#area26#area27#page145#enu39#fld171_slot"/>
+        <LinkParameter id="sv6#area26#area27#page145#tmu8#ln278#par2023" name="Current/Input Date_PASSING" source="currentDate" passing="true"/>
+      </Link>
+    </TimeUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#area26#area27#page145#enu39">
+          <layout:Field field="sv6#area26#area27#page145#enu39#fld174"/>
+          <layout:Field field="sv6#area26#area27#page145#enu39#fld171"/>
+          <layout:Field field="sv6#area26#area27#page145#enu39#fld168"/>
+          <layout:Field field="sv6#area26#area27#page145#enu39#fld157"/>
+          <layout:Field field="sv6#area26#area27#page145#enu39#fld132"/>
+          <layout:Link link="sv6#area26#area27#page145#enu39#ln277"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

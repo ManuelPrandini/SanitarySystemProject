@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area1#page45" name="Home" gr:x="0" gr:y="315">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area1#page45" name="Home" gr:x="40" gr:y="445">
   <ContentUnits>
     <MultiMessageUnit id="sv3#area1#page45#mssu19" name="Benvenuto" gr:x="0" gr:y="20">
       <Message xml:space="preserve">Benvenuto nel sistema SanitarySystemProject  $$name$$ $$surname$$ !
@@ -6,10 +6,10 @@ Puoi iniziare subito a controllare il tuo profilo o ad interagire con i medici e
       <Placeholder id="sv3#area1#page45#mssu19#ph4" name="surname"/>
       <Placeholder id="sv3#area1#page45#mssu19#ph5" name="name"/>
     </MultiMessageUnit>
-    <GetUnit gr:x="370" gr:y="10" id="sv3#area1#page45#gtu17" name="Get17" contextParameters="UserCtxParam">
+    <GetUnit gr:x="370" gr:y="10" id="sv3#area1#page45#gtu17" name="GetUserCf" contextParameters="UserCtxParam">
       <Link id="sv3#area1#page45#gtu17#ln166" name="Flow166" to="sv3#area1#page45#seu43" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
-    <SelectorUnit gr:x="135" gr:y="0" id="sv3#area1#page45#seu43" name="SelectorUserNameSurname" entity="User">
+    <SelectorUnit gr:x="135" gr:y="0" id="sv3#area1#page45#seu43" name="Selezione nome e cognome" entity="User">
       <Selector id="sv3#area1#page45#seu43#su83" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area1#page45#seu43#su83#kcond41" name="KeyCondition41" predicate="in" implied="false"/>
       </Selector>

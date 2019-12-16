@@ -104,7 +104,7 @@
         <LinkParameter id="mov2#hym1#page35#seu120#ln243#par1772" name="oid_citt&#224; farmacia * [output]" source="ent12#att16Array" target="mov2#hym1#page35#enu11#sfld45_output"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit id="mov2#hym1#page35#seu121" name="SelectorPharmacy" gr:x="465" gr:y="175" entity="ent19">
+    <SelectorUnit id="mov2#hym1#page35#seu121" name="Selezione farmacia" gr:x="465" gr:y="175" entity="ent19">
       <Selector id="mov2#hym1#page35#seu121#su169" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#hym1#page35#seu121#su169#acond176" name="citt&#224;" predicate="eq" booleanOperator="or" implied="false" attributes="rel13#role25.ent12#att16"/>
       </Selector>

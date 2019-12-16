@@ -1,0 +1,146 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#area26#area27#page144" name="Coda interventi" landmark="false" gr:x="0" gr:y="5">
+  <ContentUnits>
+    <PowerIndexUnit id="sv6#area26#area27#page144#pwu10" name="Coda Pronto Soccorso" gr:x="0" gr:y="30" sortable="false" checkable="false" useCountQuery="false" entity="ent17" displayAttributes="ent5#att2 rel11#role16.rel14#role28.userOID ent5#att22 ent5#att24 rel34#role67.ent18#att38">
+      <Selector id="sv6#area26#area27#page144#pwu10#su196" defaultPolicy="fill" booleanOperator="and" expression="sv6#area26#area27#page144#pwu10#su196#acond206 AND (sv6#area26#area27#page144#pwu10#su196#acond207 OR sv6#area26#area27#page144#pwu10#su196#acond208)">
+        <AttributesCondition id="sv6#area26#area27#page144#pwu10#su196#acond206" name="listaOid" predicate="eq" booleanOperator="or" implied="false" attributes="ent5#att2"/>
+        <AttributesCondition id="sv6#area26#area27#page144#pwu10#su196#acond207" name="noEmergencyRoom" predicate="null" booleanOperator="or" implied="false" attributes="rel35#role69.ent10#att5"/>
+        <AttributesCondition id="sv6#area26#area27#page144#pwu10#su196#acond208" name="emergencyRoomEmpty" predicate="empty" booleanOperator="or" implied="false" attributes="rel35#role69.ent10#att5"/>
+      </Selector>
+      <Link id="sv6#area26#area27#page144#pwu10#ln272" name="Flow213" to="sv6#area26#area27#page144#mssu94" type="transport" validate="true">
+        <LinkParameter id="sv6#area26#area27#page144#pwu10#ln272#par2006" name="oid_PASSING" source="data[].ent5#att2" passing="true"/>
+      </Link>
+    </PowerIndexUnit>
+    <MultiMessageUnit id="sv6#area26#area27#page144#mssu94" name="Scegli operazione" linkOrder="sv6#area26#area27#page144#mssu94#ln273" gr:x="355" gr:y="65">
+      <Link id="sv6#area26#area27#page144#mssu94#ln273" name="Chiama " to="sv6#area26#area27#seu134" type="normal" validate="true">
+        <LinkParameter id="sv6#area26#area27#page144#mssu94#ln273#par2007" name="oid_PASSING_KeyCondition67 [oid]" sourceLinkParameter="sv6#area26#area27#page144#pwu10#ln272#par2006" target="sv6#area26#area27#seu134#su193#kcond76.ent5#att2"/>
+      </Link>
+      <Message xml:space="preserve">Chiama il prossimo paziente</Message>
+    </MultiMessageUnit>
+    <PowerIndexUnit id="sv6#area26#area27#page144#pwu11" name="In sala operatoria" linkOrder="sv6#area26#area27#page144#pwu11#ln274" gr:x="575" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent17" displayAttributes="ent5#att2 ent5#att22 ent5#att24 rel3#role3.rel36#role72.userOID rel11#role16.rel14#role28.userOID rel35#role69.ent10#att50 rel34#role67.ent18#att38">
+      <Selector id="sv6#area26#area27#page144#pwu11#su197" defaultPolicy="fill" booleanOperator="and" expression="(sv6#area26#area27#page144#pwu11#su197#acond209 OR sv6#area26#area27#page144#pwu11#su197#acond210) AND sv6#area26#area27#page144#pwu11#su197#acond211 AND (sv6#area26#area27#page144#pwu11#su197#acond212 OR sv6#area26#area27#page144#pwu11#su197#acond213)">
+        <AttributesCondition id="sv6#area26#area27#page144#pwu11#su197#acond209" name="coda" predicate="empty" booleanOperator="or" implied="false" attributes="rel27#role54.ent32#att69"/>
+        <AttributesCondition id="sv6#area26#area27#page144#pwu11#su197#acond210" name="codaNull" predicate="null" booleanOperator="or" implied="false" attributes="rel27#role54.ent32#att69"/>
+        <AttributesCondition id="sv6#area26#area27#page144#pwu11#su197#acond211" name="ospedale" predicate="eq" booleanOperator="or" implied="false" attributes="rel35#role69.rel37#role74.ent4#att1"/>
+        <AttributesCondition id="sv6#area26#area27#page144#pwu11#su197#acond212" name="endTimeNull" predicate="null" booleanOperator="or" implied="false" attributes="ent5#att25"/>
+        <AttributesCondition id="sv6#area26#area27#page144#pwu11#su197#acond213" name="endTimeEmpty" predicate="empty" booleanOperator="or" implied="false" attributes="ent5#att25"/>
+      </Selector>
+      <Link id="sv6#area26#area27#page144#pwu11#ln274" name="Dimetti" to="sv6#area26#area27#scu24" type="normal" validate="true">
+        <LinkParameter id="sv6#area26#area27#page144#pwu11#ln274#par2008" name="VisitToDoctor.DoctorToUser.cf_cfDottoreOp" source="data[].rel3#role3$rel36#role72$userOID" target="sv6#area26#area27#scu24.cfDottoreOp"/>
+        <LinkParameter id="sv6#area26#area27#page144#pwu11#ln274#par2009" name="UserCtxParam.cf_PASSING_cfSession" sourceLinkParameter="sv6#area26#area27#page144#seu136#ln276#par2016" target="sv6#area26#area27#scu24.cfSession"/>
+        <LinkParameter id="sv6#area26#area27#page144#pwu11#ln274#par2010" name="Emergency_operationToEmergency_Room.name_PASSING" source="data[].rel35#role69$ent10#att50" passing="true"/>
+        <LinkParameter id="sv6#area26#area27#page144#pwu11#ln274#par2011" name="VisitToPatient.PatientToUser.cf_PASSING" source="data[].rel11#role16$rel14#role28$userOID" passing="true"/>
+        <LinkParameter id="sv6#area26#area27#page144#pwu11#ln274#par2012" name="oid_PASSING" source="data[].ent5#att2" passing="true"/>
+      </Link>
+    </PowerIndexUnit>
+    <GetUnit id="sv6#area26#area27#page144#gtu23" name="CFDottore" gr:x="605" gr:y="195" contextParameters="UserCtxParam">
+      <Link id="sv6#area26#area27#page144#gtu23#ln275" name="Flow224" to="sv6#area26#area27#page144#seu136" type="transport" validate="true">
+        <LinkParameter id="sv6#area26#area27#page144#gtu23#ln275#par2013" name="UserCtxParam.cf_doctor" source="sv6#area26#area27#page144#gtu23.UserCtxParam" target="sv6#area26#area27#page144#seu136#su198#acond214"/>
+        <LinkParameter id="sv6#area26#area27#page144#gtu23#ln275#par2014" name="UserCtxParam.cf_PASSING" source="sv6#area26#area27#page144#gtu23.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit id="sv6#area26#area27#page144#seu136" name="SelezioneOspedale" gr:x="760" gr:y="190" entity="ent4">
+      <Selector id="sv6#area26#area27#page144#seu136#su198" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv6#area26#area27#page144#seu136#su198#acond214" name="doctor" predicate="eq" booleanOperator="or" implied="false" attributes="rel37#role73.rel5#role20.rel36#role72.userOID"/>
+      </Selector>
+      <Link id="sv6#area26#area27#page144#seu136#ln276" name="Flow225" to="sv6#area26#area27#page144#pwu11" type="transport" validate="true">
+        <LinkParameter id="sv6#area26#area27#page144#seu136#ln276#par2015" name="id_hospital_ospedale" source="ent4#att1Array" target="sv6#area26#area27#page144#pwu11#su197#acond211"/>
+        <LinkParameter id="sv6#area26#area27#page144#seu136#ln276#par2016" name="UserCtxParam.cf_PASSING" sourceLinkParameter="sv6#area26#area27#page144#gtu23#ln275#par2014" passing="true"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#area26#area27#page144#pwu10">
+          <layout:Attribute attribute="ent5#att2"/>
+          <layout:Attribute label="Cf paziente" attribute="rel11#role16.rel14#role28.userOID"/>
+          <layout:Attribute label="Data" attribute="ent5#att22"/>
+          <layout:Attribute label="Orario accettazione" attribute="ent5#att24"/>
+          <layout:Attribute label="Codice" attribute="rel34#role67.ent18#att38"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#area26#area27#page144#mssu94">
+          <layout:Link link="sv6#area26#area27#page144#mssu94#ln273"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#area26#area27#page144#pwu11">
+          <layout:Link link="sv6#area26#area27#page144#pwu11#ln274"/>
+          <layout:Attribute attribute="ent5#att2"/>
+          <layout:Attribute label="Data" attribute="ent5#att22"/>
+          <layout:Attribute label="Orario Inizio intervento" attribute="ent5#att24"/>
+          <layout:Attribute label="Cf Dottore" attribute="rel3#role3.rel36#role72.userOID"/>
+          <layout:Attribute label="Cf paziente" attribute="rel11#role16.rel14#role28.userOID"/>
+          <layout:Attribute label="Sala operatoria" attribute="rel35#role69.ent10#att50"/>
+          <layout:Attribute label="Codice" attribute="rel34#role67.ent18#att38"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

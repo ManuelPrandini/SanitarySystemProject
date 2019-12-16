@@ -9,7 +9,7 @@
       </OKLink>
     </ModuleInstanceUnit>
     <ModuleInstanceUnit gr:x="315" gr:y="0" id="sv1#area7#miu20" action="false" moduleId="mov2#hym5"/>
-    <IsNotNullUnit gr:x="310" gr:y="735" id="sv1#area7#inn18" name="VisitsNotNull?">
+    <IsNotNullUnit gr:x="310" gr:y="735" id="sv1#area7#inn18" name="esistono?">
       <OKLink id="sv1#area7#inn18#oln158" name="OKFlow158" to="sv1#area7#page65#pwu1">
         <LinkParameter id="sv1#area7#inn18#oln158#par619" name="Input Value_oidVisit [oid]" source="inputValue" target="sv1#area7#page65#pwu1#su2#kcond36.ent5#att2"/>
         <LinkParameter id="sv1#area7#inn18#oln158#par632" name="Input Value_PASSING" source="inputValue" passing="true"/>
@@ -19,7 +19,7 @@
       </OKLink>
       <KOLink id="sv1#area7#inn18#kln4" name="KOFlow2" to="sv1#area7#page70#mssu24" automaticCoupling="true"/>
     </IsNotNullUnit>
-    <SelectorUnit id="sv1#area7#seu54" name="SelectVisits" gr:x="15" gr:y="660" entity="ent29" distinctAttributes="ent5#att2">
+    <SelectorUnit id="sv1#area7#seu54" name="Selezione visite attive" gr:x="15" gr:y="660" entity="ent29" distinctAttributes="ent5#att2">
       <Selector id="sv1#area7#seu54#su92" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area7#seu54#su92#acond117" name="cfDoctor" predicate="eq" booleanOperator="and" implied="false" attributes="rel3#role3.rel36#role72.userOID"/>
         <AttributesCondition id="sv1#area7#seu54#su92#acond118" name="cfPatient" predicate="eq" booleanOperator="and" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>

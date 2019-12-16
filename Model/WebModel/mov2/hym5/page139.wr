@@ -10,7 +10,7 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov2#hym5#page139#inu12">
-          <layout:Attribute attribute="rel21#role41.ent28#att71"/>
+          <layout:Attribute attribute="rel21#role41.ent28#att71" label="tipologia accertamento"/>
           <layout:Attribute attribute="ent27#att68"/>
           <layout:Attribute attribute="ent27#att73"/>
         </layout:Unit>

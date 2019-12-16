@@ -56,10 +56,10 @@
           <TypeValidationRule id="mov2#hym1#page49#enu10#fld125#tvr8" name="Type Validation1"/>
         </VRules>
       </Field>
-      <SelectionField id="mov2#hym1#page49#enu10#sfld40" name="ospedale di lavoro " type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventIndicator="true" ajaxEventLink="mov2#hym1#page49#enu10#ln59">
+      <SelectionField id="mov2#hym1#page49#enu10#sfld40" name="ospedale di lavoro *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventIndicator="true" ajaxEventLink="mov2#hym1#page49#enu10#ln59">
         <VRules/>
       </SelectionField>
-      <SelectionField id="mov2#hym1#page49#enu10#sfld41" name="specializzazione medica " type="string" ajaxEventEnabled="true" ajaxEventIndicator="true" ajaxEventLink="mov2#hym1#page49#enu10#ln59">
+      <SelectionField id="mov2#hym1#page49#enu10#sfld41" name="specializzazione medica *" type="string" ajaxEventEnabled="true" ajaxEventIndicator="true" ajaxEventLink="mov2#hym1#page49#enu10#ln59">
         <VRules/>
       </SelectionField>
       <SelectionField id="mov2#hym1#page49#enu10#sfld42" name="stanza di lavoro *" type="string">
@@ -109,7 +109,7 @@
       <SelectionField id="mov2#hym1#page49#enu10#sfld49" name="paese di residenza *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page49#enu10#ln254"/>
       <SelectionField id="mov2#hym1#page49#enu10#sfld48" name="paese di nascita *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page49#enu10#ln253"/>
     </EntryUnit>
-    <SelectorUnit id="mov2#hym1#page49#seu23" name="SelectorHospital" gr:x="5" gr:y="160" entity="ent4">
+    <SelectorUnit id="mov2#hym1#page49#seu23" name="Selezione ospedale" gr:x="5" gr:y="160" entity="ent4">
       <Selector id="mov2#hym1#page49#seu23#su178" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#hym1#page49#seu23#su178#acond198" name="citt&#224;" predicate="eq" booleanOperator="or" implied="false" attributes="rel2#role2.ent12#att16"/>
       </Selector>
@@ -118,7 +118,7 @@
         <LinkParameter id="mov2#hym1#page49#seu23#ln257#par1804" name="id_hospital_ospedale di lavoro  [output]" source="ent4#att1Array" target="mov2#hym1#page49#enu10#sfld40_output"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit id="mov2#hym1#page49#seu25" name="SelectorMedicalSpecialization" gr:x="275" gr:y="0" entity="ent8">
+    <SelectorUnit id="mov2#hym1#page49#seu25" name="Selezione spec medica" gr:x="275" gr:y="0" entity="ent8">
       <SortAttribute attribute="ent8#att21" order="ascending"/>
       <Link id="mov2#hym1#page49#seu25#ln150" name="Flow150" to="mov2#hym1#page49#enu10" type="transport" validate="true">
         <LinkParameter id="mov2#hym1#page49#seu25#ln150#par609" name="nameSpecialization_medical specialization [label]" source="ent8#att21Array" target="mov2#hym1#page49#enu10#sfld41_label"/>

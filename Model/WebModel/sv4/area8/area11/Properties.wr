@@ -8,7 +8,7 @@
         <LinkParameter id="sv4#area8#area11#miu16#kln55#par474" name="Check your e-mail for instructions._Shown Messages" sourceValue="Check your e-mail for instructions." target="sv4#area8#area11#page56#mssu32.shownMessages"/>
       </KOLink>
     </ModuleInstanceUnit>
-    <ParameterCollectorUnit gr:x="280" gr:y="305" id="sv4#area8#area11#pcu2" name="reset url entry point" customURLName="reset" customDescriptor="false" secure="false" urlFragment="sv4#area8#area11#pcu2#pcp3">
+    <ParameterCollectorUnit gr:x="280" gr:y="305" id="sv4#area8#area11#pcu2" name="url per il reset" customURLName="reset" customDescriptor="false" secure="false" urlFragment="sv4#area8#area11#pcu2#pcp3">
       <CollectorParameter id="sv4#area8#area11#pcu2#pcp3" name="code"/>
       <OKLink id="sv4#area8#area11#pcu2#oln18" name="OKFlow18" to="sv4#area8#area11#miu17">
         <LinkParameter id="sv4#area8#area11#pcu2#oln18#par33" name="code_code" source="sv4#area8#area11#pcu2#pcp3" target="sv4#area8#area11#miu17.mov2#mpkg2#opm16#icu18#icp25"/>

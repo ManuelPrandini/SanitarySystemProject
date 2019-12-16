@@ -10,7 +10,7 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#area12#page103#inu15">
-          <layout:Attribute attribute="ent22#att51"/>
+          <layout:Attribute attribute="ent22#att51" label="nome"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

@@ -1,10 +1,10 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area1#page44" name="Modifica il tuo profilo" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="110" id="sv3#area1#page44" name="Modifica il tuo profilo" landmark="true">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv3#area1#page44#enu6" name="Seleziona i dati che vuoi modificare" fieldOrder="sv3#area1#page44#enu6#fld21 sv3#area1#page44#enu6#fld22 sv3#area1#page44#enu6#fld23 sv3#area1#page44#enu6#fld25" linkOrder="sv3#area1#page44#enu6#ln170">
-      <Field id="sv3#area1#page44#enu6#fld23" name="Weight" type="integer" modifiable="true" preloaded="true"/>
-      <Field id="sv3#area1#page44#enu6#fld22" name="Telephone" type="string" modifiable="true" preloaded="true"/>
-      <Field id="sv3#area1#page44#enu6#fld21" name="Address" type="string" modifiable="true" preloaded="true"/>
-      <Field id="sv3#area1#page44#enu6#fld25" name="Height" type="integer" preloaded="true" modifiable="true"/>
+    <EntryUnit gr:x="250" gr:y="15" id="sv3#area1#page44#enu6" name="Seleziona i dati che vuoi modificare" fieldOrder="sv3#area1#page44#enu6#sfld62 sv3#area1#page44#enu6#sfld63 sv3#area1#page44#enu6#fld21 sv3#area1#page44#enu6#fld22 sv3#area1#page44#enu6#fld23 sv3#area1#page44#enu6#fld25" linkOrder="sv3#area1#page44#enu6#ln170 sv3#area1#page44#enu6#ln205">
+      <Field id="sv3#area1#page44#enu6#fld23" name="Peso ( kg )" type="integer" modifiable="true" preloaded="true"/>
+      <Field id="sv3#area1#page44#enu6#fld22" name="Telefono" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#area1#page44#enu6#fld21" name="Indirizzo residenza" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#area1#page44#enu6#fld25" name="Altezza ( cm )" type="integer" preloaded="true" modifiable="true"/>
       <Link id="sv3#area1#page44#enu6#ln170" name="Aggiorna il mio profilo" to="sv3#area1#mfu11" type="normal" validate="true">
         <LinkParameter id="sv3#area1#page44#enu6#ln170#par682" name="Address_address" source="sv3#area1#page44#enu6#fld21" target="sv3#area1#mfu11.User#att40"/>
         <LinkParameter id="sv3#area1#page44#enu6#ln170#par683" name="cf_PASSING_KeyCondition43 [cf]" sourceLinkParameter="sv3#area1#page44#seu44#ln168#par681" target="sv3#area1#mfu11#su85#kcond43.userOID"/>
@@ -12,9 +12,15 @@
         <LinkParameter id="sv3#area1#page44#enu6#ln170#par685" name="Height_PASSING" source="sv3#area1#page44#enu6#fld25" passing="true"/>
         <LinkParameter id="sv3#area1#page44#enu6#ln170#par686" name="Weight_PASSING" source="sv3#area1#page44#enu6#fld23" passing="true"/>
         <LinkParameter id="sv3#area1#page44#enu6#ln170#par687" name="UserToPatient.patient_code_PASSING" sourceLinkParameter="sv3#area1#page44#seu44#ln168#par680" passing="true"/>
+        <LinkParameter id="sv3#area1#page44#enu6#ln170#par994" name="Citt&#224; di residenza_City.oid(Lives)" source="sv3#area1#page44#enu6#sfld63" target="sv3#area1#mfu11.rel9#role14.ent12#att16"/>
+      </Link>
+      <SelectionField id="sv3#area1#page44#enu6#sfld63" name="Citt&#224; di residenza" type="string" modifiable="true"/>
+      <SelectionField id="sv3#area1#page44#enu6#sfld62" name="Nazione di residenza" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="sv3#area1#page44#enu6#ln205" ajaxEventIndicator="true"/>
+      <Link id="sv3#area1#page44#enu6#ln205" name="SelezioneCitt&#224;" to="sv3#area1#seu110" type="normal" validate="true">
+        <LinkParameter id="sv3#area1#page44#enu6#ln205#par985" name="Nazione di residenza_nazione" source="sv3#area1#page44#enu6#sfld62" target="sv3#area1#seu110#su155#acond179"/>
       </Link>
     </EntryUnit>
-    <SelectorUnit id="sv3#area1#page44#seu44" name="SelectorUserInformation" gr:x="30" gr:y="115" entity="User" distinctAttributes="rel14#role27.ent6#att30 rel14#role27.ent6#att31">
+    <SelectorUnit id="sv3#area1#page44#seu44" name="Informazioni utente" gr:x="280" gr:y="130" entity="User" distinctAttributes="rel14#role27.ent6#att30 rel14#role27.ent6#att31">
       <Selector id="sv3#area1#page44#seu44#su84" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area1#page44#seu44#su84#kcond42" name="Key" predicate="in" implied="false"/>
       </Selector>
@@ -27,19 +33,28 @@
         <LinkParameter id="sv3#area1#page44#seu44#ln168#par681" name="cf_PASSING" source="userOIDArray" passing="true"/>
       </Link>
     </SelectorUnit>
-    <GetUnit gr:x="240" gr:y="125" id="sv3#area1#page44#gtu18" name="Get18" contextParameters="UserCtxParam">
+    <GetUnit gr:x="490" gr:y="140" id="sv3#area1#page44#gtu18" name="GetUserCf" contextParameters="UserCtxParam">
       <Link id="sv3#area1#page44#gtu18#ln169" name="Flow169" to="sv3#area1#page44#seu44" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
+    <SelectorUnit gr:x="0" gr:y="0" id="sv3#area1#page44#seu109" name="Selezione nazione residenza" entity="ent11">
+      <Link id="sv3#area1#page44#seu109#ln91" name="Flow91" to="sv3#area1#page44#enu6" type="transport" validate="true">
+        <LinkParameter id="sv3#area1#page44#seu109#ln91#par831" name="name_Nazione di residenza [label]" source="ent11#att18Array" target="sv3#area1#page44#enu6#sfld62_label"/>
+        <LinkParameter id="sv3#area1#page44#seu109#ln91#par910" name="oid_Nazione di residenza [output]" source="ent11#att15Array" target="sv3#area1#page44#enu6#sfld62_output"/>
+      </Link>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#area1#page44#enu6">
+          <layout:Field field="sv3#area1#page44#enu6#sfld62"/>
+          <layout:Field field="sv3#area1#page44#enu6#sfld63"/>
           <layout:Field field="sv3#area1#page44#enu6#fld21"/>
           <layout:Field field="sv3#area1#page44#enu6#fld22"/>
           <layout:Field field="sv3#area1#page44#enu6#fld23"/>
           <layout:Field field="sv3#area1#page44#enu6#fld25"/>
           <layout:Link link="sv3#area1#page44#enu6#ln170"/>
+          <layout:Link link="sv3#area1#page44#enu6#ln205"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

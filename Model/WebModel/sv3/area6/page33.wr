@@ -8,7 +8,7 @@
       </Selector>
       <Link id="sv3#area6#page33#ecu2#ln6" name="Mostra dettagli" to="sv3#area6#page33#dau1" automaticCoupling="true" type="normal" validate="true"/>
     </EventCalendarUnit>
-    <DataUnit gr:x="305" gr:y="15" id="sv3#area6#page33#dau1" name="DettagliVisita" entity="ent29" displayAttributes="rel16#role31.ent10#att50 rel16#role31.ent10#att26 rel16#role31.rel37#role74.ent4#att14 rel16#role31.rel37#role74.ent4#att4" linkOrder="sv3#area6#page33#dau1#ln21">
+    <DataUnit gr:x="305" gr:y="15" id="sv3#area6#page33#dau1" name="DettagliVisita" entity="ent29" displayAttributes="rel16#role31.rel37#role74.ent4#att14 rel16#role31.rel37#role74.ent4#att4 rel16#role31.ent10#att50 rel16#role31.ent10#att26" linkOrder="sv3#area6#page33#dau1#ln21">
       <Selector id="sv3#area6#page33#dau1#su1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area6#page33#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
@@ -18,12 +18,12 @@
         <LinkParameter id="sv3#area6#page33#dau1#ln21#par155" name="oid_PASSING" source="data.ent5#att2" passing="true"/>
       </Link>
     </DataUnit>
-    <GetUnit id="sv3#area6#page33#gtu1" name="GetUser" gr:x="170" gr:y="155" contextParameters="UserCtxParam">
+    <GetUnit id="sv3#area6#page33#gtu1" name="GetUserCf" gr:x="170" gr:y="155" contextParameters="UserCtxParam">
       <Link id="sv3#area6#page33#gtu1#ln5" name="Flow5" to="sv3#area6#page33#ecu2" type="transport" validate="true">
         <LinkParameter id="sv3#area6#page33#gtu1#ln5#par145" name="UserCtxParam.cf_cf" source="sv3#area6#page33#gtu1.UserCtxParam" target="sv3#area6#page33#ecu2#su53#acond16"/>
       </Link>
     </GetUnit>
-    <TimeUnit id="sv3#area6#page33#tmu3" name="CurrentDate" gr:x="50" gr:y="165">
+    <TimeUnit id="sv3#area6#page33#tmu3" name="Data corrente" gr:x="50" gr:y="165">
       <Link id="sv3#area6#page33#tmu3#ln70" name="Flow71" to="sv3#area6#page33#ecu2" type="transport" validate="true">
         <LinkParameter id="sv3#area6#page33#tmu3#ln70#par322" name="Current/Input Date_Current Date" source="currentDate" target="sv3#area6#page33#ecu2.inputDate"/>
         <LinkParameter id="sv3#area6#page33#tmu3#ln70#par141" name="Current/Input Date_startDate" source="currentDate" target="sv3#area6#page33#ecu2#su53#acond46"/>
@@ -68,11 +68,11 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#area6#page33#dau1">
-          <layout:Attribute attribute="rel16#role31.ent10#att50"/>
-          <layout:Attribute attribute="rel16#role31.ent10#att26"/>
-          <layout:Attribute attribute="rel16#role31.rel37#role74.ent4#att14"/>
-          <layout:Attribute attribute="rel16#role31.rel37#role74.ent4#att4"/>
           <layout:Link link="sv3#area6#page33#dau1#ln21"/>
+          <layout:Attribute attribute="rel16#role31.rel37#role74.ent4#att14" label="ospedale"/>
+          <layout:Attribute attribute="rel16#role31.rel37#role74.ent4#att4" label="indirizzo"/>
+          <layout:Attribute attribute="rel16#role31.ent10#att50" label="nome stanza"/>
+          <layout:Attribute attribute="rel16#role31.ent10#att26" label="piano"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

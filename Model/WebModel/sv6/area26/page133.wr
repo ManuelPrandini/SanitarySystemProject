@@ -1,0 +1,25 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#area26#page133" name="Errore!" layout:pageLayout="MetroStyle/Empty" gr:x="745" gr:y="130">
+  <ContentUnits>
+    <MultiMessageUnit id="sv6#area26#page133#mssu90" name="Errore cf paziente" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Il codice fiscale del paziente &#232; errato o non pu&#242; essere uguale a quello del dottore</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv6#area26#page133#mssu90"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

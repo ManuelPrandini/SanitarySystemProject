@@ -1,10 +1,10 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="345" gr:y="285" id="mov2#hym4#page16" name="Prescription Info">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="285" gr:y="285" id="mov2#hym4#page16" name="Dati prescrizione medica">
   <ContentUnits>
-    <EntryUnit id="mov2#hym4#page16#enu17" name="Prescrizione" gr:x="0" gr:y="0" fieldOrder="mov2#hym4#page16#enu17#fld104 mov2#hym4#page16#enu17#sfld23 mov2#hym4#page16#enu17#fld103 mov2#hym4#page16#enu17#fld102" linkOrder="mov2#hym4#page16#enu17#ln94">
-      <Field id="mov2#hym4#page16#enu17#fld102" name="description" type="text" modifiable="true"/>
-      <Field id="mov2#hym4#page16#enu17#fld103" name="quantity" type="integer" modifiable="true"/>
-      <SelectionField id="mov2#hym4#page16#enu17#sfld23" name="drug" type="string" modifiable="true"/>
-      <Field id="mov2#hym4#page16#enu17#fld104" name="id_visit" type="string" preloaded="true"/>
+    <EntryUnit id="mov2#hym4#page16#enu17" name="Prescrizione" gr:x="60" gr:y="0" fieldOrder="mov2#hym4#page16#enu17#fld104 mov2#hym4#page16#enu17#sfld23 mov2#hym4#page16#enu17#fld103 mov2#hym4#page16#enu17#fld102" linkOrder="mov2#hym4#page16#enu17#ln94">
+      <Field id="mov2#hym4#page16#enu17#fld102" name="ricetta" type="text" modifiable="true"/>
+      <Field id="mov2#hym4#page16#enu17#fld103" name="quantit&#224; da prescrivere" type="integer" modifiable="true"/>
+      <SelectionField id="mov2#hym4#page16#enu17#sfld23" name="nome farmaco" type="string" modifiable="true"/>
+      <Field id="mov2#hym4#page16#enu17#fld104" name="id_visita" type="string" preloaded="true"/>
       <Link id="mov2#hym4#page16#enu17#ln94" name="Aggiungi" to="mov2#hym4#miu21" type="normal" validate="true" gr:bendpoints="158,218,-217,-82">
         <LinkParameter id="mov2#hym4#page16#enu17#ln94#par534" name="description_description" source="mov2#hym4#page16#enu17#fld102" target="mov2#hym4#miu21.mov2#mpkg2#opm10#icu20#icp98"/>
         <LinkParameter id="mov2#hym4#page16#enu17#ln94#par535" name="drug_id_drug" source="mov2#hym4#page16#enu17#sfld23" target="mov2#hym4#miu21.mov2#mpkg2#opm10#icu20#icp97"/>
@@ -17,7 +17,7 @@
         <LinkParameter id="mov2#hym4#page16#enu17#ln94#par1955" name="data_visita_PASSING" sourceLinkParameter="mov2#hym4#pcu7#oln166#par1954" passing="true"/>
       </Link>
     </EntryUnit>
-    <SelectorUnit id="mov2#hym4#page16#seu27" name="DrugSelector" gr:x="0" gr:y="105" entity="ent2">
+    <SelectorUnit id="mov2#hym4#page16#seu27" name="Selezione farmaci no da banco" gr:x="0" gr:y="110" entity="ent2">
       <Link id="mov2#hym4#page16#seu27#ln93" name="Flow87" to="mov2#hym4#page16#enu17" type="transport" validate="true">
         <LinkParameter id="mov2#hym4#page16#seu27#ln93#par508" name="name_drug [label]" source="ent2#att8Array" target="mov2#hym4#page16#enu17#sfld23_label"/>
         <LinkParameter id="mov2#hym4#page16#seu27#ln93#par509" name="id_drug [output]" source="ent2#att6Array" target="mov2#hym4#page16#enu17#sfld23_output"/>

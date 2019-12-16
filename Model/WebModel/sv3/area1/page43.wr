@@ -1,12 +1,12 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area1#page43" name="Informazioni personali" landmark="true" gr:x="635" gr:y="0">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area1#page43" name="Informazioni personali" landmark="true" gr:x="895" gr:y="130">
   <ContentUnits>
-    <DataUnit id="sv3#area1#page43#dau2" name="Dati personali" gr:x="155" gr:y="0" entity="User" displayAttributes="userOID userName email User#att27 User#att28 User#att29 User#att40 User#att41 rel14#role27.ent6#att30 rel14#role27.ent6#att31 rel14#role27.ent6#att11">
+    <DataUnit id="sv3#area1#page43#dau2" name="Dati personali" gr:x="155" gr:y="0" entity="User" displayAttributes="userOID email User#att27 User#att28 User#att29 User#att40 User#att41 rel14#role27.ent6#att30 rel14#role27.ent6#att31 rel14#role27.ent6#att11">
       <Selector id="sv3#area1#page43#dau2#su77" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area1#page43#dau2#su77#kcond35" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
       <Link id="sv3#area1#page43#dau2#ln79" name="Flow21" to="sv3#lou3" type="transport" automaticCoupling="true" validate="true"/>
     </DataUnit>
-    <GetUnit gr:x="0" gr:y="10" id="sv3#area1#page43#gtu14" name="Get14" contextParameters="UserCtxParam">
+    <GetUnit gr:x="0" gr:y="10" id="sv3#area1#page43#gtu14" name="GetUserCf" contextParameters="UserCtxParam">
       <Link id="sv3#area1#page43#gtu14#ln164" name="Flow164" to="sv3#area1#page43#dau2" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
   </ContentUnits>
@@ -15,12 +15,11 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#area1#page43#dau2">
           <layout:Attribute attribute="userOID"/>
-          <layout:Attribute attribute="userName"/>
           <layout:Attribute attribute="email"/>
           <layout:Attribute attribute="User#att27" label="nome"/>
           <layout:Attribute attribute="User#att28" label="cognome"/>
           <layout:Attribute attribute="User#att29" label="data di nascita"/>
-          <layout:Attribute attribute="User#att40" label="indirizzo"/>
+          <layout:Attribute attribute="User#att40" label="indirizzo di residenza"/>
           <layout:Attribute attribute="User#att41" label="telefono"/>
           <layout:Attribute attribute="rel14#role27.ent6#att30" label="peso"/>
           <layout:Attribute attribute="rel14#role27.ent6#att31" label="altezza"/>

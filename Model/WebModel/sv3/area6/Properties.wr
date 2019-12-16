@@ -1,10 +1,10 @@
 <Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-160" gr:y="505" id="sv3#area6" name="Visite e Ricoveri" landmark="true" landmarks="sv3#area6#page20 sv3#area6#page33 sv3#area6#page93" defaultPage="sv3#area6#page20">
   <OperationUnits>
-    <CreateUnit gr:x="1245" gr:y="350" id="sv3#area6#cru9" name="CreatePendingVisit" entity="ent29">
+    <CreateUnit gr:x="1245" gr:y="350" id="sv3#area6#cru9" name="CreaPrenotazioneDiVisita" entity="ent29">
       <KOLink id="sv3#area6#cru9#kln12" name="KOFlow12" to="sv3#area6#page22" automaticCoupling="true"/>
       <OKLink id="sv3#area6#cru9#oln16" name="OKFlow16" to="sv3#area6#page21#mssu11" automaticCoupling="true"/>
     </CreateUnit>
-    <SelectorUnit id="sv3#area6#seu34" name="Selector Hospital" gr:x="510" gr:y="70" entity="ent4">
+    <SelectorUnit id="sv3#area6#seu34" name="Selezione ospedale" gr:x="510" gr:y="70" entity="ent4">
       <Selector id="sv3#area6#seu34#su67" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv3#area6#seu34#su67#acond62" name="City" predicate="eq" booleanOperator="and" implied="false" attributes="rel2#role2.ent12#att16"/>
       </Selector>
@@ -13,7 +13,7 @@
         <LinkParameter id="sv3#area6#seu34#oln134#par176" name="id_hospital_Hospital [output]" source="ent4#att1Array" target="sv3#area6#page20#enu15#sfld5_output"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit id="sv3#area6#seu35" name="SelectorTypeVisit" gr:x="145" gr:y="60" entity="ent8" distinct="false">
+    <SelectorUnit id="sv3#area6#seu35" name="Selezione tipo visita" gr:x="145" gr:y="60" entity="ent8" distinct="false">
       <Selector id="sv3#area6#seu35#su68" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv3#area6#seu35#su68#acond67" name="hospital_ID" predicate="eq" booleanOperator="and" implied="false" attributes="rel1#role17.rel37#role74.ent4#att1"/>
       </Selector>
@@ -22,7 +22,7 @@
         <LinkParameter id="sv3#area6#seu35#oln139#par179" name="nameSpecialization_TypeVisit [output]" source="ent8#att21Array" target="sv3#area6#page20#enu15#sfld6_output"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit gr:x="5" gr:y="295" id="sv3#area6#seu36" name="DoctorForThatSpecialization" entity="ent9" distinctAttributes="rel36#role72.User#att28 rel5#role19.ent10#att5 ent9#att33" distinct="false">
+    <SelectorUnit gr:x="5" gr:y="295" id="sv3#area6#seu36" name="Dottore per specializzazione selezionata" entity="ent9" distinctAttributes="rel36#role72.User#att28 rel5#role19.ent10#att5 ent9#att33" distinct="false">
       <Selector id="sv3#area6#seu36#su69" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv3#area6#seu36#su69#acond68" name="approvedValue" predicate="eq" booleanOperator="and" implied="false" value="1" attributes="ent9#att17"/>
         <AttributesCondition id="sv3#area6#seu36#su69#acond70" name="cf" predicate="neq" booleanOperator="and" implied="false" attributes="rel36#role72.userOID"/>
@@ -33,7 +33,7 @@
         <LinkParameter id="sv3#area6#seu36#oln140#par150" name="DoctorToRoom.id_room_oid [id_room]" source="rel5#role19$ent10#att5Array" target="sv3#area6#seu90#su88#kcond64.ent10#att5"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit gr:x="700" gr:y="70" id="sv3#area6#seu37" name="SelectVisitForThatDate" entity="ent5" distinctAttributes="ent5#att24">
+    <SelectorUnit gr:x="700" gr:y="70" id="sv3#area6#seu37" name="Seleziona visite per la data selezionata" entity="ent5" distinctAttributes="ent5#att24">
       <Selector id="sv3#area6#seu37#su70" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv3#area6#seu37#su70#acond81" name="Doctor" predicate="eq" booleanOperator="and" implied="false" attributes="rel3#role3.ent9#att33"/>
         <AttributesCondition id="sv3#area6#seu37#su70#acond86" name="Date" predicate="eq" booleanOperator="and" implied="false" attributes="ent5#att22"/>
@@ -43,7 +43,7 @@
       </OKLink>
       <SortAttribute attribute="ent5#att24" order="ascending"/>
     </SelectorUnit>
-    <ScriptUnit gr:x="1015" gr:y="120" id="sv3#area6#scu3" name="ScriptTime">
+    <ScriptUnit gr:x="1015" gr:y="120" id="sv3#area6#scu3" name="RitornaSlotDisponibili">
       <ScriptUnitText xml:space="preserve">#input Time[] slotOccupati
 #output Time[] slotLiberi
 
@@ -135,7 +135,7 @@ else {
         <LinkParameter id="sv3#area6#scu3#oln149#par318" name="slotLiberi_Time [output]" source="result(slotLiberi)" target="sv3#area6#page20#enu15#sfld8_output"/>
       </OKLink>
     </ScriptUnit>
-    <IsNotNullUnit gr:x="955" gr:y="0" id="sv3#area6#inn19" name="not Null">
+    <IsNotNullUnit gr:x="955" gr:y="0" id="sv3#area6#inn19" name="se esistono..">
       <OKLink id="sv3#area6#inn19#oln148" name="OKFlow148" to="sv3#area6#scu3">
         <LinkParameter id="sv3#area6#inn19#oln148#par204" name="Input Value_slotOccupati" source="inputValue" target="sv3#area6#scu3.slotOccupati"/>
       </OKLink>
@@ -143,7 +143,7 @@ else {
         <LinkParameter id="sv3#area6#inn19#kln59#par692" name="Input Value_slotOccupati" source="inputValue" target="sv3#area6#scu3.slotOccupati"/>
       </KOLink>
     </IsNotNullUnit>
-    <ScriptUnit id="sv3#area6#scu4" name="AddEndTime" gr:x="820" gr:y="305">
+    <ScriptUnit id="sv3#area6#scu4" name="AggiungiOrarioFine" gr:x="820" gr:y="305">
       <ScriptInput id="sv3#area6#scu4#sci2" name="startTIme"/>
       <ScriptUnitText xml:space="preserve">#input Time startTime
 #output Time endTime
@@ -199,7 +199,7 @@ return ["resultCode" : "success" , "endTime" : endTime]</ScriptUnitText>
         <LinkParameter id="sv3#area6#seu90#oln303#par658" name="id_room_Input" source="ent10#att5Array" target="sv3#area6#inn39.isnotnull"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit id="sv3#area6#seu127" name="SelectorCity" gr:x="190" gr:y="185" entity="ent12">
+    <SelectorUnit id="sv3#area6#seu127" name="Selezione citt&#224; ospedale" gr:x="100" gr:y="165" entity="ent12">
       <SortAttribute attribute="ent12#att39" order="ascending"/>
       <Selector id="sv3#area6#seu127#su201" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv3#area6#seu127#su201#acond219" name="stato" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role8.ent11#att15"/>

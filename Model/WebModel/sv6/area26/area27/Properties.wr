@@ -1,0 +1,113 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv6#area26#area27" name="Coda interventi" defaultPage="sv6#area26#area27#seu132" landmark="true" gr:x="0" gr:y="635">
+  <OperationUnits>
+    <SelectorUnit id="sv6#area26#area27#seu132" name="InfoDottoreOspedale" gr:x="55" gr:y="690" entity="ent9" distinctAttributes="rel5#role19.ent10#att5 rel5#role19.ent10#att50 rel5#role19.rel37#role74.rel41#role81.ent32#att69">
+      <Selector id="sv6#area26#area27#seu132#su190" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv6#area26#area27#seu132#su190#acond192" name="cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel36#role72.userOID"/>
+      </Selector>
+      <OKLink id="sv6#area26#area27#seu132#oln356" name="OKFlow301" to="sv6#area26#area27#seu133" gr:bendpoints="35,-69,-10,86">
+        <LinkParameter id="sv6#area26#area27#seu132#oln356#par1467" name="DoctorToRoom.RoomToHospital.HospitalToCodaprontosoccorso.oid_codaProntoSoccorso" source="rel5#role19$rel37#role74$rel41#role81$ent32#att69Array" target="sv6#area26#area27#seu133#su191#acond193"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="sv6#area26#area27#seu133" name="SelezionaInterventi" gr:x="20" gr:y="530" entity="ent17" distinctAttributes="ent5#att2 ent5#att24 rel34#role67.ent18#att38">
+      <Selector id="sv6#area26#area27#seu133#su191" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv6#area26#area27#seu133#su191#acond193" name="codaProntoSoccorso" predicate="eq" booleanOperator="and" implied="false" attributes="rel27#role54.ent32#att69"/>
+        <AttributesCondition id="sv6#area26#area27#seu133#su191#acond204" name="noStanzaAssegnata" predicate="null" booleanOperator="and" implied="false" attributes="rel35#role69.ent10#att5"/>
+      </Selector>
+      <OKLink id="sv6#area26#area27#seu133#oln359" name="OKFlow305" to="sv6#area26#area27#pcu18">
+        <LinkParameter id="sv6#area26#area27#seu133#oln359#par1482" name="Emergency_operationToEmergency_code.code_codice" source="rel34#role67$ent18#att38Array" target="sv6#area26#area27#pcu18#pcp75"/>
+        <LinkParameter id="sv6#area26#area27#seu133#oln359#par1483" name="oid_oid" source="ent5#att2Array" target="sv6#area26#area27#pcu18#pcp74"/>
+      </OKLink>
+    </SelectorUnit>
+    <GetUnit id="sv6#area26#area27#gtu20" name="CFDottore" gr:x="335" gr:y="695" contextParameters="UserCtxParam">
+      <Link id="sv6#area26#area27#gtu20#ln267" name="Flow191" to="sv6#area26#area27#seu132" type="transport" validate="true">
+        <LinkParameter id="sv6#area26#area27#gtu20#ln267#par1485" name="UserCtxParam.cf_cf" source="sv6#area26#area27#gtu20.UserCtxParam" target="sv6#area26#area27#seu132#su190#acond192"/>
+      </Link>
+    </GetUnit>
+    <ScriptUnit id="sv6#area26#area27#scu20" name="OrdinaInterventi" gr:x="280" gr:y="385">
+      <ScriptInput id="sv6#area26#area27#scu20#sci9" name="oid"/>
+      <ScriptInput id="sv6#area26#area27#scu20#sci14" name="codice"/>
+      <ScriptInput id="sv6#area26#area27#scu20#sci15" name="orario"/>
+      <ScriptUnitText xml:space="preserve">#input int[] oid,  String[] codice
+
+#output int[] listaOrdinataOid
+
+int oidAppoggio = 0;
+String codiceAppoggio = new String();
+
+
+for(int i = 0;i&lt; oid.size();i++)
+{
+ for(int j = 0; j &lt; oid.size()-1; j++)
+ {
+	if((codice[j].equals("VERDE") &amp;&amp; codice[j+1].equals("GIALLO")) ||
+		(codice[j].equals("VERDE") &amp;&amp; codice[j+1].equals("ROSSO")) ||
+		(codice[j].equals("GIALLO") &amp;&amp; codice[j+1].equals("ROSSO")))
+	{
+		//swap degli oid
+		oidAppoggio = oid[j];
+		oid[j] = oid[j+1];
+		oid[j+1] = oidAppoggio;
+		
+		//swap dei codici
+		codiceAppoggio = codice[j];
+		codice[j] = codice[j+1];
+		codice[j+1] = codiceAppoggio;
+	}
+ }
+}
+
+listaOrdinataOid = oid;
+if(listaOrdinataOid.size() &gt; 0 || listaOrdinataOid != null)
+	return [resultCode:"success","listaOrdinataOid":listaOrdinataOid];
+else
+	return [resultCode:"error"]</ScriptUnitText>
+      <OKLink id="sv6#area26#area27#scu20#oln360" name="OKFlow303" to="sv6#area26#area27#page144#pwu10" gr:bendpoints="-328,-50,-153,230;-394,-219,-124,86">
+        <LinkParameter id="sv6#area26#area27#scu20#oln360#par1525" name="listaOrdinataOid_AttCondition181" source="result(listaOrdinataOid)" target="sv6#area26#area27#page144#pwu10#su196#acond206"/>
+      </OKLink>
+      <KOLink id="sv6#area26#area27#scu20#kln92" name="KOFlow96" to="sv6#area26#area27#page143" automaticCoupling="true"/>
+      <ScriptOutput id="sv6#area26#area27#scu20#sco5" name="listaOrdinataOid"/>
+    </ScriptUnit>
+    <ModifyUnit id="sv6#area26#area27#mfu19" name="Aggiungi stanza" gr:x="1100" gr:y="270" entity="ent17">
+      <Selector id="sv6#area26#area27#mfu19#su192" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv6#area26#area27#mfu19#su192#kcond71" name="KeyCondition65" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv6#area26#area27#mfu19#oln361" name="OKFlow308" to="sv6#area26#area27#seu132" automaticCoupling="true" gr:bendpoints="130,66,1145,-379;127,381,1142,-64;115,368,820,83;-409,498,606,53;-842,502,173,57"/>
+    </ModifyUnit>
+    <SelectorUnit id="sv6#area26#area27#seu134" name="SelezionaIlPrimo" gr:x="645" gr:y="375" entity="ent17" maxResults="1">
+      <OKLink id="sv6#area26#area27#seu134#oln362" name="Chiama paziente" to="sv6#area26#area27#page142#enu37" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Seleziona stanza" ajaxWindowWidth="600" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true">
+        <LinkParameter id="sv6#area26#area27#seu134#oln362#par1904" name="oid_PASSING" source="ent5#att2Array" passing="true"/>
+      </OKLink>
+      <Selector id="sv6#area26#area27#seu134#su193" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv6#area26#area27#seu134#su193#kcond76" name="KeyCondition67" predicate="in" implied="false"/>
+      </Selector>
+    </SelectorUnit>
+    <ParameterCollectorUnit id="sv6#area26#area27#pcu18" name="Oid Operazioni" gr:x="400" gr:y="530">
+      <CollectorParameter id="sv6#area26#area27#pcu18#pcp74" name="oid"/>
+      <CollectorParameter id="sv6#area26#area27#pcu18#pcp75" name="codice"/>
+      <OKLink id="sv6#area26#area27#pcu18#oln363" name="OKFlow307" to="sv6#area26#area27#scu20">
+        <LinkParameter id="sv6#area26#area27#pcu18#oln363#par1905" name="codice_codice" source="sv6#area26#area27#pcu18#pcp75" target="sv6#area26#area27#scu20.codice"/>
+        <LinkParameter id="sv6#area26#area27#pcu18#oln363#par1906" name="oid_oid" source="sv6#area26#area27#pcu18#pcp74" target="sv6#area26#area27#scu20.oid"/>
+      </OKLink>
+    </ParameterCollectorUnit>
+    <ModifyUnit id="sv6#area26#area27#mfu20" name="Concludi pronto soccorso" gr:x="1555" gr:y="65" entity="ent17">
+      <Selector id="sv6#area26#area27#mfu20#su194" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv6#area26#area27#mfu20#su194#kcond79" name="KeyCondition68" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv6#area26#area27#mfu20#oln364" name="OKFlow309" to="sv6#area26#area27#seu132" automaticCoupling="true" gr:bendpoints="8,714,1334,100;-1303,717,23,103"/>
+    </ModifyUnit>
+    <ScriptUnit id="sv6#area26#area27#scu24" name="CheckDottoreDimissione" gr:x="1095" gr:y="180">
+      <OKLink id="sv6#area26#area27#scu24#oln365" name="Dimetti" to="sv6#area26#area27#page145#enu39" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dimetti paziente" ajaxWindowWidth="750" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowModal="true">
+        <LinkParameter id="sv6#area26#area27#scu24#oln365#par1907" name="Emergency_operationToEmergency_Room.name_sala operatoria" sourceLinkParameter="sv6#area26#area27#page144#pwu11#ln274#par2010" target="sv6#area26#area27#page145#enu39#fld168_slot"/>
+        <LinkParameter id="sv6#area26#area27#scu24#oln365#par1908" name="VisitToPatient.PatientToUser.cf_Cf paziente" sourceLinkParameter="sv6#area26#area27#page144#pwu11#ln274#par2011" target="sv6#area26#area27#page145#enu39#fld174_slot"/>
+        <LinkParameter id="sv6#area26#area27#scu24#oln365#par1909" name="oid_PASSING" sourceLinkParameter="sv6#area26#area27#page144#pwu11#ln274#par2012" passing="true"/>
+      </OKLink>
+      <KOLink id="sv6#area26#area27#scu24#kln115" name="Flow108" to="sv6#area26#area27#page141" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Errore!" ajaxWindowWidth="600" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+      <ScriptUnitText xml:space="preserve">#input String cfDottoreOp, String cfSession
+
+if( cfSession.equals(cfDottoreOp))
+	return [resultCode:"success"]
+else
+	return [resultCode:"error"]</ScriptUnitText>
+    </ScriptUnit>
+  </OperationUnits>
+</Area>

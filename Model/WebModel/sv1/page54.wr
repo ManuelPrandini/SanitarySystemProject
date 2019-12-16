@@ -3,7 +3,7 @@
     <GetUnit id="sv1#page54#gtu11" name="GetCfDottore" gr:x="370" gr:y="10" contextParameters="UserCtxParam">
       <Link id="sv1#page54#gtu11#ln81" name="Flow166" to="sv1#page54#seu62" type="transport" automaticCoupling="true" validate="true"/>
     </GetUnit>
-    <SelectorUnit id="sv1#page54#seu62" name="SelectorUserNameSurname" gr:x="135" gr:y="0" entity="User">
+    <SelectorUnit id="sv1#page54#seu62" name="Selezione nome e cognome" gr:x="135" gr:y="0" entity="User">
       <Selector id="sv1#page54#seu62#su48" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#page54#seu62#su48#kcond24" name="KeyCondition41" predicate="in" implied="false"/>
       </Selector>

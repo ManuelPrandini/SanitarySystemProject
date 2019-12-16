@@ -19,7 +19,7 @@
         <LinkParameter id="sv3#area12#page74#pwu3#ln238#par1943" name="Quantity_DrugToDrug.id_id_drug" source="data[].rel23#role45_ent2#att6" target="sv3#area12#seu87#su160#acond187"/>
       </Link>
     </PowerIndexUnit>
-    <SelectorUnit gr:x="10" gr:y="125" id="sv3#area12#page74#seu39" name="SelectCity" entity="ent12">
+    <SelectorUnit gr:x="10" gr:y="125" id="sv3#area12#page74#seu39" name="Selezione citt&#224; farmacia" entity="ent12">
       <Link id="sv3#area12#page74#seu39#ln134" name="Flow134" to="sv3#area12#page74#enu9" type="transport" validate="true">
         <LinkParameter id="sv3#area12#page74#seu39#ln134#par337" name="name_City [label]" source="ent12#att39Array" target="sv3#area12#page74#enu9#sfld1_label"/>
         <LinkParameter id="sv3#area12#page74#seu39#ln134#par487" name="oid_City [output]" source="ent12#att16Array" target="sv3#area12#page74#enu9#sfld1_output"/>
@@ -50,12 +50,12 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#area12#page74#pwu3">
-          <layout:Attribute attribute="ent21#att49"/>
-          <layout:Attribute attribute="rel23#role45.ent2#att8"/>
-          <layout:Attribute attribute="rel23#role45.ent2#att7"/>
-          <layout:Attribute attribute="rel17#role34.ent19#att43"/>
-          <layout:Attribute attribute="rel17#role34.ent19#att44"/>
-          <layout:Attribute attribute="rel17#role34.ent19#att46"/>
+          <layout:Attribute attribute="ent21#att49" label="quantit&#224; rimanente"/>
+          <layout:Attribute attribute="rel23#role45.ent2#att8" label="nome farmaco"/>
+          <layout:Attribute attribute="rel23#role45.ent2#att7" label="da banco?"/>
+          <layout:Attribute attribute="rel17#role34.ent19#att43" label="farmacia"/>
+          <layout:Attribute attribute="rel17#role34.ent19#att44" label="indirizzo"/>
+          <layout:Attribute attribute="rel17#role34.ent19#att46" label="telefono"/>
           <layout:Link link="sv3#area12#page74#pwu3#ln238"/>
         </layout:Unit>
       </layout:Cell>

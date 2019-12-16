@@ -7,7 +7,7 @@
         <LinkParameter id="mov2#hym5#icu24#oln122#par161" name="PatientCF_PASSING" source="mov2#hym5#icu24#icp102" passing="true"/>
       </OKLink>
     </InputCollectorUnit>
-    <SwitchUnit gr:x="520" gr:y="795" id="mov2#hym5#switch9" name="Which choice">
+    <SwitchUnit gr:x="520" gr:y="795" id="mov2#hym5#switch9" name="Scelta da vedere">
       <Case value="Visite"/>
       <Case value="Ricoveri"/>
       <Case value="ProntoSoccorso"/>

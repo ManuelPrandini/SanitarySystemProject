@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="380" gr:y="195" id="sv3#area6#page20" name="Prenota visita" landmark="true" ajaxEnabled="false">
   <ContentUnits>
-    <SelectorUnit gr:x="520" gr:y="165" id="sv3#area6#page20#seu24" name="SelectorPatient" entity="ent6">
+    <SelectorUnit gr:x="520" gr:y="165" id="sv3#area6#page20#seu24" name="Info paziente" entity="ent6">
       <Selector id="sv3#area6#page20#seu24#su50" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv3#area6#page20#seu24#su50#acond38" name="CF_Cond" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.userOID"/>
       </Selector>
@@ -8,7 +8,7 @@
         <LinkParameter id="sv3#area6#page20#seu24#ln1#par302" name="patient_code_Patient.patient_code(VisitToPatient)" source="ent6#att11Array" target="sv3#area6#cru9.rel11#role16.ent6#att11"/>
       </Link>
     </SelectorUnit>
-    <GetUnit gr:x="5" gr:y="185" id="sv3#area6#page20#gtu6" name="GetUser" contextParameters="UserCtxParam">
+    <GetUnit gr:x="5" gr:y="185" id="sv3#area6#page20#gtu6" name="GetUserCf" contextParameters="UserCtxParam">
       <Link id="sv3#area6#page20#gtu6#ln80" name="Flow80" to="sv3#area6#page20#seu24" type="transport" validate="true">
         <LinkParameter id="sv3#area6#page20#gtu6#ln80#par359" name="UserCtxParam.cf_CF_Cond" source="sv3#area6#page20#gtu6.UserCtxParam" target="sv3#area6#page20#seu24#su50#acond38"/>
       </Link>
@@ -53,7 +53,7 @@
         <LinkParameter id="sv3#area6#page20#enu15#ln284#par1949" name="Nazione_stato" source="sv3#area6#page20#enu15#sfld61" target="sv3#area6#seu127#su201#acond219"/>
       </Link>
     </EntryUnit>
-    <SelectorUnit gr:x="85" gr:y="120" id="sv3#area6#page20#seu102" name="SelectNazione" entity="ent11">
+    <SelectorUnit gr:x="95" gr:y="95" id="sv3#area6#page20#seu102" name="Selezione nazione ospedale" entity="ent11">
       <Link id="sv3#area6#page20#seu102#ln263" name="Flow263" to="sv3#area6#page20#enu15" type="transport" validate="true">
         <LinkParameter id="sv3#area6#page20#seu102#ln263#par1898" name="name_Nazione [label]" source="ent11#att18Array" target="sv3#area6#page20#enu15#sfld61_label"/>
         <LinkParameter id="sv3#area6#page20#seu102#ln263#par1899" name="oid_Nazione [output]" source="ent11#att15Array" target="sv3#area6#page20#enu15#sfld61_output"/>

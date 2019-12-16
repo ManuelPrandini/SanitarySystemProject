@@ -1,7 +1,7 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="530" gr:y="5" id="sv4#area8#area11#page56" name="Result">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="530" gr:y="5" id="sv4#area8#area11#page56" name="Operazione completata">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv4#area8#area11#page56#mssu32" name="Success"/>
-    <MultiMessageUnit gr:x="0" gr:y="85" id="sv4#area8#area11#page56#mssu33" name="Fail" linkOrder="sv4#area8#area11#page56#mssu33#ln125">
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv4#area8#area11#page56#mssu32" name="Operazione effettuata"/>
+    <MultiMessageUnit gr:x="0" gr:y="85" id="sv4#area8#area11#page56#mssu33" name="Errore" linkOrder="sv4#area8#area11#page56#mssu33#ln125">
       <Link id="sv4#area8#area11#page56#mssu33#ln125" name="Flow125" to="sv4#area8#area11#page55" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-120,46,340,100;-283,47,177,101"/>
     </MultiMessageUnit>
   </ContentUnits>
