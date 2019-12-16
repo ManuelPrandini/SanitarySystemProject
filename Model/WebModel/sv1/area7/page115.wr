@@ -1,8 +1,57 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="300" gr:y="135" id="sv1#area7#page115" name="Registra risultati accertamento">
-  <ContentUnits/>
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="350" gr:y="20" id="sv1#area7#page115" name="Registra risultati accertamento">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#area7#page115#enu46" name="Ricerca accertamento per data" fieldOrder="sv1#area7#page115#enu46#fld178" linkOrder="sv1#area7#page115#enu46#ln290">
+      <Field id="sv1#area7#page115#enu46#fld178" name="data" type="date" modifiable="true"/>
+      <Link id="sv1#area7#page115#enu46#ln290" name="Cerca" to="sv1#area7#seu140" type="normal" validate="true">
+        <LinkParameter id="sv1#area7#page115#enu46#ln290#par2039" name="data_data" source="sv1#area7#page115#enu46#fld178" target="sv1#area7#seu140#su203#acond221"/>
+        <LinkParameter id="sv1#area7#page115#enu46#ln290#par2041" name="cf_paziente_PASSING_paziente_cf" sourceLinkParameter="sv1#area7#page67#mssu9#ln291#par2040" target="sv1#area7#seu140#su203#acond220"/>
+        <LinkParameter id="sv1#area7#page115#enu46#ln290#par2049" name="cf_dottore_PASSING" sourceLinkParameter="sv1#area7#page67#mssu9#ln291#par2047" passing="true"/>
+        <LinkParameter id="sv1#area7#page115#enu46#ln290#par2050" name="cf_paziente_PASSING" sourceLinkParameter="sv1#area7#page67#mssu9#ln291#par2040" passing="true"/>
+        <LinkParameter id="sv1#area7#page115#enu46#ln290#par2051" name="nome_ospedale_PASSING" sourceLinkParameter="sv1#area7#page67#mssu9#ln291#par2048" passing="true"/>
+        <LinkParameter id="sv1#area7#page115#enu46#ln290#par2070" name="cf_dottore_PASSING_cf_dottore" sourceLinkParameter="sv1#area7#page67#mssu9#ln291#par2047" target="sv1#area7#seu140#su203#acond222"/>
+      </Link>
+    </EntryUnit>
+    <PowerIndexUnit gr:x="45" gr:y="75" id="sv1#area7#page115#pwu13" name="Lista accertamenti" sortable="true" checkable="false" useCountQuery="false" entity="ent27" displayAttributes="rel10#role22.ent5#att3 rel21#role41.ent28#att71 ent27#att72" linkOrder="sv1#area7#page115#pwu13#ln292">
+      <Selector id="sv1#area7#page115#pwu13#su204" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area7#page115#pwu13#su204#kcond81" name="KeyCondition81" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#area7#page115#pwu13#ln292" name="Registra" to="sv1#area7#page153#enu47" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dati risultati" ajaxWindowWidth="400" ajaxWindowHeight="300" ajaxWindowModal="true" ajaxWindowClosable="true">
+        <LinkParameter id="sv1#area7#page115#pwu13#ln292#par2044" name="oid_PASSING" source="data[].ent27#att35" passing="true"/>
+        <LinkParameter id="sv1#area7#page115#pwu13#ln292#par2058" name="cf_dottore_PASSING" sourceLinkParameter="sv1#area7#inn50#oln368#par2055" passing="true"/>
+        <LinkParameter id="sv1#area7#page115#pwu13#ln292#par2059" name="cf_paziente_PASSING" sourceLinkParameter="sv1#area7#inn50#oln368#par2056" passing="true"/>
+        <LinkParameter id="sv1#area7#page115#pwu13#ln292#par2060" name="nome_ospedale_PASSING" sourceLinkParameter="sv1#area7#inn50#oln368#par2057" passing="true"/>
+      </Link>
+    </PowerIndexUnit>
+  </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area7#page115#enu46">
+          <layout:Field field="sv1#area7#page115#enu46#fld178"/>
+          <layout:Link link="sv1#area7#page115#enu46#ln290"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area7#page115#pwu13">
+          <layout:Attribute attribute="rel10#role22.ent5#att3" label="Ricovero"/>
+          <layout:Attribute attribute="rel21#role41.ent28#att71" label="Tipologia accertamento"/>
+          <layout:Attribute attribute="ent27#att72"/>
+          <layout:Link link="sv1#area7#page115#pwu13#ln292"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

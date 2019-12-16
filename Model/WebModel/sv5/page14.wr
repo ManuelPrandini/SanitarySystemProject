@@ -1,9 +1,9 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="80" gr:y="180" id="sv5#page14" name="HomepageADMIN">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="80" gr:y="180" id="sv5#page14" name="Homepage Amministratore">
   <ContentUnits>
-    <GetUnit id="sv5#page14#gtu12" name="Get17" gr:x="370" gr:y="10" contextParameters="UserCtxParam">
+    <GetUnit id="sv5#page14#gtu12" name="GetUserCf" gr:x="370" gr:y="10" contextParameters="UserCtxParam">
       <Link id="sv5#page14#gtu12#ln115" name="Flow166" to="sv5#page14#seu63" type="transport" automaticCoupling="true" validate="true"/>
     </GetUnit>
-    <SelectorUnit id="sv5#page14#seu63" name="SelectorUserNameSurname" gr:x="135" gr:y="0" entity="User">
+    <SelectorUnit id="sv5#page14#seu63" name="Selezione Nome cognome" gr:x="135" gr:y="0" entity="User">
       <Selector id="sv5#page14#seu63#su97" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv5#page14#seu63#su97#kcond52" name="KeyCondition41" predicate="in" implied="false"/>
       </Selector>
@@ -12,7 +12,7 @@
         <LinkParameter id="sv5#page14#seu63#ln133#par279" name="surname_surname" source="User#att28Array" target="sv5#page14#mssu41.sv5#page14#mssu41#ph7"/>
       </Link>
     </SelectorUnit>
-    <MultiMessageUnit id="sv5#page14#mssu41" name="Welcome" gr:x="0" gr:y="20">
+    <MultiMessageUnit id="sv5#page14#mssu41" name="Benvenuto" gr:x="0" gr:y="20">
       <Message xml:space="preserve">Benvenuto nel tuo account admin  $$name$$ $$surname$$ !
 Da questo pannello puoi apportare varie modifiche.</Message>
       <Placeholder id="sv5#page14#mssu41#ph7" name="surname"/>

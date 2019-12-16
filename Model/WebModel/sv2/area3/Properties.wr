@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-670" gr:y="555" id="sv2#area3" name="Farmaci" landmark="true" defaultPage="sv2#area3#page60" landmarks="sv2#area3#page60 sv2#area3#page59">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-650" gr:y="325" id="sv2#area3" name="Gestione farmacia" landmark="true" defaultPage="sv2#area3#page60" landmarks="sv2#area3#page60 sv2#area3#page59">
   <OperationUnits>
     <CreateUnit gr:x="575" gr:y="650" id="sv2#area3#cru10" name="CreateDrugQuantity" entity="ent21">
       <OKLink id="sv2#area3#cru10#oln150" name="OKFlow150" to="sv2#area3#page60" automaticCoupling="true" gr:bendpoints="-107,-10,248,195"/>

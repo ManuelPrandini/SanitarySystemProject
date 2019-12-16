@@ -1,6 +1,6 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1#area7" name="Info Paziente" defaultPage="sv1#area7#page67" landmarks="sv1#area7#page65" landmark="false" gr:x="540" gr:y="350">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1#area7" name="Info Paziente" defaultPage="sv1#area7#page67" landmarks="sv1#area7#page65" landmark="false" gr:x="515" gr:y="295">
   <OperationUnits>
-    <ModuleInstanceUnit gr:x="650" gr:y="410" id="sv1#area7#miu19" action="false" moduleId="mov2#hym4">
+    <ModuleInstanceUnit gr:x="350" gr:y="610" id="sv1#area7#miu19" action="false" moduleId="mov2#hym4">
       <KOLink id="sv1#area7#miu19#kln51" name="KOFlow51" to="sv1#area7#page19" automaticCoupling="true"/>
       <OKLink id="sv1#area7#miu19#oln121" name="OKFlow121" to="sv1#area7#page18#mssu13">
         <LinkParameter id="sv1#area7#miu19#oln121#par1704" name="patient_cf_PASSING" source="mov2#hym4#okcu18#ocp31" passing="true"/>
@@ -8,8 +8,8 @@
         <LinkParameter id="sv1#area7#miu19#oln121#par1817" name="ospedale_PASSING" source="mov2#hym4#okcu18#ocp33" passing="true"/>
       </OKLink>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="315" gr:y="0" id="sv1#area7#miu20" action="false" moduleId="mov2#hym5"/>
-    <IsNotNullUnit gr:x="310" gr:y="735" id="sv1#area7#inn18" name="esistono?">
+    <ModuleInstanceUnit gr:x="15" gr:y="0" id="sv1#area7#miu20" action="false" moduleId="mov2#hym5"/>
+    <IsNotNullUnit gr:x="265" gr:y="770" id="sv1#area7#inn18" name="esistono?">
       <OKLink id="sv1#area7#inn18#oln158" name="OKFlow158" to="sv1#area7#page65#pwu1">
         <LinkParameter id="sv1#area7#inn18#oln158#par619" name="Input Value_oidVisit [oid]" source="inputValue" target="sv1#area7#page65#pwu1#su2#kcond36.ent5#att2"/>
         <LinkParameter id="sv1#area7#inn18#oln158#par632" name="Input Value_PASSING" source="inputValue" passing="true"/>
@@ -19,7 +19,7 @@
       </OKLink>
       <KOLink id="sv1#area7#inn18#kln4" name="KOFlow2" to="sv1#area7#page70#mssu24" automaticCoupling="true"/>
     </IsNotNullUnit>
-    <SelectorUnit id="sv1#area7#seu54" name="Selezione visite attive" gr:x="15" gr:y="660" entity="ent29" distinctAttributes="ent5#att2">
+    <SelectorUnit id="sv1#area7#seu54" name="Selezione visite attive" gr:x="0" gr:y="710" entity="ent29" distinctAttributes="ent5#att2">
       <Selector id="sv1#area7#seu54#su92" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area7#seu54#su92#acond117" name="cfDoctor" predicate="eq" booleanOperator="and" implied="false" attributes="rel3#role3.rel36#role72.userOID"/>
         <AttributesCondition id="sv1#area7#seu54#su92#acond118" name="cfPatient" predicate="eq" booleanOperator="and" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
@@ -33,7 +33,7 @@
         <LinkParameter id="sv1#area7#seu54#oln159#par1810" name="cf_paziente_PASSING" sourceLinkParameter="sv1#area7#page67#mssu9#ln152#par1807" passing="true"/>
       </OKLink>
     </SelectorUnit>
-    <ParameterCollectorUnit gr:x="100" gr:y="320" id="sv1#area7#pcu17" name="Parametri">
+    <ParameterCollectorUnit gr:x="210" gr:y="380" id="sv1#area7#pcu17" name="Parametri">
       <CollectorParameter id="sv1#area7#pcu17#pcp68" name="cf_dottore"/>
       <CollectorParameter id="sv1#area7#pcu17#pcp69" name="cf_paziente"/>
       <CollectorParameter id="sv1#area7#pcu17#pcp70" name="nome_ospedale"/>
@@ -43,5 +43,37 @@
         <LinkParameter id="sv1#area7#pcu17#oln345#par1768" name="nome_ospedale_PASSING" source="sv1#area7#pcu17#pcp70" passing="true"/>
       </OKLink>
     </ParameterCollectorUnit>
+    <SelectorUnit id="sv1#area7#seu140" name="Selezione accertamenti per data" gr:x="725" gr:y="25" entity="ent27">
+      <Selector id="sv1#area7#seu140#su203" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area7#seu140#su203#acond220" name="paziente_cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel10#role22.rel11#role16.rel14#role28.userOID"/>
+        <AttributesCondition id="sv1#area7#seu140#su203#acond221" name="data" predicate="eq" booleanOperator="or" implied="false" attributes="ent27#att68"/>
+        <AttributesCondition id="sv1#area7#seu140#su203#acond222" name="cf_dottore" predicate="eq" booleanOperator="or" implied="false" attributes="rel10#role22.rel3#role3.rel36#role72.userOID"/>
+      </Selector>
+      <OKLink id="sv1#area7#seu140#oln367" name="OKFlow367" to="sv1#area7#inn50">
+        <LinkParameter id="sv1#area7#seu140#oln367#par2042" name="oid_Input" source="ent27#att35Array" target="sv1#area7#inn50.isnotnull"/>
+        <LinkParameter id="sv1#area7#seu140#oln367#par2052" name="cf_dottore_PASSING" sourceLinkParameter="sv1#area7#page115#enu46#ln290#par2049" passing="true"/>
+        <LinkParameter id="sv1#area7#seu140#oln367#par2053" name="cf_paziente_PASSING" sourceLinkParameter="sv1#area7#page115#enu46#ln290#par2050" passing="true"/>
+        <LinkParameter id="sv1#area7#seu140#oln367#par2054" name="nome_ospedale_PASSING" sourceLinkParameter="sv1#area7#page115#enu46#ln290#par2051" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="835" gr:y="195" id="sv1#area7#inn50" name="se esistono">
+      <KOLink id="sv1#area7#inn50#kln116" name="KOFlow116" to="sv1#area7#page151" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Attenzione!" ajaxWindowWidth="300" ajaxWindowHeight="200" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+      <OKLink id="sv1#area7#inn50#oln368" name="OKFlow368" to="sv1#area7#page115#pwu13">
+        <LinkParameter id="sv1#area7#inn50#oln368#par2043" name="Input Value_KeyCondition81 [oid]" source="inputValue" target="sv1#area7#page115#pwu13#su204#kcond81.ent27#att35"/>
+        <LinkParameter id="sv1#area7#inn50#oln368#par2055" name="cf_dottore_PASSING" sourceLinkParameter="sv1#area7#seu140#oln367#par2052" passing="true"/>
+        <LinkParameter id="sv1#area7#inn50#oln368#par2056" name="cf_paziente_PASSING" sourceLinkParameter="sv1#area7#seu140#oln367#par2053" passing="true"/>
+        <LinkParameter id="sv1#area7#inn50#oln368#par2057" name="nome_ospedale_PASSING" sourceLinkParameter="sv1#area7#seu140#oln367#par2054" passing="true"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <ModifyUnit gr:x="695" gr:y="295" id="sv1#area7#mfu23" name="Registra descrizione" entity="ent27">
+      <Selector id="sv1#area7#mfu23#su205" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area7#mfu23#su205#kcond82" name="KeyCondition82" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#area7#mfu23#oln369" name="OKFlow369" to="sv1#area7#page154#mssu99">
+        <LinkParameter id="sv1#area7#mfu23#oln369#par2064" name="cf_dottore_PASSING" sourceLinkParameter="sv1#area7#page153#enu47#ln293#par2061" passing="true"/>
+        <LinkParameter id="sv1#area7#mfu23#oln369#par2065" name="cf_paziente_PASSING" sourceLinkParameter="sv1#area7#page153#enu47#ln293#par2062" passing="true"/>
+        <LinkParameter id="sv1#area7#mfu23#oln369#par2066" name="nome_ospedale_PASSING" sourceLinkParameter="sv1#area7#page153#enu47#ln293#par2063" passing="true"/>
+      </OKLink>
+    </ModifyUnit>
   </OperationUnits>
 </Area>

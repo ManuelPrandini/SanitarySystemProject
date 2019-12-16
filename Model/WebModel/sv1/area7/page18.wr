@@ -1,7 +1,7 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="815" gr:y="265" id="sv1#area7#page18" name="Visita Registrata correttamente!">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="500" gr:y="460" id="sv1#area7#page18" name="Visita Registrata correttamente!">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#area7#page18#mssu13" linkOrder="sv1#area7#page18#mssu13#ln83" name="Visita registrata">
-      <Link id="sv1#area7#page18#mssu13#ln83" name="Torna al men&#249;" to="sv1#area7#pcu17" type="normal" validate="true" gr:bendpoints="-572,5,168,-40">
+      <Link id="sv1#area7#page18#mssu13#ln83" name="Torna al men&#249;" to="sv1#area7#pcu17" type="normal" validate="true">
         <LinkParameter id="sv1#area7#page18#mssu13#ln83#par1892" name="cf_dottore_PASSING_cf_dottore" sourceLinkParameter="sv1#area7#miu19#oln121#par1815" target="sv1#area7#pcu17#pcp68"/>
         <LinkParameter id="sv1#area7#page18#mssu13#ln83#par1893" name="patient_cf_PASSING_cf_paziente" sourceLinkParameter="sv1#area7#miu19#oln121#par1704" target="sv1#area7#pcu17#pcp69"/>
         <LinkParameter id="sv1#area7#page18#mssu13#ln83#par1894" name="ospedale_PASSING_nome_ospedale" sourceLinkParameter="sv1#area7#miu19#oln121#par1817" target="sv1#area7#pcu17#pcp70"/>

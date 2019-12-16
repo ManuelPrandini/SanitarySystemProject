@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#page4" name="Informazioni personali" landmark="true" gr:x="60" gr:y="250">
   <ContentUnits>
-    <DataUnit id="sv6#page4#dau10" name="Dati personali" gr:x="160" gr:y="0" entity="User" displayAttributes="userOID userName email User#att27 User#att28 User#att29 User#att40 User#att41 rel36#role71.ent9#att33">
+    <DataUnit id="sv6#page4#dau10" name="Dati personali" gr:x="160" gr:y="0" entity="User" displayAttributes="userOID email User#att27 User#att28 User#att29 User#att40 User#att41 rel36#role71.ent9#att33">
       <Selector id="sv6#page4#dau10#su157" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv6#page4#dau10#su157#kcond33" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
@@ -17,7 +17,6 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv6#page4#dau10">
           <layout:Attribute attribute="userOID"/>
-          <layout:Attribute attribute="userName"/>
           <layout:Attribute attribute="email"/>
           <layout:Attribute label="nome" attribute="User#att27"/>
           <layout:Attribute label="cognome" attribute="User#att28"/>

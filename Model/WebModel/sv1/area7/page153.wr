@@ -1,0 +1,35 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="515" gr:y="285" id="sv1#area7#page153" name="Dati risultati" layout:pageLayout="MetroStyle/Empty">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#area7#page153#enu47" name="Descrizione" linkOrder="sv1#area7#page153#enu47#ln293">
+      <Field id="sv1#area7#page153#enu47#fld179" name="Risultati" type="text" modifiable="true"/>
+      <Link id="sv1#area7#page153#enu47#ln293" name="Invio" to="sv1#area7#mfu23" type="normal" validate="true">
+        <LinkParameter id="sv1#area7#page153#enu47#ln293#par2045" name="Risultati_descrizione" source="sv1#area7#page153#enu47#fld179" target="sv1#area7#mfu23.ent27#att73"/>
+        <LinkParameter id="sv1#area7#page153#enu47#ln293#par2046" name="oid_PASSING_KeyCondition82 [oid]" sourceLinkParameter="sv1#area7#page115#pwu13#ln292#par2044" target="sv1#area7#mfu23#su205#kcond82.ent27#att35"/>
+        <LinkParameter id="sv1#area7#page153#enu47#ln293#par2061" name="cf_dottore_PASSING" sourceLinkParameter="sv1#area7#page115#pwu13#ln292#par2058" passing="true"/>
+        <LinkParameter id="sv1#area7#page153#enu47#ln293#par2062" name="cf_paziente_PASSING" sourceLinkParameter="sv1#area7#page115#pwu13#ln292#par2059" passing="true"/>
+        <LinkParameter id="sv1#area7#page153#enu47#ln293#par2063" name="nome_ospedale_PASSING" sourceLinkParameter="sv1#area7#page115#pwu13#ln292#par2060" passing="true"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area7#page153#enu47">
+          <layout:Field field="sv1#area7#page153#enu47#fld179"/>
+          <layout:Link link="sv1#area7#page153#enu47#ln293"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

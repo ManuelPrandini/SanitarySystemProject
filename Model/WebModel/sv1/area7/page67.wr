@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area7#page67" name="Men&#249; Paziente" landmark="false" gr:x="0" gr:y="135">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area7#page67" name="Men&#249; Paziente" landmark="false" gr:x="15" gr:y="150">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#area7#page67#mssu9" name="Scegli operazione" linkOrder="sv1#area7#page67#mssu9#ln127 sv1#area7#page67#mssu9#ln152">
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#area7#page67#mssu9" name="Scegli operazione" linkOrder="sv1#area7#page67#mssu9#ln127 sv1#area7#page67#mssu9#ln152 sv1#area7#page67#mssu9#ln291">
       <Message xml:space="preserve">Scegli l'operazione da fare sul paziente</Message>
       <Link id="sv1#area7#page67#mssu9#ln127" name="Cartella Clinica" to="sv1#area7#miu20" type="normal" validate="true">
         <LinkParameter id="sv1#area7#page67#mssu9#ln127#par1895" name="cf_paziente_PASSING_PatientCF" sourceLinkParameter="sv1#area7#pcu17#oln345#par1764" target="sv1#area7#miu20.mov2#hym5#icu24#icp102"/>
@@ -12,6 +12,11 @@
         <LinkParameter id="sv1#area7#page67#mssu9#ln152#par1806" name="cf_dottore_PASSING" sourceLinkParameter="sv1#area7#pcu17#oln345#par1763" passing="true"/>
         <LinkParameter id="sv1#area7#page67#mssu9#ln152#par1807" name="cf_paziente_PASSING" sourceLinkParameter="sv1#area7#pcu17#oln345#par1764" passing="true"/>
       </Link>
+      <Link id="sv1#area7#page67#mssu9#ln291" name="Registra risultati accertamento" to="sv1#area7#page115#enu46" type="normal" validate="true">
+        <LinkParameter id="sv1#area7#page67#mssu9#ln291#par2040" name="cf_paziente_PASSING" sourceLinkParameter="sv1#area7#pcu17#oln345#par1764" passing="true"/>
+        <LinkParameter id="sv1#area7#page67#mssu9#ln291#par2047" name="cf_dottore_PASSING" sourceLinkParameter="sv1#area7#pcu17#oln345#par1763" passing="true"/>
+        <LinkParameter id="sv1#area7#page67#mssu9#ln291#par2048" name="nome_ospedale_PASSING" sourceLinkParameter="sv1#area7#pcu17#oln345#par1768" passing="true"/>
+      </Link>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -20,6 +25,7 @@
         <layout:Unit unitId="sv1#area7#page67#mssu9">
           <layout:Link link="sv1#area7#page67#mssu9#ln127"/>
           <layout:Link link="sv1#area7#page67#mssu9#ln152"/>
+          <layout:Link link="sv1#area7#page67#mssu9#ln291"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

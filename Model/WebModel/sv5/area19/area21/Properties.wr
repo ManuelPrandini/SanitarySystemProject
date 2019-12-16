@@ -17,7 +17,7 @@ if (oid!=null) {
         <LinkParameter id="sv5#area19#area21#scu21#oln3#par1897" name="name_PASSING_nomeOspedale" sourceLinkParameter="sv5#area19#area21#seu118#oln6#par1481" target="sv5#area19#area21#page131#mssu89.sv5#area19#area21#page131#mssu89#ph24"/>
       </OKLink>
     </ScriptUnit>
-    <SelectorUnit id="sv5#area19#area21#seu118" name="Query per la statistica" gr:x="500" gr:y="610" entity="ent5" distinctAttributes="ent5#att2">
+    <SelectorUnit id="sv5#area19#area21#seu118" name="Query per la statistica" gr:x="545" gr:y="600" entity="ent5" distinctAttributes="ent5#att2">
       <Selector id="sv5#area19#area21#seu118#su186" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv5#area19#area21#seu118#su186#acond194" name="dataInizio" predicate="gteq" booleanOperator="and" implied="false" attributes="ent5#att22"/>
         <AttributesCondition id="sv5#area19#area21#seu118#su186#acond199" name="dataFine" predicate="lteq" booleanOperator="and" implied="false" attributes="ent5#att23"/>

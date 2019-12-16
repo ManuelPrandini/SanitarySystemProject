@@ -1,0 +1,5 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-15" gr:y="2165" id="sv6#area29" name="Cartella clinica" landmark="true" landmarks="sv6#area29#page149">
+  <OperationUnits>
+    <ModuleInstanceUnit id="sv6#area29#miu25" gr:x="390" gr:y="35" action="false" moduleId="mov2#hym5"/>
+  </OperationUnits>
+</Area>

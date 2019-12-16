@@ -1,9 +1,9 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#page147" name="Home" gr:x="0" gr:y="85">
   <ContentUnits>
-    <GetUnit id="sv6#page147#gtu24" name="Get17" gr:x="370" gr:y="10" contextParameters="UserCtxParam">
+    <GetUnit id="sv6#page147#gtu24" name="GetUserCf" gr:x="370" gr:y="10" contextParameters="UserCtxParam">
       <Link id="sv6#page147#gtu24#ln279" name="Flow166" to="sv6#page147#seu137" type="transport" automaticCoupling="true" validate="true"/>
     </GetUnit>
-    <SelectorUnit id="sv6#page147#seu137" name="SelectorUserNameSurname" gr:x="135" gr:y="0" entity="User">
+    <SelectorUnit id="sv6#page147#seu137" name="Selezione nome cognome" gr:x="135" gr:y="0" entity="User">
       <Selector id="sv6#page147#seu137#su199" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv6#page147#seu137#su199#kcond80" name="KeyCondition41" predicate="in" implied="false"/>
       </Selector>

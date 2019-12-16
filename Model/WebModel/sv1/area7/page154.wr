@@ -1,0 +1,32 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="875" gr:y="295" id="sv1#area7#page154" name="Operazione completata">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#area7#page154#mssu99" name="Accertamento" linkOrder="sv1#area7#page154#mssu99#ln294">
+      <Message xml:space="preserve">Il risultato dell'accertamento &#232; stato registrato correttamente!</Message>
+      <Link id="sv1#area7#page154#mssu99#ln294" name="Ok" to="sv1#area7#pcu17" type="normal" validate="true" gr:bendpoints="-128,57,557,-19">
+        <LinkParameter id="sv1#area7#page154#mssu99#ln294#par2067" name="cf_dottore_PASSING_cf_dottore" sourceLinkParameter="sv1#area7#mfu23#oln369#par2064" target="sv1#area7#pcu17#pcp68"/>
+        <LinkParameter id="sv1#area7#page154#mssu99#ln294#par2068" name="cf_paziente_PASSING_cf_paziente" sourceLinkParameter="sv1#area7#mfu23#oln369#par2065" target="sv1#area7#pcu17#pcp69"/>
+        <LinkParameter id="sv1#area7#page154#mssu99#ln294#par2069" name="nome_ospedale_PASSING_nome_ospedale" sourceLinkParameter="sv1#area7#mfu23#oln369#par2066" target="sv1#area7#pcu17#pcp70"/>
+      </Link>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area7#page154#mssu99">
+          <layout:Link link="sv1#area7#page154#mssu99#ln294"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

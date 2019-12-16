@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area18#page129" name="Ospedale aggiunto in modo corretto" layout:pageLayout="MetroStyle/Default" gr:x="640" gr:y="180">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area18#page129" name="Ospedale aggiunto in modo corretto" layout:pageLayout="MetroStyle/Default" gr:x="695" gr:y="180">
   <ContentUnits>
     <MultiMessageUnit id="sv5#area18#page129#mssu78" name="Modifiche avvenute correttamente" gr:x="0" gr:y="0">
       <Message xml:space="preserve">L'ospedale &#232;  stato aggiunto in modo corretto!</Message>

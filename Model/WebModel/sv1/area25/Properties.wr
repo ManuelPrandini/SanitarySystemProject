@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="60" gr:y="1265" id="sv1#area25" name="Registrati in sala operatoria" landmark="true" defaultPage="sv1#area25#seu53">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="20" gr:y="1245" id="sv1#area25" name="Registrati in sala operatoria" landmark="true" defaultPage="sv1#area25#seu53">
   <OperationUnits>
     <GetUnit id="sv1#area25#gtu21" name="GetCfDottore" gr:x="5" gr:y="5" contextParameters="UserCtxParam">
       <Link id="sv1#area25#gtu21#ln189" name="Flow189" to="sv1#area25#seu53" type="transport" validate="true">
