@@ -1,0 +1,133 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area19#area21#page131" name="Numero di visite effettuate nell'ospedale" landmark="true" gr:x="0" gr:y="540">
+  <ContentUnits>
+    <MultiMessageUnit id="sv5#area19#area21#page131#mssu88" name="Visite effettuate nell'ospedale" gr:x="110" gr:y="0">
+      <Message xml:space="preserve">Completa la form con gli intervalli temporali per vedere quante visite sono state effettuate nell'ospedale</Message>
+    </MultiMessageUnit>
+    <SelectorUnit id="sv5#area19#area21#page131#seu105" name="Nazione" gr:x="0" gr:y="80" entity="ent11">
+      <Link id="sv5#area19#area21#page131#seu105#ln42" name="Flow42" to="sv5#area19#area21#page131#enu32" type="transport" validate="true">
+        <LinkParameter id="sv5#area19#area21#page131#seu105#ln42#par643" name="name_Nazione [label]" source="ent11#att18Array" target="sv5#area19#area21#page131#enu32#sfld43_label"/>
+        <LinkParameter id="sv5#area19#area21#page131#seu105#ln42#par662" name="oid_Nazione [output]" source="ent11#att15Array" target="sv5#area19#area21#page131#enu32#sfld43_output"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit id="sv5#area19#area21#page131#enu32" name="Completa la form" gr:x="125" gr:y="70" fieldOrder="sv5#area19#area21#page131#enu32#sfld43 sv5#area19#area21#page131#enu32#sfld32 sv5#area19#area21#page131#enu32#sfld31 sv5#area19#area21#page131#enu32#fld27 sv5#area19#area21#page131#enu32#fld26" linkOrder="sv5#area19#area21#page131#enu32#ln43 sv5#area19#area21#page131#enu32#ln64 sv5#area19#area21#page131#enu32#ln228">
+      <Field id="sv5#area19#area21#page131#enu32#fld26" name="Data fine" type="date" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="sv5#area19#area21#page131#enu32#ln228"/>
+      <Field id="sv5#area19#area21#page131#enu32#fld27" name="Data inizio" type="date" modifiable="true"/>
+      <SelectionField id="sv5#area19#area21#page131#enu32#sfld31" name="Ospedale" type="string" modifiable="true"/>
+      <SelectionField id="sv5#area19#area21#page131#enu32#sfld32" name="Citt&#224;" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="sv5#area19#area21#page131#enu32#ln64"/>
+      <SelectionField id="sv5#area19#area21#page131#enu32#sfld43" name="Nazione" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="sv5#area19#area21#page131#enu32#ln43"/>
+      <Link id="sv5#area19#area21#page131#enu32#ln43" name="Citt&#224;" to="sv5#area19#area21#page131#seu108" type="normal" validate="true">
+        <LinkParameter id="sv5#area19#area21#page131#enu32#ln43#par663" name="Nazione_nazione" source="sv5#area19#area21#page131#enu32#sfld43" target="sv5#area19#area21#page131#seu108#su154#acond178"/>
+      </Link>
+      <Link id="sv5#area19#area21#page131#enu32#ln64" name="Ospedale" to="sv5#area19#area21#page131#seu106" type="normal" validate="true">
+        <LinkParameter id="sv5#area19#area21#page131#enu32#ln64#par709" name="Citt&#224;_citt&#224;" source="sv5#area19#area21#page131#enu32#sfld32" target="sv5#area19#area21#page131#seu106#su150#acond108"/>
+      </Link>
+      <Link id="sv5#area19#area21#page131#enu32#ln228" name="Submit" to="sv5#area19#area21#seu118" type="normal" validate="true" ajaxEnabled="false">
+        <LinkParameter id="sv5#area19#area21#page131#enu32#ln228#par1468" name="Data fine_dataFine" source="sv5#area19#area21#page131#enu32#fld26" target="sv5#area19#area21#seu118#su186#acond199"/>
+        <LinkParameter id="sv5#area19#area21#page131#enu32#ln228#par1469" name="Data inizio_dataInizio" source="sv5#area19#area21#page131#enu32#fld27" target="sv5#area19#area21#seu118#su186#acond194"/>
+        <LinkParameter id="sv5#area19#area21#page131#enu32#ln228#par1471" name="Ospedale_ospedale" source="sv5#area19#area21#page131#enu32#sfld31" target="sv5#area19#area21#seu118#su186#acond200"/>
+        <LinkParameter id="sv5#area19#area21#page131#enu32#ln228#par1472" name="name_PASSING" sourceLinkParameter="sv5#area19#area21#page131#seu106#ln196#par1050" passing="true"/>
+        <LinkParameter id="sv5#area19#area21#page131#enu32#ln228#par1476" name="Data fine_PASSING" source="sv5#area19#area21#page131#enu32#fld26" passing="true"/>
+        <LinkParameter id="sv5#area19#area21#page131#enu32#ln228#par1477" name="Data inizio_PASSING" source="sv5#area19#area21#page131#enu32#fld27" passing="true"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit id="sv5#area19#area21#page131#seu106" name="Ospedale" gr:x="170" gr:y="170" entity="ent4">
+      <Selector id="sv5#area19#area21#page131#seu106#su150" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv5#area19#area21#page131#seu106#su150#acond108" name="citt&#224;" predicate="eq" booleanOperator="or" implied="false" attributes="rel2#role2.ent12#att16"/>
+      </Selector>
+      <Link id="sv5#area19#area21#page131#seu106#ln196" name="Flow196" to="sv5#area19#area21#page131#enu32" type="transport" validate="true" gr:bendpoints="-95,4,80,24">
+        <LinkParameter id="sv5#area19#area21#page131#seu106#ln196#par710" name="name_Ospedale [label]" source="ent4#att14Array" target="sv5#area19#area21#page131#enu32#sfld31_label"/>
+        <LinkParameter id="sv5#area19#area21#page131#seu106#ln196#par798" name="id_hospital_Ospedale [output]" source="ent4#att1Array" target="sv5#area19#area21#page131#enu32#sfld31_output"/>
+        <LinkParameter id="sv5#area19#area21#page131#seu106#ln196#par1050" name="name_PASSING" source="ent4#att14Array" passing="true"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="sv5#area19#area21#page131#seu108" name="Citt&#224;" gr:x="0" gr:y="175" entity="ent12">
+      <Selector id="sv5#area19#area21#page131#seu108#su154" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv5#area19#area21#page131#seu108#su154#acond178" name="nazione" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role8.ent11#att15"/>
+      </Selector>
+      <Link id="sv5#area19#area21#page131#seu108#ln195" name="Flow195" to="sv5#area19#area21#page131#enu32" type="transport" validate="true" gr:bendpoints="77,-63,-38,62">
+        <LinkParameter id="sv5#area19#area21#page131#seu108#ln195#par664" name="name_Citt&#224; [label]" source="ent12#att39Array" target="sv5#area19#area21#page131#enu32#sfld32_label"/>
+        <LinkParameter id="sv5#area19#area21#page131#seu108#ln195#par665" name="oid_Citt&#224; [output]" source="ent12#att16Array" target="sv5#area19#area21#page131#enu32#sfld32_output"/>
+      </Link>
+    </SelectorUnit>
+    <MultiMessageUnit id="sv5#area19#area21#page131#mssu89" name="Risultato statistica" gr:x="330" gr:y="225">
+      <Placeholder id="sv5#area19#area21#page131#mssu89#ph10" name="result"/>
+      <Placeholder id="sv5#area19#area21#page131#mssu89#ph21" name="dataInizio"/>
+      <Placeholder id="sv5#area19#area21#page131#mssu89#ph22" name="dataFine"/>
+      <Placeholder id="sv5#area19#area21#page131#mssu89#ph24" name="nomeOspedale"/>
+      <Message xml:space="preserve">Nell'ospedale $$nomeOspedale$$ nel periodo dal $$dataInizio$$ al $$dataFine$$ sono state effettuate $$result$$ visite.</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area19#area21#page131#mssu88"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area19#area21#page131#enu32">
+          <layout:Field field="sv5#area19#area21#page131#enu32#sfld43"/>
+          <layout:Field field="sv5#area19#area21#page131#enu32#sfld32"/>
+          <layout:Field field="sv5#area19#area21#page131#enu32#sfld31"/>
+          <layout:Field field="sv5#area19#area21#page131#enu32#fld27"/>
+          <layout:Field field="sv5#area19#area21#page131#enu32#fld26"/>
+          <layout:Link link="sv5#area19#area21#page131#enu32#ln43"/>
+          <layout:Link link="sv5#area19#area21#page131#enu32#ln64"/>
+          <layout:Link link="sv5#area19#area21#page131#enu32#ln228"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area19#area21#page131#mssu89"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
