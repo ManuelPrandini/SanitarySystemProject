@@ -1,23 +1,23 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="805" gr:y="-50" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att27 User#att28 User#att29 User#att40 User#att41 User#att12 User#att13 User#att34" db:database="db1" db:table="user">
+  <Entity id="User" name="User" duration="persistent" gr:x="200" gr:y="-180" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att27 User#att28 User#att29 User#att40 User#att41 User#att12 User#att13 User#att34" db:database="db1" db:table="user">
     <Attribute name="cf" id="userOID" type="string" key="true" db:column="cf"/>
     <Attribute name="username" id="userName" type="string" key="false" db:column="username"/>
     <Attribute name="password" id="password" type="password" key="false" db:column="password"/>
     <Attribute name="email" id="email" type="string" key="false" db:column="email"/>
-    <Attribute id="User#att27" name="name" type="string" key="false" db:column="name"/>
-    <Attribute id="User#att28" name="surname" type="string" key="false" db:column="surname"/>
-    <Attribute id="User#att29" name="birthday" type="date" key="false" db:column="birthday"/>
-    <Attribute id="User#att40" name="address" type="string" key="false" db:column="address"/>
-    <Attribute id="User#att41" name="telephone" type="string" key="false" db:column="telephone"/>
-    <Attribute id="User#att12" name="gender" type="string" db:column="gender"/>
-    <Attribute id="User#att13" name="code" type="string" db:column="code"/>
-    <Attribute id="User#att34" name="expiration date" type="date" db:column="expiration_date"/>
+    <Attribute id="User#att27" name="nome" type="string" key="false" db:column="name"/>
+    <Attribute id="User#att28" name="cognome" type="string" key="false" db:column="surname"/>
+    <Attribute id="User#att29" name="data_nascita" type="date" key="false" db:column="birthday"/>
+    <Attribute id="User#att40" name="indirizzo" type="string" key="false" db:column="address"/>
+    <Attribute id="User#att41" name="telefono" type="string" key="false" db:column="telephone"/>
+    <Attribute id="User#att12" name="sesso" type="string" db:column="gender"/>
+    <Attribute id="User#att13" name="codice_password" type="string" db:column="code"/>
+    <Attribute id="User#att34" name="scadenza_codice" type="date" db:column="expiration_date"/>
   </Entity>
-  <Entity id="Group" name="Group" duration="persistent" gr:x="1095" gr:y="-25" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
+  <Entity id="Group" name="Group" duration="persistent" gr:x="500" gr:y="-170" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
   </Entity>
-  <Entity id="Module" name="Module" duration="persistent" gr:x="1320" gr:y="-35" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db1" db:table="module">
+  <Entity id="Module" name="Module" duration="persistent" gr:x="735" gr:y="-180" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db1" db:table="module">
     <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
     <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
@@ -54,29 +54,29 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity id="ent1" name="Pharmacist" duration="persistent" gr:x="255" gr:y="215" attributeOrder="ent1#att32 ent1#att20" db:isView="false" db:database="db1" db:table="pharmacist">
-    <Attribute id="ent1#att32" name="pharmacist_code" type="string" key="true" db:column="pharmacist_code"/>
-    <Attribute id="ent1#att20" name="approved" type="integer" key="false" db:column="approved"/>
+  <Entity id="ent1" name="Farmacista" duration="persistent" gr:x="200" gr:y="175" attributeOrder="ent1#att32 ent1#att20" db:isView="false" db:database="db1" db:table="pharmacist">
+    <Attribute id="ent1#att32" name="codice_farmacista" type="string" key="true" db:column="pharmacist_code"/>
+    <Attribute id="ent1#att20" name="approvato" type="integer" key="false" db:column="approved"/>
   </Entity>
-  <Entity id="ent2" name="Drug" duration="persistent" attributeOrder="ent2#att6 ent2#att8 ent2#att7" gr:x="-15" gr:y="750" db:database="db1" db:table="drug">
+  <Entity id="ent2" name="Farmaco" duration="persistent" attributeOrder="ent2#att6 ent2#att8 ent2#att7" gr:x="-55" gr:y="395" db:database="db1" db:table="drug">
     <Attribute id="ent2#att6" name="id" key="true" type="integer" db:column="id"/>
-    <Attribute id="ent2#att7" name="isStandard" type="boolean" db:column="isstandard"/>
-    <Attribute id="ent2#att8" name="name" type="string" db:column="name"/>
+    <Attribute id="ent2#att7" name="daBanco?" type="boolean" db:column="isstandard"/>
+    <Attribute id="ent2#att8" name="nome" type="string" db:column="name"/>
   </Entity>
-  <Entity id="ent6" name="Patient" duration="persistent" gr:x="720" gr:y="265" attributeOrder="ent6#att30 ent6#att31 ent6#att19 ent6#att11" db:database="db1" db:table="patient">
-    <Attribute id="ent6#att30" name="weight" type="integer" key="false" db:column="weight"/>
-    <Attribute id="ent6#att31" name="height" type="integer" key="false" db:column="height"/>
-    <Attribute id="ent6#att19" name="approved" type="integer" db:column="approved"/>
-    <Attribute id="ent6#att11" name="patient_code" type="string" key="true" db:column="patient_code"/>
+  <Entity id="ent6" name="Paziente" duration="persistent" gr:x="460" gr:y="160" attributeOrder="ent6#att30 ent6#att31 ent6#att19 ent6#att11" db:database="db1" db:table="patient">
+    <Attribute id="ent6#att30" name="peso" type="integer" key="false" db:column="weight"/>
+    <Attribute id="ent6#att31" name="altezza" type="integer" key="false" db:column="height"/>
+    <Attribute id="ent6#att19" name="approvato" type="integer" db:column="approved"/>
+    <Attribute id="ent6#att11" name="codice_paziente" type="string" key="true" db:column="patient_code"/>
   </Entity>
-  <Entity id="ent8" name="Medical_specialization" duration="persistent" attributeOrder="ent8#att21" gr:x="1460" gr:y="140" db:database="db1" db:table="medical_specialization">
-    <Attribute id="ent8#att21" name="nameSpecialization" key="true" type="string" db:column="namespecialization"/>
+  <Entity id="ent8" name="Specializzazione_Medica" duration="persistent" attributeOrder="ent8#att21" gr:x="1000" gr:y="-110" db:database="db1" db:table="medical_specialization">
+    <Attribute id="ent8#att21" name="nome" key="true" type="string" db:column="namespecialization"/>
   </Entity>
-  <Entity id="ent9" name="Doctor" duration="persistent" gr:x="1190" gr:y="140" attributeOrder="ent9#att33 ent9#att17" db:database="db1" db:table="doctor">
-    <Attribute id="ent9#att33" name="doctor_code" type="string" key="true" db:column="doctor_code"/>
-    <Attribute id="ent9#att17" name="approved" type="integer" key="false" db:column="approved"/>
+  <Entity id="ent9" name="Dottore" duration="persistent" gr:x="500" gr:y="-10" attributeOrder="ent9#att33 ent9#att17" db:database="db1" db:table="doctor">
+    <Attribute id="ent9#att33" name="codice_dottore" type="string" key="true" db:column="doctor_code"/>
+    <Attribute id="ent9#att17" name="approvato" type="integer" key="false" db:column="approved"/>
   </Entity>
-  <Relationship id="rel3" name="Visit_Doctor" sourceEntity="ent5" targetEntity="ent9" db:database="db1" db:table="action">
+  <Relationship id="rel3" name="Visit_Doctor" sourceEntity="ent5" targetEntity="ent9" db:database="db1" db:table="action" gr:bendpoints="9,-207,118,249;-20,-316,89,140">
     <RelationshipRole1 id="rel3#role3" name="VisitToDoctor" maxCard="1">
       <db:JoinColumn attribute="ent5#att2" name="oid"/>
     </RelationshipRole1>
@@ -100,25 +100,25 @@
       <db:JoinColumn attribute="ent5#att2" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="1405" gr:y="260" id="ent4" name="Hospital" duration="persistent" attributeOrder="ent4#att1 ent4#att14 ent4#att4 ent4#att47 ent4#att48" db:database="db1" db:table="hospital">
-    <Attribute id="ent4#att1" key="true" name="id_hospital" type="integer" db:column="id_hospital"/>
-    <Attribute id="ent4#att4" name="address" type="string" key="false" db:column="address"/>
-    <Attribute id="ent4#att14" name="name" type="string" key="false" db:column="name"/>
-    <Attribute id="ent4#att48" name="telephone" type="string" db:column="telephone"/>
+  <Entity gr:x="945" gr:y="170" id="ent4" name="Ospedale" duration="persistent" attributeOrder="ent4#att1 ent4#att14 ent4#att4 ent4#att47 ent4#att48" db:database="db1" db:table="hospital">
+    <Attribute id="ent4#att1" key="true" name="oid" type="integer" db:column="id_hospital"/>
+    <Attribute id="ent4#att4" name="indirizzo" type="string" key="false" db:column="address"/>
+    <Attribute id="ent4#att14" name="nome" type="string" key="false" db:column="name"/>
+    <Attribute id="ent4#att48" name="telefono" type="string" db:column="telephone"/>
     <Attribute id="ent4#att47" name="website" type="url" db:column="website"/>
   </Entity>
-  <Entity gr:x="1760" gr:y="495" id="ent10" name="Room" duration="persistent" attributeOrder="ent10#att5 ent10#att50 ent10#att26" db:database="db1" db:table="room">
-    <Attribute id="ent10#att5" key="true" name="id_room" type="integer" db:column="id_room"/>
-    <Attribute id="ent10#att26" name="floor" type="integer" key="false" db:column="floor"/>
-    <Attribute id="ent10#att50" name="name" type="string" db:column="name"/>
+  <Entity gr:x="880" gr:y="-20" id="ent10" name="Stanza" duration="persistent" attributeOrder="ent10#att5 ent10#att50 ent10#att26" db:database="db1" db:table="room">
+    <Attribute id="ent10#att5" key="true" name="id" type="integer" db:column="id_room"/>
+    <Attribute id="ent10#att26" name="piano" type="integer" key="false" db:column="floor"/>
+    <Attribute id="ent10#att50" name="nome" type="string" db:column="name"/>
   </Entity>
-  <Entity gr:x="20" gr:y="-25" id="ent11" name="Country" duration="persistent" attributeOrder="ent11#att15 ent11#att18" db:database="db1" db:table="country">
+  <Entity gr:x="-40" gr:y="-175" id="ent11" name="Nazione" duration="persistent" attributeOrder="ent11#att15 ent11#att18" db:database="db1" db:table="country">
     <Attribute id="ent11#att15" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent11#att18" name="name" type="string" db:column="name"/>
+    <Attribute id="ent11#att18" name="nome" type="string" db:column="name"/>
   </Entity>
-  <Entity gr:x="35" gr:y="90" id="ent12" name="City" duration="persistent" attributeOrder="ent12#att16 ent12#att39" db:database="db1" db:table="city">
+  <Entity gr:x="-40" gr:y="-50" id="ent12" name="Citt&#224;" duration="persistent" attributeOrder="ent12#att16 ent12#att39" db:database="db1" db:table="city">
     <Attribute id="ent12#att16" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent12#att39" name="name" type="string" db:column="name"/>
+    <Attribute id="ent12#att39" name="nome" type="string" db:column="name"/>
   </Entity>
   <Relationship id="rel6" name="Country_City" sourceEntity="ent11" targetEntity="ent12" db:database="db1" db:table="city">
     <RelationshipRole1 id="rel6#role7" name="CountryToCity" maxCard="N">
@@ -128,7 +128,7 @@
       <db:JoinColumn attribute="ent12#att16" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel7" name="Live_City_User" sourceEntity="ent12" targetEntity="User" gr:bendpoints="285,-91,-305,-56" db:database="db1" db:table="user">
+  <Relationship id="rel7" name="Live_City_User" sourceEntity="ent12" targetEntity="User" db:database="db1" db:table="user">
     <RelationshipRole1 id="rel7#role9" name="CityToUser" maxCard="N">
       <db:JoinColumn attribute="ent12#att16" name="city_oid"/>
     </RelationshipRole1>
@@ -136,7 +136,7 @@
       <db:JoinColumn attribute="userOID" name="cf"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel9" name="Born_City_User" sourceEntity="ent12" targetEntity="User" gr:bendpoints="285,9,-305,44" db:database="db1" db:table="user">
+  <Relationship id="rel9" name="Born_City_User" sourceEntity="ent12" targetEntity="User" gr:bendpoints="132,36,-148,66" db:database="db1" db:table="user">
     <RelationshipRole1 id="rel9#role13" name="CityToUser_2" maxCard="N">
       <db:JoinColumn attribute="ent12#att16" name="city_oid_2"/>
     </RelationshipRole1>
@@ -144,11 +144,11 @@
       <db:JoinColumn attribute="userOID" name="cf"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="-10" gr:y="215" id="ent19" name="Pharmacy" duration="persistent" attributeOrder="ent19#att42 ent19#att43 ent19#att44 ent19#att45 ent19#att46" db:database="db1" db:table="pharmacy">
+  <Entity gr:x="-50" gr:y="85" id="ent19" name="Farmacia" duration="persistent" attributeOrder="ent19#att42 ent19#att43 ent19#att44 ent19#att45 ent19#att46" db:database="db1" db:table="pharmacy">
     <Attribute id="ent19#att42" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent19#att43" name="name" type="string" key="false" db:column="name"/>
-    <Attribute id="ent19#att44" name="address" type="string" key="false" db:column="address"/>
-    <Attribute id="ent19#att46" name="telephone" type="string" db:column="telephone"/>
+    <Attribute id="ent19#att43" name="nome" type="string" key="false" db:column="name"/>
+    <Attribute id="ent19#att44" name="indirizzo" type="string" key="false" db:column="address"/>
+    <Attribute id="ent19#att46" name="telefono" type="string" db:column="telephone"/>
     <Attribute id="ent19#att45" name="website" type="url" db:column="website"/>
   </Entity>
   <Relationship id="rel13" name="Pharmacy_City" sourceEntity="ent19" targetEntity="ent12" db:database="db1" db:table="pharmacy">
@@ -167,8 +167,8 @@
       <db:JoinColumn attribute="ent1#att32" name="pharmacist_code"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="0" gr:y="565" id="ent21" name="Quantity_Drug" duration="persistent" attributeOrder="ent21#att9 ent21#att49" db:database="db1" db:table="quantity_drug">
-    <Attribute id="ent21#att49" name="quantity" type="integer" key="false" db:column="quantity"/>
+  <Entity gr:x="-45" gr:y="275" id="ent21" name="Magazzino" duration="persistent" attributeOrder="ent21#att9 ent21#att49" db:database="db1" db:table="quantity_drug">
+    <Attribute id="ent21#att49" name="quantit&#224;" type="integer" key="false" db:column="quantity"/>
     <Attribute id="ent21#att9" name="oid" type="integer" key="true" db:column="oid"/>
   </Entity>
   <Relationship id="rel17" name="Pharmacy_Quantity_Drug" sourceEntity="ent19" targetEntity="ent21" db:database="db1" db:table="quantity_drug">
@@ -187,8 +187,8 @@
       <db:JoinColumn attribute="ent2#att6" name="drug_id"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="-10" gr:y="900" id="ent22" name="Drug_Description" duration="persistent" attributeOrder="ent22#att51" db:database="db1" db:table="drug_description">
-    <Attribute id="ent22#att51" name="name" type="string" key="true" db:column="name"/>
+  <Entity gr:x="-60" gr:y="540" id="ent22" name="Descrizione_Farmaco" duration="persistent" attributeOrder="ent22#att51" db:database="db1" db:table="drug_description">
+    <Attribute id="ent22#att51" name="descrizione" type="string" key="true" db:column="name"/>
   </Entity>
   <Relationship id="rel24" name="Drug_Drug_Description" sourceEntity="ent2" targetEntity="ent22" db:database="db1" db:table="drug_description">
     <RelationshipRole1 id="rel24#role47" name="DrugToDrug_Description" maxCard="N">
@@ -198,7 +198,7 @@
       <db:JoinColumn attribute="ent22#att51" name="name"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel2" name="City_Hospital" sourceEntity="ent12" targetEntity="ent4" gr:bendpoints="632,102,-758,-98" db:database="db1" db:table="hospital">
+  <Relationship id="rel2" name="City_Hospital" sourceEntity="ent12" targetEntity="ent4" gr:bendpoints="165,140,-825,-130;762,163,-214,-92" db:database="db1" db:table="hospital">
     <RelationshipRole1 id="rel2#role1" name="CityToHospital" maxCard="N">
       <db:JoinColumn attribute="ent12#att16" name="city_oid"/>
     </RelationshipRole1>
@@ -206,22 +206,22 @@
       <db:JoinColumn attribute="ent4#att1" name="id_hospital"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="1380" gr:y="850" id="ent20" name="Recovery_Room" duration="persistent" db:database="db1" db:table="recovery_room">
+  <Entity gr:x="1315" gr:y="430" id="ent20" name="Sala_Ricoveri" duration="persistent" db:database="db1" db:table="recovery_room">
     <Generalization superEntity="ent10">
       <db:JoinColumn attribute="ent10#att5" name="room_id_room"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="1555" gr:y="905" id="ent23" name="Visit_Room" duration="persistent" db:database="db1" db:table="visit_room">
+  <Entity gr:x="1290" gr:y="-100" id="ent23" name="Sala_visite" duration="persistent" db:database="db1" db:table="visit_room">
     <Generalization superEntity="ent10">
       <db:JoinColumn attribute="ent10#att5" name="room_id_room"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="1740" gr:y="930" id="ent24" name="Surgery_Room" duration="persistent" db:database="db1" db:table="surgery_room">
+  <Entity gr:x="1205" gr:y="20" id="ent24" name="Sala_Interventi" duration="persistent" db:database="db1" db:table="surgery_room">
     <Generalization superEntity="ent10">
       <db:JoinColumn attribute="ent10#att5" name="room_id_room"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="1330" gr:y="730" id="ent25" name="Bed_place" duration="persistent" db:database="db1" db:table="bed_place">
+  <Entity gr:x="1060" gr:y="440" id="ent25" name="Posto_Letto" duration="persistent" db:database="db1" db:table="bed_place">
     <Attribute id="ent25#att55" key="true" name="oid" type="integer" db:column="oid"/>
   </Entity>
   <Relationship id="rel8" name="Bed_place_Recovery_Room" sourceEntity="ent25" targetEntity="ent20" db:database="db1" db:table="bed_place">
@@ -232,22 +232,22 @@
       <db:JoinColumn attribute="ent10#att5" name="recovery_room_id_room"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="540" gr:y="725" id="ent29" name="Visit" duration="persistent" db:database="db1" db:table="visit">
+  <Entity gr:x="870" gr:y="120" id="ent29" name="Visita" duration="persistent" db:database="db1" db:table="visit">
     <Generalization superEntity="ent5">
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="715" gr:y="730" id="ent30" name="Clinical_Surgery" duration="persistent" db:database="db1" db:table="clinical_surgery">
+  <Entity gr:x="1040" gr:y="515" id="ent30" name="Intervento" duration="persistent" db:database="db1" db:table="clinical_surgery">
     <Generalization superEntity="ent5">
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="945" gr:y="730" id="ent31" name="Recovery" duration="persistent" db:database="db1" db:table="recovery">
+  <Entity gr:x="895" gr:y="450" id="ent31" name="Ricovero" duration="persistent" db:database="db1" db:table="recovery">
     <Generalization superEntity="ent5">
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </Generalization>
   </Entity>
-  <Relationship id="rel16" name="Visit_Visit_Room" sourceEntity="ent29" targetEntity="ent23" gr:bendpoints="-6,224,-726,140;725,226,5,142" db:database="db1" db:table="visit">
+  <Relationship id="rel16" name="Visit_Visit_Room" sourceEntity="ent29" targetEntity="ent23" gr:bendpoints="452,-1,27,219;438,-152,28,88" db:database="db1" db:table="visit">
     <RelationshipRole1 id="rel16#role31" name="VisitToVisit_Room" maxCard="1">
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </RelationshipRole1>
@@ -255,7 +255,7 @@
       <db:JoinColumn attribute="ent10#att5" name="visit_room_id_room"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel18" name="Clinical_Surgery_Surgery_Room" sourceEntity="ent30" targetEntity="ent24" gr:bendpoints="3,178,-697,98;707,186,7,106" db:database="db1" db:table="clinical_surgery">
+  <Relationship id="rel18" name="Clinical_Surgery_Surgery_Room" sourceEntity="ent30" targetEntity="ent24" gr:bendpoints="629,7,0,487" db:database="db1" db:table="clinical_surgery">
     <RelationshipRole1 id="rel18#role35" name="Clinical_SurgeryToSurgery_Room" maxCard="1">
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </RelationshipRole1>
@@ -271,13 +271,13 @@
       <db:JoinColumn attribute="ent25#att55" name="bed_place_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="280" gr:y="890" id="ent36" name="Drug_Prescription" duration="persistent" attributeOrder="ent36#att78 ent36#att79 ent36#att80 ent36#att81" db:database="db1" db:table="drug_prescription">
+  <Entity gr:x="325" gr:y="500" id="ent36" name="Prescrizione_Farmaco" duration="persistent" attributeOrder="ent36#att78 ent36#att79 ent36#att80 ent36#att81" db:database="db1" db:table="drug_prescription">
     <Attribute id="ent36#att78" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent36#att79" name="quantity" type="integer" db:column="quantity"/>
-    <Attribute id="ent36#att80" name="description" type="text" db:column="description"/>
-    <Attribute id="ent36#att81" name="assigned" type="integer" db:column="assigned"/>
+    <Attribute id="ent36#att79" name="quantit&#224;" type="integer" db:column="quantity"/>
+    <Attribute id="ent36#att80" name="descrizione" type="text" db:column="description"/>
+    <Attribute id="ent36#att81" name="quantit&#224;_assegnata" type="integer" db:column="assigned"/>
   </Entity>
-  <Relationship id="rel30" name="Visit_Drug_Prescription" sourceEntity="ent29" targetEntity="ent36" gr:bendpoints="-124,45,1,-75" db:database="db1" db:table="drug_prescription">
+  <Relationship id="rel30" name="Visit_Drug_Prescription" sourceEntity="ent29" targetEntity="ent36" db:database="db1" db:table="drug_prescription">
     <RelationshipRole1 id="rel30#role59" name="VisitToDrug_Prescription" maxCard="N">
       <db:JoinColumn attribute="ent5#att2" name="visit_oid"/>
     </RelationshipRole1>
@@ -285,7 +285,7 @@
       <db:JoinColumn attribute="ent36#att78" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel31" name="Drug_Drug_Prescription" sourceEntity="ent2" targetEntity="ent36" gr:bendpoints="123,82,12,-204" db:database="db1" db:table="drug_prescription">
+  <Relationship id="rel31" name="Drug_Drug_Prescription" sourceEntity="ent2" targetEntity="ent36" db:database="db1" db:table="drug_prescription">
     <RelationshipRole1 id="rel31#role61" name="DrugToDrug_Prescription" maxCard="N">
       <db:JoinColumn attribute="ent2#att6" name="drug_id"/>
     </RelationshipRole1>
@@ -293,10 +293,10 @@
       <db:JoinColumn attribute="ent36#att78" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="210" gr:y="340" id="ent37" name="Sell" duration="persistent" attributeOrder="ent37#att82 ent37#att83 ent37#att84" db:database="db1" db:table="sell">
+  <Entity gr:x="230" gr:y="300" id="ent37" name="Vendita" duration="persistent" attributeOrder="ent37#att82 ent37#att83 ent37#att84" db:database="db1" db:table="sell">
     <Attribute id="ent37#att82" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent37#att83" name="quantity" type="integer" db:column="quantity"/>
-    <Attribute id="ent37#att84" name="date" type="timestamp" db:column="date"/>
+    <Attribute id="ent37#att83" name="quantit&#224;" type="integer" db:column="quantity"/>
+    <Attribute id="ent37#att84" name="data" type="timestamp" db:column="date"/>
   </Entity>
   <Relationship id="rel32" name="Pharmacist_Assignement" sourceEntity="ent1" targetEntity="ent37" db:database="db1" db:table="sell">
     <RelationshipRole1 id="rel32#role63" name="PharmacistToAssignement" maxCard="N">
@@ -314,21 +314,21 @@
       <db:JoinColumn attribute="ent36#att78" name="drug_prescription_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="640" gr:y="425" id="ent5" name="Action" duration="persistent" attributeOrder="ent5#att2 ent5#att3 ent5#att10 ent5#att22 ent5#att23 ent5#att24 ent5#att25" db:database="db1" db:table="action">
+  <Entity gr:x="630" gr:y="395" id="ent5" name="Azione" duration="persistent" attributeOrder="ent5#att2 ent5#att3 ent5#att10 ent5#att22 ent5#att23 ent5#att24 ent5#att25" db:database="db1" db:table="action">
     <Attribute id="ent5#att2" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent5#att3" name="title" type="string" key="false" db:column="title"/>
-    <Attribute id="ent5#att10" name="description" type="text" key="false" db:column="description"/>
-    <Attribute id="ent5#att22" name="startDate" type="date" key="false" db:column="startdate"/>
-    <Attribute id="ent5#att25" name="endTime" type="time" db:column="endtime"/>
-    <Attribute id="ent5#att24" name="startTime" type="time" db:column="starttime"/>
-    <Attribute id="ent5#att23" name="endDate" type="date" db:column="enddate"/>
+    <Attribute id="ent5#att3" name="titolo" type="string" key="false" db:column="title"/>
+    <Attribute id="ent5#att10" name="descrizione" type="text" key="false" db:column="description"/>
+    <Attribute id="ent5#att22" name="dataInizio" type="date" key="false" db:column="startdate"/>
+    <Attribute id="ent5#att25" name="oraFine" type="time" db:column="endtime"/>
+    <Attribute id="ent5#att24" name="oraInizio" type="time" db:column="starttime"/>
+    <Attribute id="ent5#att23" name="dataFine" type="date" db:column="enddate"/>
   </Entity>
-  <Entity gr:x="195" gr:y="480" id="ent7" name="With_Prescription" duration="persistent" db:database="db1" db:table="with_prescription">
+  <Entity gr:x="395" gr:y="420" id="ent7" name="Con_Prescrizione" duration="persistent" db:database="db1" db:table="with_prescription">
     <Generalization superEntity="ent37">
       <db:JoinColumn attribute="ent37#att82" name="sell_oid"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="440" gr:y="335" id="ent15" name="Without_Prescription" duration="persistent" db:database="db1" db:table="without_prescription">
+  <Entity gr:x="410" gr:y="330" id="ent15" name="Senza_Prescrizione" duration="persistent" db:database="db1" db:table="without_prescription">
     <Generalization superEntity="ent37">
       <db:JoinColumn attribute="ent37#att82" name="sell_oid"/>
     </Generalization>
@@ -349,18 +349,18 @@
       <db:JoinColumn attribute="ent37#att82" name="sell_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="1395" gr:y="575" id="ent16" name="Emergency_Room" duration="persistent" db:database="db1" db:table="emergency_room">
+  <Entity gr:x="1135" gr:y="170" id="ent16" name="Sala_ProntoSoccorso" duration="persistent" db:database="db1" db:table="emergency_room">
     <Generalization superEntity="ent10">
       <db:JoinColumn attribute="ent10#att5" name="room_id_room"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="335" gr:y="645" id="ent17" name="Emergency_operation" duration="persistent" db:database="db1" db:table="emergency_operation">
+  <Entity gr:x="1125" gr:y="340" id="ent17" name="Intervento_ProntoSoccorso" duration="persistent" db:database="db1" db:table="emergency_operation">
     <Generalization superEntity="ent5">
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="350" gr:y="725" id="ent18" name="Emergency_code" duration="persistent" attributeOrder="ent18#att38" db:database="db1" db:table="emergency_code">
-    <Attribute id="ent18#att38" name="code" key="true" type="string" db:column="code"/>
+  <Entity gr:x="1400" gr:y="175" id="ent18" name="Codice_ProntoSoccorso" duration="persistent" attributeOrder="ent18#att38" db:database="db1" db:table="emergency_code">
+    <Attribute id="ent18#att38" name="codice" key="true" type="string" db:column="code"/>
   </Entity>
   <Relationship id="rel34" name="Emergency_operation_Emergency_code" sourceEntity="ent17" targetEntity="ent18" db:database="db1" db:table="emergency_operation">
     <RelationshipRole1 id="rel34#role67" name="Emergency_operationToEmergency_code" maxCard="1">
@@ -410,7 +410,7 @@
       <db:JoinColumn attribute="ent10#att5" name="id_room"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel1" name="Medical_specialization_Visit_Room" sourceEntity="ent8" targetEntity="ent23" gr:bendpoints="109,346,69,-410" db:database="db1" db:table="visit_room">
+  <Relationship id="rel1" name="Medical_specialization_Visit_Room" sourceEntity="ent8" targetEntity="ent23" db:database="db1" db:table="visit_room">
     <RelationshipRole1 id="rel1#role17" name="Medical_specializationToVisit_Room" maxCard="N">
       <db:JoinColumn attribute="ent8#att21" name="medical_specialization_namespe"/>
     </RelationshipRole1>
@@ -418,7 +418,7 @@
       <db:JoinColumn attribute="ent10#att5" name="room_id_room"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel5" name="Doctor_Room" sourceEntity="ent9" targetEntity="ent10" gr:bendpoints="145,-84,-415,-450;540,-93,-20,-459" db:database="db1" db:table="doctor_room">
+  <Relationship id="rel5" name="Doctor_Room" sourceEntity="ent9" targetEntity="ent10" db:database="db1" db:table="doctor_room">
     <RelationshipRole1 id="rel5#role19" name="DoctorToRoom" maxCard="N">
       <db:JoinColumn attribute="ent9#att33" name="doctor_doctor_code"/>
     </RelationshipRole1>
@@ -426,32 +426,32 @@
       <db:JoinColumn attribute="ent10#att5" name="room_id_room"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="90" gr:y="1040" id="ent13" name="Vendita temporanea" duration="volatile" volatileStorage="database" attributeOrder="ent13#att58 ent13#att59 ent13#att60 ent13#att36 ent13#att37 ent13#att52">
+  <Entity gr:x="-10" gr:y="1035" id="ent13" name="Carrello" duration="volatile" volatileStorage="database" attributeOrder="ent13#att58 ent13#att59 ent13#att60 ent13#att36 ent13#att37 ent13#att52">
     <Attribute id="ent13#att58" key="true" name="oid" type="integer"/>
-    <Attribute id="ent13#att59" name="drugName" type="string"/>
-    <Attribute id="ent13#att60" name="quantity" type="integer"/>
-    <Attribute id="ent13#att36" name="isStandard" type="integer"/>
-    <Attribute id="ent13#att37" name="id_drugPrescription" type="integer"/>
-    <Attribute id="ent13#att52" name="id_drug" type="integer"/>
+    <Attribute id="ent13#att59" name="nome_farmaco" type="string"/>
+    <Attribute id="ent13#att60" name="quantit&#224;" type="integer"/>
+    <Attribute id="ent13#att36" name="daBanco?" type="integer"/>
+    <Attribute id="ent13#att37" name="id_prescrizione_medica" type="integer"/>
+    <Attribute id="ent13#att52" name="id_farmaco" type="integer"/>
   </Entity>
   <Entity gr:x="345" gr:y="1040" id="ent3" name="Prescrizioni attive temporanee" duration="volatile" volatileStorage="database" attributeOrder="ent3#att53 ent3#att54 ent3#att56 ent3#att57 ent3#att61 ent3#att62 ent3#att63">
     <Attribute id="ent3#att53" key="true" name="oid" type="integer" db:idGenerator="assigned"/>
-    <Attribute id="ent3#att54" name="quantityTemp" type="integer"/>
-    <Attribute id="ent3#att56" name="descriptionTemp" type="text"/>
-    <Attribute id="ent3#att57" name="assignedTemp" type="integer"/>
-    <Attribute id="ent3#att61" name="visitIDtemp" type="integer"/>
-    <Attribute id="ent3#att62" name="drugOidTemp" type="integer"/>
-    <Attribute id="ent3#att63" name="drugNameTemp" type="string"/>
+    <Attribute id="ent3#att54" name="quantit&#224;Temp" type="integer"/>
+    <Attribute id="ent3#att56" name="descrizioneTemp" type="text"/>
+    <Attribute id="ent3#att57" name="quantit&#224;_assegnataTemp" type="integer"/>
+    <Attribute id="ent3#att61" name="id_visitaTemp" type="integer"/>
+    <Attribute id="ent3#att62" name="id_farmacoTemp" type="integer"/>
+    <Attribute id="ent3#att63" name="nome_farmacoTemp" type="string"/>
   </Entity>
   <Entity gr:x="705" gr:y="1060" id="ent14" name="FAQ" duration="persistent" attributeOrder="ent14#att64 ent14#att65 ent14#att66" db:database="db1" db:table="faq">
     <Attribute id="ent14#att64" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent14#att65" name="question" type="text" db:column="question"/>
-    <Attribute id="ent14#att66" name="answer" type="text" db:column="answer"/>
+    <Attribute id="ent14#att65" name="domanda" type="text" db:column="question"/>
+    <Attribute id="ent14#att66" name="risposta" type="text" db:column="answer"/>
   </Entity>
-  <Entity gr:x="685" gr:y="1180" id="ent26" name="AutoIncrementOID" duration="persistent" db:database="db1" db:table="autoincrementoid">
+  <Entity gr:x="685" gr:y="1180" id="ent26" name="ID_autoincremento" duration="persistent" db:database="db1" db:table="autoincrementoid">
     <Attribute id="ent26#att67" key="true" name="oid" type="integer" db:column="oid"/>
   </Entity>
-  <Entity id="ent32" name="Codaprontosoccorso" duration="persistent" gr:x="1085" gr:y="500" db:database="db1" db:table="codaprontosoccorso">
+  <Entity id="ent32" name="Coda_ProntoSoccorso" duration="persistent" gr:x="870" gr:y="340" db:database="db1" db:table="codaprontosoccorso">
     <Attribute id="ent32#att69" name="oid" type="integer" key="true" db:column="oid"/>
   </Entity>
   <Relationship id="rel27" name="CodaprontosoccorsoEmergencyOperation" sourceEntity="ent32" targetEntity="ent17" db:database="db1" db:table="emergency_operation">
@@ -471,13 +471,13 @@
       <db:JoinColumn attribute="ent32#att69" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="920" gr:y="820" id="ent27" name="Accertamento" duration="persistent" attributeOrder="ent27#att35 ent27#att68 ent27#att72 ent27#att73" db:database="db1" db:table="accertamento">
+  <Entity gr:x="865" gr:y="525" id="ent27" name="Accertamento" duration="persistent" attributeOrder="ent27#att35 ent27#att68 ent27#att72 ent27#att73" db:database="db1" db:table="accertamento">
     <Attribute id="ent27#att35" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent27#att68" name="data" type="date" db:column="data"/>
     <Attribute id="ent27#att72" name="orario" type="time" db:column="orario"/>
     <Attribute id="ent27#att73" name="descrizione" type="text" db:column="descrizione"/>
   </Entity>
-  <Entity gr:x="1115" gr:y="850" id="ent28" name="Descrizione_Accertamento" duration="persistent" db:database="db1" db:table="descrizione_accertamento">
+  <Entity gr:x="1070" gr:y="555" id="ent28" name="Descrizione_Accertamento" duration="persistent" db:database="db1" db:table="descrizione_accertamento">
     <Attribute id="ent28#att71" key="true" name="Tipologia" type="string" db:column="tipologia"/>
   </Entity>
   <Relationship id="rel10" name="Recovery_Accertamento" sourceEntity="ent31" targetEntity="ent27" db:database="db1" db:table="accertamento">
