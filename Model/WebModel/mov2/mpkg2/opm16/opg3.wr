@@ -17,7 +17,9 @@
         <KeyCondition id="mov2#mpkg2#opm16#opg3#mfu3#su27#kcond10" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
       <Comment xml:space="preserve">Update Operation that deletes "code" associated to the user</Comment>
-      <OKLink id="mov2#mpkg2#opm16#opg3#mfu3#oln80" name="OKFlow80" to="mov2#mpkg2#opm16#okcu15" automaticCoupling="true"/>
+      <OKLink id="mov2#mpkg2#opm16#opg3#mfu3#oln80" name="OKFlow80" to="mov2#mpkg2#opm16#okcu15">
+        <LinkParameter id="mov2#mpkg2#opm16#opg3#mfu3#oln80#par2029" name="cf_primary key" source="userOIDArray" target="mov2#mpkg2#opm16#okcu15#ocp22"/>
+      </OKLink>
     </ModifyUnit>
     <IsNotNullUnit id="mov2#mpkg2#opm16#opg3#inn14" name="user exists?" gr:x="185" gr:y="20" emptyStringAsNull="true">
       <OKLink id="mov2#mpkg2#opm16#opg3#inn14#oln72" name="OKFlow18" to="mov2#mpkg2#opm16#opg3#tmu2" automaticCoupling="true"/>

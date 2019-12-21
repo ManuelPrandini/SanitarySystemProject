@@ -22,9 +22,14 @@
         <LinkParameter id="mov2#hym1#page34#enu14#ln50#par267" name="telephone_telephone" source="mov2#hym1#page34#enu14#fld79" target="mov2#hym1#miu11.mov2#mpkg2#opm3#icu3#icp27"/>
         <LinkParameter id="mov2#hym1#page34#enu14#ln50#par268" name="username_username" source="mov2#hym1#page34#enu14#fld72" target="mov2#hym1#miu11.mov2#mpkg2#opm3#icu3#icp52"/>
       </Link>
-      <Field id="mov2#hym1#page34#enu14#fld80" name="peso corporeo (kg)" type="integer" modifiable="true">
+      <Field id="mov2#hym1#page34#enu14#fld80" name="peso corporeo (kg) *" type="integer" modifiable="true">
         <VRules>
           <TypeValidationRule id="mov2#hym1#page34#enu14#fld80#tvr5" name="Type Validation5" type="integer" errorMessage="Valore non inserito correttamente"/>
+          <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld80#mnd154" name="Mandatory140">
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln211" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
+          </MandatoryValidationRule>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page34#enu14#fld79" name="telefono" type="string" modifiable="true">
@@ -35,69 +40,138 @@
       </Field>
       <Field id="mov2#hym1#page34#enu14#fld77" name="cognome *" type="string" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld77#mnd75" name="Mandatory39"/>
+          <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld77#mnd144" name="Mandatory140">
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln211" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
+          </MandatoryValidationRule>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page34#enu14#fld76" name="patient code" type="string" preloaded="true" hidden="true">
-        <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld76#mnd37" name="Mandatory37"/>
-        </VRules>
+        <VRules/>
       </Field>
       <Field id="mov2#hym1#page34#enu14#fld75" name="nome *" type="string" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld75#mnd80" name="Mandatory39"/>
+          <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld75#mnd150" name="Mandatory140">
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln211" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
+          </MandatoryValidationRule>
         </VRules>
       </Field>
       <SelectionField id="mov2#hym1#page34#enu14#sfld22" name="luogo di residenza *" type="string" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page34#enu14#sfld22#mnd79" name="Mandatory39"/>
+          <MandatoryValidationRule id="mov2#hym1#page34#enu14#sfld22#mnd149" name="Mandatory140">
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln211" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
+          </MandatoryValidationRule>
         </VRules>
       </SelectionField>
-      <Field id="mov2#hym1#page34#enu14#fld74" name="altezza (cm)" type="integer" modifiable="true">
+      <Field id="mov2#hym1#page34#enu14#fld74" name="altezza (cm) *" type="integer" modifiable="true">
         <VRules>
           <TypeValidationRule id="mov2#hym1#page34#enu14#fld74#tvr4" name="Type Validation4" type="integer" errorMessage="Valore non inserito correttamente"/>
+          <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld74#mnd140" name="Mandatory140">
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln211" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
+          </MandatoryValidationRule>
         </VRules>
       </Field>
       <SelectionField id="mov2#hym1#page34#enu14#sfld21" name="sesso *" type="string" modifiable="true" slotOrder="mov2#hym1#page34#enu14#sfld21#slot3">
         <Slot id="mov2#hym1#page34#enu14#sfld21#slot3" name="Gender Options" label="true" output="true" value="Male|Female"/>
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page34#enu14#sfld21#mnd81" name="Mandatory39"/>
+          <MandatoryValidationRule id="mov2#hym1#page34#enu14#sfld21#mnd155" name="Mandatory140">
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln211" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
+          </MandatoryValidationRule>
         </VRules>
       </SelectionField>
       <Field id="mov2#hym1#page34#enu14#fld73" name="email *" type="string" modifiable="true">
         <VRules>
           <EMailValidationRule id="mov2#hym1#page34#enu14#fld73#email3" name="EMail3"/>
-          <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld73#mnd77" name="Mandatory39"/>
+          <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld73#mnd146" name="Mandatory140">
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln211" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
+          </MandatoryValidationRule>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page34#enu14#fld72" name="cf *" type="string" modifiable="true">
         <VRules>
           <RegularExpressionValidationRule id="mov2#hym1#page34#enu14#fld72#regex3" name="CF_check" regex="^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]$ "/>
-          <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld72#mnd74" name="Mandatory39"/>
+          <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld72#mnd143" name="Mandatory140">
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln211" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
+          </MandatoryValidationRule>
         </VRules>
       </Field>
       <SelectionField id="mov2#hym1#page34#enu14#sfld20" name="luogo di nascita *" type="string" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page34#enu14#sfld20#mnd78" name="Mandatory39"/>
+          <MandatoryValidationRule id="mov2#hym1#page34#enu14#sfld20#mnd148" name="Mandatory140">
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln211" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
+          </MandatoryValidationRule>
         </VRules>
       </SelectionField>
       <Field id="mov2#hym1#page34#enu14#fld70" name="data di nascita *" type="date" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld70#mnd76" name="Mandatory39"/>
-          <CompareValidationRule id="mov2#hym1#page34#enu14#fld70#cmp19" name="noNatoNelFuturo" predicate="gt" value="today()"/>
+          <CompareValidationRule id="mov2#hym1#page34#enu14#fld70#cmp19" name="noNatoNelFuturo" predicate="lteq" value="today()">
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln211" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
+          </CompareValidationRule>
+          <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld70#mnd145" name="Mandatory140">
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln211" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
+          </MandatoryValidationRule>
         </VRules>
       </Field>
-      <Field id="mov2#hym1#page34#enu14#fld69" name="indirizzo di residenza" type="string" modifiable="true">
-        <VRules/>
+      <Field id="mov2#hym1#page34#enu14#fld69" name="indirizzo di residenza *" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld69#mnd147" name="Mandatory140">
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln211" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
+          </MandatoryValidationRule>
+        </VRules>
       </Field>
       <Field id="mov2#hym1#page34#enu14#fld84" type="password" modifiable="true" name="password *">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld84#mnd36" name="Mandatory36"/>
-          <PasswordStrengthValidationRule id="mov2#hym1#page34#enu14#fld84#psvr3" name="Password Strength3" securityLevel="custom"/>
+          <PasswordStrengthValidationRule id="mov2#hym1#page34#enu14#fld84#psvr3" name="Password Strength3" securityLevel="custom">
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln211" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
+          </PasswordStrengthValidationRule>
+          <MandatoryValidationRule id="mov2#hym1#page34#enu14#fld84#mnd153" name="Mandatory140">
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln211" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
+          </MandatoryValidationRule>
         </VRules>
       </Field>
-      <SelectionField id="mov2#hym1#page34#enu14#sfld28" name="paese di residenza *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page34#enu14#ln211"/>
-      <SelectionField id="mov2#hym1#page34#enu14#sfld18" name="paese di nascita *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page34#enu14#ln210"/>
+      <SelectionField id="mov2#hym1#page34#enu14#sfld28" name="paese di residenza *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page34#enu14#ln211">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page34#enu14#sfld28#mnd152" name="Mandatory140">
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln211" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
+          </MandatoryValidationRule>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="mov2#hym1#page34#enu14#sfld18" name="paese di nascita *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page34#enu14#ln210">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page34#enu14#sfld18#mnd151" name="Mandatory140">
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln211" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
+          </MandatoryValidationRule>
+        </VRules>
+      </SelectionField>
       <Link id="mov2#hym1#page34#enu14#ln210" name="SelezionaCitt&#224;Nascita" to="mov2#hym1#page34#seu111" type="normal" validate="true">
         <LinkParameter id="mov2#hym1#page34#enu14#ln210#par1705" name="paese di nascita *_nazione" source="mov2#hym1#page34#enu14#sfld18" target="mov2#hym1#page34#seu111#su151#acond158"/>
       </Link>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="945" gr:y="1190" id="sv2#area5#page75" name="Errore: carrello vuoto!">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="960" gr:y="1190" id="sv2#area5#page75" name="Errore: carrello vuoto!">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#area5#page75#mssu35" name="Carrello vuoto">
       <Message xml:space="preserve">Non stai acquistando nulla!</Message>

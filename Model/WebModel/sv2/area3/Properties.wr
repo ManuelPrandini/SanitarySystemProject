@@ -1,15 +1,15 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-650" gr:y="325" id="sv2#area3" name="Gestione farmacia" landmark="true" defaultPage="sv2#area3#page60" landmarks="sv2#area3#page60 sv2#area3#page59">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-650" gr:y="315" id="sv2#area3" name="Gestione farmacia" landmark="true" defaultPage="sv2#area3#page60" landmarks="sv2#area3#page60 sv2#area3#page59">
   <OperationUnits>
-    <CreateUnit gr:x="575" gr:y="650" id="sv2#area3#cru10" name="CreateDrugQuantity" entity="ent21">
+    <CreateUnit gr:x="575" gr:y="660" id="sv2#area3#cru10" name="CreateDrugQuantity" entity="ent21">
       <OKLink id="sv2#area3#cru10#oln150" name="OKFlow150" to="sv2#area3#page60" automaticCoupling="true" gr:bendpoints="-107,-10,248,195"/>
     </CreateUnit>
-    <ModifyUnit gr:x="775" gr:y="695" id="sv2#area3#mfu13" name="UpdateDrugQuantity" entity="ent21">
+    <ModifyUnit gr:x="775" gr:y="705" id="sv2#area3#mfu13" name="UpdateDrugQuantity" entity="ent21">
       <Selector id="sv2#area3#mfu13#su74" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area3#mfu13#su74#kcond29" name="KeyCondition29" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#area3#mfu13#oln147" name="OKFlow147" to="sv2#area3#page96#mssu65" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserimento avvenuto!" ajaxWindowWidth="300" ajaxWindowHeight="200" ajaxWindowClosable="true" ajaxWindowModal="true"/>
     </ModifyUnit>
-    <ScriptUnit id="sv2#area3#scu5" name="ScriptAggiornaQuantit&#224;" gr:x="610" gr:y="535">
+    <ScriptUnit id="sv2#area3#scu5" name="ScriptAggiornaQuantit&#224;" gr:x="610" gr:y="545">
       <ScriptInput id="sv2#area3#scu5#sci5" name="quantitaPresente"/>
       <ScriptInput id="sv2#area3#scu5#sci6" name="nuovaQuantita"/>
       <ScriptOutput id="sv2#area3#scu5#sco3" name="quantitaFinale"/>
@@ -34,7 +34,7 @@ if (quantitaPresente == null) {
         <LinkParameter id="sv2#area3#scu5#oln138#par893" name="quantitaFinale_quantity" source="result(quantitaFinale)" target="sv2#area3#mfu13.ent21#att49"/>
       </OKLink>
     </ScriptUnit>
-    <SelectorUnit id="sv2#area3#seu93" name="presenti descrizioni?" gr:x="615" gr:y="65" entity="ent22">
+    <SelectorUnit id="sv2#area3#seu93" name="presenti descrizioni?" gr:x="615" gr:y="75" entity="ent22">
       <Selector id="sv2#area3#seu93#su161" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv2#area3#seu93#su161#acond189" name="id_drug" predicate="eq" booleanOperator="or" implied="false" attributes="rel24#role48.ent2#att6"/>
       </Selector>
@@ -42,7 +42,7 @@ if (quantitaPresente == null) {
         <LinkParameter id="sv2#area3#seu93#oln352#par1965" name="name_Input" source="ent22#att51Array" target="sv2#area3#inn48.isnotnull"/>
       </OKLink>
     </SelectorUnit>
-    <IsNotNullUnit id="sv2#area3#inn48" name="se presenti.." gr:x="835" gr:y="85">
+    <IsNotNullUnit id="sv2#area3#inn48" name="se presenti.." gr:x="835" gr:y="95">
       <KOLink id="sv2#area3#inn48#kln113" name="KOFlow112" to="sv2#area3#page106" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Attenzione!" ajaxWindowWidth="300" ajaxWindowHeight="200" ajaxWindowClosable="true" ajaxWindowModal="true"/>
       <OKLink id="sv2#area3#inn48#oln353" name="Descrizioni farmaco" to="sv2#area3#page107#inu16" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Descrizioni farmaco" ajaxWindowWidth="400" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true" gr:bendpoints="93,-36,-122,-36">
         <LinkParameter id="sv2#area3#inn48#oln353#par1995" name="Input Value_KeyCondition77 [name]" source="inputValue" target="sv2#area3#page107#inu16#su185#kcond78.ent22#att51"/>

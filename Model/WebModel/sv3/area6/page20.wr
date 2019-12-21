@@ -17,16 +17,86 @@
       </Link>
     </GetUnit>
     <EntryUnit gr:x="0" gr:y="0" id="sv3#area6#page20#enu15" name="Form di prenotazione visita" fieldOrder="sv3#area6#page20#enu15#sfld61 sv3#area6#page20#enu15#sfld4 sv3#area6#page20#enu15#sfld5 sv3#area6#page20#enu15#sfld6 sv3#area6#page20#enu15#sfld7 sv3#area6#page20#enu15#fld24 sv3#area6#page20#enu15#sfld8" ajaxEnableExpandedLinks="false" linkOrder="sv3#area6#page20#enu15#ln61 sv3#area6#page20#enu15#ln62 sv3#area6#page20#enu15#ln63 sv3#area6#page20#enu15#ln68 sv3#area6#page20#enu15#ln36 sv3#area6#page20#enu15#ln284">
-      <SelectionField id="sv3#area6#page20#enu15#sfld4" name="Citt&#224;" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="sv3#area6#page20#enu15#ln61" ajaxEventIndicator="true"/>
-      <SelectionField id="sv3#area6#page20#enu15#sfld8" name="Orario" type="time" modifiable="true" ajaxEventEnabled="false" ajaxEventIndicator="true" ajaxEventLink="sv3#area6#page20#enu15#ln36"/>
-      <Field id="sv3#area6#page20#enu15#fld24" name="Data" type="date" modifiable="true" ajaxEventEnabled="true" ajaxEventIndicator="true" ajaxEventLink="sv3#area6#page20#enu15#ln68">
+      <SelectionField id="sv3#area6#page20#enu15#sfld4" name="Citt&#224; *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="sv3#area6#page20#enu15#ln61" ajaxEventIndicator="true">
         <VRules>
-          <CompareValidationRule id="sv3#area6#page20#enu15#fld24#cmp10" name="data&gt;oggi" predicate="gt" value="today()"/>
+          <MandatoryValidationRule id="sv3#area6#page20#enu15#sfld4#mnd156" name="Mandatory156">
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln68" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln62" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln284" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln63" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln61" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln36" action="validate"/>
+          </MandatoryValidationRule>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="sv3#area6#page20#enu15#sfld8" name="Orario *" type="time" modifiable="true" ajaxEventEnabled="false" ajaxEventIndicator="true" ajaxEventLink="sv3#area6#page20#enu15#ln36">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area6#page20#enu15#sfld8#mnd160" name="Mandatory156">
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln68" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln62" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln284" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln63" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln61" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln36" action="validate"/>
+          </MandatoryValidationRule>
+        </VRules>
+      </SelectionField>
+      <Field id="sv3#area6#page20#enu15#fld24" name="Data *" type="date" modifiable="true" ajaxEventEnabled="true" ajaxEventIndicator="true" ajaxEventLink="sv3#area6#page20#enu15#ln68">
+        <VRules>
+          <CompareValidationRule id="sv3#area6#page20#enu15#fld24#cmp10" name="data&gt;oggi" predicate="gt" value="today()">
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln68" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln62" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln284" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln63" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln61" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln36" action="validate"/>
+          </CompareValidationRule>
+          <MandatoryValidationRule id="sv3#area6#page20#enu15#fld24#mnd157" name="Mandatory156">
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln68" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln62" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln284" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln63" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln61" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln36" action="validate"/>
+          </MandatoryValidationRule>
         </VRules>
       </Field>
-      <SelectionField id="sv3#area6#page20#enu15#sfld7" name="Dottore" type="string" modifiable="true" ajaxEventEnabled="false" ajaxEventIndicator="true"/>
-      <SelectionField id="sv3#area6#page20#enu15#sfld6" name="Tipo di visita" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventIndicator="true" ajaxEventLink="sv3#area6#page20#enu15#ln63"/>
-      <SelectionField id="sv3#area6#page20#enu15#sfld5" name="Ospedale" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="sv3#area6#page20#enu15#ln62" ajaxEventIndicator="true"/>
+      <SelectionField id="sv3#area6#page20#enu15#sfld7" name="Dottore *" type="string" modifiable="true" ajaxEventEnabled="false" ajaxEventIndicator="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area6#page20#enu15#sfld7#mnd158" name="Mandatory156">
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln68" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln62" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln284" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln63" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln61" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln36" action="validate"/>
+          </MandatoryValidationRule>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="sv3#area6#page20#enu15#sfld6" name="Tipo di visita *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventIndicator="true" ajaxEventLink="sv3#area6#page20#enu15#ln63">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area6#page20#enu15#sfld6#mnd162" name="Mandatory156">
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln68" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln62" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln284" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln63" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln61" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln36" action="validate"/>
+          </MandatoryValidationRule>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="sv3#area6#page20#enu15#sfld5" name="Ospedale *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="sv3#area6#page20#enu15#ln62" ajaxEventIndicator="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area6#page20#enu15#sfld5#mnd161" name="Mandatory156">
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln68" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln62" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln284" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln63" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln61" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln36" action="validate"/>
+          </MandatoryValidationRule>
+        </VRules>
+      </SelectionField>
       <Link id="sv3#area6#page20#enu15#ln61" name="SelectorHospital" to="sv3#area6#seu34" type="normal" validate="true" ajaxEnabled="false">
         <LinkParameter id="sv3#area6#page20#enu15#ln61#par174" name="City_City" source="sv3#area6#page20#enu15#sfld4" target="sv3#area6#seu34#su67#acond62"/>
       </Link>
@@ -48,7 +118,18 @@
         <LinkParameter id="sv3#area6#page20#enu15#ln36#par186" name="Time_PASSING" source="sv3#area6#page20#enu15#sfld8" passing="true"/>
         <LinkParameter id="sv3#area6#page20#enu15#ln36#par659" name="id_room_PASSING" sourceLinkParameter="sv3#area6#inn39#oln301#par656" passing="true"/>
       </Link>
-      <SelectionField id="sv3#area6#page20#enu15#sfld61" name="Nazione" type="string" ajaxEventEnabled="true" ajaxEventLink="sv3#area6#page20#enu15#ln284" ajaxEventIndicator="true"/>
+      <SelectionField id="sv3#area6#page20#enu15#sfld61" name="Nazione *" type="string" ajaxEventEnabled="true" ajaxEventLink="sv3#area6#page20#enu15#ln284" ajaxEventIndicator="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area6#page20#enu15#sfld61#mnd159" name="Mandatory156">
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln68" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln62" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln284" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln63" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln61" action="skip"/>
+            <VRValidationLink linkId="sv3#area6#page20#enu15#ln36" action="validate"/>
+          </MandatoryValidationRule>
+        </VRules>
+      </SelectionField>
       <Link id="sv3#area6#page20#enu15#ln284" name="SelectCity" to="sv3#area6#seu127" type="normal" validate="true" gr:bendpoints="65,64,-105,-56">
         <LinkParameter id="sv3#area6#page20#enu15#ln284#par1949" name="Nazione_stato" source="sv3#area6#page20#enu15#sfld61" target="sv3#area6#seu127#su201#acond219"/>
       </Link>

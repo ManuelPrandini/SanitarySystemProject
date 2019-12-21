@@ -4,7 +4,7 @@
       <Message xml:space="preserve">Inserisci la nuova password per completare l'operazione di reset.</Message>
     </MultiMessageUnit>
     <EntryUnit gr:x="0" gr:y="75" id="sv4#area8#area11#page57#enu8" name="Cambia la password" fieldOrder="sv4#area8#area11#page57#enu8#fld87 sv4#area8#area11#page57#enu8#fld88 sv4#area8#area11#page57#enu8#fld89" linkOrder="sv4#area8#area11#page57#enu8#ln12">
-      <Field id="sv4#area8#area11#page57#enu8#fld89" name="Codice Fiscale" type="string" preloaded="true" modifiable="true"/>
+      <Field id="sv4#area8#area11#page57#enu8#fld89" name="Codice Fiscale" type="string" preloaded="true"/>
       <Field id="sv4#area8#area11#page57#enu8#fld88" name="ripeti password" type="password" modifiable="true">
         <VRules>
           <MandatoryValidationRule id="sv4#area8#area11#page57#enu8#fld88#mnd50" name="Mandatory50"/>

@@ -4,12 +4,14 @@
       <Field id="mov2#hym5#page40#enu21#fld108" name="Dal" type="date" modifiable="true">
         <VRules>
           <CompareValidationRule id="mov2#hym5#page40#enu21#fld108#cmp13" name="Today" predicate="lteq" value="today()"/>
+          <MandatoryValidationRule id="mov2#hym5#page40#enu21#fld108#mnd163" name="Mandatory163"/>
         </VRules>
       </Field>
       <Field id="mov2#hym5#page40#enu21#fld109" name="Al" type="date" modifiable="true">
         <VRules>
           <CompareValidationRule id="mov2#hym5#page40#enu21#fld109#cmp14" name="Today" predicate="lteq" value="today()"/>
           <CompareValidationRule id="mov2#hym5#page40#enu21#fld109#cmp15" name="CompareWithStart" predicate="gteq" valueField="mov2#hym5#page40#enu21#fld108"/>
+          <MandatoryValidationRule id="mov2#hym5#page40#enu21#fld109#mnd164" name="Mandatory164"/>
         </VRules>
       </Field>
       <SelectionField id="mov2#hym5#page40#enu21#sfld26" name="Cosa vuoi vedere?" type="string" slotOrder="mov2#hym5#page40#enu21#sfld26#slot6">

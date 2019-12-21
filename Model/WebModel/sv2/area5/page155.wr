@@ -1,0 +1,29 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2245" gr:y="845" id="sv2#area5#page155" name="Errore" layout:pageLayout="MetroStyle/Empty">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#area5#page155#mssu101" name="Errore">
+      <Message xml:space="preserve">Non puoi comprare pi&#249; quantit&#224; di quante te ne siano state prescritte
+$$dato1$$ --- $$dato2$$ -- $$dato3$$</Message>
+      <Placeholder id="sv2#area5#page155#mssu101#ph27" name="dato1"/>
+      <Placeholder id="sv2#area5#page155#mssu101#ph28" name="dato2"/>
+      <Placeholder id="sv2#area5#page155#mssu101#ph29" name="dato3"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area5#page155#mssu101"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,70 +1,174 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1035" gr:y="-465" id="mov2#hym1#page49" name="Registrazione dottore">
   <ContentUnits>
-    <EntryUnit id="mov2#hym1#page49#enu10" name="compila la form" gr:x="280" gr:y="170" fieldOrder="mov2#hym1#page49#enu10#fld124 mov2#hym1#page49#enu10#fld121 mov2#hym1#page49#enu10#fld120 mov2#hym1#page49#enu10#sfld39 mov2#hym1#page49#enu10#fld118 mov2#hym1#page49#enu10#sfld48 mov2#hym1#page49#enu10#sfld38 mov2#hym1#page49#enu10#sfld49 mov2#hym1#page49#enu10#sfld29 mov2#hym1#page49#enu10#fld116 mov2#hym1#page49#enu10#fld119 mov2#hym1#page49#enu10#fld117 mov2#hym1#page49#enu10#sfld51 mov2#hym1#page49#enu10#sfld57 mov2#hym1#page49#enu10#sfld40 mov2#hym1#page49#enu10#sfld41 mov2#hym1#page49#enu10#sfld42 mov2#hym1#page49#enu10#fld123" linkOrder="mov2#hym1#page49#enu10#ln149 mov2#hym1#page49#enu10#ln59 mov2#hym1#page49#enu10#ln253 mov2#hym1#page49#enu10#ln254 mov2#hym1#page49#enu10#ln255 mov2#hym1#page49#enu10#ln256">
+    <EntryUnit id="mov2#hym1#page49#enu10" name="compila la form" gr:x="280" gr:y="170" fieldOrder="mov2#hym1#page49#enu10#fld124 mov2#hym1#page49#enu10#fld121 mov2#hym1#page49#enu10#fld120 mov2#hym1#page49#enu10#sfld39 mov2#hym1#page49#enu10#fld118 mov2#hym1#page49#enu10#sfld48 mov2#hym1#page49#enu10#sfld38 mov2#hym1#page49#enu10#sfld49 mov2#hym1#page49#enu10#sfld29 mov2#hym1#page49#enu10#fld116 mov2#hym1#page49#enu10#fld119 mov2#hym1#page49#enu10#fld117 mov2#hym1#page49#enu10#sfld51 mov2#hym1#page49#enu10#sfld57 mov2#hym1#page49#enu10#sfld40 mov2#hym1#page49#enu10#sfld41 mov2#hym1#page49#enu10#sfld42 mov2#hym1#page49#enu10#fld123" linkOrder="mov2#hym1#page49#enu10#ln149 mov2#hym1#page49#enu10#ln59 mov2#hym1#page49#enu10#ln253 mov2#hym1#page49#enu10#ln254 mov2#hym1#page49#enu10#ln255 mov2#hym1#page49#enu10#ln256" ajaxEnableExpandedLinks="true" ajaxTooltipEnabled="false">
       <SelectionField id="mov2#hym1#page49#enu10#sfld29" name="luogo di residenza *" type="integer" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page49#enu10#sfld29#mnd30" name="Mandatory8"/>
+          <MandatoryValidationRule id="mov2#hym1#page49#enu10#sfld29#mnd30" name="Mandatory8">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </MandatoryValidationRule>
         </VRules>
       </SelectionField>
       <SelectionField id="mov2#hym1#page49#enu10#sfld38" name="luogo di nascita *" type="integer" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page49#enu10#sfld38#mnd31" name="Mandatory8"/>
+          <MandatoryValidationRule id="mov2#hym1#page49#enu10#sfld38#mnd31" name="Mandatory8">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </MandatoryValidationRule>
         </VRules>
       </SelectionField>
-      <Field id="mov2#hym1#page49#enu10#fld116" name="indirizzo di residenza" type="string" modifiable="true"/>
+      <Field id="mov2#hym1#page49#enu10#fld116" name="indirizzo di residenza *" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page49#enu10#fld116#mnd38">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </MandatoryValidationRule>
+        </VRules>
+      </Field>
       <Field id="mov2#hym1#page49#enu10#fld117" name="telefono" type="string" modifiable="true"/>
       <Field id="mov2#hym1#page49#enu10#fld118" name="data di nascita *" type="date" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page49#enu10#fld118#mnd33" name="Mandatory8"/>
-          <CompareValidationRule id="mov2#hym1#page49#enu10#fld118#cmp17" name="noNatoNelFuturo" predicate="gt" value="today()"/>
+          <MandatoryValidationRule id="mov2#hym1#page49#enu10#fld118#mnd33" name="Mandatory8">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </MandatoryValidationRule>
+          <CompareValidationRule id="mov2#hym1#page49#enu10#fld118#cmp17" name="noNatoNelFuturo" predicate="lteq" value="today()">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </CompareValidationRule>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page49#enu10#fld119" name="email *" type="string" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page49#enu10#fld119#mnd32" name="Mandatory8"/>
+          <MandatoryValidationRule id="mov2#hym1#page49#enu10#fld119#mnd32" name="Mandatory8">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </MandatoryValidationRule>
         </VRules>
       </Field>
       <SelectionField id="mov2#hym1#page49#enu10#sfld39" name="sesso *" type="string" modifiable="true" slotOrder="mov2#hym1#page49#enu10#sfld39#slot4">
         <Slot id="mov2#hym1#page49#enu10#sfld39#slot4" name="Slot5" label="true" output="true" value="Male|Female"/>
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page49#enu10#sfld39#mnd23" name="Mandatory8"/>
+          <MandatoryValidationRule id="mov2#hym1#page49#enu10#sfld39#mnd85" name="Mandatory55">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </MandatoryValidationRule>
         </VRules>
       </SelectionField>
       <Field id="mov2#hym1#page49#enu10#fld120" name="cognome *" type="string" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page49#enu10#fld120#mnd34" name="Mandatory8"/>
+          <MandatoryValidationRule id="mov2#hym1#page49#enu10#fld120#mnd34" name="Mandatory8">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </MandatoryValidationRule>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page49#enu10#fld121" name="nome *" type="string" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page49#enu10#fld121#mnd29" name="Mandatory8"/>
+          <MandatoryValidationRule id="mov2#hym1#page49#enu10#fld121#mnd29" name="Mandatory8">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </MandatoryValidationRule>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page49#enu10#fld122" name="username" type="string" hidden="true"/>
       <Field id="mov2#hym1#page49#enu10#fld123" name="password *" type="password" modifiable="true" preloaded="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page49#enu10#fld123#mnd24" name="Mandatory8"/>
+          <MandatoryValidationRule id="mov2#hym1#page49#enu10#fld123#mnd84" name="Mandatory55">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </MandatoryValidationRule>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page49#enu10#fld124" name="cf *" type="string" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page49#enu10#fld124#mnd35" name="Mandatory8"/>
+          <MandatoryValidationRule id="mov2#hym1#page49#enu10#fld124#mnd35" name="Mandatory8">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </MandatoryValidationRule>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page49#enu10#fld125" name="doctor code" type="string" preloaded="true" hidden="true">
-        <VRules>
-          <TypeValidationRule id="mov2#hym1#page49#enu10#fld125#tvr8" name="Type Validation1"/>
-        </VRules>
+        <VRules/>
       </Field>
       <SelectionField id="mov2#hym1#page49#enu10#sfld40" name="ospedale di lavoro *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventIndicator="true" ajaxEventLink="mov2#hym1#page49#enu10#ln59">
-        <VRules/>
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page49#enu10#sfld40#mnd54" name="Mandatory54">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </MandatoryValidationRule>
+        </VRules>
       </SelectionField>
       <SelectionField id="mov2#hym1#page49#enu10#sfld41" name="specializzazione medica *" type="string" ajaxEventEnabled="true" ajaxEventIndicator="true" ajaxEventLink="mov2#hym1#page49#enu10#ln59">
-        <VRules/>
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page49#enu10#sfld41#mnd86" name="Mandatory55">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </MandatoryValidationRule>
+        </VRules>
       </SelectionField>
       <SelectionField id="mov2#hym1#page49#enu10#sfld42" name="stanza di lavoro *" type="string">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page49#enu10#sfld42#mnd21" name="Mandatory8"/>
+          <MandatoryValidationRule id="mov2#hym1#page49#enu10#sfld42#mnd87" name="Mandatory55">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </MandatoryValidationRule>
         </VRules>
       </SelectionField>
       <Link id="mov2#hym1#page49#enu10#ln149" name="Registrati" to="mov2#hym1#miu14" type="normal" validate="true" gr:bendpoints="92,45,-728,275;618,42,-202,272;591,-1,-74,159">
@@ -104,10 +208,54 @@
       <Link id="mov2#hym1#page49#enu10#ln256" name="SelezionaOspedale" to="mov2#hym1#page49#seu23" type="normal" validate="true">
         <LinkParameter id="mov2#hym1#page49#enu10#ln256#par1787" name="citt&#224; ospedale *_citt&#224;" source="mov2#hym1#page49#enu10#sfld57" target="mov2#hym1#page49#seu23#su178#acond198"/>
       </Link>
-      <SelectionField id="mov2#hym1#page49#enu10#sfld57" name="citt&#224; ospedale *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page49#enu10#ln256"/>
-      <SelectionField id="mov2#hym1#page49#enu10#sfld51" name="paese ospedale *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page49#enu10#ln255"/>
-      <SelectionField id="mov2#hym1#page49#enu10#sfld49" name="paese di residenza *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page49#enu10#ln254"/>
-      <SelectionField id="mov2#hym1#page49#enu10#sfld48" name="paese di nascita *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page49#enu10#ln253"/>
+      <SelectionField id="mov2#hym1#page49#enu10#sfld57" name="citt&#224; ospedale *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page49#enu10#ln256">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page49#enu10#sfld57#mnd22" name="Mandatory22">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </MandatoryValidationRule>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="mov2#hym1#page49#enu10#sfld51" name="paese ospedale *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page49#enu10#ln255">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page49#enu10#sfld51#mnd83" name="Mandatory55">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </MandatoryValidationRule>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="mov2#hym1#page49#enu10#sfld49" name="paese di residenza *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page49#enu10#ln254">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page49#enu10#sfld49#mnd82" name="Mandatory55">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </MandatoryValidationRule>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="mov2#hym1#page49#enu10#sfld48" name="paese di nascita *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page49#enu10#ln253">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page49#enu10#sfld48#mnd55" name="Mandatory55">
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln149" action="validate"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln59" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln253" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln254" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln255" action="skip"/>
+            <VRValidationLink linkId="mov2#hym1#page49#enu10#ln256" action="skip"/>
+          </MandatoryValidationRule>
+        </VRules>
+      </SelectionField>
     </EntryUnit>
     <SelectorUnit id="mov2#hym1#page49#seu23" name="Selezione ospedale" gr:x="5" gr:y="160" entity="ent4">
       <Selector id="mov2#hym1#page49#seu23#su178" defaultPolicy="fill" booleanOperator="and">

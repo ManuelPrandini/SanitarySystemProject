@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1125" gr:y="850" id="sv2#area5#page68" name="Farmaco aggiunto al carrello!">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1140" gr:y="850" id="sv2#area5#page68" name="Farmaco aggiunto al carrello!">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#area5#page68#mssu26" name="Farmaco aggiunto correttamente al carrello" linkOrder="sv2#area5#page68#mssu26#ln9">
       <Link id="sv2#area5#page68#mssu26#ln9" name="Seleziona altro" to="sv2#area5#pcu6" type="normal" validate="true" gr:bendpoints="-365,-391,155,195">

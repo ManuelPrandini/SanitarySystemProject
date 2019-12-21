@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1800" gr:y="245" id="sv2#area5#page30" name="Men&#249; cliente">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1815" gr:y="245" id="sv2#area5#page30" name="Men&#249; cliente">
   <ContentUnits>
     <EntryUnit gr:x="170" gr:y="0" id="sv2#area5#page30#enu22" name="Ricerca farmaco senza prescrizione" linkOrder="sv2#area5#page30#enu22#ln184 sv2#area5#page30#enu22#ln132">
       <Field id="sv2#area5#page30#enu22#fld29" name="farmaco" type="string" modifiable="true"/>

@@ -26,63 +26,69 @@
       <Field id="mov2#hym1#page32#enu13#fld67" name="telefono" type="string" preloaded="true"/>
       <Field id="mov2#hym1#page32#enu13#fld66" name="cognome *" type="string" preloaded="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld66#mnd66" name="Mandatory39"/>
+          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld66#mnd130" name="Mandatory39"/>
         </VRules>
       </Field>
-      <Field id="mov2#hym1#page32#enu13#fld65" name="altezza (cm)" type="integer" modifiable="true">
+      <Field id="mov2#hym1#page32#enu13#fld65" name="altezza (cm) *" type="integer" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld65#mnd26" name="Mandatory26"/>
+          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld65#mnd26" name="Mandatory26">
+            <VRValidationLink linkId="mov2#hym1#page32#enu13#ln51" action="validate"/>
+          </MandatoryValidationRule>
           <TypeValidationRule id="mov2#hym1#page32#enu13#fld65#tvr2" name="Type Validation2" type="integer" errorMessage="Valore non inserito correttamente. Inserire in cm"/>
         </VRules>
       </Field>
-      <Field id="mov2#hym1#page32#enu13#fld64" name="peso corporeo (kg)" type="integer" modifiable="true">
+      <Field id="mov2#hym1#page32#enu13#fld64" name="peso corporeo (kg) *" type="integer" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld64#mnd27" name="Mandatory27"/>
           <TypeValidationRule id="mov2#hym1#page32#enu13#fld64#tvr3" name="Type Validation3" type="integer" errorMessage="Valore non inserito correttamente"/>
+          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld64#mnd138" name="Mandatory39"/>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page32#enu13#fld63" name="patient code" type="string" preloaded="true" ajaxEventEnabled="false" hidden="true">
-        <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld63#mnd25" name="Mandatory25"/>
-        </VRules>
+        <VRules/>
       </Field>
       <Field id="mov2#hym1#page32#enu13#fld62" name="password *" type="password" preloaded="true">
-        <VRules/>
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld62#mnd137" name="Mandatory39"/>
+        </VRules>
       </Field>
       <Field id="mov2#hym1#page32#enu13#fld61" name="nome *" type="string" preloaded="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld61#mnd71" name="Mandatory39"/>
+          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld61#mnd136" name="Mandatory39"/>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page32#enu13#fld60" name="email *" type="string" preloaded="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld60#mnd68" name="Mandatory39"/>
+          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld60#mnd132" name="Mandatory39"/>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page32#enu13#fld59" name="cf *" type="string" preloaded="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld59#mnd65" name="Mandatory39"/>
+          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld59#mnd129" name="Mandatory39"/>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page32#enu13#fld57" name="data di nascita *" type="date" preloaded="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld57#mnd67" name="Mandatory39"/>
+          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld57#mnd131" name="Mandatory39"/>
         </VRules>
       </Field>
-      <Field id="mov2#hym1#page32#enu13#fld56" name="indirizzo di residenza" type="string" preloaded="true"/>
+      <Field id="mov2#hym1#page32#enu13#fld56" name="indirizzo di residenza *" type="string" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld56#mnd133" name="Mandatory39"/>
+        </VRules>
+      </Field>
       <Field id="mov2#hym1#page32#enu13#fld149" type="string" name="luogo di residenza *" preloaded="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld149#mnd70" name="Mandatory39"/>
+          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld149#mnd135" name="Mandatory39"/>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page32#enu13#fld150" type="string" name="sesso *" preloaded="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld150#mnd73" name="Mandatory39"/>
+          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld150#mnd139" name="Mandatory39"/>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page32#enu13#fld151" type="string" name="luogo di nascita *" preloaded="true">
         <VRules>
-          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld151#mnd69" name="Mandatory39"/>
+          <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld151#mnd134" name="Mandatory39"/>
         </VRules>
       </Field>
     </EntryUnit>

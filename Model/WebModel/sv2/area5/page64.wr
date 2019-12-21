@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1880" gr:y="1130" id="sv2#area5#page64" name="Acquisto completato correttamente!">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1895" gr:y="1130" id="sv2#area5#page64" name="Acquisto completato correttamente!">
   <ContentUnits/>
   <layout:Grid containerType="grid">
     <layout:Row>

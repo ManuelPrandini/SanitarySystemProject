@@ -22,7 +22,7 @@
         <LinkParameter id="sv3#area6#page93#gtu16#ln156#par1408" name="UserCtxParam.cf_PASSING" source="sv3#area6#page93#gtu16.UserCtxParam" passing="true"/>
       </Link>
     </GetUnit>
-    <DataUnit id="sv3#area6#page93#dau6" name="DettagliRicovero" gr:x="245" gr:y="10" entity="ent31" displayAttributes="ent5#att3 ent5#att10 ent5#att22 ent5#att23 rel20#role39.rel8#role11.rel37#role74.ent4#att14 rel20#role39.rel8#role11.ent10#att50 rel20#role39.ent25#att55">
+    <DataUnit id="sv3#area6#page93#dau6" name="DettagliRicovero" gr:x="245" gr:y="10" entity="ent31" displayAttributes="ent5#att3 ent5#att10 ent5#att22 ent5#att23 rel20#role39.rel8#role11.rel37#role74.ent4#att14 rel20#role39.rel8#role11.ent10#att50 rel20#role39.ent25#att55 rel3#role3.rel36#role72.User#att28">
       <Selector id="sv3#area6#page93#dau6#su135" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area6#page93#dau6#su135#kcond63" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
@@ -92,6 +92,7 @@
           <layout:Attribute attribute="rel20#role39.rel8#role11.rel37#role74.ent4#att14" label="ospedale"/>
           <layout:Attribute attribute="rel20#role39.rel8#role11.ent10#att50" label="sala ricovero"/>
           <layout:Attribute attribute="rel20#role39.ent25#att55" label="letto"/>
+          <layout:Attribute attribute="rel3#role3.rel36#role72.User#att28"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
