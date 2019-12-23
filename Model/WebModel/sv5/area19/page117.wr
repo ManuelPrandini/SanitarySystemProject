@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="960" gr:y="0" id="sv5#area19#page117" name="Sezione statistiche">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="930" gr:y="0" id="sv5#area19#page117" name="Sezione statistiche">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv5#area19#page117#mssu47" name="Benvenuto!">
       <Message xml:space="preserve">Sei nella sezione delle statistiche. Seleziona dal men&#249; in alto le statistiche del sistema SanitarySystemProject che desideri visualizzare</Message>

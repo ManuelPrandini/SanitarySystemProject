@@ -1,31 +1,26 @@
-[12 dic 2019 11:39:01] DEBUG Executing SQL script
-[12 dic 2019 11:39:01] INFO ================================================================================
-[12 dic 2019 11:39:01] INFO onError= 'stop'
-[12 dic 2019 11:39:01] INFO autoCommit= 'false'
-[12 dic 2019 11:39:01] INFO username= 'root'
-[12 dic 2019 11:39:01] INFO outputPath= '/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/SanitarySystemProject/.Temp~/UpdateSQL.xml'
-[12 dic 2019 11:39:01] INFO outputLogPath= '/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/SanitarySystemProject/.Temp~/UpdateSQL.xml.log'
-[12 dic 2019 11:39:01] INFO encoding= ''
-[12 dic 2019 11:39:01] INFO driverClass= 'com.mysql.jdbc.Driver'
-[12 dic 2019 11:39:01] INFO sqlScript= '/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/SanitarySystemProject/.Temp~/UpdateSQL.sql'
-[12 dic 2019 11:39:01] INFO eventSocketPort= '37941'
-[12 dic 2019 11:39:01] INFO statementSeparator= ';'
-[12 dic 2019 11:39:01] INFO derby.system.home= '/home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/.metadata/.plugins/com.webratio.commons.db/derby'
-[12 dic 2019 11:39:01] INFO password= 'root'
-[12 dic 2019 11:39:01] INFO url= 'jdbc:mysql://localhost:3306/hospital'
-[12 dic 2019 11:39:01] INFO ================================================================================
-[12 dic 2019 11:39:01] INFO Connecting to the Database...
-[12 dic 2019 11:39:02] INFO Database connection estabilished
-[12 dic 2019 11:39:02] INFO transaction isolation: 4
-[12 dic 2019 11:39:02] DEBUG ================================================================================
-[12 dic 2019 11:39:02] DEBUG Executing SQL script file: /home/manuel/WebRatio_Platform_University_Student_Edition_7.2.18.Linux/WebRatio/workspace/SanitarySystemProject/.Temp~/UpdateSQL.sql
-[12 dic 2019 11:39:02] DEBUG Executing statement:  create table `accertamento` ( `oid`  integer  not null, `data`  date, `orario`  time, `descrizione`  longtext, primary key (`oid`) )
-[12 dic 2019 11:39:02] DEBUG Executing statement:    create table `descrizione_accertamento` ( `tipologia`  varchar(255)  not null, primary key (`tipologia`) )
-[12 dic 2019 11:39:02] DEBUG Executing statement:    alter table `accertamento`  add column  `recovery_oid`  integer
-[12 dic 2019 11:39:03] DEBUG Executing statement:  alter table `accertamento`   add index fk_accertamento_recovery (`recovery_oid`), add constraint fk_accertamento_recovery foreign key (`recovery_oid`) references `recovery` (`action_oid`)
-[12 dic 2019 11:39:04] DEBUG Executing statement:    alter table `accertamento`  add column  `descrizione_accertamento_tipol`  varchar(255)
-[12 dic 2019 11:39:04] DEBUG Executing statement:  alter table `accertamento`   add index fk_accertamento_descrizione_ac (`descrizione_accertamento_tipol`), add constraint fk_accertamento_descrizione_ac foreign key (`descrizione_accertamento_tipol`) references `descrizione_accertamento` (`tipologia`)
-[12 dic 2019 11:39:05] DEBUG ================================================================================
-[12 dic 2019 11:39:05] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[12 dic 2019 11:39:05] INFO Database connection closed
-[12 dic 2019 11:39:05] DEBUG Total time: 3583 milliseconds
+[23 dic 2019 12:31:16] DEBUG Executing SQL script
+[23 dic 2019 12:31:16] INFO ================================================================================
+[23 dic 2019 12:31:16] INFO onError= 'stop'
+[23 dic 2019 12:31:16] INFO autoCommit= 'false'
+[23 dic 2019 12:31:16] INFO username= 'root'
+[23 dic 2019 12:31:16] INFO outputPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\SanitarySystemProject\.Temp~\UpdateSQL.xml'
+[23 dic 2019 12:31:16] INFO outputLogPath= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\SanitarySystemProject\.Temp~\UpdateSQL.xml.log'
+[23 dic 2019 12:31:16] INFO encoding= ''
+[23 dic 2019 12:31:16] INFO driverClass= 'com.mysql.jdbc.Driver'
+[23 dic 2019 12:31:16] INFO sqlScript= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\SanitarySystemProject\.Temp~\UpdateSQL.sql'
+[23 dic 2019 12:31:16] INFO eventSocketPort= '55638'
+[23 dic 2019 12:31:16] INFO statementSeparator= ';'
+[23 dic 2019 12:31:16] INFO derby.system.home= 'C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[23 dic 2019 12:31:16] INFO password= 'root'
+[23 dic 2019 12:31:16] INFO url= 'jdbc:mysql://localhost:3306/hospital'
+[23 dic 2019 12:31:16] INFO ================================================================================
+[23 dic 2019 12:31:16] INFO Connecting to the Database...
+[23 dic 2019 12:31:16] INFO Database connection estabilished
+[23 dic 2019 12:31:16] INFO transaction isolation: 4
+[23 dic 2019 12:31:16] DEBUG ================================================================================
+[23 dic 2019 12:31:16] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\SanitarySystemProject\.Temp~\UpdateSQL.sql
+[23 dic 2019 12:31:16] DEBUG Executing statement:  alter table `emergency_code`  add column  `id`  integer
+[23 dic 2019 12:31:16] DEBUG ================================================================================
+[23 dic 2019 12:31:16] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[23 dic 2019 12:31:16] INFO Database connection closed
+[23 dic 2019 12:31:16] DEBUG Total time: 480 milliseconds

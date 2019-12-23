@@ -1,37 +1,36 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page62" name="Accedi dati paziente" landmark="true" gr:x="15" gr:y="630">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page62" name="Accedi dati paziente" landmark="true" gr:x="-45" gr:y="635">
   <ContentUnits>
-    <EntryUnit id="sv1#page62#enu18" name="Inserisci CF" linkOrder="sv1#page62#enu18#ln113" gr:x="0" gr:y="0" fieldOrder="sv1#page62#enu18#fld83">
+    <EntryUnit id="sv1#page62#enu18" name="Inserisci CF" linkOrder="sv1#page62#enu18#ln113" gr:x="130" gr:y="10" fieldOrder="sv1#page62#enu18#fld83">
       <Field id="sv1#page62#enu18#fld83" name="CF" type="string" modifiable="true"/>
-      <Link id="sv1#page62#enu18#ln113" name="Cerca" to="sv1#page62#dau12" type="normal" validate="true">
-        <LinkParameter id="sv1#page62#enu18#ln113#par441" name="CF_cf" source="sv1#page62#enu18#fld83" target="sv1#page62#dau12#su61#acond52"/>
+      <Link id="sv1#page62#enu18#ln113" name="Cerca" to="sv1#seu139" type="normal" validate="true">
+        <LinkParameter id="sv1#page62#enu18#ln113#par441" name="CF_cf" source="sv1#page62#enu18#fld83" target="sv1#seu139#su206#acond65"/>
       </Link>
     </EntryUnit>
-    <DataUnit id="sv1#page62#dau12" name="Scheda Paziente" gr:x="140" gr:y="15" entity="ent6" displayAttributes="rel14#role28.userOID ent6#att11 rel14#role28.User#att27 rel14#role28.User#att28 rel14#role28.email rel14#role28.User#att29 rel14#role28.User#att40 rel14#role28.User#att12 rel14#role28.User#att41 ent6#att30 ent6#att31" linkOrder="sv1#page62#dau12#ln130">
+    <DataUnit id="sv1#page62#dau12" name="Scheda Paziente" gr:x="305" gr:y="0" entity="ent6" displayAttributes="rel14#role28.userOID ent6#att11 rel14#role28.User#att27 rel14#role28.User#att28 rel14#role28.email rel14#role28.User#att29 rel14#role28.User#att40 rel14#role28.User#att12 rel14#role28.User#att41 ent6#att30 ent6#att31" linkOrder="sv1#page62#dau12#ln130">
       <Selector id="sv1#page62#dau12#su61" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv1#page62#dau12#su61#acond52" name="cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.userOID"/>
-        <AttributesCondition id="sv1#page62#dau12#su61#acond1" name="cf!=sestesso" predicate="neq" booleanOperator="and" implied="false" attributes="rel14#role28.userOID"/>
-        <AttributesCondition id="sv1#page62#dau12#su61#acond53" name="Approved" predicate="eq" booleanOperator="and" implied="false" value="1" attributes="ent6#att19"/>
+        <KeyCondition id="sv1#page62#dau12#su61#kcond86" name="KeyCondition86" predicate="in" implied="false"/>
       </Selector>
       <Link id="sv1#page62#dau12#ln130" name="Procedi" to="sv1#area7#pcu17" type="normal" validate="true">
-        <LinkParameter id="sv1#page62#dau12#ln130#par1742" name="UserCtxParam.cf_PASSING_cf_dottore" sourceLinkParameter="sv1#page62#gtu2#ln17#par25" target="sv1#area7#pcu17#pcp68"/>
         <LinkParameter id="sv1#page62#dau12#ln130#par1743" name="PatientToUser.cf_cf_paziente" source="data.rel14#role28$userOID" target="sv1#area7#pcu17#pcp69"/>
-        <LinkParameter id="sv1#page62#dau12#ln130#par1762" name="DoctorToHospital.name_PASSING_nome_ospedale" sourceLinkParameter="sv1#page62#seu26#ln90#par492" target="sv1#area7#pcu17#pcp70"/>
+        <LinkParameter id="sv1#page62#dau12#ln130#par802" name="UserCtxParam.cf_PASSING_cf_dottore" sourceLinkParameter="sv1#inn51#oln376#par795" target="sv1#area7#pcu17#pcp68"/>
+        <LinkParameter id="sv1#page62#dau12#ln130#par853" name="DoctorToHospital.name_PASSING_nome_ospedale" sourceLinkParameter="sv1#inn51#oln376#par794" target="sv1#area7#pcu17#pcp70"/>
       </Link>
     </DataUnit>
-    <GetUnit gr:x="0" gr:y="125" id="sv1#page62#gtu2" name="CF" contextParameters="UserCtxParam">
-      <Link id="sv1#page62#gtu2#ln17" name="Flow17" to="sv1#page62#dau12" type="transport" validate="true">
-        <LinkParameter id="sv1#page62#gtu2#ln17#par2" name="UserCtxParam.cf_cf!=sestesso" source="sv1#page62#gtu2.UserCtxParam" target="sv1#page62#dau12#su61#acond1"/>
+    <GetUnit gr:x="0" gr:y="130" id="sv1#page62#gtu2" name="CF" contextParameters="UserCtxParam">
+      <Link id="sv1#page62#gtu2#ln17" name="Flow17" to="sv1#seu139" type="transport" validate="true">
         <LinkParameter id="sv1#page62#gtu2#ln17#par25" name="UserCtxParam.cf_PASSING" source="sv1#page62#gtu2.UserCtxParam" passing="true"/>
+        <LinkParameter id="sv1#page62#gtu2#ln17#par317" name="UserCtxParam.cf_cf!=sestesso" source="sv1#page62#gtu2.UserCtxParam" target="sv1#seu139#su206#acond63"/>
       </Link>
       <Link id="sv1#page62#gtu2#ln88" name="Flow88" to="sv1#page62#seu26" type="transport" validate="true">
         <LinkParameter id="sv1#page62#gtu2#ln88#par491" name="UserCtxParam.cf_cfDoctor" source="sv1#page62#gtu2.UserCtxParam" target="sv1#page62#seu26#su31#acond41"/>
+        <LinkParameter id="sv1#page62#gtu2#ln88#par480" name="UserCtxParam.cf_PASSING" source="sv1#page62#gtu2.UserCtxParam" passing="true"/>
       </Link>
     </GetUnit>
-    <SelectorUnit gr:x="170" gr:y="175" id="sv1#page62#seu26" name="HospitalInfo" entity="ent9">
+    <SelectorUnit gr:x="200" gr:y="120" id="sv1#page62#seu26" name="HospitalInfo" entity="ent9" distinctAttributes="rel5#role19.rel37#role74.ent4#att14">
       <Selector id="sv1#page62#seu26#su31" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#page62#seu26#su31#acond41" name="cfDoctor" predicate="eq" booleanOperator="or" implied="false" attributes="rel36#role72.userOID"/>
       </Selector>
-      <Link id="sv1#page62#seu26#ln90" name="Flow90" to="sv1#page62#dau12" type="transport" validate="true">
+      <Link id="sv1#page62#seu26#ln90" name="Flow90" to="sv1#seu139" type="transport" validate="true">
         <LinkParameter id="sv1#page62#seu26#ln90#par492" name="DoctorToHospital.name_PASSING" source="rel12#role23$ent4#att14Array" passing="true"/>
       </Link>
     </SelectorUnit>

@@ -1,13 +1,13 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1985" gr:y="480" id="sv5#area18#page110" name="Errore" layout:pageLayout="MetroStyle/Empty">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page158" name="Errore " layout:pageLayout="MetroStyle/Empty" gr:x="290" gr:y="1125">
   <ContentUnits>
-    <MultiMessageUnit id="sv5#area18#page110#mssu67" name="Errore" gr:x="0" gr:y="0">
-      <Message xml:space="preserve">Si &#232; verificato un errore!</Message>
+    <MultiMessageUnit id="sv1#page158#mssu33" name="Errore" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Errore nell'inserimento del cf del paziente!</Message>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv5#area18#page110#mssu67"/>
+        <layout:Unit unitId="sv1#page158#mssu33"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

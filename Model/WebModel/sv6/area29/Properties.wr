@@ -1,5 +1,25 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-15" gr:y="2165" id="sv6#area29" name="Cartella clinica" landmark="true" landmarks="sv6#area29#page149">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-15" gr:y="2170" id="sv6#area29" name="Cartella clinica" landmark="true" defaultPage="sv6#area29#page149">
   <OperationUnits>
-    <ModuleInstanceUnit id="sv6#area29#miu25" gr:x="390" gr:y="35" action="false" moduleId="mov2#hym5"/>
+    <ModuleInstanceUnit id="sv6#area29#miu25" gr:x="785" gr:y="65" action="false" moduleId="mov2#hym5"/>
+    <IsNotNullUnit id="sv6#area29#inn84" name="Esiste" gr:x="210" gr:y="400">
+      <KOLink id="sv6#area29#inn84#kln160" name="KOFlow120" to="sv6#area29#page198" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Errore" ajaxWindowWidth="450" ajaxWindowHeight="200" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+      <OKLink id="sv6#area29#inn84#oln532" name="OKFlow532" to="sv6#area29#page149#dau13">
+        <LinkParameter id="sv6#area29#inn84#oln532#par3265" name="Input Value_KeyCondition114 [codice_paziente]" source="inputValue" target="sv6#area29#page149#dau13#su200#kcond114.ent6#att11"/>
+        <LinkParameter id="sv6#area29#inn84#oln532#par3268" name="DoctorToHospital.name_PASSING" sourceLinkParameter="sv6#area29#seu188#oln533#par3266" passing="true"/>
+        <LinkParameter id="sv6#area29#inn84#oln532#par3269" name="UserCtxParam.cf_PASSING" sourceLinkParameter="sv6#area29#seu188#oln533#par3267" passing="true"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <SelectorUnit id="sv6#area29#seu188" name="SelezionaPaziente" gr:x="0" gr:y="365" entity="ent6">
+      <Selector id="sv6#area29#seu188#su263" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv6#area29#seu188#su263#acond272" name="cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.userOID"/>
+        <AttributesCondition id="sv6#area29#seu188#su263#acond273" name="Approved" predicate="eq" booleanOperator="and" implied="false" value="1" attributes="ent6#att19"/>
+        <AttributesCondition id="sv6#area29#seu188#su263#acond274" name="cf!=sestesso" predicate="neq" booleanOperator="and" implied="false" attributes="rel14#role28.userOID"/>
+      </Selector>
+      <OKLink id="sv6#area29#seu188#oln533" name="OKFlow533" to="sv6#area29#inn84">
+        <LinkParameter id="sv6#area29#seu188#oln533#par3264" name="codice_paziente_Input" source="ent6#att11Array" target="sv6#area29#inn84.isnotnull"/>
+        <LinkParameter id="sv6#area29#seu188#oln533#par3266" name="DoctorToHospital.name_PASSING" sourceLinkParameter="sv6#area29#page149#seu138#ln287#par2033" passing="true"/>
+        <LinkParameter id="sv6#area29#seu188#oln533#par3267" name="UserCtxParam.cf_PASSING" sourceLinkParameter="sv6#area29#page149#gtu25#ln283#par2031" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
   </OperationUnits>
 </Area>

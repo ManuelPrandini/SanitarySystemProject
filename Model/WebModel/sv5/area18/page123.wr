@@ -1,7 +1,11 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1040" gr:y="55" id="sv5#area18#page123" name="Registra stanza ricoveri">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1040" gr:y="80" id="sv5#area18#page123" name="Registra stanza ricoveri">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv5#area18#page123#enu40" name="Modifica struttura stanza ricoveri" fieldOrder="sv5#area18#page123#enu40#fld165 sv5#area18#page123#enu40#fld166 sv5#area18#page123#enu40#fld167" linkOrder="sv5#area18#page123#enu40#ln241">
-      <Field id="sv5#area18#page123#enu40#fld167" name="Numero letti" type="integer" modifiable="true"/>
+      <Field id="sv5#area18#page123#enu40#fld167" name="Numero letti" type="integer" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="sv5#area18#page123#enu40#fld167#cmp25" name="Compare25" predicate="gt" value="0" errorMessage="Il numero di letti da inserire deve essere maggiore di 0"/>
+        </VRules>
+      </Field>
       <Field id="sv5#area18#page123#enu40#fld166" name="Piano stanza" type="integer" modifiable="true"/>
       <Field id="sv5#area18#page123#enu40#fld165" name="Nome stanza" type="string" modifiable="true"/>
       <Link id="sv5#area18#page123#enu40#ln241" name="Registra" to="sv5#area18#cru33" type="normal" validate="true">

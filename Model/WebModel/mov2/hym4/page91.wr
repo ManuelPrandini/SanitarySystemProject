@@ -33,7 +33,6 @@
         <LinkParameter id="mov2#hym4#page91#enu30#ln200#par1414" name="orario inizio_startTime" source="mov2#hym4#page91#enu30#fld128" target="mov2#hym4#cru20.ent5#att24"/>
         <LinkParameter id="mov2#hym4#page91#enu30#ln200#par1415" name="sala operatoria_Surgery_Room.id_room(Clinical_SurgeryToSurgery_Room)" source="mov2#hym4#page91#enu30#sfld10" target="mov2#hym4#cru20.rel18#role35.ent10#att5"/>
         <LinkParameter id="mov2#hym4#page91#enu30#ln200#par1416" name="titolo_title" source="mov2#hym4#page91#enu30#fld126" target="mov2#hym4#cru20.ent5#att3"/>
-        <LinkParameter id="mov2#hym4#page91#enu30#ln200#par1402" name="doctorCode_PASSING_Doctor.doctor_code(VisitToDoctor)" sourceLinkParameter="mov2#hym4#page91#seu88#ln193#par1400" target="mov2#hym4#cru20.rel3#role3.ent9#att33"/>
       </Link>
     </EntryUnit>
     <SelectorUnit id="mov2#hym4#page91#seu88" name="Sale operatorie dottore" gr:x="165" gr:y="90" entity="ent24" distinctAttributes="ent10#att5 ent10#att50">
@@ -44,9 +43,6 @@
         <LinkParameter id="mov2#hym4#page91#seu88#ln193#par1370" name="name_sala operatoria [label]" source="ent10#att50Array" target="mov2#hym4#page91#enu30#sfld10_label"/>
         <LinkParameter id="mov2#hym4#page91#seu88#ln193#par1371" name="id_room_sala operatoria [output]" source="ent10#att5Array" target="mov2#hym4#page91#enu30#sfld10_output"/>
         <LinkParameter id="mov2#hym4#page91#seu88#ln193#par1398" name="Selected Date_PASSING_data intervento" sourceLinkParameter="mov2#hym4#scu12#oln289#par1397" target="mov2#hym4#page91#enu30#fld107_slot"/>
-        <LinkParameter id="mov2#hym4#page91#seu88#ln193#par1399" name="patientCode_PASSING_paziente" sourceLinkParameter="mov2#hym4#scu12#oln289#par1396" target="mov2#hym4#page91#enu30#fld115_slot"/>
-        <LinkParameter id="mov2#hym4#page91#seu88#ln193#par1400" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#scu12#oln289#par1394" passing="true"/>
-        <LinkParameter id="mov2#hym4#page91#seu88#ln193#par1401" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#scu12#oln289#par1396" passing="true"/>
       </Link>
     </SelectorUnit>
   </ContentUnits>

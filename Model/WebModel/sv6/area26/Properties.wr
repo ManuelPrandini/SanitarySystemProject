@@ -1,12 +1,13 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv6#area26" name="Accettazione" defaultArea="sv6#area26#area27" landmarks="sv6#area26#page128 sv6#area26#area27" landmark="true" gr:x="0" gr:y="455">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv6#area26" name="Accettazione" defaultArea="sv6#area26#area27" landmarks="sv6#area26#page128 sv6#area26#area27" landmark="true" gr:x="-20" gr:y="445">
   <OperationUnits>
     <CreateUnit id="sv6#area26#cru26" name="RegistraProntoSoccorso" gr:x="520" gr:y="325" entity="ent17">
       <OKLink id="sv6#area26#cru26#oln350" name="OKFlow167" to="sv6#area26#page140" automaticCoupling="true" ajaxOpenWindow="false" ajaxWindowUseTitle="true" ajaxWindowTitle="Operazione Completata!" ajaxWindowWidth="600" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true"/>
     </CreateUnit>
-    <SelectorUnit id="sv6#area26#seu123" name="selezione cod paziente" gr:x="520" gr:y="50" entity="ent6" distinctAttributes="ent6#att11">
+    <SelectorUnit id="sv6#area26#seu123" name="selezione cod paziente" gr:x="540" gr:y="0" entity="ent6" distinctAttributes="ent6#att11">
       <Selector id="sv6#area26#seu123#su188" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv6#area26#seu123#su188#acond180" name="cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.userOID"/>
         <AttributesCondition id="sv6#area26#seu123#su188#acond181" name="cf!=dottore" predicate="neq" booleanOperator="and" implied="false" attributes="rel14#role28.userOID"/>
+        <AttributesCondition id="sv6#area26#seu123#su188#acond275" name="approved" predicate="eq" booleanOperator="and" implied="false" attributes="ent6#att19" value="1"/>
       </Selector>
       <OKLink id="sv6#area26#seu123#oln354" name="OKFlow286" to="sv6#area26#inn49">
         <LinkParameter id="sv6#area26#seu123#oln354#par1003" name="codice intervento_PASSING" sourceLinkParameter="sv6#area26#page128#enu33#ln224#par1421" passing="true"/>

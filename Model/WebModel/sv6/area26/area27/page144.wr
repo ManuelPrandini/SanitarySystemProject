@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#area26#area27#page144" name="Coda interventi" landmark="false" gr:x="0" gr:y="5">
   <ContentUnits>
-    <PowerIndexUnit id="sv6#area26#area27#page144#pwu10" name="Coda Pronto Soccorso" gr:x="0" gr:y="30" sortable="false" checkable="false" useCountQuery="false" entity="ent17" displayAttributes="ent5#att2 rel11#role16.rel14#role28.userOID ent5#att22 ent5#att24 rel34#role67.ent18#att38">
+    <PowerIndexUnit id="sv6#area26#area27#page144#pwu10" name="Coda Pronto Soccorso" gr:x="0" gr:y="30" sortable="false" checkable="false" useCountQuery="false" entity="ent17" displayAttributes="ent5#att2 rel11#role16.rel14#role28.userOID ent5#att22 ent5#att24 rel34#role67.ent18#att38 rel34#role67.ent18#att70">
       <Selector id="sv6#area26#area27#page144#pwu10#su196" defaultPolicy="fill" booleanOperator="and" expression="sv6#area26#area27#page144#pwu10#su196#acond206 AND (sv6#area26#area27#page144#pwu10#su196#acond207 OR sv6#area26#area27#page144#pwu10#su196#acond208)">
         <AttributesCondition id="sv6#area26#area27#page144#pwu10#su196#acond206" name="listaOid" predicate="eq" booleanOperator="or" implied="false" attributes="ent5#att2"/>
         <AttributesCondition id="sv6#area26#area27#page144#pwu10#su196#acond207" name="noEmergencyRoom" predicate="null" booleanOperator="or" implied="false" attributes="rel35#role69.ent10#att5"/>
@@ -9,6 +9,7 @@
       <Link id="sv6#area26#area27#page144#pwu10#ln272" name="Flow213" to="sv6#area26#area27#page144#mssu94" type="transport" validate="true">
         <LinkParameter id="sv6#area26#area27#page144#pwu10#ln272#par2006" name="oid_PASSING" source="data[].ent5#att2" passing="true"/>
       </Link>
+      <SortAttribute attribute="rel34#role67.ent18#att70" order="ascending"/>
     </PowerIndexUnit>
     <MultiMessageUnit id="sv6#area26#area27#page144#mssu94" name="Scegli operazione" linkOrder="sv6#area26#area27#page144#mssu94#ln273" gr:x="355" gr:y="65">
       <Link id="sv6#area26#area27#page144#mssu94#ln273" name="Chiama " to="sv6#area26#area27#seu134" type="normal" validate="true">
@@ -57,6 +58,7 @@
           <layout:Attribute label="Data" attribute="ent5#att22"/>
           <layout:Attribute label="Orario accettazione" attribute="ent5#att24"/>
           <layout:Attribute label="Codice" attribute="rel34#role67.ent18#att38"/>
+          <layout:Attribute attribute="rel34#role67.ent18#att70"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

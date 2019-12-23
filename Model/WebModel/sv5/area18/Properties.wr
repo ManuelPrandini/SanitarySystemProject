@@ -1,6 +1,6 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="85" gr:y="1105" id="sv5#area18" name="Gestione degli ospedali" landmark="true" defaultPage="sv5#area18#page90" landmarks="sv5#area18#page90 sv5#area18#page108">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="85" gr:y="1080" id="sv5#area18" name="Gestione degli ospedali" landmark="true" defaultPage="sv5#area18#page90" landmarks="sv5#area18#page90 sv5#area18#page108">
   <OperationUnits>
-    <SelectorUnit gr:x="15" gr:y="205" id="sv5#area18#seu82" name="Seleziona citt&#224;" entity="ent12">
+    <SelectorUnit gr:x="15" gr:y="230" id="sv5#area18#seu82" name="Seleziona citt&#224;" entity="ent12">
       <OKLink id="sv5#area18#seu82#oln291" name="OKFlow291" to="sv5#area18#page90#enu28" gr:bendpoints="98,-43,-82,67">
         <LinkParameter id="sv5#area18#seu82#oln291#par640" name="name_Citt&#224; [label]" source="ent12#att39Array" target="sv5#area18#page90#enu28#sfld12_label"/>
         <LinkParameter id="sv5#area18#seu82#oln291#par706" name="oid_Citt&#224; [output]" source="ent12#att16Array" target="sv5#area18#page90#enu28#sfld12_output"/>
@@ -9,14 +9,14 @@
         <AttributesCondition id="sv5#area18#seu82#su95#acond105" name="nazione" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role8.ent11#att15"/>
       </Selector>
     </SelectorUnit>
-    <CreateUnit gr:x="225" gr:y="210" id="sv5#area18#cru19" name="Inserisci ospedale" entity="ent4">
+    <CreateUnit gr:x="225" gr:y="235" id="sv5#area18#cru19" name="Inserisci ospedale" entity="ent4">
       <OKLink id="sv5#area18#cru19#oln292" name="OKFlow292" to="sv5#area18#scu22">
         <LinkParameter id="sv5#area18#cru19#oln292#par22" name="Ha pronto soccorso?_PASSING_haProntoSoccorso" sourceLinkParameter="sv5#area18#page90#enu28#ln112#par7" target="sv5#area18#scu22.haProntoSoccorso"/>
         <LinkParameter id="sv5#area18#cru19#oln292#par23" name="id_hospital_PASSING" source="ent4#att1Array" passing="true"/>
       </OKLink>
       <KOLink id="sv5#area18#cru19#kln86" name="KOFlow86" to="sv5#area18#page100" automaticCoupling="true"/>
     </CreateUnit>
-    <SelectorUnit id="sv5#area18#seu96" name="Seleziona citt&#224;" gr:x="40" gr:y="685" entity="ent12">
+    <SelectorUnit id="sv5#area18#seu96" name="Seleziona citt&#224;" gr:x="40" gr:y="710" entity="ent12">
       <Selector id="sv5#area18#seu96#su140" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv5#area18#seu96#su140#acond150" name="nazione" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role8.ent11#att15"/>
       </Selector>
@@ -25,7 +25,7 @@
         <LinkParameter id="sv5#area18#seu96#oln298#par1438" name="oid_Citt&#224; [output]" source="ent12#att16Array" target="sv5#area18#page108#enu34#sfld24_output"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit gr:x="225" gr:y="695" id="sv5#area18#seu97" name="Seleziona ospedale" entity="ent4">
+    <SelectorUnit gr:x="225" gr:y="720" id="sv5#area18#seu97" name="Seleziona ospedale" entity="ent4">
       <Selector id="sv5#area18#seu97#su144" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv5#area18#seu97#su144#acond155" name="citt&#224;" predicate="eq" booleanOperator="or" implied="false" attributes="rel2#role2.ent12#att16"/>
       </Selector>
@@ -34,7 +34,7 @@
         <LinkParameter id="sv5#area18#seu97#oln299#par1448" name="id_hospital_Ospedale [output]" source="ent4#att1Array" target="sv5#area18#page108#enu34#sfld25_output"/>
       </OKLink>
     </SelectorUnit>
-    <ScriptUnit id="sv5#area18#scu23" name="Seleziona Tipologia" gr:x="575" gr:y="535">
+    <ScriptUnit id="sv5#area18#scu23" name="Seleziona Tipologia" gr:x="575" gr:y="560">
       <ScriptUnitText xml:space="preserve">#input String tipologia
 #output int outputCode
 
@@ -54,7 +54,7 @@ else
         <LinkParameter id="sv5#area18#scu23#oln326#par1969" name="Ospedale_PASSING" sourceLinkParameter="sv5#area18#page108#enu34#ln202#par1968" passing="true"/>
       </OKLink>
     </ScriptUnit>
-    <SwitchUnit gr:x="775" gr:y="535" id="sv5#area18#switch13" name="Seleziona Form Corretta">
+    <SwitchUnit gr:x="775" gr:y="560" id="sv5#area18#switch13" name="Seleziona Form Corretta">
       <Case value="1"/>
       <Case value="2"/>
       <Case value="3"/>
@@ -73,35 +73,35 @@ else
         <LinkParameter id="sv5#area18#switch13#oln330#par1973" name="Ospedale_PASSING" sourceLinkParameter="sv5#area18#scu23#oln326#par1969" passing="true"/>
       </OKLink>
     </SwitchUnit>
-    <CreateUnit gr:x="1375" gr:y="175" id="sv5#area18#cru33" name="Crea stanza ricoveri" entity="ent20">
+    <CreateUnit gr:x="1375" gr:y="200" id="sv5#area18#cru33" name="Crea stanza ricoveri" entity="ent20">
       <KOLink id="sv5#area18#cru33#kln103" name="KOFlow103" to="sv5#area18#page110" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Errore" ajaxWindowWidth="600" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true"/>
       <OKLink id="sv5#area18#cru33#oln337" name="OKFlow337" to="sv5#area18#lpu3">
         <LinkParameter id="sv5#area18#cru33#oln337#par1988" name="Numero letti_PASSING_Iteration Count" sourceLinkParameter="sv5#area18#page123#enu40#ln241#par1987" target="sv5#area18#lpu3.iterationCount"/>
         <LinkParameter id="sv5#area18#cru33#oln337#par1989" name="id_room_PASSING" source="ent10#att5Array" passing="true"/>
       </OKLink>
     </CreateUnit>
-    <CreateUnit gr:x="1475" gr:y="300" id="sv5#area18#cru34" name="Crea stanza interventi" entity="ent24">
+    <CreateUnit gr:x="1475" gr:y="325" id="sv5#area18#cru34" name="Crea stanza interventi" entity="ent24">
       <OKLink id="sv5#area18#cru34#oln333" name="OKFlow333" to="sv5#area18#page109" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Modifiche effettuate correttamente" ajaxWindowWidth="750" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true"/>
       <KOLink id="sv5#area18#cru34#kln102" name="KOFlow102" to="sv5#area18#page110" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Errore" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowWidth="600" ajaxWindowHeight="300"/>
     </CreateUnit>
-    <CreateUnit gr:x="1615" gr:y="445" id="sv5#area18#cru35" name="Crea stanza pronto soccorso" entity="ent16">
+    <CreateUnit gr:x="1615" gr:y="470" id="sv5#area18#cru35" name="Crea stanza pronto soccorso" entity="ent16">
       <OKLink id="sv5#area18#cru35#oln332" name="OKFlow332" to="sv5#area18#page109" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Modifiche effettuate correttamente" ajaxWindowClosable="true" ajaxWindowModal="true"/>
       <KOLink id="sv5#area18#cru35#kln101" name="KOFlow101" to="sv5#area18#page110" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Errore" ajaxWindowWidth="600" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true"/>
     </CreateUnit>
-    <CreateUnit gr:x="1550" gr:y="740" id="sv5#area18#cru36" name="Crea stanza visite" entity="ent23">
+    <CreateUnit gr:x="1550" gr:y="765" id="sv5#area18#cru36" name="Crea stanza visite" entity="ent23">
       <OKLink id="sv5#area18#cru36#oln331" name="OKFlow300" to="sv5#area18#page109" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Modifiche effettuate con successo" ajaxWindowWidth="750" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true"/>
       <KOLink id="sv5#area18#cru36#kln99" name="KOFlow92" to="sv5#area18#page110" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Errore" ajaxWindowWidth="600" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true"/>
     </CreateUnit>
-    <CreateUnit gr:x="1485" gr:y="30" id="sv5#area18#cru37" name="AggiungiLetti" entity="ent25">
+    <CreateUnit gr:x="1485" gr:y="55" id="sv5#area18#cru37" name="AggiungiLetti" entity="ent25">
       <OKLink id="sv5#area18#cru37#oln339" name="OKFlow339" to="sv5#area18#lpu3" automaticCoupling="true" gr:bendpoints="66,57,-84,-33"/>
     </CreateUnit>
-    <LoopUnit gr:x="1680" gr:y="130" id="sv5#area18#lpu3" name="InserimentoLetti">
+    <LoopUnit gr:x="1680" gr:y="155" id="sv5#area18#lpu3" name="InserimentoLetti">
       <OKLink id="sv5#area18#lpu3#oln336" name="OKFlow334" to="sv5#area18#page109" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Modifiche effettuate correttamente" ajaxWindowWidth="750" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowMaximizable="false" ajaxWindowModal="true" code="end"/>
       <OKLink id="sv5#area18#lpu3#oln338" name="OKFlow338" to="sv5#area18#cru37" code="next">
         <LinkParameter id="sv5#area18#lpu3#oln338#par1990" name="id_room_PASSING_Recovery_Room.id_room(Bed_placeToRecovery_Room)" sourceLinkParameter="sv5#area18#cru33#oln337#par1989" target="sv5#area18#cru37.rel8#role11.ent10#att5"/>
       </OKLink>
     </LoopUnit>
-    <ScriptUnit gr:x="440" gr:y="225" id="sv5#area18#scu22" name="CheckHaProntoSoccorso">
+    <ScriptUnit gr:x="440" gr:y="250" id="sv5#area18#scu22" name="CheckHaProntoSoccorso">
       <ScriptUnitText xml:space="preserve">#input boolean haProntoSoccorso
 
 if(haProntoSoccorso)
@@ -113,10 +113,10 @@ else
       </OKLink>
       <KOLink id="sv5#area18#scu22#kln105" name="KOFlow105" to="sv5#area18#page129" automaticCoupling="true"/>
     </ScriptUnit>
-    <CreateUnit id="sv5#area18#cru28" name="Crea pronto soccorso" gr:x="505" gr:y="130" entity="ent32">
+    <CreateUnit id="sv5#area18#cru28" name="Crea pronto soccorso" gr:x="505" gr:y="135" entity="ent32">
       <OKLink id="sv5#area18#cru28#oln323" name="OKFlow323" to="sv5#area18#page99" automaticCoupling="true"/>
     </CreateUnit>
-    <SelectorUnit gr:x="1000" gr:y="515" id="sv5#area18#seu38" name="SelezioneProntoSoccorso" entity="ent32">
+    <SelectorUnit gr:x="1000" gr:y="540" id="sv5#area18#seu38" name="SelezioneProntoSoccorso" entity="ent32">
       <Selector id="sv5#area18#seu38#su166" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv5#area18#seu38#su166#acond37" name="ospedale" predicate="eq" booleanOperator="or" implied="false" attributes="rel41#role82.ent4#att1"/>
       </Selector>
@@ -125,7 +125,7 @@ else
         <LinkParameter id="sv5#area18#seu38#oln324#par458" name="Ospedale_PASSING" sourceLinkParameter="sv5#area18#switch13#oln329#par1972" passing="true"/>
       </OKLink>
     </SelectorUnit>
-    <IsNotNullUnit gr:x="1285" gr:y="575" id="sv5#area18#inn40" name="Esiste?">
+    <IsNotNullUnit gr:x="1285" gr:y="600" id="sv5#area18#inn40" name="Esiste?">
       <OKLink id="sv5#area18#inn40#oln325" name="OKFlow325" to="sv5#area18#page125#enu42">
         <LinkParameter id="sv5#area18#inn40#oln325#par461" name="Ospedale_PASSING" sourceLinkParameter="sv5#area18#seu38#oln324#par458" passing="true"/>
       </OKLink>

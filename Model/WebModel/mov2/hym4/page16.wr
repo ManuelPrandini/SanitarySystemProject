@@ -2,7 +2,11 @@
   <ContentUnits>
     <EntryUnit id="mov2#hym4#page16#enu17" name="Prescrizione" gr:x="60" gr:y="0" fieldOrder="mov2#hym4#page16#enu17#fld104 mov2#hym4#page16#enu17#sfld23 mov2#hym4#page16#enu17#fld103 mov2#hym4#page16#enu17#fld102" linkOrder="mov2#hym4#page16#enu17#ln94">
       <Field id="mov2#hym4#page16#enu17#fld102" name="ricetta" type="text" modifiable="true"/>
-      <Field id="mov2#hym4#page16#enu17#fld103" name="quantit&#224; da prescrivere" type="integer" modifiable="true"/>
+      <Field id="mov2#hym4#page16#enu17#fld103" name="quantit&#224; da prescrivere" type="integer" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="mov2#hym4#page16#enu17#fld103#cmp24" name="Compare24" predicate="gt" value="0" errorMessage="Puoi inserire solo quantit&#224; maggiori di 0"/>
+        </VRules>
+      </Field>
       <SelectionField id="mov2#hym4#page16#enu17#sfld23" name="nome farmaco" type="string" modifiable="true"/>
       <Field id="mov2#hym4#page16#enu17#fld104" name="id_visita" type="string" preloaded="true"/>
       <Link id="mov2#hym4#page16#enu17#ln94" name="Aggiungi" to="mov2#hym4#miu21" type="normal" validate="true" gr:bendpoints="158,218,-217,-82">

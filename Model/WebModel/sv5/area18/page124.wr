@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area18#page124" name="Registra stanza interventi" gr:x="1085" gr:y="290">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area18#page124" name="Registra stanza interventi" gr:x="1085" gr:y="315">
   <ContentUnits>
     <EntryUnit id="sv5#area18#page124#enu41" name="Modifica struttura stanza interventi" gr:x="0" gr:y="0" fieldOrder="sv5#area18#page124#enu41#fld170 sv5#area18#page124#enu41#fld169" linkOrder="sv5#area18#page124#enu41#ln242">
       <Field id="sv5#area18#page124#enu41#fld169" name="Piano stanza" type="integer" modifiable="true"/>

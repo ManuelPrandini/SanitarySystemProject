@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="30" gr:y="475" id="sv5#area18#page108" name="Inserisci reparti ospedalieri" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="30" gr:y="500" id="sv5#area18#page108" name="Inserisci reparti ospedalieri" landmark="true">
   <ContentUnits>
     <EntryUnit gr:x="175" gr:y="80" id="sv5#area18#page108#enu34" name="Modifica struttura ospedale" fieldOrder="sv5#area18#page108#enu34#sfld19 sv5#area18#page108#enu34#sfld24 sv5#area18#page108#enu34#sfld25 sv5#area18#page108#enu34#sfld58" linkOrder="sv5#area18#page108#enu34#ln199 sv5#area18#page108#enu34#ln201 sv5#area18#page108#enu34#ln202">
       <SelectionField id="sv5#area18#page108#enu34#sfld25" name="Ospedale" type="string" modifiable="true"/>

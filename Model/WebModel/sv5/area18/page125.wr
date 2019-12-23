@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area18#page125" name="Registra stanza pronto soccorso" gr:x="1235" gr:y="420">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area18#page125" name="Registra stanza pronto soccorso" gr:x="1235" gr:y="445">
   <ContentUnits>
     <EntryUnit id="sv5#area18#page125#enu42" name="Modifica struttura stanza pronto soccorso" gr:x="0" gr:y="0" fieldOrder="sv5#area18#page125#enu42#fld173 sv5#area18#page125#enu42#fld172" linkOrder="sv5#area18#page125#enu42#ln246">
       <Field id="sv5#area18#page125#enu42#fld172" name="Piano stanza" type="integer" modifiable="true"/>

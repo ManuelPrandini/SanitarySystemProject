@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1395" gr:y="565" id="sv5#area18#page130" name="Errore!" layout:pageLayout="MetroStyle/Empty">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1395" gr:y="590" id="sv5#area18#page130" name="Errore!" layout:pageLayout="MetroStyle/Empty">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv5#area18#page130#mssu79" name="Ospedale senza Pronto soccorso">
       <Message xml:space="preserve">Attenzione! L'ospedale selezionato non &#232; attrezzato per il pronto soccorso!</Message>

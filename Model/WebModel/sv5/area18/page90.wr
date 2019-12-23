@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv5#area18#page90" name="Registra nuovo ospedale" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="25" id="sv5#area18#page90" name="Registra nuovo ospedale" landmark="true">
   <ContentUnits>
     <MultiMessageUnit gr:x="150" gr:y="0" id="sv5#area18#page90#mssu57" name="Area di registrazione nuovo ospedale">
       <Message xml:space="preserve">In quest'area puoi procedere con la registrazione di una nuova struttura ospedaliera</Message>

@@ -36,7 +36,7 @@
         <LinkParameter id="sv6#area26#page128#gtu15#ln261#par1456" name="UserCtxParam.cf_PASSING" source="sv6#area26#page128#gtu15.UserCtxParam" passing="true"/>
       </Link>
     </GetUnit>
-    <TimeUnit id="sv6#area26#page128#tmu4" name="Data e orario arrivo/dimissione" gr:x="190" gr:y="120">
+    <TimeUnit id="sv6#area26#page128#tmu4" name="Data e orario arrivo/dimissione" gr:x="235" gr:y="120">
       <Link id="sv6#area26#page128#tmu4#ln266" name="Flow197" to="sv6#area26#page128#enu33" type="transport" validate="true">
         <LinkParameter id="sv6#area26#page128#tmu4#ln266#par1462" name="Current/Input Date_data " source="currentDate" target="sv6#area26#page128#enu33#fld130_slot"/>
         <LinkParameter id="sv6#area26#page128#tmu4#ln266#par1466" name="Current/Input Time_ora arrivo" source="currentTime" target="sv6#area26#page128#enu33#fld131_slot"/>

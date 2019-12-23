@@ -4,13 +4,6 @@
       <Link id="mov2#hym4#area20#page73#ecu4#ln110" name="Programma Intervento" to="mov2#hym4#scu12" type="normal" validate="true" gr:bendpoints="230,130,-180,-120">
         <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1329" name="Selected Date_data_selezionata" source="date[].date" target="mov2#hym4#scu12.data_selezionata"/>
         <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1330" name="Selected Date_PASSING" source="date[].date" passing="true"/>
-        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1331" name="id_room_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par1373" passing="true"/>
-        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1332" name="dataFine_PASSING_data_fine" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par1376" target="mov2#hym4#scu12.data_fine"/>
-        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1338" name="dataInizio_PASSING_data_inizio" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par1377" target="mov2#hym4#scu12.data_inizio"/>
-        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1339" name="dataFine_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par1376" passing="true"/>
-        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1340" name="dataInizio_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par1377" passing="true"/>
-        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1355" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par1378" passing="true"/>
-        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1369" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par1380" passing="true"/>
       </Link>
       <Selector id="mov2#hym4#area20#page73#ecu4#su99" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#hym4#area20#page73#ecu4#su99#acond127" name="idSurgeryRoom" predicate="eq" booleanOperator="and" implied="false" attributes="rel18#role35.ent10#att5"/>
@@ -22,17 +15,7 @@
       <Placeholder id="mov2#hym4#area20#page73#mssu22#ph11" name="dataInizio"/>
       <Placeholder id="mov2#hym4#area20#page73#mssu22#ph12" name="dataFine"/>
       <Message xml:space="preserve">Per il paziente hai programmato un ricovero dal $$dataInizio$$ al $$dataFine$$ </Message>
-      <Link id="mov2#hym4#area20#page73#mssu22#ln131" name="Flow189" to="mov2#hym4#area20#page73#ecu4" type="transport" validate="true">
-        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1372" name="id_room_PASSING_idSurgeryRoom" sourceLinkParameter="mov2#hym4#seu92#oln274#par1382" target="mov2#hym4#area20#page73#ecu4#su99#acond127"/>
-        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1373" name="id_room_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln274#par1382" passing="true"/>
-        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1374" name="dataFine_PASSING_endDate" sourceLinkParameter="mov2#hym4#seu92#oln274#par1383" target="mov2#hym4#area20#page73#ecu4#su99#acond138"/>
-        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1375" name="dataInizio_PASSING_startDate" sourceLinkParameter="mov2#hym4#seu92#oln274#par1384" target="mov2#hym4#area20#page73#ecu4#su99#acond128"/>
-        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1376" name="dataFine_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln274#par1383" passing="true"/>
-        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1377" name="dataInizio_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln274#par1384" passing="true"/>
-        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1378" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln274#par1385" passing="true"/>
-        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1380" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln274#par1388" passing="true"/>
-        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1381" name="dataInizio_PASSING_Current Date" sourceLinkParameter="mov2#hym4#seu92#oln274#par1384" target="mov2#hym4#area20#page73#ecu4.inputDate"/>
-      </Link>
+      <Link id="mov2#hym4#area20#page73#mssu22#ln131" name="Flow189" to="mov2#hym4#area20#page73#ecu4" type="transport" validate="true"/>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

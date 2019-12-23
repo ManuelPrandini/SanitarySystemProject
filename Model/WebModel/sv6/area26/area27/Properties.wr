@@ -13,9 +13,8 @@
         <AttributesCondition id="sv6#area26#area27#seu133#su191#acond193" name="codaProntoSoccorso" predicate="eq" booleanOperator="and" implied="false" attributes="rel27#role54.ent32#att69"/>
         <AttributesCondition id="sv6#area26#area27#seu133#su191#acond204" name="noStanzaAssegnata" predicate="null" booleanOperator="and" implied="false" attributes="rel35#role69.ent10#att5"/>
       </Selector>
-      <OKLink id="sv6#area26#area27#seu133#oln359" name="OKFlow305" to="sv6#area26#area27#pcu18">
-        <LinkParameter id="sv6#area26#area27#seu133#oln359#par1482" name="Emergency_operationToEmergency_code.code_codice" source="rel34#role67$ent18#att38Array" target="sv6#area26#area27#pcu18#pcp75"/>
-        <LinkParameter id="sv6#area26#area27#seu133#oln359#par1483" name="oid_oid" source="ent5#att2Array" target="sv6#area26#area27#pcu18#pcp74"/>
+      <OKLink id="sv6#area26#area27#seu133#oln359" name="OKFlow305" to="sv6#area26#area27#inn86">
+        <LinkParameter id="sv6#area26#area27#seu133#oln359#par3296" name="oid_Input" source="ent5#att2Array" target="sv6#area26#area27#inn86.isnotnull"/>
       </OKLink>
     </SelectorUnit>
     <GetUnit id="sv6#area26#area27#gtu20" name="CFDottore" gr:x="335" gr:y="695" contextParameters="UserCtxParam">
@@ -23,50 +22,6 @@
         <LinkParameter id="sv6#area26#area27#gtu20#ln267#par1485" name="UserCtxParam.cf_cf" source="sv6#area26#area27#gtu20.UserCtxParam" target="sv6#area26#area27#seu132#su190#acond192"/>
       </Link>
     </GetUnit>
-    <ScriptUnit id="sv6#area26#area27#scu20" name="OrdinaInterventi" gr:x="280" gr:y="385">
-      <ScriptInput id="sv6#area26#area27#scu20#sci9" name="oid"/>
-      <ScriptInput id="sv6#area26#area27#scu20#sci14" name="codice"/>
-      <ScriptInput id="sv6#area26#area27#scu20#sci15" name="orario"/>
-      <ScriptUnitText xml:space="preserve">#input int[] oid,  String[] codice
-
-#output int[] listaOrdinataOid
-
-int oidAppoggio = 0;
-String codiceAppoggio = new String();
-
-
-for(int i = 0;i&lt; oid.size();i++)
-{
- for(int j = 0; j &lt; oid.size()-1; j++)
- {
-	if((codice[j].equals("VERDE") &amp;&amp; codice[j+1].equals("GIALLO")) ||
-		(codice[j].equals("VERDE") &amp;&amp; codice[j+1].equals("ROSSO")) ||
-		(codice[j].equals("GIALLO") &amp;&amp; codice[j+1].equals("ROSSO")))
-	{
-		//swap degli oid
-		oidAppoggio = oid[j];
-		oid[j] = oid[j+1];
-		oid[j+1] = oidAppoggio;
-		
-		//swap dei codici
-		codiceAppoggio = codice[j];
-		codice[j] = codice[j+1];
-		codice[j+1] = codiceAppoggio;
-	}
- }
-}
-
-listaOrdinataOid = oid;
-if(listaOrdinataOid.size() &gt; 0 || listaOrdinataOid != null)
-	return [resultCode:"success","listaOrdinataOid":listaOrdinataOid];
-else
-	return [resultCode:"error"]</ScriptUnitText>
-      <OKLink id="sv6#area26#area27#scu20#oln360" name="OKFlow303" to="sv6#area26#area27#page144#pwu10" gr:bendpoints="-328,-50,-153,230;-394,-219,-124,86">
-        <LinkParameter id="sv6#area26#area27#scu20#oln360#par1525" name="listaOrdinataOid_AttCondition181" source="result(listaOrdinataOid)" target="sv6#area26#area27#page144#pwu10#su196#acond206"/>
-      </OKLink>
-      <KOLink id="sv6#area26#area27#scu20#kln92" name="KOFlow96" to="sv6#area26#area27#page143" automaticCoupling="true"/>
-      <ScriptOutput id="sv6#area26#area27#scu20#sco5" name="listaOrdinataOid"/>
-    </ScriptUnit>
     <ModifyUnit id="sv6#area26#area27#mfu19" name="Aggiungi stanza" gr:x="1100" gr:y="270" entity="ent17">
       <Selector id="sv6#area26#area27#mfu19#su192" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv6#area26#area27#mfu19#su192#kcond71" name="KeyCondition65" predicate="in" implied="false"/>
@@ -81,14 +36,6 @@ else
         <KeyCondition id="sv6#area26#area27#seu134#su193#kcond76" name="KeyCondition67" predicate="in" implied="false"/>
       </Selector>
     </SelectorUnit>
-    <ParameterCollectorUnit id="sv6#area26#area27#pcu18" name="Oid Operazioni" gr:x="400" gr:y="530">
-      <CollectorParameter id="sv6#area26#area27#pcu18#pcp74" name="oid"/>
-      <CollectorParameter id="sv6#area26#area27#pcu18#pcp75" name="codice"/>
-      <OKLink id="sv6#area26#area27#pcu18#oln363" name="OKFlow307" to="sv6#area26#area27#scu20">
-        <LinkParameter id="sv6#area26#area27#pcu18#oln363#par1905" name="codice_codice" source="sv6#area26#area27#pcu18#pcp75" target="sv6#area26#area27#scu20.codice"/>
-        <LinkParameter id="sv6#area26#area27#pcu18#oln363#par1906" name="oid_oid" source="sv6#area26#area27#pcu18#pcp74" target="sv6#area26#area27#scu20.oid"/>
-      </OKLink>
-    </ParameterCollectorUnit>
     <ModifyUnit id="sv6#area26#area27#mfu20" name="Concludi pronto soccorso" gr:x="1555" gr:y="65" entity="ent17">
       <Selector id="sv6#area26#area27#mfu20#su194" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv6#area26#area27#mfu20#su194#kcond79" name="KeyCondition68" predicate="in" implied="false"/>
@@ -109,5 +56,11 @@ if( cfSession.equals(cfDottoreOp))
 else
 	return [resultCode:"error"]</ScriptUnitText>
     </ScriptUnit>
+    <IsNotNullUnit gr:x="120" gr:y="420" id="sv6#area26#area27#inn86" name="Esiste">
+      <KOLink id="sv6#area26#area27#inn86#kln162" name="KOFlow162" to="sv6#area26#area27#page143" automaticCoupling="true"/>
+      <OKLink id="sv6#area26#area27#inn86#oln536" name="OKFlow536" to="sv6#area26#area27#page144#pwu10">
+        <LinkParameter id="sv6#area26#area27#inn86#oln536#par3297" name="Input Value_listaOid" source="inputValue" target="sv6#area26#area27#page144#pwu10#su196#acond206"/>
+      </OKLink>
+    </IsNotNullUnit>
   </OperationUnits>
 </Area>

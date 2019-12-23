@@ -359,8 +359,9 @@
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="1400" gr:y="175" id="ent18" name="Codice_ProntoSoccorso" duration="persistent" attributeOrder="ent18#att38" db:database="db1" db:table="emergency_code">
+  <Entity gr:x="1400" gr:y="175" id="ent18" name="Codice_ProntoSoccorso" duration="persistent" attributeOrder="ent18#att38 ent18#att70" db:database="db1" db:table="emergency_code">
     <Attribute id="ent18#att38" name="codice" key="true" type="string" db:column="code"/>
+    <Attribute id="ent18#att70" name="id" type="integer" db:column="id"/>
   </Entity>
   <Relationship id="rel34" name="Emergency_operation_Emergency_code" sourceEntity="ent17" targetEntity="ent18" db:database="db1" db:table="emergency_operation">
     <RelationshipRole1 id="rel34#role67" name="Emergency_operationToEmergency_code" maxCard="1">
@@ -462,7 +463,8 @@
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="hospital" type="MySQL" url="jdbc:mysql://localhost:3306/hospital" username="root" password="cm9vdA==" cryptedPassword="true"/>
+  <db:Database id="db1" name="hospital" type="MySQL" url="jdbc:mysql://localhost:3306/hospital" username="root" password="cm9vdA==" cryptedPassword="true">
+  </db:Database>
   <Relationship id="rel41" name="Hospital_Codaprontosoccorso" sourceEntity="ent4" targetEntity="ent32" db:database="db1" db:table="codaprontosoccorso">
     <RelationshipRole1 id="rel41#role81" name="HospitalToCodaprontosoccorso" maxCard="1">
       <db:JoinColumn attribute="ent4#att1" name="hospital_id_hospital"/>

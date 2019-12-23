@@ -43,7 +43,7 @@
         <LinkParameter id="sv1#area7#pcu17#oln345#par1768" name="nome_ospedale_PASSING" source="sv1#area7#pcu17#pcp70" passing="true"/>
       </OKLink>
     </ParameterCollectorUnit>
-    <SelectorUnit id="sv1#area7#seu140" name="Selezione accertamenti per data" gr:x="725" gr:y="25" entity="ent27">
+    <SelectorUnit id="sv1#area7#seu140" name="Selezione accertamenti per data" gr:x="725" gr:y="20" entity="ent27">
       <Selector id="sv1#area7#seu140#su203" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area7#seu140#su203#acond220" name="paziente_cf" predicate="eq" booleanOperator="or" implied="false" attributes="rel10#role22.rel11#role16.rel14#role28.userOID"/>
         <AttributesCondition id="sv1#area7#seu140#su203#acond221" name="data" predicate="eq" booleanOperator="or" implied="false" attributes="ent27#att68"/>

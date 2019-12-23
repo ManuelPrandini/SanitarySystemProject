@@ -228,12 +228,6 @@ if( data_selezionata &lt; data_inizio || data_selezionata &gt; data_fine)
 else
 	return [resultCode: "success"]</ScriptUnitText>
       <OKLink id="mov2#hym4#scu12#oln289" name="Registra" to="mov2#hym4#page91#seu88" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Programmazione intervento" ajaxWindowWidth="800" ajaxWindowHeight="500" ajaxWindowClosable="true" ajaxWindowModal="true">
-        <LinkParameter id="mov2#hym4#scu12#oln289#par1391" name="doctorCode_PASSING_doctor" sourceLinkParameter="mov2#hym4#area20#page73#ecu4#ln110#par1355" target="mov2#hym4#page91#seu88#su137#acond151"/>
-        <LinkParameter id="mov2#hym4#scu12#oln289#par1392" name="dataFine_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#ecu4#ln110#par1339" passing="true"/>
-        <LinkParameter id="mov2#hym4#scu12#oln289#par1393" name="dataInizio_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#ecu4#ln110#par1340" passing="true"/>
-        <LinkParameter id="mov2#hym4#scu12#oln289#par1394" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#ecu4#ln110#par1355" passing="true"/>
-        <LinkParameter id="mov2#hym4#scu12#oln289#par1395" name="id_room_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#ecu4#ln110#par1331" passing="true"/>
-        <LinkParameter id="mov2#hym4#scu12#oln289#par1396" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#ecu4#ln110#par1369" passing="true"/>
         <LinkParameter id="mov2#hym4#scu12#oln289#par1397" name="Selected Date_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#ecu4#ln110#par1330" passing="true"/>
       </OKLink>
       <KOLink id="mov2#hym4#scu12#kln88" name="KOFlow88" to="mov2#hym4#page94" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowWidth="500" ajaxWindowHeight="250" ajaxWindowTitle="Errore selezione data" ajaxWindowModal="true" ajaxWindowClosable="true"/>
@@ -245,14 +239,13 @@ else
       <Selector id="mov2#hym4#seu92#su141" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#hym4#seu92#su141#acond126" name="doctor" predicate="eq" booleanOperator="or" implied="false" attributes="rel5#role20.ent9#att33"/>
       </Selector>
-      <OKLink id="mov2#hym4#seu92#oln274" name="OKFlow286" to="mov2#hym4#area20#page73#mssu22" preserveForm="true" gr:bendpoints="-298,99,-238,-237;-299,337,-239,1">
-        <LinkParameter id="mov2#hym4#seu92#oln274#par1382" name="id_room_PASSING" source="ent10#att5Array" passing="true"/>
-        <LinkParameter id="mov2#hym4#seu92#oln274#par1383" name="dataFine_PASSING" sourceLinkParameter="mov2#hym4#pcu3#oln168#par160" passing="true"/>
-        <LinkParameter id="mov2#hym4#seu92#oln274#par1384" name="dataInizio_PASSING" sourceLinkParameter="mov2#hym4#pcu3#oln168#par183" passing="true"/>
-        <LinkParameter id="mov2#hym4#seu92#oln274#par1385" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#pcu3#oln168#par184" passing="true"/>
-        <LinkParameter id="mov2#hym4#seu92#oln274#par1388" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#pcu3#oln168#par324" passing="true"/>
-        <LinkParameter id="mov2#hym4#seu92#oln274#par1389" name="dataFine_PASSING_dataFine" sourceLinkParameter="mov2#hym4#pcu3#oln168#par160" target="mov2#hym4#area20#page73#mssu22.mov2#hym4#area20#page73#mssu22#ph12"/>
-        <LinkParameter id="mov2#hym4#seu92#oln274#par1390" name="dataInizio_PASSING_dataInizio" sourceLinkParameter="mov2#hym4#pcu3#oln168#par183" target="mov2#hym4#area20#page73#mssu22.mov2#hym4#area20#page73#mssu22#ph11"/>
+      <OKLink id="mov2#hym4#seu92#oln534" name="Flow341" to="mov2#hym4#inn85">
+        <LinkParameter id="mov2#hym4#seu92#oln534#par3283" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#pcu3#oln168#par324" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu92#oln534#par3284" name="dataFine_PASSING" sourceLinkParameter="mov2#hym4#pcu3#oln168#par160" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu92#oln534#par3285" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#pcu3#oln168#par184" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu92#oln534#par3286" name="dataInizio_PASSING" sourceLinkParameter="mov2#hym4#pcu3#oln168#par183" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu92#oln534#par3287" name="id_Input" source="ent10#att5Array" target="mov2#hym4#inn85.isnotnull"/>
+        <LinkParameter id="mov2#hym4#seu92#oln534#par3288" name="id_PASSING" source="ent10#att5Array" passing="true"/>
       </OKLink>
     </SelectorUnit>
     <CreateUnit gr:x="2085" gr:y="60" id="mov2#hym4#cru31" name="RegistraAccertamento" entity="ent27">
@@ -345,5 +338,17 @@ else
       </TargetSelector>
       <OKLink id="mov2#hym4#dcnu3#oln284" name="OKFlow284" to="mov2#hym4#dlu13" automaticCoupling="true"/>
     </DisconnectUnit>
+    <IsNotNullUnit gr:x="2045" gr:y="330" id="mov2#hym4#inn85" name="Esistono Sale">
+      <OKLink id="mov2#hym4#inn85#oln535" name="Flow342" to="mov2#hym4#area20#page73#mssu22" gr:bendpoints="3,255,-147,-135">
+        <LinkParameter id="mov2#hym4#inn85#oln535#par3289" name="dataInizio_PASSING_dataInizio" sourceLinkParameter="mov2#hym4#seu92#oln534#par3286" target="mov2#hym4#area20#page73#mssu22.mov2#hym4#area20#page73#mssu22#ph11"/>
+        <LinkParameter id="mov2#hym4#inn85#oln535#par3290" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln534#par3283" passing="true"/>
+        <LinkParameter id="mov2#hym4#inn85#oln535#par3291" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln534#par3285" passing="true"/>
+        <LinkParameter id="mov2#hym4#inn85#oln535#par3292" name="id_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln534#par3288" passing="true"/>
+        <LinkParameter id="mov2#hym4#inn85#oln535#par3293" name="dataFine_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln534#par3284" passing="true"/>
+        <LinkParameter id="mov2#hym4#inn85#oln535#par3294" name="dataInizio_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln534#par3286" passing="true"/>
+        <LinkParameter id="mov2#hym4#inn85#oln535#par3295" name="dataFine_PASSING_dataFine" sourceLinkParameter="mov2#hym4#seu92#oln534#par3284" target="mov2#hym4#area20#page73#mssu22.mov2#hym4#area20#page73#mssu22#ph12"/>
+      </OKLink>
+      <KOLink id="mov2#hym4#inn85#kln161" name="KOFlow161" to="mov2#hym4#page199" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Errore" ajaxWindowWidth="300" ajaxWindowHeight="200" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+    </IsNotNullUnit>
   </OperationUnits>
 </HybridModule>
