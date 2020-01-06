@@ -435,7 +435,7 @@
     <Attribute id="ent13#att37" name="id_prescrizione_medica" type="integer"/>
     <Attribute id="ent13#att52" name="id_farmaco" type="integer"/>
   </Entity>
-  <Entity gr:x="345" gr:y="1040" id="ent3" name="Prescrizioni attive temporanee" duration="volatile" volatileStorage="database" attributeOrder="ent3#att53 ent3#att54 ent3#att56 ent3#att57 ent3#att61 ent3#att62 ent3#att63">
+  <Entity gr:x="230" gr:y="1035" id="ent3" name="Prescrizioni attive temporanee" duration="volatile" volatileStorage="database" attributeOrder="ent3#att53 ent3#att54 ent3#att56 ent3#att57 ent3#att61 ent3#att62 ent3#att63">
     <Attribute id="ent3#att53" key="true" name="oid" type="integer" db:idGenerator="assigned"/>
     <Attribute id="ent3#att54" name="quantit&#224;Temp" type="integer"/>
     <Attribute id="ent3#att56" name="descrizioneTemp" type="text"/>
@@ -444,12 +444,12 @@
     <Attribute id="ent3#att62" name="id_farmacoTemp" type="integer"/>
     <Attribute id="ent3#att63" name="nome_farmacoTemp" type="string"/>
   </Entity>
-  <Entity gr:x="705" gr:y="1060" id="ent14" name="FAQ" duration="persistent" attributeOrder="ent14#att64 ent14#att65 ent14#att66" db:database="db1" db:table="faq">
+  <Entity gr:x="475" gr:y="1035" id="ent14" name="FAQ" duration="persistent" attributeOrder="ent14#att64 ent14#att65 ent14#att66" db:database="db1" db:table="faq">
     <Attribute id="ent14#att64" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent14#att65" name="domanda" type="text" db:column="question"/>
     <Attribute id="ent14#att66" name="risposta" type="text" db:column="answer"/>
   </Entity>
-  <Entity gr:x="685" gr:y="1180" id="ent26" name="ID_autoincremento" duration="persistent" db:database="db1" db:table="autoincrementoid">
+  <Entity gr:x="465" gr:y="1135" id="ent26" name="ID_autoincremento" duration="persistent" db:database="db1" db:table="autoincrementoid">
     <Attribute id="ent26#att67" key="true" name="oid" type="integer" db:column="oid"/>
   </Entity>
   <Entity id="ent32" name="Coda_ProntoSoccorso" duration="persistent" gr:x="870" gr:y="340" db:database="db1" db:table="codaprontosoccorso">
@@ -463,8 +463,7 @@
       <db:JoinColumn attribute="ent5#att2" name="action_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="hospital" type="MySQL" url="jdbc:mysql://localhost:3306/hospital" username="root" password="cm9vdA==" cryptedPassword="true">
-  </db:Database>
+  <db:Database id="db1" name="hospital" type="MySQL" url="jdbc:mysql://localhost:3306/hospital" username="root" password="cm9vdA==" cryptedPassword="true"/>
   <Relationship id="rel41" name="Hospital_Codaprontosoccorso" sourceEntity="ent4" targetEntity="ent32" db:database="db1" db:table="codaprontosoccorso">
     <RelationshipRole1 id="rel41#role81" name="HospitalToCodaprontosoccorso" maxCard="1">
       <db:JoinColumn attribute="ent4#att1" name="hospital_id_hospital"/>
