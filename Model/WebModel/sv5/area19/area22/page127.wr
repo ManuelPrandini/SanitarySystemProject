@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area19#area22#page127" name="Home statistiche farmacia" gr:x="0" gr:y="0">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area19#area22#page127" name="Home statistiche farmacia" gr:x="55" gr:y="0">
   <ContentUnits>
     <MultiMessageUnit id="sv5#area19#area22#page127#mssu84" name="Benvenuto nelle statistiche delle farmacie" gr:x="0" gr:y="0">
       <Message xml:space="preserve">In questa sezione potrai guardare le statistiche che preferisci riguardanti le farmacie selezionandole dal men&#249; in alto</Message>

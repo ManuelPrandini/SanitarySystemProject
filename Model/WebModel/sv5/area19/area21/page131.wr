@@ -1,9 +1,9 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area19#area21#page131" name="Numero di visite effettuate nell'ospedale" landmark="true" gr:x="0" gr:y="540">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area19#area21#page131" name="Numero di visite effettuate nell'ospedale" landmark="true" gr:x="0" gr:y="135">
   <ContentUnits>
     <MultiMessageUnit id="sv5#area19#area21#page131#mssu88" name="Visite effettuate nell'ospedale" gr:x="110" gr:y="0">
       <Message xml:space="preserve">Completa la form con gli intervalli temporali per vedere quante visite sono state effettuate nell'ospedale</Message>
     </MultiMessageUnit>
-    <SelectorUnit id="sv5#area19#area21#page131#seu105" name="Nazione" gr:x="0" gr:y="80" entity="ent11">
+    <SelectorUnit id="sv5#area19#area21#page131#seu105" name="Nazione" gr:x="0" gr:y="60" entity="ent11">
       <Link id="sv5#area19#area21#page131#seu105#ln42" name="Flow42" to="sv5#area19#area21#page131#enu32" type="transport" validate="true">
         <LinkParameter id="sv5#area19#area21#page131#seu105#ln42#par643" name="name_Nazione [label]" source="ent11#att18Array" target="sv5#area19#area21#page131#enu32#sfld43_label"/>
         <LinkParameter id="sv5#area19#area21#page131#seu105#ln42#par662" name="oid_Nazione [output]" source="ent11#att15Array" target="sv5#area19#area21#page131#enu32#sfld43_output"/>

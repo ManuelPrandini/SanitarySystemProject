@@ -1,3 +1,32 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1175" gr:y="0" id="sv5#area19#area22" name="Statistiche farmacia" landmark="true" defaultPage="sv5#area19#area22#page127">
-  <OperationUnits/>
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1115" gr:y="0" id="sv5#area19#area22" name="Statistiche farmacia" landmark="true" defaultPage="sv5#area19#area22#page127" landmarks="sv5#area19#area22#page157">
+  <OperationUnits>
+    <SelectorUnit gr:x="615" gr:y="220" id="sv5#area19#area22#seu146" name="query farmaci venduti" entity="ent37">
+      <Selector id="sv5#area19#area22#seu146#su211" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv5#area19#area22#seu146#su211#acond52" name="farmacia" predicate="eq" booleanOperator="or" implied="false" attributes="rel32#role64.rel15#role30.ent19#att42"/>
+        <AttributesCondition id="sv5#area19#area22#seu146#su211#acond53" name="dataInizio" predicate="gteq" booleanOperator="and" implied="false" attributes="ent37#att84"/>
+        <AttributesCondition id="sv5#area19#area22#seu146#su211#acond107" name="dataFine" predicate="lteq" booleanOperator="and" implied="false" attributes="ent37#att84"/>
+      </Selector>
+      <OKLink id="sv5#area19#area22#seu146#oln274" name="OKFlow274" to="sv5#area19#area22#scu20">
+        <LinkParameter id="sv5#area19#area22#seu146#oln274#par1369" name="oid_oid" source="ent37#att82Array" target="sv5#area19#area22#scu20.oid"/>
+        <LinkParameter id="sv5#area19#area22#seu146#oln274#par1380" name="Data fine_PASSING" sourceLinkParameter="sv5#area19#area22#page157#enu49#ln298#par1377" passing="true"/>
+        <LinkParameter id="sv5#area19#area22#seu146#oln274#par1381" name="Data inizio_PASSING" sourceLinkParameter="sv5#area19#area22#page157#enu49#ln298#par1378" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <ScriptUnit id="sv5#area19#area22#scu20" name="CountFunction" gr:x="710" gr:y="385">
+      <ScriptUnitText xml:space="preserve">#input int[] oid
+#output int result
+
+if (oid!=null) {
+	result = oid.size()
+	return ["resultCode":"success","result":result]
+} else {
+	return ["resultCode":"success","result":0]
+}</ScriptUnitText>
+      <OKLink id="sv5#area19#area22#scu20#oln286" name="OKFlow286" to="sv5#area19#area22#page157#mssu103">
+        <LinkParameter id="sv5#area19#area22#scu20#oln286#par1372" name="result_result" source="result(result)" target="sv5#area19#area22#page157#mssu103.sv5#area19#area22#page157#mssu103#ph31"/>
+        <LinkParameter id="sv5#area19#area22#scu20#oln286#par1382" name="Data fine_PASSING_fine" sourceLinkParameter="sv5#area19#area22#seu146#oln274#par1380" target="sv5#area19#area22#page157#mssu103.sv5#area19#area22#page157#mssu103#ph33"/>
+        <LinkParameter id="sv5#area19#area22#scu20#oln286#par1383" name="Data inizio_PASSING_inizio" sourceLinkParameter="sv5#area19#area22#seu146#oln274#par1381" target="sv5#area19#area22#page157#mssu103.sv5#area19#area22#page157#mssu103#ph32"/>
+      </OKLink>
+    </ScriptUnit>
+  </OperationUnits>
 </Area>

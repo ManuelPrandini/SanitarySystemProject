@@ -1,6 +1,6 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="sv5#area19#area21" name="Statistiche ospedali" landmark="true" landmarks="sv5#area19#area21#page97 sv5#area19#area21#page131" defaultPage="sv5#area19#area21#page116">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="sv5#area19#area21" name="Statistiche ospedali" landmark="true" landmarks="sv5#area19#area21#page131" defaultPage="sv5#area19#area21#page116">
   <OperationUnits>
-    <ScriptUnit id="sv5#area19#area21#scu21" name="CountFunction" gr:x="605" gr:y="800">
+    <ScriptUnit id="sv5#area19#area21#scu21" name="CountFunction" gr:x="630" gr:y="395">
       <ScriptUnitText xml:space="preserve">#input int[] oid
 #output int result
 
@@ -17,7 +17,7 @@ if (oid!=null) {
         <LinkParameter id="sv5#area19#area21#scu21#oln3#par1897" name="name_PASSING_nomeOspedale" sourceLinkParameter="sv5#area19#area21#seu118#oln6#par1481" target="sv5#area19#area21#page131#mssu89.sv5#area19#area21#page131#mssu89#ph24"/>
       </OKLink>
     </ScriptUnit>
-    <SelectorUnit id="sv5#area19#area21#seu118" name="Query per la statistica" gr:x="545" gr:y="600" entity="ent5" distinctAttributes="ent5#att2">
+    <SelectorUnit id="sv5#area19#area21#seu118" name="Query per la statistica" gr:x="545" gr:y="205" entity="ent5" distinctAttributes="ent5#att2">
       <Selector id="sv5#area19#area21#seu118#su186" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv5#area19#area21#seu118#su186#acond194" name="dataInizio" predicate="gteq" booleanOperator="and" implied="false" attributes="ent5#att22"/>
         <AttributesCondition id="sv5#area19#area21#seu118#su186#acond199" name="dataFine" predicate="lteq" booleanOperator="and" implied="false" attributes="ent5#att23"/>
@@ -28,19 +28,6 @@ if (oid!=null) {
         <LinkParameter id="sv5#area19#area21#seu118#oln6#par1479" name="Data inizio_PASSING" sourceLinkParameter="sv5#area19#area21#page131#enu32#ln228#par1477" passing="true"/>
         <LinkParameter id="sv5#area19#area21#seu118#oln6#par1480" name="oid_oid" source="ent5#att2Array" target="sv5#area19#area21#scu21.oid"/>
         <LinkParameter id="sv5#area19#area21#seu118#oln6#par1481" name="name_PASSING" sourceLinkParameter="sv5#area19#area21#page131#enu32#ln228#par1472" passing="true"/>
-      </OKLink>
-    </SelectorUnit>
-    <SelectorUnit id="sv5#area19#area21#seu119" name="Query per la statistica" gr:x="540" gr:y="205" entity="ent5" distinctAttributes="countDistinct(rel11#role16.ent6#att11)">
-      <Selector id="sv5#area19#area21#seu119#su187" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv5#area19#area21#seu119#su187#acond201" name="dataInizio" predicate="gteq" booleanOperator="and" implied="false" attributes="ent5#att22"/>
-        <AttributesCondition id="sv5#area19#area21#seu119#su187#acond202" name="dataFine" predicate="lteq" booleanOperator="and" implied="false" attributes="ent5#att23"/>
-        <AttributesCondition id="sv5#area19#area21#seu119#su187#acond203" name="ospedale" predicate="eq" booleanOperator="and" implied="false" attributes="rel3#role3.rel5#role19.rel37#role74.ent4#att1"/>
-      </Selector>
-      <OKLink id="sv5#area19#area21#seu119#oln286" name="Flow212" to="sv5#area19#area21#page97#mssu87">
-        <LinkParameter id="sv5#area19#area21#seu119#oln286#par1877" name="Data inizio_PASSING_dataInizio" sourceLinkParameter="sv5#area19#area21#page97#enu20#ln265#par1875" target="sv5#area19#area21#page97#mssu87.sv5#area19#area21#page97#mssu87#ph19"/>
-        <LinkParameter id="sv5#area19#area21#seu119#oln286#par1878" name="Data fine_PASSING_dataFine" sourceLinkParameter="sv5#area19#area21#page97#enu20#ln265#par1624" target="sv5#area19#area21#page97#mssu87.sv5#area19#area21#page97#mssu87#ph20"/>
-        <LinkParameter id="sv5#area19#area21#seu119#oln286#par1879" name="name_PASSING_nomeOspedale" sourceLinkParameter="sv5#area19#area21#page97#enu20#ln265#par1876" target="sv5#area19#area21#page97#mssu87.sv5#area19#area21#page97#mssu87#ph23"/>
-        <LinkParameter id="sv5#area19#area21#seu119#oln286#par1880" name="countDistinct(VisitToPatient)_result" source="countDistinct$rel11#role16$ent6#att11Array" target="sv5#area19#area21#page97#mssu87.sv5#area19#area21#page97#mssu87#ph9"/>
       </OKLink>
     </SelectorUnit>
   </OperationUnits>

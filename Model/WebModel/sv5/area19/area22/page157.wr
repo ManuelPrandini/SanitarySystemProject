@@ -1,0 +1,118 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="145" id="sv5#area19#area22#page157" name="Medicine vendute in una farmacia" landmark="true">
+  <ContentUnits>
+    <EntryUnit id="sv5#area19#area22#page157#enu49" name="Completa la form" gr:x="125" gr:y="75" fieldOrder="sv5#area19#area22#page157#enu49#sfld71 sv5#area19#area22#page157#enu49#sfld70 sv5#area19#area22#page157#enu49#sfld69 sv5#area19#area22#page157#enu49#fld183 sv5#area19#area22#page157#enu49#fld182" linkOrder="sv5#area19#area22#page157#enu49#ln188 sv5#area19#area22#page157#enu49#ln265 sv5#area19#area22#page157#enu49#ln298">
+      <Field id="sv5#area19#area22#page157#enu49#fld182" name="Data fine" ajaxEventEnabled="true" type="date" modifiable="true" ajaxEventLink="sv5#area19#area22#page157#enu49#ln298"/>
+      <Field id="sv5#area19#area22#page157#enu49#fld183" name="Data inizio" type="date" modifiable="true"/>
+      <SelectionField id="sv5#area19#area22#page157#enu49#sfld69" name="Farmacia" type="string" modifiable="true"/>
+      <SelectionField id="sv5#area19#area22#page157#enu49#sfld70" name="Citt&#224;" ajaxEventEnabled="true" type="string" modifiable="true" ajaxEventLink="sv5#area19#area22#page157#enu49#ln265"/>
+      <SelectionField id="sv5#area19#area22#page157#enu49#sfld71" name="Nazione" ajaxEventEnabled="true" type="string" modifiable="true" ajaxEventLink="sv5#area19#area22#page157#enu49#ln188"/>
+      <Link id="sv5#area19#area22#page157#enu49#ln188" name="Citt&#224;" to="sv5#area19#area22#page157#seu144" type="normal" validate="true">
+        <LinkParameter id="sv5#area19#area22#page157#enu49#ln188#par992" name="Nazione_nazione" source="sv5#area19#area22#page157#enu49#sfld71" target="sv5#area19#area22#page157#seu144#su209#acond1"/>
+      </Link>
+      <Link id="sv5#area19#area22#page157#enu49#ln265" name="farmacia" to="sv5#area19#area22#page157#seu145" type="normal" validate="true">
+        <LinkParameter id="sv5#area19#area22#page157#enu49#ln265#par1338" name="Citt&#224;_citt&#224;" source="sv5#area19#area22#page157#enu49#sfld70" target="sv5#area19#area22#page157#seu145#su210#acond36"/>
+      </Link>
+      <Link id="sv5#area19#area22#page157#enu49#ln298" name="submit" to="sv5#area19#area22#seu146" type="normal" validate="true">
+        <LinkParameter id="sv5#area19#area22#page157#enu49#ln298#par1355" name="Farmacia_farmacia" source="sv5#area19#area22#page157#enu49#sfld69" target="sv5#area19#area22#seu146#su211#acond52"/>
+        <LinkParameter id="sv5#area19#area22#page157#enu49#ln298#par1377" name="Data fine_PASSING" source="sv5#area19#area22#page157#enu49#fld182" passing="true"/>
+        <LinkParameter id="sv5#area19#area22#page157#enu49#ln298#par1378" name="Data inizio_PASSING" source="sv5#area19#area22#page157#enu49#fld183" passing="true"/>
+        <LinkParameter id="sv5#area19#area22#page157#enu49#ln298#par1384" name="Data fine_dataFine" source="sv5#area19#area22#page157#enu49#fld182" target="sv5#area19#area22#seu146#su211#acond107"/>
+        <LinkParameter id="sv5#area19#area22#page157#enu49#ln298#par1385" name="Data inizio_dataInizio" source="sv5#area19#area22#page157#enu49#fld183" target="sv5#area19#area22#seu146#su211#acond53"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit id="sv5#area19#area22#page157#mssu102" name="Medicine vendute in una farmacia" gr:x="85" gr:y="0">
+      <Message xml:space="preserve">Completa la form con gli intervalli temporali per vedere quante medicine sono state vendute nella farmacia</Message>
+    </MultiMessageUnit>
+    <SelectorUnit id="sv5#area19#area22#page157#seu143" name="Nazione" gr:x="0" gr:y="65" entity="ent11">
+      <Link id="sv5#area19#area22#page157#seu143#ln185" name="Flow185" to="sv5#area19#area22#page157#enu49" type="transport" validate="true">
+        <LinkParameter id="sv5#area19#area22#page157#seu143#ln185#par908" name="nome_Nazione [label]" source="ent11#att18Array" target="sv5#area19#area22#page157#enu49#sfld71_label"/>
+        <LinkParameter id="sv5#area19#area22#page157#seu143#ln185#par909" name="oid_Nazione [output]" source="ent11#att15Array" target="sv5#area19#area22#page157#enu49#sfld71_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="sv5#area19#area22#page157#seu144" name="Citt&#224;" gr:x="75" gr:y="190" entity="ent12">
+      <Selector id="sv5#area19#area22#page157#seu144#su209" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv5#area19#area22#page157#seu144#su209#acond1" name="nazione" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role8.ent11#att15"/>
+      </Selector>
+      <Link id="sv5#area19#area22#page157#seu144#ln192" name="Flow192" to="sv5#area19#area22#page157#enu49" type="transport" validate="true" gr:bendpoints="39,-73,-6,62">
+        <LinkParameter id="sv5#area19#area22#page157#seu144#ln192#par1331" name="nome_Citt&#224; [label]" source="ent12#att39Array" target="sv5#area19#area22#page157#enu49#sfld70_label"/>
+        <LinkParameter id="sv5#area19#area22#page157#seu144#ln192#par1332" name="oid_Citt&#224; [output]" source="ent12#att16Array" target="sv5#area19#area22#page157#enu49#sfld70_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="250" gr:y="195" id="sv5#area19#area22#page157#seu145" name="Farmacia" entity="ent19">
+      <Selector id="sv5#area19#area22#page157#seu145#su210" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv5#area19#area22#page157#seu145#su210#acond36" name="citt&#224;" predicate="eq" booleanOperator="or" implied="false" attributes="rel13#role25.ent12#att16"/>
+      </Selector>
+      <Link id="sv5#area19#area22#page157#seu145#ln288" name="Flow288" to="sv5#area19#area22#page157#enu49" type="transport" validate="true" gr:bendpoints="-89,-71,46,69">
+        <LinkParameter id="sv5#area19#area22#page157#seu145#ln288#par1339" name="nome_Farmacia [label]" source="ent19#att43Array" target="sv5#area19#area22#page157#enu49#sfld69_label"/>
+        <LinkParameter id="sv5#area19#area22#page157#seu145#ln288#par1340" name="oid_Farmacia [output]" source="ent19#att42Array" target="sv5#area19#area22#page157#enu49#sfld69_output"/>
+        <LinkParameter id="sv5#area19#area22#page157#seu145#ln288#par1373" name="nome_PASSING" source="ent19#att43Array" passing="true"/>
+      </Link>
+    </SelectorUnit>
+    <MultiMessageUnit gr:x="440" gr:y="205" id="sv5#area19#area22#page157#mssu103" name="Risultato statistica">
+      <Placeholder id="sv5#area19#area22#page157#mssu103#ph30" name="farmacia"/>
+      <Placeholder id="sv5#area19#area22#page157#mssu103#ph31" name="result"/>
+      <Message xml:space="preserve">Nella farmacia selezionata nel periodo $$inizio$$ - $$fine$$ sono stati venduti: $$result$$ farmaci.</Message>
+      <Placeholder id="sv5#area19#area22#page157#mssu103#ph32" name="inizio"/>
+      <Placeholder id="sv5#area19#area22#page157#mssu103#ph33" name="fine"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area19#area22#page157#enu49">
+          <layout:Field field="sv5#area19#area22#page157#enu49#sfld71"/>
+          <layout:Field field="sv5#area19#area22#page157#enu49#sfld70"/>
+          <layout:Field field="sv5#area19#area22#page157#enu49#sfld69"/>
+          <layout:Field field="sv5#area19#area22#page157#enu49#fld183"/>
+          <layout:Field field="sv5#area19#area22#page157#enu49#fld182"/>
+          <layout:Link link="sv5#area19#area22#page157#enu49#ln188"/>
+          <layout:Link link="sv5#area19#area22#page157#enu49#ln265"/>
+          <layout:Link link="sv5#area19#area22#page157#enu49#ln298"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area19#area22#page157#mssu102"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#area19#area22#page157#mssu103"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
