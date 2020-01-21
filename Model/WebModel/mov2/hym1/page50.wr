@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="955" gr:y="-835" id="mov2#hym1#page50" name="Registrazione dottore ( ESISTENTE)">
   <ContentUnits>
-    <EntryUnit id="mov2#hym1#page50#enu23" name="compila la form" gr:x="320" gr:y="155" fieldOrder="mov2#hym1#page50#enu23#fld144 mov2#hym1#page50#enu23#fld141 mov2#hym1#page50#enu23#fld140 mov2#hym1#page50#enu23#fld148 mov2#hym1#page50#enu23#fld138 mov2#hym1#page50#enu23#fld147 mov2#hym1#page50#enu23#fld146 mov2#hym1#page50#enu23#fld136 mov2#hym1#page50#enu23#fld139 mov2#hym1#page50#enu23#fld137 mov2#hym1#page50#enu23#sfld46 mov2#hym1#page50#enu23#sfld47 mov2#hym1#page50#enu23#sfld50 mov2#hym1#page50#enu23#sfld52 mov2#hym1#page50#enu23#sfld53 mov2#hym1#page50#enu23#fld143" linkOrder="mov2#hym1#page50#enu23#ln159 mov2#hym1#page50#enu23#ln161 mov2#hym1#page50#enu23#ln248 mov2#hym1#page50#enu23#ln250">
+    <EntryUnit id="mov2#hym1#page50#enu23" name="compila la form" gr:x="320" gr:y="155" fieldOrder="mov2#hym1#page50#enu23#fld144 mov2#hym1#page50#enu23#fld141 mov2#hym1#page50#enu23#fld140 mov2#hym1#page50#enu23#fld148 mov2#hym1#page50#enu23#fld138 mov2#hym1#page50#enu23#fld147 mov2#hym1#page50#enu23#fld146 mov2#hym1#page50#enu23#fld136 mov2#hym1#page50#enu23#fld139 mov2#hym1#page50#enu23#fld137 mov2#hym1#page50#enu23#sfld46 mov2#hym1#page50#enu23#sfld47 mov2#hym1#page50#enu23#sfld50 mov2#hym1#page50#enu23#sfld52 mov2#hym1#page50#enu23#sfld53" linkOrder="mov2#hym1#page50#enu23#ln159 mov2#hym1#page50#enu23#ln161 mov2#hym1#page50#enu23#ln248 mov2#hym1#page50#enu23#ln250">
       <Field id="mov2#hym1#page50#enu23#fld136" name="indirizzo di residenza *" type="string" preloaded="true">
         <VRules>
           <MandatoryValidationRule id="mov2#hym1#page50#enu23#fld136#mnd93" name="Mandatory55">
@@ -53,7 +53,7 @@
         </VRules>
       </Field>
       <Field id="mov2#hym1#page50#enu23#fld142" name="username" type="string" preloaded="true" hidden="true"/>
-      <Field id="mov2#hym1#page50#enu23#fld143" name="password *" type="password" preloaded="true">
+      <Field id="mov2#hym1#page50#enu23#fld143" name="password *" type="password" preloaded="true" hidden="true">
         <VRules>
           <MandatoryValidationRule id="mov2#hym1#page50#enu23#fld143#mnd99" name="Mandatory55">
             <VRValidationLink linkId="mov2#hym1#page50#enu23#ln250" action="skip"/>
@@ -96,7 +96,7 @@
           </MandatoryValidationRule>
         </VRules>
       </SelectionField>
-      <SelectionField id="mov2#hym1#page50#enu23#sfld52" name="specializzazione medica *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page50#enu23#ln159" ajaxEventIndicator="true">
+      <SelectionField id="mov2#hym1#page50#enu23#sfld52" name="specializzazione medica *" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov2#hym1#page50#enu23#ln159" ajaxEventIndicator="true" splitOutput="true">
         <VRules>
           <MandatoryValidationRule id="mov2#hym1#page50#enu23#sfld52#mnd101" name="Mandatory55">
             <VRValidationLink linkId="mov2#hym1#page50#enu23#ln250" action="skip"/>
@@ -261,6 +261,10 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov2#hym1#page50#enu23">
+          <layout:Link link="mov2#hym1#page50#enu23#ln159"/>
+          <layout:Link link="mov2#hym1#page50#enu23#ln161"/>
+          <layout:Link link="mov2#hym1#page50#enu23#ln248"/>
+          <layout:Link link="mov2#hym1#page50#enu23#ln250"/>
           <layout:Field field="mov2#hym1#page50#enu23#fld144"/>
           <layout:Field field="mov2#hym1#page50#enu23#fld141"/>
           <layout:Field field="mov2#hym1#page50#enu23#fld140"/>
@@ -276,11 +280,6 @@
           <layout:Field field="mov2#hym1#page50#enu23#sfld50"/>
           <layout:Field field="mov2#hym1#page50#enu23#sfld52"/>
           <layout:Field field="mov2#hym1#page50#enu23#sfld53"/>
-          <layout:Field field="mov2#hym1#page50#enu23#fld143"/>
-          <layout:Link link="mov2#hym1#page50#enu23#ln159"/>
-          <layout:Link link="mov2#hym1#page50#enu23#ln161"/>
-          <layout:Link link="mov2#hym1#page50#enu23#ln248"/>
-          <layout:Link link="mov2#hym1#page50#enu23#ln250"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

@@ -30,6 +30,7 @@
             <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
             <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
           </MandatoryValidationRule>
+          <CompareValidationRule id="mov2#hym1#page34#enu14#fld80#cmp20" name="greaterThan0" predicate="gt" value="0"/>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page34#enu14#fld79" name="telefono" type="string" modifiable="true">
@@ -76,6 +77,7 @@
             <VRValidationLink linkId="mov2#hym1#page34#enu14#ln210" action="skip"/>
             <VRValidationLink linkId="mov2#hym1#page34#enu14#ln50" action="validate"/>
           </MandatoryValidationRule>
+          <CompareValidationRule id="mov2#hym1#page34#enu14#fld74#cmp21" name="greaterThan0" predicate="gt" value="0"/>
         </VRules>
       </Field>
       <SelectionField id="mov2#hym1#page34#enu14#sfld21" name="sesso *" type="string" modifiable="true" slotOrder="mov2#hym1#page34#enu14#sfld21#slot3">

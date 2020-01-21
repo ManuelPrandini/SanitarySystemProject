@@ -4,7 +4,11 @@
       <Field id="sv2#area3#page60#enu24#fld156" name="Farmacia" type="string" preloaded="true" ajaxEventEnabled="true" ajaxEventLink="sv2#area3#page60#enu24#ln176"/>
       <Field id="sv2#area3#page60#enu24#fld158" name="Quantit&#224; in magazzino" type="integer" preloaded="true"/>
       <SelectionField id="sv2#area3#page60#enu24#sfld56" name="Drug" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="sv2#area3#page60#enu24#ln176"/>
-      <Field id="sv2#area3#page60#enu24#fld159" name="Nuova quantit&#224; da inserire" type="integer" modifiable="true"/>
+      <Field id="sv2#area3#page60#enu24#fld159" name="Nuova quantit&#224; da inserire" type="integer" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="sv2#area3#page60#enu24#fld159#cmp26" name="GreaterThan0" predicate="gt" value="0"/>
+        </VRules>
+      </Field>
       <Link id="sv2#area3#page60#enu24#ln176" name="Seleziona Drug Quantity" to="sv2#area3#page60#seu51" type="normal" validate="true" gr:bendpoints="71,79,-124,-51">
         <LinkParameter id="sv2#area3#page60#enu24#ln176#par889" name="Drug_drug" source="sv2#area3#page60#enu24#sfld56" target="sv2#area3#page60#seu51#su73#acond60"/>
         <LinkParameter id="sv2#area3#page60#enu24#ln176#par890" name="Farmacia_PharmacyOid" target="sv2#area3#page60#seu51#su73#acond59" sourceLinkParameter="sv2#area3#page60#seu49#ln174#par892"/>

@@ -162,6 +162,7 @@
         <LinkParameter id="mov2#hym4#pcu3#oln168#par183" name="dataInizio_PASSING" source="mov2#hym4#pcu3#pcp35" passing="true"/>
         <LinkParameter id="mov2#hym4#pcu3#oln168#par184" name="doctorCode_PASSING" source="mov2#hym4#pcu3#pcp8" passing="true"/>
         <LinkParameter id="mov2#hym4#pcu3#oln168#par324" name="patientCode_PASSING" source="mov2#hym4#pcu3#pcp7" passing="true"/>
+        <LinkParameter id="mov2#hym4#pcu3#oln168#par1392" name="nameHospital_PASSING" source="mov2#hym4#pcu3#pcp6" passing="true"/>
       </OKLink>
     </ParameterCollectorUnit>
     <SelectorUnit gr:x="1115" gr:y="550" id="mov2#hym4#seu85" name="Verifica ricoveri-visite presente" entity="ent5">
@@ -228,7 +229,12 @@ if( data_selezionata &lt; data_inizio || data_selezionata &gt; data_fine)
 else
 	return [resultCode: "success"]</ScriptUnitText>
       <OKLink id="mov2#hym4#scu12#oln289" name="Registra" to="mov2#hym4#page91#seu88" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Programmazione intervento" ajaxWindowWidth="800" ajaxWindowHeight="500" ajaxWindowClosable="true" ajaxWindowModal="true">
-        <LinkParameter id="mov2#hym4#scu12#oln289#par1397" name="Selected Date_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#ecu4#ln110#par1330" passing="true"/>
+        <LinkParameter id="mov2#hym4#scu12#oln289#par2092" name="doctorCode_PASSING_doctor" sourceLinkParameter="mov2#hym4#area20#page73#ecu4#ln110#par2090" target="mov2#hym4#page91#seu88#su137#acond151"/>
+        <LinkParameter id="mov2#hym4#scu12#oln289#par2093" name="dataFine_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#ecu4#ln110#par2035" passing="true"/>
+        <LinkParameter id="mov2#hym4#scu12#oln289#par2094" name="dataInizio_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#ecu4#ln110#par2089" passing="true"/>
+        <LinkParameter id="mov2#hym4#scu12#oln289#par2097" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#ecu4#ln110#par2090" passing="true"/>
+        <LinkParameter id="mov2#hym4#scu12#oln289#par2098" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#ecu4#ln110#par2091" passing="true"/>
+        <LinkParameter id="mov2#hym4#scu12#oln289#par2100" name="Selected Date_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#ecu4#ln110#par2099" passing="true"/>
       </OKLink>
       <KOLink id="mov2#hym4#scu12#kln88" name="KOFlow88" to="mov2#hym4#page94" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowWidth="500" ajaxWindowHeight="250" ajaxWindowTitle="Errore selezione data" ajaxWindowModal="true" ajaxWindowClosable="true"/>
     </ScriptUnit>
@@ -246,6 +252,7 @@ else
         <LinkParameter id="mov2#hym4#seu92#oln534#par3286" name="dataInizio_PASSING" sourceLinkParameter="mov2#hym4#pcu3#oln168#par183" passing="true"/>
         <LinkParameter id="mov2#hym4#seu92#oln534#par3287" name="id_Input" source="ent10#att5Array" target="mov2#hym4#inn85.isnotnull"/>
         <LinkParameter id="mov2#hym4#seu92#oln534#par3288" name="id_PASSING" source="ent10#att5Array" passing="true"/>
+        <LinkParameter id="mov2#hym4#seu92#oln534#par1393" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#pcu3#oln168#par1392" passing="true"/>
       </OKLink>
     </SelectorUnit>
     <CreateUnit gr:x="2085" gr:y="60" id="mov2#hym4#cru31" name="RegistraAccertamento" entity="ent27">
@@ -347,6 +354,7 @@ else
         <LinkParameter id="mov2#hym4#inn85#oln535#par3293" name="dataFine_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln534#par3284" passing="true"/>
         <LinkParameter id="mov2#hym4#inn85#oln535#par3294" name="dataInizio_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln534#par3286" passing="true"/>
         <LinkParameter id="mov2#hym4#inn85#oln535#par3295" name="dataFine_PASSING_dataFine" sourceLinkParameter="mov2#hym4#seu92#oln534#par3284" target="mov2#hym4#area20#page73#mssu22.mov2#hym4#area20#page73#mssu22#ph12"/>
+        <LinkParameter id="mov2#hym4#inn85#oln535#par1394" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#seu92#oln534#par1393" passing="true"/>
       </OKLink>
       <KOLink id="mov2#hym4#inn85#kln161" name="KOFlow161" to="mov2#hym4#page199" automaticCoupling="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Errore" ajaxWindowWidth="300" ajaxWindowHeight="200" ajaxWindowClosable="true" ajaxWindowModal="true"/>
     </IsNotNullUnit>

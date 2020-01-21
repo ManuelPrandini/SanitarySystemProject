@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page35" name="Registrazione farmacista (ESISTENTE)" gr:x="1230" gr:y="60">
   <ContentUnits>
-    <EntryUnit gr:x="195" gr:y="80" id="mov2#hym1#page35#enu11" name="compila la form" linkOrder="mov2#hym1#page35#enu11#ln47 mov2#hym1#page35#enu11#ln239 mov2#hym1#page35#enu11#ln240" fieldOrder="mov2#hym1#page35#enu11#fld20 mov2#hym1#page35#enu11#fld40 mov2#hym1#page35#enu11#fld41 mov2#hym1#page35#enu11#fld153 mov2#hym1#page35#enu11#fld8 mov2#hym1#page35#enu11#fld152 mov2#hym1#page35#enu11#fld154 mov2#hym1#page35#enu11#fld7 mov2#hym1#page35#enu11#fld35 mov2#hym1#page35#enu11#fld43 mov2#hym1#page35#enu11#sfld44 mov2#hym1#page35#enu11#sfld45 mov2#hym1#page35#enu11#sfld54 mov2#hym1#page35#enu11#fld42">
+    <EntryUnit gr:x="195" gr:y="80" id="mov2#hym1#page35#enu11" name="compila la form" linkOrder="mov2#hym1#page35#enu11#ln47 mov2#hym1#page35#enu11#ln239 mov2#hym1#page35#enu11#ln240" fieldOrder="mov2#hym1#page35#enu11#fld20 mov2#hym1#page35#enu11#fld40 mov2#hym1#page35#enu11#fld41 mov2#hym1#page35#enu11#fld153 mov2#hym1#page35#enu11#fld8 mov2#hym1#page35#enu11#fld152 mov2#hym1#page35#enu11#fld154 mov2#hym1#page35#enu11#fld7 mov2#hym1#page35#enu11#fld35 mov2#hym1#page35#enu11#fld43 mov2#hym1#page35#enu11#sfld44 mov2#hym1#page35#enu11#sfld45 mov2#hym1#page35#enu11#sfld54">
       <Link id="mov2#hym1#page35#enu11#ln47" name="Registrati" to="mov2#hym1#miu6" type="normal" validate="true">
         <LinkParameter id="mov2#hym1#page35#enu11#ln47#par121" name="1_exists?" sourceValue="1" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp74"/>
         <LinkParameter id="mov2#hym1#page35#enu11#ln47#par124" name="0_approved" sourceValue="0" target="mov2#hym1#miu6.mov2#mpkg2#opm7#icu7#icp37"/>
@@ -22,7 +22,7 @@
       </Link>
       <Field id="mov2#hym1#page35#enu11#fld44" name="username" type="string" preloaded="true" hidden="true"/>
       <Field id="mov2#hym1#page35#enu11#fld43" name="telefono" type="string" preloaded="true"/>
-      <Field id="mov2#hym1#page35#enu11#fld42" name="password *" type="password" preloaded="true">
+      <Field id="mov2#hym1#page35#enu11#fld42" name="password *" type="password" preloaded="true" hidden="true">
         <VRules>
           <MandatoryValidationRule id="mov2#hym1#page35#enu11#fld42#mnd113" name="Mandatory39">
             <VRValidationLink linkId="mov2#hym1#page35#enu11#ln239" action="skip"/>
@@ -214,7 +214,6 @@
           <layout:Field field="mov2#hym1#page35#enu11#sfld44"/>
           <layout:Field field="mov2#hym1#page35#enu11#sfld45"/>
           <layout:Field field="mov2#hym1#page35#enu11#sfld54"/>
-          <layout:Field field="mov2#hym1#page35#enu11#fld42"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

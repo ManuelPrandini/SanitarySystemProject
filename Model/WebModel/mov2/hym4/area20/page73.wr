@@ -1,9 +1,15 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym4#area20#page73" name="Programma Intervento" landmark="false" localized="false" gr:x="0" gr:y="0">
   <ContentUnits>
-    <EventCalendarUnit id="mov2#hym4#area20#page73#ecu4" name="Calendario sale operatorie" linkOrder="mov2#hym4#area20#page73#ecu4#ln110" computationMode="execute" gr:x="85" gr:y="0" entityBased="true" entity="ent30" displayAttributes="ent5#att2 rel3#role3.ent9#att33 ent5#att24 ent5#att25" dateAttribute="ent5#att22">
+    <EventCalendarUnit id="mov2#hym4#area20#page73#ecu4" name="Calendario sale operatorie" computationMode="execute" gr:x="90" gr:y="0" entityBased="true" entity="ent30" displayAttributes="ent5#att2 rel3#role3.ent9#att33 ent5#att24 ent5#att25" dateAttribute="ent5#att22" linkOrder="mov2#hym4#area20#page73#ecu4#ln110" ajaxEnableExpandedLinks="false">
       <Link id="mov2#hym4#area20#page73#ecu4#ln110" name="Programma Intervento" to="mov2#hym4#scu12" type="normal" validate="true" gr:bendpoints="230,130,-180,-120">
-        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1329" name="Selected Date_data_selezionata" source="date[].date" target="mov2#hym4#scu12.data_selezionata"/>
-        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par1330" name="Selected Date_PASSING" source="date[].date" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par2026" name="dataFine_PASSING_data_fine" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par856" target="mov2#hym4#scu12.data_fine"/>
+        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par2030" name="dataInizio_PASSING_data_inizio" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par861" target="mov2#hym4#scu12.data_inizio"/>
+        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par2034" name="Selected Date_data_selezionata" source="date[].date" target="mov2#hym4#scu12.data_selezionata"/>
+        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par2035" name="dataFine_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par856" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par2089" name="dataInizio_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par861" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par2090" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par865" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par2091" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#area20#page73#mssu22#ln131#par1374" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#ecu4#ln110#par2099" name="Selected Date_PASSING" source="date[].date" passing="true"/>
       </Link>
       <Selector id="mov2#hym4#area20#page73#ecu4#su99" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#hym4#area20#page73#ecu4#su99#acond127" name="idSurgeryRoom" predicate="eq" booleanOperator="and" implied="false" attributes="rel18#role35.ent10#att5"/>
@@ -11,11 +17,20 @@
         <AttributesCondition id="mov2#hym4#area20#page73#ecu4#su99#acond138" name="endDate" predicate="lteq" booleanOperator="and" implied="false" attributes="ent5#att23"/>
       </Selector>
     </EventCalendarUnit>
-    <MultiMessageUnit id="mov2#hym4#area20#page73#mssu22" name="Riepilogo del ricovero" gr:x="100" gr:y="170">
+    <MultiMessageUnit id="mov2#hym4#area20#page73#mssu22" name="Riepilogo del ricovero" gr:x="0" gr:y="170">
       <Placeholder id="mov2#hym4#area20#page73#mssu22#ph11" name="dataInizio"/>
       <Placeholder id="mov2#hym4#area20#page73#mssu22#ph12" name="dataFine"/>
       <Message xml:space="preserve">Per il paziente hai programmato un ricovero dal $$dataInizio$$ al $$dataFine$$ </Message>
-      <Link id="mov2#hym4#area20#page73#mssu22#ln131" name="Flow189" to="mov2#hym4#area20#page73#ecu4" type="transport" validate="true"/>
+      <Link id="mov2#hym4#area20#page73#mssu22#ln131" name="Flow189" to="mov2#hym4#area20#page73#ecu4" type="transport" validate="true">
+        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par856" name="dataFine_PASSING" sourceLinkParameter="mov2#hym4#inn85#oln535#par3293" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par861" name="dataInizio_PASSING" sourceLinkParameter="mov2#hym4#inn85#oln535#par3294" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par865" name="doctorCode_PASSING" sourceLinkParameter="mov2#hym4#inn85#oln535#par3291" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1374" name="patientCode_PASSING" sourceLinkParameter="mov2#hym4#inn85#oln535#par3290" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1395" name="nameHospital_PASSING" sourceLinkParameter="mov2#hym4#inn85#oln535#par1394" passing="true"/>
+        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1528" name="dataFine_PASSING_endDate" sourceLinkParameter="mov2#hym4#inn85#oln535#par3293" target="mov2#hym4#area20#page73#ecu4#su99#acond138"/>
+        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1570" name="id_PASSING_idSurgeryRoom" sourceLinkParameter="mov2#hym4#inn85#oln535#par3292" target="mov2#hym4#area20#page73#ecu4#su99#acond127"/>
+        <LinkParameter id="mov2#hym4#area20#page73#mssu22#ln131#par1601" name="dataInizio_PASSING_startDate" sourceLinkParameter="mov2#hym4#inn85#oln535#par3294" target="mov2#hym4#area20#page73#ecu4#su99#acond128"/>
+      </Link>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

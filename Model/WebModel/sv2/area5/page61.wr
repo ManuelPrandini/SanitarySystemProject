@@ -6,6 +6,7 @@
         <VRules>
           <MandatoryValidationRule id="sv2#area5#page61#enu26#fld33#mnd6" name="Mandatory6"/>
           <CompareValidationRule id="sv2#area5#page61#enu26#fld33#cmp6" name="Compare6" predicate="lteq" valueField="sv2#area5#page61#enu26#fld31" errorMessage="Non puoi inserire una quantit&#224; maggiore di quella presente"/>
+          <CompareValidationRule id="sv2#area5#page61#enu26#fld33#cmp23" name="GreaterThan0" predicate="gt" value="0"/>
         </VRules>
       </Field>
       <Field id="sv2#area5#page61#enu26#fld32" name="Farmaco" type="string" preloaded="true"/>

@@ -35,7 +35,7 @@
         <AttributesCondition id="mov2#hym5#page40#pwu15#su56#acond73" name="NotFutureVisit" predicate="notNull" booleanOperator="and" implied="false" attributes="ent5#att3"/>
       </Selector>
       <Link id="mov2#hym5#page40#pwu15#ln138" name="Flow138" to="mov2#hym5#page40#enu21" type="transport" validate="true" gr:bendpoints="-179,23,66,-222">
-        <LinkParameter id="mov2#hym5#page40#pwu15#ln138#par592" name="VisitToPatient.PatientToUser.cf_Patient" source="data[].rel11#role16$rel14#role28$userOID" target="mov2#hym5#page40#enu21#fld111_slot"/>
+        <LinkParameter id="mov2#hym5#page40#pwu15#ln138#par196" name="VisitToPatient.PatientToUser.cf_PASSING" source="data[].rel11#role16$rel14#role28$userOID" passing="true"/>
       </Link>
       <Link id="mov2#hym5#page40#pwu15#ln182" name="visualizza prescrizioni" to="mov2#hym5#seu40" type="normal" validate="true">
         <LinkParameter id="mov2#hym5#page40#pwu15#ln182#par666" name="oid_visita" source="data[].ent5#att2" target="mov2#hym5#seu40#su147#acond111"/>
@@ -49,7 +49,7 @@
         <AttributesCondition id="mov2#hym5#page40#pwu16#su62#acond80" name="EndDate" predicate="lteq" booleanOperator="or" implied="true" attributes="ent5#att23"/>
       </Selector>
       <Link id="mov2#hym5#page40#pwu16#ln139" name="Flow139" to="mov2#hym5#page40#enu21" type="transport" validate="true">
-        <LinkParameter id="mov2#hym5#page40#pwu16#ln139#par593" name="VisitToPatient.PatientToUser.cf_Patient" source="data[].rel11#role16$rel14#role28$userOID" target="mov2#hym5#page40#enu21#fld111_slot"/>
+        <LinkParameter id="mov2#hym5#page40#pwu16#ln139#par201" name="VisitToPatient.PatientToUser.cf_PASSING" source="data[].rel11#role16$rel14#role28$userOID" passing="true"/>
       </Link>
       <Link id="mov2#hym5#page40#pwu16#ln187" name="visualizza accertamenti" to="mov2#hym5#seu46" type="normal" validate="true">
         <LinkParameter id="mov2#hym5#page40#pwu16#ln187#par756" name="oid_ricovero" source="data[].ent5#att2" target="mov2#hym5#seu46#su149#acond154"/>
@@ -63,7 +63,7 @@
         <AttributesCondition id="mov2#hym5#page40#pwu17#su63#acond85" name="cfPaziente" predicate="eq" booleanOperator="and" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
       </Selector>
       <Link id="mov2#hym5#page40#pwu17#ln140" name="Flow140" to="mov2#hym5#page40#enu21" type="transport" validate="true">
-        <LinkParameter id="mov2#hym5#page40#pwu17#ln140#par594" name="VisitToPatient.PatientToUser.cf_Patient" source="data[].rel11#role16$rel14#role28$userOID" target="mov2#hym5#page40#enu21#fld111_slot"/>
+        <LinkParameter id="mov2#hym5#page40#pwu17#ln140#par278" name="VisitToPatient.PatientToUser.cf_PASSING" source="data[].rel11#role16$rel14#role28$userOID" passing="true"/>
       </Link>
     </PowerIndexUnit>
     <PowerIndexUnit gr:x="245" gr:y="680" id="mov2#hym5#page40#pwu18" name="Interventi" sortable="true" checkable="false" useCountQuery="false" entity="ent30" displayAttributes="rel3#role3.rel4#role5.ent8#att21 ent5#att3 ent5#att10 ent5#att22 ent5#att23 ent5#att24 ent5#att25 rel11#role16.rel14#role28.userOID" computationMode="execute">
@@ -74,7 +74,7 @@
         <AttributesCondition id="mov2#hym5#page40#pwu18#su65#acond90" name="cfPaziente" predicate="eq" booleanOperator="and" implied="false" attributes="rel11#role16.rel14#role28.userOID"/>
       </Selector>
       <Link id="mov2#hym5#page40#pwu18#ln141" name="Flow141" to="mov2#hym5#page40#enu21" type="transport" validate="true">
-        <LinkParameter id="mov2#hym5#page40#pwu18#ln141#par595" name="VisitToPatient.PatientToUser.cf_Patient" source="data[].rel11#role16$rel14#role28$userOID" target="mov2#hym5#page40#enu21#fld111_slot"/>
+        <LinkParameter id="mov2#hym5#page40#pwu18#ln141#par346" name="VisitToPatient.PatientToUser.cf_PASSING" source="data[].rel11#role16$rel14#role28$userOID" passing="true"/>
       </Link>
     </PowerIndexUnit>
   </ContentUnits>
@@ -101,7 +101,19 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym5#page40#pwu15">
+          <layout:Attribute attribute="rel3#role3.rel4#role5.ent8#att21"/>
+          <layout:Attribute attribute="ent5#att3"/>
+          <layout:Attribute attribute="ent5#att10"/>
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="rel11#role16.rel14#role28.userOID"/>
+          <layout:Link link="mov2#hym5#page40#pwu15#ln182"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -115,7 +127,16 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym5#page40#pwu16">
+          <layout:Attribute attribute="ent5#att3"/>
+          <layout:Attribute attribute="ent5#att10"/>
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="rel11#role16.rel14#role28.userOID"/>
+          <layout:Link link="mov2#hym5#page40#pwu16#ln187"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -129,7 +150,41 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym5#page40#pwu18">
+          <layout:Attribute attribute="rel3#role3.rel4#role5.ent8#att21"/>
+          <layout:Attribute attribute="ent5#att3"/>
+          <layout:Attribute attribute="ent5#att10"/>
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="rel11#role16.rel14#role28.userOID"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov2#hym5#page40#pwu17">
+          <layout:Attribute attribute="ent5#att3"/>
+          <layout:Attribute attribute="ent5#att10"/>
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="rel11#role16.rel14#role28.userOID"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

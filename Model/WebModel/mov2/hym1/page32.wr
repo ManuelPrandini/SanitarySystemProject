@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov2#hym1#page32" name="Registrazione paziente (ESISTENTE)" gr:x="1265" gr:y="790" ajaxEnabled="false">
   <ContentUnits>
-    <EntryUnit gr:x="45" gr:y="80" id="mov2#hym1#page32#enu13" name="compila la form" linkOrder="mov2#hym1#page32#enu13#ln51" fieldOrder="mov2#hym1#page32#enu13#fld59 mov2#hym1#page32#enu13#fld61 mov2#hym1#page32#enu13#fld66 mov2#hym1#page32#enu13#fld150 mov2#hym1#page32#enu13#fld57 mov2#hym1#page32#enu13#fld151 mov2#hym1#page32#enu13#fld149 mov2#hym1#page32#enu13#fld56 mov2#hym1#page32#enu13#fld60 mov2#hym1#page32#enu13#fld67 mov2#hym1#page32#enu13#fld65 mov2#hym1#page32#enu13#fld64 mov2#hym1#page32#enu13#fld62">
+    <EntryUnit gr:x="45" gr:y="80" id="mov2#hym1#page32#enu13" name="compila la form" linkOrder="mov2#hym1#page32#enu13#ln51" fieldOrder="mov2#hym1#page32#enu13#fld59 mov2#hym1#page32#enu13#fld61 mov2#hym1#page32#enu13#fld66 mov2#hym1#page32#enu13#fld150 mov2#hym1#page32#enu13#fld57 mov2#hym1#page32#enu13#fld151 mov2#hym1#page32#enu13#fld149 mov2#hym1#page32#enu13#fld56 mov2#hym1#page32#enu13#fld60 mov2#hym1#page32#enu13#fld67 mov2#hym1#page32#enu13#fld65 mov2#hym1#page32#enu13#fld64">
       <Link id="mov2#hym1#page32#enu13#ln51" name="Registrati" to="mov2#hym1#miu11" type="normal" validate="true">
         <LinkParameter id="mov2#hym1#page32#enu13#ln51#par123" name="1_exists?" sourceValue="1" target="mov2#hym1#miu11.mov2#mpkg2#opm3#icu3#icp59"/>
         <LinkParameter id="mov2#hym1#page32#enu13#ln51#par126" name="0_approved" sourceValue="0" target="mov2#hym1#miu11.mov2#mpkg2#opm3#icu3#icp36"/>
@@ -35,18 +35,20 @@
             <VRValidationLink linkId="mov2#hym1#page32#enu13#ln51" action="validate"/>
           </MandatoryValidationRule>
           <TypeValidationRule id="mov2#hym1#page32#enu13#fld65#tvr2" name="Type Validation2" type="integer" errorMessage="Valore non inserito correttamente. Inserire in cm"/>
+          <CompareValidationRule id="mov2#hym1#page32#enu13#fld65#cmp16" name="greaterThan0" predicate="gt" value="0"/>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page32#enu13#fld64" name="peso corporeo (kg) *" type="integer" modifiable="true">
         <VRules>
           <TypeValidationRule id="mov2#hym1#page32#enu13#fld64#tvr3" name="Type Validation3" type="integer" errorMessage="Valore non inserito correttamente"/>
           <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld64#mnd138" name="Mandatory39"/>
+          <CompareValidationRule id="mov2#hym1#page32#enu13#fld64#cmp11" name="greaterThan0" predicate="gt" value="0"/>
         </VRules>
       </Field>
       <Field id="mov2#hym1#page32#enu13#fld63" name="patient code" type="string" preloaded="true" ajaxEventEnabled="false" hidden="true">
         <VRules/>
       </Field>
-      <Field id="mov2#hym1#page32#enu13#fld62" name="password *" type="password" preloaded="true">
+      <Field id="mov2#hym1#page32#enu13#fld62" name="password *" type="password" preloaded="true" hidden="true">
         <VRules>
           <MandatoryValidationRule id="mov2#hym1#page32#enu13#fld62#mnd137" name="Mandatory39"/>
         </VRules>
@@ -129,7 +131,6 @@
           <layout:Field field="mov2#hym1#page32#enu13#fld67"/>
           <layout:Field field="mov2#hym1#page32#enu13#fld65"/>
           <layout:Field field="mov2#hym1#page32#enu13#fld64"/>
-          <layout:Field field="mov2#hym1#page32#enu13#fld62"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
